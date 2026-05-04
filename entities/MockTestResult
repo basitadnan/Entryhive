@@ -1,0 +1,91 @@
+{
+  "name": "MockTestResult",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "test_number": {
+      "type": "number"
+    },
+    "nat_group": {
+      "type": "string",
+      "enum": [
+        "NAT-IE",
+        "NAT-IM",
+        "NAT-ICS"
+      ]
+    },
+    "total_questions": {
+      "type": "number"
+    },
+    "correct_answers": {
+      "type": "number"
+    },
+    "wrong_answers": {
+      "type": "number"
+    },
+    "unanswered": {
+      "type": "number"
+    },
+    "score_percentage": {
+      "type": "number"
+    },
+    "section_scores": {
+      "type": "object",
+      "description": "Scores per section"
+    },
+    "time_taken_seconds": {
+      "type": "number"
+    },
+    "questions_data": {
+      "type": "array"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_email"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

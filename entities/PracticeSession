@@ -1,0 +1,85 @@
+{
+  "name": "PracticeSession",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string",
+      "description": "english, analytical, quantitative, physics, chemistry, mathematics, biology, computer_science"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "all",
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "total_questions": {
+      "type": "number"
+    },
+    "correct_answers": {
+      "type": "number"
+    },
+    "wrong_answers": {
+      "type": "number"
+    },
+    "score_percentage": {
+      "type": "number"
+    },
+    "questions_data": {
+      "type": "array",
+      "description": "Array of question objects with user answers"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_email",
+    "section"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

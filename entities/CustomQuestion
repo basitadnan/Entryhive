@@ -1,0 +1,41 @@
+{
+  "name": "CustomQuestion",
+  "type": "object",
+  "properties": {
+    "section": {
+      "type": "string",
+      "description": "english, analytical, quantitative, physics, chemistry, mathematics, biology, computer_science, commerce, accounting, economics"
+    },
+    "question_text": {
+      "type": "string"
+    },
+    "options_json": {
+      "type": "string",
+      "description": "JSON array of 4 option strings"
+    },
+    "correct_index": {
+      "type": "number",
+      "description": "0-3"
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "topic": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "section",
+    "question_text",
+    "options_json",
+    "correct_index"
+  ]
+}

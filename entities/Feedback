@@ -1,0 +1,38 @@
+{
+  "name": "Feedback",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "feedback",
+        "bug",
+        "suggestion"
+      ],
+      "description": "Type of submission"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "reviewed",
+        "resolved"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "user_email",
+    "type",
+    "message"
+  ]
+}

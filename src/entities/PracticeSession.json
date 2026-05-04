@@ -1,0 +1,61 @@
+{
+  "name": "PracticeSession",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string"
+    },
+    "total_questions": {
+      "type": "number"
+    },
+    "correct_answers": {
+      "type": "number"
+    },
+    "wrong_answers": {
+      "type": "number"
+    },
+    "score_percentage": {
+      "type": "number"
+    },
+    "questions_json": {
+      "type": "string",
+      "description": "JSON stringified array of question objects"
+    },
+    "answers_json": {
+      "type": "string",
+      "description": "JSON stringified array of answer objects"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": ["user_email", "section"],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        { "created_by": "{{user.email}}" },
+        { "user_condition": { "role": "admin" } }
+      ]
+    },
+    "update": {
+      "$or": [
+        { "created_by": "{{user.email}}" },
+        { "user_condition": { "role": "admin" } }
+      ]
+    },
+    "delete": {
+      "$or": [
+        { "created_by": "{{user.email}}" },
+        { "user_condition": { "role": "admin" } }
+      ]
+    }
+  }
+}

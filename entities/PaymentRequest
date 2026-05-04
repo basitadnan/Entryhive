@@ -1,0 +1,49 @@
+{
+  "name": "PaymentRequest",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "screenshot_url": {
+      "type": "string",
+      "description": "URL of uploaded payment screenshot"
+    },
+    "screenshot_hash": {
+      "type": "string",
+      "description": "SHA-256 hash of image bytes to detect reuse"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "ai_approved"
+      ],
+      "default": "pending"
+    },
+    "amount_detected": {
+      "type": "number"
+    },
+    "account_detected": {
+      "type": "string"
+    },
+    "date_detected": {
+      "type": "string"
+    },
+    "ai_verdict": {
+      "type": "string"
+    },
+    "referral_code_used": {
+      "type": "string"
+    },
+    "admin_note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "screenshot_url"
+  ]
+}
