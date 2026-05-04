@@ -81,6 +81,26 @@ export default function Admin() {
     return data || [];
   }, enabled: user?.role === 'admin' });
 
+  const { data: allPracticeSessions = [] } = useQuery({ 
+    queryKey: ['admin-practice-sessions'], 
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { data } = await supabase.from('practice_sessions').select('user_email, completed');
+      return data || [];
+    }, 
+    enabled: user?.role === 'admin' 
+  });
+
+  const { data: allMockTests = [] } = useQuery({ 
+    queryKey: ['admin-mock-tests'], 
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { data } = await supabase.from('mock_test_results').select('user_email, completed');
+      return data || [];
+    }, 
+    enabled: user?.role === 'admin' 
+  });
+
   if (user?.role !== 'admin') {
     return (
       <div className="p-4 text-center">
@@ -403,6 +423,12 @@ export default function Admin() {
                       {u.is_premium ? <span className="text-[9px] bg-primary/20 text-primary px-1.5 py-0.5 rounded uppercase font-bold flex items-center gap-1"><Crown className="w-2.5 h-2.5"/> Prem</span> : <span className="text-[9px] bg-white/10 text-muted-foreground px-1.5 py-0.5 rounded uppercase font-bold">Free</span>}
                       {u.role === 'admin' && <span className="text-[9px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded uppercase font-bold">Admin</span>}
                       {u.nat_group && <span className="text-[9px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded uppercase font-bold">{u.nat_group}</span>}
+                      <span className="text-[9px] bg-green-500/10 text-green-400 px-1.5 py-0.5 rounded uppercase font-bold">
+                        {allPracticeSessions.filter(s => s.user_email === u.email && s.completed).length} Practice
+                      </span>
+                      <span className="text-[9px] bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded uppercase font-bold">
+                        {allMockTests.filter(m => m.user_email === u.email && m.completed).length} Mock
+                      </span>
                     </div>
                   </div>
                   <div className="sm:text-right flex sm:flex-col items-center sm:items-end gap-2">

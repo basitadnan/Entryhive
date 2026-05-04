@@ -35,6 +35,9 @@ jobs:
       - name: Capacitor Sync
         run: npx cap sync android
 
+      - name: Generate App Icons
+        run: npx @capacitor/assets generate --android
+
       - name: Build Android APK
         run: |
           cd android
