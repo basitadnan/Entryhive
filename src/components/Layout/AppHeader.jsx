@@ -61,26 +61,27 @@ export default function AppHeader({ user }) {
   return (
     <>
       <header
-        className="sticky top-0 z-50 px-5 py-3.5 flex items-center justify-between"
+        className="sticky top-0 z-50 px-4 py-3 flex items-center justify-between"
         style={{
           background: C.headerBg,
-          backdropFilter: 'blur(24px)',
+          backdropFilter: 'blur(12px)', /* Reduced from 24px for performance */
           borderBottom: `1px solid ${C.headerBorder}`,
         }}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <button
-            onClick={() => { sounds.click(); setMenuOpen(p => !p); }}
-            className="w-8 h-8 flex items-center justify-center transition-colors"
+            onClick={(e) => { 
+              e.preventDefault();
+              e.stopPropagation();
+              setMenuOpen(p => !p); 
+            }}
+            className="w-12 h-12 flex items-center justify-center active:scale-95 transition-transform"
             style={{ color: C.textMuted }}
+            aria-label="Toggle Menu"
           >
-            <AnimatePresence mode="wait">
-              {menuOpen
-                ? <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ opacity: 0 }}><X className="w-4.5 h-4.5" /></motion.div>
-                : <motion.div key="m" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ opacity: 0 }}><Menu className="w-4.5 h-4.5" /></motion.div>}
-            </AnimatePresence>
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2">
             <div className="relative w-7 h-7 rounded-lg flex items-center justify-center"
               style={{
                 border: `1px solid ${C.primaryBorder}`,
@@ -97,15 +98,15 @@ export default function AppHeader({ user }) {
 
         <button
           onClick={() => go('/profile')}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all"
+          className="flex items-center gap-2 px-3 py-2 rounded-lg active:scale-95 transition-transform"
           style={{
             border: isPremium ? '1px solid rgba(168,85,247,0.4)' : `1px solid rgba(255,255,255,0.06)`,
             background: isPremium ? 'rgba(168,85,247,0.08)' : 'rgba(255,255,255,0.02)',
             color: isPremium ? '#a855f7' : C.textMuted,
           }}
         >
-          {isPremium ? <Crown className="w-3 h-3" /> : <User className="w-3 h-3" />}
-          {isPremium && <span style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '0.12em', color: '#a855f7' }}>PRO</span>}
+          {isPremium ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
+          {isPremium && <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', color: '#a855f7' }}>PRO</span>}
         </button>
       </header>
 
