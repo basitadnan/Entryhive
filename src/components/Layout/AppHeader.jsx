@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, FileText, Lightbulb, BarChart3, Crown, Shield, LogOut, Layers, User, Star, Trophy, CheckSquare, MessageSquare, Target, Brain, Calculator, Gift } from 'lucide-react';
+import { Menu, X, Home, BookOpen, FileText, Lightbulb, BarChart3, Crown, Shield, LogOut, Layers, User, Star, Trophy, CheckSquare, MessageSquare, Target, Brain, Calculator, Gift, Zap } from 'lucide-react';
 import { base44 } from '@/lib/dbClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import { sounds } from '@/lib/sounds';
