@@ -18,7 +18,9 @@ import {
   X, 
   Crown,
   TrendingUp,
-  ArrowLeft
+  ArrowLeft,
+  Plus,
+  Copy
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { addCustomQuestion, getCustomQuestions, deleteCustomQuestion, getSectionLabel, getAllSections } from '@/lib/questionBank';
@@ -100,6 +102,26 @@ export default function Admin() {
     }, 
     enabled: user?.role === 'admin' 
   });
+
+  const practiceCounts = React.useMemo(() => {
+    const counts = {};
+    (allPracticeSessions || []).forEach(s => {
+      if (s.completed && s.user_email) {
+        counts[s.user_email] = (counts[s.user_email] || 0) + 1;
+      }
+    });
+    return counts;
+  }, [allPracticeSessions]);
+
+  const mockCounts = React.useMemo(() => {
+    const counts = {};
+    (allMockTests || []).forEach(m => {
+      if (m.completed && m.user_email) {
+        counts[m.user_email] = (counts[m.user_email] || 0) + 1;
+      }
+    });
+    return counts;
+  }, [allMockTests]);
 
   if (user?.role !== 'admin') {
     return (
@@ -424,10 +446,10 @@ export default function Admin() {
                       {u.role === 'admin' && <span className="text-[9px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded uppercase font-bold">Admin</span>}
                       {u.nat_group && <span className="text-[9px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded uppercase font-bold">{u.nat_group}</span>}
                       <span className="text-[9px] bg-green-500/10 text-green-400 px-1.5 py-0.5 rounded uppercase font-bold">
-                        {allPracticeSessions.filter(s => s.user_email === u.email && s.completed).length} Practice
+                        {practiceCounts[u.email] || 0} Practice
                       </span>
                       <span className="text-[9px] bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded uppercase font-bold">
-                        {allMockTests.filter(m => m.user_email === u.email && m.completed).length} Mock
+                        {mockCounts[u.email] || 0} Mock
                       </span>
                     </div>
                   </div>
