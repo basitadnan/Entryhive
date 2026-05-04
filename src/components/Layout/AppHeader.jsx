@@ -82,13 +82,12 @@ export default function AppHeader({ user }) {
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
           <Link to="/" className="flex items-center gap-2">
-            <div className="relative w-7 h-7 rounded-lg flex items-center justify-center"
+            <div className="relative w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 border: `1px solid ${C.primaryBorder}`,
-                background: `radial-gradient(circle at 40% 35%, ${C.primaryDim}, transparent 70%)`,
                 boxShadow: `0 0 12px rgba(0,229,255,0.15)`,
               }}>
-              <span style={{ color: C.primary, fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '13px', lineHeight: 1 }}>N</span>
+              <img src="/logo.png" alt="L" className="w-full h-full object-cover" />
             </div>
             <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1rem', letterSpacing: '0.03em', color: C.textLight }}>
               NAT<span style={{ color: C.primary }}>Prep</span>
@@ -195,6 +194,13 @@ export default function AppHeader({ user }) {
 
               {/* Logout */}
               <div className="p-3" style={{ borderTop: `1px solid ${C.sidebarBorder}` }}>
+                <button
+                  onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
+                  className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"
+                  style={{ color: C.primary, background: C.primaryDim }}
+                >
+                  <Zap className="w-3.5 h-3.5 fill-primary" /> Download Android App
+                </button>
                 <button
                   onClick={() => base44.auth.logout('/')}
                   className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg"

@@ -43,8 +43,8 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2.5 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center glow-primary">
-              <span className="text-primary font-extrabold text-lg">N</span>
+            <div className="w-10 h-10 rounded-xl overflow-hidden border border-primary/30 flex items-center justify-center glow-primary">
+              <img src="/logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-2xl font-bold">
               <span className="text-gradient">NAT</span>

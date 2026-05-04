@@ -9,6 +9,7 @@ import { Clock, ChevronLeft, ChevronRight, Flag, CheckCircle2, XCircle } from 'l
 import { getMockTestQuestions, getSectionLabel } from '@/lib/questionBank';
 import AIExplainButton from '@/components/practice/AIExplainButton';
 import WeakAreaAnalysis from '@/components/practice/WeakAreaAnalysis';
+import { sounds } from '@/lib/sounds';
 
 export default function MockTestSession() {
   const { user, setUser } = useOutletContext();
@@ -55,6 +56,7 @@ export default function MockTestSession() {
   };
 
   const handleFinish = async () => {
+    sounds.vibrate(200); // Feel the submission
     clearInterval(timerRef.current);
     
     let correct = 0;

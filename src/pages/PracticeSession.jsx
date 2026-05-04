@@ -123,6 +123,7 @@ export default function PracticeSession() {
       setSelectedAnswer(null);
       setShowResult(false);
     } else {
+      sounds.vibrate(200); // Strong vibration on finish
       finishSession();
     }
   };

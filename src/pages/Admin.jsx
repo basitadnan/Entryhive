@@ -103,6 +103,15 @@ export default function Admin() {
     toast.success('Question added successfully!');
   };
 
+  const handlePromoteAdmin = async (targetEmail) => {
+    if (!window.confirm(`Are you sure you want to make ${targetEmail} an Admin?`)) return;
+    const { supabase: sb } = await import('@/lib/supabaseClient');
+    const { error } = await sb.from('profiles').update({ role: 'admin' }).eq('email', targetEmail);
+    if (error) return toast.error('Failed to promote user');
+    toast.success(`${targetEmail} is now an Admin!`);
+    queryClient.invalidateQueries({ queryKey: ['admin-users'] });
+  };
+
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -396,9 +405,18 @@ export default function Admin() {
                       {u.nat_group && <span className="text-[9px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded uppercase font-bold">{u.nat_group}</span>}
                     </div>
                   </div>
-                  <div className="sm:text-right flex sm:block items-center gap-2">
-                    <p className="text-[10px] text-muted-foreground hidden sm:block mb-0.5">Referral</p>
+                  <div className="sm:text-right flex sm:flex-col items-center sm:items-end gap-2">
                     <p className="font-mono font-bold text-xs bg-black/40 px-1.5 py-0.5 rounded text-primary">{u.referral_code || 'NONE'}</p>
+                    {u.role !== 'admin' && (
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className="h-7 text-[9px] font-bold border-purple-500/50 text-purple-400 hover:bg-purple-500/10"
+                        onClick={() => handlePromoteAdmin(u.email)}
+                      >
+                        Make Admin
+                      </Button>
+                    )}
                   </div>
                 </Card>
               ))}

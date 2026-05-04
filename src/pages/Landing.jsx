@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { ChevronRight, BookOpen, Target, TrendingUp, Zap, Award, Users, Shield, Sparkles, Crown, Layers, Calendar, CheckSquare, MessageSquare, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { sounds } from '@/lib/sounds';
 
 const WORDS = ['Score Higher', 'Crack NAT-I', 'Study Smarter', 'Ace Your Exam', 'Beat the Competition'];
 
@@ -84,8 +85,8 @@ export default function Landing({ preview = false }) {
         className="relative z-50 flex items-center justify-between px-6 py-4 border-b border-border/20 bg-background/50 backdrop-blur-md"
       >
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center glow-primary">
-            <span className="text-primary font-bold">N</span>
+          <div className="w-9 h-9 rounded-lg overflow-hidden border border-primary/40 flex items-center justify-center glow-primary">
+            <img src="/logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-lg tracking-wide text-foreground">NAT<span className="text-primary">Prep</span></span>
         </div>
@@ -117,15 +118,28 @@ export default function Landing({ preview = false }) {
             </AnimatePresence>
             <span className="text-foreground">in Your NAT-I Exam</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-md mx-auto leading-relaxed">
-            The only platform you need for <strong className="text-foreground">NAT-IE, NAT-IM & NAT-ICS</strong>. Stop guessing. Start studying with the official syllabus.
+          <p className="text-muted-foreground text-lg max-w-lg mx-auto leading-relaxed">
+            Struggling with your NAT-I preparation? We built this platform <strong className="text-foreground">just for you</strong> to master every subject, practice with confidence and ace ur exams.
           </p>
         </motion.div>
 
         {!preview && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md">
-            <Button onClick={() => go('/signup')} className="w-full h-14 text-base font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all">
+            <Button 
+              onClick={() => {
+                sounds.vibrate(200);
+                go('/signup');
+              }} 
+              className="w-full h-14 text-base font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all"
+            >
               Start Practicing for Free <ChevronRight className="w-5 h-5 ml-1" />
+            </Button>
+            <Button 
+              onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
+              variant="outline"
+              className="w-full h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
+            >
+              Download Android App <Zap className="w-4 h-4 fill-primary" />
             </Button>
           </motion.div>
         )}
@@ -136,39 +150,77 @@ export default function Landing({ preview = false }) {
         initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 1, type: "spring" }}
         className="relative z-10 w-full max-w-4xl mx-auto px-6 mb-24 perspective-1000"
       >
-        <div className="rounded-2xl border border-primary/20 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden transform rotateX-12 scale-105 hover:rotate-0 transition-transform duration-700 ease-out premium-glow">
-          <div className="h-8 bg-black/60 border-b border-primary/10 flex items-center px-4 gap-2">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50" />
-            <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
+        <div className="rounded-2xl border border-primary/20 bg-black/40 backdrop-blur-2xl shadow-2xl overflow-hidden transform rotateX-12 scale-105 hover:rotate-0 transition-transform duration-700 ease-out premium-glow">
+          <div className="h-10 bg-white/5 border-b border-primary/10 flex items-center px-4 gap-2">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500/30" />
+              <div className="w-3 h-3 rounded-full bg-amber-500/30" />
+              <div className="w-3 h-3 rounded-full bg-green-500/30" />
+            </div>
+            <div className="mx-auto text-[10px] text-muted-foreground font-medium tracking-widest uppercase opacity-50">Student Performance Dashboard</div>
           </div>
-          <div className="p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 opacity-70 pointer-events-none">
-             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
-                <Trophy className="w-5 h-5 text-primary mb-1" />
-                <div className="h-1.5 w-10 bg-primary/20 rounded-full" />
-             </div>
-             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
-                <Target className="w-5 h-5 text-primary mb-1" />
-                <div className="h-1.5 w-12 bg-primary/20 rounded-full" />
-             </div>
-             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
-                <TrendingUp className="w-5 h-5 text-primary mb-1" />
-                <div className="h-1.5 w-8 bg-primary/20 rounded-full" />
-             </div>
-             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
-                <Award className="w-5 h-5 text-primary mb-1" />
-                <div className="h-1.5 w-14 bg-primary/20 rounded-full" />
-             </div>
-             <div className="col-span-2 sm:col-span-4 h-40 rounded-xl bg-primary/5 border border-primary/10 p-6 flex flex-col justify-between">
-                <div className="space-y-3">
-                   <div className="h-2 w-1/3 bg-primary/30 rounded-full" />
-                   <div className="h-2 w-2/3 bg-white/10 rounded-full" />
-                   <div className="h-2 w-1/2 bg-white/10 rounded-full" />
+          
+          <div className="p-8 grid grid-cols-1 md:grid-cols-12 gap-6">
+            {/* Left Column: Success Probability */}
+            <div className="md:col-span-4 space-y-6">
+              <div className="glass-card rounded-2xl p-6 border-primary/20 flex flex-col items-center justify-center relative overflow-hidden group">
+                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
+                <div className="relative w-24 h-24 rounded-full border-4 border-primary/10 flex items-center justify-center mb-3">
+                  <div className="absolute inset-0 rounded-full border-t-4 border-primary animate-spin-slow" />
+                  <span className="text-2xl font-black text-primary">84%</span>
                 </div>
-                <div className="flex justify-end">
-                   <div className="h-8 w-24 bg-primary/20 rounded-lg border border-primary/30" />
+                <p className="text-[10px] font-bold text-primary tracking-widest uppercase">Success Probability</p>
+                <p className="text-[9px] text-muted-foreground mt-1 text-center">Based on 1,200+ practice questions</p>
+              </div>
+
+              <div className="glass-card rounded-2xl p-4 border-white/5 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-orange-500 fill-orange-500/20" />
                 </div>
-             </div>
+                <div>
+                  <p className="text-xl font-bold text-foreground">12 Day</p>
+                  <p className="text-[9px] text-muted-foreground uppercase tracking-wider">Active Study Streak</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Subject Mastery */}
+            <div className="md:col-span-8 glass-card rounded-2xl p-6 border-white/5 space-y-6">
+              <div className="flex items-center justify-between">
+                <h4 className="text-sm font-bold tracking-tight">Subject Mastery Level</h4>
+                <div className="px-2 py-1 rounded bg-primary/10 text-[9px] font-bold text-primary uppercase">Track: NAT-IE</div>
+              </div>
+              
+              <div className="space-y-5">
+                {[
+                  { label: 'Quantitative Reasoning', val: '92%', color: 'bg-primary' },
+                  { label: 'Analytical Reasoning', val: '91%', color: 'bg-amber-500' },
+                  { label: 'English Comprehension', val: '85%', color: 'bg-emerald-500' },
+                  { label: 'Physics & Chemistry', val: '93%', color: 'bg-blue-500' },
+                ].map((s, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <div className="flex justify-between text-[10px] font-medium uppercase tracking-wide">
+                      <span className="text-muted-foreground">{s.label}</span>
+                      <span className="text-foreground">{s.val}</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }} whileInView={{ width: s.val }} transition={{ duration: 1.5, delay: 1 + (idx * 0.1) }}
+                        className={`h-full ${s.color} shadow-[0_0_10px_rgba(212,175,55,0.3)]`} 
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                <div className="flex -space-x-2">
+                  {[1,2,3].map(i => <div key={i} className="w-6 h-6 rounded-full border-2 border-background bg-muted" />)}
+                  <div className="w-6 h-6 rounded-full border-2 border-background bg-primary/20 flex items-center justify-center text-[8px] font-bold">+50</div>
+                </div>
+                <p className="text-[9px] text-muted-foreground italic tracking-wide">Join to ace ur exams now</p>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -210,14 +262,39 @@ export default function Landing({ preview = false }) {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-
+      </div>      {/* ── Download App Section ── */}
+      <section className="relative z-10 px-6 pb-24 w-full max-w-4xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }}
+          className="glass-card rounded-3xl p-8 md:p-12 border-primary/20 text-center relative overflow-hidden group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-50" />
+          <div className="relative z-10">
+            <div className="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center mx-auto mb-6 glow-primary">
+              <Zap className="w-8 h-8 text-primary fill-primary/20" />
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Study on the Go</h2>
+            <p className="text-muted-foreground max-w-md mx-auto mb-8">
+              Get the best preparation experience with our Android App. Practice offline, get instant notifications, and study anywhere, anytime.
+            </p>
+            <Button 
+              onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
+              className="h-14 px-10 text-lg font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all gap-2"
+            >
+              Download NAT Prep APK <ChevronRight className="w-5 h-5" />
+            </Button>
+            <p className="text-[10px] text-muted-foreground mt-4 uppercase tracking-[0.2em] opacity-60">Latest Version 2026 · 15MB · Safe & Verified</p>
+          </div>
+        </motion.div>
+      </section>
 
 
       {/* ── Footer ── */}
       <footer className="relative z-10 border-t border-white/5 py-8 text-center mt-auto bg-black/40 backdrop-blur-lg">
-        <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-4">
-          <span className="text-primary font-bold">N</span>
+        <div className="w-10 h-10 rounded-xl overflow-hidden border border-primary/20 flex items-center justify-center mx-auto mb-4">
+          <img src="/logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
         </div>
         <p className="text-sm text-muted-foreground font-medium">NAT<span className="text-primary">Prep</span> © 2026</p>
         <p className="text-xs text-muted-foreground/60 mt-1">Built with ❤️ for Pakistani Students</p>
