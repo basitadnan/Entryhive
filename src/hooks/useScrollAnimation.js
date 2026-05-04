@@ -10,9 +10,9 @@ export function useScrollReveal({ once = true, margin = '-60px', delay = 0 } = {
   const isInView = useInView(ref, { once, margin });
 
   const variants = {
-    hidden: { opacity: 0, y: 32, scale: 0.97, filter: 'blur(4px)' },
+    hidden: { opacity: 0, y: 32, scale: 0.97 },
     visible: {
-      opacity: 1, y: 0, scale: 1, filter: 'blur(0px)',
+      opacity: 1, y: 0, scale: 1,
       transition: {
         type: 'spring',
         damping: 25,

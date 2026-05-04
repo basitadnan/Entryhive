@@ -6,8 +6,19 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { 
-  ArrowLeft, Shield, Users, Key, Check, X, Copy, Trash2, 
-  TrendingUp, Database, Upload, CreditCard, LayoutDashboard, Crown, Plus
+  Users, 
+  Shield, 
+  CreditCard, 
+  Key, 
+  LayoutDashboard, 
+  Database, 
+  Upload, 
+  Trash2, 
+  Check, 
+  X, 
+  Crown,
+  TrendingUp,
+  ArrowLeft
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { addCustomQuestion, getCustomQuestions, deleteCustomQuestion, getSectionLabel, getAllSections } from '@/lib/questionBank';
@@ -152,12 +163,23 @@ export default function Admin() {
     <div className="p-4 md:p-6 space-y-6 pb-24 max-w-5xl mx-auto w-full">
       
       {/* Header */}
-      <div className="flex items-center gap-3 mb-6">
-        <Shield className="w-8 h-8 text-primary flex-shrink-0" />
-        <div>
-          <h1 className="text-2xl font-bold">Admin Panel</h1>
-          <p className="text-xs text-muted-foreground uppercase tracking-widest mt-1">Management Console</p>
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
+          <Shield className="w-8 h-8 text-primary flex-shrink-0" />
+          <div>
+            <h1 className="text-2xl font-bold">Admin Panel</h1>
+            <p className="text-xs text-muted-foreground uppercase tracking-widest mt-1">Management Console</p>
+          </div>
         </div>
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          className="text-muted-foreground hover:text-primary gap-2"
+          onClick={() => navigate('/')}
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="hidden sm:inline">Back to Home</span>
+        </Button>
       </div>
 
       {/* Horizontal Scrollable Tabs */}
