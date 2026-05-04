@@ -21,9 +21,9 @@ const FEATURES = [
 
 const STATS = [
   { value: 500, label: 'Practice MCQs', suffix: '+' },
-  { value: 3, label: 'NAT Tracks Supported', suffix: '' },
-  { value: 10, label: 'Smart Tools', suffix: '' },
-  { value: 100, label: 'AI Powered', suffix: '%' },
+  { value: 10, label: 'Success Tracks', suffix: '' },
+  { value: 60, label: 'Shortcuts & Tricks', suffix: '+' },
+  { value: 100, label: 'Syllabus Coverage', suffix: '%' },
 ];
 
 function AnimatedCounter({ target, suffix = '' }) {
@@ -100,7 +100,7 @@ export default function Landing({ preview = false }) {
       <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center">
         <motion.div initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }} animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8 }} className="mb-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-widest mb-6">
-            <Sparkles className="w-3 h-3" /> Base44's Ultimate Platform
+            <Shield className="w-3 h-3" /> Official NAT Preparation Platform
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-4 tracking-tight">
             <AnimatePresence mode="wait">
@@ -118,7 +118,7 @@ export default function Landing({ preview = false }) {
             <span className="text-foreground">in Your NAT-I Exam</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-md mx-auto leading-relaxed">
-            The only platform you need for <strong className="text-foreground">NAT-IE, NAT-IM & NAT-ICS</strong>. Stop guessing. Start studying smart with AI.
+            The only platform you need for <strong className="text-foreground">NAT-IE, NAT-IM & NAT-ICS</strong>. Stop guessing. Start studying with the official syllabus.
           </p>
         </motion.div>
 
@@ -143,10 +143,32 @@ export default function Landing({ preview = false }) {
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
           </div>
           <div className="p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 opacity-70 pointer-events-none">
-             {[1,2,3,4].map(i => (
-               <div key={i} className="h-24 rounded-xl bg-white/5 border border-white/5" />
-             ))}
-             <div className="col-span-2 sm:col-span-4 h-40 rounded-xl bg-primary/5 border border-primary/10" />
+             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
+                <Trophy className="w-5 h-5 text-primary mb-1" />
+                <div className="h-1.5 w-10 bg-primary/20 rounded-full" />
+             </div>
+             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
+                <Target className="w-5 h-5 text-primary mb-1" />
+                <div className="h-1.5 w-12 bg-primary/20 rounded-full" />
+             </div>
+             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
+                <TrendingUp className="w-5 h-5 text-primary mb-1" />
+                <div className="h-1.5 w-8 bg-primary/20 rounded-full" />
+             </div>
+             <div className="h-24 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center justify-center p-2">
+                <Award className="w-5 h-5 text-primary mb-1" />
+                <div className="h-1.5 w-14 bg-primary/20 rounded-full" />
+             </div>
+             <div className="col-span-2 sm:col-span-4 h-40 rounded-xl bg-primary/5 border border-primary/10 p-6 flex flex-col justify-between">
+                <div className="space-y-3">
+                   <div className="h-2 w-1/3 bg-primary/30 rounded-full" />
+                   <div className="h-2 w-2/3 bg-white/10 rounded-full" />
+                   <div className="h-2 w-1/2 bg-white/10 rounded-full" />
+                </div>
+                <div className="flex justify-end">
+                   <div className="h-8 w-24 bg-primary/20 rounded-lg border border-primary/30" />
+                </div>
+             </div>
           </div>
         </div>
       </motion.div>
