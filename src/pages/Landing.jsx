@@ -53,6 +53,8 @@ export default function Landing({ preview = false }) {
   const [wordIndex, setWordIndex] = useState(0);
   const navigate = useNavigate();
 
+  const isElectron = /electron/i.test(navigator.userAgent) || window.location.protocol === 'file:';
+
   useEffect(() => {
     const id = setInterval(() => setWordIndex(p => (p + 1) % WORDS.length), 2500);
     return () => clearInterval(id);
@@ -91,7 +93,7 @@ export default function Landing({ preview = false }) {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="w-9 h-9 rounded-lg overflow-hidden border border-primary/40 flex items-center justify-center glow-primary"
           >
-            <img src="/logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
+            <img src="./logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
           </motion.div>
           <span className="font-bold text-lg tracking-wide text-foreground">NAT<span className="text-primary">Prep</span></span>
         </div>
@@ -139,7 +141,7 @@ export default function Landing({ preview = false }) {
             >
               Start Practicing for Free <ChevronRight className="w-5 h-5 ml-1" />
             </Button>
-            {!Capacitor.isNativePlatform() && (
+            {!Capacitor.isNativePlatform() && !isElectron && (
               <Button 
                 onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
                 variant="outline"
@@ -269,8 +271,9 @@ export default function Landing({ preview = false }) {
             </motion.div>
           ))}
         </motion.div>
-      </div>      {/* ── Download App Section ── */}
-      <section className="relative z-10 px-6 pb-24 w-full max-w-4xl mx-auto">
+      </div>      {/* ── Download App Section (Hidden on Electron) ── */}
+      {!isElectron && (
+        <section className="relative z-10 px-6 pb-24 w-full max-w-4xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 30 }} 
           whileInView={{ opacity: 1, y: 0 }} 
@@ -296,12 +299,13 @@ export default function Landing({ preview = false }) {
           </div>
         </motion.div>
       </section>
+      )}
 
 
       {/* ── Footer ── */}
       <footer className="relative z-10 border-t border-white/5 py-8 text-center mt-auto bg-black/40 backdrop-blur-lg">
         <div className="w-10 h-10 rounded-xl overflow-hidden border border-primary/20 flex items-center justify-center mx-auto mb-4">
-          <img src="/logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
+          <img src="./logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
         </div>
         <p className="text-sm text-muted-foreground font-medium">NAT<span className="text-primary">Prep</span> © 2026</p>
         <p className="text-xs text-muted-foreground/60 mt-1">Built with ❤️ for Pakistani Students</p>

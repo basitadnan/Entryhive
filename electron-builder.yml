@@ -8,5 +8,5 @@ files:
   - electron/**/*
   - package.json
 win:
-  target: dir
+  target: nsis
   icon: public/logo.png

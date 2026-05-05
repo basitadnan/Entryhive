@@ -56,6 +56,8 @@ export default function AppHeader({ user }) {
   const location = useLocation();
   const isPremium = user?.is_premium === true;
   const isAdmin = user?.role === 'admin';
+  const isElectron = /electron/i.test(navigator.userAgent) || window.location.protocol === 'file:';
+
   const queryClient = useQueryClient();
   const [notifsOpen, setNotifsOpen] = useState(false);
 
@@ -133,7 +135,7 @@ export default function AppHeader({ user }) {
                 border: `1px solid ${C.primaryBorder}`,
                 boxShadow: `0 0 12px rgba(0,229,255,0.15)`,
               }}>
-              <img src="/logo.png" alt="L" className="w-full h-full object-cover" />
+              <img src="./logo.png" alt="L" className="w-full h-full object-cover" />
             </div>
             <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1rem', letterSpacing: '0.03em', color: C.textLight }}>
               NAT<span style={{ color: C.primary }}>Prep</span>
@@ -292,8 +294,8 @@ export default function AppHeader({ user }) {
 
               {/* Logout */}
               <div className="p-3" style={{ borderTop: `1px solid ${C.sidebarBorder}` }}>
-                {/* Hide download button if in the app or localhost (app internal) */}
-                {!Capacitor.isNativePlatform() && window.location.hostname !== 'localhost' && (
+                {/* Hide download button if in the app or electron */}
+                {!Capacitor.isNativePlatform() && !isElectron && (
                   <button
                     onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
                     className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"

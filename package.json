@@ -10,7 +10,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "electron:dev": "electron .",
-    "electron:build": "npm run build && electron-packager . \"NAT Prep\" --platform=win32 --arch=x64 --out=dist_electron --overwrite --icon=public/logo.png"
+    "electron:build": "npm run build && electron-packager . \"NAT Prep\" --platform=win32 --arch=x64 --out=dist_electron --overwrite --icon=public/logo.ico",
+    "build:win": "npm run build && electron-builder --win"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",
