@@ -26,13 +26,18 @@ export const AuthProvider = ({ children }) => {
     }
 
     let isMounted = true;
+    
+    // Fail-safe: Force hide loading after 6 seconds no matter what
+    const failSafe = setTimeout(() => {
+      if (isMounted) setIsLoadingAuth(false);
+    }, 6000);
 
     async function initAuth() {
       try {
         const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user && isMounted) {
+        if (session?.user) {
           const mergedUser = await base44.auth.me();
-          if (mergedUser && isMounted) {
+          if (isMounted && mergedUser) {
             setUser(mergedUser);
             setIsAuthenticated(true);
           }
@@ -40,7 +45,10 @@ export const AuthProvider = ({ children }) => {
       } catch (e) {
         console.error("Auth Init Error:", e);
       } finally {
-        if (isMounted) setIsLoadingAuth(false);
+        if (isMounted) {
+          setIsLoadingAuth(false);
+          clearTimeout(failSafe);
+        }
       }
     }
 
@@ -53,17 +61,22 @@ export const AuthProvider = ({ children }) => {
           setUser(mergedUser);
           setIsAuthenticated(true);
           setIsLoadingAuth(false);
+          clearTimeout(failSafe);
         }
-      } else if (isMounted) {
-        setUser(null);
-        setIsAuthenticated(false);
-        setIsLoadingAuth(false);
+      } else {
+        if (isMounted) {
+          setUser(null);
+          setIsAuthenticated(false);
+          setIsLoadingAuth(false);
+          clearTimeout(failSafe);
+        }
       }
     });
 
     return () => { 
       isMounted = false;
       subscription.unsubscribe(); 
+      clearTimeout(failSafe);
     };
   }, []);
 
