@@ -128,20 +128,41 @@ export const base44 = {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return null;
       // Merge with profiles table
-      const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+      let { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).maybeSingle();
+      
+      // If profile doesn't exist (e.g. first Google login), create it
+      if (!profile) {
+        const newProfile = {
+          id: user.id,
+          email: user.email,
+          full_name: user.user_metadata?.full_name || user.email.split('@')[0],
+          referral_code: `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`,
+        };
+        const { data: created } = await supabase.from('profiles').upsert(newProfile).select().single();
+        profile = created;
+      }
+
       const merged = { ...user, ...user.user_metadata, ...profile };
       
-      // Auto-grant admin and premium to the specified email
+      // ── Collaborator Logic ──
+      merged.referred_by_code = profile?.referred_by_code || null;
+      
+      // ── 3-Day Free Trial Logic ──
+      const signupDate = profile?.created_at ? new Date(profile.created_at) : new Date(user.created_at);
+      const now = new Date();
+      const diffMs = now - signupDate;
+      const diffDays = diffMs / (1000 * 60 * 60 * 24);
+      
+      const isTrialActive = diffDays <= 3;
+      merged.is_premium = merged.is_premium || isTrialActive;
+      merged.trial_days_left = Math.max(0, Math.ceil(3 - diffDays));
+      merged.is_on_trial = isTrialActive && !profile?.is_premium;
+      
       if (merged.email === 'adnanabdulbasit75@gmail.com') {
         merged.role = 'admin';
         merged.is_premium = true;
       }
 
-      if (!merged.referral_code) {
-        const code = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
-        await supabase.from('profiles').update({ referral_code: code }).eq('id', user.id);
-        merged.referral_code = code;
-      }
       return merged;
     },
 
@@ -193,6 +214,18 @@ export const base44 = {
         return { data: null, error: { message: 'Invalid email or password' } };
       }
       return await supabase.auth.signInWithPassword({ email, password });
+    },
+    
+    signInWithGoogle: async () => {
+      if (isPlaceholder) {
+        return { data: null, error: { message: 'Google login not available in mock mode.' } };
+      }
+      return await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin,
+        },
+      });
     },
 
     redirectToLogin: () => { window.location.href = '/login'; },

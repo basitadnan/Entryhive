@@ -28,7 +28,7 @@ export default function Premium() {
   const [activationCode, setActivationCode] = useState('');
   const [isActivating, setIsActivating] = useState(false);
 
-  const isPremium = user?.is_premium === true;
+  const isPremium = user?.is_premium === true && !user?.is_on_trial;
 
   // Check user's payment request status
   const { data: myPaymentRequests = [] } = useQuery({
@@ -61,8 +61,13 @@ export default function Premium() {
       return;
     }
 
-    const referrers = await base44.entities.profiles.filter({ referral_code: cleanCode });
-    if (referrers.length > 0) {
+    const { data: referrer } = await supabase
+      .from('profiles')
+      .select('id')
+      .eq('referral_code', cleanCode)
+      .maybeSingle();
+
+    if (referrer) {
       setIsReferralValid(true);
       toast.success("Referral applied! Discount activated.");
     } else {
@@ -86,8 +91,10 @@ export default function Premium() {
         toast.error("This code is not assigned to your account.");
       } else {
         await base44.entities.activation_codes.update(codeRecord.id, { is_used: true, used_by: user.email, used_date: new Date().toISOString() });
-        await base44.auth.updateMe({ is_premium: true });
-        setUser(prev => ({ ...prev, is_premium: true }));
+        const updateData = { is_premium: true };
+        if (isReferralValid) updateData.referred_by_code = referralCode.trim().toUpperCase();
+        await base44.auth.updateMe(updateData);
+        setUser(prev => ({ ...prev, ...updateData }));
         toast.success("🎉 Premium Activated!");
         setTimeout(() => navigate('/'), 1500);
       }
@@ -159,9 +166,15 @@ export default function Premium() {
 
       if (finalStatus === 'approved') {
         toast.success("Payment verified! Premium activated instantly.");
-        await base44.auth.updateMe({ is_premium: true });
-        setUser(prev => ({ ...prev, is_premium: true }));
+        const updateData = { is_premium: true };
+        if (isReferralValid) updateData.referred_by_code = referralCode.trim().toUpperCase();
+        await base44.auth.updateMe(updateData);
+        setUser(prev => ({ ...prev, ...updateData }));
       } else {
+        // Even if pending, we save the referral code they used
+        if (isReferralValid) {
+           await supabase.from('profiles').update({ referred_by_code: referralCode.trim().toUpperCase() }).eq('id', user.id);
+        }
         toast.success("Screenshot uploaded! Admin will review it shortly.");
         setTimeout(() => navigate('/'), 2000);
       }
@@ -179,11 +192,11 @@ export default function Premium() {
         <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
           <ArrowLeft className="w-4 h-4" /> Back
         </button>
-        <Card className="p-8 text-center glass-card premium-glow border-primary/20">
+        <Card className="p-8 text-center bg-card border-primary/20">
           <Crown className="w-12 h-12 text-primary mx-auto mb-4 drop-shadow-md" />
           <h2 className="text-2xl font-bold mb-2">You're Premium!</h2>
           <p className="text-muted-foreground">You have unlimited access to all features.</p>
-          <Button className="mt-6 w-full glow-primary text-black bg-primary font-bold hover:bg-primary/90" onClick={() => navigate('/')}>Go to Dashboard</Button>
+          <Button className="mt-6 w-full text-black bg-primary font-bold hover:bg-primary/90" onClick={() => navigate('/')}>Go to Dashboard</Button>
         </Card>
       </div>
     );
@@ -234,13 +247,13 @@ export default function Premium() {
       )}
 
       {/* Referral Code */}
-      <Card className="p-4 glass-card border-border/50">
+      <Card className="p-4 bg-card border-border">
         <h3 className="font-semibold text-sm mb-2 flex items-center gap-2"><Percent className="w-4 h-4 text-primary" /> Have a Referral Code?</h3>
         <div className="flex gap-2">
           <Input 
             value={referralCode} onChange={e => {setReferralCode(e.target.value); setIsReferralValid(false);}} 
             placeholder="Enter code for discount" 
-            className="bg-black/40 border-border/50 uppercase" 
+            className="bg-black/40 border-border uppercase" 
             disabled={isReferralValid}
           />
           {!isReferralValid ? (
@@ -263,7 +276,7 @@ export default function Premium() {
             className={`p-4 rounded-xl border text-center transition-all ${
               selectedPlan === months 
                 ? 'border-primary bg-primary/10 shadow-[0_0_15px_rgba(212,175,55,0.2)]' 
-                : 'border-border/50 bg-secondary/30 hover:border-border'
+                : 'border-border bg-secondary/30 hover:border-border'
             }`}
           >
             <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">{months} Month{months > 1 ? 's' : ''}</p>
@@ -282,7 +295,7 @@ export default function Premium() {
       </div>
 
       {/* Payment Details */}
-      <Card className="p-5 glass-card space-y-4 border-border/50">
+      <Card className="p-5 bg-card space-y-4 border-border">
         <h3 className="font-semibold text-sm border-b border-border/20 pb-2">Payment Details</h3>
         <div className="space-y-3 text-sm">
           <div className="flex justify-between">
@@ -300,7 +313,7 @@ export default function Premium() {
       </Card>
 
       {/* METHOD 1: AI Verification Upload */}
-      <Card className="p-5 glass-card space-y-4 border-border/50 relative overflow-hidden">
+      <Card className="p-5 bg-card space-y-4 border-border relative overflow-hidden">
         <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-2xl rounded-full" />
         <h3 className="font-semibold text-sm border-b border-border/20 pb-2 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-primary" /> Method 1: AI Instant Activation
@@ -312,7 +325,7 @@ export default function Premium() {
         {!preview ? (
           <button 
             onClick={() => fileInputRef.current?.click()}
-            className="w-full h-32 border-2 border-dashed border-border/50 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-primary/50 hover:bg-primary/5 transition-all"
+            className="w-full h-32 border-2 border-dashed border-border rounded-xl flex flex-col items-center justify-center gap-2 hover:border-primary/50 hover:bg-primary/5 transition-all"
           >
             <Upload className="w-6 h-6 text-muted-foreground" />
             <span className="text-sm text-muted-foreground font-medium">Tap to upload screenshot</span>
@@ -326,7 +339,7 @@ export default function Premium() {
         )}
 
         <Button 
-          className="w-full glow-primary h-12 text-black font-bold bg-primary hover:bg-primary/90" 
+          className="w-full h-12 text-black font-bold bg-primary hover:bg-primary/90" 
           disabled={!preview || isVerifying} onClick={handleSubmitScreenshot}
         >
           {isVerifying ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Verifying with AI...</> : <><CheckCircle2 className="w-4 h-4 mr-2" /> Verify & Activate</>}
@@ -340,7 +353,7 @@ export default function Premium() {
       </div>
 
       {/* METHOD 2: Manual WhatsApp Code */}
-      <Card className="p-5 glass-card space-y-4 border-border/50">
+      <Card className="p-5 bg-card space-y-4 border-border">
         <h3 className="font-semibold text-sm border-b border-border/20 pb-2 flex items-center gap-2">
           <MessageCircle className="w-4 h-4 text-green-400" /> Method 2: Manual Code
         </h3>
@@ -353,7 +366,7 @@ export default function Premium() {
         </a>
 
         <div className="flex gap-2">
-          <Input value={activationCode} onChange={(e) => setActivationCode(e.target.value)} placeholder="NAT-XXXXXX" className="flex-1 bg-black/40 border-border/50 font-mono uppercase" />
+          <Input value={activationCode} onChange={(e) => setActivationCode(e.target.value)} placeholder="NAT-XXXXXX" className="flex-1 bg-black/40 border-border font-mono uppercase" />
           <Button className="bg-secondary text-foreground hover:bg-secondary/80" disabled={!activationCode.trim() || isActivating} onClick={handleActivationCode}>
             {isActivating ? '...' : 'Activate'}
           </Button>

@@ -28,9 +28,10 @@ export const AuthProvider = ({ children }) => {
       return;
     }
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
       if (session?.user) {
-        setUser(session.user);
+        const mergedUser = await base44.auth.me();
+        setUser(mergedUser);
         setIsAuthenticated(true);
       }
       setIsLoadingAuth(false);
@@ -40,9 +41,10 @@ export const AuthProvider = ({ children }) => {
       clearTimeout(timer);
     });
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       if (session?.user) {
-        setUser(session.user);
+        const mergedUser = await base44.auth.me();
+        setUser(mergedUser);
         setIsAuthenticated(true);
       } else {
         setUser(null);
@@ -72,6 +74,11 @@ export const AuthProvider = ({ children }) => {
     return await base44.auth.signUp(email, password, { full_name: fullName });
   };
 
+  const loginWithGoogle = async () => {
+    const { data, error } = await base44.auth.signInWithGoogle();
+    return { data, error };
+  };
+
   const navigateToLogin = () => { base44.auth.redirectToLogin(); };
   const checkAppState = async () => {};
 
@@ -79,7 +86,7 @@ export const AuthProvider = ({ children }) => {
     <AuthContext.Provider value={{
       user, isAuthenticated, isLoadingAuth, isLoadingPublicSettings,
       authError, appPublicSettings,
-      logout, loginWithPassword, signUp, navigateToLogin, checkAppState
+      logout, loginWithPassword, signUp, loginWithGoogle, navigateToLogin, checkAppState
     }}>
       {children}
     </AuthContext.Provider>

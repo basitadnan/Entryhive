@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { ChevronRight, BookOpen, Target, TrendingUp, Zap, Award, Users, Shield, Sparkles, Crown, Layers, Calendar, CheckSquare, MessageSquare, Trophy } from 'lucide-react';
+import { Capacitor } from '@capacitor/core';
+import { ChevronRight, BookOpen, Target, TrendingUp, Zap, Award, Users, Shield, Sparkles, Crown, Layers, Calendar, CheckSquare, MessageSquare, Trophy, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { sounds } from '@/lib/sounds';
 
@@ -85,9 +86,13 @@ export default function Landing({ preview = false }) {
         className="relative z-50 flex items-center justify-between px-6 py-4 border-b border-border/20 bg-background/50 backdrop-blur-md"
       >
         <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg overflow-hidden border border-primary/40 flex items-center justify-center glow-primary">
+          <motion.div 
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="w-9 h-9 rounded-lg overflow-hidden border border-primary/40 flex items-center justify-center glow-primary"
+          >
             <img src="/logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
-          </div>
+          </motion.div>
           <span className="font-bold text-lg tracking-wide text-foreground">NAT<span className="text-primary">Prep</span></span>
         </div>
         {!preview && (
@@ -134,13 +139,15 @@ export default function Landing({ preview = false }) {
             >
               Start Practicing for Free <ChevronRight className="w-5 h-5 ml-1" />
             </Button>
-            <Button 
-              onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
-              variant="outline"
-              className="w-full h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
-            >
-              Download Android App <Zap className="w-4 h-4 fill-primary" />
-            </Button>
+            {!Capacitor.isNativePlatform() && (
+              <Button 
+                onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
+                variant="outline"
+                className="w-full h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
+              >
+                Download Android App <Zap className="w-4 h-4 fill-primary" />
+              </Button>
+            )}
           </motion.div>
         )}
       </div>

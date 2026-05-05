@@ -126,7 +126,7 @@ export default function Admin() {
   if (user?.role !== 'admin') {
     return (
       <div className="p-4 text-center">
-        <Card className="p-8 glass-card border-red-500/30">
+        <Card className="p-8 bg-card border-red-500/30">
           <Shield className="w-10 h-10 text-red-500 mx-auto mb-3" />
           <h2 className="text-xl font-bold">Access Denied</h2>
           <p className="text-muted-foreground mt-2">You need admin privileges to access this page.</p>
@@ -242,7 +242,7 @@ export default function Admin() {
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap transition-all text-sm font-semibold border ${
               activeTab === tab.id 
                 ? 'bg-primary text-black border-primary' 
-                : 'bg-black/40 text-muted-foreground border-border/50 hover:border-primary/50 hover:text-white'
+                : 'bg-black/40 text-muted-foreground border-border hover:border-primary/50 hover:text-white'
             }`}
           >
             <tab.icon className={`w-4 h-4 ${activeTab === tab.id ? 'text-black' : 'text-primary'}`} />
@@ -262,22 +262,22 @@ export default function Admin() {
           <div className="space-y-4 animate-in fade-in duration-300">
             <h2 className="text-lg font-bold border-b border-border/30 pb-2">Overview</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <Card className="p-4 glass-card border-border/50 text-center">
+              <Card className="p-4 bg-card border-border text-center">
                 <Users className="w-6 h-6 text-blue-400 mx-auto mb-2" />
                 <p className="text-2xl font-bold">{usersList.length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Total Users</p>
               </Card>
-              <Card className="p-4 glass-card border-border/50 text-center">
+              <Card className="p-4 bg-card border-border text-center">
                 <Crown className="w-6 h-6 text-primary mx-auto mb-2 drop-shadow-md" />
                 <p className="text-2xl font-bold text-primary">{premiumUsers.length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Premium</p>
               </Card>
-              <Card className="p-4 glass-card border-border/50 text-center">
+              <Card className="p-4 bg-card border-border text-center">
                 <CreditCard className="w-6 h-6 text-red-400 mx-auto mb-2" />
                 <p className="text-2xl font-bold">{pendingPayments.length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Pending</p>
               </Card>
-              <Card className="p-4 glass-card border-border/50 text-center relative group cursor-pointer" onClick={() => {
+              <Card className="p-4 bg-card border-border text-center relative group cursor-pointer" onClick={() => {
                 const manual = prompt('Enter manual revenue amount to display (numbers only):');
                 if (manual !== null && !isNaN(manual)) {
                   localStorage.setItem('admin_manual_revenue', manual);
@@ -318,7 +318,7 @@ export default function Admin() {
             <div className="space-y-4">
               {payments.filter(p => p.status === paymentFilter).length === 0 ? <p className="text-muted-foreground text-sm">No {paymentFilter} payment requests.</p> : 
                 payments.filter(p => p.status === paymentFilter).map(p => (
-                  <Card key={p.id} className="p-4 glass-card border-border/50 flex flex-col md:flex-row gap-4 items-start relative group">
+                  <Card key={p.id} className="p-4 bg-card border-border flex flex-col md:flex-row gap-4 items-start relative group">
                     <Button 
                       variant="ghost" 
                       size="icon" 
@@ -335,7 +335,7 @@ export default function Admin() {
                     </Button>
 
                     {p.screenshot_url && (
-                      <div className="w-full md:w-48 flex-shrink-0 bg-black/40 rounded-lg p-1 border border-border/50">
+                      <div className="w-full md:w-48 flex-shrink-0 bg-black/40 rounded-lg p-1 border border-border">
                         <img src={p.screenshot_url} alt="Receipt" className="w-full h-auto object-contain rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.open(p.screenshot_url, '_blank')} />
                       </div>
                     )}
@@ -351,13 +351,13 @@ export default function Admin() {
                       </div>
                       
                       {p.ai_reason && (
-                        <div className="bg-black/60 p-2 rounded border border-white/5 my-2">
+                        <div className="bg-secondary p-2 rounded border border-border my-2">
                           <p className="text-[10px] text-muted-foreground font-mono leading-relaxed"><strong className="text-primary mr-1">AI Report:</strong>{p.ai_reason}</p>
                         </div>
                       )}
 
                       {p.status === 'pending' && (
-                        <div className="flex flex-col sm:flex-row gap-2 mt-3 pt-3 border-t border-white/5">
+                        <div className="flex flex-col sm:flex-row gap-2 mt-3 pt-3 border-t border-border">
                           <Button size="sm" className="bg-green-600 hover:bg-green-500 text-white w-full sm:w-auto" onClick={async () => {
                             const { supabase } = await import('@/lib/supabaseClient');
                             await supabase.from('payment_requests').update({ status: 'approved' }).eq('id', p.id);
@@ -393,10 +393,10 @@ export default function Admin() {
           <div className="space-y-4 animate-in fade-in duration-300">
             <h2 className="text-lg font-bold border-b border-border/30 pb-2">Activation Codes</h2>
             
-            <Card className="p-4 glass-card border-border/50">
+            <Card className="p-4 bg-card border-border">
               <h3 className="text-sm font-semibold mb-2">Generate New Code</h3>
               <div className="flex flex-col sm:flex-row gap-2">
-                <Input value={newEmail} onChange={(e) => setNewEmail(e.target.value)} placeholder="User's email address" className="bg-black/40 border-border/50 focus:border-primary" />
+                <Input value={newEmail} onChange={(e) => setNewEmail(e.target.value)} placeholder="User's email address" className="bg-black/40 border-border focus:border-primary" />
                 <Button className="bg-primary text-black font-bold whitespace-nowrap" disabled={creating} onClick={handleCreateCode}>
                   <Plus className="w-4 h-4 mr-2" /> Generate
                 </Button>
@@ -437,7 +437,7 @@ export default function Admin() {
             <div className="space-y-2">
               {usersList.length === 0 && <p className="text-muted-foreground text-sm">No users found or RLS policy blocked query.</p>}
               {usersList.map(u => (
-                <Card key={u.id} className="p-3 glass-card border-border/50 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                <Card key={u.id} className="p-3 bg-card border-border flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                   <div className="truncate">
                     <p className="font-bold text-sm truncate">{u.full_name || 'No Name'}</p>
                     <p className="text-[10px] text-muted-foreground truncate">{u.email}</p>
@@ -481,7 +481,7 @@ export default function Admin() {
             <div className="space-y-2">
               {premiumUsers.length === 0 && <p className="text-muted-foreground text-sm">No premium users found.</p>}
               {premiumUsers.map(u => (
-                <Card key={u.id} className="p-3 glass-card premium-glow border-primary/30 flex justify-between items-center">
+                <Card key={u.id} className="p-3 bg-card border-primary/30 flex justify-between items-center">
                   <div className="truncate">
                     <p className="font-bold text-sm text-primary truncate">{u.full_name || 'No Name'}</p>
                     <p className="text-[10px] text-muted-foreground truncate">{u.email}</p>
@@ -515,19 +515,19 @@ export default function Admin() {
             </h2>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              <Card className="p-3 glass-card border-border/50 text-center">
+              <Card className="p-3 bg-card border-border text-center">
                 <p className="text-xl font-bold text-blue-400">{customQuestions.filter(q => q.section === 'english').length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">English</p>
               </Card>
-              <Card className="p-3 glass-card border-border/50 text-center">
+              <Card className="p-3 bg-card border-border text-center">
                 <p className="text-xl font-bold text-pink-400">{customQuestions.filter(q => q.section === 'analytical').length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Analytical</p>
               </Card>
-              <Card className="p-3 glass-card border-border/50 text-center">
+              <Card className="p-3 bg-card border-border text-center">
                 <p className="text-xl font-bold text-green-400">{customQuestions.filter(q => q.section === 'quantitative').length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Quantitative</p>
               </Card>
-              <Card className="p-3 glass-card border-border/50 text-center">
+              <Card className="p-3 bg-card border-border text-center">
                 <p className="text-xl font-bold text-amber-400">{customQuestions.filter(q => !['english', 'analytical', 'quantitative'].includes(q.section)).length}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Subject</p>
               </Card>
@@ -535,7 +535,7 @@ export default function Admin() {
 
             <div className="flex flex-col md:flex-row gap-4">
               {/* Importer */}
-              <Card className="p-4 glass-card border-border/50 text-center flex-1">
+              <Card className="p-4 bg-card border-border text-center flex-1">
                 <Upload className="w-5 h-5 text-primary mx-auto mb-2" />
                 <h3 className="font-bold text-sm mb-1">Bulk Import</h3>
                 <p className="text-[10px] text-muted-foreground mb-3 leading-relaxed">
@@ -545,24 +545,24 @@ export default function Admin() {
               </Card>
               
               {/* Manual Form */}
-              <Card className="p-4 glass-card border-border/50 flex-[2]">
+              <Card className="p-4 bg-card border-border flex-[2]">
                 <h3 className="font-bold text-sm mb-3">Add Single Question</h3>
                 <div className="space-y-2">
-                  <select value={qSection} onChange={e => setQSection(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border/50 text-xs focus:border-primary">
+                  <select value={qSection} onChange={e => setQSection(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border text-xs focus:border-primary">
                     {getAllSections('NAT-ICOM').map(s => <option key={s} value={s}>{getSectionLabel(s)}</option>)}
                   </select>
-                  <Input placeholder="Question Text" value={qText} onChange={e => setQText(e.target.value)} className="bg-black/40 border-border/50 text-xs h-8" />
+                  <Input placeholder="Question Text" value={qText} onChange={e => setQText(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
                   <div className="grid grid-cols-2 gap-2">
-                    <Input placeholder="Option A" value={qOptA} onChange={e => setQOptA(e.target.value)} className="bg-black/40 border-border/50 text-xs h-8" />
-                    <Input placeholder="Option B" value={qOptB} onChange={e => setQOptB(e.target.value)} className="bg-black/40 border-border/50 text-xs h-8" />
-                    <Input placeholder="Option C" value={qOptC} onChange={e => setQOptC(e.target.value)} className="bg-black/40 border-border/50 text-xs h-8" />
-                    <Input placeholder="Option D" value={qOptD} onChange={e => setQOptD(e.target.value)} className="bg-black/40 border-border/50 text-xs h-8" />
+                    <Input placeholder="Option A" value={qOptA} onChange={e => setQOptA(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
+                    <Input placeholder="Option B" value={qOptB} onChange={e => setQOptB(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
+                    <Input placeholder="Option C" value={qOptC} onChange={e => setQOptC(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
+                    <Input placeholder="Option D" value={qOptD} onChange={e => setQOptD(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
                   </div>
                   <div className="grid grid-cols-2 gap-2">
-                    <select value={qCorrect} onChange={e => setQCorrect(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border/50 text-xs">
+                    <select value={qCorrect} onChange={e => setQCorrect(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border text-xs">
                       <option value="0">Correct: A</option><option value="1">Correct: B</option><option value="2">Correct: C</option><option value="3">Correct: D</option>
                     </select>
-                    <select value={qDifficulty} onChange={e => setQDifficulty(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border/50 text-xs">
+                    <select value={qDifficulty} onChange={e => setQDifficulty(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border text-xs">
                       <option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option>
                     </select>
                   </div>

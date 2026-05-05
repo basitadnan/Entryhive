@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/lib/dbClient';
@@ -92,12 +92,19 @@ export default function Home() {
           <h1 className="text-2xl font-bold">Assalam-o-Alaikum 👋</h1>
           <p className="text-sm text-muted-foreground mt-1">{groupLabel}</p>
         </div>
-        {user?.is_premium &&
-        <span className="bg-gradient-to-r from-primary to-accent text-xs font-semibold px-3 py-1 rounded-full text-black">
-            Premium
+        {user?.is_premium && (
+          <span className={`text-xs font-semibold px-3 py-1 rounded-full text-black ${user?.is_on_trial ? 'bg-indigo-400' : 'bg-gradient-to-r from-primary to-accent'}`}>
+            {user?.is_on_trial ? 'Trial' : 'Premium'}
           </span>
-        }
+        )}
       </motion.div>
+
+      {/* Trial activated banner */}
+      {user?.is_on_trial &&
+        <Card className="p-3 bg-indigo-500/10 border-indigo-500/30">
+          <p className="text-sm font-medium">🎁 <strong className="text-indigo-400">Free Trial Active!</strong> You have {user.trial_days_left} {user.trial_days_left === 1 ? 'day' : 'days'} of premium access left.</p>
+        </Card>
+      }
 
       {/* Test Date Countdown */}
       {user?.is_premium && user?.test_date && (() => {
@@ -123,7 +130,7 @@ export default function Home() {
       })()}
 
       {/* Premium activated banner */}
-      {user?.is_premium && !user?.test_date &&
+      {user?.is_premium && !user?.is_on_trial && !user?.test_date &&
       <Card className="p-3 bg-primary/10 border-primary/30">
           <p className="text-sm">🎉 <strong className="text-primary">Premium Activated!</strong> You now have unlimited access to all features.</p>
         </Card>
@@ -132,8 +139,13 @@ export default function Home() {
       {/* Stats Row */}
       <motion.div className="grid grid-cols-4 gap-2" {...statsContainer}>
         {stats.map((s) =>
-          <motion.div key={s.label} variants={statsItem}>
-            <Card className="p-3 text-center glass-card border-border/50">
+          <motion.div 
+            key={s.label} 
+            variants={statsItem}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <Card className="p-3 text-center glass-card border-border/50 hover:border-primary/30 transition-colors">
               <s.icon className="w-4 h-4 mx-auto text-primary mb-1" />
               <p className="text-lg font-bold">{s.value}</p>
               <p className="text-[10px] text-muted-foreground uppercase tracking-wider">{s.label}</p>

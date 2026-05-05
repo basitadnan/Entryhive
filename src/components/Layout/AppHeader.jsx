@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Home, BookOpen, FileText, Lightbulb, BarChart3, Crown, Shield, LogOut, Layers, User, Star, Trophy, CheckSquare, MessageSquare, Target, Brain, Calculator, Gift, Zap } from 'lucide-react';
 import { base44 } from '@/lib/dbClient';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Capacitor } from '@capacitor/core';
 import { sounds } from '@/lib/sounds';
 
 const NAV_ITEMS = [
@@ -194,13 +195,15 @@ export default function AppHeader({ user }) {
 
               {/* Logout */}
               <div className="p-3" style={{ borderTop: `1px solid ${C.sidebarBorder}` }}>
-                <button
-                  onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
-                  className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"
-                  style={{ color: C.primary, background: C.primaryDim }}
-                >
-                  <Zap className="w-3.5 h-3.5 fill-primary" /> Download Android App
-                </button>
+                {!Capacitor.isNativePlatform() && (
+                  <button
+                    onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
+                    className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"
+                    style={{ color: C.primary, background: C.primaryDim }}
+                  >
+                    <Zap className="w-3.5 h-3.5 fill-primary" /> Download Android App
+                  </button>
+                )}
                 <button
                   onClick={() => base44.auth.logout('/')}
                   className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg"
