@@ -2,7 +2,5 @@
   "appId": "com.natprep.app",
   "appName": "NAT Preparation",
   "webDir": "dist",
-  "server": {
-    "cleartext": true
-  }
+  "bundledWebRuntime": false
 }

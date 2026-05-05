@@ -297,7 +297,7 @@ export default function AppHeader({ user }) {
                 {/* Hide download button if in the app or electron */}
                 {!Capacitor.isNativePlatform() && !isElectron && (
                   <button
-                    onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
+                    onClick={() => window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank')}
                     className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"
                     style={{ color: C.primary, background: C.primaryDim }}
                   >
