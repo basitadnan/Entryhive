@@ -3,7 +3,6 @@
   "appName": "NAT Preparation",
   "webDir": "dist",
   "server": {
-    "url": "https://nat-prep.netlify.app/",
     "cleartext": true
   }
 }
