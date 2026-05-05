@@ -61,13 +61,8 @@ export default function Premium() {
       return;
     }
 
-    const { data: referrer } = await supabase
-      .from('profiles')
-      .select('id')
-      .eq('referral_code', cleanCode)
-      .maybeSingle();
-
-    if (referrer) {
+    const referrers = await base44.entities.profiles.filter({ referral_code: cleanCode });
+    if (referrers.length > 0) {
       setIsReferralValid(true);
       toast.success("Referral applied! Discount activated.");
     } else {
@@ -91,10 +86,8 @@ export default function Premium() {
         toast.error("This code is not assigned to your account.");
       } else {
         await base44.entities.activation_codes.update(codeRecord.id, { is_used: true, used_by: user.email, used_date: new Date().toISOString() });
-        const updateData = { is_premium: true };
-        if (isReferralValid) updateData.referred_by_code = referralCode.trim().toUpperCase();
-        await base44.auth.updateMe(updateData);
-        setUser(prev => ({ ...prev, ...updateData }));
+        await base44.auth.updateMe({ is_premium: true });
+        setUser(prev => ({ ...prev, is_premium: true }));
         toast.success("🎉 Premium Activated!");
         setTimeout(() => navigate('/'), 1500);
       }
@@ -166,15 +159,9 @@ export default function Premium() {
 
       if (finalStatus === 'approved') {
         toast.success("Payment verified! Premium activated instantly.");
-        const updateData = { is_premium: true };
-        if (isReferralValid) updateData.referred_by_code = referralCode.trim().toUpperCase();
-        await base44.auth.updateMe(updateData);
-        setUser(prev => ({ ...prev, ...updateData }));
+        await base44.auth.updateMe({ is_premium: true });
+        setUser(prev => ({ ...prev, is_premium: true }));
       } else {
-        // Even if pending, we save the referral code they used
-        if (isReferralValid) {
-           await supabase.from('profiles').update({ referred_by_code: referralCode.trim().toUpperCase() }).eq('id', user.id);
-        }
         toast.success("Screenshot uploaded! Admin will review it shortly.");
         setTimeout(() => navigate('/'), 2000);
       }
