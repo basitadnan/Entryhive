@@ -108,15 +108,18 @@ function App() {
     // Handle deep links (for Google OAuth redirect back to app)
     CapApp.addListener('appUrlOpen', async (event) => {
       const url = new URL(event.url);
-      const hash = url.hash; // Supabase sends data in hash
+      // Check both hash and search (Google/Supabase can use either)
+      const data = url.hash ? url.hash.substring(1) : url.search.substring(1);
       
-      if (hash && (hash.includes('access_token') || hash.includes('refresh_token'))) {
-        const params = new URLSearchParams(hash.substring(1));
+      if (data && (data.includes('access_token') || data.includes('refresh_token'))) {
+        const params = new URLSearchParams(data);
         const access_token = params.get('access_token');
         const refresh_token = params.get('refresh_token');
         
         if (access_token && refresh_token) {
           await supabase.auth.setSession({ access_token, refresh_token });
+          // Force reload the auth state
+          window.location.reload();
         }
       }
     });
