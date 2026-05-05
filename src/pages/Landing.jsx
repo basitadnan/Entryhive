@@ -142,13 +142,22 @@ export default function Landing({ preview = false }) {
               Start Practicing for Free <ChevronRight className="w-5 h-5 ml-1" />
             </Button>
             {!Capacitor.isNativePlatform() && !isElectron && (
-              <Button 
-                onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
-                variant="outline"
-                className="w-full h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
-              >
-                Download Android App <Zap className="w-4 h-4 fill-primary" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3 w-full">
+                <Button 
+                  onClick={() => window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank')}
+                  variant="outline"
+                  className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
+                >
+                  Android App <Zap className="w-4 h-4 fill-primary" />
+                </Button>
+                <Button 
+                  onClick={() => window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep-Windows-v1.zip', '_blank')}
+                  variant="outline"
+                  className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
+                >
+                  Windows App <Download className="w-4 h-4" />
+                </Button>
+              </div>
             )}
           </motion.div>
         )}
@@ -289,13 +298,22 @@ export default function Landing({ preview = false }) {
             <p className="text-muted-foreground max-w-md mx-auto mb-8">
               Get the best preparation experience with our Android App. Practice offline, get instant notifications, and study anywhere, anytime.
             </p>
-            <Button 
-              onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
-              className="h-14 px-10 text-lg font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all gap-2"
-            >
-              Download NAT Prep APK <ChevronRight className="w-5 h-5" />
-            </Button>
-            <p className="text-[10px] text-muted-foreground mt-4 uppercase tracking-[0.2em] opacity-60">Latest Version 2026 · 15MB · Safe & Verified</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button 
+                onClick={() => window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank')}
+                className="h-14 px-8 text-lg font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all gap-2"
+              >
+                Download APK <ChevronRight className="w-5 h-5" />
+              </Button>
+              <Button 
+                onClick={() => window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep-Windows-v1.zip', '_blank')}
+                variant="outline"
+                className="h-14 px-8 text-lg font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
+              >
+                Download for Windows <Download className="w-5 h-5" />
+              </Button>
+            </div>
+            <p className="text-[10px] text-muted-foreground mt-4 uppercase tracking-[0.2em] opacity-60">Latest Version 2026 · Safe & Verified</p>
           </div>
         </motion.div>
       </section>

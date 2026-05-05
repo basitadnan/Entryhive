@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "electron:dev": "electron .",
-    "electron:build": "npm run build && electron-packager . \"NAT Prep\" --platform=win32 --arch=x64 --out=dist_electron --overwrite --icon=public/logo.ico",
+    "electron:build": "npm run build && electron-packager . \"NAT Prep\" --platform=win32 --arch=x64 --out=dist_electron --overwrite --icon=public/logo.ico && powershell -Command \"Remove-Item -Recurse -Force 'dist_electron/NAT Prep-win32-x64/resources/app/.env', 'dist_electron/NAT Prep-win32-x64/resources/app/.git', 'dist_electron/NAT Prep-win32-x64/resources/app/src', 'dist_electron/NAT Prep-win32-x64/resources/app/android', 'dist_electron/NAT Prep-win32-x64/resources/app/node_modules' -ErrorAction SilentlyContinue\"",
     "build:win": "npm run build && electron-builder --win"
   },
   "dependencies": {
