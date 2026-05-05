@@ -77,24 +77,44 @@ export default function Premium() {
     setIsActivating(true);
     const cleanCode = activationCode.trim().toUpperCase();
     
-    const codes = await base44.entities.activation_codes.filter({ code: cleanCode });
-    if (codes && codes.length > 0) {
-      const codeRecord = codes[0];
-      if (codeRecord.is_used) {
-        toast.error("This code has already been used.");
-      } else if (codeRecord.target_email && codeRecord.target_email.toLowerCase() !== user.email.toLowerCase()) {
-        toast.error("This code is not assigned to your account.");
+    try {
+      const codes = await base44.entities.activation_codes.filter({ code: cleanCode });
+      if (codes && codes.length > 0) {
+        const codeRecord = codes[0];
+        
+        if (codeRecord.is_used) {
+          toast.error("This code has already been used.");
+        } else if (codeRecord.target_email && codeRecord.target_email.toLowerCase() !== user.email.toLowerCase()) {
+          toast.error("This code is assigned to a different email.");
+        } else {
+          // Use Supabase directly to bypass any dbClient filtering if needed
+          const { error: updateError } = await supabase.from('activation_codes').update({ 
+            is_used: true, 
+            used_by: user.email, 
+            used_date: new Date().toISOString() 
+          }).eq('id', codeRecord.id);
+
+          if (updateError) throw updateError;
+
+          const { error: profileError } = await supabase.from('profiles').update({ 
+            is_premium: true 
+          }).eq('id', user.id);
+
+          if (profileError) throw profileError;
+
+          setUser(prev => ({ ...prev, is_premium: true }));
+          toast.success("🎉 Premium Activated!");
+          setTimeout(() => navigate('/'), 1500);
+        }
       } else {
-        await base44.entities.activation_codes.update(codeRecord.id, { is_used: true, used_by: user.email, used_date: new Date().toISOString() });
-        await base44.auth.updateMe({ is_premium: true });
-        setUser(prev => ({ ...prev, is_premium: true }));
-        toast.success("🎉 Premium Activated!");
-        setTimeout(() => navigate('/'), 1500);
+        toast.error("Invalid activation code. Please check the spelling.");
       }
-    } else {
-      toast.error("Invalid activation code.");
+    } catch (err) {
+      console.error("Activation Error:", err);
+      toast.error("System error. Did you run the Supabase SQL queries?");
+    } finally {
+      setIsActivating(false);
     }
-    setIsActivating(false);
   };
 
   const handleFileChange = (e) => {

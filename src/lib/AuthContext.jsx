@@ -15,8 +15,6 @@ export const AuthProvider = ({ children }) => {
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoadingAuth(false), 3000);
-
     if (isPlaceholder) {
       const saved = localStorage.getItem('nat_mock_user');
       if (saved) {
@@ -24,36 +22,49 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(true);
       }
       setIsLoadingAuth(false);
-      clearTimeout(timer);
       return;
     }
 
-    supabase.auth.getSession().then(async ({ data: { session } }) => {
-      if (session?.user) {
-        const mergedUser = await base44.auth.me();
-        setUser(mergedUser);
-        setIsAuthenticated(true);
+    let isMounted = true;
+
+    async function initAuth() {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user && isMounted) {
+          const mergedUser = await base44.auth.me();
+          if (mergedUser && isMounted) {
+            setUser(mergedUser);
+            setIsAuthenticated(true);
+          }
+        }
+      } catch (e) {
+        console.error("Auth Init Error:", e);
+      } finally {
+        if (isMounted) setIsLoadingAuth(false);
       }
-      setIsLoadingAuth(false);
-      clearTimeout(timer);
-    }).catch(() => {
-      setIsLoadingAuth(false);
-      clearTimeout(timer);
-    });
+    }
+
+    initAuth();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       if (session?.user) {
         const mergedUser = await base44.auth.me();
-        setUser(mergedUser);
-        setIsAuthenticated(true);
-      } else {
+        if (isMounted) {
+          setUser(mergedUser);
+          setIsAuthenticated(true);
+          setIsLoadingAuth(false);
+        }
+      } else if (isMounted) {
         setUser(null);
         setIsAuthenticated(false);
+        setIsLoadingAuth(false);
       }
-      setIsLoadingAuth(false);
     });
 
-    return () => { subscription.unsubscribe(); clearTimeout(timer); };
+    return () => { 
+      isMounted = false;
+      subscription.unsubscribe(); 
+    };
   }, []);
 
   const logout = async (shouldRedirect = true) => {

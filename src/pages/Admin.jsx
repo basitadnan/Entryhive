@@ -211,10 +211,27 @@ export default function Admin() {
     if (!newEmail.trim()) return toast.error('Enter user email');
     setCreating(true);
     const code = generateCode();
-    await base44.entities.activation_codes.create({ code, target_email: newEmail.trim().toLowerCase(), is_used: false });
-    queryClient.invalidateQueries({ queryKey: ['admin-codes'] });
-    toast.success(`Code created: ${code}`);
-    setNewEmail(''); setCreating(false);
+    
+    try {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { error } = await supabase.from('activation_codes').insert({ 
+        code, 
+        target_email: newEmail.trim().toLowerCase(), 
+        is_used: false,
+        created_at: new Date().toISOString()
+      });
+
+      if (error) throw error;
+
+      queryClient.invalidateQueries({ queryKey: ['admin-codes'] });
+      toast.success(`Code created: ${code}`);
+      setNewEmail('');
+    } catch (err) {
+      console.error("Code Creation Error:", err);
+      toast.error(`Failed to create code: ${err.message}`);
+    } finally {
+      setCreating(false);
+    }
   };
 
   // Computed Stats
