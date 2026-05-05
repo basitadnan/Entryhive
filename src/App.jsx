@@ -9,6 +9,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import { App as CapApp } from '@capacitor/app';
 import { supabase } from '@/lib/supabaseClient';
+import { Analytics } from "@vercel/analytics/react";
 
 import Landing from './pages/Landing';
 import AppLayout from './components/Layout/AppLayout';
@@ -133,6 +134,7 @@ function App() {
         </Router>
         <Toaster />
         <SonnerToaster />
+        <Analytics />
       </QueryClientProvider>
     </AuthProvider>
   )
