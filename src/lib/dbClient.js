@@ -219,12 +219,30 @@ export const base44 = {
       });
     },
 
-    redirectToLogin: () => { window.location.href = '/login'; },
+    redirectToLogin: () => { 
+      if (window.location.protocol === 'file:' || window.location.protocol === 'capacitor:') {
+        window.location.hash = '/login';
+      } else {
+        window.location.href = '/login';
+      }
+    },
 
     logout: async (redirectUrl) => {
-      if (isPlaceholder) { localStorage.removeItem(SESSION_KEY); window.location.href = redirectUrl || '/'; return; }
+      if (isPlaceholder) { 
+        localStorage.removeItem(SESSION_KEY); 
+        if (window.location.protocol === 'file:' || window.location.protocol === 'capacitor:') {
+          window.location.hash = redirectUrl || '/';
+        } else {
+          window.location.href = redirectUrl || '/';
+        }
+        return; 
+      }
       await supabase.auth.signOut();
-      window.location.href = redirectUrl || '/';
+      if (window.location.protocol === 'file:' || window.location.protocol === 'capacitor:') {
+        window.location.hash = redirectUrl || '/';
+      } else {
+        window.location.href = redirectUrl || '/';
+      }
     },
   },
 
