@@ -62,7 +62,7 @@ export default function Premium() {
     }
 
     const referrers = await base44.entities.profiles.filter({ referral_code: cleanCode });
-    if (referrers.length > 0) {
+    if (referrers && referrers.length > 0) {
       setIsReferralValid(true);
       toast.success("Referral applied! Discount activated.");
     } else {
@@ -78,11 +78,11 @@ export default function Premium() {
     const cleanCode = activationCode.trim().toUpperCase();
     
     const codes = await base44.entities.activation_codes.filter({ code: cleanCode });
-    if (codes.length > 0) {
+    if (codes && codes.length > 0) {
       const codeRecord = codes[0];
       if (codeRecord.is_used) {
         toast.error("This code has already been used.");
-      } else if (codeRecord.target_email.toLowerCase() !== user.email.toLowerCase()) {
+      } else if (codeRecord.target_email && codeRecord.target_email.toLowerCase() !== user.email.toLowerCase()) {
         toast.error("This code is not assigned to your account.");
       } else {
         await base44.entities.activation_codes.update(codeRecord.id, { is_used: true, used_by: user.email, used_date: new Date().toISOString() });

@@ -20,7 +20,8 @@ import {
   TrendingUp,
   ArrowLeft,
   Plus,
-  Copy
+  Copy,
+  Loader2
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { addCustomQuestion, getCustomQuestions, deleteCustomQuestion, getSectionLabel, getAllSections } from '@/lib/questionBank';
@@ -58,8 +59,14 @@ export default function Admin() {
   const [qTopic, setQTopic] = useState('');
 
   // Queries
-  const { data: codes = [] } = useQuery({ queryKey: ['admin-codes'], queryFn: () => base44.entities.activation_codes.list('-created_date', 100), enabled: user?.role === 'admin' });
-  const { data: usersList = [] } = useQuery({ queryKey: ['admin-users'], queryFn: async () => {
+  const { data: codes = [], isLoading: loadingCodes } = useQuery({ 
+    queryKey: ['admin-codes'], 
+    queryFn: () => base44.entities.activation_codes.list('-created_date', 100), 
+    enabled: !!user && user.role === 'admin' 
+  });
+  const { data: usersList = [], isLoading: loadingUsers } = useQuery({ 
+    queryKey: ['admin-users'], 
+    queryFn: async () => {
     // Direct Supabase query with error visibility
     const { supabase } = await import('@/lib/supabaseClient');
     const { data, error } = await supabase.from('profiles').select('*');
@@ -70,18 +77,22 @@ export default function Admin() {
     }
     console.log('Admin Users Query Result:', data);
     return data || [];
-  }, enabled: user?.role === 'admin' });
+  }, enabled: !!user && user.role === 'admin' });
   
-  const { data: payments = [], refetch: refetchPayments } = useQuery({ queryKey: ['admin-payments'], queryFn: async () => {
-    const { supabase } = await import('@/lib/supabaseClient');
-    const { data, error } = await supabase.from('payment_requests').select('*').order('created_at', { ascending: false });
-    if (error) {
-      console.error('Admin Payments Query Error:', error);
-      toast.error(`Payments query failed: ${error.message}`);
-      return [];
-    }
-    return data || [];
-  }, enabled: user?.role === 'admin' });
+  const { data: payments = [], refetch: refetchPayments, isLoading: loadingPayments } = useQuery({ 
+    queryKey: ['admin-payments'], 
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { data, error } = await supabase.from('payment_requests').select('*').order('created_at', { ascending: false });
+      if (error) {
+        console.error('Admin Payments Query Error:', error);
+        toast.error(`Payments query failed: ${error.message}`);
+        return [];
+      }
+      return data || [];
+    }, 
+    enabled: !!user && user.role === 'admin' 
+  });
 
   const { data: allPracticeSessions = [] } = useQuery({ 
     queryKey: ['admin-practice-sessions'], 
@@ -122,6 +133,17 @@ export default function Admin() {
     });
     return counts;
   }, [allMockTests]);
+
+  const isInitialLoading = !user;
+
+  if (isInitialLoading) {
+    return (
+      <div className="p-10 flex flex-col items-center justify-center space-y-4">
+        <Loader2 className="w-10 h-10 text-primary animate-spin" />
+        <p className="text-muted-foreground animate-pulse text-sm">Verifying Admin Access...</p>
+      </div>
+    );
+  }
 
   if (user?.role !== 'admin') {
     return (
