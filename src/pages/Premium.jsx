@@ -90,8 +90,7 @@ export default function Premium() {
           // Use Supabase directly to bypass any dbClient filtering if needed
           const { error: updateError } = await supabase.from('activation_codes').update({ 
             is_used: true, 
-            used_by: user.email, 
-            used_date: new Date().toISOString() 
+            used_by: user.email
           }).eq('id', codeRecord.id);
 
           if (updateError) throw updateError;

@@ -217,8 +217,7 @@ export default function Admin() {
       const { error } = await supabase.from('activation_codes').insert({ 
         code, 
         target_email: newEmail.trim().toLowerCase(), 
-        is_used: false,
-        created_at: new Date().toISOString()
+        is_used: false
       });
 
       if (error) throw error;
