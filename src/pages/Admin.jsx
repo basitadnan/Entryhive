@@ -407,6 +407,14 @@ export default function Admin() {
                             } else if (p.user_id) {
                               await supabase.from('profiles').update({ is_premium: true }).eq('id', p.user_id);
                             }
+
+                            // Create Notification for User
+                            await supabase.from('notifications').insert({
+                              user_email: p.user_email,
+                              title: 'Payment Approved! 🎉',
+                              message: `Your premium access for the ${p.plan_name || 'Selected'} plan has been activated. Enjoy!`,
+                              is_read: false
+                            });
                             
                             toast.success('Approved and Premium granted!'); refetchPayments();
                           }}><Check className="w-4 h-4 mr-1.5" /> Approve</Button>
@@ -414,6 +422,15 @@ export default function Admin() {
                           <Button size="sm" className="bg-red-600/20 hover:bg-red-600/40 text-red-500 border border-red-600/30 w-full sm:w-auto" onClick={async () => {
                             const { supabase } = await import('@/lib/supabaseClient');
                             await supabase.from('payment_requests').update({ status: 'rejected' }).eq('id', p.id);
+
+                            // Create Notification for User
+                            await supabase.from('notifications').insert({
+                              user_email: p.user_email,
+                              title: 'Payment Rejected ❌',
+                              message: 'Your payment request was rejected. Please check your screenshot and try again.',
+                              is_read: false
+                            });
+
                             toast.error('Payment rejected.'); refetchPayments();
                           }}><X className="w-4 h-4 mr-1.5" /> Reject</Button>
                         </div>

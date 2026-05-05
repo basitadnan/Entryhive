@@ -99,7 +99,12 @@ export const AuthProvider = ({ children }) => {
   };
 
   const loginWithGoogle = async () => {
-    const { data, error } = await base44.auth.signInWithGoogle();
+    // If native, we use a custom scheme that your app handles
+    const redirectTo = Capacitor.isNativePlatform() 
+      ? 'natprep://login-callback' 
+      : window.location.origin;
+
+    const { data, error } = await base44.auth.signInWithGoogle(redirectTo);
     return { data, error };
   };
 

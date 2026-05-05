@@ -207,14 +207,14 @@ export const base44 = {
       return await supabase.auth.signInWithPassword({ email, password });
     },
     
-    signInWithGoogle: async () => {
+    signInWithGoogle: async (redirectTo) => {
       if (isPlaceholder) {
         return { data: null, error: { message: 'Google login not available in mock mode.' } };
       }
       return await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin,
+          redirectTo: redirectTo || window.location.origin,
         },
       });
     },

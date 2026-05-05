@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, FileText, Lightbulb, BarChart3, Crown, Shield, LogOut, Layers, User, Star, Trophy, CheckSquare, MessageSquare, Target, Brain, Calculator, Gift, Zap } from 'lucide-react';
+import { Menu, X, Home, BookOpen, FileText, Lightbulb, BarChart3, Crown, Shield, LogOut, Layers, User, Star, Trophy, CheckSquare, MessageSquare, Target, Brain, Calculator, Gift, Zap, Bell } from 'lucide-react';
 import { base44 } from '@/lib/dbClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Capacitor } from '@capacitor/core';
 import { sounds } from '@/lib/sounds';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { PushNotifications } from '@capacitor/push-notifications';
 
 const NAV_ITEMS = [
   { label: 'Home', icon: Home, path: '/' },
@@ -54,6 +56,49 @@ export default function AppHeader({ user }) {
   const location = useLocation();
   const isPremium = user?.is_premium === true;
   const isAdmin = user?.role === 'admin';
+  const queryClient = useQueryClient();
+  const [notifsOpen, setNotifsOpen] = useState(false);
+
+  // Fetch Notifications
+  const { data: notifications = [] } = useQuery({
+    queryKey: ['notifications', user?.email],
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { data } = await supabase
+        .from('notifications')
+        .select('*')
+        .or(`user_email.eq.${user?.email},user_email.eq.admin`)
+        .order('created_at', { ascending: false })
+        .limit(20);
+      return data || [];
+    },
+    enabled: !!user?.email,
+    refetchInterval: 30000 // Refresh every 30s
+  });
+
+  const unreadCount = notifications.filter(n => !n.is_read).length;
+
+  const markAllAsRead = async () => {
+    const { supabase } = await import('@/lib/supabaseClient');
+    await supabase.from('notifications').update({ is_read: true }).eq('user_email', user?.email).eq('is_read', false);
+    queryClient.invalidateQueries({ queryKey: ['notifications'] });
+  };
+
+  // Push Notification Registration
+  React.useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      PushNotifications.requestPermissions().then(result => {
+        if (result.receive === 'granted') {
+          PushNotifications.register();
+        }
+      });
+
+      PushNotifications.addListener('registration', (token) => {
+        // Here you would save the token to Supabase profiles
+        console.log('Push token:', token.value);
+      });
+    }
+  }, []);
 
   const allItems = isAdmin ? [...NAV_ITEMS, { label: 'Admin Panel', icon: Shield, path: '/admin' }] : NAV_ITEMS;
 
@@ -96,18 +141,70 @@ export default function AppHeader({ user }) {
           </Link>
         </div>
 
-        <button
-          onClick={() => go('/profile')}
-          className="flex items-center gap-2 px-3 py-2 rounded-lg active:scale-95 transition-transform"
-          style={{
-            border: isPremium ? '1px solid rgba(168,85,247,0.4)' : `1px solid rgba(255,255,255,0.06)`,
-            background: isPremium ? 'rgba(168,85,247,0.08)' : 'rgba(255,255,255,0.02)',
-            color: isPremium ? '#a855f7' : C.textMuted,
-          }}
-        >
-          {isPremium ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
-          {isPremium && <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', color: '#a855f7' }}>PRO</span>}
-        </button>
+        <div className="flex items-center gap-2">
+          {/* Notification Bell */}
+          <div className="relative">
+            <button
+              onClick={() => {
+                setNotifsOpen(!notifsOpen);
+                if (!notifsOpen) markAllAsRead();
+              }}
+              className="p-2.5 rounded-lg active:scale-95 transition-transform relative"
+              style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}
+            >
+              <Bell className={`w-4 h-4 ${unreadCount > 0 ? 'text-primary animate-pulse' : 'text-muted-foreground'}`} />
+              {unreadCount > 0 && (
+                <span className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border border-black" />
+              )}
+            </button>
+
+            {/* Notification Dropdown */}
+            <AnimatePresence>
+              {notifsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  className="absolute right-0 mt-3 w-72 max-h-96 overflow-y-auto rounded-xl border border-border bg-card shadow-2xl z-[60] no-scrollbar"
+                >
+                  <div className="p-3 border-b border-border/50 flex justify-between items-center bg-secondary/30">
+                    <span className="text-xs font-bold uppercase tracking-widest">Notifications</span>
+                    {unreadCount > 0 && <span className="text-[10px] text-primary font-bold">{unreadCount} New</span>}
+                  </div>
+                  <div className="divide-y divide-border/30">
+                    {notifications.length === 0 ? (
+                      <div className="p-8 text-center text-muted-foreground">
+                        <Bell className="w-8 h-8 mx-auto mb-2 opacity-20" />
+                        <p className="text-xs">No new notifications</p>
+                      </div>
+                    ) : (
+                      notifications.map(n => (
+                        <div key={n.id} className={`p-4 hover:bg-white/5 transition-colors ${!n.is_read ? 'bg-primary/5' : ''}`}>
+                          <p className="text-xs font-semibold">{n.title}</p>
+                          <p className="text-[11px] text-muted-foreground mt-0.5 leading-relaxed">{n.message}</p>
+                          <p className="text-[9px] text-muted-foreground/50 mt-2">{new Date(n.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <button
+            onClick={() => go('/profile')}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg active:scale-95 transition-transform"
+            style={{
+              border: isPremium ? '1px solid rgba(168,85,247,0.4)' : `1px solid rgba(255,255,255,0.06)`,
+              background: isPremium ? 'rgba(168,85,247,0.08)' : 'rgba(255,255,255,0.02)',
+              color: isPremium ? '#a855f7' : C.textMuted,
+            }}
+          >
+            {isPremium ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
+            {isPremium && <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', color: '#a855f7' }}>PRO</span>}
+          </button>
+        </div>
       </header>
 
       {/* Drawer */}
@@ -195,7 +292,8 @@ export default function AppHeader({ user }) {
 
               {/* Logout */}
               <div className="p-3" style={{ borderTop: `1px solid ${C.sidebarBorder}` }}>
-                {!Capacitor.isNativePlatform() && (
+                {/* Hide download button if in the app or localhost (app internal) */}
+                {!Capacitor.isNativePlatform() && window.location.hostname !== 'localhost' && (
                   <button
                     onClick={() => window.open('https://github.com/AbdulBasitAdnan/Website-new-one/releases/latest/download/NAT-Prep.apk', '_blank')}
                     className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"

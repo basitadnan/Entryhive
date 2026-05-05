@@ -176,6 +176,14 @@ export default function Premium() {
         return;
       }
 
+      // Notify Admin
+      await supabase.from('notifications').insert({
+        user_email: 'admin',
+        title: 'New Payment Request 💰',
+        message: `${user.full_name || user.email} uploaded a screenshot for Rs. ${expectedPrice}.`,
+        is_read: false
+      });
+
       if (finalStatus === 'approved') {
         toast.success("Payment verified! Premium activated instantly.");
         await base44.auth.updateMe({ is_premium: true });

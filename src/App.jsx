@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Toaster } from "@/components/ui/toaster"
 import { Toaster as SonnerToaster } from "@/components/ui/sonner"
 import { QueryClientProvider } from '@tanstack/react-query'
@@ -6,6 +7,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import { App as CapApp } from '@capacitor/app';
+import { supabase } from '@/lib/supabaseClient';
 
 import Landing from './pages/Landing';
 import AppLayout from './components/Layout/AppLayout';
@@ -100,6 +103,28 @@ const AuthenticatedApp = () => {
 };
 
 function App() {
+  useEffect(() => {
+    // Handle deep links (for Google OAuth redirect back to app)
+    CapApp.addListener('appUrlOpen', async (event) => {
+      const url = new URL(event.url);
+      const hash = url.hash; // Supabase sends data in hash
+      
+      if (hash && (hash.includes('access_token') || hash.includes('refresh_token'))) {
+        const params = new URLSearchParams(hash.substring(1));
+        const access_token = params.get('access_token');
+        const refresh_token = params.get('refresh_token');
+        
+        if (access_token && refresh_token) {
+          await supabase.auth.setSession({ access_token, refresh_token });
+        }
+      }
+    });
+
+    return () => {
+      CapApp.removeAllListeners();
+    };
+  }, []);
+
   return (
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>

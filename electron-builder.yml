@@ -1,0 +1,12 @@
+appId: com.natprep.app
+productName: NAT Prep
+directories:
+  output: dist_electron
+  buildResources: build
+files:
+  - dist/**/*
+  - electron/**/*
+  - package.json
+win:
+  target: dir
+  icon: public/logo.png
