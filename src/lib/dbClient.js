@@ -125,8 +125,10 @@ export const base44 = {
         const u = localStorage.getItem(SESSION_KEY);
         return u ? JSON.parse(u) : null;
       }
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return null;
+      // Use getSession (reads from localStorage, instant) instead of getUser (network call)
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.user) return null;
+      const user = session.user;
 
       // Merge with profiles table
       let { data: profile, error: profileError } = await supabase.from('profiles').select('*').eq('id', user.id).single();
@@ -181,9 +183,9 @@ export const base44 = {
         if (i !== -1) { s.profiles[i] = { ...s.profiles[i], ...updates }; saveStore(s); localStorage.setItem(SESSION_KEY, JSON.stringify(s.profiles[i])); return s.profiles[i]; }
         return { ...current, ...updates };
       }
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) await supabase.from('profiles').update(updates).eq('id', user.id);
-      return { ...user, ...updates };
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user) await supabase.from('profiles').update(updates).eq('id', session.user.id);
+      return { ...session?.user, ...updates };
     },
 
     signUp: async (email, password, metadata = {}) => {
