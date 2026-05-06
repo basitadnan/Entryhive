@@ -24,7 +24,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      preload: path.join(app.getAppPath(), isDev ? 'electron/preload.cjs' : 'electron/preload.cjs')
+      preload: path.join(__dirname, 'preload.cjs')
     }
   });
 
