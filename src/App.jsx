@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Toaster } from "@/components/ui/toaster"
 import { Toaster as SonnerToaster } from "@/components/ui/sonner"
 import { QueryClientProvider } from '@tanstack/react-query'
@@ -107,49 +107,68 @@ const AuthenticatedApp = () => {
 };
 
 function App() {
-  const [isProcessingDeepLink, setIsProcessingDeepLink] = React.useState(false);
+  const [isProcessingDeepLink, setIsProcessingDeepLink] = useState(false);
 
   useEffect(() => {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
-      const isAuthRedirect = url.includes('access_token=') && url.includes('refresh_token=');
-      if (!isAuthRedirect) return;
+      // Check if it's an auth redirect
+      const hasTokens = url.includes('access_token=') && url.includes('refresh_token=');
+      if (!hasTokens) return;
 
-      console.log('[DeepLink] Auth redirect detected, processing...');
+      console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
       
+      // Safety timeout: force hide loading after 7 seconds max
+      const forceHide = setTimeout(() => {
+        setIsProcessingDeepLink(false);
+      }, 7000);
+      
       try {
-        const accessTokenMatch = url.match(/[#?&]access_token=([^&]+)/);
-        const refreshTokenMatch = url.match(/[#?&]refresh_token=([^&]+)/);
+        // Robust token extraction
+        const getParam = (name) => {
+          const regex = new RegExp(`[#?&]${name}=([^&]+)`);
+          const match = url.match(regex);
+          return match ? match[1] : null;
+        };
+
+        const access_token = getParam('access_token');
+        const refresh_token = getParam('refresh_token');
         
-        if (accessTokenMatch && refreshTokenMatch) {
-          const access_token = accessTokenMatch[1];
-          const refresh_token = refreshTokenMatch[1];
-          
+        if (access_token && refresh_token) {
+          console.log('[DeepLink] Setting session...');
           const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-          if (!error) {
-            console.log('[DeepLink] Session established successfully');
-            window.location.hash = '/';
-          } else {
+          
+          if (error) {
             console.error('[DeepLink] Supabase Error:', error.message);
+          } else {
+            console.log('[DeepLink] Session success!');
+            window.location.hash = '/';
           }
+        } else {
+          console.warn('[DeepLink] Tokens missing in URL');
         }
       } catch (err) {
         console.error('[DeepLink] Fatal Error:', err);
       } finally {
-        // Give the AuthContext a moment to pick up the change
+        // Short delay to let React states settle
         setTimeout(() => {
+          clearTimeout(forceHide);
           setIsProcessingDeepLink(false);
-        }, 1000);
+        }, 1500);
       }
     };
 
     // Cold Start
-    CapApp.getLaunchUrl().then(res => handleDeepLink(res?.url));
+    CapApp.getLaunchUrl().then(res => {
+      if (res?.url) handleDeepLink(res.url);
+    });
     
     // Warm Start
-    const listener = CapApp.addListener('appUrlOpen', (event) => handleDeepLink(event.url));
+    const listener = CapApp.addListener('appUrlOpen', (event) => {
+      handleDeepLink(event.url);
+    });
 
     return () => {
       listener.remove();
