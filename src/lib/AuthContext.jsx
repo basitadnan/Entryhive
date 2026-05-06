@@ -192,9 +192,10 @@ export const AuthProvider = ({ children }) => {
   const loginWithGoogle = async () => {
     const isNative = Capacitor.isNativePlatform();
     const isElectron = typeof window !== 'undefined' && (window.process?.versions?.electron || navigator.userAgent.includes('Electron'));
+    const isDev = window.location.hostname === 'localhost';
     
-    // For both Mobile and Desktop Apps, use the custom scheme
-    const redirectTo = (isNative || isElectron) ? 'natprep://login-callback' : window.location.origin;
+    // For Dev Electron, use localhost; For Prod Electron/Mobile, use natprep://
+    const redirectTo = (isNative || (isElectron && !isDev)) ? 'natprep://login-callback' : window.location.origin;
 
     console.log('[Auth] Starting Google login with redirectTo:', redirectTo);
 
