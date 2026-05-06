@@ -115,8 +115,10 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
+      const hasCode = url.includes('code=');
       const hasTokens = url.includes('access_token=') && url.includes('refresh_token=');
-      if (!hasTokens) return;
+      
+      if (!hasCode && !hasTokens) return;
 
       console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
@@ -128,30 +130,33 @@ function AppContent() {
           return match ? match[1] : null;
         };
 
-        const access_token = getParam('access_token');
-        const refresh_token = getParam('refresh_token');
-        
-        if (access_token && refresh_token) {
-          console.log('[DeepLink] Setting session...');
-          const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-          
-          if (error) {
-            console.error('[DeepLink] Supabase Error:', error.message);
-            setIsProcessingDeepLink(false);
-          } else {
-            console.log('[DeepLink] Session set, waiting for AuthContext...');
-            // We don't set isProcessingDeepLink(false) here. 
-            // We let the useEffect below handle it when isAuthenticated becomes true.
+        if (hasCode) {
+          const code = getParam('code');
+          if (code) {
+            console.log('[DeepLink] Exchanging code for session...');
+            const { error } = await supabase.auth.exchangeCodeForSession(code);
+            if (error) throw error;
             window.location.hash = '/';
-            
-            // Safety timeout in case AuthContext never updates
-            setTimeout(() => setIsProcessingDeepLink(false), 5000);
           }
-        } else {
-          setIsProcessingDeepLink(false);
+        } else if (hasTokens) {
+          const access_token = getParam('access_token');
+          const refresh_token = getParam('refresh_token');
+          
+          if (access_token && refresh_token) {
+            console.log('[DeepLink] Setting session from tokens...');
+            const { error } = await supabase.auth.setSession({ access_token, refresh_token });
+            if (error) throw error;
+            window.location.hash = '/';
+          }
         }
+        
+        // Safety timeout in case AuthContext never updates
+        setTimeout(() => setIsProcessingDeepLink(false), 5000);
       } catch (err) {
-        console.error('[DeepLink] Fatal Error:', err);
+        console.error('[DeepLink] Error:', err);
+        if (Capacitor.isNativePlatform()) {
+          alert('Login Error: ' + (err.message || JSON.stringify(err)));
+        }
         setIsProcessingDeepLink(false);
       }
     };
