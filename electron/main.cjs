@@ -49,11 +49,27 @@ if (!gotTheLock) {
     if (mainWindow) {
       if (mainWindow.isMinimized()) mainWindow.restore();
       mainWindow.focus();
-      const url = commandLine.pop();
-      if (url.includes('natprep://')) mainWindow.webContents.send('deep-link', url);
+      
+      // Find the URL argument on Windows
+      const url = commandLine.find(arg => arg.startsWith('natprep://'));
+      if (url) {
+        mainWindow.webContents.send('deep-link', url);
+      }
     }
   });
-  app.whenReady().then(createWindow);
+
+  app.whenReady().then(() => {
+    createWindow();
+    
+    // Check for cold start URL on Windows
+    const url = process.argv.find(arg => arg.startsWith('natprep://'));
+    if (url && mainWindow) {
+      // Give it a moment to load the page before sending the deep link
+      setTimeout(() => {
+        mainWindow.webContents.send('deep-link', url);
+      }, 1500);
+    }
+  });
 }
 
 app.on('window-all-closed', () => {

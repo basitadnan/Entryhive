@@ -11,19 +11,9 @@ export default function LoginCallback() {
       if (isNative || isElectron) {
         // If we are ALREADY in the app, the AuthContext will handle the hash.
         console.log("LoginCallback: Already in app, letting AuthContext handle it.");
-        
-        const timer = setTimeout(() => {
-          window.location.hash = '/';
-        }, 2000);
-        return () => clearTimeout(timer);
       } else {
         // We are on the WEB (Vercel), try to open the native app
         window.location.href = `natprep://login-callback${hash}`;
-        
-        const timer = setTimeout(() => {
-          window.location.hash = `/`;
-        }, 2500);
-        return () => clearTimeout(timer);
       }
     }
   }, []);

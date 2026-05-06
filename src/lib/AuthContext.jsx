@@ -53,15 +53,26 @@ export const AuthProvider = ({ children }) => {
         }
 
         if (session?.user && isMounted) {
+          // 1. Clear hash first to prevent routing noise
+          if (typeof window !== 'undefined') {
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
+
+          // 2. Set basic state immediately for responsiveness
           setUser(session.user);
           setIsAuthenticated(true);
           
-          // CRITICAL: Close the ghost browser on mobile
+          // 3. Safe browser close (Delayed to avoid native bridge congestion)
           if (Capacitor.isNativePlatform()) {
-            await Browser.close();
+            setTimeout(async () => {
+              try {
+                await Browser.close();
+              } catch (e) {
+                console.warn('[Auth] Browser already closed or failed to close', e);
+              }
+            }, 2000);
           }
           
-          window.location.hash = '/';
           return true;
         }
       } catch (e) {
@@ -88,8 +99,8 @@ export const AuthProvider = ({ children }) => {
         if (!handled) {
           const { data: { session } } = await supabase.auth.getSession();
           if (session?.user && isMounted) {
-            setIsAuthenticated(true);
             setUser(session.user);
+            setIsAuthenticated(true);
           }
         }
       } catch (e) {
@@ -100,9 +111,10 @@ export const AuthProvider = ({ children }) => {
 
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
         if (!isMounted || processingLinkRef.current) return; 
+        
         if (session?.user) {
-          setIsAuthenticated(true);
           setUser(session.user);
+          setIsAuthenticated(true);
         } else {
           setIsAuthenticated(false);
           setUser(null);
@@ -150,8 +162,15 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithGoogle = async () => {
     const isNative = Capacitor.isNativePlatform();
-    const isElectron = typeof window !== 'undefined' && (window.electronAPI || window.process?.versions?.electron || navigator.userAgent.includes('Electron'));
-    const isDev = window.location.hostname === 'localhost';
+    const isElectron = typeof window !== 'undefined' && !!(
+      window.electronAPI || 
+      (window.process && window.process.versions && window.process.versions.electron) || 
+      navigator.userAgent.toLowerCase().includes('electron')
+    );
+    const isDev = typeof window !== 'undefined' && (
+      window.location.hostname === 'localhost' || 
+      window.location.hostname === '127.0.0.1'
+    );
     
     let targetRedirect = 'https://natprep.vercel.app/login-callback';
     if (isNative || isElectron) {
@@ -174,13 +193,15 @@ export const AuthProvider = ({ children }) => {
     }
 
     if (data?.url) {
-      if (isElectron && window.electronAPI?.openExternal) {
+      if (isElectron && window.electronAPI && window.electronAPI.openExternal) {
         window.electronAPI.openExternal(data.url);
       } else if (isNative) {
         // Use Capacitor Browser for mobile to allow auto-closing
         await Browser.open({ url: data.url, windowName: '_blank' });
-      } else {
+      } else if (!isElectron && !isNative) {
         window.location.href = data.url;
+      } else {
+        console.warn('[Auth] Fallback triggered in app context - preventing internal navigation');
       }
     }
   };

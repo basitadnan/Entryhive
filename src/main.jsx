@@ -12,12 +12,13 @@ if (typeof window !== 'undefined' && Capacitor.isNativePlatform() && navigator.l
 // Traffic Controller: Fix HashRouter conflicts with Google OAuth tokens
 if (typeof window !== 'undefined' && window.location.hash) {
   const h = window.location.hash;
-  if (h.includes('access_token=') || h.includes('error=')) {
-    if (!h.startsWith('#/')) {
-      // FORCE the hash into a format HashRouter understands (e.g. #/access_token...)
-      const newHash = '#/' + h.substring(1);
-      window.history.replaceState(null, '', newHash);
-    }
+  // If hash contains token but is NOT a valid HashRouter path (doesn't start with #/)
+  if ((h.includes('access_token=') || h.includes('code=')) && !h.startsWith('#/')) {
+    // Check if we have a path before the token-hash
+    // Supabase redirects often look like #access_token=... but HashRouter needs #/access_token=...
+    // OR it might be #/login-callback#access_token=... which is already fine.
+    const newHash = '#/' + h.substring(1);
+    window.history.replaceState(null, '', newHash);
   }
 }
 

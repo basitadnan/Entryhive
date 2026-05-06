@@ -89,16 +89,23 @@ export default function AppHeader({ user }) {
   // Push Notification Registration
   React.useEffect(() => {
     if (Capacitor.isNativePlatform()) {
-      PushNotifications.requestPermissions().then(result => {
-        if (result.receive === 'granted') {
-          PushNotifications.register();
-        }
-      });
+      // Delaying to avoid conflict with Browser close and initial data fetch
+      const timer = setTimeout(() => {
+        PushNotifications.requestPermissions().then(result => {
+          if (result.receive === 'granted') {
+            PushNotifications.register();
+          }
+        });
+      }, 4000);
 
-      PushNotifications.addListener('registration', (token) => {
-        // Here you would save the token to Supabase profiles
+      const regListener = PushNotifications.addListener('registration', (token) => {
         console.log('Push token:', token.value);
       });
+
+      return () => {
+        clearTimeout(timer);
+        regListener.remove();
+      };
     }
   }, []);
 
