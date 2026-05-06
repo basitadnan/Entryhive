@@ -2,6 +2,8 @@
   "name": "nts-ace-prep",
   "private": true,
   "version": "0.0.0",
+  "description": "NAT Preparation App for students",
+  "author": "Abdul Basit Adnan",
   "type": "module",
   "main": "electron/main.cjs",
   "scripts": {

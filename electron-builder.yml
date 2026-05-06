@@ -12,7 +12,6 @@ win:
     - nsis
     - portable
   icon: public/logo.ico
-  publisherName: "Abdul Basit Adnan"
 
 nsis:
   oneClick: false
