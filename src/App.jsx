@@ -150,22 +150,13 @@ function AppContent() {
             window.location.hash = '/';
           }
         }
-      } catch (err) {
-        console.error('[DeepLink] Error:', err);
-        if (Capacitor.isNativePlatform()) {
-          const errMsg = err.message || err.error_description || JSON.stringify(err);
-          alert('Login Error: ' + errMsg);
-        }
-        setIsProcessingDeepLink(false);
-      }
-    };
-        
+        // Safety timeout in case AuthContext never updates
         setTimeout(() => setIsProcessingDeepLink(false), 5000);
       } catch (err) {
         console.error('[DeepLink] Error:', err);
         if (Capacitor.isNativePlatform()) {
           const errMsg = err.message || err.error_description || JSON.stringify(err);
-          alert('Detailed Error: ' + errMsg);
+          alert('Login Error: ' + errMsg);
         }
         setIsProcessingDeepLink(false);
       }
