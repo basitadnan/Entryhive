@@ -5,6 +5,13 @@ import { useQuery } from '@tanstack/react-query';
 
 export default function PageNotFound({}) {
     const location = useLocation();
+    
+    // FINAL FIX: If this is a login redirect, jump to home immediately
+    if (typeof window !== 'undefined' && window.location.hash.includes('access_token=')) {
+        window.location.hash = '/';
+        return null;
+    }
+
     const pageName = location.pathname.substring(1);
 
     const { data: authData, isFetched } = useQuery({
