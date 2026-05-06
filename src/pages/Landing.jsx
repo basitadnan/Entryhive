@@ -152,14 +152,14 @@ export default function Landing({ preview = false }) {
             {!Capacitor.isNativePlatform() && !isElectron && (
               <div className="flex flex-col sm:flex-row gap-3 w-full">
                 <Button 
-                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/download/2.0/NAT-Prep.apk', '_blank'); }}
+                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank'); }}
                   variant="outline"
                   className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
                 >
                   Android App <Zap className="w-4 h-4 fill-primary" />
                 </Button>
                 <Button 
-                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/download/2.0/NAT.Prep-Setup-0.0.0.exe', '_blank'); }}
+                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT%20Prep-Setup-0.0.0.exe', '_blank'); }}
                   variant="outline"
                   className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
                 >
@@ -308,13 +308,13 @@ export default function Landing({ preview = false }) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button 
-                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/download/2.0/NAT-Prep.apk', '_blank'); }}
+                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank'); }}
                 className="h-14 px-8 text-lg font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all gap-2"
               >
                 Download APK <ChevronRight className="w-5 h-5" />
               </Button>
               <Button 
-                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/download/2.0/NAT.Prep-Setup-0.0.0.exe', '_blank'); }}
+                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT%20Prep-Setup-0.0.0.exe', '_blank'); }}
                 variant="outline"
                 className="h-14 px-8 text-lg font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
               >
