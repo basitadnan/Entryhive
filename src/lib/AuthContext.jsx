@@ -19,24 +19,21 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     let isMounted = true;
     
-    // Safety timeout: Never stay stuck on loading for more than 8 seconds
+    // Safety timeout: 10 seconds max
     const safetyTimeout = setTimeout(() => {
       if (isMounted && isLoadingAuth) {
-        console.warn('[Auth] Safety timeout reached, forcing loading to false');
         setIsLoadingAuth(false);
       }
-    }, 8000);
+    }, 10000);
 
-    const handleDeepLink = async (url) => {
-      if (!url || !isMounted) return;
-      if (Capacitor.isNativePlatform()) console.log('[Auth] Deep Link:', url);
-
-      const hasCode = url.includes('code=');
-      const hasTokens = url.includes('access_token=');
-      if (!hasCode && !hasTokens) return;
+    const handleUrl = async (url) => {
+      if (!url || !isMounted) return false;
+      if (!url.includes('access_token=') && !url.includes('code=')) return false;
 
       try {
+        console.log('[Auth] Processing Deep Link...');
         setIsLoadingAuth(true);
+        
         const getParam = (name) => {
           const regex = new RegExp(`[#?&]${name}=([^&]+)`);
           const match = url.match(regex);
@@ -44,117 +41,82 @@ export const AuthProvider = ({ children }) => {
         };
 
         let session = null;
-        if (hasCode) {
-          const code = getParam('code');
-          if (code) {
-            const { data, error } = await supabase.auth.exchangeCodeForSession(code);
-            if (error) throw error;
-            session = data.session;
-          }
-        } else if (hasTokens) {
-          const access_token = getParam('access_token');
-          const refresh_token = getParam('refresh_token');
-          if (access_token) {
-            const { data, error } = await supabase.auth.setSession({ 
-              access_token, 
-              refresh_token: refresh_token || '' 
-            });
-            if (error) throw error;
-            session = data.session;
-          }
+        if (url.includes('code=')) {
+          const { data, error } = await supabase.auth.exchangeCodeForSession(getParam('code'));
+          if (error) throw error;
+          session = data.session;
+        } else {
+          const { data, error } = await supabase.auth.setSession({
+            access_token: getParam('access_token'),
+            refresh_token: getParam('refresh_token') || ''
+          });
+          if (error) throw error;
+          session = data.session;
         }
 
         if (session?.user && isMounted) {
-          // BRUTE FORCE SYNC: Set everything at once
           setUser(session.user);
           setIsAuthenticated(true);
-          setIsLoadingAuth(false);
-          console.log('[Auth] Brute force sync success');
-          
-          // Force navigate to dashboard
           window.location.hash = '/';
-          
-          // Background profile fetch
-          base44.auth.me().then(p => isMounted && p && setUser(p));
-        }
-      } catch (err) {
-        console.error('[Auth Deep Link Error]', err);
-        if (Capacitor.isNativePlatform()) alert('Login error: ' + (err.message || 'Check connection'));
-      } finally {
-        if (isMounted) {
-          // Delay turning off loader just a bit to ensure UI catchup
-          setTimeout(() => { if (isMounted) setIsLoadingAuth(false); }, 1000);
-        }
-      }
-    };
-
-    async function init() {
-      if (isPlaceholder) {
-        const saved = localStorage.getItem('nat_mock_user');
-        if (saved) {
-          setUser(JSON.parse(saved));
-          setIsAuthenticated(true);
-        }
-        setIsLoadingAuth(false);
-        clearTimeout(safetyTimeout);
-        return;
-      }
-
-      try {
-        // 1. Get initial session
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user && isMounted) {
-          setIsAuthenticated(true);
-          setUser(session.user);
-          base44.auth.me().then(p => isMounted && p && setUser(p));
-        }
-
-        // 2. Check for launch URL (Deep link)
-        if (Capacitor.isNativePlatform()) {
-          const res = await CapApp.getLaunchUrl();
-          if (res?.url) await handleDeepLink(res.url);
+          return true;
         }
       } catch (e) {
-        console.error('[Auth Init Error]', e);
+        console.error('[Auth Deep Link Error]', e);
+      }
+      return false;
+    };
+
+    async function bootSequence() {
+      try {
+        setIsLoadingAuth(true);
+
+        // 1. Check for Deep Link (Most important for Mobile Login)
+        let handled = false;
+        if (Capacitor.isNativePlatform()) {
+          const res = await CapApp.getLaunchUrl();
+          if (res?.url) handled = await handleUrl(res.url);
+        }
+
+        // 2. If no deep link, check for existing session
+        if (!handled) {
+          const { data: { session } } = await supabase.auth.getSession();
+          if (session?.user && isMounted) {
+            setIsAuthenticated(true);
+            setUser(session.user);
+            base44.auth.me().then(p => isMounted && p && setUser(p));
+          }
+        }
+      } catch (e) {
+        console.error('[Auth Boot Error]', e);
       } finally {
         if (isMounted) {
           setIsLoadingAuth(false);
-          // If we have a session, we can clear the safety timeout
-          if (isAuthenticated) clearTimeout(safetyTimeout);
+          clearTimeout(safetyTimeout);
         }
       }
 
-      // 3. Listen for changes
-      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      // 3. Set up listeners for the future
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
         if (!isMounted) return;
         if (session?.user) {
           setIsAuthenticated(true);
-          if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
-             const p = await base44.auth.me();
-             if (isMounted) setUser(p || session.user);
-          } else {
-             setUser(session.user);
-          }
+          setUser(session.user);
         } else {
           setIsAuthenticated(false);
           setUser(null);
         }
-        setIsLoadingAuth(false);
       });
 
-      // 4. Listen for deep links (Mobile)
       let urlListener;
       if (Capacitor.isNativePlatform()) {
         urlListener = CapApp.addListener('appUrlOpen', (event) => {
-          handleDeepLink(event.url);
+          handleUrl(event.url);
         });
       }
 
-      // 5. Listen for deep links (Windows/Mac Desktop)
       if (typeof window !== 'undefined' && window.electronAPI) {
         window.electronAPI.onDeepLink((url) => {
-          console.log('[Auth] Electron Deep Link Received:', url);
-          handleDeepLink(url);
+          handleUrl(url);
         });
       }
 
@@ -165,7 +127,7 @@ export const AuthProvider = ({ children }) => {
       };
     }
 
-    init();
+    bootSequence();
 
     return () => {
       isMounted = false;
