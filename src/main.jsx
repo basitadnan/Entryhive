@@ -4,39 +4,29 @@ import App from '@/App.jsx'
 import '@/index.css'
 import { supabase } from '@/lib/supabaseClient'
 
-// ── Intercept OAuth tokens from URL hash BEFORE HashRouter mounts ──
-// When Supabase OAuth (Google) redirects back, tokens are placed in the URL hash:
-//   https://yourapp.com/#access_token=xxx&refresh_token=yyy&...
-// But HashRouter ALSO uses the hash for routing, causing a conflict.
-// We grab the tokens here, set the session, and clean up the hash.
-async function handleOAuthRedirect() {
+// ── Intercept OAuth tokens from URL hash ──
+// Because we use HashRouter, we need to handle the case where Supabase
+// puts tokens in the hash (e.g. #access_token=...) before the router mounts.
+async function handleInitialAuth() {
   const hash = window.location.hash;
-  
-  // Check if the hash contains OAuth tokens (not a normal route like #/home)
-  if (hash && hash.includes('access_token=') && hash.includes('refresh_token=')) {
-    const params = new URLSearchParams(hash.replace('#', ''));
+  if (hash && hash.includes('access_token=')) {
+    // If it's a Supabase redirect, we let the app mount and the AuthContext/App deep link listeners handle it,
+    // OR we can set it here. To be safe with HashRouter, we set it here and clear the hash.
+    const params = new URLSearchParams(hash.substring(1));
     const access_token = params.get('access_token');
     const refresh_token = params.get('refresh_token');
     
     if (access_token && refresh_token) {
-      console.log('[OAuth Intercept] Found tokens in URL hash, setting session...');
-      const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-      
-      if (error) {
-        console.error('[OAuth Intercept] setSession error:', error);
-      } else {
-        console.log('[OAuth Intercept] Session set successfully');
-      }
-      
-      // Clean the hash so HashRouter doesn't try to route to "access_token=..."
-      window.location.hash = '/';
+      await supabase.auth.setSession({ access_token, refresh_token });
+      window.location.hash = '/'; // Redirect to root
     }
   }
 }
 
-// Run the intercept, then mount React
-handleOAuthRedirect().finally(() => {
+handleInitialAuth().finally(() => {
   ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   )
 });

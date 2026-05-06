@@ -7,10 +7,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
-    // Disable detectSessionInUrl because we use HashRouter.
-    // Hash-based routing conflicts with Supabase's implicit OAuth flow 
-    // which also puts tokens in the URL hash fragment.
-    // We handle OAuth tokens manually in main.jsx and App.jsx instead.
-    detectSessionInUrl: false,
+    detectSessionInUrl: true, // Re-enable standard behavior
   }
 })

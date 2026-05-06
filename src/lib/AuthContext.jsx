@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoadingPublicSettings] = useState(false);
   const [authError] = useState(null);
   const [appPublicSettings] = useState({});
-  const initialSessionHandled = useRef(false);
+  const initRef = useRef(false);
 
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
@@ -29,85 +29,58 @@ export const AuthProvider = ({ children }) => {
 
     let isMounted = true;
 
-    // Fail-safe: Force hide loading after 8 seconds no matter what
+    // Fail-safe: Force hide loading after 10 seconds
     const failSafe = setTimeout(() => {
-      if (isMounted) {
-        console.warn('Auth fail-safe triggered — forcing loading off');
+      if (isMounted && isLoadingAuth) {
+        console.warn('[Auth] Fail-safe triggered');
         setIsLoadingAuth(false);
       }
-    }, 8000);
+    }, 10000);
 
-    // Helper to fetch and merge the user profile
-    const fetchAndSetUser = async (supabaseUser) => {
-      try {
-        const mergedUser = await base44.auth.me();
-        if (isMounted && mergedUser) {
-          setUser(mergedUser);
-          setIsAuthenticated(true);
-        }
-      } catch (e) {
-        console.error("Error fetching user profile:", e);
-      }
-    };
+    const handleAuthChange = async (event, session) => {
+      console.log(`[Auth Event] ${event}`, { 
+        hasUser: !!session?.user, 
+        email: session?.user?.email,
+        currentPath: window.location.hash
+      });
 
-    // Use onAuthStateChange as the SINGLE source of truth.
-    // Supabase fires INITIAL_SESSION first (which restores persisted session),
-    // then SIGNED_IN / SIGNED_OUT / TOKEN_REFRESHED for subsequent events.
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      console.log('[Auth]', event, session?.user?.email);
-
-      if (event === 'INITIAL_SESSION') {
-        initialSessionHandled.current = true;
-        if (session?.user) {
-          await fetchAndSetUser(session.user);
+      if (session?.user) {
+        console.log('[Auth] Valid session found, setting isAuthenticated=true');
+        setIsAuthenticated(true);
+        
+        try {
+          console.log('[Auth] Fetching full profile...');
+          const mergedUser = await base44.auth.me();
+          if (isMounted && mergedUser) {
+            console.log('[Auth] Profile fetched successfully');
+            setUser(mergedUser);
+          }
+        } catch (e) {
+          console.error('[Auth] Profile fetch failed', e);
+          if (isMounted) setUser(session.user);
         }
-        if (isMounted) {
-          setIsLoadingAuth(false);
-          clearTimeout(failSafe);
-        }
-      } else if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
-        if (session?.user) {
-          await fetchAndSetUser(session.user);
-        }
-        if (isMounted) {
-          setIsLoadingAuth(false);
-          clearTimeout(failSafe);
-        }
-      } else if (event === 'SIGNED_OUT') {
+      } else {
+        console.log('[Auth] No session found');
         if (isMounted) {
           setUser(null);
           setIsAuthenticated(false);
-          setIsLoadingAuth(false);
-          clearTimeout(failSafe);
         }
       }
-    });
 
-    // Secondary fail-safe: if INITIAL_SESSION never fires (older supabase-js),
-    // fall back to getSession after 2 seconds.
-    const fallback = setTimeout(async () => {
-      if (!initialSessionHandled.current && isMounted) {
-        console.warn('[Auth] INITIAL_SESSION never fired, falling back to getSession');
-        try {
-          const { data: { session } } = await supabase.auth.getSession();
-          if (session?.user) {
-            await fetchAndSetUser(session.user);
-          }
-        } catch (e) {
-          console.error("Fallback getSession error:", e);
-        }
-        if (isMounted) {
-          setIsLoadingAuth(false);
-          clearTimeout(failSafe);
-        }
+      if (isMounted && (event === 'INITIAL_SESSION' || !initRef.current)) {
+        console.log('[Auth] Initial check complete, hiding loading screen');
+        initRef.current = true;
+        setIsLoadingAuth(false);
+        clearTimeout(failSafe);
       }
-    }, 2000);
+    };
+
+    // Initialize
+    supabase.auth.onAuthStateChange(handleAuthChange);
 
     return () => {
       isMounted = false;
-      subscription.unsubscribe();
       clearTimeout(failSafe);
-      clearTimeout(fallback);
     };
   }, []);
 
@@ -118,8 +91,7 @@ export const AuthProvider = ({ children }) => {
   const loginWithPassword = async (email, password) => {
     const { data, error } = await base44.auth.signInWithPassword(email, password);
     if (!error && data?.user) {
-      setUser(data.user);
-      setIsAuthenticated(true);
+      // Note: onAuthStateChange will handle state updates
       return { success: true };
     }
     return { success: false, error };
@@ -131,12 +103,15 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithGoogle = async () => {
     const isNative = Capacitor.isNativePlatform();
+    const redirectTo = isNative ? 'natprep://login-callback' : window.location.origin;
 
-    const redirectTo = isNative
-      ? 'natprep://login-callback'
-      : window.location.origin;
-
-    const { data, error } = await base44.auth.signInWithGoogle(redirectTo);
+    const { data, error } = await base44.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo,
+        queryParams: { access_type: 'offline', prompt: 'consent' }
+      }
+    });
     return { data, error };
   };
 

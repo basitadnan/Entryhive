@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Toaster as SonnerToaster } from "@/components/ui/sonner"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -58,13 +58,15 @@ const AuthenticatedApp = () => {
     }
   }
 
-  // Unauthenticated users: show public routes only
+  // Handle Protected Routes
   if (!isAuthenticated) {
     return (
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="*" element={<Landing />} />
+        <Route path="/landing" element={<Landing />} />
+        {/* If user tries to access any other route while logged out, redirect to landing */}
+        <Route path="*" element={<Navigate to="/landing" replace />} />
       </Routes>
     );
   }
@@ -98,6 +100,7 @@ const AuthenticatedApp = () => {
       </Route>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/landing" element={<Landing />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
@@ -105,45 +108,35 @@ const AuthenticatedApp = () => {
 
 function App() {
   useEffect(() => {
-    // Helper to extract tokens from a deep link URL and set the Supabase session
-    const handleDeepLinkUrl = async (url) => {
+    const handleDeepLink = async (url) => {
       if (!url) return;
-      console.log('[DeepLink] Processing URL:', url);
-
+      console.log('[DeepLink] Processing:', url);
+      
       const accessTokenMatch = url.match(/[#?&]access_token=([^&]+)/);
       const refreshTokenMatch = url.match(/[#?&]refresh_token=([^&]+)/);
-
+      
       if (accessTokenMatch && refreshTokenMatch) {
         const access_token = accessTokenMatch[1];
         const refresh_token = refreshTokenMatch[1];
-
-        console.log('[DeepLink] Found tokens, setting session...');
+        
         const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-
-        if (error) {
-          console.error('[DeepLink] setSession error:', error);
-        } else {
-          console.log('[DeepLink] Session set successfully');
+        if (!error) {
+          console.log('[DeepLink] Session established');
           window.location.hash = '/';
+        } else {
+          console.error('[DeepLink] Error:', error.message);
         }
       }
     };
 
-    // 1. Check if app was LAUNCHED via a deep link (cold start — app was killed)
-    CapApp.getLaunchUrl().then((result) => {
-      if (result?.url) {
-        console.log('[DeepLink] App launched with URL:', result.url);
-        handleDeepLinkUrl(result.url);
-      }
-    }).catch(() => {});
-
-    // 2. Listen for deep links while app is already running (warm start)
-    CapApp.addListener('appUrlOpen', (event) => {
-      handleDeepLinkUrl(event.url);
-    });
+    // Cold Start
+    CapApp.getLaunchUrl().then(res => handleDeepLink(res?.url));
+    
+    // Warm Start
+    const listener = CapApp.addListener('appUrlOpen', (event) => handleDeepLink(event.url));
 
     return () => {
-      CapApp.removeAllListeners();
+      listener.remove();
     };
   }, []);
 
