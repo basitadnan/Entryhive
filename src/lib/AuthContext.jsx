@@ -18,6 +18,14 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     let isMounted = true;
+    
+    // Safety timeout: Never stay stuck on loading for more than 8 seconds
+    const safetyTimeout = setTimeout(() => {
+      if (isMounted && isLoadingAuth) {
+        console.warn('[Auth] Safety timeout reached, forcing loading to false');
+        setIsLoadingAuth(false);
+      }
+    }, 8000);
 
     const handleDeepLink = async (url) => {
       if (!url || !isMounted) return;
@@ -63,7 +71,10 @@ export const AuthProvider = ({ children }) => {
         console.error('[Auth Deep Link Error]', err);
         if (Capacitor.isNativePlatform()) alert('Login failed: ' + (err.message || 'Error'));
       } finally {
-        if (isMounted) setIsLoadingAuth(false);
+        if (isMounted) {
+          setIsLoadingAuth(false);
+          clearTimeout(safetyTimeout);
+        }
       }
     };
 
@@ -75,6 +86,7 @@ export const AuthProvider = ({ children }) => {
           setIsAuthenticated(true);
         }
         setIsLoadingAuth(false);
+        clearTimeout(safetyTimeout);
         return;
       }
 
@@ -95,7 +107,11 @@ export const AuthProvider = ({ children }) => {
       } catch (e) {
         console.error('[Auth Init Error]', e);
       } finally {
-        if (isMounted) setIsLoadingAuth(false);
+        if (isMounted) {
+          setIsLoadingAuth(false);
+          // If we have a session, we can clear the safety timeout
+          if (isAuthenticated) clearTimeout(safetyTimeout);
+        }
       }
 
       // 3. Listen for changes
@@ -116,7 +132,7 @@ export const AuthProvider = ({ children }) => {
         setIsLoadingAuth(false);
       });
 
-      // 4. Listen for deep links while app is open
+      // 4. Listen for deep links (Mobile)
       let urlListener;
       if (Capacitor.isNativePlatform()) {
         urlListener = CapApp.addListener('appUrlOpen', (event) => {
@@ -124,21 +140,30 @@ export const AuthProvider = ({ children }) => {
         });
       }
 
+      // 5. Listen for deep links (Windows Desktop)
+      if (typeof window !== 'undefined' && window.process?.versions?.electron) {
+        // Electron-specific deep link handling if needed
+        // For now, we rely on the redirect handling
+      }
+
       return () => {
         subscription.unsubscribe();
         if (urlListener) urlListener.remove();
+        clearTimeout(safetyTimeout);
       };
     }
 
-    const cleanup = init();
+    init();
 
     return () => {
       isMounted = false;
-      // We can't await cleanup here but the isMounted check handles it
+      clearTimeout(safetyTimeout);
     };
   }, []);
 
   const logout = async (shouldRedirect = true) => {
+    setIsAuthenticated(false);
+    setUser(null);
     await base44.auth.logout(shouldRedirect ? '/' : undefined);
   };
 
@@ -154,8 +179,10 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithGoogle = async () => {
     const isNative = Capacitor.isNativePlatform();
-    // Use the native scheme for redirect
-    const redirectTo = isNative ? 'natprep://login-callback' : window.location.origin;
+    const isElectron = typeof window !== 'undefined' && (window.process?.versions?.electron || navigator.userAgent.includes('Electron'));
+    
+    // For both Mobile and Desktop Apps, use the custom scheme
+    const redirectTo = (isNative || isElectron) ? 'natprep://login-callback' : window.location.origin;
 
     console.log('[Auth] Starting Google login with redirectTo:', redirectTo);
 
@@ -166,8 +193,7 @@ export const AuthProvider = ({ children }) => {
         queryParams: { 
           access_type: 'offline', 
           prompt: 'consent'
-        },
-        skipBrowserRedirect: false
+        }
       }
     });
     return { data, error };
