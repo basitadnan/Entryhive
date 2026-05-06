@@ -140,7 +140,7 @@ function App() {
         <AppContent />
         <Toaster />
         <SonnerToaster />
-        <Analytics />
+        {!Capacitor.isNativePlatform() && !window.electronAPI && <Analytics />}
       </QueryClientProvider>
     </AuthProvider>
   )
