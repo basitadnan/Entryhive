@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabaseClient';
 
-const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
+const isPlaceholder = false; // Forced to false for production stability
 
 // ── Mock Store (localStorage persistence for preview mode) ──
 const STORAGE_KEY = 'nat_prep_mock_store';
