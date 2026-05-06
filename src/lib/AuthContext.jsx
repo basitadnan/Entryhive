@@ -42,18 +42,21 @@ export const AuthProvider = ({ children }) => {
         setIsLoadingAuth(true);
         
         let session = null;
-        if (url.includes('code=')) {
-          const { data, error } = await supabase.auth.exchangeCodeForSession(getParam('code'));
-          if (error) throw error;
-          session = data.session;
-        } else {
-          const { data, error } = await supabase.auth.setSession({
-            access_token: getParam('access_token'),
-            refresh_token: getParam('refresh_token') || ''
-          });
-          if (error) throw error;
-          session = data.session;
-        }
+        const authPromise = url.includes('code=') 
+          ? supabase.auth.exchangeCodeForSession(getParam('code'))
+          : supabase.auth.setSession({
+              access_token: getParam('access_token'),
+              refresh_token: getParam('refresh_token') || ''
+            });
+
+        // 5-second timeout for auth operations
+        const timeoutPromise = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Auth operation timed out')), 5000)
+        );
+
+        const { data, error } = await Promise.race([authPromise, timeoutPromise]);
+        if (error) throw error;
+        session = data.session;
 
         if (session?.user && isMounted) {
           // 1. Clear hash first to prevent routing noise
@@ -111,8 +114,26 @@ export const AuthProvider = ({ children }) => {
 
         // Check Electron cached deep link
         if (!handled && window.electronAPI && window.electronAPI.getDeepLink) {
-          const url = await window.electronAPI.getDeepLink();
-          if (url) handled = await handleUrl(url);
+          try {
+            const url = await window.electronAPI.getDeepLink();
+            if (url) handled = await handleUrl(url);
+          } catch (e) {
+            console.warn('[Auth] Failed to get Electron deep link', e);
+          }
+        }
+
+        // Fail-safe: In Electron, poll the hash/URL for tokens every 2 seconds
+        if (isElectron && !handled) {
+          const pollInterval = setInterval(async () => {
+            if (isAuthenticated) {
+              clearInterval(pollInterval);
+              return;
+            }
+            if (window.location.hash.includes('access_token=') || window.location.hash.includes('code=')) {
+              console.log('[Auth] Poller detected token in hash');
+              await handleUrl(window.location.href);
+            }
+          }, 2000);
         }
 
         if (!handled) {
@@ -184,7 +205,8 @@ export const AuthProvider = ({ children }) => {
     const isElectron = typeof window !== 'undefined' && !!(
       window.electronAPI || 
       (window.process && window.process.versions && window.process.versions.electron) || 
-      navigator.userAgent.toLowerCase().includes('electron')
+      navigator.userAgent.toLowerCase().includes('electron') ||
+      window.location.protocol === 'file:'
     );
     const isDev = typeof window !== 'undefined' && (
       window.location.hostname === 'localhost' || 

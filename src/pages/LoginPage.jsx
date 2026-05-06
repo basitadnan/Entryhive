@@ -173,6 +173,26 @@ export default function LoginPage() {
               </svg>
               Google
             </Button>
+
+            {/* Manual Unlock Fallback for Windows/Mobile redirect issues */}
+            {(window.location.hash.includes('access_token=') || window.location.hash.includes('code=')) && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="pt-2"
+              >
+                <Button
+                  type="button"
+                  onClick={() => window.location.reload()}
+                  className="w-full h-11 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-bold shadow-lg shadow-emerald-500/20 animate-pulse"
+                >
+                  Click to Finish Login
+                </Button>
+                <p className="text-[10px] text-center text-emerald-400 mt-2 font-medium">
+                  Detected your login! Tap above to enter the app.
+                </p>
+              </motion.div>
+            )}
           </form>
 
           <div className="text-center pt-2 border-t border-border/30">
