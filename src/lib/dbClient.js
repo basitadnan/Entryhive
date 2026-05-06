@@ -125,53 +125,72 @@ export const base44 = {
         const u = localStorage.getItem(SESSION_KEY);
         return u ? JSON.parse(u) : null;
       }
-      // Use getSession (reads from localStorage, instant) instead of getUser (network call)
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.user) return null;
-      const user = session.user;
-
-      // Merge with profiles table
-      let { data: profile, error: profileError } = await supabase.from('profiles').select('*').eq('id', user.id).single();
-
-      // Auto-create profile if it doesn't exist (Google Sign-in first-time users)
-      if (!profile || profileError) {
-        const referralCode = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
-        const newProfile = {
-          id: user.id,
-          email: user.email,
-          full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
-          referral_code: referralCode,
+      
+      try {
+        // Use getSession (reads from localStorage, instant) instead of getUser (network call)
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+        if (sessionError || !session?.user) return null;
+        
+        const user = session.user;
+        
+        // Merge with metadata immediately so we always have a basic user
+        const baseUser = { 
+          ...user, 
+          ...user.user_metadata,
+          full_name: user.user_metadata?.full_name || user.user_metadata?.name || 'User'
         };
-        const { data: created } = await supabase.from('profiles').upsert(newProfile, { onConflict: 'id' }).select().single();
-        profile = created || newProfile;
-      }
 
-      const merged = { ...user, ...user.user_metadata, ...profile };
-      
-      // ── 3-Day Free Trial Logic ──
-      const signupDate = profile?.created_at ? new Date(profile.created_at) : new Date(user.created_at);
-      const now = new Date();
-      const diffMs = now - signupDate;
-      const diffDays = diffMs / (1000 * 60 * 60 * 24);
-      
-      // User is premium if they paid OR if they are within 3 days of signup
-      const isTrialActive = diffDays <= 3;
-      merged.is_premium = merged.is_premium || isTrialActive;
-      merged.trial_days_left = Math.max(0, Math.ceil(3 - diffDays));
-      merged.is_on_trial = isTrialActive && !profile?.is_premium;
-      
-      // Auto-grant admin and premium to the specified email
-      if (merged.email === 'adnanabdulbasit75@gmail.com') {
-        merged.role = 'admin';
-        merged.is_premium = true;
-      }
+        // Merge with profiles table
+        let { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('*')
+          .eq('id', user.id)
+          .maybeSingle();
 
-      if (!merged.referral_code) {
-        const code = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
-        await supabase.from('profiles').update({ referral_code: code }).eq('id', user.id);
-        merged.referral_code = code;
+        // Auto-create profile if it doesn't exist (Google Sign-in first-time users)
+        if (!profile && !profileError) {
+          const referralCode = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
+          const newProfile = {
+            id: user.id,
+            email: user.email,
+            full_name: baseUser.full_name,
+            referral_code: referralCode,
+          };
+          const { data: created } = await supabase.from('profiles').upsert(newProfile, { onConflict: 'id' }).select().single();
+          profile = created || newProfile;
+        }
+
+        const merged = { ...baseUser, ...profile };
+        
+        // ── 3-Day Free Trial Logic ──
+        const signupDate = profile?.created_at ? new Date(profile.created_at) : new Date(user.created_at);
+        const now = new Date();
+        const diffDays = (now - signupDate) / (1000 * 60 * 60 * 24);
+        
+        // User is premium if they paid OR if they are within 3 days of signup
+        const isTrialActive = diffDays <= 3;
+        merged.is_premium = merged.is_premium || isTrialActive;
+        merged.trial_days_left = Math.max(0, Math.ceil(3 - diffDays));
+        merged.is_on_trial = isTrialActive && !profile?.is_premium;
+        
+        // Auto-grant admin and premium to the specified email
+        if (merged.email === 'adnanabdulbasit75@gmail.com') {
+          merged.role = 'admin';
+          merged.is_premium = true;
+        }
+
+        if (!merged.referral_code) {
+          const code = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
+          await supabase.from('profiles').update({ referral_code: code }).eq('id', user.id);
+          merged.referral_code = code;
+        }
+        return merged;
+      } catch (e) {
+        console.error('[Auth] Critical error in me():', e);
+        // Fallback to basic session info if database call fails
+        const { data: { session } } = await supabase.auth.getSession();
+        return session?.user ? { ...session.user, ...session.user.user_metadata } : null;
       }
-      return merged;
     },
 
     updateMe: async (updates) => {
