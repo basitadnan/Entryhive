@@ -3,6 +3,7 @@ const path = require('path');
 const isDev = !app.isPackaged;
 
 let mainWindow;
+let lastDeepLink = null;
 
 // Handle deep links on Windows (register protocol)
 if (!app.isDefaultProtocolClient('natprep')) {
@@ -53,11 +54,9 @@ if (!gotTheLock) {
       // Find the URL argument on Windows
       const url = commandLine.find(arg => arg.startsWith('natprep://'));
       if (url) {
+        lastDeepLink = url;
         console.log('[Electron] Forwarding deep link:', url);
-        // Small delay to ensure the renderer is ready
-        setTimeout(() => {
-          mainWindow.webContents.send('deep-link', url);
-        }, 500);
+        mainWindow.webContents.send('deep-link', url);
       }
     }
   });
@@ -68,6 +67,7 @@ if (!gotTheLock) {
     // Check for cold start URL on Windows
     const url = process.argv.find(arg => arg.startsWith('natprep://'));
     if (url && mainWindow) {
+      lastDeepLink = url;
       console.log('[Electron] Cold start deep link:', url);
       // Give it a moment to load the page before sending the deep link
       setTimeout(() => {
@@ -89,4 +89,11 @@ app.on('open-url', (event, url) => {
 const { ipcMain } = require('electron');
 ipcMain.on('open-external', (event, url) => {
   shell.openExternal(url);
+});
+
+ipcMain.handle('get-deep-link', () => {
+  const url = lastDeepLink;
+  // Clear after consumption to prevent re-processing on refresh
+  lastDeepLink = null;
+  return url;
 });

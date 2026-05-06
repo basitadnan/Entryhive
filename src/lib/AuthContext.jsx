@@ -109,6 +109,12 @@ export const AuthProvider = ({ children }) => {
           handled = await handleUrl(window.location.href);
         }
 
+        // Check Electron cached deep link
+        if (!handled && window.electronAPI && window.electronAPI.getDeepLink) {
+          const url = await window.electronAPI.getDeepLink();
+          if (url) handled = await handleUrl(url);
+        }
+
         if (!handled) {
           const { data: { session } } = await supabase.auth.getSession();
           if (session?.user && isMounted) {
