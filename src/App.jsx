@@ -141,6 +141,7 @@ function AppContent() {
 
         if (hasCode) {
           const code = getParam('code');
+          if (Capacitor.isNativePlatform()) alert('Parsed Code: ' + (code ? (code.substring(0, 10) + '...') : 'NULL'));
           if (code) {
             console.log('[DeepLink] Exchanging code...');
             const { error } = await supabase.auth.exchangeCodeForSession(code);
@@ -152,6 +153,11 @@ function AppContent() {
           const access_token = getParam('access_token');
           const refresh_token = getParam('refresh_token');
           
+          if (Capacitor.isNativePlatform()) {
+            alert('Parsed AT: ' + (access_token ? (access_token.substring(0, 10) + '...') : 'NULL') + 
+                  '\nParsed RT: ' + (refresh_token ? (refresh_token.substring(0, 10) + '...') : 'NULL'));
+          }
+
           if (access_token) {
             console.log('[DeepLink] Setting session...');
             const { error } = await supabase.auth.setSession({ 
@@ -166,12 +172,12 @@ function AppContent() {
           }
         }
         
-        // Safety timeout in case AuthContext never updates
         setTimeout(() => setIsProcessingDeepLink(false), 5000);
       } catch (err) {
         console.error('[DeepLink] Error:', err);
         if (Capacitor.isNativePlatform()) {
-          alert('Login Error: ' + (err.message || JSON.stringify(err)));
+          const errMsg = err.message || err.error_description || JSON.stringify(err);
+          alert('Detailed Error: ' + errMsg);
         }
         setIsProcessingDeepLink(false);
       }

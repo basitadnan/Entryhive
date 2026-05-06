@@ -97,13 +97,20 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithGoogle = async () => {
     const isNative = Capacitor.isNativePlatform();
+    // Use the native scheme for redirect
     const redirectTo = isNative ? 'natprep://login-callback' : window.location.origin;
+
+    console.log('[Auth] Starting Google login with redirectTo:', redirectTo);
 
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo,
-        queryParams: { access_type: 'offline', prompt: 'consent' }
+        queryParams: { 
+          access_type: 'offline', 
+          prompt: 'consent'
+        },
+        skipBrowserRedirect: false
       }
     });
     return { data, error };
