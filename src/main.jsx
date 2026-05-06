@@ -11,10 +11,13 @@ if (typeof window !== 'undefined' && Capacitor.isNativePlatform() && navigator.l
 
 // Traffic Controller: Fix HashRouter conflicts with Google OAuth tokens
 if (typeof window !== 'undefined' && window.location.hash) {
-  const hash = window.location.hash;
-  if (hash.includes('access_token=') && !hash.startsWith('#/')) {
-    // Reformat the hash so HashRouter doesn't see it as a broken page path
-    window.location.hash = '/' + hash.substring(1);
+  const h = window.location.hash;
+  if (h.includes('access_token=') || h.includes('error=')) {
+    if (!h.startsWith('#/')) {
+      // FORCE the hash into a format HashRouter understands (e.g. #/access_token...)
+      const newHash = '#/' + h.substring(1);
+      window.history.replaceState(null, '', newHash);
+    }
   }
 }
 
