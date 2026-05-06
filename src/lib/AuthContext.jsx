@@ -2,6 +2,7 @@ import React, { createContext, useState, useContext, useEffect, useRef } from 'r
 import { supabase } from '@/lib/supabaseClient';
 import { base44 } from '@/lib/dbClient';
 import { Capacitor } from '@capacitor/core';
+import { App as CapApp } from '@capacitor/app';
 
 const AuthContext = createContext();
 
@@ -18,6 +19,39 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     let isMounted = true;
 
+    const handleDeepLink = async (url) => {
+      if (!url || !isMounted) return;
+      const hasCode = url.includes('code=');
+      const hasTokens = url.includes('access_token=');
+      if (!hasCode && !hasTokens) return;
+
+      try {
+        setIsLoadingAuth(true);
+        const getParam = (name) => {
+          const regex = new RegExp(`[#?&]${name}=([^&]+)`);
+          const match = url.match(regex);
+          return match ? match[1] : null;
+        };
+
+        if (hasCode) {
+          const code = getParam('code');
+          if (code) await supabase.auth.exchangeCodeForSession(code);
+        } else if (hasTokens) {
+          const access_token = getParam('access_token');
+          const refresh_token = getParam('refresh_token');
+          if (access_token) {
+            await supabase.auth.setSession({ access_token, refresh_token: refresh_token || '' });
+          }
+        }
+        window.location.hash = '/';
+      } catch (err) {
+        console.error('[Auth Deep Link Error]', err);
+        if (Capacitor.isNativePlatform()) alert('Login failed: ' + (err.message || 'Error'));
+      } finally {
+        if (isMounted) setIsLoadingAuth(false);
+      }
+    };
+
     async function init() {
       if (isPlaceholder) {
         const saved = localStorage.getItem('nat_mock_user');
@@ -30,15 +64,18 @@ export const AuthProvider = ({ children }) => {
       }
 
       try {
-        // 1. Get initial session immediately
+        // 1. Get initial session
         const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user) {
+        if (session?.user && isMounted) {
           setIsAuthenticated(true);
           setUser(session.user);
-          // Background fetch profile
-          base44.auth.me().then(merged => {
-            if (isMounted && merged) setUser(merged);
-          }).catch(e => console.error('[Auth Profile Error]', e));
+          base44.auth.me().then(p => isMounted && p && setUser(p));
+        }
+
+        // 2. Check for launch URL (Deep link)
+        if (Capacitor.isNativePlatform()) {
+          const res = await CapApp.getLaunchUrl();
+          if (res?.url) await handleDeepLink(res.url);
         }
       } catch (e) {
         console.error('[Auth Init Error]', e);
@@ -46,16 +83,14 @@ export const AuthProvider = ({ children }) => {
         if (isMounted) setIsLoadingAuth(false);
       }
 
-      // 2. Listen for changes
+      // 3. Listen for changes
       const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         if (!isMounted) return;
-        console.log('[Auth Event]', event, !!session);
-
         if (session?.user) {
           setIsAuthenticated(true);
-          if (event === 'SIGNED_IN') {
-             const merged = await base44.auth.me();
-             if (isMounted) setUser(merged || session.user);
+          if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION') {
+             const p = await base44.auth.me();
+             if (isMounted) setUser(p || session.user);
           } else {
              setUser(session.user);
           }
@@ -63,13 +98,20 @@ export const AuthProvider = ({ children }) => {
           setIsAuthenticated(false);
           setUser(null);
         }
-        
-        // Ensure loading is off if it was somehow still on
         setIsLoadingAuth(false);
       });
 
+      // 4. Listen for deep links while app is open
+      let urlListener;
+      if (Capacitor.isNativePlatform()) {
+        urlListener = CapApp.addListener('appUrlOpen', (event) => {
+          handleDeepLink(event.url);
+        });
+      }
+
       return () => {
         subscription.unsubscribe();
+        if (urlListener) urlListener.remove();
       };
     }
 

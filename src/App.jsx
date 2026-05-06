@@ -108,96 +108,11 @@ const AuthenticatedApp = () => {
 };
 
 function AppContent() {
-  const [isProcessingDeepLink, setIsProcessingDeepLink] = useState(false);
-  const { isAuthenticated } = useAuth();
-
-  useEffect(() => {
-    const handleDeepLink = async (url) => {
-      if (!url) return;
-      
-      // Small delay to ensure app is fully hydrated
-      if (Capacitor.isNativePlatform()) {
-        await new Promise(r => setTimeout(r, 1000));
-        alert('Deep Link Received: ' + url);
-      }
-      
-      const hasCode = url.includes('code=');
-      const hasTokens = url.includes('access_token=');
-      
-      if (!hasCode && !hasTokens) return;
-
-      console.log('[DeepLink] Auth redirect detected');
-      setIsProcessingDeepLink(true);
-      
-      try {
-        const getParam = (name) => {
-          const regex = new RegExp(`[#?&]${name}=([^&]+)`);
-          const match = url.match(regex);
-          return match ? match[1] : null;
-        };
-
-        if (hasCode) {
-          const code = getParam('code');
-          if (code) {
-            if (Capacitor.isNativePlatform()) alert('Exchanging Code...');
-            const { error } = await supabase.auth.exchangeCodeForSession(code);
-            if (error) throw error;
-            if (Capacitor.isNativePlatform()) alert('Login Success (Code)!');
-            window.location.hash = '/';
-          }
-        } else if (hasTokens) {
-          const access_token = getParam('access_token');
-          const refresh_token = getParam('refresh_token');
-          
-          if (access_token) {
-            if (Capacitor.isNativePlatform()) alert('Setting Session...');
-            const { error } = await supabase.auth.setSession({ 
-              access_token, 
-              refresh_token: refresh_token || '' 
-            });
-            if (error) throw error;
-            if (Capacitor.isNativePlatform()) alert('Login Success (Token)!');
-            window.location.hash = '/';
-          }
-        }
-        // Safety timeout in case AuthContext never updates
-        setTimeout(() => setIsProcessingDeepLink(false), 5000);
-      } catch (err) {
-        console.error('[DeepLink] Error:', err);
-        if (Capacitor.isNativePlatform()) {
-          const errMsg = err.message || err.error_description || JSON.stringify(err);
-          alert('Login Error: ' + errMsg);
-        }
-        setIsProcessingDeepLink(false);
-      }
-    };
-
-    // Cold Start
-    CapApp.getLaunchUrl().then(res => {
-      if (res?.url) handleDeepLink(res.url);
-    });
-    
-    // Warm Start
-    const listener = CapApp.addListener('appUrlOpen', (event) => {
-      handleDeepLink(event.url);
-    });
-
-    return () => {
-      listener.remove();
-    };
-  }, []);
-
-  // Synchronize: if we were processing a deep link and we are now authenticated, we can stop loading
-  useEffect(() => {
-    if (isProcessingDeepLink && isAuthenticated) {
-      console.log('[DeepLink] Authenticated! Hiding loader.');
-      setIsProcessingDeepLink(false);
-    }
-  }, [isAuthenticated, isProcessingDeepLink]);
+  const { isAuthenticated, isLoadingAuth } = useAuth();
 
   return (
     <Router>
-      {isProcessingDeepLink ? (
+      {isLoadingAuth && !isAuthenticated ? (
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-[9999]">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
