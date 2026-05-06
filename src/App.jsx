@@ -38,6 +38,7 @@ import Formulas from './pages/Formulas';
 import Referral from './pages/Referral';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
+import LoginCallback from './pages/LoginCallback';
 
 const AuthenticatedApp = () => {
   const { authError, isAuthenticated } = useAuth();
@@ -55,6 +56,7 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/login-callback" element={<LoginCallback />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="*" element={<Navigate to="/landing" replace />} />
       </Routes>
@@ -88,6 +90,7 @@ const AuthenticatedApp = () => {
         <Route path="/landing-preview" element={<Landing preview={true} />} />
         <Route path="/referral" element={<Referral />} />
       </Route>
+      <Route path="/login-callback" element={<LoginCallback />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/landing" element={<Landing />} />

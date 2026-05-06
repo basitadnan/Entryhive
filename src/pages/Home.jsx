@@ -11,6 +11,13 @@ import { sounds } from '@/lib/sounds';
 export default function Home() {
   const { user } = useOutletContext();
   const navigate = useNavigate();
+  const [isReady, setIsReady] = React.useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsReady(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
   const { containerProps: statsContainer, itemVariants: statsItem } = useStaggerReveal({ stagger: 0.05 });
   const { containerProps: featuresContainer, itemVariants: featuresItem } = useStaggerReveal({ stagger: 0.06 });
   const { motionProps: headerReveal } = useScrollReveal();
@@ -18,12 +25,14 @@ export default function Home() {
 
   const { data: practiceSessions = [] } = useQuery({
     queryKey: ['practice-sessions'],
-    queryFn: () => base44.entities.PracticeSession.filter({ user_email: user?.email, completed: true })
+    queryFn: () => base44.entities.PracticeSession.filter({ user_email: user?.email, completed: true }),
+    enabled: isReady && !!user?.email
   });
 
   const { data: mockTests = [] } = useQuery({
     queryKey: ['mock-tests'],
-    queryFn: () => base44.entities.MockTestResult.filter({ user_email: user?.email, completed: true })
+    queryFn: () => base44.entities.MockTestResult.filter({ user_email: user?.email, completed: true }),
+    enabled: isReady && !!user?.email
   });
 
   const totalTests = practiceSessions.length + mockTests.length;
