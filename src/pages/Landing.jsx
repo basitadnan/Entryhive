@@ -5,6 +5,7 @@ import { Capacitor } from '@capacitor/core';
 import { ChevronRight, BookOpen, Target, TrendingUp, Zap, Award, Users, Shield, Sparkles, Crown, Layers, Calendar, CheckSquare, MessageSquare, Trophy, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { sounds } from '@/lib/sounds';
+import { useAuth } from '@/lib/AuthContext';
 
 const WORDS = ['Score Higher', 'Crack NAT-I', 'Study Smarter', 'Ace Your Exam', 'Beat the Competition'];
 
@@ -54,6 +55,13 @@ export default function Landing({ preview = false }) {
   const navigate = useNavigate();
 
   const isElectron = /electron/i.test(navigator.userAgent) || window.location.protocol === 'file:';
+
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    // If we're logged in, get away from here!
+    if (isAuthenticated) navigate('/');
+  }, [isAuthenticated, navigate]);
 
   useEffect(() => {
     const id = setInterval(() => setWordIndex(p => (p + 1) % WORDS.length), 2500);

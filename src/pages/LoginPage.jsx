@@ -9,8 +9,12 @@ import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 
 export default function LoginPage() {
-  const { loginWithPassword, loginWithGoogle } = useAuth();
+  const { loginWithPassword, loginWithGoogle, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) navigate('/');
+  }, [isAuthenticated, navigate]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);

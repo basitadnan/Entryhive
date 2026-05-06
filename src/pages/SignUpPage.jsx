@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '@/lib/AuthContext';
 import { Card } from '@/components/ui/card';
@@ -9,8 +9,12 @@ import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 
 export default function SignUpPage() {
-  const { signUp, loginWithGoogle } = useAuth();
+  const { signUp, loginWithGoogle, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) navigate('/');
+  }, [isAuthenticated, navigate]);
   const [form, setForm] = useState({ fullName: '', email: '', password: '', confirmPassword: '' });
   const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
