@@ -86,27 +86,14 @@ export default function AppHeader({ user }) {
     queryClient.invalidateQueries({ queryKey: ['notifications'] });
   };
 
-  // Push Notification Registration
+  // Push Notification Registration - DISABLED to prevent Android crashes
   React.useEffect(() => {
+    // Disabled as requested by user
+    /*
     if (Capacitor.isNativePlatform()) {
-      // Delaying to avoid conflict with Browser close and initial data fetch
-      const timer = setTimeout(() => {
-        PushNotifications.requestPermissions().then(result => {
-          if (result.receive === 'granted') {
-            PushNotifications.register();
-          }
-        });
-      }, 4000);
-
-      const regListener = PushNotifications.addListener('registration', (token) => {
-        console.log('Push token:', token.value);
-      });
-
-      return () => {
-        clearTimeout(timer);
-        regListener.remove();
-      };
+      // ...
     }
+    */
   }, []);
 
   const allItems = isAdmin ? [...NAV_ITEMS, { label: 'Admin Panel', icon: Shield, path: '/admin' }] : NAV_ITEMS;

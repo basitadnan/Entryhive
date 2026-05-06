@@ -1,8 +1,20 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginCallback() {
+  const navigate = useNavigate();
+
   useEffect(() => {
+    const checkHash = async () => {
+      const hash = window.location.hash;
+      if (hash.includes('access_token=') || hash.includes('code=')) {
+        // AuthContext handles the heavy lifting, but we can show a status
+        console.log('[LoginCallback] Detected auth token in hash');
+      }
+    };
+    checkHash();
+
     const isNative = typeof window !== 'undefined' && (window.Capacitor?.isNativePlatform?.() || window.location.protocol === 'file:');
     const isElectron = typeof window !== 'undefined' && (window.electronAPI || window.process?.versions?.electron);
     const hash = window.location.hash;

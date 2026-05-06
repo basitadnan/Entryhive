@@ -53,7 +53,11 @@ if (!gotTheLock) {
       // Find the URL argument on Windows
       const url = commandLine.find(arg => arg.startsWith('natprep://'));
       if (url) {
-        mainWindow.webContents.send('deep-link', url);
+        console.log('[Electron] Forwarding deep link:', url);
+        // Small delay to ensure the renderer is ready
+        setTimeout(() => {
+          mainWindow.webContents.send('deep-link', url);
+        }, 500);
       }
     }
   });
@@ -64,10 +68,11 @@ if (!gotTheLock) {
     // Check for cold start URL on Windows
     const url = process.argv.find(arg => arg.startsWith('natprep://'));
     if (url && mainWindow) {
+      console.log('[Electron] Cold start deep link:', url);
       // Give it a moment to load the page before sending the deep link
       setTimeout(() => {
         mainWindow.webContents.send('deep-link', url);
-      }, 1500);
+      }, 2500);
     }
   });
 }

@@ -25,19 +25,22 @@ export const AuthProvider = ({ children }) => {
     
     const handleUrl = async (url) => {
       if (!url || !isMounted) return false;
+      console.log('[Auth] Handling URL:', url);
+      
       const hasToken = url.includes('access_token=') || url.includes('code=');
       if (!hasToken) return false;
+
+      const getParam = (name) => {
+        // Robust regex to handle both fragment and query params, with or without slashes
+        const regex = new RegExp(`[#?&]${name}=([^&]+)`);
+        const match = url.match(regex);
+        return match ? match[1] : null;
+      };
 
       try {
         processingLinkRef.current = true;
         setIsLoadingAuth(true);
         
-        const getParam = (name) => {
-          const regex = new RegExp(`[#?&]${name}=([^&]+)`);
-          const match = url.match(regex);
-          return match ? match[1] : null;
-        };
-
         let session = null;
         if (url.includes('code=')) {
           const { data, error } = await supabase.auth.exchangeCodeForSession(getParam('code'));
@@ -62,7 +65,12 @@ export const AuthProvider = ({ children }) => {
           setUser(session.user);
           setIsAuthenticated(true);
           
-          // 3. Safe browser close (Delayed to avoid native bridge congestion)
+          // 4. Force navigation to home to "unlock" the app immediately
+          if (typeof window !== 'undefined') {
+            window.location.hash = '/';
+          }
+
+          // 5. Safe browser close (Delayed to avoid native bridge congestion)
           if (Capacitor.isNativePlatform()) {
             setTimeout(async () => {
               try {
@@ -94,6 +102,11 @@ export const AuthProvider = ({ children }) => {
         if (Capacitor.isNativePlatform()) {
           const res = await CapApp.getLaunchUrl();
           if (res?.url) handled = await handleUrl(res.url);
+        }
+
+        // Check current URL hash (Critical for Windows/Web cold starts)
+        if (!handled && typeof window !== 'undefined' && window.location.hash) {
+          handled = await handleUrl(window.location.href);
         }
 
         if (!handled) {
