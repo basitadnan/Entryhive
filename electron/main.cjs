@@ -39,6 +39,28 @@ function createWindow() {
   } else {
     mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
   }
+
+  // NUCLEAR FIX: Block any internal navigation to external sites
+  // This ensures Google/Supabase URLs ALWAYS open in the system browser
+  const handleNavigation = (event, url) => {
+    // Only allow the local app or dev server
+    const isLocal = url.startsWith('http://127.0.0.1:5173') || 
+                    url.startsWith('http://localhost:5173') || 
+                    url.startsWith('file://') ||
+                    url.includes('index.html');
+                    
+    if (!isLocal) {
+      event.preventDefault();
+      shell.openExternal(url);
+      console.log('[Electron] Blocked internal navigation to:', url);
+    }
+  };
+
+  mainWindow.webContents.on('will-navigate', handleNavigation);
+  mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+    shell.openExternal(url);
+    return { action: 'deny' };
+  });
 }
 
 // Single instance lock

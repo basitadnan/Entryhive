@@ -16,13 +16,17 @@ export default function LoginCallback() {
     checkHash();
 
     const isNative = typeof window !== 'undefined' && (window.Capacitor?.isNativePlatform?.() || window.location.protocol === 'file:');
-    const isElectron = typeof window !== 'undefined' && (window.electronAPI || window.process?.versions?.electron);
+    const isElectron = typeof window !== 'undefined' && (
+      window.electronAPI || 
+      (window.process && window.process.versions && window.process.versions.electron) ||
+      navigator.userAgent.toLowerCase().includes('electron')
+    );
     const hash = window.location.hash;
 
     if (hash) {
       if (isNative || isElectron) {
         // If we are ALREADY in the app, the AuthContext will handle the hash.
-        console.log("LoginCallback: Already in app, letting AuthContext handle it.");
+        console.log("LoginCallback: Inside app context, letting AuthContext handle token.");
       } else {
         // We are on the WEB (Vercel), try to open the native app
         window.location.href = `natprep://login-callback${hash}`;
