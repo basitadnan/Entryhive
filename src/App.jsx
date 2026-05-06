@@ -106,27 +106,21 @@ const AuthenticatedApp = () => {
   );
 };
 
-function App() {
+function AppContent() {
   const [isProcessingDeepLink, setIsProcessingDeepLink] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
-      // Check if it's an auth redirect
       const hasTokens = url.includes('access_token=') && url.includes('refresh_token=');
       if (!hasTokens) return;
 
       console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
       
-      // Safety timeout: force hide loading after 7 seconds max
-      const forceHide = setTimeout(() => {
-        setIsProcessingDeepLink(false);
-      }, 7000);
-      
       try {
-        // Robust token extraction
         const getParam = (name) => {
           const regex = new RegExp(`[#?&]${name}=([^&]+)`);
           const match = url.match(regex);
@@ -142,21 +136,22 @@ function App() {
           
           if (error) {
             console.error('[DeepLink] Supabase Error:', error.message);
+            setIsProcessingDeepLink(false);
           } else {
-            console.log('[DeepLink] Session success!');
+            console.log('[DeepLink] Session set, waiting for AuthContext...');
+            // We don't set isProcessingDeepLink(false) here. 
+            // We let the useEffect below handle it when isAuthenticated becomes true.
             window.location.hash = '/';
+            
+            // Safety timeout in case AuthContext never updates
+            setTimeout(() => setIsProcessingDeepLink(false), 5000);
           }
         } else {
-          console.warn('[DeepLink] Tokens missing in URL');
+          setIsProcessingDeepLink(false);
         }
       } catch (err) {
         console.error('[DeepLink] Fatal Error:', err);
-      } finally {
-        // Short delay to let React states settle
-        setTimeout(() => {
-          clearTimeout(forceHide);
-          setIsProcessingDeepLink(false);
-        }, 1500);
+        setIsProcessingDeepLink(false);
       }
     };
 
@@ -175,21 +170,35 @@ function App() {
     };
   }, []);
 
+  // Synchronize: if we were processing a deep link and we are now authenticated, we can stop loading
+  useEffect(() => {
+    if (isProcessingDeepLink && isAuthenticated) {
+      console.log('[DeepLink] Authenticated! Hiding loader.');
+      setIsProcessingDeepLink(false);
+    }
+  }, [isAuthenticated, isProcessingDeepLink]);
+
+  return (
+    <Router>
+      {isProcessingDeepLink ? (
+        <div className="fixed inset-0 flex items-center justify-center bg-background">
+          <div className="text-center">
+            <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-3"></div>
+            <p className="text-sm text-muted-foreground">Finalizing Login...</p>
+          </div>
+        </div>
+      ) : (
+        <AuthenticatedApp />
+      )}
+    </Router>
+  );
+}
+
+function App() {
   return (
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
-        <Router>
-          {isProcessingDeepLink ? (
-            <div className="fixed inset-0 flex items-center justify-center bg-background">
-              <div className="text-center">
-                <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-3"></div>
-                <p className="text-sm text-muted-foreground">Finalizing Login...</p>
-              </div>
-            </div>
-          ) : (
-            <AuthenticatedApp />
-          )}
-        </Router>
+        <AppContent />
         <Toaster />
         <SonnerToaster />
         <Analytics />
@@ -197,5 +206,7 @@ function App() {
     </AuthProvider>
   )
 }
+
+export default App
 
 export default App
