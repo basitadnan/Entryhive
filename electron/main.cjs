@@ -28,8 +28,9 @@ function createWindow() {
 
   if (isDev) {
     const loadDevServer = () => {
-      mainWindow.loadURL('http://127.0.0.1:5174').catch(() => {
-        console.log('Dev server not ready yet, retrying in 1s...');
+      // LOCKED to 5173 for consistency
+      mainWindow.loadURL('http://127.0.0.1:5173').catch(() => {
+        console.log('Dev server at 5173 not ready, retrying...');
         setTimeout(loadDevServer, 1000);
       });
     };

@@ -8,6 +8,10 @@ export default defineConfig({
     react(),
   ],
   base: './',
+  server: {
+    port: 5173,
+    strictPort: true,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
