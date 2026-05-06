@@ -35,12 +35,27 @@ export const AuthProvider = ({ children }) => {
 
         if (hasCode) {
           const code = getParam('code');
-          if (code) await supabase.auth.exchangeCodeForSession(code);
+          if (code) {
+            const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+            if (error) throw error;
+            if (data.session?.user && isMounted) {
+              setIsAuthenticated(true);
+              setUser(data.session.user);
+            }
+          }
         } else if (hasTokens) {
           const access_token = getParam('access_token');
           const refresh_token = getParam('refresh_token');
           if (access_token) {
-            await supabase.auth.setSession({ access_token, refresh_token: refresh_token || '' });
+            const { data, error } = await supabase.auth.setSession({ 
+              access_token, 
+              refresh_token: refresh_token || '' 
+            });
+            if (error) throw error;
+            if (data.session?.user && isMounted) {
+              setIsAuthenticated(true);
+              setUser(data.session.user);
+            }
           }
         }
         window.location.hash = '/';
