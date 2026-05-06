@@ -205,7 +205,7 @@ function AppContent() {
   );
 }
 
-// Main Application Component - Handles global state and routing
+// Main Application Component - Handles global state and routing (v1.0.1)
 function App() {
   return (
     <AuthProvider>
