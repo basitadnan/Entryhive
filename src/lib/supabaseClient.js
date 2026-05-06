@@ -7,6 +7,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: true, // Re-enable standard behavior
+    detectSessionInUrl: false, // We handle this manually in App.jsx to prevent race conditions
   }
 })

@@ -115,25 +115,16 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
-      // DEBUG ALERT (Remove after fix)
-      if (Capacitor.isNativePlatform()) {
-        alert('Deep Link Received: ' + url);
-      }
-      
       const hasCode = url.includes('code=');
       const hasTokens = url.includes('access_token=');
       
-      if (!hasCode && !hasTokens) {
-        console.log('[DeepLink] No auth tokens found in URL');
-        return;
-      }
+      if (!hasCode && !hasTokens) return;
 
       console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
       
       try {
         const getParam = (name) => {
-          // Flexible regex to find params in ?query or #hash
           const regex = new RegExp(`[#?&]${name}=([^&]+)`);
           const match = url.match(regex);
           return match ? match[1] : null;
@@ -141,36 +132,33 @@ function AppContent() {
 
         if (hasCode) {
           const code = getParam('code');
-          if (Capacitor.isNativePlatform()) alert('Parsed Code: ' + (code ? (code.substring(0, 10) + '...') : 'NULL'));
           if (code) {
-            console.log('[DeepLink] Exchanging code...');
             const { error } = await supabase.auth.exchangeCodeForSession(code);
             if (error) throw error;
-            if (Capacitor.isNativePlatform()) alert('Login Success (Code)!');
             window.location.hash = '/';
           }
         } else if (hasTokens) {
           const access_token = getParam('access_token');
           const refresh_token = getParam('refresh_token');
           
-          if (Capacitor.isNativePlatform()) {
-            alert('Parsed AT: ' + (access_token ? (access_token.substring(0, 10) + '...') : 'NULL') + 
-                  '\nParsed RT: ' + (refresh_token ? (refresh_token.substring(0, 10) + '...') : 'NULL'));
-          }
-
           if (access_token) {
-            console.log('[DeepLink] Setting session...');
             const { error } = await supabase.auth.setSession({ 
               access_token, 
               refresh_token: refresh_token || '' 
             });
             if (error) throw error;
-            if (Capacitor.isNativePlatform()) alert('Login Success (Token)!');
             window.location.hash = '/';
-          } else {
-            throw new Error('Access token found in URL but could not be parsed');
           }
         }
+      } catch (err) {
+        console.error('[DeepLink] Error:', err);
+        if (Capacitor.isNativePlatform()) {
+          const errMsg = err.message || err.error_description || JSON.stringify(err);
+          alert('Login Error: ' + errMsg);
+        }
+        setIsProcessingDeepLink(false);
+      }
+    };
         
         setTimeout(() => setIsProcessingDeepLink(false), 5000);
       } catch (err) {
