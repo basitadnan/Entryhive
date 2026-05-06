@@ -159,7 +159,7 @@ export default function Landing({ preview = false }) {
                   Android App <Zap className="w-4 h-4 fill-primary" />
                 </Button>
                 <Button 
-                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT%20Prep-Setup-0.0.0.exe', '_blank'); }}
+                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep-Setup.exe', '_blank'); }}
                   variant="outline"
                   className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
                 >
@@ -314,7 +314,7 @@ export default function Landing({ preview = false }) {
                 Download APK <ChevronRight className="w-5 h-5" />
               </Button>
               <Button 
-                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT%20Prep-Setup-0.0.0.exe', '_blank'); }}
+                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep-Setup.exe', '_blank'); }}
                 variant="outline"
                 className="h-14 px-8 text-lg font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
               >

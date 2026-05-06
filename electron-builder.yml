@@ -19,6 +19,6 @@ nsis:
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: "NAT Prep"
-  artifactName: "${productName}-Setup-${version}.${ext}"
+  artifactName: "NAT-Prep-Setup.exe"
   uninstallDisplayName: "NAT Prep"
   runAfterFinish: true
