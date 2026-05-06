@@ -107,25 +107,41 @@ const AuthenticatedApp = () => {
 };
 
 function App() {
+  const [isProcessingDeepLink, setIsProcessingDeepLink] = React.useState(false);
+
   useEffect(() => {
     const handleDeepLink = async (url) => {
       if (!url) return;
-      console.log('[DeepLink] Processing:', url);
       
-      const accessTokenMatch = url.match(/[#?&]access_token=([^&]+)/);
-      const refreshTokenMatch = url.match(/[#?&]refresh_token=([^&]+)/);
+      const isAuthRedirect = url.includes('access_token=') && url.includes('refresh_token=');
+      if (!isAuthRedirect) return;
+
+      console.log('[DeepLink] Auth redirect detected, processing...');
+      setIsProcessingDeepLink(true);
       
-      if (accessTokenMatch && refreshTokenMatch) {
-        const access_token = accessTokenMatch[1];
-        const refresh_token = refreshTokenMatch[1];
+      try {
+        const accessTokenMatch = url.match(/[#?&]access_token=([^&]+)/);
+        const refreshTokenMatch = url.match(/[#?&]refresh_token=([^&]+)/);
         
-        const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-        if (!error) {
-          console.log('[DeepLink] Session established');
-          window.location.hash = '/';
-        } else {
-          console.error('[DeepLink] Error:', error.message);
+        if (accessTokenMatch && refreshTokenMatch) {
+          const access_token = accessTokenMatch[1];
+          const refresh_token = refreshTokenMatch[1];
+          
+          const { error } = await supabase.auth.setSession({ access_token, refresh_token });
+          if (!error) {
+            console.log('[DeepLink] Session established successfully');
+            window.location.hash = '/';
+          } else {
+            console.error('[DeepLink] Supabase Error:', error.message);
+          }
         }
+      } catch (err) {
+        console.error('[DeepLink] Fatal Error:', err);
+      } finally {
+        // Give the AuthContext a moment to pick up the change
+        setTimeout(() => {
+          setIsProcessingDeepLink(false);
+        }, 1000);
       }
     };
 
@@ -144,7 +160,16 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
-          <AuthenticatedApp />
+          {isProcessingDeepLink ? (
+            <div className="fixed inset-0 flex items-center justify-center bg-background">
+              <div className="text-center">
+                <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">Finalizing Login...</p>
+              </div>
+            </div>
+          ) : (
+            <AuthenticatedApp />
+          )}
         </Router>
         <Toaster />
         <SonnerToaster />
