@@ -29,6 +29,8 @@ export const AuthProvider = ({ children }) => {
 
     const handleDeepLink = async (url) => {
       if (!url || !isMounted) return;
+      if (Capacitor.isNativePlatform()) console.log('[Auth] Deep Link:', url);
+
       const hasCode = url.includes('code=');
       const hasTokens = url.includes('access_token=');
       if (!hasCode && !hasTokens) return;
@@ -41,15 +43,13 @@ export const AuthProvider = ({ children }) => {
           return match ? match[1] : null;
         };
 
+        let session = null;
         if (hasCode) {
           const code = getParam('code');
           if (code) {
             const { data, error } = await supabase.auth.exchangeCodeForSession(code);
             if (error) throw error;
-            if (data.session?.user && isMounted) {
-              setIsAuthenticated(true);
-              setUser(data.session.user);
-            }
+            session = data.session;
           }
         } else if (hasTokens) {
           const access_token = getParam('access_token');
@@ -60,20 +60,30 @@ export const AuthProvider = ({ children }) => {
               refresh_token: refresh_token || '' 
             });
             if (error) throw error;
-            if (data.session?.user && isMounted) {
-              setIsAuthenticated(true);
-              setUser(data.session.user);
-            }
+            session = data.session;
           }
         }
-        window.location.hash = '/';
+
+        if (session?.user && isMounted) {
+          // BRUTE FORCE SYNC: Set everything at once
+          setUser(session.user);
+          setIsAuthenticated(true);
+          setIsLoadingAuth(false);
+          console.log('[Auth] Brute force sync success');
+          
+          // Force navigate to dashboard
+          window.location.hash = '/';
+          
+          // Background profile fetch
+          base44.auth.me().then(p => isMounted && p && setUser(p));
+        }
       } catch (err) {
         console.error('[Auth Deep Link Error]', err);
-        if (Capacitor.isNativePlatform()) alert('Login failed: ' + (err.message || 'Error'));
+        if (Capacitor.isNativePlatform()) alert('Login error: ' + (err.message || 'Check connection'));
       } finally {
         if (isMounted) {
-          setIsLoadingAuth(false);
-          clearTimeout(safetyTimeout);
+          // Delay turning off loader just a bit to ensure UI catchup
+          setTimeout(() => { if (isMounted) setIsLoadingAuth(false); }, 1000);
         }
       }
     };
