@@ -115,16 +115,25 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
-      const hasCode = url.includes('code=');
-      const hasTokens = url.includes('access_token=') && url.includes('refresh_token=');
+      // DEBUG ALERT (Remove after fix)
+      if (Capacitor.isNativePlatform()) {
+        alert('Deep Link Received: ' + url);
+      }
       
-      if (!hasCode && !hasTokens) return;
+      const hasCode = url.includes('code=');
+      const hasTokens = url.includes('access_token=');
+      
+      if (!hasCode && !hasTokens) {
+        console.log('[DeepLink] No auth tokens found in URL');
+        return;
+      }
 
       console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
       
       try {
         const getParam = (name) => {
+          // Flexible regex to find params in ?query or #hash
           const regex = new RegExp(`[#?&]${name}=([^&]+)`);
           const match = url.match(regex);
           return match ? match[1] : null;
