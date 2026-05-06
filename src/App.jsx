@@ -10,6 +10,7 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import { App as CapApp } from '@capacitor/app';
 import { supabase } from '@/lib/supabaseClient';
 import { Analytics } from "@vercel/analytics/react";
+import { motion } from 'framer-motion';
 
 import Landing from './pages/Landing';
 import AppLayout from './components/Layout/AppLayout';
@@ -181,11 +182,21 @@ function AppContent() {
   return (
     <Router>
       {isProcessingDeepLink ? (
-        <div className="fixed inset-0 flex items-center justify-center bg-background">
-          <div className="text-center">
-            <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-3"></div>
-            <p className="text-sm text-muted-foreground">Finalizing Login...</p>
-          </div>
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-[9999]">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="text-center"
+          >
+            <div className="relative mb-6">
+              <div className="w-16 h-16 border-4 border-primary/20 border-t-primary rounded-full animate-spin mx-auto"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              </div>
+            </div>
+            <h2 className="text-xl font-semibold mb-2">Setting everything up</h2>
+            <p className="text-muted-foreground animate-pulse">Please wait while we prepare your dashboard...</p>
+          </motion.div>
         </div>
       ) : (
         <AuthenticatedApp />
