@@ -1,16 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '@/App.jsx'
-import '@/index.css'
-import { supabase } from './lib/supabaseClient';
+import App from './App.jsx'
+import './index.css'
 import { Capacitor } from '@capacitor/core';
 
-// Disable the buggy Web Locks API on native platforms to prevent the "lock stole" error
+// Ghostbuster: Disable Web Locks API on Android to prevent "lock stole" crashes
 if (typeof window !== 'undefined' && Capacitor.isNativePlatform() && navigator.locks) {
   delete navigator.locks;
-  console.log('[System] Web Locks API disabled for stability');
+}
+
+// Traffic Controller: Fix HashRouter conflicts with Google OAuth tokens
+if (typeof window !== 'undefined' && window.location.hash) {
+  const hash = window.location.hash;
+  if (hash.includes('access_token=') && !hash.startsWith('#/')) {
+    // Reformat the hash so HashRouter doesn't see it as a broken page path
+    window.location.hash = '/' + hash.substring(1);
+  }
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <App />
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 )
