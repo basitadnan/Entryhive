@@ -140,10 +140,12 @@ export const AuthProvider = ({ children }) => {
         });
       }
 
-      // 5. Listen for deep links (Windows Desktop)
-      if (typeof window !== 'undefined' && window.process?.versions?.electron) {
-        // Electron-specific deep link handling if needed
-        // For now, we rely on the redirect handling
+      // 5. Listen for deep links (Windows/Mac Desktop)
+      if (typeof window !== 'undefined' && window.electronAPI) {
+        window.electronAPI.onDeepLink((url) => {
+          console.log('[Auth] Electron Deep Link Received:', url);
+          handleDeepLink(url);
+        });
       }
 
       return () => {
