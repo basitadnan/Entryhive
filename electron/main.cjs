@@ -64,3 +64,8 @@ app.on('open-url', (event, url) => {
   event.preventDefault();
   if (mainWindow) mainWindow.webContents.send('deep-link', url);
 });
+
+const { ipcMain } = require('electron');
+ipcMain.on('open-external', (event, url) => {
+  shell.openExternal(url);
+});

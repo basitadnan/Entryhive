@@ -16,7 +16,8 @@ export const AuthProvider = ({ children }) => {
 
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
-  const [isProcessingLink, setIsProcessingLink] = useState(false);
+  // Use a Ref for processing state to avoid triggering the boot useEffect loop
+  const processingLinkRef = useRef(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -27,7 +28,7 @@ export const AuthProvider = ({ children }) => {
       if (!hasToken) return false;
 
       try {
-        setIsProcessingLink(true);
+        processingLinkRef.current = true;
         setIsLoadingAuth(true);
         
         const getParam = (name) => {
@@ -59,7 +60,10 @@ export const AuthProvider = ({ children }) => {
       } catch (e) {
         console.error('[Auth Deep Link Error]', e);
       } finally {
-        if (isMounted) setIsProcessingLink(false);
+        if (isMounted) {
+          processingLinkRef.current = false;
+          setIsLoadingAuth(false);
+        }
       }
       return false;
     };
@@ -88,7 +92,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-        if (!isMounted || isProcessingLink) return; // QUIET GUARD: Don't interrupt deep link processing
+        if (!isMounted || processingLinkRef.current) return; 
         if (session?.user) {
           setIsAuthenticated(true);
           setUser(session.user);
@@ -119,7 +123,7 @@ export const AuthProvider = ({ children }) => {
 
     bootSequence();
     return () => { isMounted = false; };
-  }, [isProcessingLink]);
+  }, []); // EMPTY dependency array - CRITICAL to stop the crash loop
 
   const logout = async (shouldRedirect = true) => {
     setIsAuthenticated(false);
@@ -139,25 +143,37 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithGoogle = async () => {
     const isNative = Capacitor.isNativePlatform();
-    const isElectron = typeof window !== 'undefined' && (window.process?.versions?.electron || navigator.userAgent.includes('Electron'));
+    const isElectron = typeof window !== 'undefined' && (window.electronAPI || window.process?.versions?.electron || navigator.userAgent.includes('Electron'));
     const isDev = window.location.hostname === 'localhost';
     
-    // For Dev Electron, use localhost; For Prod Electron/Mobile, use natprep://
-    const redirectTo = (isNative || (isElectron && !isDev)) ? 'natprep://login-callback' : window.location.origin;
-
-    console.log('[Auth] Starting Google login with redirectTo:', redirectTo);
+    let targetRedirect = 'https://natprep.vercel.app/login-callback';
+    if (isNative || isElectron) {
+      targetRedirect = 'natprep://login-callback';
+    } else if (isDev) {
+      targetRedirect = window.location.origin + '/login-callback';
+    }
 
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo,
-        queryParams: { 
-          access_type: 'offline', 
-          prompt: 'consent'
-        }
+        redirectTo: targetRedirect,
+        queryParams: { prompt: 'select_account' }
       }
     });
-    return { data, error };
+
+    if (error) {
+      console.error(error.message);
+      return;
+    }
+
+    if (data?.url) {
+      if (isElectron && window.electronAPI?.openExternal) {
+        // For Windows Desktop, open in REAL browser to avoid white screen/security blocks
+        window.electronAPI.openExternal(data.url);
+      } else {
+        window.location.href = data.url;
+      }
+    }
   };
 
   const navigateToLogin = () => { base44.auth.redirectToLogin(); };
