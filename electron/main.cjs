@@ -27,10 +27,13 @@ function createWindow() {
   mainWindow.setMenu(null);
 
   if (isDev) {
-    // If you are seeing a white screen, make sure 'npm run dev' is running on port 5173
-    mainWindow.loadURL('http://localhost:5173').catch(() => {
-      console.error('Failed to load localhost:5173. Is the dev server running?');
-    });
+    const loadDevServer = () => {
+      mainWindow.loadURL('http://127.0.0.1:5174').catch(() => {
+        console.log('Dev server not ready yet, retrying in 1s...');
+        setTimeout(loadDevServer, 1000);
+      });
+    };
+    loadDevServer();
   } else {
     mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
   }
