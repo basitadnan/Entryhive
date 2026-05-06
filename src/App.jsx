@@ -115,6 +115,10 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
+      if (Capacitor.isNativePlatform()) {
+        alert('Deep Link Received: ' + url);
+      }
+      
       const hasCode = url.includes('code=');
       const hasTokens = url.includes('access_token=');
       
@@ -133,8 +137,10 @@ function AppContent() {
         if (hasCode) {
           const code = getParam('code');
           if (code) {
+            if (Capacitor.isNativePlatform()) alert('Exchanging Code...');
             const { error } = await supabase.auth.exchangeCodeForSession(code);
             if (error) throw error;
+            if (Capacitor.isNativePlatform()) alert('Login Success (Code)!');
             window.location.hash = '/';
           }
         } else if (hasTokens) {
@@ -142,11 +148,13 @@ function AppContent() {
           const refresh_token = getParam('refresh_token');
           
           if (access_token) {
+            if (Capacitor.isNativePlatform()) alert('Setting Session...');
             const { error } = await supabase.auth.setSession({ 
               access_token, 
               refresh_token: refresh_token || '' 
             });
             if (error) throw error;
+            if (Capacitor.isNativePlatform()) alert('Login Success (Token)!');
             window.location.hash = '/';
           }
         }

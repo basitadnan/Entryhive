@@ -7,6 +7,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: false, // We handle this manually in App.jsx to prevent race conditions
+    detectSessionInUrl: true, // Re-enabling to see if it helps the session stick
   }
 })
