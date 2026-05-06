@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useEffect, useRef } from 'react';
+import { Browser } from '@capacitor/browser';
 import { supabase } from '@/lib/supabaseClient';
 import { base44 } from '@/lib/dbClient';
 import { Capacitor } from '@capacitor/core';
@@ -54,6 +55,12 @@ export const AuthProvider = ({ children }) => {
         if (session?.user && isMounted) {
           setUser(session.user);
           setIsAuthenticated(true);
+          
+          // CRITICAL: Close the ghost browser on mobile
+          if (Capacitor.isNativePlatform()) {
+            await Browser.close();
+          }
+          
           window.location.hash = '/';
           return true;
         }
@@ -168,8 +175,10 @@ export const AuthProvider = ({ children }) => {
 
     if (data?.url) {
       if (isElectron && window.electronAPI?.openExternal) {
-        // For Windows Desktop, open in REAL browser to avoid white screen/security blocks
         window.electronAPI.openExternal(data.url);
+      } else if (isNative) {
+        // Use Capacitor Browser for mobile to allow auto-closing
+        await Browser.open({ url: data.url, windowName: '_blank' });
       } else {
         window.location.href = data.url;
       }

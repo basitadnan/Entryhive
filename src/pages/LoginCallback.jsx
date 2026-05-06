@@ -3,16 +3,28 @@ import { motion } from 'framer-motion';
 
 export default function LoginCallback() {
   useEffect(() => {
-    // This page only exists to hand off the login from the browser to the app
+    const isNative = typeof window !== 'undefined' && (window.Capacitor?.isNativePlatform?.() || window.location.protocol === 'file:');
+    const isElectron = typeof window !== 'undefined' && (window.electronAPI || window.process?.versions?.electron);
     const hash = window.location.hash;
+
     if (hash) {
-      // 1. Try to open the mobile app
-      window.location.href = `natprep://login-callback${hash}`;
-      
-      // 2. Fallback: if they are on the web, just go to the dashboard
-      setTimeout(() => {
-        window.location.href = `/#/${hash}`;
-      }, 2000);
+      if (isNative || isElectron) {
+        // If we are ALREADY in the app, the AuthContext will handle the hash.
+        console.log("LoginCallback: Already in app, letting AuthContext handle it.");
+        
+        const timer = setTimeout(() => {
+          window.location.hash = '/';
+        }, 2000);
+        return () => clearTimeout(timer);
+      } else {
+        // We are on the WEB (Vercel), try to open the native app
+        window.location.href = `natprep://login-callback${hash}`;
+        
+        const timer = setTimeout(() => {
+          window.location.hash = `/`;
+        }, 2500);
+        return () => clearTimeout(timer);
+      }
     }
   }, []);
 
