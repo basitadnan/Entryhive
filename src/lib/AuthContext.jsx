@@ -12,75 +12,72 @@ export const AuthProvider = ({ children }) => {
   const [isLoadingPublicSettings] = useState(false);
   const [authError] = useState(null);
   const [appPublicSettings] = useState({});
-  const initRef = useRef(false);
 
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
   useEffect(() => {
-    if (isPlaceholder) {
-      const saved = localStorage.getItem('nat_mock_user');
-      if (saved) {
-        setUser(JSON.parse(saved));
-        setIsAuthenticated(true);
-      }
-      setIsLoadingAuth(false);
-      return;
-    }
-
     let isMounted = true;
 
-    // Fail-safe: Force hide loading after 10 seconds
-    const failSafe = setTimeout(() => {
-      if (isMounted && isLoadingAuth) {
-        console.warn('[Auth] Fail-safe triggered');
+    async function init() {
+      if (isPlaceholder) {
+        const saved = localStorage.getItem('nat_mock_user');
+        if (saved) {
+          setUser(JSON.parse(saved));
+          setIsAuthenticated(true);
+        }
         setIsLoadingAuth(false);
+        return;
       }
-    }, 10000);
 
-    const handleAuthChange = async (event, session) => {
-      console.log(`[Auth Event] ${event}`, { 
-        hasUser: !!session?.user, 
-        email: session?.user?.email,
-        currentPath: window.location.hash
+      try {
+        // 1. Get initial session immediately
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user) {
+          setIsAuthenticated(true);
+          setUser(session.user);
+          // Background fetch profile
+          base44.auth.me().then(merged => {
+            if (isMounted && merged) setUser(merged);
+          }).catch(e => console.error('[Auth Profile Error]', e));
+        }
+      } catch (e) {
+        console.error('[Auth Init Error]', e);
+      } finally {
+        if (isMounted) setIsLoadingAuth(false);
+      }
+
+      // 2. Listen for changes
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+        if (!isMounted) return;
+        console.log('[Auth Event]', event, !!session);
+
+        if (session?.user) {
+          setIsAuthenticated(true);
+          if (event === 'SIGNED_IN') {
+             const merged = await base44.auth.me();
+             if (isMounted) setUser(merged || session.user);
+          } else {
+             setUser(session.user);
+          }
+        } else {
+          setIsAuthenticated(false);
+          setUser(null);
+        }
+        
+        // Ensure loading is off if it was somehow still on
+        setIsLoadingAuth(false);
       });
 
-      if (session?.user) {
-        console.log('[Auth] Valid session found, setting isAuthenticated=true');
-        setIsAuthenticated(true);
-        
-        try {
-          console.log('[Auth] Fetching full profile...');
-          const mergedUser = await base44.auth.me();
-          if (isMounted && mergedUser) {
-            console.log('[Auth] Profile fetched successfully');
-            setUser(mergedUser);
-          }
-        } catch (e) {
-          console.error('[Auth] Profile fetch failed', e);
-          if (isMounted) setUser(session.user);
-        }
-      } else {
-        console.log('[Auth] No session found');
-        if (isMounted) {
-          setUser(null);
-          setIsAuthenticated(false);
-        }
-      }
+      return () => {
+        subscription.unsubscribe();
+      };
+    }
 
-      if (isMounted && (event === 'INITIAL_SESSION' || !initRef.current)) {
-        console.log('[Auth] Initial check complete, hiding loading screen');
-        initRef.current = true;
-        setIsLoadingAuth(false);
-        clearTimeout(failSafe);
-      }
-    };
-
-    // Initialize
-    supabase.auth.onAuthStateChange(handleAuthChange);
+    const cleanup = init();
 
     return () => {
       isMounted = false;
-      clearTimeout(failSafe);
+      // We can't await cleanup here but the isMounted check handles it
     };
   }, []);
 
@@ -90,10 +87,7 @@ export const AuthProvider = ({ children }) => {
 
   const loginWithPassword = async (email, password) => {
     const { data, error } = await base44.auth.signInWithPassword(email, password);
-    if (!error && data?.user) {
-      // Note: onAuthStateChange will handle state updates
-      return { success: true };
-    }
+    if (!error && data?.user) return { success: true };
     return { success: false, error };
   };
 
@@ -105,7 +99,7 @@ export const AuthProvider = ({ children }) => {
     const isNative = Capacitor.isNativePlatform();
     const redirectTo = isNative ? 'natprep://login-callback' : window.location.origin;
 
-    const { data, error } = await base44.auth.signInWithOAuth({
+    const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo,

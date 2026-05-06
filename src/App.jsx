@@ -58,14 +58,14 @@ const AuthenticatedApp = () => {
     }
   }
 
-  // Handle Protected Routes
+  // Unauthenticated users: show public routes only
   if (!isAuthenticated) {
     return (
       <Routes>
+        <Route path="/" element={<Landing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/landing" element={<Landing />} />
-        {/* If user tries to access any other route while logged out, redirect to landing */}
         <Route path="*" element={<Navigate to="/landing" replace />} />
       </Routes>
     );
