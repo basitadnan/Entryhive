@@ -16,22 +16,18 @@ export const AuthProvider = ({ children }) => {
 
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
+  const [isProcessingLink, setIsProcessingLink] = useState(false);
+
   useEffect(() => {
     let isMounted = true;
     
-    // Safety timeout: 10 seconds max
-    const safetyTimeout = setTimeout(() => {
-      if (isMounted && isLoadingAuth) {
-        setIsLoadingAuth(false);
-      }
-    }, 10000);
-
     const handleUrl = async (url) => {
       if (!url || !isMounted) return false;
-      if (!url.includes('access_token=') && !url.includes('code=')) return false;
+      const hasToken = url.includes('access_token=') || url.includes('code=');
+      if (!hasToken) return false;
 
       try {
-        console.log('[Auth] Processing Deep Link...');
+        setIsProcessingLink(true);
         setIsLoadingAuth(true);
         
         const getParam = (name) => {
@@ -62,6 +58,8 @@ export const AuthProvider = ({ children }) => {
         }
       } catch (e) {
         console.error('[Auth Deep Link Error]', e);
+      } finally {
+        if (isMounted) setIsProcessingLink(false);
       }
       return false;
     };
@@ -69,35 +67,28 @@ export const AuthProvider = ({ children }) => {
     async function bootSequence() {
       try {
         setIsLoadingAuth(true);
-
-        // 1. Check for Deep Link (Most important for Mobile Login)
         let handled = false;
+        
         if (Capacitor.isNativePlatform()) {
           const res = await CapApp.getLaunchUrl();
           if (res?.url) handled = await handleUrl(res.url);
         }
 
-        // 2. If no deep link, check for existing session
         if (!handled) {
           const { data: { session } } = await supabase.auth.getSession();
           if (session?.user && isMounted) {
             setIsAuthenticated(true);
             setUser(session.user);
-            base44.auth.me().then(p => isMounted && p && setUser(p));
           }
         }
       } catch (e) {
         console.error('[Auth Boot Error]', e);
       } finally {
-        if (isMounted) {
-          setIsLoadingAuth(false);
-          clearTimeout(safetyTimeout);
-        }
+        if (isMounted) setIsLoadingAuth(false);
       }
 
-      // 3. Set up listeners for the future
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-        if (!isMounted) return;
+        if (!isMounted || isProcessingLink) return; // QUIET GUARD: Don't interrupt deep link processing
         if (session?.user) {
           setIsAuthenticated(true);
           setUser(session.user);
@@ -123,17 +114,12 @@ export const AuthProvider = ({ children }) => {
       return () => {
         subscription.unsubscribe();
         if (urlListener) urlListener.remove();
-        clearTimeout(safetyTimeout);
       };
     }
 
     bootSequence();
-
-    return () => {
-      isMounted = false;
-      clearTimeout(safetyTimeout);
-    };
-  }, []);
+    return () => { isMounted = false; };
+  }, [isProcessingLink]);
 
   const logout = async (shouldRedirect = true) => {
     setIsAuthenticated(false);

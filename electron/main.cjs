@@ -4,12 +4,8 @@ const isDev = !app.isPackaged;
 
 let mainWindow;
 
-// Register the custom protocol
-if (process.defaultApp) {
-  if (process.argv.length >= 2) {
-    app.setAsDefaultProtocolClient('natprep', process.execPath, [path.resolve(process.argv[1])]);
-  }
-} else {
+// Handle deep links on Windows (register protocol)
+if (!app.isDefaultProtocolClient('natprep')) {
   app.setAsDefaultProtocolClient('natprep');
 }
 
@@ -24,22 +20,24 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      preload: path.join(__dirname, 'preload.cjs')
+      preload: path.resolve(__dirname, 'preload.cjs')
     }
   });
 
   mainWindow.setMenu(null);
 
   if (isDev) {
-    mainWindow.loadURL('http://localhost:5173');
+    // If you are seeing a white screen, make sure 'npm run dev' is running on port 5173
+    mainWindow.loadURL('http://localhost:5173').catch(() => {
+      console.error('Failed to load localhost:5173. Is the dev server running?');
+    });
   } else {
     mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
   }
 }
 
-// Handle deep links on Windows (second instance)
+// Single instance lock
 const gotTheLock = app.requestSingleInstanceLock();
-
 if (!gotTheLock) {
   app.quit();
 } else {
@@ -47,14 +45,10 @@ if (!gotTheLock) {
     if (mainWindow) {
       if (mainWindow.isMinimized()) mainWindow.restore();
       mainWindow.focus();
-      
       const url = commandLine.pop();
-      if (url.includes('natprep://')) {
-        mainWindow.webContents.send('deep-link', url);
-      }
+      if (url.includes('natprep://')) mainWindow.webContents.send('deep-link', url);
     }
   });
-
   app.whenReady().then(createWindow);
 }
 
@@ -62,10 +56,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
 
-// Handle deep links on macOS
 app.on('open-url', (event, url) => {
   event.preventDefault();
-  if (mainWindow) {
-    mainWindow.webContents.send('deep-link', url);
-  }
+  if (mainWindow) mainWindow.webContents.send('deep-link', url);
 });
