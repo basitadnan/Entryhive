@@ -127,8 +127,23 @@ export const base44 = {
       }
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return null;
+
       // Merge with profiles table
-      const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+      let { data: profile, error: profileError } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+
+      // Auto-create profile if it doesn't exist (Google Sign-in first-time users)
+      if (!profile || profileError) {
+        const referralCode = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
+        const newProfile = {
+          id: user.id,
+          email: user.email,
+          full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
+          referral_code: referralCode,
+        };
+        const { data: created } = await supabase.from('profiles').upsert(newProfile, { onConflict: 'id' }).select().single();
+        profile = created || newProfile;
+      }
+
       const merged = { ...user, ...user.user_metadata, ...profile };
       
       // ── 3-Day Free Trial Logic ──

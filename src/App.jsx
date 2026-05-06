@@ -108,6 +108,7 @@ function App() {
     // Handle deep links (for Google OAuth redirect back to app)
     CapApp.addListener('appUrlOpen', async (event) => {
       const url = event.url;
+      console.log('[DeepLink] Received URL:', url);
       
       // Super robust regex to find access_token and refresh_token in ANY part of the URL
       const accessTokenMatch = url.match(/[#?&]access_token=([^&]+)/);
@@ -117,12 +118,17 @@ function App() {
         const access_token = accessTokenMatch[1];
         const refresh_token = refreshTokenMatch[1];
         
+        console.log('[DeepLink] Found tokens, setting session...');
         const { error } = await supabase.auth.setSession({ access_token, refresh_token });
         
-        if (!error) {
-          // Success! Go to home and reload to ensure all components see the user
+        if (error) {
+          console.error('[DeepLink] setSession error:', error);
+        } else {
+          console.log('[DeepLink] Session set successfully');
+          // Navigate to home — AuthContext's onAuthStateChange will handle the rest
           window.location.hash = '/';
-          window.location.reload();
+          // Do NOT reload — the onAuthStateChange listener will pick up the
+          // SIGNED_IN event and update the React state automatically.
         }
       }
     });
