@@ -115,34 +115,39 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
-      // DEBUG ALERT (Remove after fix)
       if (Capacitor.isNativePlatform()) {
+        console.log('[DeepLink] Received:', url);
+        // We keep the alert for one more round to verify the fix
         alert('Deep Link Received: ' + url);
       }
       
-      const hasCode = url.includes('code=');
-      const hasTokens = url.includes('access_token=');
+      // Case-insensitive check for code or access token/token
+      const normalizedUrl = url.toLowerCase();
+      const hasCode = normalizedUrl.includes('code=');
+      const hasTokens = normalizedUrl.includes('access_token=') || normalizedUrl.includes('access-token=') || normalizedUrl.includes('token=');
       
       if (!hasCode && !hasTokens) {
-        console.log('[DeepLink] No auth tokens found in URL');
+        console.log('[DeepLink] No auth parameters found');
         return;
       }
 
-      console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
       
       try {
         const getParam = (name) => {
-          // Flexible regex to find params in ?query or #hash
-          const regex = new RegExp(`[#?&]${name}=([^&]+)`);
-          const match = url.match(regex);
-          return match ? match[1] : null;
+          // Look for name with underscore, dash, or just the name
+          const patterns = [name.replace('_', '-'), name.replace('-', '_'), name];
+          for (const p of patterns) {
+            const regex = new RegExp(`[#?&]${p}=([^&]+)`, 'i');
+            const match = url.match(regex);
+            if (match) return match[1];
+          }
+          return null;
         };
 
         if (hasCode) {
           const code = getParam('code');
           if (code) {
-            console.log('[DeepLink] Exchanging code for session...');
             const { error } = await supabase.auth.exchangeCodeForSession(code);
             if (error) throw error;
             window.location.hash = '/';
@@ -151,9 +156,12 @@ function AppContent() {
           const access_token = getParam('access_token');
           const refresh_token = getParam('refresh_token');
           
-          if (access_token && refresh_token) {
-            console.log('[DeepLink] Setting session from tokens...');
-            const { error } = await supabase.auth.setSession({ access_token, refresh_token });
+          if (access_token) {
+            // Even if refresh_token is missing, we try to set the session
+            const { error } = await supabase.auth.setSession({ 
+              access_token, 
+              refresh_token: refresh_token || '' 
+            });
             if (error) throw error;
             window.location.hash = '/';
           }
