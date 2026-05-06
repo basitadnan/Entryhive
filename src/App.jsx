@@ -115,41 +115,37 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
+      // DEBUG ALERT (Remove after fix)
       if (Capacitor.isNativePlatform()) {
-        console.log('[DeepLink] Received:', url);
-        // We keep the alert for one more round to verify the fix
         alert('Deep Link Received: ' + url);
       }
       
-      // Case-insensitive check for code or access token/token
-      const normalizedUrl = url.toLowerCase();
-      const hasCode = normalizedUrl.includes('code=');
-      const hasTokens = normalizedUrl.includes('access_token=') || normalizedUrl.includes('access-token=') || normalizedUrl.includes('token=');
+      const hasCode = url.includes('code=');
+      const hasTokens = url.includes('access_token=');
       
       if (!hasCode && !hasTokens) {
-        console.log('[DeepLink] No auth parameters found');
+        console.log('[DeepLink] No auth tokens found in URL');
         return;
       }
 
+      console.log('[DeepLink] Auth redirect detected');
       setIsProcessingDeepLink(true);
       
       try {
         const getParam = (name) => {
-          // Look for name with underscore, dash, or just the name
-          const patterns = [name.replace('_', '-'), name.replace('-', '_'), name];
-          for (const p of patterns) {
-            const regex = new RegExp(`[#?&]${p}=([^&]+)`, 'i');
-            const match = url.match(regex);
-            if (match) return match[1];
-          }
-          return null;
+          // Flexible regex to find params in ?query or #hash
+          const regex = new RegExp(`[#?&]${name}=([^&]+)`);
+          const match = url.match(regex);
+          return match ? match[1] : null;
         };
 
         if (hasCode) {
           const code = getParam('code');
           if (code) {
+            console.log('[DeepLink] Exchanging code...');
             const { error } = await supabase.auth.exchangeCodeForSession(code);
             if (error) throw error;
+            if (Capacitor.isNativePlatform()) alert('Login Success (Code)!');
             window.location.hash = '/';
           }
         } else if (hasTokens) {
@@ -157,13 +153,16 @@ function AppContent() {
           const refresh_token = getParam('refresh_token');
           
           if (access_token) {
-            // Even if refresh_token is missing, we try to set the session
+            console.log('[DeepLink] Setting session...');
             const { error } = await supabase.auth.setSession({ 
               access_token, 
               refresh_token: refresh_token || '' 
             });
             if (error) throw error;
+            if (Capacitor.isNativePlatform()) alert('Login Success (Token)!');
             window.location.hash = '/';
+          } else {
+            throw new Error('Access token found in URL but could not be parsed');
           }
         }
         
