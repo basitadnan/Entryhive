@@ -115,7 +115,9 @@ function AppContent() {
     const handleDeepLink = async (url) => {
       if (!url) return;
       
+      // Small delay to ensure app is fully hydrated
       if (Capacitor.isNativePlatform()) {
+        await new Promise(r => setTimeout(r, 1000));
         alert('Deep Link Received: ' + url);
       }
       
