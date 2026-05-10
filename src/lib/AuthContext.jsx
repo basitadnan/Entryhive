@@ -173,12 +173,21 @@ export const AuthProvider = ({ children }) => {
       }
 
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-        if (!isMounted || processingLinkRef.current) return; 
-        
+        console.log(`[Auth] State Change: ${event}`, session?.user?.email);
+        if (!isMounted) return;
+
         if (session?.user) {
           setUser(session.user);
           setIsAuthenticated(true);
-        } else {
+          
+          // If we just signed in on the web and there's a token in the URL, clean it up
+          if (event === 'SIGNED_IN' && typeof window !== 'undefined' && 
+              (window.location.hash.includes('access_token=') || window.location.href.includes('access_token='))) {
+            console.log('[Auth] Cleaning up URL after successful SIGNED_IN');
+            window.history.replaceState(null, '', window.location.origin + '/');
+            window.location.hash = '/';
+          }
+        } else if (!isLoadingAuth && !processingLinkRef.current) {
           setIsAuthenticated(false);
           setUser(null);
         }
