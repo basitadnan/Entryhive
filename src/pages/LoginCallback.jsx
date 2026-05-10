@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/lib/AuthContext';
 
 export default function LoginCallback() {
+  const { isAuthenticated, isLoadingAuth } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const checkHash = async () => {
-      const hash = window.location.hash;
-      if (hash.includes('access_token=') || hash.includes('code=')) {
-        // AuthContext handles the heavy lifting, but we can show a status
-        console.log('[LoginCallback] Detected auth token in hash');
-      }
-    };
-    checkHash();
+    // If the user is authenticated, we should go to the dashboard immediately
+    if (isAuthenticated && !isLoadingAuth) {
+      console.log("[LoginCallback] User authenticated, navigating to dashboard.");
+      navigate('/', { replace: true });
+      return;
+    }
 
     const isNative = typeof window !== 'undefined' && (window.Capacitor?.isNativePlatform?.() || window.location.protocol === 'file:');
     const isElectron = typeof window !== 'undefined' && (
@@ -27,21 +27,15 @@ export default function LoginCallback() {
 
     if (hash) {
       if (isNative || isElectron) {
-        // If we are ALREADY in the app, the AuthContext will handle the hash.
         console.log("LoginCallback: Inside app context, letting AuthContext handle token.");
       } else if (isFromApp) {
-        // We are on the WEB (Vercel bridge), but this login was started by the app.
-        // Redirect back to the native app.
         console.log("LoginCallback: Bridge detected, redirecting to app...");
         window.location.href = `natprep://login-callback${hash}`;
       } else {
-        // Pure web user, just stay here. AuthContext handles the login.
-        console.log("LoginCallback: Web context, staying on page.");
-        // AuthContext will clear the hash and set isAuthenticated, 
-        // which triggers App.jsx to render the home page.
+        console.log("LoginCallback: Web context, staying on page. Waiting for AuthContext...");
       }
     }
-  }, []);
+  }, [isAuthenticated, isLoadingAuth, navigate]);
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6 text-center">
