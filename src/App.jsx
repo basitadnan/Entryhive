@@ -19,6 +19,7 @@ import Home from './pages/Home';
 import ImportantTopics from './pages/ImportantTopics';
 import SelectGroup from './pages/SelectGroup';
 import Practice from './pages/Practice';
+import Maintenance from './components/Maintenance';
 import PracticeSession from './pages/PracticeSession';
 import MockTest from './pages/MockTest';
 import MockTestSession from './pages/MockTestSession';
@@ -102,6 +103,13 @@ const AuthenticatedApp = () => {
 
 function AppContent() {
   const { isAuthenticated, isLoadingAuth } = useAuth();
+  
+  // Maintenance Mode Toggle (controlled via .env)
+  const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE_MODE === 'true';
+
+  if (isMaintenanceMode) {
+    return <Maintenance />;
+  }
   
   // Nuclear 404 Bypass: If we have a token in the URL, force the loading state
   // This prevents HashRouter from seeing the malformed token and throwing a 404
