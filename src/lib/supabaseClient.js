@@ -24,8 +24,8 @@ const customStorage = {
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     storage: customStorage,
-    persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: false, // Prevent the internal race condition
+    persistSession: true,
+    detectSessionInUrl: !Capacitor.isNativePlatform(), // Use native detection on web/electron
   }
-})
+});
