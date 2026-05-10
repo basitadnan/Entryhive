@@ -17,6 +17,19 @@ export const AuthProvider = ({ children }) => {
 
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
+  // Platform detection flags
+  const isNative = Capacitor.isNativePlatform();
+  const isElectron = typeof window !== 'undefined' && !!(
+    window.electronAPI || 
+    (window.process && window.process.versions && window.process.versions.electron) || 
+    navigator.userAgent.toLowerCase().includes('electron') ||
+    window.location.protocol === 'file:'
+  );
+  const isDev = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' || 
+    window.location.hostname === '127.0.0.1'
+  );
+
   // Use a Ref for processing state to avoid triggering the boot useEffect loop
   const processingLinkRef = useRef(false);
 
@@ -102,7 +115,7 @@ export const AuthProvider = ({ children }) => {
         setIsLoadingAuth(true);
         let handled = false;
         
-        if (Capacitor.isNativePlatform()) {
+        if (isNative) {
           const res = await CapApp.getLaunchUrl();
           if (res?.url) handled = await handleUrl(res.url);
         }
@@ -162,7 +175,7 @@ export const AuthProvider = ({ children }) => {
       });
 
       let urlListener;
-      if (Capacitor.isNativePlatform()) {
+      if (isNative) {
         urlListener = CapApp.addListener('appUrlOpen', (event) => {
           handleUrl(event.url);
         });
@@ -200,22 +213,12 @@ export const AuthProvider = ({ children }) => {
     return await base44.auth.signUp(email, password, { full_name: fullName });
   };
 
-  const loginWithGoogle = async () => {
-    const isNative = Capacitor.isNativePlatform();
-    const isElectron = typeof window !== 'undefined' && !!(
-      window.electronAPI || 
-      (window.process && window.process.versions && window.process.versions.electron) || 
-      navigator.userAgent.toLowerCase().includes('electron') ||
-      window.location.protocol === 'file:'
-    );
-    const isDev = typeof window !== 'undefined' && (
-      window.location.hostname === 'localhost' || 
-      window.location.hostname === '127.0.0.1'
-    );
-    
     let targetRedirect = 'https://natprep.vercel.app/login-callback';
+    
     if (isNative || isElectron) {
-      targetRedirect = 'natprep://login-callback';
+      // Use the Vercel bridge with a source=app flag for better compatibility 
+      // This ensures we hit a valid HTTPS domain first, which Google prefers
+      targetRedirect = 'https://natprep.vercel.app/login-callback?source=app';
     } else if (isDev) {
       targetRedirect = window.location.origin + '/login-callback';
     }
