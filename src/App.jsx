@@ -11,6 +11,7 @@ import { App as CapApp } from '@capacitor/app';
 import { supabase } from '@/lib/supabaseClient';
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from 'framer-motion';
+import { Capacitor } from '@capacitor/core';
 
 import Landing from './pages/Landing';
 import AppLayout from './components/Layout/AppLayout';
@@ -108,7 +109,7 @@ function AppContent() {
 
   return (
     <Router>
-      {(isLoadingAuth || hasToken) && !isAuthenticated ? (
+      {((isLoadingAuth || hasToken) && !isAuthenticated) ? (
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-[9999]">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

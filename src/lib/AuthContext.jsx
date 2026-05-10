@@ -105,6 +105,16 @@ export const AuthProvider = ({ children }) => {
         if (isMounted) {
           processingLinkRef.current = false;
           setIsLoadingAuth(false);
+          
+          // CRITICAL: If we detected a token in the URL but somehow didn't authenticate,
+          // we MUST clear the hash anyway, otherwise App.jsx will stay stuck in the loading screen.
+          if (typeof window !== 'undefined' && 
+              (window.location.hash.includes('access_token=') || 
+               window.location.hash.includes('code=') || 
+               window.location.href.includes('access_token='))) {
+            console.log('[Auth] Clearing stuck token from URL');
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
         }
       }
       return false;
@@ -212,7 +222,7 @@ export const AuthProvider = ({ children }) => {
   const signUp = async (email, password, fullName) => {
     return await base44.auth.signUp(email, password, { full_name: fullName });
   };
-
+  const loginWithGoogle = async () => {
     let targetRedirect = 'https://natprep.vercel.app/login-callback';
     
     if (isNative || isElectron) {
