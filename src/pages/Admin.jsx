@@ -114,6 +114,24 @@ export default function Admin() {
     enabled: user?.role === 'admin' 
   });
 
+  const { data: dbStats = { total: 0, bank: 0, past: 0 } } = useQuery({
+    queryKey: ['admin-db-stats'],
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { count: total } = await supabase.from('questions').select('*', { count: 'exact', head: true });
+      const { count: bank } = await supabase.from('questions').select('*', { count: 'exact', head: true }).eq('is_past_paper', false);
+      const { count: past } = await supabase.from('questions').select('*', { count: 'exact', head: true }).eq('is_past_paper', true);
+      
+      return {
+        total: total || 0,
+        bank: bank || 0,
+        past: past || 0
+      };
+    },
+    enabled: user?.role === 'admin',
+    refetchInterval: 30000 // Refresh every 30s
+  });
+
   const practiceCounts = React.useMemo(() => {
     const counts = {};
     (allPracticeSessions || []).forEach(s => {
@@ -246,6 +264,8 @@ export default function Admin() {
     { id: 'users', label: 'Users', icon: Users },
     { id: 'premium', label: 'Prem', icon: Crown },
     { id: 'questions', label: 'Bank', icon: Database },
+    { id: 'cloud_bank', label: 'Cloud', icon: Database },
+    { id: 'importer', label: 'Past Papers', icon: Upload },
   ];
 
   return (
@@ -625,6 +645,52 @@ export default function Admin() {
                 </div>
               </Card>
             </div>
+          </div>
+        )}
+
+        {/* TAB: Cloud Bank Importer Redirect */}
+        {activeTab === 'cloud_bank' && (
+          <div className="space-y-6 animate-in fade-in duration-300">
+            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
+              Cloud Bank Management <span className="text-xs font-normal text-muted-foreground ml-auto">{dbStats.bank} Total</span>
+            </h2>
+            <Card className="p-10 border-dashed border-2 flex flex-col items-center justify-center text-center space-y-6 bg-green-500/5 border-green-500/20">
+              <div className="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center">
+                <Database className="w-10 h-10 text-green-400" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold">General Bank Importer</h3>
+                <p className="text-muted-foreground max-w-sm mx-auto">
+                  Upload multiple <strong>.txt</strong> files for practice and mock tests. Automatic duplicate detection and category mapping.
+                </p>
+              </div>
+              <Button size="lg" className="bg-green-500 hover:bg-green-400 text-black font-bold h-14 px-8 rounded-2xl shadow-xl shadow-green-500/20" onClick={() => navigate('/admin/bank-importer')}>
+                Open Bank Importer
+              </Button>
+            </Card>
+          </div>
+        )}
+
+        {/* TAB: Importer Redirect (Past Papers) */}
+        {activeTab === 'importer' && (
+          <div className="space-y-6 animate-in fade-in duration-300">
+            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
+              Past Paper Management <span className="text-xs font-normal text-muted-foreground ml-auto">{dbStats.past} Total</span>
+            </h2>
+            <Card className="p-10 border-dashed border-2 flex flex-col items-center justify-center text-center space-y-6 bg-primary/5 border-primary/20">
+              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+                <Upload className="w-10 h-10 text-primary" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold">Smart Past Paper Importer</h3>
+                <p className="text-muted-foreground max-w-sm mx-auto">
+                  Specifically for exam papers. Supports <strong>.json</strong> and <strong>.txt</strong> with track categorization.
+                </p>
+              </div>
+              <Button size="lg" className="bg-primary text-black font-bold h-14 px-8 rounded-2xl shadow-xl shadow-primary/20" onClick={() => navigate('/admin/importer')}>
+                Open Smart Importer
+              </Button>
+            </Card>
           </div>
         )}
 

@@ -28,6 +28,7 @@ import LearnDetail from './pages/LearnDetail';
 import Performance from './pages/Performance';
 import Premium from './pages/Premium';
 import Admin from './pages/Admin';
+import AdminImporter from './pages/AdminImporter';
 import Flashcards from './pages/Flashcards';
 import Profile from './pages/Profile';
 import StudyPlan from './pages/StudyPlan';
@@ -41,6 +42,7 @@ import Referral from './pages/Referral';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import LoginCallback from './pages/LoginCallback';
+import BankImporter from './pages/BankImporter';
 
 const AuthenticatedApp = () => {
   const { authError, isAuthenticated } = useAuth();
@@ -79,6 +81,8 @@ const AuthenticatedApp = () => {
         <Route path="/performance" element={<Performance />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/importer" element={<AdminImporter />} />
+        <Route path="/admin/bank-importer" element={<BankImporter />} />
         <Route path="/flashcards" element={<Flashcards />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/important-topics" element={<ImportantTopics />} />

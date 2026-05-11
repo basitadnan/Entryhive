@@ -23,9 +23,52 @@ export default function MockTestSession() {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    const sections = getMockTestQuestions(user?.nat_group);
-    const all = [...sections.english, ...sections.analytical, ...sections.quantitative, ...sections.subject];
-    setAllQuestions(all);
+    async function loadQuestions() {
+      // 1. Get initial set from local bank
+      const sections = getMockTestQuestions(user?.nat_group);
+      
+      // 2. Fetch additional questions from Supabase for each section
+      try {
+        const { data: dbQs, error } = await supabase
+          .from('questions')
+          .select('*')
+          .limit(50); // Get a good sample
+
+        if (!error && dbQs && dbQs.length > 0) {
+          // Add them to the appropriate sections
+          dbQs.forEach(q => {
+            const formatted = {
+              id: q.id,
+              question: q.question_text,
+              options: q.options,
+              correct: q.correct_answer_index,
+              explanation: q.explanation,
+              difficulty: q.difficulty,
+              section: q.section.charAt(0).toUpperCase() + q.section.slice(1)
+            };
+
+            // Mix them into the pools (limit pools back to standard NAT sizes later)
+            if (q.section === 'english') sections.english.push(formatted);
+            else if (q.section === 'analytical') sections.analytical.push(formatted);
+            else if (q.section === 'quantitative') sections.quantitative.push(formatted);
+            else sections.subject.push(formatted);
+          });
+        }
+      } catch (e) {
+        console.error('Supabase fetch failed:', e);
+      }
+
+      // 3. Flatten and limit to standard NAT counts (shuffled)
+      const all = [
+        ...sections.english.sort(() => Math.random() - 0.5).slice(0, 20),
+        ...sections.analytical.sort(() => Math.random() - 0.5).slice(0, 20),
+        ...sections.quantitative.sort(() => Math.random() - 0.5).slice(0, 20),
+        ...sections.subject.sort(() => Math.random() - 0.5).slice(0, 30)
+      ];
+      setAllQuestions(all);
+    }
+
+    loadQuestions();
 
     timerRef.current = setInterval(() => {
       setTimeLeft(prev => {

@@ -59,8 +59,36 @@ export default function PracticeSession() {
         }
       }
 
-      // New session
-      const qs = getQuestions(section, difficulty, count, [], subTopic);
+      // 1. Get questions from local bank (includes hardcoded + Bank tab questions)
+      let qs = getQuestions(section, difficulty, count, [], subTopic);
+
+      // 2. Fetch questions from Supabase for this section
+      try {
+        const { data: dbQs, error: dbError } = await supabase
+          .from('questions')
+          .select('*')
+          .eq('section', section.toLowerCase())
+          .eq('is_past_paper', false)
+          .limit(count);
+
+        if (!dbError && dbQs && dbQs.length > 0) {
+          // Format Supabase questions to match app format
+          const formattedDbQs = dbQs.map(q => ({
+            id: q.id,
+            question: q.question_text,
+            options: q.options,
+            correct: q.correct_answer_index,
+            explanation: q.explanation,
+            difficulty: q.difficulty
+          }));
+          
+          // Combine and shuffle (limit back to desired count)
+          qs = [...qs, ...formattedDbQs].sort(() => Math.random() - 0.5).slice(0, count);
+        }
+      } catch (e) {
+        console.error('Failed to fetch from Supabase:', e);
+      }
+
       const { data: record, error } = await supabase.from('PracticeSession').insert({
         user_email: user.email,
         section,
