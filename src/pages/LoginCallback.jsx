@@ -22,14 +22,23 @@ export default function LoginCallback() {
       navigator.userAgent.toLowerCase().includes('electron')
     );
     const hash = window.location.hash;
+    const urlParams = new URLSearchParams(window.location.search);
+    const isFromApp = urlParams.get('source') === 'app';
 
     if (hash) {
       if (isNative || isElectron) {
         // If we are ALREADY in the app, the AuthContext will handle the hash.
         console.log("LoginCallback: Inside app context, letting AuthContext handle token.");
-      } else {
-        // We are on the WEB (Vercel), try to open the native app
+      } else if (isFromApp) {
+        // We are on the WEB (Vercel bridge), but this login was started by the app.
+        // Redirect back to the native app.
+        console.log("LoginCallback: Bridge detected, redirecting to app...");
         window.location.href = `natprep://login-callback${hash}`;
+      } else {
+        // Pure web user, just stay here. AuthContext handles the login.
+        console.log("LoginCallback: Web context, staying on page.");
+        // AuthContext will clear the hash and set isAuthenticated, 
+        // which triggers App.jsx to render the home page.
       }
     }
   }, []);

@@ -101,14 +101,10 @@ const AuthenticatedApp = () => {
 
 function AppContent() {
   const { isAuthenticated, isLoadingAuth } = useAuth();
-  
-  // Nuclear 404 Bypass: If we have a token in the URL, force the loading state
-  // This prevents HashRouter from seeing the malformed token and throwing a 404
-  const hasToken = typeof window !== 'undefined' && window.location.hash.includes('access_token=');
 
   return (
     <Router>
-      {(isLoadingAuth || hasToken) && !isAuthenticated ? (
+      {isLoadingAuth ? (
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-[9999]">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

@@ -26,6 +26,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     storage: customStorage,
     persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: false, // Prevent the internal race condition
+    detectSessionInUrl: true, // Let Supabase auto-detect OAuth tokens from URL
   }
 })

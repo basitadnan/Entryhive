@@ -17,6 +17,19 @@ export const AuthProvider = ({ children }) => {
 
   const isPlaceholder = !import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL === 'https://placeholder.supabase.co';
 
+  // Platform detection flags
+  const isNative = Capacitor.isNativePlatform();
+  const isElectron = typeof window !== 'undefined' && !!(
+    window.electronAPI || 
+    (window.process && window.process.versions && window.process.versions.electron) || 
+    navigator.userAgent.toLowerCase().includes('electron') ||
+    window.location.protocol === 'file:'
+  );
+  const isDev = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' || 
+    window.location.hostname === '127.0.0.1'
+  );
+
   // Use a Ref for processing state to avoid triggering the boot useEffect loop
   const processingLinkRef = useRef(false);
 
@@ -102,7 +115,7 @@ export const AuthProvider = ({ children }) => {
         setIsLoadingAuth(true);
         let handled = false;
         
-        if (Capacitor.isNativePlatform()) {
+        if (isNative) {
           const res = await CapApp.getLaunchUrl();
           if (res?.url) handled = await handleUrl(res.url);
         }
@@ -162,7 +175,7 @@ export const AuthProvider = ({ children }) => {
       });
 
       let urlListener;
-      if (Capacitor.isNativePlatform()) {
+      if (isNative) {
         urlListener = CapApp.addListener('appUrlOpen', (event) => {
           handleUrl(event.url);
         });
@@ -201,23 +214,20 @@ export const AuthProvider = ({ children }) => {
   };
 
   const loginWithGoogle = async () => {
-    const isNative = Capacitor.isNativePlatform();
-    const isElectron = typeof window !== 'undefined' && !!(
-      window.electronAPI || 
-      (window.process && window.process.versions && window.process.versions.electron) || 
-      navigator.userAgent.toLowerCase().includes('electron') ||
-      window.location.protocol === 'file:'
-    );
-    const isDev = typeof window !== 'undefined' && (
-      window.location.hostname === 'localhost' || 
-      window.location.hostname === '127.0.0.1'
-    );
+    // For web users: redirect back to the site root. Supabase's detectSessionInUrl
+    // will auto-detect the tokens in the URL fragment and establish the session.
+    // For native/electron: use the Vercel bridge to relay tokens back to the app.
+    let targetRedirect;
     
-    let targetRedirect = 'https://natprep.vercel.app/login-callback';
     if (isNative || isElectron) {
-      targetRedirect = 'natprep://login-callback';
+      targetRedirect = 'https://natprep.vercel.app/login-callback?source=app';
     } else if (isDev) {
-      targetRedirect = window.location.origin + '/login-callback';
+      // In dev mode, redirect to localhost origin
+      targetRedirect = window.location.origin;
+    } else {
+      // Production web: redirect to site origin. Supabase will append #access_token=...
+      // and detectSessionInUrl will pick it up automatically.
+      targetRedirect = window.location.origin;
     }
 
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -229,7 +239,7 @@ export const AuthProvider = ({ children }) => {
     });
 
     if (error) {
-      console.error(error.message);
+      console.error('[Auth] Google OAuth error:', error.message);
       return;
     }
 
@@ -237,12 +247,9 @@ export const AuthProvider = ({ children }) => {
       if (isElectron && window.electronAPI && window.electronAPI.openExternal) {
         window.electronAPI.openExternal(data.url);
       } else if (isNative) {
-        // Use Capacitor Browser for mobile to allow auto-closing
         await Browser.open({ url: data.url, windowName: '_blank' });
-      } else if (!isElectron && !isNative) {
-        window.location.href = data.url;
       } else {
-        console.warn('[Auth] Fallback triggered in app context - preventing internal navigation');
+        window.location.href = data.url;
       }
     }
   };
