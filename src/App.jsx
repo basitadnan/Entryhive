@@ -11,6 +11,7 @@ import { App as CapApp } from '@capacitor/app';
 import { supabase } from '@/lib/supabaseClient';
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from 'framer-motion';
+import { Capacitor } from '@capacitor/core';
 
 import Landing from './pages/Landing';
 import AppLayout from './components/Layout/AppLayout';
@@ -18,6 +19,7 @@ import Home from './pages/Home';
 import ImportantTopics from './pages/ImportantTopics';
 import SelectGroup from './pages/SelectGroup';
 import Practice from './pages/Practice';
+import Maintenance from './components/Maintenance';
 import PracticeSession from './pages/PracticeSession';
 import MockTest from './pages/MockTest';
 import MockTestSession from './pages/MockTestSession';
@@ -101,6 +103,13 @@ const AuthenticatedApp = () => {
 
 function AppContent() {
   const { isAuthenticated, isLoadingAuth } = useAuth();
+  
+  // Maintenance Mode Toggle (controlled via .env)
+  const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE_MODE === 'true';
+
+  if (isMaintenanceMode) {
+    return <Maintenance />;
+  }
 
   return (
     <Router>

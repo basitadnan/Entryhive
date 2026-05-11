@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { Capacitor } from '@capacitor/core';
 
 const supabaseUrl = 'https://fnrrxofmvyamgbspypok.supabase.co'
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZucnJ4b2ZtdnlhbWdic3B5cG9rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4NzU2ODIsImV4cCI6MjA5MzQ1MTY4Mn0.Dyn05z0kZnjaCaWao1lMXcNuUXcl3W-4yGzg9qb0Ik4'
@@ -26,6 +27,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     storage: customStorage,
     persistSession: true,
     autoRefreshToken: true,
-    detectSessionInUrl: true, // Let Supabase auto-detect OAuth tokens from URL
+    detectSessionInUrl: !Capacitor.isNativePlatform(), // Use native detection on web/electron
   }
-})
+});

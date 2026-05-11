@@ -7,19 +7,42 @@ const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 export const aiClient = new GoogleGenerativeAI(apiKey || 'placeholder');
 
-export const generateCompletion = async (prompt) => {
+export const generateCompletion = async (prompt, schema = null) => {
   if (!apiKey) {
-    console.warn("Gemini API Key missing. Returning placeholder text.");
-    return "This is a placeholder response because the Gemini API key is not configured.";
+    console.warn("Gemini API Key missing. Returning placeholder.");
+    return schema ? null : "Gemini API Key missing.";
   }
   
   try {
-    const model = aiClient.getGenerativeModel({ model: 'gemini-2.5-flash' });
-    const response = await model.generateContent(prompt);
-    return response.response.text();
+    // Use gemini-1.5-flash which is fast and supports JSON schema
+    const modelConfig = { model: 'gemini-1.5-flash' };
+    
+    if (schema) {
+      modelConfig.generationConfig = {
+        responseMimeType: 'application/json',
+        responseSchema: schema
+      };
+    }
+    
+    const model = aiClient.getGenerativeModel(modelConfig);
+    const result = await model.generateContent(prompt);
+    const text = result.response.text();
+    
+    if (schema) {
+      try {
+        // Remove markdown formatting if present (Gemini sometimes adds it even in JSON mode)
+        const cleanJson = text.replace(/```json\n?|```\n?/g, '').trim();
+        return JSON.parse(cleanJson);
+      } catch (e) {
+        console.error("Failed to parse AI JSON response:", text);
+        return null;
+      }
+    }
+    
+    return text;
   } catch (error) {
     console.error('Error generating AI completion:', error);
-    return "Sorry, I encountered an error while processing your request.";
+    return schema ? null : "Error generating AI response.";
   }
 };
 export const verifyPaymentScreenshot = async (base64Image, planPrice) => {

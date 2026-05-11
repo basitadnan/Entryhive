@@ -105,6 +105,16 @@ export const AuthProvider = ({ children }) => {
         if (isMounted) {
           processingLinkRef.current = false;
           setIsLoadingAuth(false);
+          
+          // CRITICAL: If we detected a token in the URL but somehow didn't authenticate,
+          // we MUST clear the hash anyway, otherwise App.jsx will stay stuck in the loading screen.
+          if (typeof window !== 'undefined' && 
+              (window.location.hash.includes('access_token=') || 
+               window.location.hash.includes('code=') || 
+               window.location.href.includes('access_token='))) {
+            console.log('[Auth] Clearing stuck token from URL');
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
         }
       }
       return false;
@@ -163,12 +173,21 @@ export const AuthProvider = ({ children }) => {
       }
 
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-        if (!isMounted || processingLinkRef.current) return; 
-        
+        console.log(`[Auth] State Change: ${event}`, session?.user?.email);
+        if (!isMounted) return;
+
         if (session?.user) {
           setUser(session.user);
           setIsAuthenticated(true);
-        } else {
+          
+          // If we just signed in on the web and there's a token in the URL, clean it up
+          if (event === 'SIGNED_IN' && typeof window !== 'undefined' && 
+              (window.location.hash.includes('access_token=') || window.location.href.includes('access_token='))) {
+            console.log('[Auth] Cleaning up URL after successful SIGNED_IN');
+            window.history.replaceState(null, '', window.location.origin + '/');
+            window.location.hash = '/';
+          }
+        } else if (!isLoadingAuth && !processingLinkRef.current) {
           setIsAuthenticated(false);
           setUser(null);
         }
@@ -200,7 +219,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async (shouldRedirect = true) => {
     setIsAuthenticated(false);
     setUser(null);
-    await base44.auth.logout(shouldRedirect ? '/' : undefined);
+    await base44.auth.signOut(shouldRedirect ? '/' : undefined);
   };
 
   const loginWithPassword = async (email, password) => {
