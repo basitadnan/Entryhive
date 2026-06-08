@@ -335,6 +335,9 @@ export default function Landing({ preview = false }) {
         </div>
         <p className="text-sm text-muted-foreground font-medium">NAT<span className="text-primary">Prep</span> © 2026</p>
         <p className="text-xs text-muted-foreground/60 mt-1">Built with ❤️ for Pakistani Students</p>
+        <button onClick={() => navigate('/legal')} className="text-xs text-primary/60 hover:text-primary mt-2 transition-colors cursor-pointer">
+          Privacy Policy & Terms of Service
+        </button>
       </footer>
     </div>
   );

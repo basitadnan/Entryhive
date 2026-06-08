@@ -26,37 +26,8 @@ export default function MockTestSession() {
     async function loadQuestions() {
       // 1. Get initial set from local bank
       const sections = getMockTestQuestions(user?.nat_group);
-      
-      // 2. Fetch additional questions from Supabase for each section
-      try {
-        const { data: dbQs, error } = await supabase
-          .from('questions')
-          .select('*')
-          .limit(50); // Get a good sample
-
-        if (!error && dbQs && dbQs.length > 0) {
-          // Add them to the appropriate sections
-          dbQs.forEach(q => {
-            const formatted = {
-              id: q.id,
-              question: q.question_text,
-              options: q.options,
-              correct: q.correct_answer_index,
-              explanation: q.explanation,
-              difficulty: q.difficulty,
-              section: q.section.charAt(0).toUpperCase() + q.section.slice(1)
-            };
-
-            // Mix them into the pools (limit pools back to standard NAT sizes later)
-            if (q.section === 'english') sections.english.push(formatted);
-            else if (q.section === 'analytical') sections.analytical.push(formatted);
-            else if (q.section === 'quantitative') sections.quantitative.push(formatted);
-            else sections.subject.push(formatted);
-          });
-        }
-      } catch (e) {
-        console.error('Supabase fetch failed:', e);
-      }
+      // Note: Only using local question bank. Supabase questions table contains
+      // mislabeled/duplicate data and is not used for mock tests.
 
       // 3. Flatten and limit to standard NAT counts (shuffled)
       const all = [

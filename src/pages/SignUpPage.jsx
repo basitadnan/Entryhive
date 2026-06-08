@@ -119,6 +119,11 @@ export default function SignUpPage() {
               />
             </div>
 
+            <p className="text-[10px] text-muted-foreground text-center leading-relaxed">
+              By creating an account, you agree to our{' '}
+              <Link to="/legal" className="text-primary hover:underline font-medium">Privacy Policy & Terms of Service</Link>.
+            </p>
+
             <Button type="submit" disabled={loading} className="w-full h-12 rounded-xl text-base font-semibold gap-2 glow-primary mt-2">
               {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Create Account <ArrowRight className="w-4 h-4" /></>}
             </Button>

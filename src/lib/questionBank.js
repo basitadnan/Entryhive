@@ -926,6 +926,12 @@ const englishQuestionsExtra = [
   {id:"en2_48",question:"'Obsequious' means:",options:["Rude and arrogant","Excessively compliant","Independent","Defiant"],correct:1,explanation:"Obsequious means excessively servile or compliant.",difficulty:"hard",topic:"Synonyms"},
   {id:"en2_49",question:"The sentence 'Hardly had he arrived when the phone rang' is an example of:",options:["Simple sentence","Compound sentence","Complex sentence","Inverted sentence"],correct:3,explanation:"Starting with 'Hardly' causes inversion of subject and auxiliary.",difficulty:"hard",topic:"Grammar"},
   {id:"en2_50",question:"Choose the correct preposition: 'She insisted _____ going alone.'",options:["on","in","for","at"],correct:0,explanation:"'Insist on' is the correct prepositional phrase.",difficulty:"medium",topic:"Grammar"},
+  {id:"en2_51",question:"Tree : Forest :: Fish : ___",options:["Water","River","Shoal","Pond"],correct:2,explanation:"Trees form a forest; fish form a shoal.",difficulty:"easy",topic:"Analogies"},
+  {id:"en2_52",question:"Doctor : Hospital :: Judge : ___",options:["Police","Prison","Court","Law"],correct:2,explanation:"A doctor works in a hospital; a judge works in a court.",difficulty:"easy",topic:"Analogies"},
+  {id:"en2_53",question:"Pen : Write :: Scissors : ___",options:["Paper","Cut","Draw","Sew"],correct:1,explanation:"A pen is used to write; scissors are used to cut.",difficulty:"easy",topic:"Analogies"},
+  {id:"en2_54",question:"Mountain : Hill :: Ocean : ___",options:["River","Pond","Lake","Stream"],correct:2,explanation:"A mountain is a large hill; an ocean is a large lake (in relative terms).",difficulty:"easy",topic:"Analogies"},
+  {id:"en2_55",question:"Cold : Ice :: Heat : ___",options:["Fire","Sun","Steam","Warmth"],correct:0,explanation:"Cold produces ice; heat produces fire.",difficulty:"easy",topic:"Analogies"},
+  {id:"en2_56",question:"Synonyms: Brave : Cowardly :: Fast : ___",options:["Slow","Quick","Swift","Speedy"],correct:0,explanation:"Brave and cowardly are antonyms; fast and slow are antonyms.",difficulty:"easy",topic:"Analogies"},
 ];
 
 // ADDITIONAL ANALYTICAL QUESTIONS (from uploaded file)
@@ -940,11 +946,6 @@ const analyticalQuestionsExtra = [
   {id:"an2_8",question:"0.5, 1, 1.5, 2, ___",options:["2.5","3.0","3.5","4.0"],correct:0,explanation:"Add 0.5 each time. 2 + 0.5 = 2.5.",difficulty:"easy",topic:"Pattern Recognition"},
   {id:"an2_9",question:"M, N, P, S, ___",options:["V","W","X","Y"],correct:1,explanation:"Gaps +1, +2, +3, +4: S + 4 = W.",difficulty:"medium",topic:"Pattern Recognition"},
   {id:"an2_10",question:"5, 10, 20, 40, ___",options:["70","75","80","85"],correct:2,explanation:"Each term doubles. 40 × 2 = 80.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_11",question:"Tree : Forest :: Fish : ___",options:["Water","River","Shoal","Pond"],correct:2,explanation:"Trees form a forest; fish form a shoal.",difficulty:"easy",topic:"Analogies"},
-  {id:"an2_12",question:"Doctor : Hospital :: Judge : ___",options:["Police","Prison","Court","Law"],correct:2,explanation:"A doctor works in a hospital; a judge works in a court.",difficulty:"easy",topic:"Analogies"},
-  {id:"an2_13",question:"Pen : Write :: Scissors : ___",options:["Paper","Cut","Draw","Sew"],correct:1,explanation:"A pen is used to write; scissors are used to cut.",difficulty:"easy",topic:"Analogies"},
-  {id:"an2_14",question:"Mountain : Hill :: Ocean : ___",options:["River","Pond","Lake","Stream"],correct:2,explanation:"A mountain is a large hill; an ocean is a large lake (in relative terms).",difficulty:"easy",topic:"Analogies"},
-  {id:"an2_15",question:"Cold : Ice :: Heat : ___",options:["Fire","Sun","Steam","Warmth"],correct:0,explanation:"Cold produces ice; heat produces fire.",difficulty:"easy",topic:"Analogies"},
   {id:"an2_16",question:"Ali is taller than Bilal. Bilal is taller than Chaand. Dawood is shorter than Chaand. Who is tallest?",options:["Bilal","Chaand","Ali","Dawood"],correct:2,explanation:"Ali > Bilal > Chaand > Dawood. Ali is tallest.",difficulty:"easy",topic:"Scenario Based"},
   {id:"an2_17",question:"Statement: All pens are pencils. All pencils are erasers. Conclusion: All pens are erasers.",options:["True","False","Uncertain","Partially true"],correct:0,explanation:"By syllogism: all pens are pencils, all pencils are erasers → all pens are erasers.",difficulty:"medium",topic:"Statements Based"},
   {id:"an2_18",question:"If A is the sister of B, B is the brother of C, C is the mother of D. What is A's relation to D?",options:["Mother","Aunt","Sister","Grandmother"],correct:1,explanation:"A is B's sister. B is C's brother. C is D's mother. So A is D's aunt.",difficulty:"medium",topic:"Scenario Based"},
@@ -972,7 +973,6 @@ const analyticalQuestionsExtra = [
   {id:"an2_40",question:"Find the missing number: 3, 7, 15, 31, ___",options:["53","63","61","57"],correct:1,explanation:"Pattern: ×2 + 1. 3×2+1=7, 7×2+1=15, 15×2+1=31, 31×2+1=63.",difficulty:"medium",topic:"Pattern Recognition"},
   {id:"an2_41",question:"Which letter is 7th to the right of the 10th letter from left in the alphabet?",options:["Q","R","S","T"],correct:2,explanation:"10th letter from left = J. 7th to right of J = Q. Actually J is 10th, +7 = 17th = Q. Answer: Q.",difficulty:"medium",topic:"Pattern Recognition"},
   {id:"an2_42",question:"Five friends P, Q, R, S, T sit in a circle. P is opposite S. Q is to the right of P. T is between S and R. Who is opposite Q?",options:["R","S","T","P"],correct:0,explanation:"Working out circular seating: R is opposite Q.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"an2_43",question:"Synonyms: Brave : Cowardly :: Fast : ___",options:["Slow","Quick","Swift","Speedy"],correct:0,explanation:"Brave and cowardly are antonyms; fast and slow are antonyms.",difficulty:"easy",topic:"Analogies"},
   {id:"an2_44",question:"What is the next in the series: AB, EF, IJ, MN, ___?",options:["OP","PQ","QR","RS"],correct:1,explanation:"Skip 2 letters each pair: AB, EF, IJ, MN, QR.",difficulty:"medium",topic:"Pattern Recognition"},
   {id:"an2_45",question:"In a family: A is father, B is son of A, C is brother of B, D is mother. Who is C to D?",options:["Son","Husband","Nephew","Father"],correct:0,explanation:"D is mother of the family. C is brother of B who is son of A. So C is also D's son.",difficulty:"easy",topic:"Scenario Based"},
   {id:"an2_46",question:"If all Zs are Ys, and no Ys are Xs, what can we conclude?",options:["Some Zs are Xs","No Zs are Xs","All Zs are Xs","Cannot determine"],correct:1,explanation:"If all Zs are Ys and no Ys are Xs, then no Zs are Xs (by syllogism).",difficulty:"medium",topic:"Statements Based"},
@@ -1323,7 +1323,9 @@ const newQuantQuestions = [
 
 export function getQuestions(section, difficulty = 'all', count = 10, usedIds = [], subTopic = null) {
   let pool;
-  switch (section) {
+  const normalizedSection = section.toLowerCase();
+  console.log(`[getQuestions] requested section: "${section}", normalized: "${normalizedSection}"`);
+  switch (normalizedSection) {
     case 'english': pool = [...englishQuestions, ...englishQuestionsExtra]; break;
     case 'analytical': pool = [...analyticalQuestions, ...analyticalQuestionsExtra, ...countrySocietyStatements]; break;
     case 'quantitative': pool = [...quantitativeQuestions, ...quantitativeQuestionsExtra, ...newQuantQuestions, ...workAgePercentageProbabilityQuestions]; break;
@@ -1335,8 +1337,11 @@ export function getQuestions(section, difficulty = 'all', count = 10, usedIds = 
     case 'commerce': pool = commerceQuestions; break;
     case 'accounting': pool = accountingQuestions; break;
     case 'economics': pool = economicsQuestions; break;
-    default: pool = [...englishQuestions, ...englishQuestionsExtra];
+    default: 
+      console.log(`[getQuestions] WARNING: section "${normalizedSection}" not found, returning empty array.`);
+      pool = [];
   }
+  console.log(`[getQuestions] found ${pool.length} questions for ${normalizedSection}`);
 
   const customQs = getCustomQuestions().filter(q => q.section.toLowerCase() === section.toLowerCase());
   pool = [...pool, ...customQs];
@@ -1357,7 +1362,7 @@ export function getQuestions(section, difficulty = 'all', count = 10, usedIds = 
       grammar: ['Grammar'],
       // Analytical
       statements_based: ['Statements Based'],
-      scenario_based: ['Scenario Based', 'Analogies', 'Ranking', 'Direction', 'Relationships', 'Coding'],
+      scenario_based: ['Scenario Based', 'Ranking', 'Direction', 'Relationships', 'Coding'],
       // Quantitative
       arithmetic: ['Arithmetic'],
       algebra: ['Algebra'],

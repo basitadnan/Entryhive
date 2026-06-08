@@ -6,6 +6,7 @@ import { Upload, CheckCircle2, AlertCircle, Loader2, Database, FileText } from '
 import { db } from '@/lib/dbClient';
 import { supabase } from '@/lib/supabaseClient';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 export default function AdminImporter() {
   const [files, setFiles] = useState([]);
@@ -124,12 +125,26 @@ export default function AdminImporter() {
     setStatus('importing');
     setProgress(0);
 
-    // 1. Fetch existing questions to skip duplicates (high limit to ensure all are checked)
-    const { data: existingData } = await supabase.from('questions').select('question_text').limit(100000);
-    const existingSet = new Set(existingData?.map(q => q.question_text) || []);
+    const batchSize = 100;
+    let successCount = 0;
+
+    // 1. Fetch existing questions to skip duplicates in chunks of 100
+    const parsedTexts = parsedData.map(q => q.question_text);
+    const existingTextsSet = new Set();
+    
+    for (let j = 0; j < parsedTexts.length; j += 100) {
+      const chunk = parsedTexts.slice(j, j + 100);
+      const { data: existingQs, error } = await supabase
+        .from('questions')
+        .select('question_text')
+        .in('question_text', chunk);
+      if (!error && existingQs) {
+        existingQs.forEach(eq => existingTextsSet.add(eq.question_text));
+      }
+    }
     
     // 2. Filter data
-    const filteredData = parsedData.filter(q => !existingSet.has(q.question_text));
+    const filteredData = parsedData.filter(q => !existingTextsSet.has(q.question_text));
     const skippedCount = parsedData.length - filteredData.length;
 
     if (filteredData.length === 0) {
@@ -141,8 +156,8 @@ export default function AdminImporter() {
 
     for (let i = 0; i < filteredData.length; i += batchSize) {
       const batch = filteredData.slice(i, i + batchSize).map(q => ({
-        category: q.section.toLowerCase(),
-        question: q.question_text,
+        section: q.section.toLowerCase(),
+        question_text: q.question_text,
         options: q.options,
         correct_answer_index: q.correct_answer_index,
         explanation: q.explanation,

@@ -78,8 +78,8 @@ export default function Practice() {
   function canAccessSection(sec) { if (isPremium) return true; return getCompletedCount(sec) < getFreeLimitForSection(sec); }
   function getSectionStatus(sec) { if (isPremium) return null; const limit = getFreeLimitForSection(sec); const used = getCompletedCount(sec); if (used >= limit) return `🔒 ${used}/${limit} used`; return `${used}/${limit} free`; }
 
-  const inProgressSession = section ? getInProgressSession(section) : null;
-  const hasInProgress = !!inProgressSession;
+  const inProgressSession = null;
+  const hasInProgress = false;
 
   const difficulties = [
     { value: 'all', label: 'All' },
@@ -100,22 +100,13 @@ export default function Practice() {
     sounds.click();
     if (!canAccessSection(section)) { navigate('/premium'); return; }
     const params = `section=${section}&difficulty=${difficulty}&count=${questionCount}${subTopic !== 'all' ? `&subTopic=${subTopic}` : ''}`;
-    if (hasInProgress) {
-      navigate(`/practice-session?${params}&resume=${inProgressSession.id}`);
-    } else {
-      navigate(`/practice-session?${params}`);
-    }
+    navigate(`/practice-session?${params}`);
   };
 
   const handleQuickStart = (sec) => {
     sounds.click();
     if (!canAccessSection(sec)) { navigate('/premium'); return; }
-    const existing = getInProgressSession(sec);
-    if (existing) {
-      navigate(`/practice-session?section=${sec}&difficulty=all&count=10&resume=${existing.id}`);
-    } else {
-      navigate(`/practice-session?section=${sec}&difficulty=all&count=10`);
-    }
+    navigate(`/practice-session?section=${sec}&difficulty=all&count=10`);
   };
 
   return (
@@ -178,7 +169,6 @@ export default function Practice() {
                     <span>{getSectionIcon(s)}</span>
                     <div className="text-left">
                       <span className="font-medium text-sm">{getSectionLabel(s)}</span>
-                      {inProgress && <p className="text-xs mt-0.5 text-amber-400">⚡ Resume available</p>}
                       {!inProgress && status && <p className={`text-xs mt-0.5 ${locked ? 'text-red-400' : 'text-muted-foreground'}`}>{status}</p>}
                     </div>
                   </div>
@@ -237,43 +227,33 @@ export default function Practice() {
           )}
         </AnimatePresence>
 
-        {hasInProgress && section && (
-          <Card className="p-3 bg-amber-500/10 border-amber-500/30">
-            <p className="text-sm text-amber-300">⚡ You have an unfinished {getSectionLabel(section)} session. Starting will <strong>resume</strong> it.</p>
-          </Card>
-        )}
-
         {/* Difficulty */}
-        {!hasInProgress && (
-          <div>
-            <p className="text-sm font-medium mb-3">Difficulty</p>
-            <div className="flex gap-2 flex-wrap">
-              {difficulties.map((d) => (
-                <button
-                  key={d.value}
-                  onClick={() => { sounds.select(); setDifficulty(d.value); }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${difficulty === d.value ? 'bg-primary text-primary-foreground scale-105' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}`}
-                >
-                  {d.label}
-                </button>
-              ))}
-            </div>
+        <div>
+          <p className="text-sm font-medium mb-3">Difficulty</p>
+          <div className="flex gap-2 flex-wrap">
+            {difficulties.map((d) => (
+              <button
+                key={d.value}
+                onClick={() => { sounds.select(); setDifficulty(d.value); }}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${difficulty === d.value ? 'bg-primary text-primary-foreground scale-105' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}`}
+              >
+                {d.label}
+              </button>
+            ))}
           </div>
-        )}
+        </div>
 
         {/* Question Count */}
-        {!hasInProgress && (
-          <div>
-            <div className="flex justify-between items-center mb-3">
-              <p className="text-sm font-medium">Number of Questions:</p>
-              <motion.span key={questionCount} initial={{ scale: 1.4 }} animate={{ scale: 1 }} className="text-primary font-bold text-lg">
-                {questionCount}
-              </motion.span>
-            </div>
-            <Slider value={[questionCount]} onValueChange={(v) => setQuestionCount(v[0])} min={5} max={20} step={5} className="w-full" />
-            <div className="flex justify-between text-xs text-muted-foreground mt-1"><span>5</span><span>20</span></div>
+        <div>
+          <div className="flex justify-between items-center mb-3">
+            <p className="text-sm font-medium">Number of Questions:</p>
+            <motion.span key={questionCount} initial={{ scale: 1.4 }} animate={{ scale: 1 }} className="text-primary font-bold text-lg">
+              {questionCount}
+            </motion.span>
           </div>
-        )}
+          <Slider value={[questionCount]} onValueChange={(v) => setQuestionCount(v[0])} min={5} max={20} step={5} className="w-full" />
+          <div className="flex justify-between text-xs text-muted-foreground mt-1"><span>5</span><span>20</span></div>
+        </div>
 
         <motion.div whileTap={{ scale: 0.97 }}>
           <Button

@@ -43,9 +43,24 @@ export default function BankImporter() {
     const questions = [];
     let currentQ = null;
 
-    // Detect section from filename
-    const sections = ['english', 'analytical', 'quantitative', 'physics', 'chemistry', 'mathematics', 'biology', 'computer_science', 'commerce', 'accounting', 'economics'];
-    const category = sections.find(s => filename.toLowerCase().includes(s)) || 'english';
+    // Detect section from filename with support for common abbreviations
+    const fn = filename.toLowerCase();
+    let category = null;
+
+    if (fn.includes('english') || fn.includes('eng')) category = 'english';
+    else if (fn.includes('analytical') || fn.includes('analyt') || fn.includes('reasoning')) category = 'analytical';
+    else if (fn.includes('quantitative') || fn.includes('quant')) category = 'quantitative';
+    else if (fn.includes('physics') || fn.includes('phy')) category = 'physics';
+    else if (fn.includes('chemistry') || fn.includes('chem')) category = 'chemistry';
+    else if (fn.includes('mathematics') || fn.includes('math')) category = 'mathematics';
+    else if (fn.includes('biology') || fn.includes('bio')) category = 'biology';
+    else if (fn.includes('computer') || fn.includes('cs') || fn.includes('comp')) category = 'computer_science';
+    else if (fn.includes('commerce')) category = 'commerce';
+    else if (fn.includes('accounting') || fn.includes('acc')) category = 'accounting';
+    else if (fn.includes('economics') || fn.includes('eco')) category = 'economics';
+    else {
+      throw new Error(`Could not detect subject from filename "${filename}". Please rename the file to include the subject name (e.g., "english_bank.txt", "cs_questions.txt", "math_test.txt").`);
+    }
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
@@ -98,32 +113,52 @@ export default function BankImporter() {
     let totalSkipped = 0;
     let fileReports = [];
 
-    // 1. Fetch all existing question texts for duplicate checking (high limit to ensure all are checked)
-    const { data: existingData } = await supabase.from('questions').select('question_text').limit(100000);
-    const existingSet = new Set(existingData?.map(q => q.question_text) || []);
-
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const content = await file.text();
-      const parsedQs = parseFile(content, file.name);
-      
-      // 2. Filter duplicates
-      const newQs = parsedQs.filter(q => !existingSet.has(q.question_text));
-      const skippedCount = parsedQs.length - newQs.length;
-      
-      if (newQs.length > 0) {
-        const { error } = await supabase.from('questions').insert(newQs);
-        if (error) {
-          toast.error(`Error in ${file.name}: ${error.message}`);
+      try {
+        const content = await file.text();
+        const parsedQs = parseFile(content, file.name);
+        
+        if (parsedQs.length === 0) {
+          toast.warning(`No valid questions found in ${file.name}`);
+          fileReports.push({ name: file.name, added: 0, skipped: 0 });
+          setProgress(Math.round(((i + 1) / files.length) * 100));
           continue;
         }
-        totalAdded += newQs.length;
-        // Add new ones to the set to prevent duplicates within the same upload session
-        newQs.forEach(q => existingSet.add(q.question_text));
+
+        // Fetch existing questions among these texts in chunks of 100
+        const parsedTexts = parsedQs.map(q => q.question_text);
+        const existingTextsSet = new Set();
+        
+        for (let j = 0; j < parsedTexts.length; j += 100) {
+          const chunk = parsedTexts.slice(j, j + 100);
+          const { data: existingQs, error } = await supabase
+            .from('questions')
+            .select('question_text')
+            .in('question_text', chunk);
+          if (!error && existingQs) {
+            existingQs.forEach(eq => existingTextsSet.add(eq.question_text));
+          }
+        }
+        
+        const newQs = parsedQs.filter(q => !existingTextsSet.has(q.question_text));
+        const skippedCount = parsedQs.length - newQs.length;
+        
+        if (newQs.length > 0) {
+          const { error } = await supabase.from('questions').insert(newQs);
+          if (error) {
+            toast.error(`Error in ${file.name}: ${error.message}`);
+            continue;
+          }
+          totalAdded += newQs.length;
+        }
+        
+        totalSkipped += skippedCount;
+        fileReports.push({ name: file.name, added: newQs.length, skipped: skippedCount });
+      } catch (err) {
+        toast.error(`Failed to parse/import ${file.name}: ${err.message}`);
+        console.error(err);
       }
-      
-      totalSkipped += skippedCount;
-      fileReports.push({ name: file.name, added: newQs.length, skipped: skippedCount });
       setProgress(Math.round(((i + 1) / files.length) * 100));
     }
 

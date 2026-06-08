@@ -43,6 +43,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import LoginCallback from './pages/LoginCallback';
 import BankImporter from './pages/BankImporter';
+import Legal from './pages/Legal';
 
 const AuthenticatedApp = () => {
   const { authError, isAuthenticated } = useAuth();
@@ -62,6 +63,7 @@ const AuthenticatedApp = () => {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login-callback" element={<LoginCallback />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="/legal" element={<Legal />} />
         <Route path="*" element={<Navigate to="/landing" replace />} />
       </Routes>
     );
@@ -100,6 +102,7 @@ const AuthenticatedApp = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/landing" element={<Landing />} />
+      <Route path="/legal" element={<Legal />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate, useOutletContext } from 'react-router-dom';
+import { useNavigate, useOutletContext, useLocation } from 'react-router-dom';
 import { base44 } from '@/lib/dbClient';
 import { supabase } from '@/lib/supabaseClient';
 import { Card } from '@/components/ui/card';
@@ -16,12 +16,15 @@ import { sounds } from '@/lib/sounds';
 export default function PracticeSession() {
   const { user, setUser } = useOutletContext();
   const navigate = useNavigate();
-  const params = new URLSearchParams(window.location.search);
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
   const section = params.get('section') || 'english';
   const difficulty = params.get('difficulty') || 'all';
   const count = parseInt(params.get('count') || '10');
   const resumeId = params.get('resume');
   const subTopic = params.get('subTopic') || null;
+
+  console.log(`[PracticeSession Mount] section=${section}, subTopic=${subTopic}`);
 
   const [sessionId, setSessionId] = useState(null); // DB record ID
   const [questions, setQuestions] = useState([]);
@@ -37,57 +40,11 @@ export default function PracticeSession() {
   // On mount: either resume existing session or start new one
   useEffect(() => {
     async function init() {
-      if (resumeId) {
-        // Load existing in-progress session by ID
-        try {
-          const { data: allSessions, error } = await supabase.from('PracticeSession').select('*').order('created_date', { ascending: false }).limit(200);
-          if (!error && allSessions) {
-            const existing = allSessions.find(s => s.id === resumeId && !s.completed);
-            if (existing && existing.questions_json) {
-              const parsedQs = JSON.parse(existing.questions_json);
-              const parsedAnswers = existing.answers_json ? JSON.parse(existing.answers_json) : [];
-              setSessionId(existing.id);
-              setQuestions(parsedQs);
-              setAnswers(parsedAnswers);
-              setCurrentIndex(parsedAnswers.length);
-              setLoading(false);
-              return;
-            }
-          }
-        } catch (e) {
-          // fall through to create new
-        }
-      }
-
-      // 1. Get questions from local bank (includes hardcoded + Bank tab questions)
+      // Get questions from local bank only (hardcoded + custom questions)
+      // Note: Supabase questions table is not used for practice sessions because
+      // it contains mislabeled/duplicate data. The local bank has 1400+ properly
+      // categorized questions which is sufficient.
       let qs = getQuestions(section, difficulty, count, [], subTopic);
-
-      // 2. Fetch questions from Supabase for this section
-      try {
-        const { data: dbQs, error: dbError } = await supabase
-          .from('questions')
-          .select('*')
-          .eq('section', section.toLowerCase())
-          .eq('is_past_paper', false)
-          .limit(count);
-
-        if (!dbError && dbQs && dbQs.length > 0) {
-          // Format Supabase questions to match app format
-          const formattedDbQs = dbQs.map(q => ({
-            id: q.id,
-            question: q.question_text,
-            options: q.options,
-            correct: q.correct_answer_index,
-            explanation: q.explanation,
-            difficulty: q.difficulty
-          }));
-          
-          // Combine and shuffle (limit back to desired count)
-          qs = [...qs, ...formattedDbQs].sort(() => Math.random() - 0.5).slice(0, count);
-        }
-      } catch (e) {
-        console.error('Failed to fetch from Supabase:', e);
-      }
 
       const { data: record, error } = await supabase.from('PracticeSession').insert({
         user_email: user.email,
@@ -259,9 +216,22 @@ export default function PracticeSession() {
         <button onClick={() => { sounds.click(); navigate('/practice'); }} className="text-sm text-muted-foreground flex items-center gap-1">
           <ArrowLeft className="w-4 h-4" /> Exit
         </button>
+        <span className="text-xs font-semibold text-primary uppercase border border-primary/30 px-2 py-0.5 rounded-full bg-primary/10">
+          {section}
+        </span>
         <motion.span key={currentIndex} initial={{ scale: 1.3, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-sm font-medium">
           {currentIndex + 1} / {questions.length}
         </motion.span>
+      </div>
+
+      <div className="bg-red-500/10 border border-red-500/30 p-2 rounded text-xs flex justify-between items-center">
+        <span>Debug: Loaded {questions.length} Qs. 1st Q: "{questions[0]?.question?.substring(0,30)}..."</span>
+        <button 
+          onClick={() => { localStorage.clear(); sessionStorage.clear(); window.location.href='/practice'; }}
+          className="bg-red-500 text-white px-2 py-1 rounded"
+        >
+          Reset Cache
+        </button>
       </div>
 
       <Progress value={progress} className="h-2" />
