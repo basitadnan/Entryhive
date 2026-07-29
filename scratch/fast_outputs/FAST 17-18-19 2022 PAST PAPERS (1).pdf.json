@@ -1,0 +1,598 @@
+[
+  {
+    "id": "fast_test_Q_001",
+    "text": "y= x² Find the slope at (2,1).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_002",
+    "text": "Find the slope of equation 7x³+y = 5x-3 at (2,5).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_003",
+    "text": "Evaluate Σ (-1)ⁿ (2)ⁿ from n=0 to ∞.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_004",
+    "text": "Given e = 1/e and e = 2 mod 1, and the equation of ellipse is x²/a² + y²/b² = 1. What is implied or to be found?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_005",
+    "text": "Find the inverse of x = 5y+7.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_006",
+    "text": "Evaluate Sin (-3π/2).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_007",
+    "text": "Given y = (-x+7)², find its inverse. In which quadrant does its inverse lie?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_008",
+    "text": "Find sin x given a right triangle with angle x, opposite side 2, adjacent side √3, and hypotenuse 9 (Note: triangle numbers are inconsistent).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_009",
+    "text": "Which of the following is the correct formula for the radius of an escribed circle?",
+    "options": [
+      "r_a = A/(s-a)",
+      "r_c = A/(s-c)",
+      "r_c = A/(s-c)"
+    ],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_010",
+    "text": "A ∪ B = A if:",
+    "options": [
+      "A ⊂ B",
+      "B ⊂ A",
+      "None"
+    ],
+    "correctAnswer": "B ⊂ A",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_011",
+    "text": "In the expansion of (1-x)⁻², what is the 3rd term?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_012",
+    "text": "The sum of an infinite geometric series is 10, and its first term is 2. Find the common ratio (r).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_013",
+    "text": "Evaluate ∫ (1-sin x)² dx.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_014",
+    "text": "Evaluate 2 sin(π/7) sin(2π/7) sin(3π/7).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_015",
+    "text": "Evaluate lim (x->0) (aˣ - 1) / x.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_016",
+    "text": "If x²/a² + y²/b² = 1, then what is the eccentricity?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_017",
+    "text": "Which of the following relations is correct for a conic section?",
+    "options": [
+      "a² = a²(e²-1)",
+      "b² = a²(e²-1)",
+      "b² = e²(c²-1)"
+    ],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_018",
+    "text": "The roots of the quadratic equation x² + 2x + 4 = 0 are:",
+    "options": [
+      "1+2i",
+      "more options"
+    ],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_019",
+    "text": "Evaluate d/dx (e^(3x²+2x+1)).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_020",
+    "text": "Find the angle between the lines 2y = x+n and 4y+8x = 1.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_021",
+    "text": "Evaluate i x (j x k).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_022",
+    "text": "Evaluate lim (x->π/4) (cos x - sin x) / (sin x - cos x).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_023",
+    "text": "If θ₂ = 2π/3 then what is the length?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_024",
+    "text": "Given vector V = 0ai + a20j + ak, for what value of a is V a null vector?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_025",
+    "text": "Find the argument of the complex number (-1+i).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_026",
+    "text": "There are 20 boys and 8 girls including a specific brother and sister. Find the probability that the monitor is either the brother or the sister.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_027",
+    "text": "If log₂(98) / log₂(7) = n, find n.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_028",
+    "text": "If an amount increases by 20% and then decreases by 20%, what is the total percentage decrease?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_029",
+    "text": "The average speed is 4 miles/hr and the distance is 48 feet. Find the time taken.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_030",
+    "text": "If log(2) = 0.477 and log(64) = x, then what is x?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_031",
+    "text": "Evaluate (111111) ÷ 101.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_032",
+    "text": "Find the next number in the sequence: 3, 7, 15, 27, 43, 63, x.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q_033",
+    "text": "Find the next number in the sequence: 0, 7, 26, x.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q_034",
+    "text": "Evaluate √((cos10°-sin10°)² + 4sin10°cos10°).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_035",
+    "text": "Evaluate W^73 (assuming W is a complex cube root of unity).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_036",
+    "text": "The property used when a.1 = a is the:",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_037",
+    "text": "A linear equation in two variables represents a relation. Which statement best describes it?",
+    "options": [
+      "Many relation",
+      "Every relation",
+      "Onto function"
+    ],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_038",
+    "text": "Find the sum of the series: (p-q), (p-2q), (p-3q), ..., (p-12q).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_039",
+    "text": "Find the range of (-1/4) sin(4x).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_040",
+    "text": "Evaluate C(n, r-1) + C(n, r).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_041",
+    "text": "The matrix [[n, -2i], [7i, n]] is Skew-Hermitian. Then find the value of n.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_042",
+    "text": "Distance is given by D = 1+t+t³. Find the acceleration.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "physics"
+  },
+  {
+    "id": "fast_test_Q_043",
+    "text": "Evaluate ∫ from 0 to π/2 of (sin x cos x) dx.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_044",
+    "text": "Evaluate ∫ 1/√(a²-x²) dx.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_045",
+    "text": "What is the sign of tan(-1000°)?",
+    "options": [
+      "1",
+      "0",
+      "+ve",
+      "-ve"
+    ],
+    "correctAnswer": "+ve",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_046",
+    "text": "Evaluate lim (x->2) (√(x+7) + x).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_047",
+    "text": "Given Radius = 6cm and angle subtended = 2π/3, find the length of the arc.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_048",
+    "text": "Find the point dividing (7,8) and (3,1) in the ratio 1:2.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_049",
+    "text": "For the ellipse x²/a² + y²/b² = 1, what are the foci?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_050",
+    "text": "What is the sample space when a coin is tossed twice?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_051",
+    "text": "The side of an equilateral triangle is 1cm. Find its in-radius (r).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_052",
+    "text": "Find the principal value of Sin⁻¹(cos45°).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_053",
+    "text": "State the limit property for powers: lim (x->a) [f(x)]ⁿ = ?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_054",
+    "text": "Given the equation of a circle x² + y² - 2r sin θ x + 2r cos θ y + r² = 0, find its center.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_055",
+    "text": "Find the equation of the line whose slope is -3 and which passes through (1,2).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_056",
+    "text": "Evaluate tan(27π/6 + θ).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_057",
+    "text": "Given the equation of a circle x² + y² - 10x + 12y - 39 = 0, find its radius.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_058",
+    "text": "Two vectors are parallel when:",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_059",
+    "text": "Evaluate (4+2i) / (5+2i).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_060",
+    "text": "Evaluate the sum 1+2+3+4+...+n.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_061",
+    "text": "For the function f(x) = 3x²-9x+2 in the interval (1,2), is it:",
+    "options": [
+      "increasing",
+      "decreasing",
+      "strictly decreasing"
+    ],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_062",
+    "text": "State the definition of a hyperbola.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_063",
+    "text": "Evaluate the determinant of the matrix [[1,1,1,1], [4,2,1,8], [2,2,2,2], [6,1,2,1]].",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_064",
+    "text": "If y = 3ˣ sin x², then find dy/dx.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_065",
+    "text": "Evaluate ∫ f(x) dx.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_066",
+    "text": "Evaluate d/dx (tan⁻¹(1/x)).",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_067",
+    "text": "Two vectors V1 = 3i - yj and V2 = 3i - j are collinear if y = ?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_068",
+    "text": "If * is a binary operation on a set A, containing a,b,c, find the associative property.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_069",
+    "text": "Given a right triangle with angle B, opposite side √3, and adjacent side 1, find tan B.",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q_070",
+    "text": "What is the dot product of a vector (V1i + V2j + V3k) with its own unit vector?",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_071",
+    "text": "Find the next value in the sequence: 1, 2, 3, 1, 4, 5, 1, 5, 6, ...",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "iq"
+  }
+]

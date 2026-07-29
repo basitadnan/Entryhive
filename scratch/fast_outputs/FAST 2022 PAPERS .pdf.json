@@ -1,0 +1,290 @@
+[
+    {
+        "id": "fast_2022_p1_q1",
+        "text": "The Parametric equations x = a Secθ, y = b tanθ are of:",
+        "options": ["Parabola", "Ellipse", "Circle", "Hyperbola"],
+        "correctAnswer": "Hyperbola",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p1_q2",
+        "text": "Lim x^(3/2) - x^(1/2) / √x  as x -> 0",
+        "options": ["π", "0", "-1", "1"],
+        "correctAnswer": "0",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p1_q3",
+        "text": "Two vectors 3i-6j+k and zi-uj+k are parallel then what is the value of λ?",
+        "options": ["-2", "3/2", "-3/2", "2/3"],
+        "correctAnswer": "",
+        "explanation": "The question is ambiguous in defining λ and the second vector's coefficients (z, u). No standard interpretation leads to any of the given options.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p1_q4",
+        "text": "∫ ln(lnx) / x dx",
+        "options": ["lnx + C", "lnx^2/2 + C", "lnx[ln(lnx)-1] + C", "lnx[ln(lnx)-1]/2 + C"],
+        "correctAnswer": "lnx[ln(lnx)-1] + C",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p1_q5",
+        "text": "4R Sin A Sin B Sin C / 2 = ?",
+        "options": ["r", "R", "r_a", "r_b"],
+        "correctAnswer": "",
+        "explanation": "The expression 2R Sin A Sin B Sin C does not simplify to any of the standard radii (inradius, circumradius, exradii) provided in the options.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p1_q6",
+        "text": "\"Womens get less salary as compared to men despite of having more responsibilities\". By this statement what does author mean?",
+        "options": ["Womens are lazy", "Men are smart", "Men should help with household", "Women are not equally treated as men."],
+        "correctAnswer": "Women are not equally treated as men.",
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_2022_p1_q7",
+        "text": "Sin 300° = ?",
+        "options": ["Cos 120°", "Sin 120°", "Sin 240°", "Cos 300°"],
+        "correctAnswer": "Cos 120°",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p2_q1",
+        "text": "If V₁ = 3i-j; V₂ = 3i-yj are Collinear then y = ?",
+        "options": ["0", "-1", "1", "5", "3"],
+        "correctAnswer": "1",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p2_q2",
+        "text": "In the given figure; tanβ = ?",
+        "options": ["1/2", "-1", "1", "√3", "1/√3"],
+        "correctAnswer": "1",
+        "explanation": "Assuming the hypotenuse is √2 and the adjacent side BC is 1, then the opposite side AC must be 1 (by Pythagorean theorem). Thus, tanβ = Opposite/Adjacent = 1/1 = 1.",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p2_q3",
+        "text": "If two tangents are drawn from a point P to an ellipse then the two tangents will meet at;",
+        "options": ["y=11", "x=11", "y=∞", "x=∞", "no point"],
+        "correctAnswer": "",
+        "explanation": "Tangents drawn from an external point P to an ellipse will always meet at point P itself. None of the given options represent this fact.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p2_q4",
+        "text": "two lines 3x-4y=5 and 12x-16y=20 then they will have how many common solutions?",
+        "options": ["1", "0", "Infinite", "none of these"],
+        "correctAnswer": "Infinite",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p2_q5",
+        "text": "19% of 2.8 is;",
+        "options": ["0.58", "0.486", "0.532", "0.814"],
+        "correctAnswer": "0.532",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p2_q6",
+        "text": "a . b + a . c = ?",
+        "options": ["a x (b+c)", "c+a/b+a", "b(a+c)", "a(b+c)", "c(a+b)"],
+        "correctAnswer": "a(b+c)",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p3_q1",
+        "text": "lim x->∞ (x²-25) / (x+6)",
+        "options": ["0", "14", "∞", "9"],
+        "correctAnswer": "∞",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p3_q2",
+        "text": "lim θ->0 (cos 2θ) / (sin θ - cos θ)",
+        "options": ["√3", "-√2", "∞", "0/0"],
+        "correctAnswer": "",
+        "explanation": "Substituting θ=0 gives cos(0)/(sin(0)-cos(0)) = 1/(0-1) = -1. This value is not among the options.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p3_q3",
+        "text": "1²+2²+3²+....+n² =",
+        "options": ["n(n+1)/2", "2n²-1", "n(n+1)(2n+1)/2", "n(n+1)(2n+1)/6"],
+        "correctAnswer": "n(n+1)(2n+1)/6",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p3_q4",
+        "text": "Let x²/12 + y²/13 = 1 be the equation of an ellipse, then a circle with centre at (0,0) and radius = 3 intersect or touches the ellipse in ______ points.",
+        "options": ["0", "1", "2", "3", "4"],
+        "correctAnswer": "0",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p3_q5",
+        "text": "If y = ln(x) then dy/dx = ?",
+        "options": ["0", "-x²", "1/x", "-1/x²", "x"],
+        "correctAnswer": "1/x",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p3_q6",
+        "text": "If i, j are the unit vectors along x and y-axis respectively then i x j = ?",
+        "options": ["k", "0", "iz", "jz"],
+        "correctAnswer": "k",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p3_q7",
+        "text": "let a line 'L' be ⊥ to x-axis if P(-7,-2) and Q(a,2) lie on it then a = ?",
+        "options": ["7", "-7", "2", "-2", "0"],
+        "correctAnswer": "-7",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p4_q1",
+        "text": "The radian measure of the angle at the centre of a circle of radius 12cm which cuts off an arc 18cm long.",
+        "options": ["3.5 radians", "2.5 radians", "1.5 radians", "1.19 radians"],
+        "correctAnswer": "1.5 radians",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p4_q2",
+        "text": "The distance between the points (6,-2) and (2,1) is;",
+        "options": ["7", "6", "25", "√"],
+        "correctAnswer": "√",
+        "explanation": "The distance is √((2-6)² + (1-(-2))²) = √((-4)² + 3²) = √(16+9) = √25 = 5. The option '√' likely represents √25 or 5.",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p4_q3",
+        "text": "Simplify i³⁰",
+        "options": ["-1", "4", "14", "1"],
+        "correctAnswer": "-1",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p4_q4",
+        "text": "let z = 3+3√9; then the Multiplicative inverse, is given by;",
+        "options": ["6+18i", "1+3i/60", "60/(1+3i)", "1+3i/60"],
+        "correctAnswer": "",
+        "explanation": "z = 3 + 3√9 = 3 + 3(3) = 12. The multiplicative inverse is 1/12. None of the options match this value. The options appear to be in complex number form, suggesting a typo in the definition of z.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p4_q5",
+        "text": "We can write cos(3π/2 + y) as;",
+        "options": ["-Siny", "Cosy", "+Siny", "-Cos3π/2"],
+        "correctAnswer": "+Siny",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p4_q6",
+        "text": "The Set {1, w, w²} when w³=1 is an Abelian group with respect to standard multiplication then inverse of w² is.",
+        "options": ["w", "-1", "w³", "1"],
+        "correctAnswer": "w",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p4_q7",
+        "text": "The radius of e-circle of the ΔABC opposite to vertex C is given by?",
+        "options": ["r₃ = s-a", "r₃ = Δ/(a+b+c)", "r₃ = Δ/(s-c)", "Cannot be determined."],
+        "correctAnswer": "r₃ = Δ/(s-c)",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p5_q1",
+        "text": "Any Square matrix A with the property that A^T = A then A is said to be;",
+        "options": ["Diagonal Matrix", "Hermitian Matrix", "Symmetric Matrix", "Triangular Matrix"],
+        "correctAnswer": "Symmetric Matrix",
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p5_q2",
+        "text": "Form Quadratic Equation whose roots are 2+i, 2-i.",
+        "options": ["x²-4x+5=0", "x²-y=0", "x²+2x+8=0", "3x-4x+9=0"],
+        "correctAnswer": "x²-4x+5=0",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p5_q3",
+        "text": "Co-efficient of x in the expression of (3-2x)ⁿ is;",
+        "options": ["14120", "15120", "14120x", "15120x", "None of these"],
+        "correctAnswer": "None of these",
+        "explanation": "The value of 'n' is missing from the expression (3-2x)ⁿ, which is necessary to calculate the coefficient of x. Therefore, it cannot be determined from the provided numerical options.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p5_q4",
+        "text": "Find the equation of tangent at point (5,1) to the circle represented by. x²+y²-8y+10=0",
+        "options": ["x-2y+3=0", "x=8y-1", "5x-3y-22=0", "x+3y-8=0", "x-y=3"],
+        "correctAnswer": "5x-3y-22=0",
+        "explanation": "The point (5,1) does not lie on the circle x²+y²-8y+10=0 (28 ≠ 0). Assuming a typo in the circle equation such that (5,1) is on the circle, e.g., x²+y²-8y-18=0, then the tangent equation would be 5x-3y-22=0.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p5_q5",
+        "text": "Two Circles touches externally-Sum of their areas is 130π cm² and the distance between their centres is 14cm - Find the diameter of circle.",
+        "options": ["7", "5", "2x3", "6x"],
+        "correctAnswer": "2x3",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p5_q6",
+        "text": "If y = 3ˣ, then dy/dx = ?",
+        "options": ["2x3^(x+3)", "5x", "5", "2x3^(x+3)x", "6x"],
+        "correctAnswer": "",
+        "explanation": "The derivative of y=3ˣ is dy/dx = 3ˣ ln(3). None of the provided options match this result.",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_2022_p6_q1",
+        "text": "If A's salary is 25% less than B's then how much B's salary is more than A's salary.",
+        "options": ["25%", "33.333%", "66.666%", "75%"],
+        "correctAnswer": "33.333%",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p6_q2",
+        "text": "If a car travels 68 miles per hour- how much distance would it cover in 10hrs and 56 minutes.",
+        "options": ["740 miles", "741.28 miles", "758.6 miles", "859.48 miles", "743 miles"],
+        "correctAnswer": "743 miles",
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_2022_p6_q3",
+        "text": "The average monthly income of a person in a certain family of 5 members is rupees 1000. What will be the monthly average income of one person in the same family if the income of one person increases by 12000 per year.",
+        "options": ["1000", "800", "1200", "1400"],
+        "correctAnswer": "1200",
+        "explanation": "",
+        "subject": "basic_maths"
+    }
+]

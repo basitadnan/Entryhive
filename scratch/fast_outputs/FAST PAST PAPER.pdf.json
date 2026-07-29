@@ -1,0 +1,1328 @@
+[
+  {
+    "id": "q1",
+    "text": "A car traveled m miles in first 102 minutes. If it completed the remaining x miles of the trip in h hours, what was its average speed, in miles per hour, for the entire trip?",
+    "options": [
+      "(m+x) / 2(h+102)",
+      "(h+17) / 10(m+x)",
+      "10(m+x) / (10h+17)",
+      "None of these"
+    ],
+    "correctAnswer": "10(m+x) / (10h+17)",
+    "explanation": "Total distance = m + x miles. Total time = 102 minutes + h hours = (102/60) hours + h hours = (17/10) hours + h hours = (17 + 10h)/10 hours. Average speed = (m+x) / ((17+10h)/10) = 10(m+x) / (10h+17).",
+    "subject": "iq"
+  },
+  {
+    "id": "q2",
+    "text": "If Dog is coded as GRJ, then KIPS is coded as",
+    "options": [
+      "FJSP",
+      "NLSV",
+      "HJFS",
+      "None of these"
+    ],
+    "correctAnswer": "NLSV",
+    "explanation": "The pattern is to shift each letter forward by 3 positions in the alphabet. D(+3)=G, O(+3)=R, G(+3)=J. Applying this to KIPS: K(+3)=N, I(+3)=L, P(+3)=S, S(+3)=V. So, KIPS becomes NLSV.",
+    "subject": "iq"
+  },
+  {
+    "id": "q3",
+    "text": "A and B are sisters. C and D are brothers. A is the mother of D. What is the relation between B and C.",
+    "options": [
+      "Mother",
+      "Mother in law",
+      "Aunt",
+      "Sister in law"
+    ],
+    "correctAnswer": "Aunt",
+    "explanation": "A and B are sisters. C and D are brothers. A is the mother of D. Since C and D are brothers, A is also the mother of C. As B is the sister of A, B is the aunt of C.",
+    "subject": "iq"
+  },
+  {
+    "id": "q4",
+    "text": "Find the missing term in the figure below",
+    "options": [
+      "-8",
+      "5",
+      "0",
+      "25"
+    ],
+    "correctAnswer": "0",
+    "explanation": "The handwritten mark points to '0'. The pattern in the figure is not immediately obvious based on common numerical sequences or relationships. Assuming the handwritten indication is the intended answer.",
+    "subject": "iq"
+  },
+  {
+    "id": "q5",
+    "text": "Odd man out the following",
+    "options": [
+      "Ant",
+      "Spider",
+      "Bee",
+      "Moth"
+    ],
+    "correctAnswer": "Spider",
+    "explanation": "Ant, Bee, and Moth are insects (have six legs and three body parts). Spider is an arachnid (eight legs and two body parts).",
+    "subject": "iq"
+  },
+  {
+    "id": "q6",
+    "text": "If three days ago was the day before Friday, what will day after tomorrow be?",
+    "options": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "correctAnswer": "Tuesday",
+    "explanation": "The day before Friday is Thursday. If three days ago was Thursday, then today is Thursday + 3 days = Sunday. Day after tomorrow will be Sunday + 2 days = Tuesday.",
+    "subject": "iq"
+  },
+  {
+    "id": "q7",
+    "text": "Which one of the five choices makes the best comparison? LIVED is to DEVIL as 6323 is to:",
+    "options": [
+      "2336",
+      "6232",
+      "3326",
+      "3236"
+    ],
+    "correctAnswer": "3236",
+    "explanation": "LIVED is DEVIL reversed. So, 6323 reversed is 3236.",
+    "subject": "iq"
+  },
+  {
+    "id": "q8",
+    "text": "What is the next letter in the series M,A,M,J,",
+    "options": [
+      "K",
+      "S",
+      "J",
+      "L"
+    ],
+    "correctAnswer": "J",
+    "explanation": "The series represents the first letters of months: M (March), A (April), M (May), J (June). The next month is July, so the next letter is J.",
+    "subject": "iq"
+  },
+  {
+    "id": "q9",
+    "text": "There are two examination halls A and B. If 10 students are sent from A to B, then the number of students in each room is the same. If 20 students are sent from B to A, then the number of students in A is double of that in B. The number of students in A and B respectively are",
+    "options": [
+      "100, 80",
+      "80, 60",
+      "70, 50",
+      "60, 40"
+    ],
+    "correctAnswer": "100, 80",
+    "explanation": "Let A be the number of students in Hall A and B in Hall B. \n1) A - 10 = B + 10 => A - B = 20\n2) A + 20 = 2(B - 20) => A + 20 = 2B - 40 => A - 2B = -60\nSubtracting (2) from (1): (A - B) - (A - 2B) = 20 - (-60) => B = 80.\nSubstitute B=80 into (1): A - 80 = 20 => A = 100.\nSo, A = 100, B = 80.",
+    "subject": "iq"
+  },
+  {
+    "id": "q10",
+    "text": "How many triangles are there in figure?",
+    "options": [
+      "14",
+      "13",
+      "16",
+      "17"
+    ],
+    "correctAnswer": "16",
+    "explanation": "The handwritten mark indicates '16'. Standard calculation for such a figure (4 base segments, 2 horizontal levels) would yield 20 triangles (4*(4+1)/2 * 2 = 20). Assuming '16' is the specific expected answer for this diagram.",
+    "subject": "iq"
+  },
+  {
+    "id": "q11",
+    "text": "Find out the wrong term in the sequence 196,169,144,121,101.",
+    "options": [
+      "121",
+      "101",
+      "169",
+      "196"
+    ],
+    "correctAnswer": "101",
+    "explanation": "The sequence consists of perfect squares in descending order: 196 = 14^2, 169 = 13^2, 144 = 12^2, 121 = 11^2. The next term should be 10^2 = 100. However, 101 is given, making it the wrong term.",
+    "subject": "iq"
+  },
+  {
+    "id": "q12",
+    "text": "A heavy tree trunk has been lying in a garden. It can be sawed into two parts in one minute. How long, will it take to saw it into 15 equal pieces.",
+    "options": [
+      "1 min",
+      "10 min",
+      "14 min",
+      "15 min"
+    ],
+    "correctAnswer": "14 min",
+    "explanation": "To cut something into N pieces, N-1 cuts are required. If 1 cut takes 1 minute, then to get 15 pieces, 14 cuts are needed. So, 14 minutes.",
+    "subject": "iq"
+  },
+  {
+    "id": "q13",
+    "text": "Which of the following number is different from others in the sequence 8, 27, 64, 100, 125, 216, 343?",
+    "options": [
+      "8",
+      "64",
+      "100",
+      "343"
+    ],
+    "correctAnswer": "100",
+    "explanation": "The sequence consists of perfect cubes: 8=2^3, 27=3^3, 64=4^3, 125=5^3, 216=6^3, 343=7^3. The number 100 is 10^2, which is a perfect square, not a cube in this series.",
+    "subject": "iq"
+  },
+  {
+    "id": "q14",
+    "text": "Choose out the odd one:",
+    "options": [
+      "Ink",
+      "Paper",
+      "Pen",
+      "Sharpener"
+    ],
+    "correctAnswer": "Sharpener",
+    "explanation": "Ink, Paper, and Pen are directly used for writing. A Sharpener is used to sharpen pencils, which are writing instruments.",
+    "subject": "iq"
+  },
+  {
+    "id": "q15",
+    "text": "In a certain code, EAT is writes as 318 and CHAIR is writes as 24156, then what will TEACHER be written as:",
+    "options": [
+      "8312346",
+      "8321436",
+      "8312436",
+      "8313426"
+    ],
+    "correctAnswer": "8312436",
+    "explanation": "From EAT=318: E=3, A=1, T=8. From CHAIR=24156: C=2, H=4, A=1, I=5, R=6.\nCombining these for TEACHER: T=8, E=3, A=1, C=2, H=4, E=3, R=6. So, TEACHER = 8312436.",
+    "subject": "iq"
+  },
+  {
+    "id": "q16",
+    "text": "If X is brother of son of Y's son, then how is X related to Y?",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Grandson",
+      "Son"
+    ],
+    "correctAnswer": "Grandson",
+    "explanation": "Y's son is Z. Son of Y's son (Z's son) is W. X is the brother of W. Therefore, X is also Z's son. This makes X the grandson of Y.",
+    "subject": "iq"
+  },
+  {
+    "id": "q17",
+    "text": "Going 50m to the South of her house, Ayesha turns left and goes another 20m. Then, turning to the North, she goes 30m and then starts walking to her house. In which direction is she walking now?",
+    "options": [
+      "North-west",
+      "North",
+      "South-east",
+      "East"
+    ],
+    "correctAnswer": "North-west",
+    "explanation": "1. 50m South: (0, -50)\n2. Turns left (now facing South, left is East) and goes 20m: (20, -50)\n3. Turns North and goes 30m: (20, -50 + 30) = (20, -20)\n4. From (20, -20) towards home (0,0), she must move in the North-west direction.",
+    "subject": "iq"
+  },
+  {
+    "id": "q18",
+    "text": "Zara went to the movies nine days ago. She goes to the movies only on Thursday. What day of the week is today?",
+    "options": [
+      "Thursday",
+      "Saturday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "correctAnswer": "Saturday",
+    "explanation": "If Zara went to the movies nine days ago and she only goes on Thursday, then nine days ago was Thursday. Adding 9 days to Thursday: Thursday + 7 days (1 week) + 2 days = Thursday + 2 days = Saturday. So, today is Saturday.",
+    "subject": "iq"
+  },
+  {
+    "id": "q19",
+    "text": "Which is the missing tile?",
+    "options": [
+      "(a) (tile with 2 dots)",
+      "(b) (tile with 5 dots in cross shape)",
+      "(c) (tile with 4 dots in square)",
+      "(d) (tile with 1 dot)"
+    ],
+    "correctAnswer": "(b) (tile with 5 dots in cross shape)",
+    "explanation": "The handwritten mark points to option (b). The pattern in the dot matrix is not immediately obvious without further information or context for the specific puzzle type. Assuming the handwritten mark is the intended answer.",
+    "subject": "iq"
+  },
+  {
+    "id": "q20",
+    "text": "Insert the missing number:",
+    "options": [
+      "5",
+      "19",
+      "27",
+      "89"
+    ],
+    "correctAnswer": "19",
+    "explanation": "The handwritten mark points to '19'. The problem consists of multiple number grids/sequences which are not clearly delimited, making the pattern identification difficult. Assuming the handwritten mark is the intended answer.",
+    "subject": "iq"
+  },
+  {
+    "id": "q21",
+    "text": "Which of the following is not true?",
+    "options": [
+      "i^2 = -1",
+      "i^3 = i",
+      "i^4 = 1",
+      "i^-1 = i"
+    ],
+    "correctAnswer": "i^3 = i",
+    "explanation": "1) i^2 = -1 (True)\n2) i^3 = i^2 * i = -1 * i = -i (Therefore, i^3 = i is False)\n3) i^4 = (i^2)^2 = (-1)^2 = 1 (True)\n4) i^-1 = 1/i = i/i^2 = i/(-1) = -i (Therefore, i^-1 = i is False)\nBoth (b) and (d) are not true. Assuming the question intends one single 'not true' statement, (b) is a fundamental false identity.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q22",
+    "text": "Given that (a,b)(7,6) = (1,0) then (a,b) =?",
+    "options": [
+      "(7/√85, -6/√85)",
+      "(7/√85, 6/√85)",
+      "(-7/√85, 6/√85)",
+      "(-7/√85, -6/√85)"
+    ],
+    "correctAnswer": "(7/√85, -6/√85)",
+    "explanation": "Interpreting this as complex numbers: (a+bi)(7+6i) = 1+0i. So, a+bi = 1/(7+6i).\na+bi = (7-6i)/((7+6i)(7-6i)) = (7-6i)/(49 - 36i^2) = (7-6i)/(49+36) = (7-6i)/85. \nSo, (a,b) = (7/85, -6/85). The options have √85 in the denominator, which is likely a typo and should be 85. Assuming (a) matches with the correct numerator and sign.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q23",
+    "text": "(C-D)^D = ?",
+    "options": [
+      "C",
+      "C^T",
+      "I",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The notation is ambiguous. Assuming it's a specific matrix algebra context or a typo, the handwritten mark indicates option (d) D.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q24",
+    "text": "A and B = A intersect B iff:",
+    "options": [
+      "A = B",
+      "B subset of A",
+      "A = empty set",
+      "D"
+    ],
+    "correctAnswer": "A = B",
+    "explanation": "The question is 'A union B = A intersect B iff:'. This condition holds true if and only if both sets A and B are identical, i.e., A = B. The handwritten mark confirms this.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q25",
+    "text": "If one root of a quadratic equation is 1/(3+4i) then the other root is;",
+    "options": [
+      "3-4i",
+      "3/25 + 4i/25",
+      "3+4i",
+      "3-4i / 25"
+    ],
+    "correctAnswer": "3/25 + 4i/25",
+    "explanation": "For a quadratic equation with real coefficients, complex roots appear in conjugate pairs. First, simplify the given root: 1/(3+4i) = (3-4i)/((3+4i)(3-4i)) = (3-4i)/(9+16) = (3-4i)/25 = 3/25 - (4/25)i. The other root must be its complex conjugate: 3/25 + (4/25)i.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q26",
+    "text": "If alpha and beta are the roots of 3x^2 + 2x + 4 = 0 then (alpha/beta + beta/alpha) = ?",
+    "options": [
+      "4/9",
+      "1/16",
+      "1",
+      "32"
+    ],
+    "correctAnswer": "32",
+    "explanation": "For 3x^2 + 2x + 4 = 0, sum of roots (α+β) = -2/3 and product of roots (αβ) = 4/3. \nα/β + β/α = (α^2 + β^2) / (αβ) = ((α+β)^2 - 2αβ) / (αβ).\nSubstituting values: ((-2/3)^2 - 2(4/3)) / (4/3) = (4/9 - 8/3) / (4/3) = (4/9 - 24/9) / (4/3) = (-20/9) / (4/3) = -20/9 * 3/4 = -5/3.\nThe calculated answer is -5/3. The handwritten mark indicates '32', which is not consistent with the calculation. Assuming the handwritten mark is the intended answer.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q27",
+    "text": "If (2x-3)/x(2x+1) + (4)/(2x+1) = then y = ?",
+    "options": [
+      "x/(x+1)",
+      "1/(x+1)",
+      "1/(x+1)^2",
+      "1/(x+1)"
+    ],
+    "correctAnswer": "1/(x+1)",
+    "explanation": "The sum of the expression is (2x-3+4x)/(x(2x+1)) = (6x-3)/(x(2x+1)). This does not simplify to 1/(x+1) as an identity. However, the handwritten mark selects 1/(x+1). Assuming a typo in the question or the intended result.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q28",
+    "text": "If 1.53 (dots above 5 and 3) = p/q then p + q = ?",
+    "options": [
+      "152",
+      "252",
+      "1251",
+      "260"
+    ],
+    "correctAnswer": "252",
+    "explanation": "1.53 (with dots over 5 and 3) means 1.535353.... Let x = 1.5353.... Then 100x = 153.5353.... Subtracting x from 100x: 99x = 152, so x = 152/99. Thus p=152, q=99. Then p+q = 152+99 = 251. The closest option is 252, and it is marked in the handwritten solution.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q29",
+    "text": "If the first term of an infinite geometric series is equal to twice the sum of all the terms that follows it, then r =?",
+    "options": [
+      "2",
+      "1",
+      "1/3",
+      "1/2"
+    ],
+    "correctAnswer": "1/3",
+    "explanation": "Let 'a' be the first term and 'r' be the common ratio. The sum of an infinite geometric series is S = a/(1-r). The sum of terms that follow the first term is S-a = (a/(1-r)) - a = ar/(1-r). Given a = 2 * (ar/(1-r)). Since a cannot be 0, we divide by a: 1 = 2r/(1-r). => 1-r = 2r => 1 = 3r => r = 1/3.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q30",
+    "text": "If 1/(2t+1), 1/(4t+1), 1/(6t+1) are in H.P then 4th term of that, H.P is;",
+    "options": [
+      "1/5t+1",
+      "1/3",
+      "1/(8t+1)",
+      "1/(2t+1)"
+    ],
+    "correctAnswer": "1/(8t+1)",
+    "explanation": "If terms are in Harmonic Progression (H.P.), their reciprocals are in Arithmetic Progression (A.P.). So, (2t+1), (4t+1), (6t+1) are in A.P. The common difference (d) = (4t+1)-(2t+1) = 2t. The first term (A1) = 2t+1. The 4th term of the A.P. (A4) = A1 + 3d = (2t+1) + 3(2t) = 2t+1+6t = 8t+1. The 4th term of the H.P. is the reciprocal of A4, which is 1/(8t+1).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q31",
+    "text": "If 1+2+3+...+n = 55 then 1^3+2^3+3^3+...+n^3 = ?",
+    "options": [
+      "1225",
+      "2025",
+      "625",
+      "3025"
+    ],
+    "correctAnswer": "3025",
+    "explanation": "The sum of the first n natural numbers, S_n = n(n+1)/2. Given S_n = 55. So, n(n+1)/2 = 55 => n(n+1) = 110. Thus, n=10. The sum of the first n cubes, S_n^3 = [n(n+1)/2]^2 = (S_n)^2. So, 1^3+2^3+...+10^3 = (55)^2 = 3025.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q32",
+    "text": "A.M of the roots of the equation x^2 - 8x + 7 = 0 is;",
+    "options": [
+      "-8",
+      "4",
+      "-4",
+      "8"
+    ],
+    "correctAnswer": "4",
+    "explanation": "For a quadratic equation ax^2+bx+c=0, the sum of the roots (α+β) = -b/a. For x^2-8x+7=0, (α+β) = -(-8)/1 = 8. The Arithmetic Mean (A.M.) of the roots is (α+β)/2 = 8/2 = 4.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q33",
+    "text": "How many different words can be formed from the letters of the word \"PAKISTAN\" when every word starts with \"K\" and ends of \"N\"?",
+    "options": [
+      "210",
+      "340",
+      "360",
+      "620"
+    ],
+    "correctAnswer": "360",
+    "explanation": "The word PAKISTAN has 8 letters: P, A, K, I, S, T, A, N. The letter 'A' is repeated twice. If the word starts with K and ends with N, then the first and last positions are fixed. The remaining 6 letters (P, A, I, S, T, A) are arranged in the 6 middle positions. Since 'A' is repeated twice among these 6 letters, the number of permutations is 6!/2! = 720/2 = 360.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q34",
+    "text": "Number of diagonals in a n-sided polygon is 44 then n=?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "14"
+    ],
+    "correctAnswer": "11",
+    "explanation": "The formula for the number of diagonals in an n-sided polygon is n(n-3)/2. Given this is 44: n(n-3)/2 = 44 => n(n-3) = 88. By testing the options, for n=11, 11*(11-3) = 11*8 = 88. So, n=11.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q35",
+    "text": "A card is drawn from 52 cards. What is probability that it is a spade or seven?",
+    "options": [
+      "1/13",
+      "4/13",
+      "17/52",
+      "7/13"
+    ],
+    "correctAnswer": "4/13",
+    "explanation": "Number of spades = 13. Number of sevens = 4. The 7 of spades is common to both. \nP(Spade or Seven) = P(Spade) + P(Seven) - P(Spade and Seven) \n= 13/52 + 4/52 - 1/52 = 16/52. \nSimplifying 16/52 by dividing by 4 gives 4/13.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q36",
+    "text": "Two dice are thrown. What is probability that the sum of dots appear is 10?",
+    "options": [
+      "1/10",
+      "1/12",
+      "1/11",
+      "1/8"
+    ],
+    "correctAnswer": "1/12",
+    "explanation": "Total possible outcomes when two dice are thrown = 6*6 = 36. \nOutcomes that sum to 10 are: (4,6), (5,5), (6,4). There are 3 such outcomes. \nProbability = 3/36 = 1/12.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q37",
+    "text": "15th term in the expansion of (1-x)^-2 has coefficient =?",
+    "options": [
+      "15",
+      "14",
+      "-14",
+      "-15"
+    ],
+    "correctAnswer": "15",
+    "explanation": "The general term for the expansion of (1-x)^-n is (n+k-1 choose k)x^k. For (1-x)^-2, n=2. For the 15th term, k+1=15, so k=14. The coefficient is (2+14-1 choose 14) = (15 choose 14) = 15. Alternatively, the expansion of (1-x)^-2 is 1 + 2x + 3x^2 + ... + (k+1)x^k + ..., so the coefficient of x^14 is 14+1=15.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q38",
+    "text": "Expansion of (8-5x)^1/2 is valid then which of the following is true?",
+    "options": [
+      "|x| < 5",
+      "|x| < 1",
+      "|x| < 8/5",
+      "|x| < 5/8"
+    ],
+    "correctAnswer": "|x| < 8/5",
+    "explanation": "For the binomial expansion of (a+bx)^n to be valid, the condition |bx/a| < 1 must be met. Here, a=8 and b=-5. So, |-5x/8| < 1 => |5x/8| < 1 => |x| < 8/5.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q39",
+    "text": "Total number of terms in the expansion of (2-3x)^n are?",
+    "options": [
+      "n-6",
+      "n+7",
+      "n-5",
+      "None of these"
+    ],
+    "correctAnswer": "None of these",
+    "explanation": "The binomial expansion of (a+b)^n has (n+1) terms. Therefore, (2-3x)^n has (n+1) terms. None of the options match (n+1).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q40",
+    "text": "The bottom of a pendulum describes an arc of 3 ft long, when the pendulum swings an angle of 1/2 radian then the length of the pendulum in feet is:",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "correctAnswer": "6",
+    "explanation": "The formula for arc length is s = rθ, where s is arc length, r is radius (length of pendulum), and θ is the angle in radians. Given s=3 ft and θ=1/2 radian. So, 3 = r * (1/2) => r = 3 * 2 = 6 ft.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q41",
+    "text": "If log tan x = k then log cot x = ?",
+    "options": [
+      "1/k",
+      "k",
+      "-k",
+      "1+k"
+    ],
+    "correctAnswer": "-k",
+    "explanation": "We know that cot x = 1/tan x = (tan x)^-1. Using logarithm properties, log(a^b) = b log(a). So, log cot x = log( (tan x)^-1 ) = -1 * log tan x. Given log tan x = k, then log cot x = -k.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q42",
+    "text": "Value of 3 sin theta - 5 cos theta lies between?",
+    "options": [
+      "-5 and 3",
+      "0 and √34",
+      "-√34 and √34",
+      "2 and √34"
+    ],
+    "correctAnswer": "-√34 and √34",
+    "explanation": "For any expression of the form A sinθ + B cosθ, its range is [-√(A^2+B^2), √(A^2+B^2)]. Here, A=3 and B=-5. So, √(3^2 + (-5)^2) = √(9+25) = √34. Thus, the value lies between -√34 and √34.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q43",
+    "text": "cosec 67° - sec 23° = ?",
+    "options": [
+      "1",
+      "0.707",
+      "0.5",
+      "0.2"
+    ],
+    "correctAnswer": "0.5",
+    "explanation": "We know that sec(90° - θ) = cosec θ. So, sec 23° = sec(90° - 67°) = cosec 67°. Therefore, cosec 67° - sec 23° = cosec 67° - cosec 67° = 0. The calculated answer is 0. However, the handwritten mark indicates '0.5'. Assuming the handwritten mark is the intended answer despite the mathematical inconsistency.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q44",
+    "text": "sec x / (tan x . sin x) = ?",
+    "options": [
+      "tan x",
+      "sec x",
+      "cosec^2 x",
+      "tan^-1 x"
+    ],
+    "correctAnswer": "cosec^2 x",
+    "explanation": "Simplify the expression using basic trigonometric identities: \nsec x / (tan x * sin x) = (1/cos x) / ((sin x / cos x) * sin x) \n= (1/cos x) / (sin^2 x / cos x) \n= (1/cos x) * (cos x / sin^2 x) \n= 1 / sin^2 x = cosec^2 x.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q45",
+    "text": "Domain of y = tan(x/7) is same as that of:",
+    "options": [
+      "y = sec x",
+      "y = sec(x/7)",
+      "y = sec(7x)",
+      "y = 7 sec x"
+    ],
+    "correctAnswer": "y = sec(x/7)",
+    "explanation": "The domain of tan(θ) is all real numbers except θ = (2n+1)π/2 for integer n. So, for y=tan(x/7), x/7 ≠ (2n+1)π/2, which means x ≠ 7(2n+1)π/2. The domain of sec(θ) is also all real numbers except θ = (2n+1)π/2. So, for y=sec(x/7), x/7 ≠ (2n+1)π/2, which means x ≠ 7(2n+1)π/2. Thus, their domains are the same.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q46",
+    "text": "In a ∆ABC, A = 30°, C = 105°, and a=8 then b=?",
+    "options": [
+      "4√2",
+      "2√2",
+      "8√2",
+      "16√2"
+    ],
+    "correctAnswer": "8√2",
+    "explanation": "First, find angle B: B = 180° - (A+C) = 180° - (30°+105°) = 180° - 135° = 45°. \nUsing the Sine Rule: a/sin A = b/sin B. \n8/sin 30° = b/sin 45° \n8/(1/2) = b/(1/√2) \n16 = b√2 \n b = 16/√2 = 16√2/2 = 8√2.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q47",
+    "text": "In a ∆ABC, a = 8, b = 5 and c=9 then cos A = ?",
+    "options": [
+      "6/15",
+      "7/17",
+      "7/15",
+      "5/19"
+    ],
+    "correctAnswer": "7/15",
+    "explanation": "Using the Cosine Rule: cos A = (b^2 + c^2 - a^2) / (2bc). \nGiven a=8, b=5, c=9. \ncos A = (5^2 + 9^2 - 8^2) / (2 * 5 * 9) \n= (25 + 81 - 64) / 90 \n= (106 - 64) / 90 \n= 42 / 90. \nSimplifying 42/90 by dividing by 6 gives 7/15.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q48",
+    "text": "sin(sin^-1(x)) = x then which of the following is true?",
+    "options": [
+      "-∞ < x < ∞",
+      "0 < x < ∞",
+      "0 ≤ x ≤ 1",
+      "-1 ≤ x ≤ 1"
+    ],
+    "correctAnswer": "-1 ≤ x ≤ 1",
+    "explanation": "The identity sin(sin^-1(x)) = x is true for all x in the domain of sin^-1(x). The domain of sin^-1(x) is [-1, 1], so -1 ≤ x ≤ 1.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q49",
+    "text": "cot^-1(4) + cot^-1(5) = cot^-1(k) then k =?",
+    "options": [
+      "9/19",
+      "19/9",
+      "1/19",
+      "1/20"
+    ],
+    "correctAnswer": "19/9",
+    "explanation": "Using the formula cot^-1(x) + cot^-1(y) = cot^-1((xy-1)/(x+y)). \nSubstitute x=4, y=5: \ncot^-1(k) = cot^-1((4*5 - 1) / (4+5)) \ncot^-1(k) = cot^-1((20 - 1) / 9) \ncot^-1(k) = cot^-1(19 / 9) \nSo, k = 19/9.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q50",
+    "text": "If the number of solutions of cosx(cosx-2) = 0, (0° ≤ x ≤ 360°, are n, then n = ?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "correctAnswer": "2",
+    "explanation": "The equation is cosx(cosx-2) = 0, which means either cosx=0 or cosx-2=0. \n1) If cosx=0: In the interval [0°, 360°], cosx=0 for x=90° and x=270°. (2 solutions)\n2) If cosx-2=0 => cosx=2: The range of cosx is [-1, 1], so cosx=2 has no solutions.\nThus, the total number of solutions is 2.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q51",
+    "text": "If g(x) = lnx+2 then g'(x) =?",
+    "options": [
+      "e^-2",
+      "e^x+2",
+      "1/x",
+      "e^x"
+    ],
+    "correctAnswer": "1/x",
+    "explanation": "Given g(x) = lnx + 2. The derivative g'(x) = d/dx(lnx + 2). The derivative of lnx is 1/x and the derivative of a constant (2) is 0. So, g'(x) = 1/x.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q52",
+    "text": "lim (1+1/n)^n as n->infinity =?",
+    "options": [
+      "e",
+      "e^2",
+      "1",
+      "e^3"
+    ],
+    "correctAnswer": "e",
+    "explanation": "This is the definition of the mathematical constant 'e': lim (1+1/n)^n as n approaches infinity is equal to e.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q53",
+    "text": "lim (2-3x) / sqrt(3+9x^2) as x->infinity =?",
+    "options": [
+      "∞",
+      "-∞",
+      "-1",
+      "1"
+    ],
+    "correctAnswer": "-1",
+    "explanation": "To evaluate the limit as x->∞, divide both the numerator and the denominator by the highest power of x. For the denominator, sqrt(9x^2) = 3|x|, which is 3x for x->∞.\nlim ( (2/x) - (3x/x) ) / sqrt( (3/x^2) + (9x^2/x^2) ) \n= lim (2/x - 3) / sqrt(3/x^2 + 9)\nAs x->∞, (2/x)->0 and (3/x^2)->0. So, the limit is (0 - 3) / sqrt(0 + 9) = -3 / 3 = -1.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q54",
+    "text": "A function g(x) = 7 then g(2+x) = ?",
+    "options": [
+      "7",
+      "5",
+      "9",
+      "0"
+    ],
+    "correctAnswer": "7",
+    "explanation": "If g(x) is a constant function, meaning its output is always 7 regardless of the input, then g(2+x) will also be 7.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q55",
+    "text": "sinh x + cosh x = ?",
+    "options": [
+      "1",
+      "0",
+      "cosh(2x)",
+      "e^x"
+    ],
+    "correctAnswer": "e^x",
+    "explanation": "By definition, sinh x = (e^x - e^-x)/2 and cosh x = (e^x + e^-x)/2. \nAdding them: sinh x + cosh x = (e^x - e^-x)/2 + (e^x + e^-x)/2 = (e^x - e^-x + e^x + e^-x)/2 = (2e^x)/2 = e^x.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q56",
+    "text": "For the pair of parametric equations x = t^2 + t and y = t then the relation between x and y is",
+    "options": [
+      "y^2 = x + y",
+      "y^2 + y = x",
+      "x^2 + x = y",
+      "y^2 + x = y"
+    ],
+    "correctAnswer": "y^2 + y = x",
+    "explanation": "Given the parametric equations x = t^2 + t and y = t. Substitute t=y into the equation for x: x = y^2 + y.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q57",
+    "text": "If y = 1/x then y_n at x = 1 is:",
+    "options": [
+      "10!",
+      "11!",
+      "-(10)!",
+      "-(11)!"
+    ],
+    "correctAnswer": "10!",
+    "explanation": "Let y = 1/x = x^-1. \ny' = -1x^-2 \ny'' = (-1)(-2)x^-3 = 2x^-3 \ny''' = 2(-3)x^-4 = -6x^-4 \nThe general formula for the nth derivative is y^(n) = (-1)^n * n! * x^-(n+1). \nAt x=1, y^(n) = (-1)^n * n!. The question asks for 'y_n' without specifying n. Given the options, '10!' would be the result if n=10 (since (-1)^10 * 10! = 10!). The option 10! is selected by a handwritten mark.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q58",
+    "text": "d/dx (e^(x^2) / (1+2x+x^2)) = ?",
+    "options": [
+      "e^(x^2)",
+      "2xe^(x^2)",
+      "2 / e^(x^2)",
+      "4 / e^(x^2)"
+    ],
+    "correctAnswer": "2xe^(x^2)",
+    "explanation": "The expression is d/dx [ e^(x^2) / (1+x)^2 ]. Using the quotient rule, the derivative is [2xe^(x^2)(1+x)^2 - e^(x^2)2(1+x)] / (1+x)^4 = [2xe^(x^2)(1+x) - 2e^(x^2)] / (1+x)^3 = 2e^(x^2)[x(1+x)-1] / (1+x)^3 = 2e^(x^2)(x^2+x-1) / (1+x)^3. This does not match any options directly. However, if the question intended to ask for d/dx(e^(x^2)), the answer would be 2xe^(x^2), which is option (b). The handwritten mark indicates (b).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q59",
+    "text": "Graph of derivative of the function f(x) = 2x + 3 is",
+    "options": [
+      "Horizontal line",
+      "Vertical line",
+      "Line with positive slope",
+      "Line with negative slope"
+    ],
+    "correctAnswer": "Horizontal line",
+    "explanation": "Given f(x) = 2x + 3. The derivative f'(x) = d/dx(2x+3) = 2. The graph of f'(x)=2 is a horizontal line at y=2.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q60",
+    "text": "20th derivative of cos(cx + d) = ?",
+    "options": [
+      "cos(cx + d)",
+      "-cos(cx + d)",
+      "c^20 cos(cx + d)",
+      "c^20 (-cos(cx + d))"
+    ],
+    "correctAnswer": "c^20 cos(cx + d)",
+    "explanation": "Let y = cos(ax+b). \ny' = -a sin(ax+b)\ny'' = -a^2 cos(ax+b)\ny''' = a^3 sin(ax+b)\ny^(4) = a^4 cos(ax+b)\nThe derivatives follow a cycle of 4 for the trigonometric function and each differentiation multiplies by 'a'. For the 20th derivative (20 is a multiple of 4), the trigonometric part remains cos(cx+d), and the constant factor will be c^20. So, the 20th derivative is c^20 cos(cx+d).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q61",
+    "text": "The interval in which y = -2sinx decreasing is ∀x∈ [-π.π]",
+    "options": [
+      "[-π/2, π/2]",
+      "[-π/2, 0]",
+      "(-π, 0)",
+      "(π, π)"
+    ],
+    "correctAnswer": "[-π/2, π/2]",
+    "explanation": "A function is decreasing when its derivative is negative. Given y = -2sinx, its derivative y' = d/dx(-2sinx) = -2cosx. For y to be decreasing, y' < 0 => -2cosx < 0 => cosx > 0. In the interval [-π, π], cosx > 0 for x ∈ [-π/2, π/2].",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q62",
+    "text": "∫ (1/(x^2+1)) dx = ?",
+    "options": [
+      "tan^-1(x) + C",
+      "cot^-1(x) + C",
+      "sec^-1(x) + C",
+      "None of these"
+    ],
+    "correctAnswer": "tan^-1(x) + C",
+    "explanation": "This is a standard integral formula. The integral of 1/(x^2+1) with respect to x is tan^-1(x) + C (or arctan(x) + C).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q63",
+    "text": "If ∫(from 1 to 2) f(x)dx = 27 then ∫(from 1 to 2) 2f(x)dx = ?",
+    "options": [
+      "27",
+      "13.7",
+      "Cannot be determined",
+      "54"
+    ],
+    "correctAnswer": "54",
+    "explanation": "A property of definite integrals states that ∫(a to b) c*f(x)dx = c * ∫(a to b) f(x)dx. \nGiven ∫(from 1 to 2) f(x)dx = 27. \nTherefore, ∫(from 1 to 2) 2f(x)dx = 2 * ∫(from 1 to 2) f(x)dx = 2 * 27 = 54.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q64",
+    "text": "What is approximate change in the area of a square of side 2m if it has an error of 0.01 in the side?",
+    "options": [
+      "0.4",
+      "0.04",
+      "0.004",
+      "1.04"
+    ],
+    "correctAnswer": "0.04",
+    "explanation": "The area of a square A = s^2. The approximate change in area, dA, is given by dA = (dA/ds) * ds. \ndA/ds = 2s. \nGiven s = 2m and ds = 0.01m. \ndA = 2 * (2m) * (0.01m) = 4 * 0.01 = 0.04 m^2.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q65",
+    "text": "∫ (1/sqrt(x^2+a^2)) dx = ?",
+    "options": [
+      "ln|x+sqrt(x^2+a^2)| + C",
+      "ln|x+sqrt(x^2-a^2)| + C",
+      "1/sqrt(x^2+a^2) + C",
+      "sqrt(x^2+a^2) + C"
+    ],
+    "correctAnswer": "ln|x+sqrt(x^2+a^2)| + C",
+    "explanation": "This is a standard integral formula: ∫ (1/√(x^2+a^2)) dx = ln|x + √(x^2+a^2)| + C.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q66",
+    "text": "∫ a^ (λx) dx = ?",
+    "options": [
+      "a^(λx) / λln a + C",
+      "a^(λx) / ln a + C",
+      "a^(λx) / λ + C",
+      "a^(λx) / ln(a^λ) + C"
+    ],
+    "correctAnswer": "a^(λx) / λln a + C",
+    "explanation": "Using substitution, let u = λx, so du = λ dx, which means dx = du/λ. \n∫ a^ (λx) dx = ∫ a^u (du/λ) = (1/λ) ∫ a^u du = (1/λ) * (a^u / ln a) + C. \nSubstituting u back: a^(λx) / (λln a) + C.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q67",
+    "text": "For what value of \"m\" the lines my+2x-1=0 and x-2y-7=0 are parallel?",
+    "options": [
+      "-1",
+      "2",
+      "5",
+      "10"
+    ],
+    "correctAnswer": "-1",
+    "explanation": "For lines to be parallel, their slopes must be equal. \nLine 1: 2x + my - 1 = 0. Slope M1 = -2/m. \nLine 2: x - 2y - 7 = 0. Slope M2 = -1/(-2) = 1/2. \nFor parallel lines, M1 = M2 => -2/m = 1/2 => m = -4. \nSince -4 is not an option, there might be a typo in the question or options. I am selecting option (a) as a placeholder as the question requires an answer from the given choices, despite calculation discrepancy.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q68",
+    "text": "Equations of asymptotes of hyperbola y^2/4 - x^2/1 = 1 are:",
+    "options": [
+      "y = ±2x",
+      "x = ±2y",
+      "x = ±y",
+      "4x = ±2y"
+    ],
+    "correctAnswer": "y = ±2x",
+    "explanation": "For a hyperbola of the form y^2/a^2 - x^2/b^2 = 1, the equations of the asymptotes are y = ±(a/b)x. \nHere, a^2=4 => a=2, and b^2=1 => b=1. \nSo, the asymptotes are y = ±(2/1)x = ±2x.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q69",
+    "text": "Maximum points of intersection of y = 1+x and y = 1+4x-x^2 are",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "0"
+    ],
+    "correctAnswer": "2",
+    "explanation": "To find intersection points, set the two equations equal: \n1+x = 1+4x-x^2 \nx = 4x-x^2 \nx^2 - 3x = 0 \nx(x-3) = 0 \nSo, x=0 or x=3. These are two distinct x-values, meaning there are 2 intersection points.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q70",
+    "text": "Area of the shaded region = ?",
+    "options": [
+      "36π",
+      "18",
+      "9",
+      "4π"
+    ],
+    "correctAnswer": "9",
+    "explanation": "The image likely depicts the area between y=2x and y=x^2. The intersection points are found by setting 2x = x^2, which yields x=0 and x=2. The area is ∫(from 0 to 2) (2x - x^2)dx = [x^2 - x^3/3] from 0 to 2 = (4 - 8/3) - 0 = 4/3. The calculated answer is 4/3. The handwritten mark indicates '9', which is not consistent with the calculation. Assuming the handwritten mark is the intended answer.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "q71",
+    "text": "If log((x+y)/5) = 1/2 (logx + logy), then (y/x) + (x/y) = ?",
+    "options": [
+      "20",
+      "23",
+      "22",
+      "21"
+    ],
+    "correctAnswer": "23",
+    "explanation": "log((x+y)/5) = 1/2 log(xy) \nlog((x+y)/5) = log(sqrt(xy)) \n(x+y)/5 = sqrt(xy) \nSquare both sides: (x+y)^2 / 25 = xy \nx^2 + 2xy + y^2 = 25xy \nx^2 + y^2 = 23xy \nDivide by xy: x/y + y/x = 23.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q72",
+    "text": "The binary equivalent of decimal 117 is:",
+    "options": [
+      "1010101",
+      "1110101",
+      "1111101",
+      "None of these"
+    ],
+    "correctAnswer": "1110101",
+    "explanation": "Convert 117 (decimal) to binary by repeatedly dividing by 2 and noting the remainders: \n117 ÷ 2 = 58 R 1 \n58 ÷ 2 = 29 R 0 \n29 ÷ 2 = 14 R 1 \n14 ÷ 2 = 7 R 0 \n7 ÷ 2 = 3 R 1 \n3 ÷ 2 = 1 R 1 \n1 ÷ 2 = 0 R 1 \nReading the remainders from bottom to top gives 1110101.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q73",
+    "text": "A train 600 m long crosses a pole in 9 seconds the speed of the train in km/h?",
+    "options": [
+      "66.6km/h",
+      "240 km/h",
+      "140 km/h",
+      "None of these"
+    ],
+    "correctAnswer": "240 km/h",
+    "explanation": "Speed = Distance / Time. When a train crosses a pole, the distance covered is its own length. \nDistance = 600 m. Time = 9 seconds. \nSpeed = 600 m / 9 s = 200/3 m/s. \nTo convert m/s to km/h, multiply by 18/5: \n(200/3) * (18/5) = (200 * 18) / (3 * 5) = (40 * 18) / 3 = 40 * 6 = 240 km/h.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q74",
+    "text": "The average of first 31 consecutive even numbers is",
+    "options": [
+      "31",
+      "32",
+      "33",
+      "34"
+    ],
+    "correctAnswer": "32",
+    "explanation": "The average of the first 'n' consecutive even numbers is n+1. For n=31, the average is 31+1 = 32. \nAlternatively, the first even number is 2, and the 31st even number is 2*31 = 62. The average of an arithmetic sequence is (first term + last term)/2 = (2+62)/2 = 64/2 = 32.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q75",
+    "text": "If 18 : x :: x : 8, then x is equal to",
+    "options": [
+      "12",
+      "16",
+      "18",
+      "20"
+    ],
+    "correctAnswer": "12",
+    "explanation": "The notation a:b::c:d means a/b = c/d. \nSo, 18/x = x/8. \nCross-multiply: x^2 = 18 * 8 = 144. \nx = sqrt(144) = 12 (assuming positive value for x in ratios).",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q76",
+    "text": "If a man were to sell his cycle for 1440, he would lose 25%. At what price he should sell it for the gain of 20%?",
+    "options": [
+      "1920",
+      "2304",
+      "1728",
+      "1400"
+    ],
+    "correctAnswer": "2304",
+    "explanation": "Let the Cost Price (CP) be C. Selling for 1440 results in a 25% loss, so 1440 = C * (1 - 0.25) = 0.75C. \nC = 1440 / 0.75 = 1440 / (3/4) = 1440 * 4 / 3 = 480 * 4 = 1920. \nTo gain 20%, the new selling price (SP) should be C * (1 + 0.20) = 1.20C. \nNew SP = 1.20 * 1920 = 2304.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q77",
+    "text": "A certain amount was divided between A and B in the ratio 5:4. If B's share is 720, the total amount was",
+    "options": [
+      "Rs. 1620",
+      "Rs. 1150",
+      "Rs. 1025",
+      "Rs. 1080"
+    ],
+    "correctAnswer": "Rs. 1620",
+    "explanation": "The ratio of shares for A:B is 5:4. Let the shares be 5x and 4x. \nGiven B's share = 4x = 720. So, x = 720 / 4 = 180. \nTotal amount = 5x + 4x = 9x = 9 * 180 = 1620.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q78",
+    "text": "After deducting a commission of 5%, a radio costs Rs. 15200. Its gross value (in rupees) is",
+    "options": [
+      "15860",
+      "16000",
+      "16400",
+      "14440"
+    ],
+    "correctAnswer": "16000",
+    "explanation": "Let the gross value be G. After deducting 5% commission, the cost is 95% of the gross value. \n0.95 * G = 15200. \nG = 15200 / 0.95 = 15200 / (95/100) = (15200 * 100) / 95. \nG = 160 * 100 = 16000.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q79",
+    "text": "If x is an even positive integer and y is an odd positive integer, then which of the following statement is true?",
+    "options": [
+      "(x-1)y is even",
+      "x(y-1) is odd",
+      "(x-1)(y-1) is even",
+      "None of these"
+    ],
+    "correctAnswer": "(x-1)(y-1) is even",
+    "explanation": "Let x = even, y = odd. \n(a) (x-1) is odd, (x-1)y = odd * odd = odd. (False)\n(b) (y-1) is even, x(y-1) = even * even = even. (False)\n(c) (x-1) is odd, (y-1) is even. (x-1)(y-1) = odd * even = even. (True)",
+    "subject": "iq"
+  },
+  {
+    "id": "q80",
+    "text": "Two non-parallel lines will meet",
+    "options": [
+      "Never",
+      "At one point",
+      "At two points",
+      "None of these"
+    ],
+    "correctAnswer": "At one point",
+    "explanation": "In a two-dimensional plane, two distinct lines that are not parallel must intersect at exactly one point.",
+    "subject": "iq"
+  },
+  {
+    "id": "q81",
+    "text": "A boy goes to the school with the speed of 3 kmph and returns with the speed of 2 kmph. If he takes 5 hours in all, then the distance (in kms) between the village and the school is",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correctAnswer": "6",
+    "explanation": "Let the distance be D km. \nTime to school = D/3 hours. Time to return = D/2 hours. \nTotal time = D/3 + D/2 = 5 hours. \n(2D + 3D) / 6 = 5 \n5D / 6 = 5 \nD = 6 km.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q82",
+    "text": "A class of 30 girls and 40 boys sponsored a horse ride. If 60% of the girls and 25% of the boys went on the ride, what% of the class went on the ride?",
+    "options": [
+      "30%",
+      "35%",
+      "40%",
+      "50%"
+    ],
+    "correctAnswer": "40%",
+    "explanation": "Total number of students = 30 (girls) + 40 (boys) = 70. \nGirls on ride = 60% of 30 = 0.60 * 30 = 18. \nBoys on ride = 25% of 40 = 0.25 * 40 = 10. \nTotal students on ride = 18 + 10 = 28. \nPercentage of class on ride = (28 / 70) * 100% = (2/5) * 100% = 40%.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q83",
+    "text": "If 1/3.718 = 0.2689 then the value of 1/0.0003718 is:",
+    "options": [
+      "2689",
+      "2.689",
+      "26890",
+      "0.2689"
+    ],
+    "correctAnswer": "2689",
+    "explanation": "We are given 1/3.718 = 0.2689. \nWe need to find 1/0.0003718. \nNote that 0.0003718 = 3.718 * 10^-4. \nSo, 1/0.0003718 = 1/(3.718 * 10^-4) = (1/3.718) * (1/10^-4) = 0.2689 * 10^4 = 2689.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q84",
+    "text": "A fort contains food supply for 21 days. If the food was supposed to last for 28 days. How much will each individuals food be reduced.",
+    "options": [
+      "10%",
+      "20%",
+      "25%",
+      "30%"
+    ],
+    "correctAnswer": "25%",
+    "explanation": "Original duration = 28 days. New duration = 21 days. \nReduction in duration = 28 - 21 = 7 days. \nPercentage reduction = (Reduction / Original Duration) * 100% = (7 / 28) * 100% = (1/4) * 100% = 25%.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q85",
+    "text": "If the length of diagonal of the cube is 4√3 cm, then the length of its edge is",
+    "options": [
+      "2cm",
+      "3cm",
+      "4cm",
+      "6cm"
+    ],
+    "correctAnswer": "4cm",
+    "explanation": "The formula for the length of the space diagonal of a cube is a√3, where 'a' is the length of its edge. \nGiven the diagonal length is 4√3 cm. \nSo, a√3 = 4√3. Thus, a = 4 cm.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q86",
+    "text": "Asad buys 300 identical goods at a total cost of Rs.3000, he sold 260 goods for 20% above of cost price of each. He sold the remaining items at 50% of cost price. Find his profit %",
+    "options": [
+      "10",
+      "11",
+      "14",
+      "15"
+    ],
+    "correctAnswer": "11",
+    "explanation": "Total Cost Price (CP) of 300 goods = Rs. 3000. CP per good = 3000/300 = Rs. 10. \nSP for 260 goods (20% profit): 260 * (10 * 1.20) = 260 * 12 = Rs. 3120. \nRemaining goods = 300 - 260 = 40. \nSP for 40 goods (50% of CP): 40 * (10 * 0.50) = 40 * 5 = Rs. 200. \nTotal SP = 3120 + 200 = Rs. 3320. \nTotal Profit = 3320 - 3000 = Rs. 320. \nProfit % = (320 / 3000) * 100% = (32/300)*100 = 32/3 % = 10.67%. \nOption (b) 11 is the closest integer value, and it is marked in the handwritten solution.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q87",
+    "text": "In ∆PQR, W = ?",
+    "options": [
+      "50",
+      "55",
+      "60",
+      "75"
+    ],
+    "correctAnswer": "95",
+    "explanation": "The image provided for this question contains conflicting angle information, making a precise calculation difficult. However, there's a handwritten calculation '60+45=95' which typically indicates an external angle is the sum of two internal opposite angles. Based on the handwritten mark, the intended answer is '95', although this value is not listed in the options. I will use 95 as the correct answer and note its absence in the options.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q88",
+    "text": "A's salary is half as that of B. If A got 50% rise in his salary and B got a 25% rise in his salary then the % increase in combined salaries of both is",
+    "options": [
+      "30",
+      "33 (1/3)%",
+      "37 (1/2)%",
+      "75"
+    ],
+    "correctAnswer": "33 (1/3)%",
+    "explanation": "Let B's salary be 2x, so A's salary is x. \nOriginal combined salary = x + 2x = 3x. \nNew A's salary = x * (1 + 0.50) = 1.5x. \nNew B's salary = 2x * (1 + 0.25) = 2x * 1.25 = 2.5x. \nNew combined salary = 1.5x + 2.5x = 4x. \nPercentage increase = ((New combined - Original combined) / Original combined) * 100% \n= ((4x - 3x) / 3x) * 100% = (x / 3x) * 100% = (1/3) * 100% = 33.33...% or 33 (1/3)%.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q89",
+    "text": "If O is the center of given circle. Find the value of x and y.",
+    "options": [
+      "x = 26°, y = 24°",
+      "x = 10°, y = 15°",
+      "x = 16°, y = 25°",
+      "x = 10°, y = 20°"
+    ],
+    "correctAnswer": "x = 26°, y = 24°",
+    "explanation": "The angle subtended by an arc at the center is twice the angle subtended by the same arc at any point on the remaining part of the circle. \nFrom the diagram, the angle at the center subtending arc BC is 52°. So, 52° = 2x => x = 26°. \nThe angle at the center subtending arc AB is 48°. So, 48° = 2y => y = 24°. \nThus, x=26°, y=24°.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q90",
+    "text": "Rashid and Hasan borrowed Rs. 600 at 10% interest per annum. The interest is calculated at the end of 6 months. Rashid borrowed the money at simple interest while Hasan borrowed the money at compound interest. At the end of one year.",
+    "options": [
+      "Both paid same amount of interest",
+      "Rashid paid Rs. 6 less interest than Hasan",
+      "Hasan paid Rs. 1.5 more interest than Rashid",
+      "Rashid paid Rs. 8 less interest than Rashid"
+    ],
+    "correctAnswer": "Hasan paid Rs. 1.5 more interest than Rashid",
+    "explanation": "Principal (P) = Rs. 600. Annual Rate (R) = 10% = 0.10.\nFor Rashid (Simple Interest for 1 year): I_SI = P * R * T = 600 * 0.10 * 1 = Rs. 60.\nFor Hasan (Compound Interest, compounded semi-annually): \nEffective rate per period = R/n = 0.10/2 = 0.05. Number of periods = nT = 2*1 = 2.\nAmount A = P(1+r/n)^(nT) = 600(1+0.05)^2 = 600 * (1.05)^2 = 600 * 1.1025 = Rs. 661.50.\nInterest_CI = A - P = 661.50 - 600 = Rs. 61.50.\nHasan paid 61.50 - 60 = Rs. 1.50 more interest than Rashid.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "q91",
+    "text": "Nefarious is most similar in meaning to",
+    "options": [
+      "Indomitable",
+      "Infamous",
+      "Furtive",
+      "Staunch"
+    ],
+    "correctAnswer": "Infamous",
+    "explanation": "Nefarious means wicked or criminal. Infamous means well known for some bad quality or deed. They both imply a negative reputation due to bad acts, making them similar.",
+    "subject": "english"
+  },
+  {
+    "id": "q92",
+    "text": "Plausible is most similar in meaning to",
+    "options": [
+      "Simpering",
+      "Comely",
+      "Pastoral",
+      "Credible"
+    ],
+    "correctAnswer": "Credible",
+    "explanation": "Plausible means seeming reasonable or probable. Credible means able to be believed or convincing. They are close in meaning.",
+    "subject": "english"
+  },
+  {
+    "id": "q93",
+    "text": "Sporadic is most nearly opposite in meaning to",
+    "options": [
+      "Exaggerated",
+      "Combined",
+      "Fluctuating",
+      "Continuous"
+    ],
+    "correctAnswer": "Continuous",
+    "explanation": "Sporadic means occurring at irregular intervals; scattered or isolated. Continuous means forming an unbroken whole; without interruption. Thus, 'continuous' is the most direct opposite.",
+    "subject": "english"
+  },
+  {
+    "id": "q94",
+    "text": "Erudite is most nearly opposite in meaning to",
+    "options": [
+      "Uninformed",
+      "Treacherous",
+      "Extensive",
+      "Elongated"
+    ],
+    "correctAnswer": "Uninformed",
+    "explanation": "Erudite means having or showing great knowledge or learning. Uninformed means lacking knowledge. They are direct opposites.",
+    "subject": "english"
+  },
+  {
+    "id": "q95",
+    "text": "CHRONOLOGICAL: TIME",
+    "options": [
+      "virtual: truth",
+      "marginal: knowledge",
+      "abnormal: value",
+      "cardinal: order"
+    ],
+    "correctAnswer": "cardinal: order",
+    "explanation": "CHRONOLOGICAL means relating to the order of time. CARDINAL can refer to fundamental or principal aspects of something, including ordering principles (e.g., cardinal numbers for quantity, though ordinal numbers are for sequence). 'Cardinal order' implies a fundamental way of ordering.",
+    "subject": "english"
+  },
+  {
+    "id": "q96",
+    "text": "AUTHOR: LITERATE",
+    "options": [
+      "artist: imaginative",
+      "saint: notorious",
+      "cynic: gullible",
+      "hothead: prudent"
+    ],
+    "correctAnswer": "artist: imaginative",
+    "explanation": "An AUTHOR is characterized by being LITERATE (able to read and write). Similarly, an ARTIST is characterized by being IMAGINATIVE.",
+    "subject": "english"
+  },
+  {
+    "id": "q97",
+    "text": "Put the milk back in the fridge when you've finished ______ it.",
+    "options": [
+      "with",
+      "on",
+      "without",
+      "at"
+    ],
+    "correctAnswer": "with",
+    "explanation": "The correct idiomatic expression is 'finished with it', meaning to have completed using something.",
+    "subject": "english"
+  },
+  {
+    "id": "q98",
+    "text": "To get the promotion she wanted, Anaya _______ that it was best to go back to school to get her master's degree as soon as she could.",
+    "options": [
+      "anticipated",
+      "lamented",
+      "hindered",
+      "resolved"
+    ],
+    "correctAnswer": "resolved",
+    "explanation": "To 'resolve' means to decide firmly on a course of action. In this context, Anaya made a firm decision about going back to school to achieve her goal.",
+    "subject": "english"
+  },
+  {
+    "id": "q107",
+    "text": "He said to his servant, \"Why are you so lazy today?\" INDIRECT:",
+    "options": [
+      "He asked his servant why he was being so lazy that day.",
+      "He asked his servant why was he so lazy that day.",
+      "He asked his servant why he was so lazy that day.",
+      "He asked his servant why he had been so lazy that day."
+    ],
+    "correctAnswer": "He asked his servant why he was being so lazy that day.",
+    "explanation": "In converting direct to indirect speech, 'today' changes to 'that day', and the question structure 'Why are you...' changes to an assertive clause 'why he was...'. Option (a) uses 'was being', which is a continuous form, implying a temporary state, and is a common conversion for 'are you'. Option (c) 'why he was so lazy that day' is also a grammatically plausible conversion. The handwritten mark points to option (a).",
+    "subject": "english"
+  },
+  {
+    "id": "q108",
+    "text": "Active: The employees brought up this issue during the meeting. Passive:",
+    "options": [
+      "This issue has been brought up by the employees during the meeting.",
+      "This issue is brought up by the employees during the meeting.",
+      "This issue was brought up by the employees during the meeting.",
+      "This issue was being brought up by the employees during the meeting."
+    ],
+    "correctAnswer": "This issue was brought up by the employees during the meeting.",
+    "explanation": "The active sentence is in the simple past tense ('brought up'). To convert to passive voice in simple past, we use 'was/were' + past participle. 'This issue' is singular, so it becomes 'This issue was brought up by the employees during the meeting.'",
+    "subject": "english"
+  },
+  {
+    "id": "q109",
+    "text": "DIRECTIONS: Choose the correct sentence of the following.",
+    "options": [
+      "He'd rather died than let me think he needed help.",
+      "He'd rather to die than let me think he needed help.",
+      "He'd rather die than to let me think he needed help.",
+      "He'd rather die than let me think he needed help."
+    ],
+    "correctAnswer": "He'd rather die than let me think he needed help.",
+    "explanation": "The correct structure for 'would rather' is 'would rather + base form of verb + than + base form of verb'. Option (d) follows this structure correctly: 'die' and 'let' are both base forms.",
+    "subject": "english"
+  },
+  {
+    "id": "q110",
+    "text": "We got back home late at night, but we didn't go to sleep immediately. We were very hungry. (underlined word is \"hungry\")",
+    "options": [
+      "conjunction",
+      "preposition",
+      "pronoun",
+      "adverb"
+    ],
+    "correctAnswer": "adverb",
+    "explanation": "The word 'hungry' is an adjective, describing the state of 'we'. However, 'adjective' is not an option. The handwritten mark points to 'adverb'. While 'very' in 'very hungry' is an adverb, 'hungry' itself is an adjective. Assuming the handwritten mark implies the intended answer, despite grammatical inaccuracy for 'hungry' itself.",
+    "subject": "english"
+  }
+]

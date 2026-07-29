@@ -1,1434 +1,387 @@
-// NAT Question Bank - Massive pool of questions per section
-// Each question: { id, question, options: [A,B,C,D], correct: 0-3, explanation, difficulty, topic }
+import english_questions from '@/data/questions/english_questions.json';
+import analytical_questions from '@/data/questions/analytical_questions.json';
+import quantitative_questions from '@/data/questions/quantitative_questions.json';
+import physics_questions from '@/data/questions/physics_questions.json';
+import chemistry_questions from '@/data/questions/chemistry_questions.json';
+import mathematics_questions from '@/data/questions/mathematics_questions.json';
+import biology_questions from '@/data/questions/biology_questions.json';
+import computer_science_questions from '@/data/questions/computer_science_questions.json';
+import commerce_questions from '@/data/questions/commerce_questions.json';
+import accounting_questions from '@/data/questions/accounting_questions.json';
+import economics_questions from '@/data/questions/economics_questions.json';
 
-const shuffle = (arr) => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+// FAST Specific Questions
+import fast_english_questions from '@/data/questions/fast_english_questions.json';
+import fast_basic_maths_questions from '@/data/questions/fast_basic_maths_questions.json';
+import fast_advance_maths_questions from '@/data/questions/fast_advance_maths_questions.json';
+import fast_iq_questions from '@/data/questions/fast_iq_questions.json';
+
+const QUESTIONS_MAP = {
+  english: english_questions,
+  analytical: analytical_questions,
+  quantitative: quantitative_questions,
+  physics: physics_questions,
+  chemistry: chemistry_questions,
+  mathematics: mathematics_questions,
+  biology: biology_questions,
+  computer_science: computer_science_questions,
+  commerce: commerce_questions,
+  accounting: accounting_questions,
+  economics: economics_questions,
+  fast_english: fast_english_questions,
+  fast_basic_maths: fast_basic_maths_questions,
+  fast_advance_maths: fast_advance_maths_questions,
+  fast_iq: fast_iq_questions,
 };
 
-// ENGLISH QUESTIONS
-const englishQuestions = [
-  // From uploaded NAT English files
-  {id:"ef1",question:"The kid has _______ a cup.",options:["break","broke","broken","breaked"],correct:2,explanation:"Past participle of 'break' is 'broken'.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef2",question:"They were laughing _______ a clown.",options:["on","over","after","at"],correct:3,explanation:"'Laugh at' is the correct phrase.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef3",question:"She _______ to the market yesterday.",options:["go","goes","went","gone"],correct:2,explanation:"Past tense of 'go' is 'went'.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef4",question:"The news _______ very shocking.",options:["are","were","is","be"],correct:2,explanation:"'News' is uncountable and takes singular verb 'is'.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef5",question:"Neither Ali nor his friends _______ present.",options:["is","are","was","were"],correct:1,explanation:"With 'neither...nor', verb agrees with the nearer subject (friends = are).",difficulty:"medium",topic:"Grammar"},
-  {id:"ef6",question:"He is one of those students who _______ always punctual.",options:["is","are","was","were"],correct:1,explanation:"'Who' refers to 'students' (plural), so 'are' is correct.",difficulty:"medium",topic:"Grammar"},
-  {id:"ef7",question:"Choose the correct synonym of 'Happy':",options:["Sad","Joyful","Angry","Tired"],correct:1,explanation:"Joyful is a synonym of Happy.",difficulty:"easy",topic:"Synonyms"},
-  {id:"ef8",question:"Synonym of 'Big':",options:["Small","Tiny","Large","Narrow"],correct:2,explanation:"Large is a synonym of Big.",difficulty:"easy",topic:"Synonyms"},
-  {id:"ef9",question:"Synonym of 'Arduous':",options:["Easy","Difficult","Simple","Fast"],correct:1,explanation:"Arduous means very difficult.",difficulty:"medium",topic:"Synonyms"},
-  {id:"ef10",question:"Synonym of 'Benevolent':",options:["Cruel","Selfish","Kind","Harsh"],correct:2,explanation:"Benevolent means kind and generous.",difficulty:"easy",topic:"Synonyms"},
-  {id:"ef11",question:"Antonym of 'Ancient':",options:["Old","Modern","Historic","Aged"],correct:1,explanation:"Modern is the antonym of Ancient.",difficulty:"easy",topic:"Antonyms"},
-  {id:"ef12",question:"Antonym of 'Timid':",options:["Shy","Bold","Fearful","Nervous"],correct:1,explanation:"Bold is the antonym of Timid.",difficulty:"easy",topic:"Antonyms"},
-  {id:"ef13",question:"Antonym of 'Miser':",options:["Stingy","Generous","Greedy","Selfish"],correct:1,explanation:"Generous is the antonym of Miser.",difficulty:"easy",topic:"Antonyms"},
-  {id:"ef14",question:"Choose the word closest in meaning to 'Zeal':",options:["Laziness","Enthusiasm","Boredom","Sadness"],correct:1,explanation:"Zeal means great energy and enthusiasm.",difficulty:"easy",topic:"Synonyms"},
-  {id:"ef15",question:"The boy _______ his homework before dinner.",options:["finish","finished","finishing","finishes"],correct:1,explanation:"Past tense 'finished' is correct here.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef16",question:"Choose the correct preposition: 'He is afraid _______ dogs.'",options:["from","of","with","by"],correct:1,explanation:"'Afraid of' is the correct phrase.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef17",question:"Identify the correct passive voice: 'They built this mosque in 1900.'",options:["This mosque is built in 1900.","This mosque was built in 1900.","This mosque has built in 1900.","This mosque built in 1900."],correct:1,explanation:"Past simple passive: was + past participle.",difficulty:"easy",topic:"Grammar"},
-  {id:"ef18",question:"'I have been studying for three hours.' This tense is:",options:["Present Perfect","Past Perfect","Present Perfect Continuous","Past Continuous"],correct:2,explanation:"'Have been + -ing' is Present Perfect Continuous.",difficulty:"medium",topic:"Grammar"},
-  {id:"ef19",question:"Choose the synonym of 'Conceal':",options:["Reveal","Hide","Show","Display"],correct:1,explanation:"Conceal means to hide something.",difficulty:"medium",topic:"Synonyms"},
-  {id:"ef20",question:"Synonym of 'Eloquent':",options:["Silent","Fluent","Rude","Confused"],correct:1,explanation:"Eloquent means fluent and persuasive in speech.",difficulty:"medium",topic:"Synonyms"},
-  // Synonyms
-  {id:"e1",question:"Choose the synonym of 'Benevolent':",options:["Malicious","Kind","Hostile","Greedy"],correct:1,explanation:"Benevolent means well-meaning and kindly.",difficulty:"easy",topic:"Synonyms"},
-  {id:"e2",question:"Choose the synonym of 'Eloquent':",options:["Silent","Articulate","Dull","Confused"],correct:1,explanation:"Eloquent means fluent or persuasive in speaking.",difficulty:"easy",topic:"Synonyms"},
-  {id:"e3",question:"Choose the synonym of 'Diligent':",options:["Lazy","Hardworking","Careless","Indifferent"],correct:1,explanation:"Diligent means showing care and effort in one's work.",difficulty:"easy",topic:"Synonyms"},
-  {id:"e4",question:"Choose the synonym of 'Candid':",options:["Dishonest","Frank","Secretive","Deceitful"],correct:1,explanation:"Candid means truthful and straightforward.",difficulty:"easy",topic:"Synonyms"},
-  {id:"e5",question:"Choose the synonym of 'Ambiguous':",options:["Clear","Vague","Definite","Obvious"],correct:1,explanation:"Ambiguous means open to more than one interpretation.",difficulty:"medium",topic:"Synonyms"},
-  {id:"e6",question:"Choose the synonym of 'Pragmatic':",options:["Idealistic","Practical","Theoretical","Impractical"],correct:1,explanation:"Pragmatic means dealing with things sensibly and realistically.",difficulty:"medium",topic:"Synonyms"},
-  {id:"e7",question:"Choose the synonym of 'Tenacious':",options:["Weak","Persistent","Yielding","Flexible"],correct:1,explanation:"Tenacious means tending to keep a firm hold of something.",difficulty:"medium",topic:"Synonyms"},
-  {id:"e8",question:"Choose the synonym of 'Copious':",options:["Scarce","Abundant","Limited","Meager"],correct:1,explanation:"Copious means abundant in supply or quantity.",difficulty:"medium",topic:"Synonyms"},
-  {id:"e9",question:"Choose the synonym of 'Ephemeral':",options:["Permanent","Short-lived","Eternal","Lasting"],correct:1,explanation:"Ephemeral means lasting for a very short time.",difficulty:"hard",topic:"Synonyms"},
-  {id:"e10",question:"Choose the synonym of 'Ubiquitous':",options:["Rare","Omnipresent","Scarce","Uncommon"],correct:1,explanation:"Ubiquitous means present, appearing, or found everywhere.",difficulty:"hard",topic:"Synonyms"},
-  {id:"e11",question:"Choose the synonym of 'Pernicious':",options:["Harmless","Harmful","Beneficial","Helpful"],correct:1,explanation:"Pernicious means having a harmful effect.",difficulty:"hard",topic:"Synonyms"},
-  {id:"e12",question:"Choose the synonym of 'Alleviate':",options:["Worsen","Relieve","Aggravate","Intensify"],correct:1,explanation:"Alleviate means to make suffering less severe.",difficulty:"medium",topic:"Synonyms"},
-  // Antonyms
-  {id:"e13",question:"Choose the antonym of 'Verbose':",options:["Wordy","Concise","Lengthy","Detailed"],correct:1,explanation:"Verbose means using too many words. Concise is the opposite.",difficulty:"easy",topic:"Antonyms"},
-  {id:"e14",question:"Choose the antonym of 'Obscure':",options:["Hidden","Clear","Vague","Dark"],correct:1,explanation:"Obscure means unclear. Clear is the opposite.",difficulty:"easy",topic:"Antonyms"},
-  {id:"e15",question:"Choose the antonym of 'Affluent':",options:["Wealthy","Poor","Rich","Prosperous"],correct:1,explanation:"Affluent means wealthy. Poor is the antonym.",difficulty:"easy",topic:"Antonyms"},
-  {id:"e16",question:"Choose the antonym of 'Prudent':",options:["Wise","Reckless","Careful","Cautious"],correct:1,explanation:"Prudent means showing care. Reckless is the opposite.",difficulty:"medium",topic:"Antonyms"},
-  {id:"e17",question:"Choose the antonym of 'Lethargic':",options:["Sluggish","Energetic","Drowsy","Tired"],correct:1,explanation:"Lethargic means lacking energy. Energetic is the opposite.",difficulty:"medium",topic:"Antonyms"},
-  {id:"e18",question:"Choose the antonym of 'Ostentatious':",options:["Showy","Modest","Flashy","Extravagant"],correct:1,explanation:"Ostentatious means showy. Modest is the opposite.",difficulty:"hard",topic:"Antonyms"},
-  {id:"e19",question:"Choose the antonym of 'Magnanimous':",options:["Generous","Petty","Noble","Forgiving"],correct:1,explanation:"Magnanimous means generous. Petty is the opposite.",difficulty:"hard",topic:"Antonyms"},
-  {id:"e20",question:"Choose the antonym of 'Transient':",options:["Temporary","Permanent","Brief","Fleeting"],correct:1,explanation:"Transient means temporary. Permanent is the opposite.",difficulty:"medium",topic:"Antonyms"},
-  {id:"e21",question:"Choose the antonym of 'Malevolent':",options:["Hostile","Benevolent","Evil","Cruel"],correct:1,explanation:"Malevolent means wishing evil. Benevolent is the opposite.",difficulty:"easy",topic:"Antonyms"},
-  {id:"e22",question:"Choose the antonym of 'Plethora':",options:["Excess","Scarcity","Abundance","Surplus"],correct:1,explanation:"Plethora means excess. Scarcity is the opposite.",difficulty:"hard",topic:"Antonyms"},
-  {id:"e23",question:"Choose the antonym of 'Apathy':",options:["Indifference","Enthusiasm","Boredom","Disinterest"],correct:1,explanation:"Apathy means lack of interest. Enthusiasm is the opposite.",difficulty:"medium",topic:"Antonyms"},
-  {id:"e24",question:"Choose the antonym of 'Frugal':",options:["Thrifty","Extravagant","Economical","Careful"],correct:1,explanation:"Frugal means sparing. Extravagant is the opposite.",difficulty:"medium",topic:"Antonyms"},
-  // Sentence Completion
-  {id:"e25",question:"The scientist's findings were so ___ that they changed the entire field of research.",options:["trivial","groundbreaking","insignificant","ordinary"],correct:1,explanation:"Groundbreaking means innovative and pioneering.",difficulty:"easy",topic:"Sentence Completion"},
-  {id:"e26",question:"Despite his ___ appearance, he was actually very wealthy.",options:["lavish","humble","extravagant","opulent"],correct:1,explanation:"Humble appearance contrasts with being wealthy.",difficulty:"easy",topic:"Sentence Completion"},
-  {id:"e27",question:"The ___ between the two countries has lasted for decades, resulting in mutual distrust.",options:["alliance","rivalry","friendship","cooperation"],correct:1,explanation:"Rivalry fits the context of lasting mutual distrust.",difficulty:"medium",topic:"Sentence Completion"},
-  {id:"e28",question:"Her ___ nature made her popular among colleagues; she always helped everyone.",options:["selfish","altruistic","greedy","hostile"],correct:1,explanation:"Altruistic means selflessly concerned for others.",difficulty:"medium",topic:"Sentence Completion"},
-  {id:"e29",question:"The professor's lecture was so ___ that most students fell asleep.",options:["engaging","monotonous","interesting","captivating"],correct:1,explanation:"Monotonous means dull and tedious, causing sleep.",difficulty:"easy",topic:"Sentence Completion"},
-  {id:"e30",question:"The new policy aims to ___ the gap between rich and poor in Pakistan.",options:["widen","bridge","increase","expand"],correct:1,explanation:"Bridge the gap means to reduce differences.",difficulty:"medium",topic:"Sentence Completion"},
-  {id:"e31",question:"His ___ remarks offended everyone at the gathering.",options:["polite","derogatory","kind","respectful"],correct:1,explanation:"Derogatory means showing disrespect.",difficulty:"medium",topic:"Sentence Completion"},
-  {id:"e32",question:"The government's ___ response to the flood crisis was widely criticized.",options:["swift","sluggish","prompt","immediate"],correct:1,explanation:"Sluggish means slow, which would be criticized in a crisis.",difficulty:"easy",topic:"Sentence Completion"},
-  {id:"e33",question:"She spoke with such ___ that everyone believed her story.",options:["hesitation","conviction","doubt","uncertainty"],correct:1,explanation:"Conviction means firm belief, making others believe.",difficulty:"medium",topic:"Sentence Completion"},
-  {id:"e34",question:"The evidence was ___ enough to convict the accused beyond reasonable doubt.",options:["weak","compelling","insufficient","vague"],correct:1,explanation:"Compelling evidence is strong enough for conviction.",difficulty:"medium",topic:"Sentence Completion"},
-  {id:"e35",question:"Pakistan's cricket team showed great ___ in the final match, winning against all odds.",options:["weakness","resilience","fragility","cowardice"],correct:1,explanation:"Resilience means the ability to recover from difficulties.",difficulty:"easy",topic:"Sentence Completion"},
-  {id:"e36",question:"The child's ___ behavior in class resulted in multiple detentions.",options:["exemplary","disruptive","model","obedient"],correct:1,explanation:"Disruptive behavior causes disturbances.",difficulty:"easy",topic:"Sentence Completion"},
-  // Analogies
-  {id:"e37",question:"Pen : Writer :: Scalpel : ?",options:["Butcher","Surgeon","Teacher","Engineer"],correct:1,explanation:"A pen is a writer's tool, a scalpel is a surgeon's tool.",difficulty:"easy",topic:"Analogies"},
-  {id:"e38",question:"Islamabad : Pakistan :: Tokyo : ?",options:["China","Japan","Korea","Thailand"],correct:1,explanation:"Islamabad is the capital of Pakistan; Tokyo is the capital of Japan.",difficulty:"easy",topic:"Analogies"},
-  {id:"e39",question:"Drought : Famine :: Virus : ?",options:["Health","Epidemic","Medicine","Hospital"],correct:1,explanation:"Drought causes famine; virus causes epidemic.",difficulty:"medium",topic:"Analogies"},
-  {id:"e40",question:"Book : Library :: Money : ?",options:["Shop","Bank","ATM","Wallet"],correct:1,explanation:"Books are kept in a library; money is kept in a bank.",difficulty:"easy",topic:"Analogies"},
-  {id:"e41",question:"Seed : Tree :: Egg : ?",options:["Nest","Bird","Shell","Feather"],correct:1,explanation:"A seed grows into a tree; an egg grows into a bird.",difficulty:"easy",topic:"Analogies"},
-  {id:"e42",question:"Calm : Serene :: Angry : ?",options:["Happy","Furious","Peaceful","Joyful"],correct:1,explanation:"Calm and serene are synonyms; angry and furious are synonyms.",difficulty:"easy",topic:"Analogies"},
-  {id:"e43",question:"Telescope : Stars :: Microscope : ?",options:["Planets","Cells","Mountains","Rivers"],correct:1,explanation:"Telescope views stars; microscope views cells.",difficulty:"medium",topic:"Analogies"},
-  {id:"e44",question:"Quaid-e-Azam : Pakistan :: Gandhi : ?",options:["Bangladesh","India","Nepal","Sri Lanka"],correct:1,explanation:"Quaid-e-Azam founded Pakistan; Gandhi is the father of India.",difficulty:"easy",topic:"Analogies"},
-  {id:"e45",question:"Mitigate : Severity :: Alleviate : ?",options:["Increase","Pain","Worsen","Aggravate"],correct:1,explanation:"Mitigate reduces severity; alleviate reduces pain.",difficulty:"hard",topic:"Analogies"},
-  {id:"e46",question:"Hammer : Nail :: Screwdriver : ?",options:["Bolt","Screw","Nut","Washer"],correct:1,explanation:"Hammer drives a nail; screwdriver drives a screw.",difficulty:"easy",topic:"Analogies"},
-  {id:"e47",question:"Author : Novel :: Poet : ?",options:["Story","Sonnet","Essay","Article"],correct:1,explanation:"An author writes novels; a poet writes sonnets.",difficulty:"medium",topic:"Analogies"},
-  {id:"e48",question:"Optimist : Hopeful :: Pessimist : ?",options:["Happy","Gloomy","Cheerful","Excited"],correct:1,explanation:"An optimist is hopeful; a pessimist is gloomy.",difficulty:"medium",topic:"Analogies"},
-  // Comprehension
-  {id:"e49",question:"Read: 'Pakistan's education system faces challenges including access, quality, and gender disparity. Despite government efforts, rural areas lag behind urban centers.' What is the main challenge mentioned?",options:["Only funding","Access, quality, and gender disparity","Teacher shortage only","Technology gap"],correct:1,explanation:"The passage mentions access, quality, and gender disparity as challenges.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e50",question:"Read: 'The Indus River is the lifeline of Pakistan, supporting agriculture across Punjab and Sindh. Climate change threatens water availability.' The Indus River primarily supports:",options:["Industry","Agriculture","Tourism","Mining"],correct:1,explanation:"The passage states the Indus supports agriculture.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e51",question:"Read: 'Critical thinking involves analyzing facts to form a judgment. It requires objectivity and freedom from bias.' Which is NOT a component of critical thinking?",options:["Analysis","Objectivity","Bias","Fact evaluation"],correct:2,explanation:"Bias is something critical thinking tries to avoid.",difficulty:"medium",topic:"Comprehension"},
-  {id:"e52",question:"Read: 'The CPEC project aims to enhance connectivity between Pakistan and China through infrastructure development.' CPEC primarily focuses on:",options:["Military alliance","Infrastructure development","Cultural exchange","Sports"],correct:1,explanation:"The passage states CPEC focuses on infrastructure development.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e53",question:"Read: 'Deforestation leads to soil erosion, loss of biodiversity, and contributes to climate change. Reforestation efforts can help reverse these effects.' What can help reverse deforestation effects?",options:["Urbanization","Reforestation","Industrialization","Mining"],correct:1,explanation:"The passage states reforestation can reverse deforestation effects.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e54",question:"Read: 'The Mughal Empire made significant contributions to architecture in the subcontinent. The Badshahi Mosque and Shalimar Gardens in Lahore are prime examples.' These examples are located in:",options:["Delhi","Lahore","Karachi","Islamabad"],correct:1,explanation:"The passage mentions Lahore as the location.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e55",question:"Read: 'Inflation erodes purchasing power, meaning people can buy fewer goods with the same money. Pakistan has faced rising inflation in recent years.' Inflation affects:",options:["Production capacity","Purchasing power","Export volume","Import duties"],correct:1,explanation:"The passage says inflation erodes purchasing power.",difficulty:"medium",topic:"Comprehension"},
-  {id:"e56",question:"Read: 'Water conservation is essential in Pakistan where agriculture consumes over 90% of water resources. Drip irrigation can save up to 60% water.' Drip irrigation can save:",options:["Up to 30%","Up to 60%","Up to 90%","Up to 100%"],correct:1,explanation:"The passage states drip irrigation saves up to 60% water.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e57",question:"Read: 'Allama Iqbal's poetry inspired the movement for a separate Muslim state. His vision emphasized self-reliance and spiritual awakening.' Iqbal's poetry emphasized:",options:["Colonial rule","Self-reliance","Western culture","Material wealth"],correct:1,explanation:"The passage mentions self-reliance and spiritual awakening.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e58",question:"Read: 'Renewable energy sources like solar and wind are gaining importance in Pakistan. The Quaid-e-Azam Solar Park in Punjab is one of the largest in the world.' The solar park is located in:",options:["Sindh","Punjab","KPK","Balochistan"],correct:1,explanation:"The passage states it's in Punjab.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e59",question:"Read: 'Despite being the 5th largest country by population, Pakistan faces food security challenges due to water scarcity and climate change.' Pakistan ranks ___ by population:",options:["3rd","5th","7th","10th"],correct:1,explanation:"The passage states Pakistan is the 5th largest by population.",difficulty:"easy",topic:"Comprehension"},
-  {id:"e60",question:"Read: 'The discovery of penicillin by Alexander Fleming revolutionized medicine. It was the first true antibiotic and has saved millions of lives.' Penicillin was the first:",options:["Vaccine","Antibiotic","Vitamin","Painkiller"],correct:1,explanation:"The passage identifies penicillin as the first true antibiotic.",difficulty:"easy",topic:"Comprehension"},
-  // Grammar
-  {id:"e61",question:"Choose the correct sentence:",options:["He don't know the answer.","He doesn't knows the answer.","He doesn't know the answer.","He don't knows the answer."],correct:2,explanation:"'Doesn't' is correct with 'he' and the base form 'know'.",difficulty:"easy",topic:"Grammar"},
-  {id:"e62",question:"Choose the correct sentence:",options:["Neither the teacher nor the students was present.","Neither the teacher nor the students were present.","Neither the teacher nor the students is present.","Neither the teacher nor the students has present."],correct:1,explanation:"With 'neither...nor', the verb agrees with the nearer subject (students = were).",difficulty:"medium",topic:"Grammar"},
-  {id:"e63",question:"'The committee ___ divided in their opinion.' Choose the correct verb:",options:["was","were","are","have been"],correct:0,explanation:"Committee is a collective noun, takes singular verb 'was'.",difficulty:"medium",topic:"Grammar"},
-  {id:"e64",question:"Identify the error: 'Each of the boys have completed their assignment.'",options:["Each","have","their","assignment"],correct:1,explanation:"'Each' is singular, so it should be 'has' not 'have'.",difficulty:"medium",topic:"Grammar"},
-  {id:"e65",question:"Choose the correct preposition: 'She is good ___ mathematics.'",options:["in","at","on","with"],correct:1,explanation:"The correct phrase is 'good at' a subject.",difficulty:"easy",topic:"Grammar"},
-  {id:"e66",question:"'If I ___ a bird, I would fly.' Choose the correct option:",options:["am","was","were","is"],correct:2,explanation:"Subjunctive mood requires 'were' for hypothetical situations.",difficulty:"medium",topic:"Grammar"},
-  {id:"e67",question:"Choose the passive voice of: 'The teacher praised the student.'",options:["The student was praised by the teacher.","The student is praised by the teacher.","The student has been praised by the teacher.","The student were praised by the teacher."],correct:0,explanation:"Past simple active becomes 'was + past participle' in passive.",difficulty:"easy",topic:"Grammar"},
-  {id:"e68",question:"Choose the correct sentence:",options:["Me and him went to the market.","Him and I went to the market.","He and I went to the market.","He and me went to the market."],correct:2,explanation:"'He and I' are both subject pronouns, correct for subject position.",difficulty:"easy",topic:"Grammar"},
-  {id:"e69",question:"'The news ___ shocking.' Choose the correct verb:",options:["were","are","was","have been"],correct:2,explanation:"'News' is an uncountable noun and takes a singular verb.",difficulty:"medium",topic:"Grammar"},
-  {id:"e70",question:"Choose the indirect speech: 'He said, \"I am going to Lahore.\"'",options:["He said that he is going to Lahore.","He said that he was going to Lahore.","He said that I am going to Lahore.","He said that I was going to Lahore."],correct:1,explanation:"In indirect speech, 'am going' changes to 'was going' and 'I' to 'he'.",difficulty:"medium",topic:"Grammar"},
-  {id:"e71",question:"Choose the correct article: '___ honest man is respected everywhere.'",options:["A","An","The","No article"],correct:1,explanation:"'An' is used before words starting with a vowel sound. 'Honest' starts with a vowel sound.",difficulty:"easy",topic:"Grammar"},
-  {id:"e72",question:"Identify the correct conditional: 'If it rains, I ___ stay home.'",options:["would","will","shall","could"],correct:1,explanation:"First conditional uses 'will' for likely future events.",difficulty:"easy",topic:"Grammar"},
-];
-
-// ANALYTICAL REASONING QUESTIONS
-const analyticalQuestions = [
-  // From uploaded NAT Analytical files
-  {id:"af1",question:"What comes next in the series: 2, 4, 8, 16, __?",options:["24","32","30","28"],correct:1,explanation:"Each number doubles. 16 × 2 = 32.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"af2",question:"Complete the series: 1, 4, 9, 16, __?",options:["20","25","36","18"],correct:1,explanation:"These are perfect squares: 1², 2², 3², 4², 5² = 25.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"af3",question:"Find the missing number: 3, 6, 9, 12, __?",options:["14","15","16","18"],correct:1,explanation:"Add 3 each time. 12 + 3 = 15.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"af4",question:"What is next: 1, 2, 4, 7, 11, __?",options:["14","15","16","18"],correct:2,explanation:"Differences: 1, 2, 3, 4, 5. Next: 11 + 5 = 16.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"af5",question:"Find the missing term: 5, 10, 20, 40, __, 160",options:["60","70","80","90"],correct:2,explanation:"Each term doubles. 40 × 2 = 80.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"af6",question:"Complete: 2, 6, 12, 20, 30, __?",options:["40","42","44","48"],correct:1,explanation:"Differences: 4, 6, 8, 10, 12. Next: 30 + 12 = 42.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"af7",question:"Five friends — Ali, Bilal, Chaman, Dawood, and Erum — sit in a row facing north. Bilal is to the immediate right of Ali. Chaman is at one end. Dawood is between Bilal and Erum. Erum is not at the ends. Who sits at the extreme left?",options:["Ali","Bilal","Chaman","Dawood"],correct:2,explanation:"Working through the constraints, Chaman is at the extreme left.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"af8",question:"Who is sitting in the middle (Ali, Bilal, Chaman, Dawood, Erum row)?",options:["Ali","Bilal","Dawood","Erum"],correct:2,explanation:"Dawood sits in the middle of the row.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"af9",question:"If A is the brother of B, B is the sister of C, C is the father of D, then A is D's:",options:["Uncle","Nephew","Brother","Grandfather"],correct:0,explanation:"A is male, brother of B. B is C's sister. C is D's father. So A is D's uncle.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"af10",question:"Find the odd one out: 2, 3, 5, 7, 9, 11",options:["2","9","11","3"],correct:1,explanation:"9 is not a prime number (9 = 3 × 3). All others are prime.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"af11",question:"Statement: All cats are animals. Some animals are wild. Conclusion: Some cats are wild.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:2,explanation:"We cannot determine if cats are among the wild animals.",difficulty:"medium",topic:"Statements Based"},
-  {id:"af12",question:"Pointing to a man, Zara said 'He is the son of my father's only daughter.' How is the man related to Zara?",options:["Brother","Son","Nephew","Uncle"],correct:1,explanation:"My father's only daughter = Zara herself. So the man is her son.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"af13",question:"A is 3 years older than B. B is 2 years younger than C. If C is 20, how old is A?",options:["19","21","20","22"],correct:1,explanation:"C = 20. B = C - 2 = 18. A = B + 3 = 21.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"af14",question:"Find the next letter: B, D, F, H, __?",options:["I","J","K","L"],correct:1,explanation:"Skip one letter each time: B(skip C)D(skip E)F(skip G)H(skip I)J.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"af15",question:"If ROSE is coded as 6821, how is SORE coded?",options:["2618","8216","2168","8261"],correct:0,explanation:"R=6, O=8, S=2, E=1. SORE = S(2) O(8) R(6) E(1) = 2618... wait: S=2,O=8,R=6,E=1 → 2861. Best match: 2618.",difficulty:"medium",topic:"Scenario Based"},
-  // Scenario Based
-  {id:"a1",question:"Five students A, B, C, D, E sit in a row. A sits next to B. C sits at one end. D does not sit next to E. Who sits in the middle?",options:["A","B","C","D"],correct:1,explanation:"If C is at one end, and A sits next to B, with D not next to E, B must be in the middle.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a2",question:"In a coding system, PAKISTAN is written as SDNLVWDQ. How is LAHORE written?",options:["ODKRIH","NDKQUH","ODKSUH","NDKRJH"],correct:0,explanation:"Each letter is shifted by +3 positions in the alphabet.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a3",question:"If all roses are flowers, and some flowers are red, which must be true?",options:["All roses are red","Some roses are red","No roses are red","None of these can be concluded"],correct:3,explanation:"We cannot conclude anything definite about roses being red from these premises.",difficulty:"easy",topic:"Statements Based"},
-  {id:"a4",question:"A is B's father. C is B's mother. D is C's father. What is A's relationship to D?",options:["Son","Son-in-law","Father","Brother"],correct:1,explanation:"A is married to C (B's parents). D is C's father. So A is D's son-in-law.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a5",question:"If 3 cats catch 3 mice in 3 minutes, how many cats are needed to catch 100 mice in 100 minutes?",options:["100","33","3","50"],correct:2,explanation:"Each cat catches 1 mouse in 3 minutes. In 100 minutes, each cat catches ~33 mice. But since 1 cat catches 1 mouse per 3 min, 3 cats catch 100 mice in 100 min.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a6",question:"Complete the series: 2, 6, 12, 20, 30, ?",options:["40","42","44","36"],correct:1,explanation:"Differences: 4, 6, 8, 10, 12. Next number: 30 + 12 = 42.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a7",question:"Complete the series: 1, 1, 2, 3, 5, 8, ?",options:["11","12","13","14"],correct:2,explanation:"Fibonacci sequence: each number is the sum of the two preceding ones. 5+8=13.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a8",question:"If WATER is coded as 23-1-20-5-18, then FIRE is coded as:",options:["6-9-18-5","6-9-17-5","5-9-18-5","6-8-18-5"],correct:0,explanation:"Each letter is replaced by its position: F=6, I=9, R=18, E=5.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a9",question:"Six people P, Q, R, S, T, U sit around a circular table. P sits opposite R. Q sits to the left of P. T sits between S and U. Who sits opposite Q?",options:["S","T","U","Cannot determine"],correct:0,explanation:"Working out positions: P opposite R, Q left of P. T between S and U. S sits opposite Q.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"a10",question:"Statement: All doctors are educated. Some educated people are rich. Conclusion: Some doctors are rich.",options:["Definitely true","Probably true","Probably false","Definitely false"],correct:1,explanation:"It's probable but not certain since 'some educated' could or could not include doctors.",difficulty:"medium",topic:"Statements Based"},
-  {id:"a11",question:"If A > B, B > C, and C > D, then which is definitely true?",options:["D > A","A > D","A = D","B > D and D > A"],correct:1,explanation:"By transitivity: A > B > C > D, so A > D.",difficulty:"easy",topic:"Statements Based"},
-  {id:"a12",question:"Complete: 64, 32, 16, 8, ?",options:["2","4","6","0"],correct:1,explanation:"Each number is divided by 2. 8 ÷ 2 = 4.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a13",question:"In a class, Ali is 15th from the top and 20th from the bottom. How many students are in the class?",options:["34","35","36","33"],correct:0,explanation:"Total = 15 + 20 - 1 = 34 students.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a14",question:"If Monday falls on the 1st of a month, what day falls on the 23rd?",options:["Monday","Tuesday","Wednesday","Thursday"],correct:1,explanation:"22 days after Monday. 22 ÷ 7 = 3 weeks + 1 day. Monday + 1 = Tuesday.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a15",question:"A man walks 5 km North, then 3 km East, then 5 km South. How far is he from the starting point?",options:["3 km","5 km","8 km","13 km"],correct:0,explanation:"North 5 and South 5 cancel. He's 3 km East of start.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a16",question:"Statement: No fish can fly. Some birds can fly. Conclusion I: No fish is a bird. Conclusion II: Some birds are not fish.",options:["Only I follows","Only II follows","Both follow","Neither follows"],correct:1,explanation:"We can conclude some birds (those that fly) are not fish (since no fish can fly).",difficulty:"medium",topic:"Statements Based"},
-  {id:"a17",question:"Find the odd one out: 3, 5, 11, 14, 17, 21",options:["21","__(14)__","__(11)__","14"],correct:3,explanation:"14 is the only even number; the rest are odd.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a18",question:"If COMPUTER = 111, what does LAPTOP equal? (A=1, B=2...)",options:["74","78","82","86"],correct:0,explanation:"L(12)+A(1)+P(16)+T(20)+O(15)+P(16) = 74... but we need to verify. Let's count: L=12,A=1,P=16,T=20,O=15,P=16 = 80. Actually COMPUTER: C=3,O=15,M=13,P=16,U=21,T=20,E=5,R=18 = 111. LAPTOP: L=12,A=1,P=16,T=20,O=15,P=16 = 80.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a19",question:"Four friends have different heights. Amir is taller than Bilal. Bilal is shorter than Chaudhry. Chaudhry is shorter than Amir. Who is the tallest?",options:["Bilal","Chaudhry","Amir","Cannot determine"],correct:2,explanation:"Amir > Chaudhry > Bilal. Amir is tallest among mentioned.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a20",question:"Which number replaces ?: 7, 14, 28, 56, ?",options:["112","98","84","70"],correct:0,explanation:"Each number doubles. 56 × 2 = 112.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a21",question:"Statement: All Pakistanis are Asians. Some Asians are Muslims. Conclusion: Some Pakistanis may be Muslims.",options:["True","False","Cannot be determined","Irrelevant"],correct:0,explanation:"Since all Pakistanis are Asians and some Asians are Muslims, it's possible some Pakistanis are Muslims.",difficulty:"medium",topic:"Statements Based"},
-  {id:"a22",question:"If '+' means '×', '×' means '−', '−' means '÷', '÷' means '+', then 8 + 6 − 2 × 3 ÷ 4 = ?",options:["25","28","27","30"],correct:2,explanation:"Replace: 8 × 6 ÷ 2 − 3 + 4 = 48 ÷ 2 − 3 + 4 = 24 − 3 + 4 = 25... Let me recalculate: 8×6=48, 48÷2=24, 24-3=21, 21+4=25.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"a23",question:"Pointing to a girl, Rashid said, 'She is the daughter of my mother's only son.' How is the girl related to Rashid?",options:["Sister","Daughter","Niece","Cousin"],correct:1,explanation:"My mother's only son = Rashid himself. So the girl is his daughter.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a24",question:"In a queue, Saima is 10th from the front and 15th from the back. How many people are in the queue?",options:["24","25","26","23"],correct:0,explanation:"Total = 10 + 15 - 1 = 24.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a25",question:"Find the next: Z, X, V, T, R, ?",options:["P","Q","O","N"],correct:0,explanation:"Alternate letters going backwards: Z, X, V, T, R, P (skipping one each time).",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a26",question:"If the day after tomorrow is Thursday, what day was it two days ago?",options:["Saturday","Sunday","Monday","Friday"],correct:0,explanation:"Day after tomorrow = Thursday, so today = Tuesday. Two days ago = Saturday.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a27",question:"Complete: 1, 4, 9, 16, 25, ?",options:["30","36","49","32"],correct:1,explanation:"These are perfect squares: 1², 2², 3², 4², 5², 6² = 36.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a28",question:"Statement: 'All teachers are knowledgeable. Amina is knowledgeable.' Conclusion: Amina is a teacher.",options:["Definitely true","Probably true","Probably false","Cannot be concluded"],correct:3,explanation:"Amina being knowledgeable doesn't mean she's a teacher. Other people can be knowledgeable too.",difficulty:"medium",topic:"Statements Based"},
-  {id:"a29",question:"In a certain code, CAT = 24, DOG = 26. What is BAT?",options:["23","22","25","21"],correct:0,explanation:"C=3,A=1,T=20 → 3+1+20=24. D=4,O=15,G=7 → 4+15+7=26. B=2,A=1,T=20 → 2+1+20=23.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"a30",question:"Five books are stacked. Math is above Science. English is below History. Science is above English. History is below Math. What is the order top to bottom?",options:["Math, Science, History, English, ?","Math, History, Science, English","Math, Science, English, History","History, Math, Science, English"],correct:1,explanation:"Math is top. History is below Math but above English. Science is above English. Order: Math, History, Science, English.",difficulty:"hard",topic:"Scenario Based"},
-  // More analytical questions
-  {id:"a31",question:"If the radius of a clock is 6 cm, what is the distance traveled by the tip of the minute hand in 30 minutes?",options:["18.84 cm","37.68 cm","12.56 cm","6.28 cm"],correct:0,explanation:"In 30 min, minute hand covers half circle. Distance = π × r = 3.14 × 6 = 18.84 cm.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"a32",question:"Find the missing: 2, 3, 5, 7, 11, 13, ?",options:["15","17","19","14"],correct:1,explanation:"These are prime numbers. Next prime after 13 is 17.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"a33",question:"All pens are blue. Some blue things are round. Which conclusion is valid?",options:["All pens are round","Some pens are round","No pens are round","Cannot be determined"],correct:3,explanation:"We can't determine if any pens are among the round blue things.",difficulty:"medium",topic:"Statements Based"},
-  {id:"a34",question:"Three friends eat at a restaurant. Each orders a different item from biryani, karahi, and nihari. Ali doesn't eat biryani. Bilal doesn't eat karahi or biryani. What does Ali eat?",options:["Biryani","Karahi","Nihari","Cannot determine"],correct:1,explanation:"Bilal eats nihari (only option left). Ali doesn't eat biryani, so Ali eats karahi.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"a35",question:"Complete the series: AZ, BY, CX, DW, ?",options:["EV","EU","FV","EX"],correct:0,explanation:"First letter goes forward (A,B,C,D,E), second goes backward (Z,Y,X,W,V). Next: EV.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"a36",question:"A cube is painted red on all faces and cut into 27 smaller cubes. How many small cubes have exactly 2 faces painted?",options:["8","12","6","1"],correct:1,explanation:"Edge cubes (not corners) have 2 painted faces. A 3×3×3 cube has 12 edge cubes.",difficulty:"hard",topic:"Scenario Based"},
-];
-
-// QUANTITATIVE REASONING
-const quantitativeQuestions = [
-  // From uploaded NAT Quantitative files
-  {id:"qf1",question:"What is 15% of 200?",options:["25","30","35","40"],correct:1,explanation:"15/100 × 200 = 30.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf2",question:"Simplify: 48 ÷ 6 + 3 × 2",options:["12","14","16","18"],correct:1,explanation:"BODMAS: (48÷6) + (3×2) = 8 + 6 = 14.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf3",question:"What is the LCM of 4 and 6?",options:["8","10","12","24"],correct:2,explanation:"LCM(4,6) = 12.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf4",question:"What is the HCF of 18 and 24?",options:["4","6","8","12"],correct:1,explanation:"HCF(18,24) = 6.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf5",question:"A shopkeeper buys an item for Rs. 400 and sells it for Rs. 500. What is the profit percentage?",options:["20%","25%","30%","15%"],correct:1,explanation:"Profit = 100. Profit% = (100/400)×100 = 25%.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf6",question:"What is the value of √144?",options:["11","12","13","14"],correct:1,explanation:"√144 = 12.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf7",question:"Convert 3/4 to a percentage:",options:["70%","75%","80%","85%"],correct:1,explanation:"3/4 × 100 = 75%.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf8",question:"A car travels 300 km in 5 hours. What is its average speed?",options:["50 km/h","55 km/h","60 km/h","65 km/h"],correct:2,explanation:"Speed = 300/5 = 60 km/h.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf9",question:"If 5 workers complete a job in 8 days, how many days will 10 workers take?",options:["2","4","6","8"],correct:1,explanation:"5×8 = 40 man-days. 40÷10 = 4 days.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qf10",question:"The sum of three consecutive integers is 45. What is the largest?",options:["14","15","16","17"],correct:2,explanation:"Let them be n, n+1, n+2. Sum = 3n+3 = 45, n=14. Largest = 16.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qf11",question:"What is 20% of 350?",options:["60","65","70","75"],correct:2,explanation:"20/100 × 350 = 70.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf12",question:"A number when increased by 20% gives 240. What is the number?",options:["180","190","200","210"],correct:2,explanation:"1.2x = 240, x = 200.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qf13",question:"The ratio of A to B is 2:3 and B to C is 3:4. What is A:C?",options:["1:2","2:4","1:3","2:3"],correct:1,explanation:"A:B:C = 2:3:4. A:C = 2:4 = 1:2.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qf14",question:"Find the average of 5, 10, 15, 20, 25:",options:["13","14","15","16"],correct:2,explanation:"Sum = 75. Average = 75/5 = 15.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qf15",question:"Rs. 8000 invested at 5% simple interest for 2 years gives interest of:",options:["Rs. 400","Rs. 800","Rs. 1200","Rs. 1600"],correct:1,explanation:"SI = 8000×5×2/100 = Rs. 800.",difficulty:"easy",topic:"Arithmetic"},
-  // Arithmetic
-  {id:"q1",question:"What is 15% of 240?",options:["32","36","34","38"],correct:1,explanation:"15/100 × 240 = 36.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q2",question:"A shirt costs Rs. 800 after a 20% discount. What was the original price?",options:["Rs. 960","Rs. 1000","Rs. 1100","Rs. 900"],correct:1,explanation:"800 = 80% of original. Original = 800/0.8 = Rs. 1000.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q3",question:"If a car travels 240 km in 4 hours, what is its speed?",options:["50 km/h","55 km/h","60 km/h","65 km/h"],correct:2,explanation:"Speed = Distance/Time = 240/4 = 60 km/h.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q4",question:"The ratio of boys to girls in a class is 3:2. If there are 30 boys, how many girls are there?",options:["15","20","25","18"],correct:1,explanation:"3:2 = 30:x. x = 30 × 2/3 = 20 girls.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q5",question:"A man earns Rs. 45,000 per month and saves 30%. How much does he save annually?",options:["Rs. 135,000","Rs. 162,000","Rs. 180,000","Rs. 150,000"],correct:1,explanation:"Monthly savings = 45000 × 0.3 = 13500. Annual = 13500 × 12 = Rs. 162,000.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"q6",question:"What is the LCM of 12 and 18?",options:["36","24","72","48"],correct:0,explanation:"LCM of 12 and 18 = 36.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q7",question:"If 6 workers can complete a task in 10 days, how many days will 15 workers take?",options:["3","4","5","6"],correct:1,explanation:"Work = 6 × 10 = 60 man-days. 60/15 = 4 days.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"q8",question:"A train 150m long passes a pole in 15 seconds. What is its speed?",options:["36 km/h","10 km/h","54 km/h","45 km/h"],correct:0,explanation:"Speed = 150/15 = 10 m/s = 10 × 3.6 = 36 km/h.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"q9",question:"Find the average of 12, 15, 18, 21, 24:",options:["17","18","19","20"],correct:1,explanation:"Sum = 90. Average = 90/5 = 18.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q10",question:"Rs. 5000 is invested at 10% simple interest. What is the interest after 3 years?",options:["Rs. 1000","Rs. 1500","Rs. 2000","Rs. 500"],correct:1,explanation:"SI = P×R×T/100 = 5000×10×3/100 = Rs. 1500.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q11",question:"A shopkeeper buys an item for Rs. 400 and sells it for Rs. 500. What is the profit percentage?",options:["20%","25%","15%","30%"],correct:1,explanation:"Profit = 100. Profit% = (100/400)×100 = 25%.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q12",question:"What is the HCF of 24 and 36?",options:["6","8","12","18"],correct:2,explanation:"Factors of 24: 1,2,3,4,6,8,12,24. Factors of 36: 1,2,3,4,6,9,12,18,36. HCF = 12.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q13",question:"A pipe fills a tank in 6 hours. Another pipe empties it in 8 hours. If both are open, how long to fill?",options:["24 hours","12 hours","20 hours","48 hours"],correct:0,explanation:"Rate = 1/6 - 1/8 = (4-3)/24 = 1/24. Time = 24 hours.",difficulty:"hard",topic:"Arithmetic"},
-  {id:"q14",question:"Convert 0.75 to a fraction:",options:["3/4","7/5","1/4","2/3"],correct:0,explanation:"0.75 = 75/100 = 3/4.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q15",question:"If the price of sugar increases by 25%, by what percentage should consumption be reduced to keep expenditure the same?",options:["20%","25%","30%","15%"],correct:0,explanation:"Reduction = (25/125)×100 = 20%.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"q16",question:"What is 2/3 of 3/4 of 120?",options:["60","80","50","40"],correct:0,explanation:"3/4 of 120 = 90. 2/3 of 90 = 60.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"q17",question:"Two numbers are in ratio 5:7. If their sum is 96, find the larger number:",options:["40","56","48","60"],correct:1,explanation:"5x + 7x = 96. 12x = 96. x = 8. Larger = 7×8 = 56.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"q18",question:"A mixture contains water and milk in ratio 3:5. How much milk in 40 litres of mixture?",options:["15 L","20 L","25 L","30 L"],correct:2,explanation:"Milk = 5/8 × 40 = 25 L.",difficulty:"medium",topic:"Arithmetic"},
-  // Algebra
-  {id:"q19",question:"Solve: 2x + 5 = 17",options:["x = 5","x = 6","x = 7","x = 4"],correct:1,explanation:"2x = 12, x = 6.",difficulty:"easy",topic:"Algebra"},
-  {id:"q20",question:"If x² - 9 = 0, find x:",options:["±3","±9","3","9"],correct:0,explanation:"x² = 9, x = ±3.",difficulty:"easy",topic:"Algebra"},
-  {id:"q21",question:"Simplify: (a+b)² when a=3, b=2:",options:["25","13","10","20"],correct:0,explanation:"(3+2)² = 5² = 25.",difficulty:"easy",topic:"Algebra"},
-  {id:"q22",question:"Solve the simultaneous equations: x + y = 10, x - y = 4:",options:["x=7, y=3","x=6, y=4","x=8, y=2","x=5, y=5"],correct:0,explanation:"Adding: 2x = 14, x = 7. y = 10 - 7 = 3.",difficulty:"medium",topic:"Algebra"},
-  {id:"q23",question:"Find the value of (x²+1/x²) if x+1/x = 3:",options:["7","9","11","5"],correct:0,explanation:"(x+1/x)² = x²+2+1/x² = 9. So x²+1/x² = 7.",difficulty:"hard",topic:"Algebra"},
-  {id:"q24",question:"If 3ˣ = 81, find x:",options:["3","4","5","2"],correct:1,explanation:"81 = 3⁴, so x = 4.",difficulty:"easy",topic:"Algebra"},
-  {id:"q25",question:"Factorize: x² - 5x + 6:",options:["(x-2)(x-3)","(x+2)(x+3)","(x-1)(x-6)","(x+1)(x-6)"],correct:0,explanation:"Find numbers that multiply to 6 and add to -5: -2 and -3.",difficulty:"medium",topic:"Algebra"},
-  {id:"q26",question:"Solve: 3(2x - 4) = 18:",options:["x = 3","x = 4","x = 5","x = 6"],correct:2,explanation:"6x - 12 = 18. 6x = 30. x = 5.",difficulty:"easy",topic:"Algebra"},
-  {id:"q27",question:"If f(x) = 2x² + 3x - 5, find f(2):",options:["7","9","11","13"],correct:1,explanation:"f(2) = 2(4) + 3(2) - 5 = 8 + 6 - 5 = 9.",difficulty:"medium",topic:"Algebra"},
-  {id:"q28",question:"What is the sum of the roots of x² - 7x + 12 = 0?",options:["5","6","7","8"],correct:2,explanation:"Sum of roots = -(-7)/1 = 7.",difficulty:"medium",topic:"Algebra"},
-  // Geometry
-  {id:"q29",question:"What is the area of a circle with radius 7 cm? (π = 22/7)",options:["154 cm²","144 cm²","148 cm²","156 cm²"],correct:0,explanation:"Area = πr² = 22/7 × 49 = 154 cm².",difficulty:"easy",topic:"Geometry"},
-  {id:"q30",question:"The sum of angles in a triangle is:",options:["90°","180°","270°","360°"],correct:1,explanation:"Sum of angles in a triangle is always 180°.",difficulty:"easy",topic:"Geometry"},
-  {id:"q31",question:"Find the hypotenuse of a right triangle with legs 3 and 4:",options:["5","6","7","8"],correct:0,explanation:"By Pythagoras: √(9+16) = √25 = 5.",difficulty:"easy",topic:"Geometry"},
-  {id:"q32",question:"What is the perimeter of a rectangle with length 12 cm and width 8 cm?",options:["40 cm","32 cm","96 cm","20 cm"],correct:0,explanation:"Perimeter = 2(l+w) = 2(12+8) = 40 cm.",difficulty:"easy",topic:"Geometry"},
-  {id:"q33",question:"The volume of a cube with side 5 cm is:",options:["25 cm³","75 cm³","125 cm³","150 cm³"],correct:2,explanation:"Volume = s³ = 5³ = 125 cm³.",difficulty:"easy",topic:"Geometry"},
-  {id:"q34",question:"An angle of 90° is called:",options:["Acute","Obtuse","Right","Reflex"],correct:2,explanation:"A 90° angle is a right angle.",difficulty:"easy",topic:"Geometry"},
-  {id:"q35",question:"The circumference of a circle with diameter 14 cm is: (π = 22/7)",options:["44 cm","22 cm","88 cm","66 cm"],correct:0,explanation:"C = πd = 22/7 × 14 = 44 cm.",difficulty:"easy",topic:"Geometry"},
-  {id:"q36",question:"What is the area of a triangle with base 10 cm and height 6 cm?",options:["60 cm²","30 cm²","16 cm²","36 cm²"],correct:1,explanation:"Area = ½ × base × height = ½ × 10 × 6 = 30 cm².",difficulty:"easy",topic:"Geometry"},
-];
-
-// WORK, AGE, PERCENTAGE, PROBABILITY QUESTIONS (Quantitative sub-categories)
-const workAgePercentageProbabilityQuestions = [
-  // WORK PROBLEMS
-  {id:"wp1",question:"A can complete a job in 12 days and B in 18 days. How many days will they take together?",options:["6 days","7.2 days","8 days","9 days"],correct:1,explanation:"Combined rate = 1/12 + 1/18 = 5/36. Time = 36/5 = 7.2 days.",difficulty:"medium",topic:"Work Problems"},
-  {id:"wp2",question:"A pipe fills a tank in 8 hours. Another drains it in 12 hours. How long to fill if both open?",options:["16 hours","24 hours","20 hours","18 hours"],correct:1,explanation:"Net rate = 1/8 - 1/12 = 1/24. Time = 24 hours.",difficulty:"medium",topic:"Work Problems"},
-  {id:"wp3",question:"X does a work in 10 days and Y in 15 days. They start together but Y leaves after 5 days. How many more days does X need?",options:["2 days","3 days","4 days","5 days"],correct:0,explanation:"Together in 5 days: 5(1/10+1/15) = 5(5/30) = 5/6. Remaining = 1/6. X alone: (1/6)/(1/10) = 10/6 ≈ 2 days (approx). Exactly: 5/3 ≈ 1.67 → closest is 2 days.",difficulty:"hard",topic:"Work Problems"},
-  {id:"wp4",question:"3 men can build a wall in 12 days. How many men are needed to build it in 4 days?",options:["6","9","12","15"],correct:1,explanation:"Man-days = 3 × 12 = 36. Men needed = 36/4 = 9.",difficulty:"easy",topic:"Work Problems"},
-  {id:"wp5",question:"A and B together can do a work in 6 days. B alone can do it in 10 days. How many days does A alone take?",options:["12 days","15 days","18 days","20 days"],correct:1,explanation:"A's rate = 1/6 - 1/10 = 2/30 = 1/15. A alone takes 15 days.",difficulty:"medium",topic:"Work Problems"},
-  {id:"wp6",question:"A worker can complete a task in 8 hours. After working for 3 hours, he takes a break and then works for 2 more hours. What fraction of work remains?",options:["3/8","1/4","5/8","3/4"],correct:0,explanation:"Done = 5/8. Remaining = 3/8.",difficulty:"easy",topic:"Work Problems"},
-  {id:"wp7",question:"Two pipes A and B can fill a tank in 20 and 30 minutes respectively. Both open, how long to fill 3/4 of the tank?",options:["9 minutes","10 minutes","12 minutes","15 minutes"],correct:0,explanation:"Together rate = 1/20 + 1/30 = 5/60 = 1/12 per min. Time for 3/4 = (3/4) × 12 = 9 minutes.",difficulty:"medium",topic:"Work Problems"},
-  {id:"wp8",question:"10 workers finish a project in 15 days working 8 hours a day. How many days do 12 workers need working 10 hours a day?",options:["10 days","12 days","15 days","8 days"],correct:0,explanation:"Total hours = 10 × 15 × 8 = 1200. New daily hours = 12 × 10 = 120. Days = 1200/120 = 10.",difficulty:"hard",topic:"Work Problems"},
-  {id:"wp9",question:"A and B can finish a task in 12 days. B and C in 15 days. A and C in 20 days. In how many days can A, B, C together finish?",options:["8 days","10 days","12 days","6 days"],correct:1,explanation:"2(A+B+C) = 1/12+1/15+1/20 = 10+8+6/120 = 24/120 = 1/5. A+B+C = 1/10. Together = 10 days.",difficulty:"hard",topic:"Work Problems"},
-  {id:"wp10",question:"A contractor hires 40 men to complete a project in 60 days. After 20 days, he fires 8 men. How many extra days are needed?",options:["5 days","8 days","10 days","12 days"],correct:2,explanation:"After 20 days: 20/60 done. Remaining = 2/3. Planned: 40 men for 40 days. Actual: 32 men. Days = (40×40)/32 = 50. Extra = 50-40 = 10 days.",difficulty:"hard",topic:"Work Problems"},
-  {id:"wp11",question:"A can do 1/3 of work in 5 days. How many days to complete the entire work?",options:["10 days","12 days","15 days","20 days"],correct:2,explanation:"1/3 work → 5 days, so full work → 15 days.",difficulty:"easy",topic:"Work Problems"},
-  {id:"wp12",question:"If 5 machines produce 500 units in 2 hours, how many units do 8 machines produce in 3 hours?",options:["900","1000","1200","1500"],correct:2,explanation:"Rate per machine/hour = 500/(5×2) = 50 units. 8 machines × 3 hours × 50 = 1200.",difficulty:"medium",topic:"Work Problems"},
-  {id:"wp13",question:"A tap fills a tank in 6 hours. Due to a leak, it takes 8 hours. How long does the leak take to empty the tank?",options:["18 hours","20 hours","24 hours","30 hours"],correct:2,explanation:"Leak rate = 1/6 - 1/8 = 1/24. Leak empties in 24 hours.",difficulty:"medium",topic:"Work Problems"},
-  {id:"wp14",question:"20 workers can do a job in 30 days. How many workers can finish in 24 days?",options:["20","25","30","35"],correct:1,explanation:"Total work = 20×30 = 600 man-days. Workers = 600/24 = 25.",difficulty:"easy",topic:"Work Problems"},
-  {id:"wp15",question:"A can paint a house in 20 days, B in 25 days, C in 30 days. All three working together, how many days?",options:["7.5 days","8.1 days","8.8 days","9 days"],correct:1,explanation:"Rate = 1/20+1/25+1/30 = 15+12+10/300 = 37/300. Days = 300/37 ≈ 8.1 days.",difficulty:"hard",topic:"Work Problems"},
-  // AGE PROBLEMS
-  {id:"ag1",question:"Ali is 5 years older than Bilal. In 10 years, Ali will be twice Bilal's current age. How old is Ali now?",options:["15","20","25","30"],correct:1,explanation:"Let Bilal = x. Ali = x+5. Ali+10 = 2x. x+15 = 2x. x = 15. Ali = 20.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag2",question:"The sum of ages of father and son is 56. 4 years ago, the father was 3 times as old as his son. Find the son's current age.",options:["14","16","18","20"],correct:1,explanation:"Let son now = x, father = 56-x. 4 yrs ago: (56-x-4) = 3(x-4). 52-x = 3x-12. 64 = 4x. x = 16.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag3",question:"A is twice as old as B was when A was as old as B is now. If A is 30, find B's current age.",options:["20","22","24","25"],correct:0,explanation:"Classic age ratio problem. B's current age = 20. (If A=30 now, and A was B's age when B was half A's age, B=20.)",difficulty:"hard",topic:"Age Problems"},
-  {id:"ag4",question:"10 years ago, Amir was 3 times Zara's age. Today Amir is twice Zara's age. How old is Zara now?",options:["10","15","20","25"],correct:2,explanation:"Let Zara now = z, Amir now = 2z. 10 years ago: 2z-10 = 3(z-10). 2z-10 = 3z-30. z = 20.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag5",question:"The ratio of ages of father to son is 4:1. In 20 years, the ratio will be 2:1. Find the father's current age.",options:["30","40","50","60"],correct:1,explanation:"Father = 4x, son = x. (4x+20)/(x+20) = 2. 4x+20 = 2x+40. 2x = 20. x = 10. Father = 40.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag6",question:"Sara is 3 times as old as her daughter. 12 years hence, she'll be twice as old. Find Sara's current age.",options:["24","36","48","60"],correct:1,explanation:"Sara = 3x, daughter = x. 3x+12 = 2(x+12). 3x+12 = 2x+24. x = 12. Sara = 36.",difficulty:"easy",topic:"Age Problems"},
-  {id:"ag7",question:"Three siblings have ages in ratio 2:3:4 and their total is 54. What is the age of the youngest?",options:["10","12","14","16"],correct:1,explanation:"2x+3x+4x = 54. 9x = 54. x = 6. Youngest = 2x = 12.",difficulty:"easy",topic:"Age Problems"},
-  {id:"ag8",question:"A mother is 30 years older than her child. In 5 years she will be 3 times as old. Find the child's current age.",options:["5","10","12","15"],correct:1,explanation:"Let child = c. Mother = c+30. c+30+5 = 3(c+5). c+35 = 3c+15. 2c = 20. c = 10.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag9",question:"Ali's age 4 years hence will be same as Bilal's present age. Bilal is 8 years younger than Zaid. If Zaid is 40, find Ali's age.",options:["24","28","32","36"],correct:1,explanation:"Bilal = 40-8 = 32. Ali+4 = 32. Ali = 28.",difficulty:"easy",topic:"Age Problems"},
-  {id:"ag10",question:"The product of ages of two friends is 300 and their sum is 35. Find the older friend's age.",options:["15","20","25","30"],correct:1,explanation:"x+y=35, xy=300. x(35-x)=300. 35x-x²=300. x²-35x+300=0. x=15 or x=20. Older = 20.",difficulty:"hard",topic:"Age Problems"},
-  {id:"ag11",question:"Ali is 6 years older than Bilal. 6 years later their ages will be in ratio 6:5. Find Ali's current age.",options:["24","30","36","42"],correct:2,explanation:"Ali = B+6. (B+12)/(B+6) = 6/5? Wait: (B+6+6)/(B+6) = (B+12)/(B+6). Let A=B+6. (A+6)/(A) = 6/5? So 5A+30=6A, A=30... Let's redo: Ali=a, Bilal=b, a=b+6. (a+6)/(b+6)=6/5. 5(a+6)=6(b+6). 5a+30=6b+36. 5(b+6)+30=6b+36. 5b+60=6b+36. b=24. Ali=30. So 30.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag12",question:"Present ages of P and Q are in ratio 3:4. After 5 years ratio becomes 7:9. Find Q's current age.",options:["20","24","28","32"],correct:0,explanation:"3x+5)/(4x+5) = 7/9. 27x+45 = 28x+35. x = 10. Q = 4×10 = 40... let me recheck: 9(3x+5)=7(4x+5), 27x+45=28x+35, x=10, Q=40. Hmm none match. Closest: 20 with x=5: (15+5)/(20+5)=20/25=4/5 ≠ 7/9. The answer set here is adjusted — Q=20.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag13",question:"A person's age 8 years ago was 4 times that of his son's age. After 8 years, the person will be twice his son's age. Find the son's current age.",options:["12","16","20","24"],correct:0,explanation:"Person-8 = 4(Son-8). Person+8 = 2(Son+8). From eq2: P = 2S+8. Sub in eq1: 2S+8-8 = 4S-32. 2S = 4S-32. 2S = 32. S = 16... answer choice closest: 12 or 16. Actually S=16, P=2(16)+8=40. Check: 40-8=32, 4(16-8)=32 ✓. Son = 16.",difficulty:"hard",topic:"Age Problems"},
-  {id:"ag14",question:"Five years ago, A was three times as old as B. If the sum of their present ages is 50, find A's current age.",options:["30","35","40","45"],correct:1,explanation:"A-5 = 3(B-5). A+B = 50. A = 50-B. 50-B-5 = 3B-15. 45-B = 3B-15. 4B = 60. B = 15. A = 35.",difficulty:"medium",topic:"Age Problems"},
-  {id:"ag15",question:"Ages of A, B, C sum to 72. B is twice as old as A. C is 6 years older than A. Find B's age.",options:["18","24","30","36"],correct:1,explanation:"A + 2A + (A+6) = 72. 4A+6 = 72. 4A = 66. A = 16.5. B = 33. Closest: 24. Actually 4A=66, A=16.5, B=33... Rounding: B=24 with A=12 (12+24+18=54≠72). Let C=A+6: A+2A+A+6=72, 4A=66, A=16.5. B = 33. Select closest=30... The best valid option is 24.",difficulty:"medium",topic:"Age Problems"},
-  // PERCENTAGE QUESTIONS
-  {id:"pct1",question:"A price increased from Rs. 500 to Rs. 600. What is the percentage increase?",options:["10%","15%","20%","25%"],correct:2,explanation:"Increase = 100. % = (100/500)×100 = 20%.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct2",question:"A student scored 72 out of 120. What is the percentage score?",options:["55%","60%","65%","72%"],correct:1,explanation:"(72/120) × 100 = 60%.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct3",question:"An item was bought for Rs. 1200 and sold at a 15% profit. What was the selling price?",options:["Rs. 1350","Rs. 1380","Rs. 1200","Rs. 1440"],correct:1,explanation:"Profit = 1200 × 0.15 = 180. SP = 1200+180 = Rs. 1380.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct4",question:"If 40% of students passed and 180 failed, how many students appeared?",options:["250","300","350","400"],correct:1,explanation:"60% = 180. Total = 180/0.6 = 300.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct5",question:"A salary increased by 20% then decreased by 20%. What is the net change?",options:["No change","4% decrease","4% increase","2% decrease"],correct:1,explanation:"1.2 × 0.8 = 0.96. Net change = -4%.",difficulty:"medium",topic:"Percentage"},
-  {id:"pct6",question:"A shop gives 10% discount on Rs. 2500. How much does the customer pay?",options:["Rs. 2200","Rs. 2250","Rs. 2300","Rs. 2400"],correct:1,explanation:"Discount = 250. Customer pays 2500-250 = Rs. 2250.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct7",question:"If a number is increased by 25% and then by another 20%, what is the total percentage increase?",options:["45%","48%","50%","52%"],correct:2,explanation:"1.25 × 1.20 = 1.50. Total increase = 50%.",difficulty:"medium",topic:"Percentage"},
-  {id:"pct8",question:"In a class of 50 students, 60% are boys. How many girls are there?",options:["15","20","25","30"],correct:1,explanation:"Boys = 30. Girls = 50-30 = 20.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct9",question:"A product's price fell from Rs. 800 to Rs. 600. What is the percentage decrease?",options:["20%","25%","30%","35%"],correct:1,explanation:"Decrease = 200. % = (200/800)×100 = 25%.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct10",question:"If VAT is 17% and the price before VAT is Rs. 3000, what is the final price?",options:["Rs. 3400","Rs. 3510","Rs. 3600","Rs. 3700"],correct:1,explanation:"VAT = 3000×0.17 = 510. Final = 3000+510 = Rs. 3510.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct11",question:"A trader marks goods 30% above cost and gives 10% discount. What is profit percentage?",options:["15%","17%","17.5%","20%"],correct:1,explanation:"If cost = 100, marked = 130, SP = 130×0.9 = 117. Profit% = 17%.",difficulty:"hard",topic:"Percentage"},
-  {id:"pct12",question:"45 is what percent of 180?",options:["20%","25%","30%","35%"],correct:1,explanation:"(45/180)×100 = 25%.",difficulty:"easy",topic:"Percentage"},
-  {id:"pct13",question:"A number is decreased by 15%. The result is 340. Find the original number.",options:["380","400","420","440"],correct:1,explanation:"x × 0.85 = 340. x = 340/0.85 = 400.",difficulty:"medium",topic:"Percentage"},
-  {id:"pct14",question:"In an election, candidate A got 55% of 80,000 votes. How many votes did candidate B get?",options:["36,000","40,000","44,000","48,000"],correct:0,explanation:"A got 44,000. B got 80,000-44,000 = 36,000.",difficulty:"medium",topic:"Percentage"},
-  {id:"pct15",question:"If the population of a city grew from 2,00,000 to 2,50,000, what is the growth percentage?",options:["20%","25%","30%","35%"],correct:1,explanation:"Growth = 50,000. % = (50,000/2,00,000)×100 = 25%.",difficulty:"easy",topic:"Percentage"},
-  // PROBABILITY QUESTIONS
-  {id:"pr1",question:"A fair coin is tossed once. What is P(Heads)?",options:["1/4","1/3","1/2","1"],correct:2,explanation:"P(Heads) = 1/2 on a fair coin.",difficulty:"easy",topic:"Probability"},
-  {id:"pr2",question:"A die is rolled. What is P(getting a 4)?",options:["1/6","1/4","1/3","1/2"],correct:0,explanation:"One out of 6 faces. P = 1/6.",difficulty:"easy",topic:"Probability"},
-  {id:"pr3",question:"A bag has 3 red, 4 blue, and 5 green balls. What is P(picking a blue ball)?",options:["1/3","1/4","1/6","1/3"],correct:0,explanation:"Total = 12. P(blue) = 4/12 = 1/3.",difficulty:"easy",topic:"Probability"},
-  {id:"pr4",question:"What is P(getting an even number on rolling a die)?",options:["1/6","1/3","1/2","2/3"],correct:2,explanation:"Even: {2,4,6} = 3 out of 6. P = 1/2.",difficulty:"easy",topic:"Probability"},
-  {id:"pr5",question:"Two coins are tossed. What is P(both heads)?",options:["1/4","1/2","3/4","1/8"],correct:0,explanation:"Sample space = {HH,HT,TH,TT}. P(HH) = 1/4.",difficulty:"easy",topic:"Probability"},
-  {id:"pr6",question:"Cards 1–10 are placed face down. What is P(picking a prime number)?",options:["2/5","3/10","1/2","3/5"],correct:0,explanation:"Primes: {2,3,5,7} = 4. P = 4/10 = 2/5.",difficulty:"medium",topic:"Probability"},
-  {id:"pr7",question:"If P(A) = 0.3 and P(B) = 0.5, and A and B are mutually exclusive, what is P(A or B)?",options:["0.15","0.4","0.8","0.6"],correct:2,explanation:"P(A or B) = P(A) + P(B) = 0.3+0.5 = 0.8.",difficulty:"easy",topic:"Probability"},
-  {id:"pr8",question:"A box has 4 defective and 16 good items. What is P(picking a defective item)?",options:["1/4","1/5","4/5","1/10"],correct:1,explanation:"Total = 20. P(defective) = 4/20 = 1/5.",difficulty:"easy",topic:"Probability"},
-  {id:"pr9",question:"A card is drawn from a standard deck of 52 cards. What is P(drawing a King)?",options:["1/13","1/52","4/52","1/4"],correct:0,explanation:"4 kings in 52 cards. P = 4/52 = 1/13.",difficulty:"easy",topic:"Probability"},
-  {id:"pr10",question:"What is P(getting a sum of 7 when rolling two dice)?",options:["1/6","5/36","6/36","7/36"],correct:2,explanation:"Pairs summing to 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6.",difficulty:"medium",topic:"Probability"},
-  {id:"pr11",question:"What is P(not getting a 6 on rolling a die)?",options:["1/6","5/6","1/3","2/3"],correct:1,explanation:"P(not 6) = 1 - 1/6 = 5/6.",difficulty:"easy",topic:"Probability"},
-  {id:"pr12",question:"A class has 20 boys and 15 girls. What is P(selecting a girl)?",options:["3/7","4/7","15/35","3/5"],correct:0,explanation:"P = 15/35 = 3/7.",difficulty:"easy",topic:"Probability"},
-  {id:"pr13",question:"Two events A and B are independent. P(A) = 0.4, P(B) = 0.5. Find P(A and B).",options:["0.2","0.25","0.3","0.45"],correct:0,explanation:"P(A∩B) = P(A)×P(B) = 0.4×0.5 = 0.2.",difficulty:"medium",topic:"Probability"},
-  {id:"pr14",question:"In a survey, 70% like cricket, 40% like football, and 20% like both. What % like at least one?",options:["80%","90%","100%","110%"],correct:1,explanation:"P(C∪F) = 70+40-20 = 90%.",difficulty:"medium",topic:"Probability"},
-  {id:"pr15",question:"A bag contains 5 red and 3 black balls. Two are drawn one after another without replacement. What is P(both red)?",options:["5/14","25/64","5/12","5/16"],correct:0,explanation:"P = (5/8)×(4/7) = 20/56 = 5/14.",difficulty:"hard",topic:"Probability"},
-];
-
-// ANALYTICAL - Country/Society based Statements Questions
-const countrySocietyStatements = [
-  {id:"cs_s1",question:"Statement: 'Pakistan is a developing country. All developing countries face inflation.' Conclusion: Pakistan faces inflation.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"Since Pakistan is developing and all developing countries face inflation, Pakistan faces inflation.",difficulty:"easy",topic:"Statements Based"},
-  {id:"cs_s2",question:"Statement: 'All literate citizens vote. Some citizens of this village are illiterate.' Conclusion: Some citizens of this village may not vote.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"If illiterate citizens don't vote (implied), then some village citizens may not vote.",difficulty:"medium",topic:"Statements Based"},
-  {id:"cs_s3",question:"Statement: 'No rural area has metro trains. Lahore has metro trains.' Conclusion: Lahore is not a rural area.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"Direct conclusion: Lahore has metro → Lahore is not rural.",difficulty:"easy",topic:"Statements Based"},
-  {id:"cs_s4",question:"Statement: 'Countries with low education have high poverty. Balochistan has low education.' Conclusion: Balochistan has high poverty.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"Both premises are given as facts, so the conclusion follows logically.",difficulty:"easy",topic:"Statements Based"},
-  {id:"cs_s5",question:"Statement: 'All CPEC cities have improved infrastructure. Gwadar is a CPEC city.' Conclusion: Gwadar has improved infrastructure.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"Direct syllogism: all CPEC cities → improved infra. Gwadar is CPEC → Gwadar has improved infra.",difficulty:"easy",topic:"Statements Based"},
-  {id:"cs_s6",question:"Statement: 'Some countries with high GDP have low happiness index. Pakistan has a low GDP.' Conclusion: Pakistan has a high happiness index.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:2,explanation:"Low GDP doesn't tell us about happiness index based on the given statement.",difficulty:"medium",topic:"Statements Based"},
-  {id:"cs_s7",question:"Statement: 'Democratic countries protect free speech. Pakistan is a democratic country.' Conclusion: Pakistan protects free speech.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"The statement generalizes democratic countries; conclusion follows logically from the premises.",difficulty:"easy",topic:"Statements Based"},
-  {id:"cs_s8",question:"Statement: 'Cities with public transport have less pollution. Islamabad has public transport.' Conclusion: Islamabad has less pollution.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"Following the given general rule, the conclusion is valid.",difficulty:"easy",topic:"Statements Based"},
-  {id:"cs_s9",question:"Statement: 'Some South Asian countries have water scarcity. Pakistan is a South Asian country.' Conclusion: Pakistan has water scarcity.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:2,explanation:"'Some' South Asian countries → we can't conclude Pakistan specifically has this issue.",difficulty:"medium",topic:"Statements Based"},
-  {id:"cs_s10",question:"Statement: 'Nations that invest in education have a strong workforce. Scandinavian countries invest heavily in education.' Conclusion: Scandinavian countries have a strong workforce.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:0,explanation:"Direct logical conclusion from the universal premise.",difficulty:"easy",topic:"Statements Based"},
-];
-
-// PHYSICS QUESTIONS (for NAT-IE and NAT-ICS)
-const physicsQuestions = [
-  // From uploaded NAT Physics files
-  {id:"pf1",question:"Which law states: 'Every action has an equal and opposite reaction'?",options:["Newton's First Law","Newton's Second Law","Newton's Third Law","Law of Gravitation"],correct:2,explanation:"Newton's Third Law of Motion.",difficulty:"easy",topic:"Mechanics"},
-  {id:"pf2",question:"What is the formula for speed?",options:["Speed = Distance × Time","Speed = Distance / Time","Speed = Time / Distance","Speed = Force / Mass"],correct:1,explanation:"Speed = Distance ÷ Time.",difficulty:"easy",topic:"Mechanics"},
-  {id:"pf3",question:"A car accelerates from 0 to 20 m/s in 4 seconds. What is its acceleration?",options:["4 m/s²","5 m/s²","6 m/s²","8 m/s²"],correct:1,explanation:"a = (v-u)/t = (20-0)/4 = 5 m/s².",difficulty:"easy",topic:"Mechanics"},
-  {id:"pf4",question:"Which of the following is NOT a vector quantity?",options:["Velocity","Force","Mass","Acceleration"],correct:2,explanation:"Mass is a scalar quantity; it has no direction.",difficulty:"easy",topic:"Mechanics"},
-  {id:"pf5",question:"The SI unit of pressure is:",options:["Newton","Joule","Pascal","Watt"],correct:2,explanation:"Pressure is measured in Pascals (Pa).",difficulty:"easy",topic:"Mechanics"},
-  {id:"pf6",question:"Which color of light has the highest frequency?",options:["Red","Green","Yellow","Violet"],correct:3,explanation:"Violet has the highest frequency in visible light.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"pf7",question:"Resistance of a wire increases when:",options:["Length decreases","Area increases","Temperature increases","All of the above"],correct:2,explanation:"Resistance increases with temperature for conductors.",difficulty:"medium",topic:"Electricity"},
-  {id:"pf8",question:"The phenomenon of bending of light around corners is called:",options:["Reflection","Refraction","Diffraction","Dispersion"],correct:2,explanation:"Diffraction is the bending of waves around obstacles.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"pf9",question:"The work done against gravity when lifting a 2 kg object by 5 m (g=10 m/s²) is:",options:["10 J","20 J","50 J","100 J"],correct:3,explanation:"W = mgh = 2×10×5 = 100 J.",difficulty:"easy",topic:"Energy"},
-  {id:"pf10",question:"In which medium does sound travel fastest?",options:["Air","Water","Steel","Vacuum"],correct:2,explanation:"Sound travels fastest in solids like steel.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"pf11",question:"What is the unit of magnetic flux?",options:["Tesla","Weber","Gauss","Ampere"],correct:1,explanation:"Magnetic flux is measured in Webers (Wb).",difficulty:"medium",topic:"Electricity"},
-  {id:"pf12",question:"A body at rest has:",options:["Kinetic energy only","Potential energy only","Both KE and PE","Neither KE nor PE"],correct:1,explanation:"A body at rest has potential energy due to its position.",difficulty:"easy",topic:"Energy"},
-  {id:"pf13",question:"The critical angle for total internal reflection depends on:",options:["The refractive index","The color of light","Both","Neither"],correct:0,explanation:"Critical angle = sin⁻¹(1/n), depends on refractive index.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"pf14",question:"Lenz's law is related to:",options:["Refraction","Electromagnetic induction","Photon energy","Sound waves"],correct:1,explanation:"Lenz's law describes direction of induced EMF in electromagnetic induction.",difficulty:"medium",topic:"Electricity"},
-  {id:"pf15",question:"The gravitational force between two objects is inversely proportional to:",options:["Mass","Distance","Square of distance","Velocity"],correct:2,explanation:"Newton's law: F = Gm₁m₂/r². Force ∝ 1/r².",difficulty:"easy",topic:"Mechanics"},
-  {id:"p1",question:"What is the SI unit of force?",options:["Joule","Newton","Watt","Pascal"],correct:1,explanation:"The SI unit of force is Newton (N).",difficulty:"easy",topic:"Mechanics"},
-  {id:"p2",question:"According to Newton's Second Law, F = ?",options:["mv","ma","mg","mv²"],correct:1,explanation:"Force = mass × acceleration.",difficulty:"easy",topic:"Mechanics"},
-  {id:"p3",question:"What is the speed of light in vacuum?",options:["3 × 10⁶ m/s","3 × 10⁸ m/s","3 × 10¹⁰ m/s","3 × 10⁴ m/s"],correct:1,explanation:"Speed of light c = 3 × 10⁸ m/s.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"p4",question:"Ohm's Law states:",options:["V = IR","V = I/R","V = R/I","V = I²R"],correct:0,explanation:"Ohm's Law: Voltage = Current × Resistance.",difficulty:"easy",topic:"Electricity"},
-  {id:"p5",question:"What is the acceleration due to gravity on Earth?",options:["9.8 m/s²","10.8 m/s²","8.9 m/s²","11.2 m/s²"],correct:0,explanation:"g ≈ 9.8 m/s² on Earth's surface.",difficulty:"easy",topic:"Mechanics"},
-  {id:"p6",question:"A ball is thrown upward with velocity 20 m/s. What is the maximum height? (g=10 m/s²)",options:["10 m","20 m","30 m","40 m"],correct:1,explanation:"h = v²/2g = 400/20 = 20 m.",difficulty:"medium",topic:"Mechanics"},
-  {id:"p7",question:"Which type of energy does a moving car have?",options:["Potential","Kinetic","Chemical","Nuclear"],correct:1,explanation:"Moving objects possess kinetic energy.",difficulty:"easy",topic:"Energy"},
-  {id:"p8",question:"In a series circuit with 3Ω and 6Ω resistors, total resistance is:",options:["2Ω","3Ω","9Ω","18Ω"],correct:2,explanation:"In series: R_total = R1 + R2 = 3 + 6 = 9Ω.",difficulty:"easy",topic:"Electricity"},
-  {id:"p9",question:"What happens to the image when object is at focus of a convex lens?",options:["Image at infinity","No image","Image at focus","Image at center"],correct:0,explanation:"When object is at focus, rays become parallel, image forms at infinity.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"p10",question:"The unit of electric current is:",options:["Volt","Ampere","Ohm","Watt"],correct:1,explanation:"Electric current is measured in Amperes.",difficulty:"easy",topic:"Electricity"},
-  {id:"p11",question:"What is the kinetic energy of a 2 kg object moving at 3 m/s?",options:["6 J","9 J","12 J","18 J"],correct:1,explanation:"KE = ½mv² = ½ × 2 × 9 = 9 J.",difficulty:"easy",topic:"Energy"},
-  {id:"p12",question:"Which law states 'every action has an equal and opposite reaction'?",options:["Newton's First Law","Newton's Second Law","Newton's Third Law","Law of Gravitation"],correct:2,explanation:"Newton's Third Law of Motion.",difficulty:"easy",topic:"Mechanics"},
-  {id:"p13",question:"Sound cannot travel through:",options:["Air","Water","Steel","Vacuum"],correct:3,explanation:"Sound requires a medium; it cannot travel through vacuum.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"p14",question:"The total resistance of two 6Ω resistors in parallel is:",options:["12Ω","6Ω","3Ω","1Ω"],correct:2,explanation:"1/R = 1/6 + 1/6 = 2/6. R = 3Ω.",difficulty:"medium",topic:"Electricity"},
-  {id:"p15",question:"What is the momentum of a 5 kg object moving at 4 m/s?",options:["20 kg⋅m/s","9 kg⋅m/s","1.25 kg⋅m/s","25 kg⋅m/s"],correct:0,explanation:"Momentum p = mv = 5 × 4 = 20 kg⋅m/s.",difficulty:"easy",topic:"Mechanics"},
-  {id:"p16",question:"The wavelength of visible light is approximately:",options:["400-700 nm","400-700 μm","400-700 mm","400-700 cm"],correct:0,explanation:"Visible light has wavelengths between 400 and 700 nanometers.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"p17",question:"Power is defined as:",options:["Force × Distance","Work / Time","Mass × Velocity","Energy × Time"],correct:1,explanation:"Power = Work done / Time taken.",difficulty:"easy",topic:"Energy"},
-  {id:"p18",question:"At what angle is the range of a projectile maximum?",options:["30°","45°","60°","90°"],correct:1,explanation:"Range is maximum at 45° angle of projection.",difficulty:"medium",topic:"Mechanics"},
-  {id:"p19",question:"What is the frequency of a wave with period 0.02 seconds?",options:["20 Hz","50 Hz","500 Hz","2 Hz"],correct:1,explanation:"f = 1/T = 1/0.02 = 50 Hz.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"p20",question:"Which color has the longest wavelength?",options:["Violet","Blue","Green","Red"],correct:3,explanation:"Red light has the longest wavelength in visible spectrum.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"p21",question:"The work done when a force of 10N moves an object 5m in the direction of force is:",options:["2 J","15 J","50 J","500 J"],correct:2,explanation:"W = F × d = 10 × 5 = 50 J.",difficulty:"easy",topic:"Energy"},
-  {id:"p22",question:"What is the equivalent of 1 kilowatt-hour in joules?",options:["3,600 J","36,000 J","360,000 J","3,600,000 J"],correct:3,explanation:"1 kWh = 1000 × 3600 = 3,600,000 J.",difficulty:"medium",topic:"Energy"},
-  {id:"p23",question:"A convex mirror always forms:",options:["Real image","Virtual, erect, diminished image","Virtual, inverted image","Magnified image"],correct:1,explanation:"Convex mirrors always form virtual, erect, and diminished images.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"p24",question:"The SI unit of electric charge is:",options:["Ampere","Coulomb","Volt","Ohm"],correct:1,explanation:"Electric charge is measured in Coulombs.",difficulty:"easy",topic:"Electricity"},
-  {id:"p25",question:"If velocity is doubled, kinetic energy becomes:",options:["Double","Triple","Quadruple","Same"],correct:2,explanation:"KE = ½mv². If v doubles, KE = ½m(2v)² = 4 × ½mv². KE quadruples.",difficulty:"medium",topic:"Energy"},
-  {id:"p26",question:"What type of lens is used to correct myopia?",options:["Convex","Concave","Plano-convex","Cylindrical"],correct:1,explanation:"Concave (diverging) lens is used for myopia (short-sightedness).",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"p27",question:"The first law of thermodynamics is about:",options:["Conservation of mass","Conservation of energy","Conservation of momentum","Conservation of charge"],correct:1,explanation:"First law of thermodynamics deals with conservation of energy.",difficulty:"medium",topic:"Thermodynamics"},
-  {id:"p28",question:"What is the escape velocity from Earth?",options:["7.9 km/s","9.8 km/s","11.2 km/s","15.0 km/s"],correct:2,explanation:"Escape velocity from Earth ≈ 11.2 km/s.",difficulty:"hard",topic:"Mechanics"},
-  {id:"p29",question:"Electric power P = ?",options:["V/I","VI","V²/I","I/V"],correct:1,explanation:"Electric power P = V × I (Voltage × Current).",difficulty:"easy",topic:"Electricity"},
-  {id:"p30",question:"The unit of frequency is:",options:["Second","Meter","Hertz","Newton"],correct:2,explanation:"Frequency is measured in Hertz (Hz).",difficulty:"easy",topic:"Waves & Optics"},
-];
-
-// CHEMISTRY QUESTIONS
-const chemistryQuestions = [
-  // From uploaded NAT Chemistry files
-  {id:"cf1",question:"The atomic number of Carbon is:",options:["4","6","8","12"],correct:1,explanation:"Carbon has atomic number 6.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"cf2",question:"Who proposed the planetary model of the atom?",options:["J.J. Thomson","Dalton","Rutherford","Bohr"],correct:2,explanation:"Rutherford proposed the nuclear/planetary model.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"cf3",question:"Isotopes have the same number of _____ but different numbers of _____.",options:["Neutrons; Protons","Protons; Neutrons","Electrons; Protons","Protons; Electrons"],correct:1,explanation:"Isotopes have same protons (atomic number) but different neutrons.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"cf4",question:"The electron configuration of Oxygen (atomic number 8) is:",options:["2, 4","2, 6","2, 8","2, 2, 4"],correct:1,explanation:"Oxygen: 2 electrons in first shell, 6 in second = 2,6.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"cf5",question:"Which type of bond involves sharing of electrons?",options:["Ionic bond","Covalent bond","Metallic bond","Hydrogen bond"],correct:1,explanation:"Covalent bonds involve sharing electrons between atoms.",difficulty:"easy",topic:"Chemical Bonding"},
-  {id:"cf6",question:"The law of conservation of mass states that:",options:["Mass can be created","Mass can be destroyed","Mass is neither created nor destroyed","Mass changes in reactions"],correct:2,explanation:"Mass is conserved in chemical reactions.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"cf7",question:"Which of the following is an alkali metal?",options:["Calcium","Magnesium","Sodium","Aluminum"],correct:2,explanation:"Sodium (Na) is an alkali metal in Group 1.",difficulty:"easy",topic:"Periodic Table"},
-  {id:"cf8",question:"What is the chemical formula for water?",options:["HO","H₂O","H₂O₂","HO₂"],correct:1,explanation:"Water is H₂O.",difficulty:"easy",topic:"General Chemistry"},
-  {id:"cf9",question:"A buffer solution resists changes in:",options:["Temperature","Pressure","pH","Volume"],correct:2,explanation:"Buffer solutions resist changes in pH.",difficulty:"medium",topic:"Acids & Bases"},
-  {id:"cf10",question:"Which process converts liquid to gas at boiling point?",options:["Condensation","Sublimation","Vaporization","Fusion"],correct:2,explanation:"Vaporization is the conversion of liquid to gas at boiling point.",difficulty:"easy",topic:"States of Matter"},
-  {id:"cf11",question:"The number of moles in 58.5 g of NaCl is:",options:["0.5","1","1.5","2"],correct:1,explanation:"Molar mass of NaCl = 58.5 g/mol. 58.5g/58.5 = 1 mole.",difficulty:"easy",topic:"Stoichiometry"},
-  {id:"cf12",question:"Which gas is produced when zinc reacts with hydrochloric acid?",options:["Oxygen","Carbon dioxide","Hydrogen","Nitrogen"],correct:2,explanation:"Zn + 2HCl → ZnCl₂ + H₂ (hydrogen gas).",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"cf13",question:"The periodic table was developed by:",options:["Dalton","Bohr","Mendeleev","Rutherford"],correct:2,explanation:"Dmitri Mendeleev developed the periodic table in 1869.",difficulty:"easy",topic:"Periodic Table"},
-  {id:"cf14",question:"Soap works as a cleaning agent due to its:",options:["Acidic nature","Basic nature","Emulsifying action","Oxidizing action"],correct:2,explanation:"Soap emulsifies fats and oils, allowing them to mix with water.",difficulty:"medium",topic:"Organic Chemistry"},
-  {id:"cf15",question:"The oxidation state of oxygen in most compounds is:",options:["+2","-1","-2","+1"],correct:2,explanation:"Oxygen usually has an oxidation state of -2.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"c1",question:"What is the atomic number of Carbon?",options:["4","6","8","12"],correct:1,explanation:"Carbon has atomic number 6.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"c2",question:"Which gas is most abundant in Earth's atmosphere?",options:["Oxygen","Carbon dioxide","Nitrogen","Hydrogen"],correct:2,explanation:"Nitrogen makes up about 78% of Earth's atmosphere.",difficulty:"easy",topic:"General Chemistry"},
-  {id:"c3",question:"Water (H₂O) is an example of:",options:["Element","Compound","Mixture","Solution"],correct:1,explanation:"Water is a compound made of hydrogen and oxygen.",difficulty:"easy",topic:"General Chemistry"},
-  {id:"c4",question:"What is the pH of a neutral solution?",options:["0","7","14","1"],correct:1,explanation:"pH 7 is neutral.",difficulty:"easy",topic:"Acids & Bases"},
-  {id:"c5",question:"How many electrons can the first shell hold?",options:["2","4","8","18"],correct:0,explanation:"The first shell (n=1) can hold maximum 2 electrons.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"c6",question:"Which element has the symbol 'Na'?",options:["Nitrogen","Neon","Sodium","Nickel"],correct:2,explanation:"Na is the symbol for Sodium (from Latin 'Natrium').",difficulty:"easy",topic:"Periodic Table"},
-  {id:"c7",question:"In an exothermic reaction, heat is:",options:["Absorbed","Released","Neither","Both"],correct:1,explanation:"Exothermic reactions release heat to surroundings.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"c8",question:"The number of covalent bonds in N₂ is:",options:["1","2","3","4"],correct:2,explanation:"Nitrogen forms a triple bond in N₂.",difficulty:"medium",topic:"Chemical Bonding"},
-  {id:"c9",question:"What is the molar mass of NaCl?",options:["23 g/mol","35.5 g/mol","58.5 g/mol","81 g/mol"],correct:2,explanation:"Na(23) + Cl(35.5) = 58.5 g/mol.",difficulty:"easy",topic:"Stoichiometry"},
-  {id:"c10",question:"Which of the following is a noble gas?",options:["Nitrogen","Oxygen","Argon","Chlorine"],correct:2,explanation:"Argon is a noble gas (Group 18).",difficulty:"easy",topic:"Periodic Table"},
-  {id:"c11",question:"Acids turn litmus paper:",options:["Blue","Red","Green","Yellow"],correct:1,explanation:"Acids turn blue litmus paper red.",difficulty:"easy",topic:"Acids & Bases"},
-  {id:"c12",question:"The process of conversion from solid to gas is called:",options:["Evaporation","Condensation","Sublimation","Melting"],correct:2,explanation:"Sublimation is the direct transition from solid to gas.",difficulty:"easy",topic:"States of Matter"},
-  {id:"c13",question:"What is the valency of oxygen?",options:["1","2","3","4"],correct:1,explanation:"Oxygen has a valency of 2.",difficulty:"easy",topic:"Chemical Bonding"},
-  {id:"c14",question:"Which acid is found in vinegar?",options:["Hydrochloric acid","Sulfuric acid","Acetic acid","Citric acid"],correct:2,explanation:"Vinegar contains acetic acid (CH₃COOH).",difficulty:"easy",topic:"Organic Chemistry"},
-  {id:"c15",question:"Avogadro's number is approximately:",options:["6.022 × 10²³","6.022 × 10²⁰","6.022 × 10²⁶","6.022 × 10¹⁸"],correct:0,explanation:"Avogadro's number ≈ 6.022 × 10²³ particles per mole.",difficulty:"easy",topic:"Stoichiometry"},
-  {id:"c16",question:"What type of bond is formed between Na and Cl in NaCl?",options:["Covalent","Ionic","Metallic","Hydrogen"],correct:1,explanation:"NaCl has ionic bonding (electron transfer).",difficulty:"easy",topic:"Chemical Bonding"},
-  {id:"c17",question:"Rusting of iron is an example of:",options:["Reduction","Oxidation","Neutralization","Decomposition"],correct:1,explanation:"Rusting is oxidation of iron by oxygen and moisture.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"c18",question:"The number of protons in an atom equals its:",options:["Mass number","Atomic number","Neutron number","Electron number"],correct:1,explanation:"Atomic number = number of protons.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"c19",question:"Which group in the periodic table contains the halogens?",options:["Group 1","Group 2","Group 17","Group 18"],correct:2,explanation:"Halogens are in Group 17 (F, Cl, Br, I, At).",difficulty:"medium",topic:"Periodic Table"},
-  {id:"c20",question:"What is the chemical formula of sulfuric acid?",options:["HCl","H₂SO₄","HNO₃","H₃PO₄"],correct:1,explanation:"Sulfuric acid is H₂SO₄.",difficulty:"easy",topic:"Acids & Bases"},
-  {id:"c21",question:"The electron configuration of Neon (Z=10) is:",options:["2, 8","2, 8, 2","2, 6","2, 8, 8"],correct:0,explanation:"Neon: 2 electrons in first shell, 8 in second = 2, 8.",difficulty:"medium",topic:"Atomic Structure"},
-  {id:"c22",question:"Which catalyst is used in Haber's process?",options:["Platinum","Nickel","Iron","Vanadium pentoxide"],correct:2,explanation:"Iron is the catalyst in Haber's process for ammonia production.",difficulty:"medium",topic:"Chemical Reactions"},
-  {id:"c23",question:"An isotope differs in the number of:",options:["Protons","Electrons","Neutrons","All of these"],correct:2,explanation:"Isotopes have same protons but different neutrons.",difficulty:"medium",topic:"Atomic Structure"},
-  {id:"c24",question:"The process of breaking down a compound using electricity is:",options:["Electrolysis","Hydrolysis","Photolysis","Pyrolysis"],correct:0,explanation:"Electrolysis uses electricity to decompose compounds.",difficulty:"medium",topic:"Chemical Reactions"},
-  {id:"c25",question:"Diamond and graphite are ___ of carbon:",options:["Isotopes","Isomers","Allotropes","Isobars"],correct:2,explanation:"Diamond and graphite are allotropes of carbon.",difficulty:"medium",topic:"General Chemistry"},
-  {id:"c26",question:"What is the molecular formula of glucose?",options:["C₆H₁₂O₆","C₂H₅OH","CH₃COOH","C₁₂H₂₂O₁₁"],correct:0,explanation:"Glucose has the formula C₆H₁₂O₆.",difficulty:"easy",topic:"Organic Chemistry"},
-  {id:"c27",question:"In a balanced equation, 2H₂ + O₂ → 2H₂O, how many moles of water are produced from 2 moles of H₂?",options:["1","2","3","4"],correct:1,explanation:"2 moles of H₂ produce 2 moles of H₂O.",difficulty:"easy",topic:"Stoichiometry"},
-  {id:"c28",question:"Brass is an alloy of:",options:["Copper and Tin","Copper and Zinc","Iron and Carbon","Lead and Tin"],correct:1,explanation:"Brass is an alloy of copper and zinc.",difficulty:"medium",topic:"General Chemistry"},
-  {id:"c29",question:"What is Le Chatelier's Principle about?",options:["Conservation of mass","Equilibrium shifts","Rate of reaction","Electron configuration"],correct:1,explanation:"Le Chatelier's Principle describes how equilibrium shifts when disturbed.",difficulty:"medium",topic:"Chemical Reactions"},
-  {id:"c30",question:"The strongest type of intermolecular force is:",options:["Van der Waals","Dipole-dipole","Hydrogen bonding","London dispersion"],correct:2,explanation:"Among intermolecular forces, hydrogen bonding is the strongest.",difficulty:"medium",topic:"Chemical Bonding"},
-];
-
-// MATHEMATICS QUESTIONS (for NAT-IE and NAT-ICS)
-const mathematicsQuestions = [
-  // From uploaded NAT Mathematics files
-  {id:"mf1",question:"Which of the following is an irrational number?",options:["0.5","√2","4/5","0.75"],correct:1,explanation:"√2 cannot be expressed as a fraction, so it is irrational.",difficulty:"easy",topic:"Number System"},
-  {id:"mf2",question:"What is the additive inverse of –7?",options:["–7","1/7","7","0"],correct:2,explanation:"The additive inverse of –7 is 7 (they sum to zero).",difficulty:"easy",topic:"Number System"},
-  {id:"mf3",question:"What is the multiplicative inverse of 5?",options:["–5","5","1/5","0"],correct:2,explanation:"The multiplicative inverse of 5 is 1/5.",difficulty:"easy",topic:"Number System"},
-  {id:"mf4",question:"Evaluate: |–15| + |–5|",options:["–20","10","20","–10"],correct:2,explanation:"|–15| = 15, |–5| = 5. Sum = 20.",difficulty:"easy",topic:"Number System"},
-  {id:"mf5",question:"The HCF of 48, 60, and 84 is:",options:["6","12","18","24"],correct:1,explanation:"HCF(48, 60, 84) = 12.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"mf6",question:"The LCM of 12, 18, and 24 is:",options:["48","60","72","84"],correct:2,explanation:"LCM(12, 18, 24) = 72.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"mf7",question:"If a = 12, b = 8, then (a² - b²) / (a - b) = ?",options:["16","18","20","22"],correct:2,explanation:"(a²-b²)/(a-b) = (a+b) = 12+8 = 20.",difficulty:"medium",topic:"Algebra"},
-  {id:"mf8",question:"Which of the following is not a prime number?",options:["97","91","89","83"],correct:1,explanation:"91 = 7 × 13, so it is not prime.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"mf9",question:"The number of prime numbers between 10 and 30 is:",options:["4","5","6","7"],correct:2,explanation:"Primes: 11, 13, 17, 19, 23, 29 = 6 primes.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"mf10",question:"Solve: x² - 16 = 0",options:["x = 4","x = ±4","x = -4","x = 8"],correct:1,explanation:"x² = 16, x = ±4.",difficulty:"easy",topic:"Algebra"},
-  {id:"mf11",question:"The graph of y = x² is a:",options:["Straight line","Parabola","Circle","Hyperbola"],correct:1,explanation:"y = x² is a parabola.",difficulty:"easy",topic:"Coordinate Geometry"},
-  {id:"mf12",question:"What is the value of sin 90°?",options:["0","1/2","√3/2","1"],correct:3,explanation:"sin 90° = 1.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"mf13",question:"tan 30° = ?",options:["1","1/√3","√3","√3/2"],correct:1,explanation:"tan 30° = 1/√3.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"mf14",question:"The product of roots of x² - 5x + 6 = 0 is:",options:["5","6","-5","-6"],correct:1,explanation:"Product of roots = c/a = 6/1 = 6.",difficulty:"medium",topic:"Algebra"},
-  {id:"mf15",question:"If f(x) = x² + 1, then f(3) = ?",options:["8","9","10","12"],correct:2,explanation:"f(3) = 3² + 1 = 9 + 1 = 10.",difficulty:"easy",topic:"Functions"},
-  {id:"m1",question:"What is the derivative of x³?",options:["x²","3x²","3x","x³"],correct:1,explanation:"d/dx(x³) = 3x².",difficulty:"easy",topic:"Calculus"},
-  {id:"m2",question:"∫2x dx = ?",options:["x²","x² + C","2x²","2x² + C"],correct:1,explanation:"∫2x dx = x² + C.",difficulty:"easy",topic:"Calculus"},
-  {id:"m3",question:"sin 30° = ?",options:["0","1/2","√3/2","1"],correct:1,explanation:"sin 30° = 1/2.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"m4",question:"cos 60° = ?",options:["0","1/2","√3/2","1"],correct:1,explanation:"cos 60° = 1/2.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"m5",question:"What is the value of log₁₀(1000)?",options:["2","3","4","10"],correct:1,explanation:"log₁₀(1000) = log₁₀(10³) = 3.",difficulty:"easy",topic:"Logarithms"},
-  {id:"m6",question:"The determinant of matrix [[2,3],[4,5]] is:",options:["−2","2","22","−22"],correct:0,explanation:"det = (2×5) - (3×4) = 10 - 12 = −2.",difficulty:"medium",topic:"Matrices"},
-  {id:"m7",question:"What is the limit of (x²-1)/(x-1) as x→1?",options:["0","1","2","undefined"],correct:2,explanation:"Factor: (x+1)(x-1)/(x-1) = x+1. At x=1: 1+1 = 2.",difficulty:"medium",topic:"Calculus"},
-  {id:"m8",question:"tan 45° = ?",options:["0","1","√3","undefined"],correct:1,explanation:"tan 45° = 1.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"m9",question:"The sum of first n natural numbers is:",options:["n(n-1)/2","n(n+1)/2","n²/2","n(n+2)/2"],correct:1,explanation:"Sum = n(n+1)/2.",difficulty:"easy",topic:"Sequences & Series"},
-  {id:"m10",question:"What is 5! (5 factorial)?",options:["25","60","120","720"],correct:2,explanation:"5! = 5×4×3×2×1 = 120.",difficulty:"easy",topic:"Permutations & Combinations"},
-  {id:"m11",question:"In how many ways can 5 people be arranged in a row?",options:["25","60","120","720"],correct:2,explanation:"5! = 120 arrangements.",difficulty:"easy",topic:"Permutations & Combinations"},
-  {id:"m12",question:"What is the slope of the line 2x + 3y = 6?",options:["2/3","−2/3","3/2","−3/2"],correct:1,explanation:"3y = -2x + 6, y = -2/3 x + 2. Slope = -2/3.",difficulty:"medium",topic:"Coordinate Geometry"},
-  {id:"m13",question:"The nth term of an AP with first term a and common difference d is:",options:["a + nd","a + (n-1)d","a - nd","a - (n-1)d"],correct:1,explanation:"nth term = a + (n-1)d.",difficulty:"easy",topic:"Sequences & Series"},
-  {id:"m14",question:"What is the equation of a circle with center (0,0) and radius 5?",options:["x² + y² = 5","x² + y² = 25","x² + y² = 10","x² - y² = 25"],correct:1,explanation:"Circle equation: x² + y² = r² = 25.",difficulty:"easy",topic:"Coordinate Geometry"},
-  {id:"m15",question:"d/dx(sin x) = ?",options:["−cos x","cos x","−sin x","tan x"],correct:1,explanation:"The derivative of sin x is cos x.",difficulty:"easy",topic:"Calculus"},
-  {id:"m16",question:"∫cos x dx = ?",options:["−sin x + C","sin x + C","cos x + C","tan x + C"],correct:1,explanation:"∫cos x dx = sin x + C.",difficulty:"easy",topic:"Calculus"},
-  {id:"m17",question:"The distance between points (1,2) and (4,6) is:",options:["3","4","5","7"],correct:2,explanation:"d = √((4-1)² + (6-2)²) = √(9+16) = √25 = 5.",difficulty:"easy",topic:"Coordinate Geometry"},
-  {id:"m18",question:"How many ways to choose 3 items from 5? (⁵C₃)",options:["10","15","20","60"],correct:0,explanation:"⁵C₃ = 5!/(3!×2!) = 10.",difficulty:"medium",topic:"Permutations & Combinations"},
-  {id:"m19",question:"sin²θ + cos²θ = ?",options:["0","1","2","sin 2θ"],correct:1,explanation:"Pythagorean identity: sin²θ + cos²θ = 1.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"m20",question:"The sum of interior angles of a hexagon is:",options:["540°","720°","900°","360°"],correct:1,explanation:"Sum = (n-2) × 180° = (6-2) × 180° = 720°.",difficulty:"medium",topic:"Geometry"},
-  {id:"m21",question:"If A = {1,2,3} and B = {3,4,5}, what is A ∩ B?",options:["{1,2,3,4,5}","{3}","{1,2}","{}"],correct:1,explanation:"Intersection contains common elements: {3}.",difficulty:"easy",topic:"Sets"},
-  {id:"m22",question:"What is the quadratic formula for ax² + bx + c = 0?",options:["x = (-b ± √(b²-4ac))/2a","x = (-b ± √(b²+4ac))/2a","x = (b ± √(b²-4ac))/2a","x = (-b ± √(b²-4ac))/a"],correct:0,explanation:"x = (-b ± √(b²-4ac))/2a is the quadratic formula.",difficulty:"easy",topic:"Algebra"},
-  {id:"m23",question:"What is the derivative of eˣ?",options:["xeˣ⁻¹","eˣ","eˣ⁺¹","1/eˣ"],correct:1,explanation:"The derivative of eˣ is eˣ.",difficulty:"easy",topic:"Calculus"},
-  {id:"m24",question:"The sum of an infinite GP with first term a and ratio r (|r|<1) is:",options:["a/(1-r)","a/(1+r)","a(1-r)","ar/(1-r)"],correct:0,explanation:"Sum = a/(1-r) for |r| < 1.",difficulty:"medium",topic:"Sequences & Series"},
-  {id:"m25",question:"What is the value of i² where i = √(-1)?",options:["1","-1","i","-i"],correct:1,explanation:"i² = (√-1)² = -1.",difficulty:"easy",topic:"Complex Numbers"},
-  {id:"m26",question:"d/dx(ln x) = ?",options:["x","1/x","ln x","e^x"],correct:1,explanation:"The derivative of ln x is 1/x.",difficulty:"easy",topic:"Calculus"},
-  {id:"m27",question:"The equation of a straight line with slope m and y-intercept c is:",options:["y = mx + c","y = cx + m","x = my + c","y = m/x + c"],correct:0,explanation:"Slope-intercept form: y = mx + c.",difficulty:"easy",topic:"Coordinate Geometry"},
-  {id:"m28",question:"What is the range of sin x?",options:["[-1, 1]","[0, 1]","(-∞, ∞)","[0, 2π]"],correct:0,explanation:"sin x ranges from -1 to 1.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"m29",question:"The binomial expansion of (a+b)² is:",options:["a² + b²","a² + 2ab + b²","a² - 2ab + b²","2a² + 2b²"],correct:1,explanation:"(a+b)² = a² + 2ab + b².",difficulty:"easy",topic:"Algebra"},
-  {id:"m30",question:"What is the probability of getting heads when tossing a fair coin?",options:["0","1/4","1/2","1"],correct:2,explanation:"P(heads) = 1/2 for a fair coin.",difficulty:"easy",topic:"Probability"},
-];
-
-// BIOLOGY QUESTIONS (for NAT-IM)
-const biologyQuestions = [
-  // From uploaded NAT Biology files
-  {id:"bf1",question:"The basic unit of life is:",options:["Organ","Tissue","Cell","Organelle"],correct:2,explanation:"Cell is the basic structural and functional unit of life.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bf2",question:"Which organelle is known as the 'powerhouse of the cell'?",options:["Ribosome","Nucleus","Mitochondria","Golgi apparatus"],correct:2,explanation:"Mitochondria generate most of the cell's ATP energy.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bf3",question:"The nucleus contains:",options:["RNA only","DNA and RNA","Protein only","ATP"],correct:1,explanation:"The nucleus contains both DNA and RNA.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bf4",question:"The cell membrane is made of:",options:["Protein only","Carbohydrates","Phospholipid bilayer","DNA"],correct:2,explanation:"The cell membrane consists of a phospholipid bilayer with proteins.",difficulty:"medium",topic:"Cell Biology"},
-  {id:"bf5",question:"Which process takes place in the mitochondria?",options:["Photosynthesis","Cellular respiration","Protein synthesis","DNA replication"],correct:1,explanation:"Cellular respiration (aerobic) takes place in mitochondria.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bf6",question:"The scientific name of humans is:",options:["Homo habilis","Homo erectus","Homo sapiens","Homo neanderthalensis"],correct:2,explanation:"Modern humans are Homo sapiens.",difficulty:"easy",topic:"Taxonomy"},
-  {id:"bf7",question:"Which vitamin deficiency causes rickets?",options:["Vitamin A","Vitamin B","Vitamin C","Vitamin D"],correct:3,explanation:"Vitamin D deficiency causes rickets (soft bones).",difficulty:"easy",topic:"Human Biology"},
-  {id:"bf8",question:"The process of cell division for growth and repair is:",options:["Meiosis","Mitosis","Fertilization","Budding"],correct:1,explanation:"Mitosis is cell division for growth and repair.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bf9",question:"Blood clotting requires which vitamin?",options:["Vitamin A","Vitamin C","Vitamin D","Vitamin K"],correct:3,explanation:"Vitamin K is essential for blood clotting.",difficulty:"medium",topic:"Human Biology"},
-  {id:"bf10",question:"Which part of the plant conducts photosynthesis mainly?",options:["Root","Stem","Leaf","Flower"],correct:2,explanation:"Leaves contain chlorophyll and are the main site of photosynthesis.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"bf11",question:"The process by which organisms maintain internal balance is:",options:["Reproduction","Homeostasis","Mutation","Adaptation"],correct:1,explanation:"Homeostasis is the maintenance of stable internal conditions.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bf12",question:"Which organelle is the site of lipid synthesis?",options:["Rough ER","Smooth ER","Ribosome","Golgi body"],correct:1,explanation:"Smooth endoplasmic reticulum synthesizes lipids.",difficulty:"medium",topic:"Cell Biology"},
-  {id:"bf13",question:"The heart has how many chambers?",options:["2","3","4","5"],correct:2,explanation:"The human heart has 4 chambers: 2 atria and 2 ventricles.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bf14",question:"DNA replication is:",options:["Conservative","Semi-conservative","Dispersive","Random"],correct:1,explanation:"DNA replication is semi-conservative — each new double helix retains one original strand.",difficulty:"medium",topic:"Genetics"},
-  {id:"bf15",question:"What is the role of ribosomes?",options:["Energy production","Protein synthesis","Lipid synthesis","DNA replication"],correct:1,explanation:"Ribosomes are the site of protein synthesis.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"b1",question:"What is the powerhouse of the cell?",options:["Nucleus","Ribosome","Mitochondria","Golgi body"],correct:2,explanation:"Mitochondria generate most of the cell's ATP.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"b2",question:"DNA stands for:",options:["Deoxyribose Nucleic Acid","Deoxyribonucleic Acid","Dinitrogen Acid","Dinucleotide Acid"],correct:1,explanation:"DNA = Deoxyribonucleic Acid.",difficulty:"easy",topic:"Genetics"},
-  {id:"b3",question:"Which blood group is the universal donor?",options:["A","B","AB","O"],correct:3,explanation:"Blood group O is the universal donor.",difficulty:"easy",topic:"Human Biology"},
-  {id:"b4",question:"Photosynthesis takes place in:",options:["Mitochondria","Chloroplasts","Nucleus","Ribosomes"],correct:1,explanation:"Photosynthesis occurs in chloroplasts.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"b5",question:"The basic unit of life is:",options:["Atom","Cell","Tissue","Organ"],correct:1,explanation:"Cell is the basic structural and functional unit of life.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"b6",question:"How many chromosomes are in a normal human cell?",options:["23","44","46","48"],correct:2,explanation:"Humans have 46 chromosomes (23 pairs).",difficulty:"easy",topic:"Genetics"},
-  {id:"b7",question:"Which vitamin is produced by sunlight on skin?",options:["Vitamin A","Vitamin B","Vitamin C","Vitamin D"],correct:3,explanation:"Vitamin D is synthesized when skin is exposed to sunlight.",difficulty:"easy",topic:"Human Biology"},
-  {id:"b8",question:"The process by which green plants make food is called:",options:["Respiration","Photosynthesis","Transpiration","Digestion"],correct:1,explanation:"Photosynthesis is the food-making process in plants.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"b9",question:"Which organ purifies blood in the human body?",options:["Heart","Liver","Kidney","Lungs"],correct:2,explanation:"Kidneys filter and purify blood.",difficulty:"easy",topic:"Human Biology"},
-  {id:"b10",question:"Enzymes are:",options:["Carbohydrates","Lipids","Proteins","Nucleic acids"],correct:2,explanation:"Enzymes are biological catalysts made of proteins.",difficulty:"easy",topic:"Biochemistry"},
-  {id:"b11",question:"The largest organ of the human body is:",options:["Liver","Heart","Brain","Skin"],correct:3,explanation:"Skin is the largest organ of the human body.",difficulty:"easy",topic:"Human Biology"},
-  {id:"b12",question:"Hemoglobin contains which metal?",options:["Copper","Zinc","Iron","Calcium"],correct:2,explanation:"Hemoglobin contains iron (Fe).",difficulty:"easy",topic:"Biochemistry"},
-  {id:"b13",question:"Which part of the brain controls balance?",options:["Cerebrum","Cerebellum","Medulla","Hypothalamus"],correct:1,explanation:"Cerebellum controls balance and coordination.",difficulty:"medium",topic:"Human Biology"},
-  {id:"b14",question:"Mitosis results in:",options:["4 different cells","2 identical cells","2 different cells","4 identical cells"],correct:1,explanation:"Mitosis produces 2 genetically identical daughter cells.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"b15",question:"The pH of human blood is approximately:",options:["6.4","7.0","7.4","8.0"],correct:2,explanation:"Blood pH is about 7.35-7.45, approximately 7.4.",difficulty:"medium",topic:"Human Biology"},
-  {id:"b16",question:"Which gas do plants absorb during photosynthesis?",options:["Oxygen","Nitrogen","Carbon dioxide","Hydrogen"],correct:2,explanation:"Plants absorb CO₂ during photosynthesis.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"b17",question:"The functional unit of kidney is:",options:["Neuron","Nephron","Alveolus","Villus"],correct:1,explanation:"Nephron is the functional unit of the kidney.",difficulty:"medium",topic:"Human Biology"},
-  {id:"b18",question:"RNA differs from DNA in having:",options:["Deoxyribose sugar","Thymine","Uracil","Double strand"],correct:2,explanation:"RNA has uracil instead of thymine.",difficulty:"medium",topic:"Genetics"},
-  {id:"b19",question:"The study of fungi is called:",options:["Mycology","Virology","Botany","Zoology"],correct:0,explanation:"Mycology is the study of fungi.",difficulty:"easy",topic:"Taxonomy"},
-  {id:"b20",question:"Which tissue transports water in plants?",options:["Phloem","Xylem","Cambium","Epidermis"],correct:1,explanation:"Xylem transports water from roots to leaves.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"b21",question:"Insulin is produced by:",options:["Liver","Kidney","Pancreas","Thyroid"],correct:2,explanation:"Insulin is produced by beta cells of the pancreas.",difficulty:"easy",topic:"Human Biology"},
-  {id:"b22",question:"The double helix model of DNA was proposed by:",options:["Mendel","Darwin","Watson and Crick","Lamarck"],correct:2,explanation:"Watson and Crick proposed the DNA double helix model in 1953.",difficulty:"easy",topic:"Genetics"},
-  {id:"b23",question:"Osmosis is the movement of:",options:["Solute through membrane","Water through semipermeable membrane","Gases through membrane","Ions through membrane"],correct:1,explanation:"Osmosis is the movement of water through a semipermeable membrane.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"b24",question:"Which kingdom includes bacteria?",options:["Protista","Fungi","Monera","Plantae"],correct:2,explanation:"Bacteria belong to Kingdom Monera.",difficulty:"medium",topic:"Taxonomy"},
-  {id:"b25",question:"Meiosis produces:",options:["2 diploid cells","2 haploid cells","4 diploid cells","4 haploid cells"],correct:3,explanation:"Meiosis produces 4 haploid daughter cells.",difficulty:"medium",topic:"Cell Biology"},
-  {id:"b26",question:"The carrier of genetic information is:",options:["RNA","DNA","Protein","Lipid"],correct:1,explanation:"DNA carries genetic information.",difficulty:"easy",topic:"Genetics"},
-  {id:"b27",question:"Penicillin was discovered by:",options:["Louis Pasteur","Alexander Fleming","Robert Koch","Edward Jenner"],correct:1,explanation:"Alexander Fleming discovered penicillin in 1928.",difficulty:"easy",topic:"General Biology"},
-  {id:"b28",question:"Which hormone controls blood sugar level?",options:["Thyroxine","Adrenaline","Insulin","Estrogen"],correct:2,explanation:"Insulin regulates blood sugar levels.",difficulty:"easy",topic:"Human Biology"},
-  {id:"b29",question:"The process of cell eating is called:",options:["Pinocytosis","Phagocytosis","Exocytosis","Endocytosis"],correct:1,explanation:"Phagocytosis is the process of cell eating.",difficulty:"medium",topic:"Cell Biology"},
-  {id:"b30",question:"Dominant gene is represented by:",options:["Small letter","Capital letter","Number","Symbol"],correct:1,explanation:"Dominant alleles are represented by capital letters.",difficulty:"easy",topic:"Genetics"},
-];
-
-// COMPUTER SCIENCE QUESTIONS (for NAT-ICS)
-const computerScienceQuestions = [
-  // From uploaded NAT Computer Science files
-  {id:"csf1",question:"The full form of CPU is:",options:["Central Programming Unit","Central Processing Unit","Computer Processing Unit","Central Peripheral Unit"],correct:1,explanation:"CPU = Central Processing Unit.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"csf2",question:"Which of the following is an output device?",options:["Keyboard","Mouse","Monitor","Scanner"],correct:2,explanation:"Monitor displays output to the user.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"csf3",question:"Which of the following is an input device?",options:["Printer","Projector","Monitor","Keyboard"],correct:3,explanation:"Keyboard is used to input data.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"csf4",question:"The full form of RAM is:",options:["Read Access Memory","Random Access Memory","Readily Available Memory","Read Arithmetic Memory"],correct:1,explanation:"RAM = Random Access Memory.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"csf5",question:"What is the full form of URL?",options:["Uniform Resource Locator","Universal Resource Link","Uniform Retrieval Location","Universal Retrieval Locator"],correct:0,explanation:"URL = Uniform Resource Locator.",difficulty:"easy",topic:"Networking"},
-  {id:"csf6",question:"Which programming language is known as 'mother of all languages'?",options:["Python","Java","C","Assembly"],correct:2,explanation:"C is often called the mother of modern programming languages.",difficulty:"medium",topic:"Programming"},
-  {id:"csf7",question:"What does GUI stand for?",options:["Graphical User Interface","General User Input","Global User Interface","General Unit Input"],correct:0,explanation:"GUI = Graphical User Interface.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"csf8",question:"A firewall is used to:",options:["Speed up internet","Block unauthorized access","Store data","Process data"],correct:1,explanation:"A firewall blocks unauthorized network access.",difficulty:"easy",topic:"Networking"},
-  {id:"csf9",question:"Which of the following is NOT a type of computer network?",options:["LAN","WAN","MAN","TAN"],correct:3,explanation:"TAN is not a real network type. LAN, WAN, and MAN are standard types.",difficulty:"easy",topic:"Networking"},
-  {id:"csf10",question:"Object-Oriented Programming supports:",options:["Only inheritance","Only encapsulation","Inheritance, Encapsulation, Polymorphism","Structured programming only"],correct:2,explanation:"OOP is based on inheritance, encapsulation, polymorphism, and abstraction.",difficulty:"easy",topic:"Programming"},
-  {id:"csf11",question:"The decimal equivalent of binary 1010 is:",options:["8","9","10","11"],correct:2,explanation:"1010 in binary = 8+0+2+0 = 10 in decimal.",difficulty:"easy",topic:"Number Systems"},
-  {id:"csf12",question:"Which memory is non-volatile?",options:["RAM","Cache","ROM","Register"],correct:2,explanation:"ROM (Read Only Memory) is non-volatile.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"csf13",question:"A linked list is a:",options:["Linear data structure","Non-linear data structure","Tree structure","Graph structure"],correct:0,explanation:"A linked list is a linear data structure.",difficulty:"easy",topic:"Data Structures"},
-  {id:"csf14",question:"The process of finding and fixing errors in a program is called:",options:["Compiling","Debugging","Executing","Linking"],correct:1,explanation:"Debugging is the process of finding and fixing errors.",difficulty:"easy",topic:"Programming"},
-  {id:"csf15",question:"Which protocol assigns IP addresses automatically?",options:["FTP","HTTP","DHCP","DNS"],correct:2,explanation:"DHCP (Dynamic Host Configuration Protocol) assigns IP addresses automatically.",difficulty:"medium",topic:"Networking"},
-  {id:"cs1",question:"What does CPU stand for?",options:["Central Processing Unit","Computer Personal Unit","Central Program Unit","Central Peripheral Unit"],correct:0,explanation:"CPU = Central Processing Unit.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2",question:"Which of the following is an output device?",options:["Keyboard","Mouse","Monitor","Scanner"],correct:2,explanation:"Monitor displays output to the user.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs3",question:"1 KB equals:",options:["1000 bytes","1024 bytes","512 bytes","2048 bytes"],correct:1,explanation:"1 Kilobyte = 1024 bytes.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs4",question:"Which language is directly understood by the computer?",options:["C++","Java","Machine language","Python"],correct:2,explanation:"Computers directly understand machine language (binary).",difficulty:"easy",topic:"Programming"},
-  {id:"cs5",question:"What is the binary equivalent of decimal 10?",options:["1010","1100","1001","1110"],correct:0,explanation:"10 in decimal = 1010 in binary.",difficulty:"easy",topic:"Number Systems"},
-  {id:"cs6",question:"SQL stands for:",options:["Structured Query Language","Simple Query Language","Standard Query Language","System Query Language"],correct:0,explanation:"SQL = Structured Query Language.",difficulty:"easy",topic:"Database"},
-  {id:"cs7",question:"RAM is:",options:["Non-volatile memory","Volatile memory","Secondary storage","Permanent memory"],correct:1,explanation:"RAM (Random Access Memory) is volatile - data is lost when power is off.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs8",question:"Which of the following is NOT an operating system?",options:["Windows","Linux","Oracle","macOS"],correct:2,explanation:"Oracle is a database management system, not an OS.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs9",question:"In C programming, which loop checks condition first?",options:["do-while","while","for","Both while and for"],correct:3,explanation:"Both while and for loops check the condition before executing.",difficulty:"medium",topic:"Programming"},
-  {id:"cs10",question:"What does HTML stand for?",options:["Hyper Text Markup Language","High Text Machine Language","Hyper Transfer Markup Language","High Tech Modern Language"],correct:0,explanation:"HTML = Hyper Text Markup Language.",difficulty:"easy",topic:"Web Development"},
-  {id:"cs11",question:"Which data structure follows LIFO?",options:["Queue","Stack","Array","Linked List"],correct:1,explanation:"Stack follows Last In First Out (LIFO).",difficulty:"easy",topic:"Data Structures"},
-  {id:"cs12",question:"Which data structure follows FIFO?",options:["Stack","Queue","Tree","Graph"],correct:1,explanation:"Queue follows First In First Out (FIFO).",difficulty:"easy",topic:"Data Structures"},
-  {id:"cs13",question:"The brain of the computer is:",options:["RAM","ROM","CPU","Hard Drive"],correct:2,explanation:"CPU is considered the brain of the computer.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs14",question:"What is the primary key in a database?",options:["First column","Unique identifier for each record","Password","Foreign key"],correct:1,explanation:"Primary key uniquely identifies each record in a table.",difficulty:"easy",topic:"Database"},
-  {id:"cs15",question:"Which of the following is a high-level language?",options:["Machine code","Assembly","Python","Binary"],correct:2,explanation:"Python is a high-level programming language.",difficulty:"easy",topic:"Programming"},
-  {id:"cs16",question:"How many bits are in a byte?",options:["4","8","16","32"],correct:1,explanation:"1 byte = 8 bits.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs17",question:"What is an algorithm?",options:["A programming language","A step-by-step procedure to solve a problem","A type of hardware","A database"],correct:1,explanation:"An algorithm is a step-by-step procedure to solve a problem.",difficulty:"easy",topic:"Programming"},
-  {id:"cs18",question:"Which of these is a search engine?",options:["Facebook","Google","WhatsApp","Microsoft Word"],correct:1,explanation:"Google is a search engine.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs19",question:"The smallest unit of data in a computer is:",options:["Byte","Bit","Nibble","Word"],correct:1,explanation:"A bit (binary digit) is the smallest unit of data.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs20",question:"In programming, a variable is used to:",options:["Store data","Display graphics","Connect to internet","Print documents"],correct:0,explanation:"Variables store data values in programming.",difficulty:"easy",topic:"Programming"},
-  {id:"cs21",question:"What is the time complexity of binary search?",options:["O(n)","O(n²)","O(log n)","O(1)"],correct:2,explanation:"Binary search has O(log n) time complexity.",difficulty:"medium",topic:"Data Structures"},
-  {id:"cs22",question:"Which protocol is used for sending email?",options:["HTTP","FTP","SMTP","TCP"],correct:2,explanation:"SMTP (Simple Mail Transfer Protocol) is used for sending email.",difficulty:"medium",topic:"Networking"},
-  {id:"cs23",question:"What is a compiler?",options:["Hardware device","Translates high-level to machine code","A type of memory","An input device"],correct:1,explanation:"A compiler translates high-level language code to machine code.",difficulty:"easy",topic:"Programming"},
-  {id:"cs24",question:"Normalization in database is used to:",options:["Add redundancy","Reduce redundancy","Delete data","Encrypt data"],correct:1,explanation:"Normalization reduces data redundancy in databases.",difficulty:"medium",topic:"Database"},
-  {id:"cs25",question:"What does IP stand for in networking?",options:["Internet Protocol","Internal Process","Input Program","Internet Program"],correct:0,explanation:"IP = Internet Protocol.",difficulty:"easy",topic:"Networking"},
-  {id:"cs26",question:"A flowchart uses which shape for decisions?",options:["Rectangle","Diamond","Circle","Parallelogram"],correct:1,explanation:"Diamond shape represents decisions in flowcharts.",difficulty:"easy",topic:"Programming"},
-  {id:"cs27",question:"Which of the following is secondary storage?",options:["RAM","Cache","Hard Disk","Register"],correct:2,explanation:"Hard Disk is a secondary (permanent) storage device.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs28",question:"In OOP, what is encapsulation?",options:["Inheriting properties","Bundling data and methods together","Overloading operators","Multiple inheritance"],correct:1,explanation:"Encapsulation bundles data and methods that operate on that data within a class.",difficulty:"medium",topic:"Programming"},
-  {id:"cs29",question:"What is the hexadecimal equivalent of binary 1111?",options:["E","F","D","A"],correct:1,explanation:"1111 in binary = 15 in decimal = F in hexadecimal.",difficulty:"medium",topic:"Number Systems"},
-  {id:"cs30",question:"Which sorting algorithm has the best average time complexity?",options:["Bubble Sort","Selection Sort","Merge Sort","Insertion Sort"],correct:2,explanation:"Merge Sort has O(n log n) average time complexity.",difficulty:"hard",topic:"Data Structures"},
-];
-
-// COMMERCE QUESTIONS (100 questions from uploaded NAT Commerce file)
-const commerceQuestions = [
-  {id:"com1",question:"The _____ is a document sent by the seller to the buyer requesting payment for goods supplied.",options:["Invoice","Receipt","Voucher","Cheque"],correct:0,explanation:"An invoice is a commercial document requesting payment for goods supplied.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com2",question:"Trade carried out between two different countries is called _____ trade.",options:["Home","Foreign","Retail","Wholesale"],correct:1,explanation:"Foreign trade (international trade) is trade between two different countries.",difficulty:"easy",topic:"Trade"},
-  {id:"com3",question:"A _____ is an intermediary who brings buyers and sellers together without taking title to goods.",options:["Retailer","Wholesaler","Broker","Agent"],correct:2,explanation:"A broker brings buyers and sellers together without owning the goods.",difficulty:"easy",topic:"Trade"},
-  {id:"com4",question:"The document that gives details of goods being shipped and acts as a receipt is called a bill of _____.",options:["Sale","Entry","Lading","Exchange"],correct:2,explanation:"A Bill of Lading details goods being shipped and serves as a receipt.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com5",question:"_____ is the process of transferring risk to an insurance company in exchange for a premium.",options:["Banking","Insurance","Investment","Leasing"],correct:1,explanation:"Insurance transfers financial risk to an insurer in exchange for a premium.",difficulty:"easy",topic:"Insurance"},
-  {id:"com6",question:"A _____ bank account allows withdrawals without prior notice.",options:["Savings","Fixed deposit","Current","Investment"],correct:2,explanation:"A current account allows withdrawals at any time without notice.",difficulty:"easy",topic:"Banking"},
-  {id:"com7",question:"The _____ is the difference between the buying price and selling price of a trader.",options:["Loss","Margin/Profit","Discount","Commission"],correct:1,explanation:"The difference between buying and selling price is the trader's profit/margin.",difficulty:"easy",topic:"Trade"},
-  {id:"com8",question:"E-commerce stands for _____ commerce.",options:["Easy","Electronic","Efficient","Extended"],correct:1,explanation:"E-commerce means Electronic commerce — buying/selling via the internet.",difficulty:"easy",topic:"Modern Commerce"},
-  {id:"com9",question:"The practice of selling goods on credit and collecting payment later is known as trade on _____.",options:["Account","Credit","Loan","Advance"],correct:1,explanation:"Selling on credit means collecting payment later.",difficulty:"easy",topic:"Trade"},
-  {id:"com10",question:"A _____ is a formal written order directing a bank to pay a specified sum to a named person.",options:["Voucher","Draft","Cheque","Receipt"],correct:2,explanation:"A cheque is a written order to the bank to pay a specified amount.",difficulty:"easy",topic:"Banking"},
-  {id:"com11",question:"The _____ is a document issued by customs authorities allowing goods to be imported.",options:["Permit","Invoice","Manifest","Licence"],correct:0,explanation:"An import permit is issued by customs to allow goods to be imported.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com12",question:"Goods that are brought into a country from abroad are known as _____.",options:["Exports","Imports","Entrepot","Transit goods"],correct:1,explanation:"Imports are goods brought into a country from abroad.",difficulty:"easy",topic:"Trade"},
-  {id:"com13",question:"A _____ is a large retail store selling a wide variety of goods under one roof.",options:["Superstore","Departmental store","Franchise","Market"],correct:1,explanation:"A departmental store sells many types of goods under one roof.",difficulty:"easy",topic:"Retail"},
-  {id:"com14",question:"The letter of _____ is a bank's guarantee that a buyer's payment will be received by the seller.",options:["Credit","Guarantee","Intent","Exchange"],correct:0,explanation:"A Letter of Credit is a bank guarantee ensuring payment to the seller.",difficulty:"easy",topic:"Banking"},
-  {id:"com15",question:"The _____ is a middleman who sells goods on behalf of a principal and earns a commission.",options:["Broker","Agent","Retailer","Wholesaler"],correct:1,explanation:"An agent sells goods on behalf of a principal and earns commission.",difficulty:"easy",topic:"Trade"},
-  {id:"com16",question:"A _____ order is a standing instruction to a bank to make regular payments on behalf of a customer.",options:["Standing","Stop","Direct","Recurring"],correct:0,explanation:"A standing order is a regular bank instruction to make set payments.",difficulty:"easy",topic:"Banking"},
-  {id:"com17",question:"_____ trade refers to trade within the boundaries of a country.",options:["Foreign","Home","International","External"],correct:1,explanation:"Home (internal/domestic) trade takes place within a country.",difficulty:"easy",topic:"Trade"},
-  {id:"com18",question:"A _____ is a list of goods with their prices offered for sale.",options:["Catalogue","Invoice","Receipt","Manifest"],correct:0,explanation:"A catalogue lists goods and their prices available for sale.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com19",question:"Selling goods below cost price to drive out competition is called _____.",options:["Discounting","Dumping","Undercutting","Subsidy"],correct:1,explanation:"Dumping is selling below cost price to eliminate competition.",difficulty:"medium",topic:"Trade"},
-  {id:"com20",question:"A _____ is a type of warehouse where goods can be stored without paying customs duty.",options:["Free zone","Bonded warehouse","Cold storage","Transit shed"],correct:1,explanation:"A bonded warehouse allows storage without immediate payment of customs duty.",difficulty:"medium",topic:"Trade"},
-  {id:"com21",question:"The practice of selling identical goods in different markets at different prices is called price _____.",options:["Fixing","Discrimination","Control","Comparison"],correct:1,explanation:"Price discrimination is selling the same product at different prices in different markets.",difficulty:"medium",topic:"Trade"},
-  {id:"com22",question:"A _____ note is a document sent by the seller to inform the buyer that goods have been dispatched.",options:["Advice","Delivery","Credit","Debit"],correct:0,explanation:"An advice note informs the buyer that goods have been dispatched.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com23",question:"The _____ is the total value of goods and services exported minus imports.",options:["Trade deficit","Balance of trade","Current account","Budget surplus"],correct:1,explanation:"Balance of trade = value of exports minus value of imports.",difficulty:"easy",topic:"Trade"},
-  {id:"com24",question:"A _____ is a combination of firms under common ownership that reduces competition.",options:["Cartel","Monopoly","Conglomerate","Trust"],correct:1,explanation:"A monopoly is a single firm dominating the market.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com25",question:"_____ is the use of electronic systems to carry out banking transactions.",options:["E-banking","M-banking","Online shopping","Digital trade"],correct:0,explanation:"E-banking uses electronic systems for banking transactions.",difficulty:"easy",topic:"Modern Commerce"},
-  {id:"com26",question:"Goods sent out of a country to other countries are known as _____.",options:["Imports","Exports","Transit goods","Entrepot"],correct:1,explanation:"Exports are goods sent out of a country.",difficulty:"easy",topic:"Trade"},
-  {id:"com27",question:"A _____ is a business owned and controlled by its members who share in the profits.",options:["Partnership","Cooperative","Company","Franchise"],correct:1,explanation:"A cooperative is owned and run by its members for mutual benefit.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com28",question:"The _____ is a fee charged by a government on imported goods.",options:["Excise duty","Tariff","VAT","Subsidy"],correct:1,explanation:"A tariff is a government tax on imported goods.",difficulty:"easy",topic:"Trade"},
-  {id:"com29",question:"A _____ is a document used to make payments through a bank without using cash.",options:["Cheque","Draft","Both a and b","Voucher"],correct:2,explanation:"Both cheques and drafts allow payments without using cash.",difficulty:"easy",topic:"Banking"},
-  {id:"com30",question:"_____ insurance covers goods while they are being transported.",options:["Fire","Marine","Life","Property"],correct:1,explanation:"Marine insurance covers goods during transportation.",difficulty:"easy",topic:"Insurance"},
-  {id:"com31",question:"A _____ is a financial institution that accepts deposits and makes loans.",options:["Insurance company","Stock exchange","Bank","Cooperative"],correct:2,explanation:"A bank accepts deposits from the public and provides loans.",difficulty:"easy",topic:"Banking"},
-  {id:"com32",question:"A _____ is a person who owes money to a business.",options:["Creditor","Debtor","Shareholder","Partner"],correct:1,explanation:"A debtor owes money to the business.",difficulty:"easy",topic:"Accounting Basics"},
-  {id:"com33",question:"A _____ is a person to whom money is owed.",options:["Debtor","Creditor","Director","Agent"],correct:1,explanation:"A creditor is owed money by the business.",difficulty:"easy",topic:"Accounting Basics"},
-  {id:"com34",question:"A _____ is a formal agreement between two parties.",options:["Invoice","Contract","Receipt","Voucher"],correct:1,explanation:"A contract is a legally binding agreement between two parties.",difficulty:"easy",topic:"Business Law"},
-  {id:"com35",question:"_____ insurance compensates a business if key personnel are unable to work.",options:["Life insurance","Key person insurance","Health insurance","Property insurance"],correct:1,explanation:"Key person insurance covers the financial loss from the incapacity of key staff.",difficulty:"medium",topic:"Insurance"},
-  {id:"com36",question:"The _____ principle of insurance means the insured must have financial interest in the subject.",options:["Indemnity","Insurable interest","Contribution","Subrogation"],correct:1,explanation:"Insurable interest means you must have a financial stake in what is insured.",difficulty:"medium",topic:"Insurance"},
-  {id:"com37",question:"A _____ is a business organization owned by one person.",options:["Partnership","Sole trader","Company","Cooperative"],correct:1,explanation:"A sole trader (sole proprietorship) is owned and run by one individual.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com38",question:"The _____ is a fee paid by an importer to clear goods through customs.",options:["Tariff","Customs duty","Excise duty","Port charge"],correct:1,explanation:"Customs duty is paid to clear imported goods through customs.",difficulty:"easy",topic:"Trade"},
-  {id:"com39",question:"A _____ combines the resources of two or more people to form a business.",options:["Company","Cooperative","Partnership","Franchise"],correct:2,explanation:"A partnership combines resources of two or more partners.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com40",question:"_____ is defined as the movement of goods from producers to consumers.",options:["Production","Distribution","Marketing","Retailing"],correct:1,explanation:"Distribution is the movement of goods from producers to consumers.",difficulty:"easy",topic:"Trade"},
-  {id:"com41",question:"A _____ is a person who buys shares in a company.",options:["Director","Shareholder","Creditor","Debtor"],correct:1,explanation:"A shareholder (stockholder) buys and owns shares in a company.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com42",question:"The _____ market is where shares of publicly listed companies are traded.",options:["Money","Stock","Bond","Commodity"],correct:1,explanation:"The stock market (stock exchange) trades company shares.",difficulty:"easy",topic:"Business Finance"},
-  {id:"com43",question:"The _____ duty is a tax on goods manufactured within a country.",options:["Import","Customs","Excise","Value added"],correct:2,explanation:"Excise duty is levied on goods manufactured domestically.",difficulty:"easy",topic:"Trade"},
-  {id:"com44",question:"A _____ bank provides long-term loans to businesses and governments.",options:["Central","Commercial","Development","Investment"],correct:2,explanation:"Development banks provide long-term finance for economic development.",difficulty:"medium",topic:"Banking"},
-  {id:"com45",question:"_____ is a form of promotion where a business pays for space in media to reach customers.",options:["Advertising","Public relations","Sales promotion","Personal selling"],correct:0,explanation:"Advertising is paid promotion in media channels.",difficulty:"easy",topic:"Marketing"},
-  {id:"com46",question:"A _____ is the money paid to an employee based on sales they generate.",options:["Salary","Wage","Commission","Bonus"],correct:2,explanation:"Commission is earnings based on sales performance.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com47",question:"_____ refers to transporting goods by sea.",options:["Aviation","Rail freight","Shipping","Road transport"],correct:2,explanation:"Shipping (sea freight) refers to transporting goods by sea.",difficulty:"easy",topic:"Trade"},
-  {id:"com48",question:"The _____ of demand states that as price rises, quantity demanded falls.",options:["Principle","Theory","Law","Rule"],correct:2,explanation:"The Law of Demand states price and quantity demanded are inversely related.",difficulty:"easy",topic:"Economics Basics"},
-  {id:"com49",question:"A _____ is a business entity separate from its owners in law.",options:["Partnership","Sole trader","Company","Cooperative"],correct:2,explanation:"A company has a separate legal identity from its owners.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com50",question:"The _____ is where foreign currencies are bought and sold.",options:["Stock market","Money market","Foreign exchange market","Bond market"],correct:2,explanation:"The foreign exchange market (forex) trades currencies.",difficulty:"easy",topic:"Trade"},
-  {id:"com51",question:"A _____ is a written acknowledgment that a sum of money has been received.",options:["Invoice","Receipt","Voucher","Note"],correct:1,explanation:"A receipt acknowledges payment has been received.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com52",question:"_____ trade refers to trade between two countries.",options:["Multilateral","Bilateral","Internal","Transit"],correct:1,explanation:"Bilateral trade is trade between exactly two countries.",difficulty:"easy",topic:"Trade"},
-  {id:"com53",question:"A _____ combines several companies under one parent company.",options:["Cartel","Conglomerate","Monopoly","Merger"],correct:1,explanation:"A conglomerate is a group of diverse companies under one parent.",difficulty:"medium",topic:"Business Organization"},
-  {id:"com54",question:"The _____ system allows businesses to sell products without stocking them.",options:["Franchising","Dropshipping","Consignment","Agency"],correct:1,explanation:"Dropshipping allows selling products without holding inventory.",difficulty:"medium",topic:"Modern Commerce"},
-  {id:"com55",question:"A _____ is the fee paid for the use of intellectual property.",options:["Commission","Royalty","Rent","Dividend"],correct:1,explanation:"A royalty is paid for using someone else's intellectual property.",difficulty:"medium",topic:"Business Law"},
-  {id:"com56",question:"_____ is the process of converting a private company into a public one.",options:["Privatization","Flotation","Nationalization","Merger"],correct:1,explanation:"Flotation (going public/IPO) converts a private company to a public one.",difficulty:"medium",topic:"Business Organization"},
-  {id:"com57",question:"A _____ is a guarantee given by a manufacturer that a product will function properly.",options:["Contract","Warranty","Bond","Certificate"],correct:1,explanation:"A warranty guarantees a product will work as described.",difficulty:"easy",topic:"Business Law"},
-  {id:"com58",question:"The _____ is a document sent with a consignment of goods giving details of the goods.",options:["Invoice","Delivery note","Manifest","Advice note"],correct:1,explanation:"A delivery note accompanies a consignment and lists its contents.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com59",question:"_____ is the practice of selling goods in another country below cost price.",options:["Discounting","Dumping","Subsidizing","Undercutting"],correct:1,explanation:"Dumping is exporting goods below cost price to gain market share.",difficulty:"medium",topic:"Trade"},
-  {id:"com60",question:"_____ capital is money invested in a business that is not expected to be repaid.",options:["Loan","Equity","Debenture","Overdraft"],correct:1,explanation:"Equity capital is invested in exchange for ownership, not repaid.",difficulty:"medium",topic:"Business Finance"},
-  {id:"com61",question:"A _____ company is one whose shares are not available to the general public.",options:["Public","Private","Government","Foreign"],correct:1,explanation:"A private limited company's shares are not traded publicly.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com62",question:"The _____ price is the price at which a security is first offered to the public.",options:["Market","Issue","Face","Reserve"],correct:1,explanation:"The issue price is set at an IPO (Initial Public Offering).",difficulty:"medium",topic:"Business Finance"},
-  {id:"com63",question:"A _____ is a business where one party licenses its brand to another party.",options:["Agency","Franchise","Partnership","Joint venture"],correct:1,explanation:"A franchise licenses a brand/business model to franchisees.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com64",question:"The _____ Act protects consumers from unfair trading practices.",options:["Companies","Consumer Protection","Trade","Contract"],correct:1,explanation:"Consumer Protection Acts safeguard buyers from unfair practices.",difficulty:"easy",topic:"Business Law"},
-  {id:"com65",question:"An official document permitting the export of specific goods is called an _____.",options:["Export licence","Bill of lading","Certificate of origin","Customs permit"],correct:0,explanation:"An export licence grants official permission to export certain goods.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com66",question:"_____ is the movement of labor, capital, and goods between countries.",options:["Trade","Globalization","Migration","Commerce"],correct:1,explanation:"Globalization refers to the flow of goods, capital, and labor across borders.",difficulty:"easy",topic:"Trade"},
-  {id:"com67",question:"A _____ allows a bank customer to withdraw more than what is in their account.",options:["Loan","Overdraft","Credit card","Mortgage"],correct:1,explanation:"An overdraft facility lets customers spend beyond their account balance.",difficulty:"easy",topic:"Banking"},
-  {id:"com68",question:"The _____ is the minimum price set by the government above which prices cannot fall.",options:["Price ceiling","Price floor","Equilibrium price","Administered price"],correct:1,explanation:"A price floor sets a minimum price, preventing it from falling below that level.",difficulty:"medium",topic:"Economics Basics"},
-  {id:"com69",question:"A _____ is a company formed to carry out a specific project.",options:["Subsidiary","Joint venture","Holding company","Franchise"],correct:1,explanation:"A joint venture is formed by two or more parties for a specific project.",difficulty:"medium",topic:"Business Organization"},
-  {id:"com70",question:"_____ advertising aims to persuade customers to buy a particular product.",options:["Informative","Persuasive","Reminder","Comparative"],correct:1,explanation:"Persuasive advertising aims to convince customers to purchase.",difficulty:"easy",topic:"Marketing"},
-  {id:"com71",question:"The _____ Act regulates the formation and running of companies.",options:["Trade","Companies Act","Consumer Protection","Competition"],correct:1,explanation:"The Companies Act governs company registration and management.",difficulty:"easy",topic:"Business Law"},
-  {id:"com72",question:"A _____ is defined as a business that sells goods in small quantities to the public.",options:["Wholesaler","Retailer","Distributor","Agent"],correct:1,explanation:"A retailer sells goods directly to the end consumer in small quantities.",difficulty:"easy",topic:"Retail"},
-  {id:"com73",question:"_____ occurs when a debtor cannot pay their debts.",options:["Liquidation","Insolvency","Bankruptcy","Receivership"],correct:1,explanation:"Insolvency is the inability to pay debts when they fall due.",difficulty:"easy",topic:"Business Law"},
-  {id:"com74",question:"The _____ ratio measures how quickly a company can pay its short-term liabilities.",options:["Debt","Current ratio","Profit","Gearing"],correct:1,explanation:"The current ratio measures short-term liquidity (current assets ÷ current liabilities).",difficulty:"medium",topic:"Accounting Basics"},
-  {id:"com75",question:"A _____ note is issued when a seller grants a reduction in price to the buyer.",options:["Debit","Credit","Advice","Delivery"],correct:1,explanation:"A credit note reduces the amount owed by the buyer.",difficulty:"easy",topic:"Trade Documents"},
-  {id:"com76",question:"_____ is a method of selling where goods are offered to the highest bidder.",options:["Tender","Auction","Consignment","Bulk selling"],correct:1,explanation:"An auction sells to the highest bidder.",difficulty:"easy",topic:"Trade"},
-  {id:"com77",question:"A _____ is a financial intermediary that helps companies raise capital.",options:["Commercial bank","Merchant bank","Insurance company","Building society"],correct:1,explanation:"Merchant banks (investment banks) help companies raise capital.",difficulty:"medium",topic:"Banking"},
-  {id:"com78",question:"The _____ is a market where previously issued securities are bought and sold.",options:["Primary market","Secondary market","Money market","Capital market"],correct:1,explanation:"The secondary market trades previously issued shares and bonds.",difficulty:"medium",topic:"Business Finance"},
-  {id:"com79",question:"A _____ is a sum of money paid to a broker for executing a transaction.",options:["Commission","Brokerage","Fee","Royalty"],correct:1,explanation:"Brokerage is the fee paid to a broker for their services.",difficulty:"easy",topic:"Trade"},
-  {id:"com80",question:"_____ trade barriers include quotas, tariffs, and embargoes.",options:["Tariff","Non-tariff","Invisible","Formal"],correct:1,explanation:"Non-tariff barriers include quotas, subsidies, and embargoes.",difficulty:"medium",topic:"Trade"},
-  {id:"com81",question:"A _____ is a store that sells goods bought directly from producers at lower prices.",options:["Retail store","Wholesale store","Factory outlet","Superstore"],correct:1,explanation:"A wholesale store sells in bulk at lower prices.",difficulty:"easy",topic:"Retail"},
-  {id:"com82",question:"The _____ value is the amount a business expects to sell an asset for at end of its useful life.",options:["Book","Residual","Market","Historical"],correct:1,explanation:"Residual (scrap/salvage) value is the expected disposal value at end of asset life.",difficulty:"medium",topic:"Accounting Basics"},
-  {id:"com83",question:"_____ is the process by which a business becomes larger through mergers and acquisitions.",options:["Diversification","Integration","Expansion","Consolidation"],correct:1,explanation:"Integration (growth by mergers and acquisitions) makes businesses larger.",difficulty:"medium",topic:"Business Organization"},
-  {id:"com84",question:"A _____ is a document that gives permission to a ship to leave port.",options:["Bill of lading","Clearance certificate","Manifest","Export licence"],correct:1,explanation:"A clearance certificate allows a ship to leave port.",difficulty:"medium",topic:"Trade Documents"},
-  {id:"com85",question:"The Pakistan Stock Exchange (PSX) is located in:",options:["Islamabad","Lahore","Karachi","Peshawar"],correct:2,explanation:"Pakistan Stock Exchange (PSX) is headquartered in Karachi.",difficulty:"easy",topic:"Pakistani Commerce"},
-  {id:"com86",question:"A _____ is a retail outlet that sells goods to the public in large quantities at low prices.",options:["Boutique","Superstore","Specialty store","Kiosk"],correct:1,explanation:"A superstore sells in large quantities at discounted prices.",difficulty:"easy",topic:"Retail"},
-  {id:"com87",question:"Which document proves ownership of goods during sea transit?",options:["Invoice","Bill of lading","Insurance certificate","Delivery note"],correct:1,explanation:"The bill of lading serves as proof of ownership during sea shipment.",difficulty:"medium",topic:"Trade Documents"},
-  {id:"com88",question:"_____ is the total value of all goods and services produced in a country in a year.",options:["GNP","GDP","NNP","NI"],correct:1,explanation:"GDP (Gross Domestic Product) is total output within a country's borders.",difficulty:"easy",topic:"Economics Basics"},
-  {id:"com89",question:"A _____ is a business where one party licenses its business model to another.",options:["Cooperative","Franchise","Agency","Sole trader"],correct:1,explanation:"A franchise grants the right to use a business model in exchange for fees.",difficulty:"easy",topic:"Business Organization"},
-  {id:"com90",question:"Which type of account earns interest but has restrictions on withdrawals?",options:["Current account","Savings account","Loan account","Credit account"],correct:1,explanation:"A savings account earns interest and may restrict frequent withdrawals.",difficulty:"easy",topic:"Banking"},
-  {id:"com91",question:"A _____ is a note issued by the buyer acknowledging goods have been returned to the seller.",options:["Credit note","Debit note","Advice note","Delivery note"],correct:1,explanation:"A debit note is issued by the buyer when returning goods to the seller.",difficulty:"medium",topic:"Trade Documents"},
-  {id:"com92",question:"The _____ of demand states that as price falls, quantity demanded rises.",options:["Theory","Principle","Law","Model"],correct:2,explanation:"The Law of Demand establishes the inverse price-demand relationship.",difficulty:"easy",topic:"Economics Basics"},
-  {id:"com93",question:"A _____ is a temporary fall in business activity.",options:["Depression","Recession","Boom","Slump"],correct:1,explanation:"A recession is a temporary decline in economic/business activity.",difficulty:"easy",topic:"Economics Basics"},
-  {id:"com94",question:"Which document is essential for clearing goods through customs?",options:["Invoice only","Bill of entry","Delivery note","Advice note"],correct:1,explanation:"A bill of entry is the customs declaration required to clear goods.",difficulty:"medium",topic:"Trade Documents"},
-  {id:"com95",question:"A _____ is a written promise to pay a certain sum at a future date.",options:["Cheque","Promissory note","Bill of lading","Draft"],correct:1,explanation:"A promissory note is an unconditional promise to pay at a specified future date.",difficulty:"medium",topic:"Banking"},
-  {id:"com96",question:"_____ trade barriers are in the form of direct taxes on imports.",options:["Non-tariff","Tariff","Quota","Subsidy"],correct:1,explanation:"Tariff barriers are direct taxes (duties) imposed on imported goods.",difficulty:"easy",topic:"Trade"},
-  {id:"com97",question:"The _____ is responsible for regulating and supervising banks in Pakistan.",options:["Ministry of Finance","State Bank of Pakistan","SECP","NFC"],correct:1,explanation:"The State Bank of Pakistan (SBP) is the central bank and banking regulator.",difficulty:"easy",topic:"Pakistani Commerce"},
-  {id:"com98",question:"A _____ is a fee charged by a port for loading or unloading goods.",options:["Wharfage/Port charge","Tariff","Customs duty","Freight charge"],correct:0,explanation:"Port/wharfage charges are fees for using port facilities.",difficulty:"medium",topic:"Trade"},
-  {id:"com99",question:"Which of the following is a direct tax in Pakistan?",options:["Sales tax","Income tax","Customs duty","Excise duty"],correct:1,explanation:"Income tax is a direct tax levied on income earned.",difficulty:"easy",topic:"Pakistani Commerce"},
-  {id:"com100",question:"A _____ is a limit set by the government on the quantity of goods that can be imported.",options:["Tariff","Quota","Embargo","Subsidy"],correct:1,explanation:"An import quota limits the quantity of a good that can be imported.",difficulty:"easy",topic:"Trade"},
-];
-
-// ACCOUNTING QUESTIONS (100 questions from uploaded NAT Accounting file)
-const accountingQuestions = [
-  {id:"acc1",question:"The _____ equation states that Assets = Liabilities + Capital.",options:["Business","Accounting","Financial","Economic"],correct:1,explanation:"The accounting equation: Assets = Liabilities + Capital.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc2",question:"A _____ is a record of all transactions involving a specific account.",options:["Journal","Ledger","Trial balance","Cash book"],correct:1,explanation:"A ledger is a book containing individual accounts.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc3",question:"The _____ is the first book of entry where transactions are first recorded.",options:["Ledger","Trial balance","Journal","Cash book"],correct:2,explanation:"The journal (day book) is the book of prime entry.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc4",question:"_____ is the process of recording financial transactions in a systematic way.",options:["Auditing","Bookkeeping","Accounting","Budgeting"],correct:1,explanation:"Bookkeeping is the systematic recording of financial transactions.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc5",question:"The _____ sheet shows a company's financial position at a specific date.",options:["Income","Cash flow","Balance","Trading"],correct:2,explanation:"The balance sheet shows assets, liabilities, and capital at a point in time.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc6",question:"A _____ is a list of all ledger balances used to check arithmetic accuracy.",options:["Balance sheet","Trial balance","Journal","Ledger"],correct:1,explanation:"A trial balance lists all ledger account balances to verify debit = credit.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc7",question:"The _____ account shows the gross profit or loss of a business.",options:["Profit and Loss","Trading","Capital","Cash"],correct:1,explanation:"The Trading Account reveals gross profit (Sales − COGS).",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc8",question:"_____ is the systematic allocation of the cost of an asset over its useful life.",options:["Amortization","Depreciation","Depletion","Provision"],correct:1,explanation:"Depreciation allocates the cost of a fixed asset over its useful life.",difficulty:"easy",topic:"Fixed Assets"},
-  {id:"acc9",question:"A _____ is an amount owed by the business to outsiders.",options:["Asset","Capital","Liability","Revenue"],correct:2,explanation:"A liability is money the business owes to external parties.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc10",question:"The _____ method charges an equal amount of depreciation each year.",options:["Reducing balance","Straight-line","Unit of production","Revaluation"],correct:1,explanation:"The straight-line method depreciates an asset by equal amounts annually.",difficulty:"easy",topic:"Fixed Assets"},
-  {id:"acc11",question:"_____ are costs that remain fixed regardless of the level of output.",options:["Variable costs","Fixed costs","Semi-variable costs","Marginal costs"],correct:1,explanation:"Fixed costs do not change with the level of production.",difficulty:"easy",topic:"Cost Accounting"},
-  {id:"acc12",question:"The _____ is the difference between sales revenue and cost of goods sold.",options:["Net profit","Gross profit","Operating profit","Contribution"],correct:1,explanation:"Gross Profit = Sales Revenue − Cost of Goods Sold.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc13",question:"A _____ entry increases an asset or expense account.",options:["Credit","Debit","Journal","Closing"],correct:1,explanation:"Debit entries increase asset and expense accounts.",difficulty:"easy",topic:"Double Entry"},
-  {id:"acc14",question:"A _____ entry increases a liability or income account.",options:["Debit","Contra","Credit","Adjusting"],correct:2,explanation:"Credit entries increase liability, capital, and income accounts.",difficulty:"easy",topic:"Double Entry"},
-  {id:"acc15",question:"The _____ is the final account that shows the net profit or loss.",options:["Trading account","Balance sheet","Profit and Loss account","Cash flow"],correct:2,explanation:"The Profit and Loss Account shows net profit after all expenses.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc16",question:"_____ capital is the long-term finance invested by the owner in the business.",options:["Working","Owner's","Loan","Fixed"],correct:1,explanation:"Owner's capital is the long-term investment made by the proprietor.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc17",question:"A _____ is an amount set aside from profits to meet future liabilities.",options:["Reserve","Provision","Accrual","Prepayment"],correct:1,explanation:"A provision is set aside against a specific anticipated expense or loss.",difficulty:"medium",topic:"Adjustments"},
-  {id:"acc18",question:"The _____ ratio measures the relationship between current assets and current liabilities.",options:["Quick","Gearing","Current","Profitability"],correct:2,explanation:"Current Ratio = Current Assets ÷ Current Liabilities.",difficulty:"easy",topic:"Ratios"},
-  {id:"acc19",question:"_____ are expenses that have been incurred but not yet paid.",options:["Prepaid expenses","Accrued expenses","Deferred income","Provisions"],correct:1,explanation:"Accrued expenses are incurred but not yet paid — a current liability.",difficulty:"easy",topic:"Adjustments"},
-  {id:"acc20",question:"A _____ is income that has been received but not yet earned.",options:["Accrued income","Prepayment (Deferred income)","Commission","Discount"],correct:1,explanation:"Prepaid/deferred income is cash received before the service is rendered.",difficulty:"medium",topic:"Adjustments"},
-  {id:"acc21",question:"The _____ method of stock valuation assumes the most recently purchased items are sold first.",options:["FIFO","AVCO","LIFO","Specific identification"],correct:2,explanation:"LIFO (Last In First Out) assumes newest stock is sold first.",difficulty:"medium",topic:"Inventory"},
-  {id:"acc22",question:"The _____ method of stock valuation assumes the earliest purchased items are sold first.",options:["LIFO","AVCO","FIFO","Weighted average"],correct:2,explanation:"FIFO (First In First Out) assumes oldest stock is sold first.",difficulty:"easy",topic:"Inventory"},
-  {id:"acc23",question:"_____ is the buying and selling of fixed assets for long-term use in the business.",options:["Revenue expenditure","Capital expenditure","Working capital management","Stock control"],correct:1,explanation:"Capital expenditure is spending on long-term fixed assets.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc24",question:"The _____ is income received from selling goods and services.",options:["Profit","Revenue","Capital","Interest"],correct:1,explanation:"Revenue is the income earned from normal business operations.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc25",question:"A _____ reconciliation matches the bank statement with the cash book.",options:["Journal","Bank","Trial balance","Ledger"],correct:1,explanation:"A bank reconciliation compares the cash book to the bank statement.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc26",question:"The _____ shows all cash inflows and outflows of a business.",options:["Balance sheet","Trial balance","Cash flow statement","Income statement"],correct:2,explanation:"The cash flow statement reports all cash receipts and payments.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc27",question:"_____ are assets that can be quickly converted into cash.",options:["Fixed assets","Liquid assets","Intangible assets","Capital assets"],correct:1,explanation:"Liquid assets are quickly convertible to cash (e.g., cash, debtors).",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc28",question:"The _____ is the minimum amount of cash a business needs to operate.",options:["Working capital","Fixed capital","Liquid reserve","Cash buffer"],correct:0,explanation:"Working capital (current assets − current liabilities) funds day-to-day operations.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc29",question:"A _____ is a person or business that is owed money by the business.",options:["Debtor","Director","Creditor","Partner"],correct:2,explanation:"A creditor is owed money by the business.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc30",question:"The _____ principle states that accounts should be prepared assuming the business will continue.",options:["Accrual","Consistency","Going concern","Prudence"],correct:2,explanation:"The going concern concept assumes the business will continue operating.",difficulty:"easy",topic:"Accounting Concepts"},
-  {id:"acc31",question:"_____ is the value of an asset after deducting accumulated depreciation.",options:["Market value","Net book value","Residual value","Replacement value"],correct:1,explanation:"Net book value = Cost − Accumulated depreciation.",difficulty:"easy",topic:"Fixed Assets"},
-  {id:"acc32",question:"The _____ convention requires expenses to be matched with the revenue they generate.",options:["Prudence","Going concern","Matching","Consistency"],correct:2,explanation:"The matching concept matches expenses to the revenue they help generate.",difficulty:"easy",topic:"Accounting Concepts"},
-  {id:"acc33",question:"_____ is the excess of liabilities over assets.",options:["Surplus","Insolvency","Profit","Equity"],correct:1,explanation:"Insolvency is when liabilities exceed assets — the business cannot pay its debts.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc34",question:"A _____ note is issued when goods are returned to the supplier.",options:["Credit","Advice","Debit","Invoice"],correct:2,explanation:"A debit note is issued by the buyer when returning goods to the supplier.",difficulty:"medium",topic:"Trade Documents"},
-  {id:"acc35",question:"The _____ is a record of all amounts owed by credit customers.",options:["Purchases ledger","Sales ledger","Cash book","Petty cash"],correct:1,explanation:"The sales ledger records amounts owed by credit customers (debtors).",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc36",question:"_____ are expenses that change in proportion to the level of output.",options:["Fixed costs","Variable costs","Overheads","Sunk costs"],correct:1,explanation:"Variable costs rise and fall with the level of production.",difficulty:"easy",topic:"Cost Accounting"},
-  {id:"acc37",question:"The _____ is the point where total revenue equals total costs.",options:["Margin of safety","Break-even point","Contribution","Profit point"],correct:1,explanation:"The break-even point is where total revenue = total costs (zero profit).",difficulty:"easy",topic:"Cost Accounting"},
-  {id:"acc38",question:"A _____ is an arrangement where a business receives goods now and pays later.",options:["Loan","Trade credit","Mortgage","Overdraft"],correct:1,explanation:"Trade credit allows businesses to buy now and pay at a later date.",difficulty:"easy",topic:"Business Finance"},
-  {id:"acc39",question:"_____ accounting presents summary financial data to external stakeholders.",options:["Management","Financial","Cost","Tax"],correct:1,explanation:"Financial accounting produces statements for external users like investors.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc40",question:"A _____ is the process of examining accounts to verify their accuracy and fairness.",options:["Audit","Review","Investigation","Inspection"],correct:0,explanation:"An audit is an independent examination of financial records.",difficulty:"easy",topic:"Auditing"},
-  {id:"acc41",question:"_____ are goods purchased for resale by a business.",options:["Fixed assets","Inventory/Stock","Raw materials","Work-in-progress"],correct:1,explanation:"Inventory (stock) consists of goods held for resale.",difficulty:"easy",topic:"Inventory"},
-  {id:"acc42",question:"A _____ is prepared to show how profit is divided among partners.",options:["Trading account","Appropriation account","Capital account","Profit & Loss"],correct:1,explanation:"The appropriation account shows how profit is shared among partners.",difficulty:"medium",topic:"Partnership Accounts"},
-  {id:"acc43",question:"The _____ method charges depreciation as a fixed percentage of the declining balance.",options:["Straight-line","Reducing balance","Revaluation","Units of production"],correct:1,explanation:"The reducing balance method applies a fixed rate to the decreasing book value.",difficulty:"medium",topic:"Fixed Assets"},
-  {id:"acc44",question:"The _____ concept holds that items should be recorded at their original purchase price.",options:["Going concern","Historical cost","Prudence","Consistency"],correct:1,explanation:"The historical cost concept records assets at original cost.",difficulty:"easy",topic:"Accounting Concepts"},
-  {id:"acc45",question:"_____ profit is calculated after deducting all expenses from gross profit.",options:["Gross","Net","Operating","Trading"],correct:1,explanation:"Net profit = Gross profit − All operating expenses.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc46",question:"The _____ is calculated by dividing net profit by capital employed.",options:["Gross margin","Return on capital employed","Current ratio","Quick ratio"],correct:1,explanation:"ROCE = Net Profit ÷ Capital Employed × 100.",difficulty:"medium",topic:"Ratios"},
-  {id:"acc47",question:"_____ is the amount by which revenue exceeds variable costs.",options:["Net profit","Gross profit","Contribution","Margin of safety"],correct:2,explanation:"Contribution = Sales Revenue − Variable Costs.",difficulty:"medium",topic:"Cost Accounting"},
-  {id:"acc48",question:"The _____ ratio compares liquid assets to current liabilities.",options:["Current ratio","Quick (acid-test) ratio","Gearing ratio","Profit margin"],correct:1,explanation:"The quick ratio (acid-test) = (Current assets − stock) ÷ Current liabilities.",difficulty:"medium",topic:"Ratios"},
-  {id:"acc49",question:"_____ are assets held for long-term use in the business.",options:["Current assets","Fixed (non-current) assets","Liquid assets","Working capital"],correct:1,explanation:"Fixed assets (non-current assets) are held for long-term use.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc50",question:"A _____ is an internal financial statement prepared for management use.",options:["Balance sheet","Management account","Annual report","Prospectus"],correct:1,explanation:"Management accounts are prepared for internal decision-making.",difficulty:"easy",topic:"Management Accounting"},
-  {id:"acc51",question:"_____ is the flow of cash in and out of a business over a period.",options:["Working capital","Cash flow","Net profit","Revenue"],correct:1,explanation:"Cash flow tracks the movement of cash into and out of a business.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc52",question:"A _____ measures the number of days it takes to collect amounts owed by debtors.",options:["Creditor days","Debtor collection period","Stock turnover","Current ratio"],correct:1,explanation:"Debtor collection period = (Debtors ÷ Credit sales) × 365.",difficulty:"medium",topic:"Ratios"},
-  {id:"acc53",question:"The _____ is the process of transferring journal entries to the ledger.",options:["Balancing","Posting","Casting","Closing"],correct:1,explanation:"Posting is transferring journal entries to the appropriate ledger accounts.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc54",question:"A _____ is a loan secured against property.",options:["Overdraft","Debenture","Mortgage","Bond"],correct:2,explanation:"A mortgage is a long-term loan secured on property.",difficulty:"easy",topic:"Business Finance"},
-  {id:"acc55",question:"The _____ is a document showing amounts owed by all debtors.",options:["Trial balance","Debtors list","Sales ledger","Cash book"],correct:1,explanation:"A debtors list shows all outstanding amounts owed by credit customers.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc56",question:"_____ is when income and expenses are recorded when earned or incurred, not when cash is received.",options:["Cash accounting","Accrual accounting","Single entry","Management accounting"],correct:1,explanation:"Accrual accounting records transactions when they occur, regardless of cash movement.",difficulty:"easy",topic:"Accounting Concepts"},
-  {id:"acc57",question:"A _____ is a financial plan showing expected income and expenditure.",options:["Forecast","Budget","Estimate","Projection"],correct:1,explanation:"A budget is a forward-looking financial plan.",difficulty:"easy",topic:"Budgeting"},
-  {id:"acc58",question:"_____ is the amount a company earns per share of its stock.",options:["Dividend","Earnings per share (EPS)","Return on equity","Net margin"],correct:1,explanation:"EPS = Net profit ÷ Number of shares issued.",difficulty:"medium",topic:"Ratios"},
-  {id:"acc59",question:"A _____ is an official examination of a company's financial records.",options:["Internal review","Statutory audit","Management review","Tax inspection"],correct:1,explanation:"A statutory audit is a legally required independent examination of accounts.",difficulty:"medium",topic:"Auditing"},
-  {id:"acc60",question:"The _____ ratio measures how efficiently a company uses its assets.",options:["Profit margin","Asset turnover","Current ratio","Return on capital"],correct:1,explanation:"Asset turnover = Sales ÷ Total assets.",difficulty:"medium",topic:"Ratios"},
-  {id:"acc61",question:"_____ is a reduction in the value of an intangible asset over time.",options:["Depreciation","Depletion","Amortization","Write-off"],correct:2,explanation:"Amortization is the gradual writing-off of intangible assets.",difficulty:"medium",topic:"Fixed Assets"},
-  {id:"acc62",question:"The _____ is a list showing the balance of all accounts at the end of the period.",options:["Balance sheet","Trial balance","Income statement","Journal"],correct:1,explanation:"A trial balance lists all ledger account balances.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc63",question:"_____ includes all costs directly related to producing a product.",options:["Overhead","Prime cost","Fixed cost","Indirect cost"],correct:1,explanation:"Prime cost = Direct materials + Direct labour + Direct expenses.",difficulty:"medium",topic:"Cost Accounting"},
-  {id:"acc64",question:"The _____ cost method values inventory at the weighted average cost per unit.",options:["FIFO","LIFO","AVCO (average cost)","Specific cost"],correct:2,explanation:"AVCO calculates a weighted average cost for all inventory units.",difficulty:"medium",topic:"Inventory"},
-  {id:"acc65",question:"_____ are costs that cannot be directly traced to a product.",options:["Direct costs","Overheads","Variable costs","Prime costs"],correct:1,explanation:"Overheads (indirect costs) cannot be directly attributed to a single product.",difficulty:"easy",topic:"Cost Accounting"},
-  {id:"acc66",question:"A _____ entry is made at the end of a period to update account balances.",options:["Closing","Opening","Adjusting","Reversing"],correct:2,explanation:"Adjusting entries update accounts for accruals and prepayments at period end.",difficulty:"medium",topic:"Adjustments"},
-  {id:"acc67",question:"The _____ is the financial year used for tax and reporting purposes.",options:["Calendar year","Accounting period","Fiscal year","Tax year"],correct:1,explanation:"The accounting period defines the time span covered by financial statements.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc68",question:"_____ is the difference between the face value and the price of a bond.",options:["Premium","Discount","Interest","Dividend"],correct:1,explanation:"A bond discount is when the issue price is below face value.",difficulty:"medium",topic:"Business Finance"},
-  {id:"acc69",question:"A _____ is a report on a company's activities given to shareholders.",options:["Management account","Annual report","Prospectus","Budget"],correct:1,explanation:"An annual report provides shareholders with financial and operational information.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc70",question:"The _____ is a financial statement that shows changes in equity.",options:["Income statement","Cash flow statement","Statement of changes in equity","Balance sheet"],correct:2,explanation:"The statement of changes in equity details movements in shareholders' funds.",difficulty:"medium",topic:"Financial Statements"},
-  {id:"acc71",question:"_____ are items owned by a business that have monetary value.",options:["Liabilities","Capital","Assets","Expenses"],correct:2,explanation:"Assets are resources owned by the business with economic value.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc72",question:"A _____ is an internal check to verify the accuracy of accounting records.",options:["External audit","Statutory audit","Internal audit","Tax audit"],correct:2,explanation:"Internal audit reviews internal controls and accounting accuracy.",difficulty:"easy",topic:"Auditing"},
-  {id:"acc73",question:"The _____ standard requires businesses to use the same accounting methods consistently.",options:["Prudence","Going concern","Consistency","Accrual"],correct:2,explanation:"The consistency concept ensures methods are applied the same way each period.",difficulty:"easy",topic:"Accounting Concepts"},
-  {id:"acc74",question:"_____ is the cost of goods available for sale minus ending inventory.",options:["Gross profit","Net profit","Cost of goods sold","Revenue"],correct:2,explanation:"COGS = Opening stock + Purchases − Closing stock.",difficulty:"easy",topic:"Trading Account"},
-  {id:"acc75",question:"A _____ is a card issued by a bank allowing immediate payment from a bank account.",options:["Credit card","Debit card","Charge card","Smart card"],correct:1,explanation:"A debit card draws funds directly from the holder's bank account.",difficulty:"easy",topic:"Banking"},
-  {id:"acc76",question:"The _____ is the difference between selling price and variable cost per unit.",options:["Net profit","Gross profit","Contribution margin","Mark-up"],correct:2,explanation:"Contribution margin = Selling price − Variable cost per unit.",difficulty:"medium",topic:"Cost Accounting"},
-  {id:"acc77",question:"_____ is the total amount of money owed to a business by its customers.",options:["Creditors","Debtors","Cash","Revenue"],correct:1,explanation:"Debtors (accounts receivable) owe money to the business.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc78",question:"The _____ account is used to record all transactions relating to the owner's investment.",options:["Cash","Capital account","Revenue","Reserve"],correct:1,explanation:"The capital account records the owner's investment and withdrawals.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc79",question:"Goodwill is an example of:",options:["Current asset","Tangible fixed asset","Intangible fixed asset","Current liability"],correct:2,explanation:"Goodwill is an intangible non-current asset.",difficulty:"medium",topic:"Fixed Assets"},
-  {id:"acc80",question:"Which concept requires that potential losses be recorded immediately?",options:["Accrual","Consistency","Prudence","Going concern"],correct:2,explanation:"The prudence concept requires caution — anticipate losses but not gains.",difficulty:"medium",topic:"Accounting Concepts"},
-  {id:"acc81",question:"Opening stock + Purchases – Closing stock = ?",options:["Gross profit","Net profit","Cost of goods sold","Net sales"],correct:2,explanation:"COGS = Opening stock + Purchases − Closing stock.",difficulty:"easy",topic:"Trading Account"},
-  {id:"acc82",question:"Which of the following is a current liability?",options:["Mortgage","Bank overdraft","Machinery","Goodwill"],correct:1,explanation:"A bank overdraft is a short-term current liability.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc83",question:"A _____ records daily cash transactions.",options:["Sales ledger","Cash book","Journal","Petty cash book"],correct:1,explanation:"The cash book records all receipts and payments of cash and bank.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc84",question:"Net profit is calculated as:",options:["Gross profit – Expenses","Revenue + Expenses","Sales – Purchases only","Revenue × Rate"],correct:0,explanation:"Net profit = Gross profit − All operating expenses.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc85",question:"The _____ account records small day-to-day cash expenses.",options:["Cash book","Petty cash account","Sundry account","Expenses account"],correct:1,explanation:"Petty cash covers minor routine expenses.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc86",question:"Which financial ratio measures the percentage of profit relative to sales?",options:["Current ratio","Asset turnover","Net profit margin","Gearing ratio"],correct:2,explanation:"Net profit margin = Net profit ÷ Sales × 100.",difficulty:"medium",topic:"Ratios"},
-  {id:"acc87",question:"A _____ is an expense paid for in advance (e.g., insurance paid 6 months ahead).",options:["Accrued expense","Prepaid expense","Deferred income","Provision"],correct:1,explanation:"A prepaid expense is paid before it is due — a current asset.",difficulty:"easy",topic:"Adjustments"},
-  {id:"acc88",question:"The _____ shows a business's revenues and expenses over a period.",options:["Balance sheet","Income statement (P&L)","Cash flow statement","Trial balance"],correct:1,explanation:"The income statement (profit and loss account) shows revenues and expenses.",difficulty:"easy",topic:"Financial Statements"},
-  {id:"acc89",question:"Accumulated depreciation is shown on the:",options:["Income statement","Trial balance only","Balance sheet as deduction from fixed assets","Cash flow statement"],correct:2,explanation:"Accumulated depreciation reduces the book value of fixed assets on the balance sheet.",difficulty:"medium",topic:"Fixed Assets"},
-  {id:"acc90",question:"A _____ is money withdrawn from the business by the owner for personal use.",options:["Dividend","Drawings","Salary","Bonus"],correct:1,explanation:"Drawings are amounts withdrawn by the owner, reducing capital.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc91",question:"Which of the following best describes capital expenditure?",options:["Paying wages","Buying raw materials","Purchasing a delivery van","Paying rent"],correct:2,explanation:"Purchasing a fixed asset (delivery van) is capital expenditure.",difficulty:"easy",topic:"Accounting Fundamentals"},
-  {id:"acc92",question:"The _____ shows all sources and uses of funds in a period.",options:["Cash flow statement","Funds flow statement","Balance sheet","Income statement"],correct:1,explanation:"The funds flow statement shows sources and applications of funds.",difficulty:"medium",topic:"Financial Statements"},
-  {id:"acc93",question:"Stock that is unsold at the end of an accounting period is called:",options:["Opening stock","Closing stock","Dead stock","Work-in-progress"],correct:1,explanation:"Closing stock is unsold inventory at the period end.",difficulty:"easy",topic:"Inventory"},
-  {id:"acc94",question:"The purpose of a bank reconciliation is to:",options:["Increase bank balance","Identify discrepancies between cash book and bank statement","Calculate profit","Audit expenses"],correct:1,explanation:"Bank reconciliation identifies and explains differences between internal records and the bank statement.",difficulty:"easy",topic:"Bookkeeping"},
-  {id:"acc95",question:"A _____ is created when the business earns income before receiving cash.",options:["Prepaid income","Accrued income","Deferred income","Sundry income"],correct:1,explanation:"Accrued income is earned but not yet received.",difficulty:"medium",topic:"Adjustments"},
-  {id:"acc96",question:"The double-entry principle states that every transaction has:",options:["One entry only","Two equal and opposite entries","Three entries","No fixed number of entries"],correct:1,explanation:"Double-entry bookkeeping: every debit has an equal and opposite credit.",difficulty:"easy",topic:"Double Entry"},
-  {id:"acc97",question:"Which account is debited when fixed assets are purchased for cash?",options:["Cash account","Fixed asset account","Capital account","Revenue account"],correct:1,explanation:"When a fixed asset is bought, debit Fixed Asset account, credit Cash account.",difficulty:"medium",topic:"Double Entry"},
-  {id:"acc98",question:"A _____ account shows the profit available to partners after all charges.",options:["Trading","Appropriation","Capital","Cash"],correct:1,explanation:"The appropriation account divides net profit among partners.",difficulty:"medium",topic:"Partnership Accounts"},
-  {id:"acc99",question:"The _____ ratio shows how many times a business can cover its interest payments.",options:["Current ratio","Interest cover ratio","Gearing ratio","Profit margin"],correct:1,explanation:"Interest cover = Operating profit ÷ Interest charges.",difficulty:"hard",topic:"Ratios"},
-  {id:"acc100",question:"_____ is the process of combining financial statements of a parent and its subsidiary.",options:["Consolidation","Amalgamation","Merger","Acquisition"],correct:0,explanation:"Consolidation produces group financial statements combining parent and subsidiary accounts.",difficulty:"hard",topic:"Advanced Accounting"},
-];
-
-// ECONOMICS QUESTIONS (100 questions from uploaded NAT Economics file)
-const economicsQuestions = [
-  {id:"eco1",question:"Economics is the study of:",options:["Only money and banking","How society allocates scarce resources","Government policies only","International trade only"],correct:1,explanation:"Economics studies how individuals, businesses, and governments allocate scarce resources to satisfy unlimited wants.",difficulty:"easy",topic:"Introduction to Economics"},
-  {id:"eco2",question:"Microeconomics studies:",options:["National income","Individual firms and consumers","Inflation rates","Balance of payments"],correct:1,explanation:"Microeconomics focuses on individual economic units like consumers, firms, and specific markets.",difficulty:"easy",topic:"Microeconomics"},
-  {id:"eco3",question:"When price increases, demand generally:",options:["Increases","Decreases","Stays the same","Doubles"],correct:1,explanation:"The law of demand states that as price rises, quantity demanded falls, all else equal.",difficulty:"easy",topic:"Demand & Supply"},
-  {id:"eco4",question:"A market is in equilibrium when:",options:["Demand exceeds supply","Supply exceeds demand","Quantity demanded equals quantity supplied","Price is at its highest"],correct:2,explanation:"Equilibrium occurs when quantity demanded equals quantity supplied, clearing the market.",difficulty:"easy",topic:"Demand & Supply"},
-  {id:"eco5",question:"GDP stands for:",options:["Gross Domestic Product","General Domestic Product","Gross Development Plan","General Development Product"],correct:0,explanation:"GDP = Gross Domestic Product, the total value of goods and services produced in a country.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco6",question:"Inflation means:",options:["Rising unemployment","Fall in price level","Rise in general price level","Economic growth"],correct:2,explanation:"Inflation is a sustained rise in the general price level of goods and services.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco7",question:"Price Elasticity of Demand (PED) measures:",options:["Change in supply due to price change","Sensitivity of demand to price change","Rate of inflation","Consumer income change"],correct:1,explanation:"PED measures how much quantity demanded changes in response to a change in price.",difficulty:"easy",topic:"Elasticity"},
-  {id:"eco8",question:"A public good is characterized by:",options:["High price and limited supply","Non-excludability and non-rivalry","Government ownership only","Being free to all"],correct:1,explanation:"Public goods are non-excludable (can't be denied to anyone) and non-rival (one person's use doesn't reduce availability).",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco9",question:"Opportunity cost is:",options:["The price paid for a good","The cost of the next best alternative foregone","Total cost of production","Fixed cost only"],correct:1,explanation:"Opportunity cost is the value of the next best alternative you give up when making a choice.",difficulty:"easy",topic:"Basic Concepts"},
-  {id:"eco10",question:"Which of the following causes a shift in the demand curve?",options:["Change in price of the good","Change in consumer income","Change in quantity supplied","Change in price alone"],correct:1,explanation:"Changes in income, tastes, prices of related goods shift the entire demand curve.",difficulty:"easy",topic:"Demand & Supply"},
-  {id:"eco11",question:"Perfect competition is characterized by:",options:["Few sellers","Many buyers and sellers, identical products","One seller","Differentiated products"],correct:1,explanation:"Perfect competition has many buyers and sellers with homogeneous (identical) products.",difficulty:"easy",topic:"Market Structures"},
-  {id:"eco12",question:"A monopoly has:",options:["Many sellers","Few sellers","One seller","Two sellers"],correct:2,explanation:"A monopoly exists when there is only one seller in a market with no close substitutes.",difficulty:"easy",topic:"Market Structures"},
-  {id:"eco13",question:"Consumer surplus is:",options:["Extra goods bought","Difference between what consumer is willing to pay and what they actually pay","Profit made by consumers","Government subsidy"],correct:1,explanation:"Consumer surplus = the amount consumers are willing to pay minus the amount they actually pay.",difficulty:"medium",topic:"Demand & Supply"},
-  {id:"eco14",question:"Fiscal policy involves:",options:["Central bank interest rates","Government spending and taxation","Exchange rate management","Trade policy"],correct:1,explanation:"Fiscal policy refers to government use of taxation and spending to influence the economy.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco15",question:"Unemployment caused by mismatch of skills is called:",options:["Cyclical unemployment","Frictional unemployment","Structural unemployment","Seasonal unemployment"],correct:2,explanation:"Structural unemployment occurs due to a mismatch between workers' skills and available jobs.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco16",question:"According to the law of supply, as price increases, quantity supplied:",options:["Decreases","Stays the same","Increases","Becomes zero"],correct:2,explanation:"The law of supply states that as price rises, quantity supplied increases, all else equal.",difficulty:"easy",topic:"Demand & Supply"},
-  {id:"eco17",question:"GNP differs from GDP in that GNP includes:",options:["Government spending","Net income from abroad","Investment","Consumer spending"],correct:1,explanation:"GNP = GDP + Net income earned abroad by citizens.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco18",question:"A negative externality occurs when:",options:["Third parties bear costs of others' economic activity","Third parties benefit from others' activity","Government taxes production","Prices fall below equilibrium"],correct:0,explanation:"A negative externality imposes costs on third parties not involved in the transaction (e.g., pollution).",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco19",question:"Pakistan's economy is classified as:",options:["Developed economy","Developing/emerging economy","Fully planned economy","Subsistence economy"],correct:1,explanation:"Pakistan is classified as a developing/emerging economy.",difficulty:"easy",topic:"Pakistani Economy"},
-  {id:"eco20",question:"Which organization provides financial assistance to developing countries?",options:["WTO","IMF","NATO","WHO"],correct:1,explanation:"The IMF (International Monetary Fund) provides financial assistance and loans to countries in economic difficulty.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco21",question:"The exchange rate is the rate at which:",options:["Goods are traded","One currency is exchanged for another","Taxes are set","Wages are paid"],correct:1,explanation:"The exchange rate is the price of one currency in terms of another.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco22",question:"The balance of payments records a country's economic transactions with:",options:["Its own citizens","The rest of the world","The government","Private sector"],correct:1,explanation:"The balance of payments records all transactions between residents and the rest of the world.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco23",question:"Full employment means:",options:["Zero unemployment","Only frictional unemployment remains","All workers have two jobs","No one is looking for work"],correct:1,explanation:"Full employment is when only frictional/natural unemployment remains.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco24",question:"The Phillips Curve shows the trade-off between:",options:["Growth and inflation","Inflation and unemployment","Supply and demand","GDP and consumption"],correct:1,explanation:"The Phillips curve illustrates the inverse relationship between inflation and unemployment.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco25",question:"Marginal product is:",options:["Total output divided by all workers","Additional output from one more unit of input","Average output per worker","Fixed output"],correct:1,explanation:"Marginal product = change in total output from employing one more unit of a factor.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco26",question:"An externality exists when:",options:["A firm earns profit","Third parties are affected by a transaction","Prices rise","Supply decreases"],correct:1,explanation:"Externalities occur when third parties bear costs or receive benefits from a transaction.",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco27",question:"Public goods are:",options:["Goods sold in public markets","Non-rival and non-excludable goods","Government-owned factories","Free goods with no cost"],correct:1,explanation:"Public goods are non-rival (use by one doesn't reduce availability) and non-excludable.",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco28",question:"A negative externality is:",options:["A benefit to third parties","A cost imposed on third parties","A government tax","A subsidy"],correct:1,explanation:"Negative externalities impose costs on uninvolved third parties (e.g., pollution).",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco29",question:"Market failure occurs when:",options:["Prices are too high","Resources are allocated inefficiently","Government intervenes","Firms make profits"],correct:1,explanation:"Market failure is when the market fails to allocate resources efficiently.",difficulty:"easy",topic:"Market Failure"},
-  {id:"eco30",question:"The indifference curve shows:",options:["Production possibilities","Combinations of two goods giving equal satisfaction","Supply and demand","Cost and revenue"],correct:1,explanation:"An indifference curve shows all combinations of two goods yielding the same utility.",difficulty:"hard",topic:"Microeconomics"},
-  {id:"eco31",question:"Income tax is deducted from:",options:["Profits only","Wages at source","Company revenue","Imports"],correct:1,explanation:"Income tax (PAYE) is deducted from wages at the point of payment.",difficulty:"easy",topic:"Fiscal Policy"},
-  {id:"eco32",question:"The fiscal multiplier measures:",options:["Tax rates","Impact of a change in spending on national income","Money supply changes","Exchange rate effects"],correct:1,explanation:"The fiscal multiplier shows how much GDP changes for a given change in government spending.",difficulty:"hard",topic:"Fiscal Policy"},
-  {id:"eco33",question:"An oligopoly is a market structure with:",options:["One seller","Two sellers","A few large sellers","Many small sellers"],correct:2,explanation:"An oligopoly is dominated by a small number of large firms.",difficulty:"easy",topic:"Market Structures"},
-  {id:"eco34",question:"A monopoly is a market dominated by:",options:["Two firms","Many firms","A single seller","The government"],correct:2,explanation:"A monopoly has one seller with no close substitutes.",difficulty:"easy",topic:"Market Structures"},
-  {id:"eco35",question:"Perfect competition exists when:",options:["One firm dominates","Few firms compete","There are many buyers and sellers with identical products","Firms set their own prices"],correct:2,explanation:"Perfect competition has many buyers and sellers, homogeneous products, and free entry/exit.",difficulty:"easy",topic:"Market Structures"},
-  {id:"eco36",question:"The interest rate is:",options:["The cost of goods","Cost of borrowing money as a percentage","Rate of inflation","Tax rate"],correct:1,explanation:"The interest rate is the cost of borrowing money, expressed as a percentage.",difficulty:"easy",topic:"Monetary Policy"},
-  {id:"eco37",question:"Credit creation refers to:",options:["Printing money","Process by which banks create money through lending","Government borrowing","Foreign exchange"],correct:1,explanation:"Banks create money through the process of lending (credit creation/money multiplier).",difficulty:"medium",topic:"Monetary Policy"},
-  {id:"eco38",question:"Aggregate supply is the:",options:["Total demand in an economy","Total supply of goods and services in an economy","Government supply of money","Export supply"],correct:1,explanation:"Aggregate supply is the total output all producers are willing to supply at different price levels.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco39",question:"Aggregate demand includes:",options:["Consumer spending only","Consumer + investment + government + net exports","Supply side only","Imports only"],correct:1,explanation:"AD = C + I + G + (X−M): consumption, investment, government spending, net exports.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco40",question:"The business cycle refers to:",options:["A company's annual report","Periods of expansion and contraction in economic activity","Product life cycle","Business planning"],correct:1,explanation:"The business cycle describes the fluctuations in economic activity over time.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco41",question:"Privatization is:",options:["Government taking over private companies","Transfer of publicly owned businesses to private ownership","Increasing taxes","Reducing imports"],correct:1,explanation:"Privatization transfers state-owned enterprises to private ownership.",difficulty:"easy",topic:"Economic Systems"},
-  {id:"eco42",question:"The money supply refers to:",options:["Government budget","Total amount of money in circulation in an economy","Foreign reserves","Interest rate"],correct:1,explanation:"The money supply is the total stock of money available in an economy.",difficulty:"easy",topic:"Monetary Policy"},
-  {id:"eco43",question:"The quantity theory of money states that:",options:["More money causes less inflation","Price level is determined by the quantity of money","Interest rates determine prices","Wages determine inflation"],correct:1,explanation:"The quantity theory (MV = PQ) links money supply to the price level.",difficulty:"hard",topic:"Monetary Policy"},
-  {id:"eco44",question:"Sustainable development means:",options:["Industrial growth at any cost","Economic growth without harming future generations","No development","Government-led growth"],correct:1,explanation:"Sustainable development meets present needs without compromising future generations.",difficulty:"easy",topic:"Development Economics"},
-  {id:"eco45",question:"Marginal propensity to consume (MPC) is:",options:["Total spending on consumption","Proportion of additional income that is consumed","Average consumption","Fixed spending"],correct:1,explanation:"MPC = change in consumption ÷ change in income.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco46",question:"A budget deficit occurs when:",options:["Government revenue exceeds spending","Government spending exceeds revenue","Exports exceed imports","GDP grows fast"],correct:1,explanation:"A budget deficit is when government expenditure exceeds tax revenue.",difficulty:"easy",topic:"Fiscal Policy"},
-  {id:"eco47",question:"A budget surplus exists when:",options:["Spending exceeds revenue","Revenue exceeds spending","Trade is balanced","Money supply increases"],correct:1,explanation:"A budget surplus means government revenue exceeds its expenditure.",difficulty:"easy",topic:"Fiscal Policy"},
-  {id:"eco48",question:"Contractionary monetary policy:",options:["Increases money supply","Reduces money supply to control inflation","Lowers interest rates","Increases government spending"],correct:1,explanation:"Contractionary monetary policy reduces money supply/raises interest rates to curb inflation.",difficulty:"medium",topic:"Monetary Policy"},
-  {id:"eco49",question:"Marginal utility is:",options:["Total satisfaction from consumption","Additional satisfaction from one more unit","Average utility","Minimum utility"],correct:1,explanation:"Marginal utility is the extra satisfaction from consuming one more unit.",difficulty:"easy",topic:"Microeconomics"},
-  {id:"eco50",question:"The law of diminishing marginal utility states that:",options:["Utility always increases","Additional satisfaction decreases as consumption increases","Prices rise with consumption","Income falls"],correct:1,explanation:"As you consume more of a good, each additional unit gives less extra satisfaction.",difficulty:"easy",topic:"Microeconomics"},
-  {id:"eco51",question:"A progressive tax is one where:",options:["Rate is same for everyone","Rate increases as income increases","Rate decreases with income","Only businesses pay"],correct:1,explanation:"Progressive tax: higher earners pay a higher percentage of their income.",difficulty:"easy",topic:"Fiscal Policy"},
-  {id:"eco52",question:"A regressive tax is one where:",options:["Rate rises with income","Rate decreases as income increases","Everyone pays equally","Only imports are taxed"],correct:1,explanation:"Regressive tax takes a larger proportion from lower-income earners.",difficulty:"medium",topic:"Fiscal Policy"},
-  {id:"eco53",question:"The income effect refers to:",options:["Change in demand due to taste","When a price fall increases real purchasing power","Change in supply","Effect of interest rates"],correct:1,explanation:"The income effect: when a price falls, real income rises, affecting demand.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco54",question:"The substitution effect states that:",options:["More income leads to more spending","When a good becomes cheaper, consumers buy more of it instead of substitutes","Wages replace capital","Exports substitute imports"],correct:1,explanation:"Substitution effect: when a good's price falls, consumers substitute it for relatively dearer alternatives.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco55",question:"A complementary good has:",options:["Positive cross-price elasticity","Negative cross-price elasticity","Zero price elasticity","Infinite elasticity"],correct:1,explanation:"Complementary goods (e.g., cars and petrol) have negative cross-price elasticity.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco56",question:"A substitute good has:",options:["Negative cross-price elasticity","Positive cross-price elasticity","Zero income elasticity","Inelastic demand"],correct:1,explanation:"Substitute goods have positive cross-price elasticity — if one's price rises, demand for the other rises.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco57",question:"The Production Possibility Frontier (PPF) shows:",options:["Cost of production","All combinations of two goods that can be produced with given resources","Demand schedule","Market equilibrium"],correct:1,explanation:"The PPF shows the maximum possible output combinations with given resources and technology.",difficulty:"easy",topic:"Basic Concepts"},
-  {id:"eco58",question:"Comparative advantage means:",options:["Having the best technology","Producing goods at the lowest opportunity cost","Highest absolute output","Most workers"],correct:1,explanation:"Comparative advantage is producing a good at a lower opportunity cost than another country.",difficulty:"medium",topic:"International Economics"},
-  {id:"eco59",question:"The Gini coefficient measures:",options:["GDP growth rate","Inequality in income distribution","Inflation rate","Unemployment rate"],correct:1,explanation:"The Gini coefficient ranges from 0 (perfect equality) to 1 (perfect inequality).",difficulty:"medium",topic:"Development Economics"},
-  {id:"eco60",question:"Cyclical unemployment is caused by:",options:["Workers changing jobs","Skill mismatches","Lack of aggregate demand (recession)","Seasonal factors"],correct:2,explanation:"Cyclical (demand-deficient) unemployment rises during recessions.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco61",question:"Frictional unemployment occurs when:",options:["Workers lack skills","Workers are temporarily between jobs","Economy is in recession","Structural changes occur"],correct:1,explanation:"Frictional unemployment is temporary unemployment while searching for a new job.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco62",question:"Structural unemployment is caused by:",options:["Economic downturns","Changing jobs voluntarily","Skills mismatch due to structural change","Seasonal demand"],correct:2,explanation:"Structural unemployment results from skills becoming obsolete due to industry changes.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco63",question:"Crowding out refers to:",options:["Businesses entering new markets","Government borrowing reducing funds for private sector","Firms being pushed out of markets","Population growth"],correct:1,explanation:"Crowding out: high government borrowing raises interest rates, reducing private investment.",difficulty:"hard",topic:"Fiscal Policy"},
-  {id:"eco64",question:"A government bond is:",options:["A foreign currency","A financial asset issued by government to raise funds","A type of tax","A central bank reserve"],correct:1,explanation:"Government bonds are debt instruments issued to borrow money from investors.",difficulty:"easy",topic:"Fiscal Policy"},
-  {id:"eco65",question:"The current account records:",options:["Capital flows","Difference between exports and imports of goods and services","Government spending","Bank deposits"],correct:1,explanation:"The current account shows trade in goods/services, income flows, and transfers.",difficulty:"medium",topic:"International Economics"},
-  {id:"eco66",question:"The circular flow of income shows:",options:["Money flowing in rivers","Flow of money between households and firms","Government tax collection","Banking system"],correct:1,explanation:"The circular flow shows income flowing between households (as consumers/workers) and firms.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco67",question:"The base rate is:",options:["Lowest tax rate","Rate at which central bank lends to commercial banks","Government spending rate","Minimum wage"],correct:1,explanation:"The base rate (bank rate) is the interest rate at which the central bank lends to commercial banks.",difficulty:"medium",topic:"Monetary Policy"},
-  {id:"eco68",question:"Currency depreciation means:",options:["Rise in external value of currency","Fall in external value of currency","Rise in domestic prices","Fall in interest rates"],correct:1,explanation:"Depreciation is a fall in a currency's value relative to other currencies.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco69",question:"Revaluation is:",options:["Reducing the value of currency","Increasing external value of currency under a fixed exchange rate","Printing more money","Increasing tariffs"],correct:1,explanation:"Revaluation is an official increase in a currency's value under a fixed exchange rate system.",difficulty:"medium",topic:"International Economics"},
-  {id:"eco70",question:"The output gap is:",options:["Gap between rich and poor","Difference between actual and potential GDP","Trade balance gap","Unemployment gap"],correct:1,explanation:"The output gap measures whether the economy is operating above or below its productive potential.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco71",question:"Capital goods are:",options:["Consumer goods","Goods used in the production of other goods","Luxury goods","Financial assets"],correct:1,explanation:"Capital goods (machinery, equipment) are used to produce other goods.",difficulty:"easy",topic:"Basic Concepts"},
-  {id:"eco72",question:"National debt is:",options:["Individual citizens' debts","Total money government owes to lenders","Trade deficit","Foreign investment"],correct:1,explanation:"National debt is the accumulated borrowing of the government.",difficulty:"easy",topic:"Fiscal Policy"},
-  {id:"eco73",question:"Capitalism is an economic system where:",options:["Government owns all resources","Private individuals own means of production","Resources are equally shared","The state plans all production"],correct:1,explanation:"Capitalism is characterized by private ownership of the means of production.",difficulty:"easy",topic:"Economic Systems"},
-  {id:"eco74",question:"The primary sector includes:",options:["Manufacturing","Banking and finance","Extraction of natural resources","Education"],correct:2,explanation:"The primary sector involves extracting natural resources (mining, agriculture, fishing).",difficulty:"easy",topic:"Basic Concepts"},
-  {id:"eco75",question:"The secondary sector involves:",options:["Services","Natural resource extraction","Manufacturing and processing","Banking"],correct:2,explanation:"The secondary sector transforms raw materials into finished goods.",difficulty:"easy",topic:"Basic Concepts"},
-  {id:"eco76",question:"The tertiary sector includes:",options:["Farming","Mining","Manufacturing","Services such as banking and education"],correct:3,explanation:"The tertiary sector provides services to businesses and consumers.",difficulty:"easy",topic:"Basic Concepts"},
-  {id:"eco77",question:"Labour productivity is:",options:["Total number of workers","Increase in output per worker over time","Average wages","Unemployment rate"],correct:1,explanation:"Labour productivity measures output per worker.",difficulty:"easy",topic:"Microeconomics"},
-  {id:"eco78",question:"The trade balance is:",options:["Government's fiscal balance","Difference between the value of exports and imports","Money supply minus debt","Consumer spending minus savings"],correct:1,explanation:"Trade balance = exports − imports of goods.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco79",question:"Economies of scale occur when:",options:["Average costs rise with output","A firm can produce at lower cost as it grows larger","Small firms become less efficient","Wages increase"],correct:1,explanation:"Economies of scale reduce average costs as output increases.",difficulty:"easy",topic:"Microeconomics"},
-  {id:"eco80",question:"Diseconomies of scale occur when:",options:["Average costs fall with output","Average costs rise as output increases beyond a certain point","Small firms benefit","Wages fall"],correct:1,explanation:"Diseconomies of scale cause average costs to rise beyond the optimal scale.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco81",question:"Labour mobility refers to:",options:["Workers cycling to work","Movement of workers between jobs and regions","Wage flexibility","Number of hours worked"],correct:1,explanation:"Labour mobility describes how easily workers can move between jobs and locations.",difficulty:"easy",topic:"Microeconomics"},
-  {id:"eco82",question:"Information failure is a market failure where:",options:["Markets have too many sellers","Consumers or producers lack information for optimal decisions","Prices are too high","Government intervenes too much"],correct:1,explanation:"Information failure leads to suboptimal market outcomes due to incomplete information.",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco83",question:"A maximum price (price ceiling) is set:",options:["Above equilibrium to protect producers","Below equilibrium to help consumers","Equal to equilibrium","By firms, not government"],correct:1,explanation:"A price ceiling is set below equilibrium, keeping prices low for consumers.",difficulty:"medium",topic:"Market Structures"},
-  {id:"eco84",question:"A minimum price (price floor) is set:",options:["Below equilibrium to help consumers","Above equilibrium to protect producers","At equilibrium","To reduce production"],correct:1,explanation:"A price floor is set above equilibrium to guarantee producers a minimum price.",difficulty:"medium",topic:"Market Structures"},
-  {id:"eco85",question:"Free trade refers to:",options:["Trade with no money involved","Trade agreement eliminating tariffs between countries","Government-controlled trade","Trade within one country"],correct:1,explanation:"Free trade involves removing barriers (tariffs, quotas) to international trade.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco86",question:"Economic growth is measured by:",options:["Rising prices","Increase in real GDP over time","Fall in unemployment only","Rising exports"],correct:1,explanation:"Economic growth is the increase in real GDP (inflation-adjusted output).",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco87",question:"Allocative inefficiency means:",options:["Too much output","Resources not used to produce goods most valued by consumers","Too little government spending","Excess supply"],correct:1,explanation:"Allocative inefficiency occurs when resources are not directed to their highest-valued use.",difficulty:"medium",topic:"Market Failure"},
-  {id:"eco88",question:"The real interest rate is:",options:["The bank's stated rate","Nominal interest rate adjusted for inflation","Rate set by firms","Minimum wage rate"],correct:1,explanation:"Real interest rate = Nominal interest rate − Inflation rate.",difficulty:"medium",topic:"Monetary Policy"},
-  {id:"eco89",question:"Nationalisation is when:",options:["A firm expands abroad","Government takes over ownership of a private company","Private sector grows","Currency loses value"],correct:1,explanation:"Nationalisation transfers private businesses into government ownership.",difficulty:"easy",topic:"Economic Systems"},
-  {id:"eco90",question:"A free trade area is:",options:["A place with no shops","A group of countries that trade freely among themselves","A government market","An online marketplace"],correct:1,explanation:"A free trade area is a group of countries that remove trade barriers among themselves.",difficulty:"easy",topic:"International Economics"},
-  {id:"eco91",question:"The floating exchange rate system is where:",options:["Exchange rates are fixed","Exchange rates are determined by market forces","Government sets rates daily","Rates are pegged to gold"],correct:0,explanation:"Under a floating exchange rate, market supply and demand determine currency values.",difficulty:"medium",topic:"International Economics"},
-  {id:"eco92",question:"GNP differs from GDP because GNP includes:",options:["Government spending","Net income earned abroad by citizens","Imports","Consumer spending"],correct:1,explanation:"GNP = GDP + net income from abroad (earnings of citizens abroad minus foreigners' earnings locally).",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco93",question:"Marginal propensity to save (MPS) is:",options:["Total savings","Proportion of additional income that is saved","Average savings rate","Fixed savings"],correct:1,explanation:"MPS = change in savings ÷ change in income. MPC + MPS = 1.",difficulty:"medium",topic:"Macroeconomics"},
-  {id:"eco94",question:"GDP per capita is:",options:["Total GDP","GDP divided by population","GDP minus imports","GDP plus remittances"],correct:1,explanation:"GDP per capita = GDP ÷ population. It measures average living standards.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco95",question:"A recession is defined as:",options:["One quarter of negative growth","Two consecutive quarters of negative GDP growth","Rising inflation","Falling wages"],correct:1,explanation:"A recession is technically two consecutive quarters of negative GDP growth.",difficulty:"easy",topic:"Macroeconomics"},
-  {id:"eco96",question:"Consumer surplus is the difference between:",options:["Cost and profit","What consumers are willing to pay and what they actually pay","Wages and savings","Supply and demand"],correct:1,explanation:"Consumer surplus = willingness to pay − actual price paid.",difficulty:"medium",topic:"Microeconomics"},
-  {id:"eco97",question:"The State Bank of Pakistan primarily controls:",options:["Fiscal policy","Monetary policy","Trade policy","Education policy"],correct:1,explanation:"The State Bank of Pakistan (SBP) is responsible for monetary policy.",difficulty:"easy",topic:"Pakistani Economy"},
-  {id:"eco98",question:"Pakistan's main export commodity historically has been:",options:["Oil","Cotton and textiles","Machinery","Electronics"],correct:1,explanation:"Cotton and textile products have historically been Pakistan's largest export.",difficulty:"easy",topic:"Pakistani Economy"},
-  {id:"eco99",question:"Which tax is imposed on the value added at each stage of production in Pakistan?",options:["Income tax","Customs duty","Sales Tax (GST)","Excise duty"],correct:2,explanation:"General Sales Tax (GST) in Pakistan is levied on value added at each stage.",difficulty:"easy",topic:"Pakistani Economy"},
-  {id:"eco100",question:"Remittances in Pakistan's economy refer to:",options:["Government transfers","Money sent home by overseas Pakistanis","Bank loans","Export earnings"],correct:1,explanation:"Remittances are funds sent by overseas Pakistanis to their families, a major source of foreign exchange.",difficulty:"easy",topic:"Pakistani Economy"},
-];
-
-// ADDITIONAL ENGLISH QUESTIONS (from uploaded file, 150 questions)
-const englishQuestionsExtra = [
-  {id:"en2_1",question:"Choose the correct meaning of 'Ambiguous':",options:["Clear","Having more than one meaning","Obvious","Simple"],correct:1,explanation:"Ambiguous means open to more than one interpretation.",difficulty:"easy",topic:"Synonyms"},
-  {id:"en2_2",question:"The word 'Benevolent' means:",options:["Evil","Kind and generous","Cruel","Selfish"],correct:1,explanation:"Benevolent means well-meaning and kindly.",difficulty:"easy",topic:"Synonyms"},
-  {id:"en2_3",question:"Choose the antonym of 'Verbose':",options:["Talkative","Lengthy","Concise","Wordy"],correct:2,explanation:"Verbose means using too many words; Concise is the opposite.",difficulty:"easy",topic:"Antonyms"},
-  {id:"en2_4",question:"The synonym of 'Obsolete' is:",options:["Modern","Outdated","Current","Trendy"],correct:1,explanation:"Obsolete means outdated or no longer in use.",difficulty:"easy",topic:"Synonyms"},
-  {id:"en2_5",question:"'Ephemeral' means:",options:["Long-lasting","Short-lived","Ancient","Strong"],correct:1,explanation:"Ephemeral means lasting for a very short time.",difficulty:"easy",topic:"Synonyms"},
-  {id:"en2_6",question:"The antonym of 'Lucid' is:",options:["Clear","Transparent","Confused","Bright"],correct:2,explanation:"Lucid means clear; confused is the antonym.",difficulty:"easy",topic:"Antonyms"},
-  {id:"en2_7",question:"'Pragmatic' means:",options:["Idealistic","Practical","Theoretical","Abstract"],correct:1,explanation:"Pragmatic means dealing with things sensibly and realistically.",difficulty:"easy",topic:"Synonyms"},
-  {id:"en2_8",question:"The synonym of 'Alleviate' is:",options:["Worsen","Intensify","Relieve","Increase"],correct:2,explanation:"Alleviate means to make suffering less severe.",difficulty:"easy",topic:"Synonyms"},
-  {id:"en2_9",question:"'Garrulous' means:",options:["Silent","Excessively talkative","Reserved","Shy"],correct:1,explanation:"Garrulous means excessively talkative.",difficulty:"medium",topic:"Synonyms"},
-  {id:"en2_10",question:"The antonym of 'Zenith' is:",options:["Peak","Summit","Nadir","Top"],correct:2,explanation:"Zenith means the highest point; nadir means the lowest.",difficulty:"medium",topic:"Antonyms"},
-  {id:"en2_11",question:"'Loquacious' means:",options:["Quiet","Very talkative","Serious","Thoughtful"],correct:1,explanation:"Loquacious means tending to talk a great deal.",difficulty:"medium",topic:"Synonyms"},
-  {id:"en2_12",question:"The synonym of 'Abate' is:",options:["Increase","Diminish","Grow","Expand"],correct:1,explanation:"Abate means to become less intense or widespread.",difficulty:"medium",topic:"Synonyms"},
-  {id:"en2_13",question:"'Nefarious' means:",options:["Honest","Wicked","Kind","Generous"],correct:1,explanation:"Nefarious means wicked or criminal.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_14",question:"The antonym of 'Reticent' is:",options:["Quiet","Reserved","Forthcoming","Silent"],correct:2,explanation:"Reticent means not revealing one's thoughts; forthcoming is the opposite.",difficulty:"hard",topic:"Antonyms"},
-  {id:"en2_15",question:"'Acrimonious' means:",options:["Sweet","Bitter and sharp in manner","Pleasant","Gentle"],correct:1,explanation:"Acrimonious means angry and bitter in manner.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_16",question:"She _____ the exam with flying colors.",options:["pass","passed","passing","passes"],correct:1,explanation:"Past tense 'passed' is required here.",difficulty:"easy",topic:"Grammar"},
-  {id:"en2_17",question:"Neither of the students _____ prepared.",options:["were","are","was","have been"],correct:2,explanation:"'Neither' is singular, so 'was' is correct.",difficulty:"medium",topic:"Grammar"},
-  {id:"en2_18",question:"The book _____ I borrowed was very informative.",options:["which","who","whom","whose"],correct:0,explanation:"'Which' is used for things, not people.",difficulty:"easy",topic:"Grammar"},
-  {id:"en2_19",question:"He is looking forward _____ meeting you.",options:["to","for","at","in"],correct:0,explanation:"The correct phrase is 'look forward to'.",difficulty:"easy",topic:"Grammar"},
-  {id:"en2_20",question:"The letter _____ by the secretary yesterday.",options:["is typed","was typed","has been typed","had typed"],correct:1,explanation:"Past simple passive: was + past participle.",difficulty:"easy",topic:"Grammar"},
-  {id:"en2_21",question:"Tree : Forest :: Star : ___",options:["Sky","Galaxy","Moon","Planet"],correct:1,explanation:"A tree is part of a forest; a star is part of a galaxy.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_22",question:"Knife : Kitchen :: Sword : ___",options:["Battle","Soldier","Armory","War"],correct:2,explanation:"A knife belongs in a kitchen; a sword belongs in an armory.",difficulty:"medium",topic:"Analogies"},
-  {id:"en2_23",question:"Architect : Building :: Sculptor : ___",options:["Paint","Statue","Canvas","Museum"],correct:1,explanation:"An architect creates buildings; a sculptor creates statues.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_24",question:"Oxygen : Breathing :: Food : ___",options:["Sleeping","Digestion","Exercise","Growth"],correct:1,explanation:"Oxygen is needed for breathing; food is needed for digestion.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_25",question:"Fish : Scales :: Bird : ___",options:["Wings","Feathers","Beak","Nest"],correct:1,explanation:"Fish are covered with scales; birds are covered with feathers.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_26",question:"Read: 'Exercise improves mental health by releasing endorphins, which are natural mood elevators.' Endorphins are described as:",options:["Hormones that cause stress","Natural mood elevators","Artificial chemicals","Energy boosters"],correct:1,explanation:"The passage states endorphins are natural mood elevators.",difficulty:"easy",topic:"Comprehension"},
-  {id:"en2_27",question:"Read: 'Technology has transformed education, enabling students in remote areas to access quality learning.' What has technology transformed?",options:["Business","Healthcare","Education","Agriculture"],correct:2,explanation:"The passage explicitly says technology transformed education.",difficulty:"easy",topic:"Comprehension"},
-  {id:"en2_28",question:"He refused _____ admit his mistake.",options:["to","for","with","of"],correct:0,explanation:"'Refuse to' is the correct construction.",difficulty:"easy",topic:"Grammar"},
-  {id:"en2_29",question:"The manager, along with his staff, _____ present at the meeting.",options:["were","are","was","have been"],correct:2,explanation:"The subject is 'manager' (singular), so 'was' is correct.",difficulty:"medium",topic:"Grammar"},
-  {id:"en2_30",question:"Choose the correct sentence:",options:["She sings good.","She sings well.","She sings goodly.","She sings nice."],correct:1,explanation:"'Well' is an adverb modifying 'sings'; 'good' is an adjective.",difficulty:"easy",topic:"Grammar"},
-  {id:"en2_31",question:"'Sycophant' means:",options:["A music lover","A flatterer who seeks favor","A scientist","A wanderer"],correct:1,explanation:"A sycophant is a person who flatters others to gain advantage.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_32",question:"Antonym of 'Laconic':",options:["Brief","Verbose","Short","Terse"],correct:1,explanation:"Laconic means brief; verbose (wordy) is the opposite.",difficulty:"hard",topic:"Antonyms"},
-  {id:"en2_33",question:"'Equivocal' means:",options:["Clear and definite","Ambiguous or uncertain","Honest","Straightforward"],correct:1,explanation:"Equivocal means open to more than one interpretation.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_34",question:"The synonym of 'Paucity' is:",options:["Abundance","Scarcity","Plenty","Excess"],correct:1,explanation:"Paucity means scarcity or lack.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_35",question:"Antonym of 'Amiable':",options:["Friendly","Hostile","Pleasant","Likeable"],correct:1,explanation:"Amiable means friendly; hostile is the antonym.",difficulty:"medium",topic:"Antonyms"},
-  {id:"en2_36",question:"'Prodigal' means:",options:["Thrifty","Wastefully extravagant","Saving","Careful"],correct:1,explanation:"Prodigal means wastefully extravagant.",difficulty:"medium",topic:"Synonyms"},
-  {id:"en2_37",question:"Choose the antonym of 'Covert':",options:["Hidden","Secret","Overt","Concealed"],correct:2,explanation:"Covert means secret; overt means done openly.",difficulty:"medium",topic:"Antonyms"},
-  {id:"en2_38",question:"'Venerate' means:",options:["Hate","Respect deeply","Ignore","Fear"],correct:1,explanation:"Venerate means to regard with great respect.",difficulty:"medium",topic:"Synonyms"},
-  {id:"en2_39",question:"The antonym of 'Taciturn' is:",options:["Quiet","Reserved","Communicative","Silent"],correct:2,explanation:"Taciturn means reserved or uncommunicative; communicative is the opposite.",difficulty:"hard",topic:"Antonyms"},
-  {id:"en2_40",question:"'Perfidious' means:",options:["Loyal","Deceitful and untrustworthy","Honest","Faithful"],correct:1,explanation:"Perfidious means deceitful and untrustworthy.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_41",question:"The passive voice of 'They are building a new hospital' is:",options:["A new hospital is being built by them.","A new hospital was built by them.","A new hospital has been built by them.","A new hospital will be built by them."],correct:0,explanation:"Present continuous passive: is being + past participle.",difficulty:"medium",topic:"Grammar"},
-  {id:"en2_42",question:"Identify the correct indirect speech: 'She said, \"I will call you tomorrow.\"'",options:["She said that she will call me tomorrow.","She said that she would call me the next day.","She said that I will call her tomorrow.","She said that she would call you tomorrow."],correct:1,explanation:"'Will' becomes 'would' and 'tomorrow' becomes 'the next day' in indirect speech.",difficulty:"medium",topic:"Grammar"},
-  {id:"en2_43",question:"Choose the correct form: 'I wish I _____ taller.'",options:["am","was","were","have been"],correct:2,explanation:"Subjunctive mood uses 'were' for wishes contrary to fact.",difficulty:"medium",topic:"Grammar"},
-  {id:"en2_44",question:"'No sooner had she left _____ it started raining.'",options:["when","than","then","that"],correct:1,explanation:"'No sooner...than' is the correct correlative conjunction.",difficulty:"hard",topic:"Grammar"},
-  {id:"en2_45",question:"Choose the synonym of 'Admonish':",options:["Praise","Rebuke","Encourage","Reward"],correct:1,explanation:"Admonish means to warn or reprimand firmly.",difficulty:"medium",topic:"Synonyms"},
-  {id:"en2_46",question:"'Ameliorate' means:",options:["Worsen","Improve","Maintain","Destroy"],correct:1,explanation:"Ameliorate means to make something bad better.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_47",question:"Antonym of 'Indigent':",options:["Poor","Needy","Affluent","Destitute"],correct:2,explanation:"Indigent means poor; affluent means wealthy.",difficulty:"medium",topic:"Antonyms"},
-  {id:"en2_48",question:"'Obsequious' means:",options:["Rude and arrogant","Excessively compliant","Independent","Defiant"],correct:1,explanation:"Obsequious means excessively servile or compliant.",difficulty:"hard",topic:"Synonyms"},
-  {id:"en2_49",question:"The sentence 'Hardly had he arrived when the phone rang' is an example of:",options:["Simple sentence","Compound sentence","Complex sentence","Inverted sentence"],correct:3,explanation:"Starting with 'Hardly' causes inversion of subject and auxiliary.",difficulty:"hard",topic:"Grammar"},
-  {id:"en2_50",question:"Choose the correct preposition: 'She insisted _____ going alone.'",options:["on","in","for","at"],correct:0,explanation:"'Insist on' is the correct prepositional phrase.",difficulty:"medium",topic:"Grammar"},
-  {id:"en2_51",question:"Tree : Forest :: Fish : ___",options:["Water","River","Shoal","Pond"],correct:2,explanation:"Trees form a forest; fish form a shoal.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_52",question:"Doctor : Hospital :: Judge : ___",options:["Police","Prison","Court","Law"],correct:2,explanation:"A doctor works in a hospital; a judge works in a court.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_53",question:"Pen : Write :: Scissors : ___",options:["Paper","Cut","Draw","Sew"],correct:1,explanation:"A pen is used to write; scissors are used to cut.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_54",question:"Mountain : Hill :: Ocean : ___",options:["River","Pond","Lake","Stream"],correct:2,explanation:"A mountain is a large hill; an ocean is a large lake (in relative terms).",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_55",question:"Cold : Ice :: Heat : ___",options:["Fire","Sun","Steam","Warmth"],correct:0,explanation:"Cold produces ice; heat produces fire.",difficulty:"easy",topic:"Analogies"},
-  {id:"en2_56",question:"Synonyms: Brave : Cowardly :: Fast : ___",options:["Slow","Quick","Swift","Speedy"],correct:0,explanation:"Brave and cowardly are antonyms; fast and slow are antonyms.",difficulty:"easy",topic:"Analogies"},
-];
-
-// ADDITIONAL ANALYTICAL QUESTIONS (from uploaded file)
-const analyticalQuestionsExtra = [
-  {id:"an2_1",question:"Z, Y, X, W, ___",options:["U","V","T","S"],correct:1,explanation:"Reverse alphabet order: after W comes V.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_2",question:"A, C, E, G, ___",options:["H","I","J","K"],correct:1,explanation:"Skip one letter each time: A, C, E, G, I.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_3",question:"B, D, G, K, ___",options:["O","P","Q","R"],correct:1,explanation:"Gaps: +2, +3, +4, +5. K + 5 = P.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_4",question:"AZ, BY, CX, DW, ___",options:["EV","EU","FV","FW"],correct:0,explanation:"First letter forward, second backward: EV.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_5",question:"2A, 4C, 6E, 8G, ___",options:["9I","10H","10I","12J"],correct:2,explanation:"Numbers +2, letters skip one: 10I.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_6",question:"3, 6, 12, 24, ___",options:["36","42","48","52"],correct:2,explanation:"Each number doubles. 24 × 2 = 48.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_7",question:"1, 4, 9, 16, 25, ___",options:["30","32","36","40"],correct:2,explanation:"Perfect squares: 1², 2², 3², 4², 5², 6² = 36.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_8",question:"0.5, 1, 1.5, 2, ___",options:["2.5","3.0","3.5","4.0"],correct:0,explanation:"Add 0.5 each time. 2 + 0.5 = 2.5.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_9",question:"M, N, P, S, ___",options:["V","W","X","Y"],correct:1,explanation:"Gaps +1, +2, +3, +4: S + 4 = W.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_10",question:"5, 10, 20, 40, ___",options:["70","75","80","85"],correct:2,explanation:"Each term doubles. 40 × 2 = 80.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_16",question:"Ali is taller than Bilal. Bilal is taller than Chaand. Dawood is shorter than Chaand. Who is tallest?",options:["Bilal","Chaand","Ali","Dawood"],correct:2,explanation:"Ali > Bilal > Chaand > Dawood. Ali is tallest.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"an2_17",question:"Statement: All pens are pencils. All pencils are erasers. Conclusion: All pens are erasers.",options:["True","False","Uncertain","Partially true"],correct:0,explanation:"By syllogism: all pens are pencils, all pencils are erasers → all pens are erasers.",difficulty:"medium",topic:"Statements Based"},
-  {id:"an2_18",question:"If A is the sister of B, B is the brother of C, C is the mother of D. What is A's relation to D?",options:["Mother","Aunt","Sister","Grandmother"],correct:1,explanation:"A is B's sister. B is C's brother. C is D's mother. So A is D's aunt.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_19",question:"In a row of 10, Raza is 4th from left. What is his position from the right?",options:["5th","6th","7th","8th"],correct:2,explanation:"Position from right = 10 - 4 + 1 = 7.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"an2_20",question:"Find the odd one out: Dog, Cat, Parrot, Cow, Fish",options:["Dog","Parrot","Fish","Cat"],correct:1,explanation:"Parrot is a bird; the others are mammals (or in categories that go together differently). Fish is aquatic, Parrot is a bird — Parrot is the only flying animal.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_21",question:"If BOOK = 2,15,15,11 (A=1), what does CUP equal?",options:["3,21,16","4,21,16","3,20,16","3,21,15"],correct:0,explanation:"C=3, U=21, P=16 → 3,21,16.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_22",question:"What number comes next: 144, 121, 100, 81, ___?",options:["64","72","60","70"],correct:0,explanation:"These are perfect squares decreasing: 12², 11², 10², 9², 8² = 64.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_23",question:"Pointing to a photo, Aziz says 'He is the son of the only son of my grandfather.' What is the person to Aziz?",options:["Brother","Uncle","Cousin","Father"],correct:0,explanation:"Only son of my grandfather = my father. Son of my father = my brother.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_24",question:"If LIGHT = 12,9,7,8,20, then DARK = ?",options:["4,1,18,11","4,2,17,11","3,1,18,11","4,1,17,11"],correct:0,explanation:"D=4, A=1, R=18, K=11.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_25",question:"In a class, 30 students play cricket and 25 play football. 10 play both. How many play at least one?",options:["45","55","65","35"],correct:0,explanation:"Total = 30 + 25 - 10 = 45.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_26",question:"A clock shows 3:15. What is the angle between the hour and minute hands?",options:["0°","7.5°","15°","22.5°"],correct:1,explanation:"At 3:15, minute hand at 90°, hour hand at 97.5°. Difference = 7.5°.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"an2_27",question:"Complete: 2, 5, 11, 23, ___",options:["46","47","48","45"],correct:1,explanation:"Pattern: ×2+1. 2×2+1=5, 5×2+1=11, 11×2+1=23, 23×2+1=47.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_28",question:"Razia ranks 6th from top and 24th from bottom. How many students are in the class?",options:["28","29","30","31"],correct:1,explanation:"Total = 6 + 24 - 1 = 29.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"an2_29",question:"If '+' means '−', '−' means '×', '×' means '÷', '÷' means '+', what is 10 + 5 − 2 × 4?",options:["3","4","5","6"],correct:0,explanation:"10 − 5 × 2 ÷ 4 = 10 − 10 ÷ 4 = 10 − 2.5 = 7.5 ≈ Use: 10−(5×2÷4)=10−(10÷4)=10−2.5. Closest: 3.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"an2_30",question:"All roses are flowers. Some flowers fade quickly. Conclusion: Some roses fade quickly.",options:["Definitely true","Probably true","Cannot be determined","Definitely false"],correct:2,explanation:"We cannot determine if roses are among the flowers that fade quickly.",difficulty:"medium",topic:"Statements Based"},
-  {id:"an2_31",question:"From the word EXAMINATION, how many vowels are there?",options:["5","6","7","4"],correct:1,explanation:"E, A, I, A, I, O — 6 vowels in EXAMINATION.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_32",question:"How many times does the digit 3 appear from 1 to 50?",options:["5","6","7","15"],correct:0,explanation:"3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43 → 3 appears in: 3,13,23,30,31,32,33(×2),34,35,36,37,38,39,43 = 15 times.",difficulty:"hard",topic:"Pattern Recognition"},
-  {id:"an2_33",question:"Statement: No cats are dogs. All dogs are animals. Conclusion: No cats are animals.",options:["True","False","Cannot determine","Partly true"],correct:1,explanation:"Cats can still be animals even if no cats are dogs.",difficulty:"medium",topic:"Statements Based"},
-  {id:"an2_34",question:"A man walks 10 km North, 6 km East, 10 km South. How far is he from start?",options:["4 km","6 km","10 km","16 km"],correct:1,explanation:"North and South cancel (10-10=0). He is 6 km East of start.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"an2_35",question:"Complete: 6, 11, 21, 41, 81, ___",options:["161","151","141","131"],correct:0,explanation:"Pattern: ×2 - 1. 6×2-1=11, 11×2-1=21, 21×2-1=41, 41×2-1=81, 81×2-1=161.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_36",question:"Ahmad is 16th from the left and 20th from the right in a row. How many are in the row?",options:["35","36","37","34"],correct:0,explanation:"Total = 16 + 20 - 1 = 35.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"an2_37",question:"If A > B and C > A and D < B, which is smallest?",options:["A","B","C","D"],correct:3,explanation:"C > A > B > D. D is smallest.",difficulty:"easy",topic:"Statements Based"},
-  {id:"an2_38",question:"Series: 1, 2, 4, 8, 16, ___",options:["24","32","28","36"],correct:1,explanation:"Each number doubles. 16 × 2 = 32.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_39",question:"If today is Wednesday, what day will it be after 100 days?",options:["Friday","Saturday","Sunday","Monday"],correct:1,explanation:"100 ÷ 7 = 14 remainder 2. Wednesday + 2 = Friday. Wait: Wed + 2 = Friday. Answer: Friday.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_40",question:"Find the missing number: 3, 7, 15, 31, ___",options:["53","63","61","57"],correct:1,explanation:"Pattern: ×2 + 1. 3×2+1=7, 7×2+1=15, 15×2+1=31, 31×2+1=63.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_41",question:"Which letter is 7th to the right of the 10th letter from left in the alphabet?",options:["Q","R","S","T"],correct:2,explanation:"10th letter from left = J. 7th to right of J = Q. Actually J is 10th, +7 = 17th = Q. Answer: Q.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_42",question:"Five friends P, Q, R, S, T sit in a circle. P is opposite S. Q is to the right of P. T is between S and R. Who is opposite Q?",options:["R","S","T","P"],correct:0,explanation:"Working out circular seating: R is opposite Q.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"an2_44",question:"What is the next in the series: AB, EF, IJ, MN, ___?",options:["OP","PQ","QR","RS"],correct:1,explanation:"Skip 2 letters each pair: AB, EF, IJ, MN, QR.",difficulty:"medium",topic:"Pattern Recognition"},
-  {id:"an2_45",question:"In a family: A is father, B is son of A, C is brother of B, D is mother. Who is C to D?",options:["Son","Husband","Nephew","Father"],correct:0,explanation:"D is mother of the family. C is brother of B who is son of A. So C is also D's son.",difficulty:"easy",topic:"Scenario Based"},
-  {id:"an2_46",question:"If all Zs are Ys, and no Ys are Xs, what can we conclude?",options:["Some Zs are Xs","No Zs are Xs","All Zs are Xs","Cannot determine"],correct:1,explanation:"If all Zs are Ys and no Ys are Xs, then no Zs are Xs (by syllogism).",difficulty:"medium",topic:"Statements Based"},
-  {id:"an2_47",question:"Complete the series: 2, 3, 5, 8, 13, ___",options:["18","20","21","22"],correct:2,explanation:"Fibonacci-like: 5+8=13, 8+13=21.",difficulty:"easy",topic:"Pattern Recognition"},
-  {id:"an2_48",question:"A started walking from his house facing North. He turned right, then right again, then left. What direction is he now facing?",options:["North","East","South","West"],correct:1,explanation:"Start North → Right = East → Right = South → Left = East.",difficulty:"medium",topic:"Scenario Based"},
-  {id:"an2_49",question:"If CLOCK = 25 (sum of positions), what is TIME?",options:["45","50","48","52"],correct:0,explanation:"T=20,I=9,M=13,E=5 → sum = 47. Closest = 45. Actually T=20,I=9,M=13,E=5=47.",difficulty:"hard",topic:"Scenario Based"},
-  {id:"an2_50",question:"Find the odd one out: Square, Circle, Triangle, Diagonal, Rectangle",options:["Circle","Triangle","Diagonal","Rectangle"],correct:2,explanation:"Diagonal is not a shape; the others are geometric shapes.",difficulty:"easy",topic:"Pattern Recognition"},
-];
-
-// ADDITIONAL QUANTITATIVE QUESTIONS (from uploaded file)
-const quantitativeQuestionsExtra = [
-  {id:"qt2_1",question:"What is 15% of 240?",options:["34","36","38","40"],correct:1,explanation:"15/100 × 240 = 36.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_2",question:"If 3x = 45, then x = ?",options:["12","15","18","20"],correct:1,explanation:"x = 45/3 = 15.",difficulty:"easy",topic:"Algebra"},
-  {id:"qt2_3",question:"Simplify: 48 ÷ 6 × 2",options:["4","8","16","24"],correct:2,explanation:"48 ÷ 6 = 8, then 8 × 2 = 16.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_4",question:"What is the value of 2³ × 3²?",options:["54","72","48","36"],correct:1,explanation:"2³ = 8, 3² = 9, 8 × 9 = 72.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_5",question:"Find the LCM of 12 and 18.",options:["24","36","48","72"],correct:1,explanation:"LCM(12,18) = 36.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_6",question:"Find the HCF of 36 and 48.",options:["6","12","18","24"],correct:1,explanation:"HCF(36,48) = 12.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_7",question:"If a number is increased by 20% then decreased by 20%, net change is:",options:["No change","4% decrease","4% increase","2% decrease"],correct:1,explanation:"100 → 120 → 96. Net change = -4%.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_8",question:"What is 0.05 × 0.2?",options:["0.001","0.01","0.1","1.0"],correct:1,explanation:"0.05 × 0.2 = 0.01.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_9",question:"Express 3/8 as a percentage:",options:["30.5%","37.5%","35%","38%"],correct:1,explanation:"3/8 × 100 = 37.5%.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_10",question:"A train travels 360 km in 4 hours. What is its speed?",options:["80 km/h","90 km/h","100 km/h","120 km/h"],correct:1,explanation:"Speed = 360/4 = 90 km/h.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_11",question:"If 4 workers finish a job in 12 days, how many days for 6 workers?",options:["6","8","9","10"],correct:1,explanation:"Total work = 4×12 = 48 man-days. 48/6 = 8 days.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_12",question:"What is the simple interest on Rs. 2000 at 5% for 3 years?",options:["Rs. 200","Rs. 300","Rs. 400","Rs. 150"],correct:1,explanation:"SI = 2000 × 5 × 3 / 100 = Rs. 300.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_13",question:"A and B share profits in ratio 3:2. If total profit is Rs. 5000, A gets:",options:["Rs. 2000","Rs. 2500","Rs. 3000","Rs. 3500"],correct:2,explanation:"A's share = 3/5 × 5000 = Rs. 3000.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_14",question:"The average of 8, 12, 16, 20 is:",options:["12","14","16","18"],correct:1,explanation:"Sum = 56, Average = 56/4 = 14.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_15",question:"A bicycle costs Rs. 1500 after 25% discount. What was the original price?",options:["Rs. 1800","Rs. 2000","Rs. 1875","Rs. 2500"],correct:1,explanation:"1500 = 75% of original. Original = 1500/0.75 = Rs. 2000.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_16",question:"Solve for x: 5x - 3 = 22",options:["4","5","6","7"],correct:1,explanation:"5x = 25, x = 5.",difficulty:"easy",topic:"Algebra"},
-  {id:"qt2_17",question:"The area of a square with side 9 cm is:",options:["36 cm²","72 cm²","81 cm²","64 cm²"],correct:2,explanation:"Area = 9² = 81 cm².",difficulty:"easy",topic:"Geometry"},
-  {id:"qt2_18",question:"What is the perimeter of a square with side 7 cm?",options:["21 cm","28 cm","49 cm","14 cm"],correct:1,explanation:"Perimeter = 4 × 7 = 28 cm.",difficulty:"easy",topic:"Geometry"},
-  {id:"qt2_19",question:"A sum doubles in 10 years at simple interest. What is the rate?",options:["5%","8%","10%","12%"],correct:2,explanation:"SI = P, so P×r×10/100 = P → r = 10%.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_20",question:"If x : y = 2 : 3 and y : z = 3 : 4, find x : y : z",options:["2:3:4","4:6:8","6:9:12","2:4:6"],correct:0,explanation:"x:y:z = 2:3:4.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_21",question:"The sum of angles in a quadrilateral is:",options:["180°","270°","360°","540°"],correct:2,explanation:"Sum of interior angles in a quadrilateral = 360°.",difficulty:"easy",topic:"Geometry"},
-  {id:"qt2_22",question:"The volume of a cylinder with radius 7cm and height 10cm is: (π=22/7)",options:["1540 cm³","1440 cm³","1640 cm³","2000 cm³"],correct:0,explanation:"V = πr²h = 22/7 × 49 × 10 = 1540 cm³.",difficulty:"medium",topic:"Geometry"},
-  {id:"qt2_23",question:"The probability of getting a 6 on a fair die is:",options:["1/2","1/3","1/6","1/4"],correct:2,explanation:"P(6) = 1/6.",difficulty:"easy",topic:"Statistics"},
-  {id:"qt2_24",question:"If mean of 5 numbers is 10, what is their sum?",options:["15","50","100","25"],correct:1,explanation:"Sum = mean × count = 10 × 5 = 50.",difficulty:"easy",topic:"Statistics"},
-  {id:"qt2_25",question:"Two numbers are in ratio 4:5. Their sum is 81. Find the larger number.",options:["36","45","40","54"],correct:1,explanation:"4x + 5x = 81. x = 9. Larger = 5 × 9 = 45.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_26",question:"What is √(225)?",options:["14","15","16","13"],correct:1,explanation:"√225 = 15.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_27",question:"A man covers 40% of a journey by car, 30% by bus, rest on foot. If total is 200 km, how far on foot?",options:["40 km","50 km","60 km","70 km"],correct:2,explanation:"On foot = 30% of 200 = 60 km.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_28",question:"Compound interest on Rs. 1000 at 10% for 2 years:",options:["Rs. 200","Rs. 210","Rs. 220","Rs. 100"],correct:1,explanation:"CI = 1000(1.1)² - 1000 = 1210 - 1000 = Rs. 210.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_29",question:"How many prime numbers are between 1 and 20?",options:["6","7","8","9"],correct:2,explanation:"Primes: 2,3,5,7,11,13,17,19 = 8 primes.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_30",question:"The median of 3, 7, 1, 9, 5 is:",options:["3","5","7","9"],correct:1,explanation:"Sorted: 1,3,5,7,9. Median = middle value = 5.",difficulty:"easy",topic:"Statistics"},
-  {id:"qt2_31",question:"What is 45% of 200?",options:["80","85","90","95"],correct:2,explanation:"45/100 × 200 = 90.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_32",question:"Solve: 2x + 3y = 12, x + y = 5. Find x.",options:["2","3","4","5"],correct:1,explanation:"From x+y=5: x=5-y. Substitute: 2(5-y)+3y=12 → 10+y=12 → y=2, x=3.",difficulty:"medium",topic:"Algebra"},
-  {id:"qt2_33",question:"The mode of 2, 3, 3, 4, 5, 3, 2 is:",options:["2","3","4","5"],correct:1,explanation:"Mode = most frequent value = 3.",difficulty:"easy",topic:"Statistics"},
-  {id:"qt2_34",question:"A is 3 times older than B. Sum of their ages is 48. Find B's age.",options:["10","12","14","16"],correct:1,explanation:"A = 3B. 3B + B = 48. B = 12.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_35",question:"Surface area of a cube with side 4 cm is:",options:["24 cm²","48 cm²","96 cm²","64 cm²"],correct:2,explanation:"Surface area = 6a² = 6 × 16 = 96 cm².",difficulty:"medium",topic:"Geometry"},
-  {id:"qt2_36",question:"If x% of 80 = 20, find x.",options:["20","25","30","35"],correct:1,explanation:"x/100 × 80 = 20 → x = 25.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_37",question:"The range of 5, 9, 2, 12, 7 is:",options:["7","10","12","14"],correct:1,explanation:"Range = max - min = 12 - 2 = 10.",difficulty:"easy",topic:"Statistics"},
-  {id:"qt2_38",question:"What is 2.5 as a fraction?",options:["5/2","3/2","7/2","9/4"],correct:0,explanation:"2.5 = 25/10 = 5/2.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_39",question:"A rectangle has area 48 cm² and width 6 cm. Find the length.",options:["6 cm","7 cm","8 cm","9 cm"],correct:2,explanation:"Length = 48/6 = 8 cm.",difficulty:"easy",topic:"Geometry"},
-  {id:"qt2_40",question:"Simplify: (a³)² ÷ a⁴",options:["a","a²","a³","a⁴"],correct:1,explanation:"(a³)² = a⁶. a⁶ ÷ a⁴ = a².",difficulty:"medium",topic:"Algebra"},
-  {id:"qt2_41",question:"Three consecutive even numbers sum to 54. Find the largest.",options:["16","18","20","22"],correct:2,explanation:"n + (n+2) + (n+4) = 54. 3n+6=54. n=16. Largest = 20.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_42",question:"The diagonal of a square with side 5 cm is:",options:["5√2","5√3","10","5"],correct:0,explanation:"Diagonal = a√2 = 5√2 ≈ 7.07 cm.",difficulty:"medium",topic:"Geometry"},
-  {id:"qt2_43",question:"A train 200m long crosses a bridge 300m long at 25 m/s. How long does it take?",options:["10 s","15 s","20 s","25 s"],correct:2,explanation:"Total distance = 200 + 300 = 500 m. Time = 500/25 = 20 s.",difficulty:"medium",topic:"Arithmetic"},
-  {id:"qt2_44",question:"If P(A) = 0.3 and P(B) = 0.4, and A and B are independent, P(A and B) = ?",options:["0.07","0.12","0.7","1.2"],correct:1,explanation:"P(A∩B) = P(A)×P(B) = 0.3×0.4 = 0.12.",difficulty:"medium",topic:"Statistics"},
-  {id:"qt2_45",question:"The sum of the first 10 natural numbers is:",options:["45","50","55","60"],correct:2,explanation:"Sum = n(n+1)/2 = 10×11/2 = 55.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_46",question:"Factorize: 4x² - 25",options:["(2x-5)(2x+5)","(4x-5)(x+5)","(2x-5)²","(4x+5)(x-5)"],correct:0,explanation:"Difference of squares: (2x)² - 5² = (2x-5)(2x+5).",difficulty:"medium",topic:"Algebra"},
-  {id:"qt2_47",question:"What is the value of (−3)³?",options:["9","27","−27","−9"],correct:2,explanation:"(−3)³ = −27.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_48",question:"In a class of 40 students, 60% are girls. How many boys are there?",options:["14","16","18","24"],correct:1,explanation:"Girls = 24. Boys = 40 - 24 = 16.",difficulty:"easy",topic:"Arithmetic"},
-  {id:"qt2_49",question:"A sphere has radius 3 cm. Its volume is: (π ≈ 22/7)",options:["113.1 cm³","36π cm³","12π cm³","18π cm³"],correct:1,explanation:"V = (4/3)πr³ = (4/3)π × 27 = 36π cm³.",difficulty:"medium",topic:"Geometry"},
-  {id:"qt2_50",question:"If log₂(8) = x, find x.",options:["2","3","4","8"],correct:1,explanation:"2³ = 8, so log₂(8) = 3.",difficulty:"easy",topic:"Algebra"},
-];
-
-// ADDITIONAL PHYSICS QUESTIONS (from uploaded file, 150 total adding ~120 new)
-const physicsQuestionsExtra = [
-  {id:"ph2_1",question:"Unit of velocity:",options:["m/s²","m/s","kg·m/s","N"],correct:1,explanation:"Velocity is measured in m/s.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_2",question:"A car starts from rest and accelerates at 2 m/s² for 5s. Final velocity:",options:["5 m/s","8 m/s","10 m/s","12 m/s"],correct:2,explanation:"v = u + at = 0 + 2×5 = 10 m/s.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_3",question:"Slope of a velocity-time graph gives:",options:["Velocity","Displacement","Acceleration","Speed"],correct:2,explanation:"The slope (gradient) of a velocity-time graph = acceleration.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_4",question:"A body dropped from height has initial velocity:",options:["9.8 m/s","0","10 m/s","Depends on mass"],correct:1,explanation:"A dropped body starts from rest, initial velocity = 0.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_5",question:"The area under a velocity-time graph gives:",options:["Acceleration","Speed","Displacement","Force"],correct:2,explanation:"Area under v-t graph = displacement.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_6",question:"A ball thrown vertically upward returns to the same point. Net displacement is:",options:["Maximum height","Zero","Double height","Half height"],correct:1,explanation:"Net displacement = 0 since it returns to start.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_7",question:"Newton's first law is also called the law of:",options:["Acceleration","Inertia","Reaction","Gravitation"],correct:1,explanation:"Newton's First Law is the law of inertia.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_8",question:"If mass = 5 kg and acceleration = 3 m/s², force = ?",options:["1.67 N","8 N","15 N","25 N"],correct:2,explanation:"F = ma = 5 × 3 = 15 N.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_9",question:"The SI unit of energy is:",options:["Watt","Newton","Joule","Pascal"],correct:2,explanation:"Energy is measured in Joules.",difficulty:"easy",topic:"Energy"},
-  {id:"ph2_10",question:"Pressure = ?",options:["Force × Area","Force / Area","Area / Force","Mass × Area"],correct:1,explanation:"Pressure = Force ÷ Area.",difficulty:"easy",topic:"Mechanics"},
-  {id:"ph2_11",question:"Boyle's Law states that pressure is ___ proportional to volume at constant temperature:",options:["Directly","Inversely","Not","Equally"],correct:1,explanation:"Boyle's Law: P ∝ 1/V at constant temperature.",difficulty:"easy",topic:"Thermodynamics"},
-  {id:"ph2_12",question:"Charles' Law states that volume is ___ proportional to temperature at constant pressure:",options:["Inversely","Not","Directly","Equally"],correct:2,explanation:"Charles' Law: V ∝ T at constant pressure.",difficulty:"easy",topic:"Thermodynamics"},
-  {id:"ph2_13",question:"The unit of power is:",options:["Joule","Newton","Watt","Pascal"],correct:2,explanation:"Power is measured in Watts.",difficulty:"easy",topic:"Energy"},
-  {id:"ph2_14",question:"Which waves do NOT require a medium?",options:["Sound waves","Water waves","Electromagnetic waves","Seismic waves"],correct:2,explanation:"Electromagnetic waves (light, radio) travel through vacuum.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"ph2_15",question:"The law of reflection states the angle of incidence equals:",options:["Angle of refraction","Angle of reflection","90°","45°"],correct:1,explanation:"Angle of incidence = Angle of reflection.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"ph2_16",question:"A convex lens is a ___ lens.",options:["Diverging","Converging","Plane","Concave"],correct:1,explanation:"A convex lens converges light rays.",difficulty:"easy",topic:"Waves & Optics"},
-  {id:"ph2_17",question:"When a ray of light passes from a denser to rarer medium, it bends:",options:["Toward the normal","Away from the normal","Along the normal","Not at all"],correct:1,explanation:"Light bends away from the normal when going from dense to rare medium.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"ph2_18",question:"Ohm's Law: V = IR. If V = 12V and R = 4Ω, then I = ?",options:["2 A","3 A","4 A","48 A"],correct:1,explanation:"I = V/R = 12/4 = 3 A.",difficulty:"easy",topic:"Electricity"},
-  {id:"ph2_19",question:"Electric power consumed by a 100Ω resistor with 2A current:",options:["200 W","400 W","50 W","100 W"],correct:1,explanation:"P = I²R = 4 × 100 = 400 W.",difficulty:"medium",topic:"Electricity"},
-  {id:"ph2_20",question:"The critical temperature in superconductors is:",options:["Temperature above which resistance is zero","Temperature at which resistance becomes zero","Room temperature","Boiling point"],correct:1,explanation:"Critical temperature is where resistance drops to zero in superconductors.",difficulty:"hard",topic:"Electricity"},
-  {id:"ph2_21",question:"Half-life is:",options:["Time for substance to decay completely","Time for half the substance to decay","Half of atomic mass","Average lifetime"],correct:1,explanation:"Half-life is the time for half of a radioactive sample to decay.",difficulty:"easy",topic:"Modern Physics"},
-  {id:"ph2_22",question:"α-particles consist of:",options:["2 protons + 2 neutrons","2 protons only","1 proton + 1 neutron","2 electrons"],correct:0,explanation:"Alpha particles are helium nuclei: 2 protons and 2 neutrons.",difficulty:"easy",topic:"Modern Physics"},
-  {id:"ph2_23",question:"β-particles are:",options:["Protons","High-energy electrons","Neutrons","Gamma rays"],correct:1,explanation:"Beta particles are high-energy electrons emitted from the nucleus.",difficulty:"easy",topic:"Modern Physics"},
-  {id:"ph2_24",question:"Gamma rays are:",options:["Alpha radiation","Beta radiation","Electromagnetic radiation","Sound waves"],correct:2,explanation:"Gamma rays are high-frequency electromagnetic radiation.",difficulty:"easy",topic:"Modern Physics"},
-  {id:"ph2_25",question:"The instrument used to measure current is:",options:["Voltmeter","Ammeter","Galvanometer","Ohmmeter"],correct:1,explanation:"An ammeter is used to measure electric current.",difficulty:"easy",topic:"Electricity"},
-  {id:"ph2_26",question:"Fleming's left-hand rule is used to find the direction of:",options:["Induced EMF","Magnetic force on a current-carrying conductor","Current in a coil","Electric field"],correct:1,explanation:"Fleming's left-hand rule gives the direction of force on a current-carrying conductor in a magnetic field.",difficulty:"medium",topic:"Electricity"},
-  {id:"ph2_27",question:"The focal length of a concave mirror is:",options:["Negative","Positive","Zero","Infinite"],correct:0,explanation:"By sign convention, the focal length of a concave mirror is negative.",difficulty:"medium",topic:"Waves & Optics"},
-  {id:"ph2_28",question:"Bernoulli's principle relates to:",options:["Sound propagation","Pressure in fluids in motion","Heat transfer","Electric fields"],correct:1,explanation:"Bernoulli's principle describes pressure changes in moving fluids.",difficulty:"medium",topic:"Mechanics"},
-  {id:"ph2_29",question:"The quantum of light energy is called a:",options:["Electron","Photon","Neutron","Proton"],correct:1,explanation:"A photon is the quantum (packet) of electromagnetic radiation.",difficulty:"easy",topic:"Modern Physics"},
-  {id:"ph2_30",question:"Archimedes' principle states that the buoyant force equals:",options:["Weight of the object","Weight of fluid displaced","Volume of object","Density of object"],correct:1,explanation:"Buoyant force = weight of fluid displaced by the object.",difficulty:"easy",topic:"Mechanics"},
-];
-
-// ADDITIONAL CHEMISTRY QUESTIONS (from uploaded file)
-const chemistryQuestionsExtra = [
-  {id:"ch2_1",question:"The atomic number of an element represents:",options:["Number of neutrons","Number of protons","Mass number","Number of electrons only"],correct:1,explanation:"Atomic number = number of protons.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"ch2_2",question:"The atomic mass of Carbon is:",options:["6","12","14","16"],correct:1,explanation:"Carbon has atomic mass 12 g/mol.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"ch2_3",question:"Isotopes are atoms of the same element with:",options:["Same mass number","Different number of protons","Same atomic number but different mass number","Same number of neutrons"],correct:2,explanation:"Isotopes have same protons but different neutrons (different mass number).",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"ch2_4",question:"Electron configuration of Sodium (Na, Z=11):",options:["2,8,1","2,8,3","2,9","2,6,3"],correct:0,explanation:"Na has 11 electrons: 2 in first shell, 8 in second, 1 in third.",difficulty:"easy",topic:"Atomic Structure"},
-  {id:"ch2_5",question:"Which subshell is filled after 3p?",options:["3d","4s","4p","3f"],correct:1,explanation:"Aufbau principle: after 3p comes 4s.",difficulty:"medium",topic:"Atomic Structure"},
-  {id:"ch2_6",question:"The periodic table is arranged in order of increasing:",options:["Mass number","Atomic mass","Atomic number","Neutron number"],correct:2,explanation:"Modern periodic table is arranged by increasing atomic number.",difficulty:"easy",topic:"Periodic Table"},
-  {id:"ch2_7",question:"Elements in the same group have the same number of:",options:["Neutrons","Electron shells","Valence electrons","Protons"],correct:2,explanation:"Elements in the same group have the same number of valence electrons.",difficulty:"easy",topic:"Periodic Table"},
-  {id:"ch2_8",question:"The gas collected at cathode during electrolysis of water is:",options:["Oxygen","Hydrogen","Carbon dioxide","Nitrogen"],correct:1,explanation:"At cathode: 2H⁺ + 2e⁻ → H₂ (hydrogen gas).",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"ch2_9",question:"Which type of bond is formed in H₂O?",options:["Ionic","Covalent","Metallic","Van der Waals only"],correct:1,explanation:"Water has covalent bonds (shared electron pairs) between H and O.",difficulty:"easy",topic:"Chemical Bonding"},
-  {id:"ch2_10",question:"The molarity of a solution is defined as:",options:["Moles of solute per litre of solution","Grams of solute per 100g","Moles per kg of solvent","Litres of solute per litre"],correct:0,explanation:"Molarity (M) = moles of solute ÷ litres of solution.",difficulty:"easy",topic:"Solutions"},
-  {id:"ch2_11",question:"A catalyst _____ the activation energy of a reaction.",options:["Increases","Does not change","Decreases","Eliminates"],correct:2,explanation:"Catalysts lower the activation energy, speeding up the reaction.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"ch2_12",question:"Which of the following is a strong acid?",options:["Acetic acid","Carbonic acid","Hydrochloric acid","Formic acid"],correct:2,explanation:"HCl is a strong acid — it fully dissociates in water.",difficulty:"easy",topic:"Acids & Bases"},
-  {id:"ch2_13",question:"Reaction between an acid and a base is called:",options:["Oxidation","Reduction","Neutralization","Hydrolysis"],correct:2,explanation:"Acid + Base → Salt + Water (neutralization reaction).",difficulty:"easy",topic:"Acids & Bases"},
-  {id:"ch2_14",question:"Which of these has the highest electronegativity?",options:["Sodium","Oxygen","Fluorine","Chlorine"],correct:2,explanation:"Fluorine has the highest electronegativity of all elements.",difficulty:"easy",topic:"Chemical Bonding"},
-  {id:"ch2_15",question:"The rate of a reaction generally ___ with increase in temperature.",options:["Decreases","Stays constant","Increases","Becomes zero"],correct:2,explanation:"Higher temperature gives particles more energy, increasing collision rate.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"ch2_16",question:"Which law states: 'At constant temperature, the volume of a gas is inversely proportional to pressure'?",options:["Charles' Law","Avogadro's Law","Boyle's Law","Gay-Lussac's Law"],correct:2,explanation:"Boyle's Law: P₁V₁ = P₂V₂ at constant temperature.",difficulty:"easy",topic:"States of Matter"},
-  {id:"ch2_17",question:"Organic chemistry is the study of compounds containing:",options:["Nitrogen","Oxygen","Carbon","Sulfur"],correct:2,explanation:"Organic chemistry is the study of carbon-based compounds.",difficulty:"easy",topic:"Organic Chemistry"},
-  {id:"ch2_18",question:"The simplest hydrocarbon is:",options:["Ethane","Propane","Methane","Butane"],correct:2,explanation:"Methane (CH₄) is the simplest hydrocarbon.",difficulty:"easy",topic:"Organic Chemistry"},
-  {id:"ch2_19",question:"Alkenes contain:",options:["Only single bonds","A double bond between carbon atoms","Triple bond","Only aromatic bonds"],correct:1,explanation:"Alkenes have at least one carbon-carbon double bond (C=C).",difficulty:"easy",topic:"Organic Chemistry"},
-  {id:"ch2_20",question:"Benzene has the molecular formula:",options:["C₆H₁₂","C₆H₁₄","C₆H₆","C₆H₁₀"],correct:2,explanation:"Benzene is C₆H₆, an aromatic compound.",difficulty:"easy",topic:"Organic Chemistry"},
-  {id:"ch2_21",question:"What is the oxidation state of Fe in Fe₂O₃?",options:["+2","+3","+4","+6"],correct:1,explanation:"In Fe₂O₃: 2(Fe) + 3(−2) = 0 → Fe = +3.",difficulty:"medium",topic:"Chemical Reactions"},
-  {id:"ch2_22",question:"Galvanization involves coating iron with:",options:["Tin","Copper","Zinc","Chromium"],correct:2,explanation:"Galvanization is coating iron with zinc to prevent rusting.",difficulty:"easy",topic:"Corrosion"},
-  {id:"ch2_23",question:"Which process separates mixtures by boiling points?",options:["Filtration","Crystallization","Distillation","Chromatography"],correct:2,explanation:"Distillation separates mixtures based on different boiling points.",difficulty:"easy",topic:"Separation Techniques"},
-  {id:"ch2_24",question:"The process of converting starch into glucose using enzymes is:",options:["Fermentation","Hydrolysis","Oxidation","Polymerization"],correct:1,explanation:"Hydrolysis with enzymes (amylase) breaks starch into glucose.",difficulty:"medium",topic:"Organic Chemistry"},
-  {id:"ch2_25",question:"Which gas turns limewater milky?",options:["Oxygen","Carbon dioxide","Hydrogen","Nitrogen"],correct:1,explanation:"CO₂ + Ca(OH)₂ → CaCO₃ (white precipitate) + H₂O.",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"ch2_26",question:"The pH of a solution with [H⁺] = 10⁻⁴ mol/L is:",options:["2","4","6","8"],correct:1,explanation:"pH = -log[H⁺] = -log(10⁻⁴) = 4.",difficulty:"medium",topic:"Acids & Bases"},
-  {id:"ch2_27",question:"What is the common name of CaCO₃?",options:["Lime","Quicklime","Limestone","Slaked lime"],correct:2,explanation:"CaCO₃ is calcium carbonate, commonly known as limestone.",difficulty:"easy",topic:"General Chemistry"},
-  {id:"ch2_28",question:"CaO (quicklime) reacts with water to form:",options:["CaCO₃","Ca(OH)₂","CaCl₂","Ca₃(PO₄)₂"],correct:1,explanation:"CaO + H₂O → Ca(OH)₂ (slaked lime).",difficulty:"easy",topic:"Chemical Reactions"},
-  {id:"ch2_29",question:"The Haber process produces:",options:["Sulfuric acid","Nitric acid","Ammonia","Sodium hydroxide"],correct:2,explanation:"Haber process: N₂ + 3H₂ ⇌ 2NH₃.",difficulty:"easy",topic:"Industrial Chemistry"},
-  {id:"ch2_30",question:"Which of the following is NOT an isotope of hydrogen?",options:["Protium","Deuterium","Tritium","Helium"],correct:3,explanation:"Helium is a different element. Protium, deuterium, and tritium are hydrogen isotopes.",difficulty:"easy",topic:"Atomic Structure"},
-];
-
-// ADDITIONAL MATHEMATICS QUESTIONS (from uploaded file)
-const mathematicsQuestionsExtra = [
-  {id:"mt2_1",question:"Simplify: (3x²)(4x³)",options:["7x⁵","12x⁵","12x⁶","7x⁶"],correct:1,explanation:"3×4 = 12, x²×x³ = x⁵. Answer: 12x⁵.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_2",question:"Factor: x² - 9",options:["(x+3)(x-3)","(x-3)²","(x+3)²","(x-9)(x+1)"],correct:0,explanation:"Difference of squares: x² - 9 = (x+3)(x-3).",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_3",question:"Solve: 3x - 7 = 2x + 5",options:["10","11","12","13"],correct:2,explanation:"3x - 2x = 5 + 7 → x = 12.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_4",question:"Simplify: (2x - 3)²",options:["4x² - 9","4x² - 12x + 9","4x² + 9","4x² - 6x + 9"],correct:1,explanation:"(2x-3)² = 4x² - 12x + 9.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_5",question:"If f(x) = 2x² - 3x + 1, then f(2) = ?",options:["1","3","4","5"],correct:1,explanation:"f(2) = 2(4) - 3(2) + 1 = 8 - 6 + 1 = 3.",difficulty:"easy",topic:"Functions"},
-  {id:"mt2_6",question:"Solve for x: x/4 = 3/12",options:["1","2","3","4"],correct:0,explanation:"x/4 = 1/4, so x = 1.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_7",question:"Expand: (x + 2)(x - 5)",options:["x² - 3x - 10","x² + 3x - 10","x² - 10x + 3","x² - 3x + 10"],correct:0,explanation:"x² - 5x + 2x - 10 = x² - 3x - 10.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_8",question:"Solve the system: x + y = 7, x - y = 3",options:["x=4,y=3","x=5,y=2","x=6,y=1","x=3,y=4"],correct:1,explanation:"Adding: 2x = 10, x = 5. y = 7 - 5 = 2.",difficulty:"medium",topic:"Algebra"},
-  {id:"mt2_9",question:"Simplify: (a³b²)/(a²b)",options:["ab","a²b","ab²","a²b²"],correct:0,explanation:"a³/a² = a, b²/b = b. Answer: ab.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_10",question:"Degree of polynomial: 4x³ - 2x² + 7x - 1",options:["1","2","3","4"],correct:2,explanation:"The highest power is 3, so degree = 3.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_11",question:"The value of sin 45° is:",options:["1/2","√2/2","√3/2","1"],correct:1,explanation:"sin 45° = √2/2 = 1/√2 ≈ 0.707.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"mt2_12",question:"cos 0° = ?",options:["0","1/2","1","√3/2"],correct:2,explanation:"cos 0° = 1.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"mt2_13",question:"The number of terms in an AP with first term 2, last term 50, common difference 4 is:",options:["10","12","13","15"],correct:2,explanation:"50 = 2 + (n-1)4 → 48 = (n-1)4 → n-1 = 12 → n = 13.",difficulty:"medium",topic:"Sequences & Series"},
-  {id:"mt2_14",question:"The sum of first 20 natural numbers is:",options:["190","200","210","180"],correct:2,explanation:"Sum = 20×21/2 = 210.",difficulty:"easy",topic:"Sequences & Series"},
-  {id:"mt2_15",question:"Evaluate: ⁸C₂",options:["16","28","56","70"],correct:1,explanation:"⁸C₂ = 8!/(2!×6!) = 28.",difficulty:"medium",topic:"Permutations & Combinations"},
-  {id:"mt2_16",question:"How many 3-digit numbers can be formed from 1,2,3,4,5 (without repetition)?",options:["20","30","60","120"],correct:2,explanation:"5 × 4 × 3 = 60.",difficulty:"medium",topic:"Permutations & Combinations"},
-  {id:"mt2_17",question:"The standard form of a quadratic equation is:",options:["ax + b = 0","ax² + bx + c = 0","ax³ + bx = 0","ax² = c"],correct:1,explanation:"Standard quadratic form: ax² + bx + c = 0.",difficulty:"easy",topic:"Algebra"},
-  {id:"mt2_18",question:"If the discriminant b² - 4ac < 0, the roots are:",options:["Real and equal","Real and distinct","Imaginary","Rational"],correct:2,explanation:"Negative discriminant means no real roots — roots are complex/imaginary.",difficulty:"medium",topic:"Algebra"},
-  {id:"mt2_19",question:"The vertex of the parabola y = x² - 4x + 3 is at:",options:["(2, -1)","(4, 3)","(2, 1)","(-2, -1)"],correct:0,explanation:"x = -b/2a = 4/2 = 2. y = 4-8+3 = -1. Vertex: (2,-1).",difficulty:"medium",topic:"Coordinate Geometry"},
-  {id:"mt2_20",question:"∫x² dx = ?",options:["2x","x³/3 + C","3x² + C","x³ + C"],correct:1,explanation:"∫x² dx = x³/3 + C.",difficulty:"easy",topic:"Calculus"},
-  {id:"mt2_21",question:"d/dx(x⁴) = ?",options:["x³","4x³","4x⁴","x⁴"],correct:1,explanation:"Power rule: d/dx(x⁴) = 4x³.",difficulty:"easy",topic:"Calculus"},
-  {id:"mt2_22",question:"The derivative of a constant is:",options:["1","0","The constant","Undefined"],correct:1,explanation:"d/dx(c) = 0 for any constant c.",difficulty:"easy",topic:"Calculus"},
-  {id:"mt2_23",question:"tan 60° = ?",options:["1","1/√3","√3","√2"],correct:2,explanation:"tan 60° = √3.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"mt2_24",question:"sec θ = ?",options:["sin θ","cos θ","1/cos θ","1/sin θ"],correct:2,explanation:"sec θ = 1/cos θ.",difficulty:"easy",topic:"Trigonometry"},
-  {id:"mt2_25",question:"The general term of a geometric sequence with first term a and ratio r is:",options:["a + (n-1)r","a × rⁿ","a × r^(n-1)","ar/(1-r)"],correct:2,explanation:"General term of GP: Tₙ = a × r^(n-1).",difficulty:"easy",topic:"Sequences & Series"},
-  {id:"mt2_26",question:"A = {1,2,3,4,5}, B = {3,4,5,6,7}. A ∪ B = ?",options:["{3,4,5}","{1,2,3,4,5,6,7}","{1,2}","{6,7}"],correct:1,explanation:"Union contains all elements from both sets.",difficulty:"easy",topic:"Sets"},
-  {id:"mt2_27",question:"The number of elements in the power set of {a, b, c} is:",options:["3","6","8","9"],correct:2,explanation:"Power set has 2ⁿ elements. 2³ = 8.",difficulty:"medium",topic:"Sets"},
-  {id:"mt2_28",question:"If z = 3 + 4i, then |z| = ?",options:["3","4","5","7"],correct:2,explanation:"|z| = √(3² + 4²) = √25 = 5.",difficulty:"easy",topic:"Complex Numbers"},
-  {id:"mt2_29",question:"The conjugate of (2 + 3i) is:",options:["2 - 3i","−2 + 3i","2 + 3i","3 + 2i"],correct:0,explanation:"Conjugate: change sign of imaginary part → 2 − 3i.",difficulty:"easy",topic:"Complex Numbers"},
-  {id:"mt2_30",question:"The slope of a line perpendicular to y = 2x + 3 is:",options:["2","−2","1/2","−1/2"],correct:3,explanation:"Slope of perpendicular = −1/m = −1/2.",difficulty:"medium",topic:"Coordinate Geometry"},
-];
-
-// ADDITIONAL BIOLOGY QUESTIONS (from uploaded file)
-const biologyQuestionsExtra = [
-  {id:"bi2_1",question:"Which organelle is found in plant cells but NOT animal cells?",options:["Mitochondria","Ribosome","Cell wall","Vacuole"],correct:2,explanation:"Plant cells have cell walls; animal cells do not.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bi2_2",question:"The process of cell drinking is called:",options:["Phagocytosis","Pinocytosis","Exocytosis","Osmosis"],correct:1,explanation:"Pinocytosis is the process of cells engulfing liquid.",difficulty:"medium",topic:"Cell Biology"},
-  {id:"bi2_3",question:"Which biomolecule stores genetic information?",options:["Protein","Carbohydrate","Lipid","DNA"],correct:3,explanation:"DNA (deoxyribonucleic acid) stores genetic information.",difficulty:"easy",topic:"Genetics"},
-  {id:"bi2_4",question:"The building blocks of proteins are:",options:["Fatty acids","Glucose","Amino acids","Nucleotides"],correct:2,explanation:"Proteins are polymers made of amino acid monomers.",difficulty:"easy",topic:"Biochemistry"},
-  {id:"bi2_5",question:"Chlorophyll is found in:",options:["Mitochondria","Chloroplasts","Vacuoles","Cell wall"],correct:1,explanation:"Chlorophyll, the photosynthetic pigment, is located in chloroplasts.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"bi2_6",question:"Photosynthesis equation: 6CO₂ + 6H₂O + light energy →",options:["C₆H₁₂O₆ + 6O₂","6O₂ + H₂O","C₆H₁₂ + 6CO₂","Glucose only"],correct:0,explanation:"Photosynthesis: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"bi2_7",question:"The process of releasing energy from glucose without oxygen is called:",options:["Aerobic respiration","Anaerobic respiration","Photosynthesis","Transpiration"],correct:1,explanation:"Anaerobic respiration breaks down glucose without oxygen.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bi2_8",question:"Which blood type is the universal recipient?",options:["O","A","B","AB"],correct:3,explanation:"AB blood type can receive blood from any group — universal recipient.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_9",question:"Which part of the brain controls hunger and thirst?",options:["Cerebrum","Cerebellum","Hypothalamus","Medulla"],correct:2,explanation:"The hypothalamus regulates hunger, thirst, and body temperature.",difficulty:"medium",topic:"Human Biology"},
-  {id:"bi2_10",question:"The hormone responsible for 'fight or flight' response is:",options:["Insulin","Glucagon","Adrenaline","Thyroxine"],correct:2,explanation:"Adrenaline (epinephrine) triggers the fight-or-flight response.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_11",question:"Mendel's law of segregation states that:",options:["Genes link together","Two alleles separate during gamete formation","All traits are dominant","Genes mutate freely"],correct:1,explanation:"Law of segregation: allele pairs separate during meiosis/gamete formation.",difficulty:"medium",topic:"Genetics"},
-  {id:"bi2_12",question:"A genotype with two identical alleles is called:",options:["Heterozygous","Homozygous","Dominant","Recessive"],correct:1,explanation:"Homozygous = two identical alleles (e.g., AA or aa).",difficulty:"easy",topic:"Genetics"},
-  {id:"bi2_13",question:"Which is NOT a function of the liver?",options:["Bile production","Detoxification","Filtering blood","Pumping blood"],correct:3,explanation:"Pumping blood is the function of the heart, not the liver.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_14",question:"The smallest blood vessels are:",options:["Arteries","Veins","Capillaries","Venules"],correct:2,explanation:"Capillaries are the smallest blood vessels where gas exchange occurs.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_15",question:"Transpiration in plants is the loss of water through:",options:["Roots","Stomata","Bark","Flowers"],correct:1,explanation:"Transpiration is the evaporation of water through stomata in leaves.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"bi2_16",question:"Which type of immunity is provided by vaccines?",options:["Natural active","Passive","Artificial active","Natural passive"],correct:2,explanation:"Vaccines provide artificial active immunity by stimulating the immune system.",difficulty:"medium",topic:"Human Biology"},
-  {id:"bi2_17",question:"The powerhouse of the cell is:",options:["Nucleus","Ribosome","Mitochondria","Chloroplast"],correct:2,explanation:"Mitochondria produce most of the cell's ATP energy.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bi2_18",question:"Scurvy is caused by deficiency of:",options:["Vitamin A","Vitamin B","Vitamin C","Vitamin D"],correct:2,explanation:"Scurvy is caused by Vitamin C (ascorbic acid) deficiency.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_19",question:"What is the role of platelets in blood?",options:["Carry oxygen","Fight infection","Aid clotting","Produce antibodies"],correct:2,explanation:"Platelets (thrombocytes) are involved in blood clotting.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_20",question:"The ovary in flowering plants produces:",options:["Pollen","Seeds","Ovules","Nectar"],correct:2,explanation:"Ovules are produced in the ovary and become seeds after fertilization.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"bi2_21",question:"Aerobic respiration produces:",options:["Lactic acid only","CO₂ and H₂O","Ethanol only","No energy"],correct:1,explanation:"Aerobic respiration: C₆H₁₂O₆ + O₂ → CO₂ + H₂O + ATP.",difficulty:"easy",topic:"Cell Biology"},
-  {id:"bi2_22",question:"Which kingdom includes yeasts and mushrooms?",options:["Monera","Protista","Fungi","Plantae"],correct:2,explanation:"Yeasts and mushrooms belong to the Kingdom Fungi.",difficulty:"easy",topic:"Taxonomy"},
-  {id:"bi2_23",question:"The genetic code is read in units of _____ bases called codons.",options:["Two","Three","Four","Five"],correct:1,explanation:"Each codon consists of 3 nucleotide bases that code for one amino acid.",difficulty:"medium",topic:"Genetics"},
-  {id:"bi2_24",question:"Nitrogen-fixing bacteria convert:",options:["N₂ to ammonia","CO₂ to glucose","O₂ to water","Ammonia to N₂"],correct:0,explanation:"Nitrogen-fixing bacteria convert atmospheric N₂ into ammonia (NH₃).",difficulty:"medium",topic:"Ecology"},
-  {id:"bi2_25",question:"Which type of immunity is provided by mother's milk?",options:["Artificial active","Natural active","Passive","Autoimmune"],correct:2,explanation:"Antibodies in breast milk provide passive immunity to the infant.",difficulty:"medium",topic:"Human Biology"},
-  {id:"bi2_26",question:"The function of white blood cells is to:",options:["Carry oxygen","Fight infection","Aid clotting","Carry nutrients"],correct:1,explanation:"White blood cells (leukocytes) are part of the immune system.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_27",question:"Which hormone regulates the menstrual cycle?",options:["Insulin","Oestrogen","Adrenaline","Glucagon"],correct:1,explanation:"Oestrogen and progesterone regulate the menstrual cycle.",difficulty:"medium",topic:"Human Biology"},
-  {id:"bi2_28",question:"The tube that carries food from mouth to stomach is the:",options:["Trachea","Oesophagus","Pharynx","Larynx"],correct:1,explanation:"The oesophagus (gullet) carries food from the mouth to the stomach.",difficulty:"easy",topic:"Human Biology"},
-  {id:"bi2_29",question:"Chloroplasts contain the green pigment:",options:["Haemoglobin","Melanin","Chlorophyll","Carotene"],correct:2,explanation:"Chlorophyll is the green photosynthetic pigment in chloroplasts.",difficulty:"easy",topic:"Plant Biology"},
-  {id:"bi2_30",question:"Which part of the neuron carries impulses away from the cell body?",options:["Dendrite","Axon","Synapse","Myelin sheath"],correct:1,explanation:"Axons carry electrical impulses away from the neuron cell body.",difficulty:"medium",topic:"Human Biology"},
-];
-
-// ADDITIONAL COMPUTER SCIENCE QUESTIONS (from uploaded file)
-const computerScienceQuestionsExtra = [
-  {id:"cs2_1",question:"The brain of a computer is:",options:["RAM","Hard Disk","CPU","Monitor"],correct:2,explanation:"CPU (Central Processing Unit) is the brain of a computer.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_2",question:"Full form of CPU:",options:["Central Processing Unit","Computer Processing Unit","Core Processing Unit","Central Program Unit"],correct:0,explanation:"CPU = Central Processing Unit.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_3",question:"Which is NOT an input device?",options:["Keyboard","Mouse","Scanner","Printer"],correct:3,explanation:"Printer is an output device.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_4",question:"1 Byte = ?",options:["4 bits","8 bits","16 bits","32 bits"],correct:1,explanation:"1 byte = 8 bits.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_5",question:"The full form of ROM is:",options:["Read Only Memory","Random Only Memory","Read Output Memory","Run Only Memory"],correct:0,explanation:"ROM = Read Only Memory.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_6",question:"Which memory is volatile?",options:["ROM","RAM","Flash Memory","Hard Disk"],correct:1,explanation:"RAM is volatile — data is lost when power is off.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_7",question:"1 Megabyte = ?",options:["1024 bytes","1024 KB","1024 GB","512 KB"],correct:1,explanation:"1 MB = 1024 KB.",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_8",question:"The binary equivalent of decimal 25 is:",options:["11001","11010","10011","10101"],correct:0,explanation:"25 = 16+8+1 = 11001 in binary.",difficulty:"medium",topic:"Number Systems"},
-  {id:"cs2_9",question:"Convert hexadecimal A to decimal:",options:["8","9","10","11"],correct:2,explanation:"Hex A = 10 in decimal.",difficulty:"easy",topic:"Number Systems"},
-  {id:"cs2_10",question:"The decimal equivalent of octal 17 is:",options:["15","16","17","8"],correct:0,explanation:"Octal 17 = 1×8 + 7 = 15 in decimal.",difficulty:"medium",topic:"Number Systems"},
-  {id:"cs2_11",question:"Which generation of computers used transistors?",options:["First","Second","Third","Fourth"],correct:1,explanation:"Second generation computers (1956-1963) used transistors.",difficulty:"medium",topic:"Computer History"},
-  {id:"cs2_12",question:"Which protocol is used for web browsing?",options:["FTP","SMTP","HTTP","DHCP"],correct:2,explanation:"HTTP (Hypertext Transfer Protocol) is used for web browsing.",difficulty:"easy",topic:"Networking"},
-  {id:"cs2_13",question:"A _____ network connects computers in a small area like a building.",options:["WAN","MAN","LAN","PAN"],correct:2,explanation:"LAN (Local Area Network) covers a small area.",difficulty:"easy",topic:"Networking"},
-  {id:"cs2_14",question:"A _____ topology connects all nodes to a central hub.",options:["Bus","Ring","Star","Mesh"],correct:2,explanation:"Star topology connects all devices to a central hub.",difficulty:"easy",topic:"Networking"},
-  {id:"cs2_15",question:"The concept of polymorphism in OOP allows:",options:["Hiding data","One interface, many implementations","Multiple inheritance","Memory management"],correct:1,explanation:"Polymorphism allows the same interface to be used for different data types.",difficulty:"medium",topic:"Programming"},
-  {id:"cs2_16",question:"In database terms, a row in a table is called a:",options:["Field","Attribute","Record/Tuple","Schema"],correct:2,explanation:"A row in a relational database table is called a record or tuple.",difficulty:"easy",topic:"Database"},
-  {id:"cs2_17",question:"What does SQL SELECT statement do?",options:["Deletes data","Inserts data","Retrieves data","Updates data"],correct:2,explanation:"SELECT retrieves data from a database.",difficulty:"easy",topic:"Database"},
-  {id:"cs2_18",question:"Which data structure uses nodes and pointers?",options:["Array","Stack","Linked List","Queue"],correct:2,explanation:"A linked list uses nodes connected by pointers.",difficulty:"easy",topic:"Data Structures"},
-  {id:"cs2_19",question:"The worst-case time complexity of Bubble Sort is:",options:["O(n)","O(n log n)","O(n²)","O(log n)"],correct:2,explanation:"Bubble Sort worst case = O(n²).",difficulty:"medium",topic:"Data Structures"},
-  {id:"cs2_20",question:"In a binary tree, the root has no:",options:["Children","Data","Parent","Leaves"],correct:2,explanation:"The root node has no parent node.",difficulty:"easy",topic:"Data Structures"},
-  {id:"cs2_21",question:"What does CSS stand for?",options:["Computer Style Sheet","Cascading Style Sheets","Creative Style System","Color Styling System"],correct:1,explanation:"CSS = Cascading Style Sheets, used for web page styling.",difficulty:"easy",topic:"Web Development"},
-  {id:"cs2_22",question:"JavaScript is primarily a _____ programming language.",options:["Compiled","Machine-level","Scripting","Assembly"],correct:2,explanation:"JavaScript is a scripting language used mainly for web development.",difficulty:"easy",topic:"Web Development"},
-  {id:"cs2_23",question:"Which of the following is an example of an operating system?",options:["MS Word","Adobe Photoshop","Ubuntu","Google Chrome"],correct:2,explanation:"Ubuntu is an operating system (Linux distribution).",difficulty:"easy",topic:"Computer Fundamentals"},
-  {id:"cs2_24",question:"A _____ virus replicates itself by attaching to programs.",options:["Trojan","Worm","File infector","Spyware"],correct:2,explanation:"A file infector virus attaches to executable programs.",difficulty:"medium",topic:"Security"},
-  {id:"cs2_25",question:"Encryption converts plaintext to:",options:["Compressed text","Ciphertext","Binary","Source code"],correct:1,explanation:"Encryption converts readable plaintext into unreadable ciphertext.",difficulty:"easy",topic:"Security"},
-  {id:"cs2_26",question:"The OSI model has _____ layers:",options:["4","5","6","7"],correct:3,explanation:"The OSI (Open Systems Interconnection) model has 7 layers.",difficulty:"easy",topic:"Networking"},
-  {id:"cs2_27",question:"Which layer of OSI handles routing?",options:["Data Link","Network","Transport","Session"],correct:1,explanation:"The Network layer (Layer 3) handles routing and logical addressing.",difficulty:"medium",topic:"Networking"},
-  {id:"cs2_28",question:"A _____ is a function that calls itself.",options:["Iteration","Loop","Recursive function","While loop"],correct:2,explanation:"A recursive function is one that calls itself.",difficulty:"easy",topic:"Programming"},
-  {id:"cs2_29",question:"Which of the following is a NoSQL database?",options:["MySQL","PostgreSQL","MongoDB","Oracle"],correct:2,explanation:"MongoDB is a NoSQL document-oriented database.",difficulty:"medium",topic:"Database"},
-  {id:"cs2_30",question:"What does IoT stand for?",options:["Internet of Things","Integration of Technology","Interface of Tools","Input Output Technology"],correct:0,explanation:"IoT = Internet of Things — interconnected physical devices.",difficulty:"easy",topic:"Emerging Technologies"},
-];
-
-// ============================================================
-// NEW HARD QUANTITATIVE QUESTIONS — AP, GP, Permutation, Combination, Slope
-// ============================================================
-const newQuantQuestions = [
-  // ---- Arithmetic Progression (20 Qs, 14 hard) ----
-  {id:"ap1",question:"The 15th term of the AP: 3, 7, 11, 15, ... is:",options:["55","57","59","61"],correct:2,explanation:"a=3, d=4. T₁₅ = 3 + 14×4 = 59.",difficulty:"easy",topic:"Arithmetic Progression"},
-  {id:"ap2",question:"Sum of first 20 terms of AP: 5, 8, 11, ... is:",options:["620","650","670","680"],correct:1,explanation:"S₂₀ = (20/2)[2×5 + 19×3] = 10[10+57] = 670. Wait: 10×67=670.",correct:2,explanation:"S₂₀ = (20/2)[10 + 57] = 10 × 67 = 670.",difficulty:"easy",topic:"Arithmetic Progression"},
-  {id:"ap3",question:"If the 5th term of an AP is 17 and the 9th term is 29, find the common difference:",options:["2","3","4","5"],correct:1,explanation:"T₉ - T₅ = 4d = 12 → d = 3.",difficulty:"easy",topic:"Arithmetic Progression"},
-  {id:"ap4",question:"The sum of an AP is 400, first term is 10, last term is 30. How many terms?",options:["20","22","25","18"],correct:0,explanation:"S = n/2(a+l) → 400 = n/2(40) → n = 20.",difficulty:"medium",topic:"Arithmetic Progression"},
-  {id:"ap5",question:"The 100th term of AP: 4, 4.5, 5, 5.5, ... is:",options:["53.5","54","53","54.5"],correct:0,explanation:"a=4, d=0.5. T₁₀₀ = 4 + 99×0.5 = 4 + 49.5 = 53.5.",difficulty:"medium",topic:"Arithmetic Progression"},
-  {id:"ap6",question:"Three numbers are in AP. Their sum is 27 and product is 512. Find the middle number:",options:["6","7","8","9"],correct:2,explanation:"Let a-d, a, a+d. Sum = 3a = 27 → a = 9. Product = a(a²-d²) = 512. 9(81-d²) = 512 → d²=81-56.8... Let's verify: middle = 9, but product of 7,9,11 = 693 ≠ 512. Middle = 8: 4,8,12 → sum=24≠27. a=9,d=? 7×9×11=693. Try a=9, a(a²-d²)=512, 9(81-d²)=512 → 81-d²=56.9, d²≈24. Middle = 9.",correct:2,explanation:"3a = 27 → a = 9. Middle term is 9.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap7",question:"The sum of n terms of AP is 3n² + 5n. The common difference is:",options:["4","6","8","3"],correct:1,explanation:"S_n = 3n² + 5n. a₁ = S₁ = 8. a₂ = S₂ - S₁ = 22-8 = 14. d = 14-8 = 6.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap8",question:"If S_n = 4n² - 2n, find the nth term:",options:["8n - 6","8n - 2","4n - 2","8n + 6"],correct:0,explanation:"Tₙ = Sₙ - Sₙ₋₁ = 4n²-2n - [4(n-1)²-2(n-1)] = 4(2n-1) - 2 = 8n - 6.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap9",question:"How many terms of the AP: 9, 17, 25, ... must be taken to give sum of 636?",options:["10","11","12","13"],correct:2,explanation:"S_n = n/2(2×9 + (n-1)×8) = n(4n+5) = 636. 4n²+5n-636=0. n=12.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap10",question:"The ratio of the sum of n terms of two APs is (3n+8):(7n+15). Find the ratio of their 12th terms:",options:["7:16","8:15","7:15","16:29"],correct:0,explanation:"Ratio of nth terms = ratio at n = 2×12-1 = 23. (3×23+8):(7×23+15) = 77:176 = 7:16.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap11",question:"In an AP, if the pth term is q and qth term is p, then the (p+q)th term is:",options:["0","p+q","p-q","1"],correct:0,explanation:"a+(p-1)d=q, a+(q-1)d=p. Subtracting: (p-q)d = q-p → d=-1. a=p+q-1. T_{p+q} = a+(p+q-1)d = p+q-1-(p+q-1) = 0.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap12",question:"The sum of all integers between 100 and 300 that are divisible by 7 is:",options:["5586","5432","5040","6342"],correct:0,explanation:"First term = 105, last = 294. n=(294-105)/7+1=28. Sum = 28/2(105+294) = 14×399 = 5586.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap13",question:"If 9 times the 9th term of an AP equals 13 times the 13th term, then the 22nd term is:",options:["0","1","-1","22"],correct:0,explanation:"9(a+8d)=13(a+12d) → 9a+72d=13a+156d → -4a=84d → a=-21d. T₂₂=a+21d=-21d+21d=0.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap14",question:"The first and last terms of an AP are 17 and 350 respectively. If the common difference is 9, find the number of terms:",options:["36","37","38","40"],correct:1,explanation:"350 = 17+(n-1)×9 → 333 = (n-1)×9 → n-1=37 → n=38. Wait: 333/9=37, so n=38.",correct:2,explanation:"n = 333/9 + 1 = 37+1 = 38.",difficulty:"medium",topic:"Arithmetic Progression"},
-  {id:"ap15",question:"Find the AP whose 6th term is 19 and the difference of 9th term and 3rd term is 24:",options:["1, 5, 9, ...","3, 7, 11, ...","4, 8, 12, ...","2, 6, 10, ..."],correct:0,explanation:"T₉-T₃ = 6d = 24 → d=4. T₆ = a+5×4 = 19 → a=19-20=-1. Wait: -1+20=19. AP: -1,3,7... or a=1: 1+20=21≠19. a=-1 → -1,3,7,11,15,19...",correct:0,explanation:"d=4, a=T₆-5d=19-20=-1. Series: -1, 3, 7, 11... Closest match among options is 1,5,9 (d=4, a=1, T₆=21). Using d=4,a=3: T₆=23≠19. Best: a=-1+2=1? a=1,d=4,T₆=25≠19. a=-1: -1,3,7,11,15,19. None matches exactly — choose closest: 1,5,9.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap16",question:"Which term of the AP: 3, 15, 27, 39,... will be 132 more than its 54th term?",options:["65th","65th","63rd","61st"],correct:0,explanation:"d=12. T_n = T_54 + 132 → (n-54)×12 = 132 → n-54 = 11 → n = 65.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap17",question:"If the sum of first n terms of an AP is n(n+1)/2, the 10th term is:",options:["10","11","55","9"],correct:0,explanation:"T₁₀ = S₁₀ - S₉ = 10(11)/2 - 9(10)/2 = 55 - 45 = 10.",difficulty:"medium",topic:"Arithmetic Progression"},
-  {id:"ap18",question:"The digits of a 3-digit number form an AP. If the sum of digits is 15 and the units digit is 7, find the number:",options:["357","519","753","951"],correct:0,explanation:"Let a-d, a, a+d. Sum=3a=15→a=5. Units = a+d=7→d=2. Digits: 3,5,7. Number = 357.",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap19",question:"In an AP, sum of first 6 terms is 63 and sum of next 6 terms is 63+72=135. Find the AP:",options:["3, 6, 9, ...","3, 5, 7, ...","1, 4, 7, ...","2, 5, 8, ..."],correct:1,explanation:"S₆=63: 6/2(2a+5d)=63 → 2a+5d=21. S₁₂-S₆=135: S₁₂=198: 12/2(2a+11d)=198 → 2a+11d=33. Subtracting: 6d=12→d=2, a=5.5... Try d=2,a=3+0.5. Closest: 3,5,7 (a=3,d=2): S₆=6/2(6+10)=48≠63.",correct:1,explanation:"S₆ = 63, d = 2, a gives AP 3,5,7...",difficulty:"hard",topic:"Arithmetic Progression"},
-  {id:"ap20",question:"The sum of first 2n terms of an AP is equal to the sum of the first n terms of another AP. If the ratio is 3:1 then the ratio of their common differences is:",options:["3:1","1:3","6:1","1:6"],correct:3,explanation:"If a₁=a₂ (same first terms), ratio of common differences is 1:6 from the derived formula.",difficulty:"hard",topic:"Arithmetic Progression"},
-
-  // ---- Geometric Progression (20 Qs, 14 hard) ----
-  {id:"gp1",question:"The 5th term of GP: 2, 6, 18, 54, ... is:",options:["108","162","243","324"],correct:1,explanation:"a=2, r=3. T₅ = 2×3⁴ = 2×81 = 162.",difficulty:"easy",topic:"Geometric Progression"},
-  {id:"gp2",question:"The common ratio of a GP is 2 and the 5th term is 48. Find the first term:",options:["2","3","4","6"],correct:1,explanation:"T₅ = ar⁴ = a×16 = 48 → a = 3.",difficulty:"easy",topic:"Geometric Progression"},
-  {id:"gp3",question:"Sum of first 6 terms of GP: 1, 2, 4, 8, ... is:",options:["63","62","64","61"],correct:0,explanation:"S₆ = 1(2⁶-1)/(2-1) = 63.",difficulty:"easy",topic:"Geometric Progression"},
-  {id:"gp4",question:"The sum to infinity of GP: 1, 1/2, 1/4, ... is:",options:["1","1.5","2","2.5"],correct:2,explanation:"S∞ = a/(1-r) = 1/(1-0.5) = 2.",difficulty:"easy",topic:"Geometric Progression"},
-  {id:"gp5",question:"If the first term of GP is 5 and common ratio is -2, the 4th term is:",options:["−40","40","−80","80"],correct:0,explanation:"T₄ = 5×(-2)³ = 5×(-8) = -40.",difficulty:"medium",topic:"Geometric Progression"},
-  {id:"gp6",question:"Three numbers are in GP. Their product is 216 and their sum is 19. Find the middle number:",options:["4","5","6","8"],correct:2,explanation:"Let a/r, a, ar. Product = a³ = 216 → a = 6. Middle term = 6.",difficulty:"medium",topic:"Geometric Progression"},
-  {id:"gp7",question:"The sum of an infinite GP is 4 and the first term is 1. Find the common ratio:",options:["1/4","1/2","3/4","2/3"],correct:2,explanation:"S∞ = a/(1-r) → 4 = 1/(1-r) → 1-r = 1/4 → r = 3/4.",difficulty:"medium",topic:"Geometric Progression"},
-  {id:"gp8",question:"If a, b, c are in GP, then b² = ?",options:["ac","a+c","a-c","a/c"],correct:0,explanation:"In a GP, the square of middle term = product of adjacent terms: b² = ac.",difficulty:"easy",topic:"Geometric Progression"},
-  {id:"gp9",question:"The 4th term of a GP is 54 and the 7th term is 1458. Find the common ratio:",options:["2","3","4","6"],correct:1,explanation:"T₇/T₄ = r³ = 1458/54 = 27 → r = 3.",difficulty:"medium",topic:"Geometric Progression"},
-  {id:"gp10",question:"A GP has first term 729 and common ratio 1/3. Which term is 1?",options:["5th","6th","7th","8th"],correct:2,explanation:"Tₙ = 729×(1/3)^(n-1) = 1 → 3⁶ = 3^(n-1) → n = 7.",difficulty:"medium",topic:"Geometric Progression"},
-  {id:"gp11",question:"Insert 3 geometric means between 1 and 256. What is the second geometric mean?",options:["4","8","16","64"],correct:2,explanation:"r = (256)^(1/4) = 4. GM sequence: 4, 16, 64. Second GM = 16.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp12",question:"The sum of first n terms of a GP is 255, first term is 1, common ratio is 2. Find n:",options:["6","7","8","9"],correct:2,explanation:"255 = (2ⁿ-1). 2⁸-1=255 → n=8.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp13",question:"A ball dropped from 10m bounces to 3/5 of the previous height each time. What is the total distance traveled?",options:["35 m","40 m","45 m","50 m"],correct:1,explanation:"First drop 10m. Then bounces: up+down = 2×10×(3/5)/(1-3/5) = 2×10×(3/5)×(5/2) = 30m. Total = 10+30 = 40m.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp14",question:"If x, 2x+2, 3x+3 are in GP, find x:",options:["-1","1","2","-2"],correct:1,explanation:"(2x+2)² = x(3x+3). 4x²+8x+4 = 3x²+3x. x²+5x+4=0. (x+4)(x+1)=0. x=-4 or x=-1. Checking: x=-1: (-1,0,0) not GP. So x = -4? Let's check: -4, -6, -9: ratio -6/-4=1.5, -9/-6=1.5 ✓. x=-4.",correct:3,explanation:"x=-4 gives GP: -4, -6, -9 with ratio 3/2.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp15",question:"A person deposits Rs. 10,000 at 10% compound interest annually. Amount after 3 years:",options:["Rs. 13,000","Rs. 13,100","Rs. 13,310","Rs. 13,200"],correct:2,explanation:"A = P(1+r)ⁿ = 10000(1.1)³ = 10000×1.331 = Rs. 13,310.",difficulty:"medium",topic:"Geometric Progression"},
-  {id:"gp16",question:"The product of first 5 terms of a GP is 32. Find the 3rd term:",options:["1","2","4","8"],correct:1,explanation:"T₁T₂T₃T₄T₅ = a⁵r^(0+1+2+3+4) = (ar²)⁵ = T₃⁵ = 32 → T₃ = 2.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp17",question:"If the sum of infinite GP is 3 times the first term, find the common ratio:",options:["1/3","2/3","1/4","3/4"],correct:1,explanation:"S∞ = a/(1-r) = 3a → 1/(1-r) = 3 → 1-r = 1/3 → r = 2/3.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp18",question:"The 2nd term of a GP is 12 and the 5th term is 324/8. The first term is:",options:["4","6","8","9"],correct:2,explanation:"T₅/T₂ = r³ = (324/8)/12 = 324/96 = 27/8. r = 3/2. T₂ = ar = 12 → a = 8.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp19",question:"The sum of n terms of a GP 1 + 3 + 9 + ... = 364. Find n:",options:["5","6","7","8"],correct:1,explanation:"(3ⁿ-1)/2 = 364 → 3ⁿ = 729 = 3⁶ → n = 6.",difficulty:"hard",topic:"Geometric Progression"},
-  {id:"gp20",question:"If a GP has first term 8 and last term 512, and sum is 1016, find the common ratio:",options:["2","4","3","8"],correct:0,explanation:"Sₙ = a(rⁿ-1)/(r-1). 1016 = 8(rⁿ-1)/(r-1). Last term arⁿ⁻¹=512. r=2: 8×2^(n-1)=512 → 2^(n-1)=64 → n=7. S₇=8(127)/1=1016. ✓ r=2.",difficulty:"hard",topic:"Geometric Progression"},
-
-  // ---- Permutation (20 Qs, 14 hard) ----
-  {id:"perm1",question:"In how many ways can 5 different books be arranged on a shelf?",options:["24","60","120","720"],correct:2,explanation:"5! = 120.",difficulty:"easy",topic:"Permutation"},
-  {id:"perm2",question:"P(7, 3) = ?",options:["35","105","210","840"],correct:2,explanation:"P(7,3) = 7!/(7-3)! = 7×6×5 = 210.",difficulty:"easy",topic:"Permutation"},
-  {id:"perm3",question:"How many 3-digit numbers can be formed using digits 1-9 without repetition?",options:["504","512","729","984"],correct:0,explanation:"9 × 8 × 7 = 504.",difficulty:"easy",topic:"Permutation"},
-  {id:"perm4",question:"In how many ways can 6 people sit in a row?",options:["36","120","720","5040"],correct:2,explanation:"6! = 720.",difficulty:"easy",topic:"Permutation"},
-  {id:"perm5",question:"How many words can be formed from 'MANGO' if repeated letters not allowed?",options:["24","60","120","25"],correct:2,explanation:"5 distinct letters → 5! = 120.",difficulty:"easy",topic:"Permutation"},
-  {id:"perm6",question:"How many even 3-digit numbers can be formed from {1,2,3,4,5} without repetition?",options:["18","24","30","36"],correct:1,explanation:"Units place: 2 or 4 (2 choices). Remaining 2 positions from 4 digits: 4×3=12. Total = 2×12 = 24.",difficulty:"medium",topic:"Permutation"},
-  {id:"perm7",question:"In how many ways can letters of 'MISSISSIPPI' be arranged?",options:["34650","69300","138600","280"],correct:0,explanation:"11!/(4!4!2!) = 39916800/(24×24×2) = 34650.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm8",question:"How many arrangements of the letters of 'DAUGHTER' contain 'UGHT' together?",options:["120","720","840","5040"],correct:1,explanation:"UGHT as unit: 5 units. 5! = 120. But UGHT can be 4!=24 arrangements? Actually treat UGHT as one block → 5 items → 5! = 120. But UGHT must appear as UGHT (exact). So 5! = 120.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm9",question:"In how many ways can 4 boys and 3 girls be seated in a row so that no two girls sit together?",options:["720","1440","1680","5040"],correct:1,explanation:"Arrange 4 boys: 4! = 24. Gaps for girls: 5 gaps, choose 3: P(5,3)=60. Total = 24×60 = 1440.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm10",question:"How many numbers greater than 1000 but ≤ 4000 can be formed with digits 0,1,2,3,4 (repetition allowed)?",options:["250","375","500","625"],correct:1,explanation:"4-digit numbers: 1000-3999: first digit 1,2,3 (3 choices)×5×5×5=375. Plus 4000: total = 375+1 = 376? Answer closest: 375.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm11",question:"How many 5-digit telephone numbers can be formed using digits 0-9, with the first digit not 0?",options:["90000","100000","50000","36000"],correct:0,explanation:"First digit: 9 choices (1-9). Rest: 10 choices each. 9×10⁴ = 90000.",difficulty:"medium",topic:"Permutation"},
-  {id:"perm12",question:"In how many ways can 8 persons be seated at a round table?",options:["5040","8!","7!","40320"],correct:0,explanation:"Circular permutation = (n-1)! = 7! = 5040.",difficulty:"medium",topic:"Permutation"},
-  {id:"perm13",question:"If ⁿP₄ = 24 × ⁿC₄, then n = ?",options:["4","5","6","7"],correct:1,explanation:"ⁿP₄ = 24 × ⁿC₄. ⁿP₄/ⁿC₄ = 4! = 24. This is always true. So we need n(n-1)(n-2)(n-3) > 0, any n≥4. However, if ⁿP₄ = 24ⁿC₄ means n!/(n-4)! = 24×n!/(4!(n-4)!) → 4! = 24 ✓ always. So n can be any value. With the constraint P(n,4) being defined, standard answer n=5.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm14",question:"The number of permutations of n different things taken r at a time is P(n,r). If P(6,r) = 360, find r:",options:["2","3","4","5"],correct:1,explanation:"P(6,3)=6×5×4=120. P(6,4)=360. So r=4.",correct:2,explanation:"P(6,4) = 6×5×4×3 = 360. r = 4.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm15",question:"How many words with 2 consonants and 2 vowels can be formed from the letters of 'LOGARITHM'?",options:["1260","1512","2520","6720"],correct:2,explanation:"LOGARITHM has 6 consonants (L,G,R,T,H,M) and 3 vowels (O,A,I). Choose 2C: C(6,2)=15. Choose 2V: C(3,2)=3. Arrange 4 letters: 4!=24. Total = 15×3×24 = 1080. Closest: 1260? Actually 15×3×24=1080.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm16",question:"How many 4-digit even numbers can be formed from {2,3,5,7,9} without repetition?",options:["24","48","72","96"],correct:0,explanation:"Units: 2 (only even digit). Others: P(4,3)=24. Wait P(4,3)=4×3×2=24. Total = 24.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm17",question:"In how many ways can 5 red, 4 blue, and 3 green balls be arranged in a row if balls of same colour are identical?",options:["27720","55440","3360","1680"],correct:0,explanation:"12!/(5!4!3!) = 479001600/(120×24×6) = 27720.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm18",question:"If the letters of 'RANDOM' are arranged alphabetically, what is the rank of 'RANDOM'?",options:["404","614","400","614"],correct:0,explanation:"RANDOM: letters A,D,M,N,O,R sorted. Position calculation gives rank 404.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm19",question:"How many numbers between 100 and 1000 have distinct digits?",options:["648","504","720","576"],correct:0,explanation:"3-digit numbers with distinct digits: 9×9×8 = 648.",difficulty:"hard",topic:"Permutation"},
-  {id:"perm20",question:"In a class, there are 10 boys and 8 girls. The teacher wants to select a team of 3 boys and 2 girls for a quiz, then arrange them in a row. How many ways?",options:["4,1,6,96,000","2,822,400","1,411,200","840,000"],correct:1,explanation:"C(10,3)×C(8,2)×5! = 120×28×120 = 403200. Hmm let me recalculate: 120×28=3360, 3360×120=403200.",difficulty:"hard",topic:"Permutation"},
-
-  // ---- Combination (20 Qs, 14 hard) ----
-  {id:"comb1",question:"C(8, 3) = ?",options:["24","56","72","336"],correct:1,explanation:"C(8,3) = 8!/(3!5!) = 56.",difficulty:"easy",topic:"Combination"},
-  {id:"comb2",question:"In how many ways can a committee of 3 be selected from 10 people?",options:["30","120","720","3628800"],correct:1,explanation:"C(10,3) = 120.",difficulty:"easy",topic:"Combination"},
-  {id:"comb3",question:"If C(n, 2) = 15, find n:",options:["5","6","7","8"],correct:1,explanation:"n(n-1)/2 = 15 → n(n-1) = 30 → n = 6.",difficulty:"easy",topic:"Combination"},
-  {id:"comb4",question:"C(n, r) + C(n, r-1) = ?",options:["C(n+1, r)","C(n, r+1)","C(n-1, r)","2C(n, r)"],correct:0,explanation:"Pascal's Identity: C(n,r) + C(n,r-1) = C(n+1,r).",difficulty:"medium",topic:"Combination"},
-  {id:"comb5",question:"From a pack of 52 cards, how many ways to select 5 cards?",options:["2598960","52! ","2540160","1287"],correct:0,explanation:"C(52,5) = 2,598,960.",difficulty:"medium",topic:"Combination"},
-  {id:"comb6",question:"In a polygon, the number of diagonals is given by C(n,2) - n. For n=10 sides:",options:["25","30","35","45"],correct:2,explanation:"C(10,2) - 10 = 45 - 10 = 35.",difficulty:"medium",topic:"Combination"},
-  {id:"comb7",question:"How many ways can a team of 11 be selected from 15 players?",options:["1365","1000","3003","5005"],correct:0,explanation:"C(15,11) = C(15,4) = 1365.",difficulty:"medium",topic:"Combination"},
-  {id:"comb8",question:"In how many ways can 6 boys and 5 girls be seated such that 3 specific people always sit together?",options:["9!×3!","8!×3!","9!","8!×6"],correct:1,explanation:"Treat 3 as one unit → 9 units total, 9! arrangements × 3! for the unit = 9! × 6? Total = 9!×3! = 2177280.",difficulty:"hard",topic:"Combination"},
-  {id:"comb9",question:"If C(2n, 3) : C(n, 2) = 12 : 1, find n:",options:["3","4","5","6"],correct:2,explanation:"[2n(2n-1)(2n-2)/6] / [n(n-1)/2] = 12. 2(2n-1)(2n-2)×2 / [3×2(n-1)] = 12. 4(2n-1)/3 = 12. 2n-1=9. n=5.",difficulty:"hard",topic:"Combination"},
-  {id:"comb10",question:"In how many ways can 10 identical balls be distributed among 3 children?",options:["66","100","120","136"],correct:0,explanation:"Stars and bars: C(10+3-1, 3-1) = C(12,2) = 66.",difficulty:"hard",topic:"Combination"},
-  {id:"comb11",question:"A group of 6 men and 4 women. A committee of 4: at least 2 women. How many ways?",options:["105","120","90","186"],correct:3,explanation:"C(4,2)×C(6,2) + C(4,3)×C(6,1) + C(4,4)×C(6,0) = 6×15 + 4×6 + 1×1 = 90+24+1 = 115. Actually = 115.",difficulty:"hard",topic:"Combination"},
-  {id:"comb12",question:"From 5 mathematicians and 4 physicists, a committee of 5: at least 2 of each. How many ways?",options:["240","280","320","360"],correct:1,explanation:"C(5,2)×C(4,3) + C(5,3)×C(4,2) = 10×4 + 10×6 = 40+60 = 100. Hmm: +C(5,4)C(4,1)=5×4=20? But that's ≤2 physicists. At least 2 each: 2M+3P and 3M+2P. C(5,2)C(4,3)+C(5,3)C(4,2)=10×4+10×6=100.",difficulty:"hard",topic:"Combination"},
-  {id:"comb13",question:"The number of ways to select at least one ball from 4 red, 3 blue, 2 green balls (balls of same colour identical):",options:["59","60","64","119"],correct:0,explanation:"(4+1)(3+1)(2+1) - 1 = 5×4×3 - 1 = 60 - 1 = 59.",difficulty:"hard",topic:"Combination"},
-  {id:"comb14",question:"In how many ways can the letters of 'BINOMIAL' be arranged so that vowels are always together?",options:["720","2880","5040","720"],correct:1,explanation:"Vowels: I,O,I,A (4 vowels). Consonants: B,N,M,L (4 consonants). Treating vowels as one block: 5 units. 5! = 120. Vowels arrange: 4!/2! = 12 (I repeats twice). Total = 120×12 = 1440.",difficulty:"hard",topic:"Combination"},
-  {id:"comb15",question:"C(n, r) = C(n, n-r). If C(15, r) = C(15, 2r-3), find r:",options:["4","5","6","7"],correct:2,explanation:"Either r = 2r-3 → r=3, or r + 2r-3 = 15 → 3r=18 → r=6.",difficulty:"hard",topic:"Combination"},
-  {id:"comb16",question:"In how many ways can 9 examination papers be arranged so that the best and worst papers are never together?",options:["282240","322560","362880","403200"],correct:0,explanation:"Total 9! = 362880. Both together: 8!×2! = 80640. Answer: 362880 - 80640 = 282240.",difficulty:"hard",topic:"Combination"},
-  {id:"comb17",question:"There are 5 points on line L₁ and 4 points on line L₂. How many triangles can be formed?",options:["70","80","90","100"],correct:1,explanation:"Triangles from both lines: C(5,2)×C(4,1) + C(5,1)×C(4,2) = 10×4 + 5×6 = 70.",correct:0,explanation:"= 10×4 + 5×6 = 40+30 = 70.",difficulty:"hard",topic:"Combination"},
-  {id:"comb18",question:"How many ways to deal a bridge hand of 13 cards from 52?",options:["635013559600","52!","2598960","C(52,13)"],correct:3,explanation:"The number of bridge hands = C(52,13) which is approximately 635 billion.",difficulty:"hard",topic:"Combination"},
-  {id:"comb19",question:"In how many ways can 4 scholarships (all different) be given to 10 students if a student can get at most 1?",options:["5040","10000","210","120"],correct:0,explanation:"P(10,4) = 10×9×8×7 = 5040 (order matters as scholarships are different).",difficulty:"hard",topic:"Combination"},
-  {id:"comb20",question:"How many 3-element subsets of {1,2,3,...,10} have sum greater than 24?",options:["10","14","16","20"],correct:0,explanation:"Maximum sum = 8+9+10=27. Count: {8,9,10}=27, {7,9,10}=26, {7,8,10}=25, etc. Sums >24: =25,26,27. Subsets with sum=27:{8,9,10}=1. Sum=26:{7,9,10}=1. Sum=25:{6,9,10},{7,8,10}=2. Total = 10 sets.",difficulty:"hard",topic:"Combination"},
-
-  // ---- Slope & Coordinate (20 Qs, 14 hard) ----
-  {id:"slp1",question:"The slope of the line joining (2, 3) and (5, 9) is:",options:["1","2","3","4"],correct:1,explanation:"m = (9-3)/(5-2) = 6/3 = 2.",difficulty:"easy",topic:"Slope"},
-  {id:"slp2",question:"Slope of a horizontal line is:",options:["Undefined","1","0","−1"],correct:2,explanation:"Horizontal lines have slope = 0.",difficulty:"easy",topic:"Slope"},
-  {id:"slp3",question:"Slope of a vertical line is:",options:["0","1","Undefined","−1"],correct:2,explanation:"Vertical lines have undefined slope.",difficulty:"easy",topic:"Slope"},
-  {id:"slp4",question:"Slope of line 3x + 4y = 12 is:",options:["3/4","−3/4","4/3","−4/3"],correct:1,explanation:"4y = -3x + 12 → y = -3/4 x + 3. Slope = -3/4.",difficulty:"easy",topic:"Slope"},
-  {id:"slp5",question:"Two lines are parallel if their slopes are:",options:["Negative reciprocals","Equal","Both zero","Opposite signs"],correct:1,explanation:"Parallel lines have equal slopes.",difficulty:"easy",topic:"Slope"},
-  {id:"slp6",question:"Two lines are perpendicular if the product of their slopes is:",options:["0","1","−1","Undefined"],correct:2,explanation:"For perpendicular lines: m₁ × m₂ = −1.",difficulty:"easy",topic:"Slope"},
-  {id:"slp7",question:"The equation of a line with slope 2 passing through (1, 3) is:",options:["y = 2x + 1","y = 2x - 1","y = 2x + 3","y = 2x"],correct:0,explanation:"y - 3 = 2(x - 1) → y = 2x + 1.",difficulty:"easy",topic:"Slope"},
-  {id:"slp8",question:"The slope of line parallel to y = -5x + 3 is:",options:["1/5","−5","5","−1/5"],correct:1,explanation:"Parallel lines have same slope. Slope = -5.",difficulty:"easy",topic:"Slope"},
-  {id:"slp9",question:"Slope of line perpendicular to y = 3x - 2 is:",options:["3","−3","1/3","−1/3"],correct:3,explanation:"Perpendicular slope = -1/3.",difficulty:"easy",topic:"Slope"},
-  {id:"slp10",question:"Find the equation of line through (0, 4) with slope -2:",options:["y = -2x + 4","y = -2x - 4","y = 2x + 4","y = -4x + 2"],correct:0,explanation:"y-intercept = 4, slope = -2. y = -2x + 4.",difficulty:"easy",topic:"Slope"},
-  {id:"slp11",question:"A line has slope 3 and passes through origin. Which point lies on it?",options:["(1, 2)","(2, 6)","(3, 6)","(2, 3)"],correct:1,explanation:"y = 3x. At x=2: y=6. Point (2,6).",difficulty:"medium",topic:"Slope"},
-  {id:"slp12",question:"The angle of inclination of a line with slope 1 is:",options:["30°","45°","60°","90°"],correct:1,explanation:"tan θ = slope = 1 → θ = 45°.",difficulty:"medium",topic:"Slope"},
-  {id:"slp13",question:"The slope of line joining (a, 0) and (0, b) is:",options:["a/b","b/a","−b/a","−a/b"],correct:2,explanation:"m = (b-0)/(0-a) = -b/a.",difficulty:"medium",topic:"Slope"},
-  {id:"slp14",question:"Find the point where 2x - 3y = 6 crosses the x-axis:",options:["(3, 0)","(0, -2)","(2, 0)","(-3, 0)"],correct:0,explanation:"Set y=0: 2x=6 → x=3. Point (3,0).",difficulty:"medium",topic:"Slope"},
-  {id:"slp15",question:"A line passes through (2, k) and (k, 5) with slope 3. Find k:",options:["1.5","2.5","1","0.5"],correct:1,explanation:"(5-k)/(k-2)=3 → 5-k=3k-6 → 11=4k → k=2.75. Closest: 2.5.",difficulty:"hard",topic:"Slope"},
-  {id:"slp16",question:"The area of triangle formed by the line x/a + y/b = 1 with the coordinate axes is:",options:["ab/2","ab","2ab","a²b²/2"],correct:0,explanation:"The triangle has vertices (0,0), (a,0), (0,b). Area = ½×a×b = ab/2.",difficulty:"hard",topic:"Slope"},
-  {id:"slp17",question:"The distance of point (3, 4) from the line 3x - 4y + 5 = 0 is:",options:["1","2","3","4"],correct:1,explanation:"d = |3×3 - 4×4 + 5|/√(9+16) = |9-16+5|/5 = |-2|/5 = 2/5. Actually = 2/5 ≈ 0.4. Closest: 1? d = |9-16+5|/5 = 2/5. Hmm none perfect — 2/5.",difficulty:"hard",topic:"Slope"},
-  {id:"slp18",question:"Lines 3x - 4y = 5 and 6x - 8y = 7 are:",options:["Perpendicular","Parallel","Coincident","Intersecting"],correct:1,explanation:"Both have slope 3/4. Since they're not identical (different intercepts), they are parallel.",difficulty:"medium",topic:"Slope"},
-  {id:"slp19",question:"The midpoint of (x₁,y₁) and (x₂,y₂) is:",options:["(x₁+y₁)/2","(x₂-x₁, y₂-y₁)","((x₁+x₂)/2, (y₁+y₂)/2)","(x₁x₂, y₁y₂)"],correct:2,explanation:"Midpoint formula: ((x₁+x₂)/2, (y₁+y₂)/2).",difficulty:"easy",topic:"Slope"},
-  {id:"slp20",question:"The equation of line through (1,-2) and parallel to 2x - 3y = 5 is:",options:["2x-3y=8","2x-3y=-8","3x+2y=5","2x+3y=8"],correct:0,explanation:"Slope of 2x-3y=5 is 2/3. Line through (1,-2): y+2=2/3(x-1) → 3y+6=2x-2 → 2x-3y=8.",difficulty:"hard",topic:"Slope"},
-];
-
-export function getQuestions(section, difficulty = 'all', count = 10, usedIds = [], subTopic = null) {
-  let pool;
-  const normalizedSection = section.toLowerCase();
-  console.log(`[getQuestions] requested section: "${section}", normalized: "${normalizedSection}"`);
-  switch (normalizedSection) {
-    case 'english': pool = [...englishQuestions, ...englishQuestionsExtra]; break;
-    case 'analytical': pool = [...analyticalQuestions, ...analyticalQuestionsExtra, ...countrySocietyStatements]; break;
-    case 'quantitative': pool = [...quantitativeQuestions, ...quantitativeQuestionsExtra, ...newQuantQuestions, ...workAgePercentageProbabilityQuestions]; break;
-    case 'physics': pool = [...physicsQuestions, ...physicsQuestionsExtra]; break;
-    case 'chemistry': pool = [...chemistryQuestions, ...chemistryQuestionsExtra]; break;
-    case 'mathematics': pool = [...mathematicsQuestions, ...mathematicsQuestionsExtra]; break;
-    case 'biology': pool = [...biologyQuestions, ...biologyQuestionsExtra]; break;
-    case 'computer_science': pool = [...computerScienceQuestions, ...computerScienceQuestionsExtra]; break;
-    case 'commerce': pool = commerceQuestions; break;
-    case 'accounting': pool = accountingQuestions; break;
-    case 'economics': pool = economicsQuestions; break;
-    default: 
-      console.log(`[getQuestions] WARNING: section "${normalizedSection}" not found, returning empty array.`);
-      pool = [];
-  }
-  console.log(`[getQuestions] found ${pool.length} questions for ${normalizedSection}`);
-
-  const customQs = getCustomQuestions().filter(q => q.section.toLowerCase() === section.toLowerCase());
-  pool = [...pool, ...customQs];
-  
-  let filtered = pool.filter(q => !usedIds.includes(q.id));
-  if (difficulty !== 'all') {
-    filtered = filtered.filter(q => q.difficulty === difficulty);
-  }
-  if (subTopic && subTopic !== 'all') {
-    // Map subTopic keys to topic values in question bank
-    const topicMap = {
-      // English
-      synonyms: ['Synonyms'],
-      antonyms: ['Antonyms'],
-      comprehension: ['Comprehension'],
-      analogies: ['Analogies'],
-      sentence_completion: ['Sentence Completion'],
-      grammar: ['Grammar'],
-      // Analytical
-      statements_based: ['Statements Based'],
-      scenario_based: ['Scenario Based', 'Ranking', 'Direction', 'Relationships', 'Coding'],
-      // Quantitative
-      arithmetic: ['Arithmetic'],
-      algebra: ['Algebra'],
-      geometry: ['Geometry'],
-      statistics: ['Statistics'],
-      arithmetic_progression: ['Arithmetic Progression'],
-      geometric_progression: ['Geometric Progression'],
-      permutation: ['Permutation'],
-      combination: ['Combination'],
-      slope: ['Slope'],
-      work_problems: ['Work Problems'],
-      age_problems: ['Age Problems'],
-      percentage: ['Percentage'],
-      probability: ['Probability'],
-    };
-    const validTopics = topicMap[subTopic] || [subTopic];
-    filtered = filtered.filter(q => validTopics.some(t => q.topic?.toLowerCase() === t.toLowerCase() || q.topic?.toLowerCase().includes(subTopic.replace('_', ' '))));
-  }
-  
-  return shuffle(filtered).slice(0, count);
+// Utility to fix garbled UTF-8 characters (mojibake) from the database seed
+function fixMojibake(text) {
+  if (typeof text !== 'string') return text;
+  return text
+    .replace(/Γê₧/g, '∞')
+    .replace(/ΓåÆ/g, '→')
+    .replace(/├ù/g, '×')
+    .replace(/Γéë/g, '₉')
+    .replace(/Γéà/g, '₅')
+    .replace(/Γéä/g, '₄')
+    .replace(/Γéâ/g, '₃')
+    .replace(/Γéé/g, '₂')
+    .replace(/Γéü/g, '₁')
+    .replace(/Γéç/g, '₇')
+    .replace(/ΓéÖ/g, 'ₙ')
+    .replace(/Γü┤/g, '⁴')
+    .replace(/Γü╡/g, '⁵')
+    .replace(/Γü╢/g, '⁶')
+    .replace(/Γü╕/g, '⁸')
+    .replace(/Γü┐/g, 'ⁿ')
+    .replace(/Γü╗/g, '⁻')
+    .replace(/Γü║/g, '⁺')
+    .replace(/┬╣/g, '¹')
+    .replace(/┬▓/g, '²')
+    .replace(/┬│/g, '³')
+    .replace(/╬╕/g, 'θ')
+    .replace(/┬░/g, '°')
+    .replace(/Γëê/g, '≈')
+    .replace(/ΓëÑ/g, '≥')
+    .replace(/ΓêÆ/g, '-')
+    .replace(/Γéå/g, '₆')
+    .replace(/ΓéÇ/g, '₀')
+    .replace(/Γü░/g, '⁰')
+    .replace(/Γçî/g, '⇌')
+    .replace(/┬▒/g, '±')
+    .replace(/┬╜/g, '½')
+    .replace(/Γ£ô/g, '✓')
+    .replace(/╬⌐/g, 'Ω')
+    .replace(/╬▒/g, 'α')
+    .replace(/╬▓/g, 'β')
+    .replace(/ΓêÜ/g, '√');
 }
 
-export function getMockTestQuestions(natGroup, usedIds = []) {
-  // NAT-I: 20 English, 20 Analytical, 20 Quantitative, 30 Subject
-  const english = getQuestions('english', 'all', 20, usedIds);
-  const analytical = getQuestions('analytical', 'all', 20, usedIds);
-  const quantitative = getQuestions('quantitative', 'all', 20, usedIds);
+function fixOptionFormatting(opt) {
+  if (typeof opt !== 'string') return opt;
+  let fixed = fixMojibake(opt);
+  // Remove "A. ", "B) ", "(C)", etc. from the start of the option
+  fixed = fixed.replace(/^([a-zA-Z][\.\)]|\([a-zA-Z]\))\s*/, '');
+  return fixed;
+}
+
+function processQuestion(q, section) {
+  const bestText = q.question || q.question_text || q.text || '';
   
+  let correctIndex = 0;
+  if (typeof q.correct === 'number') {
+    correctIndex = q.correct;
+  } else if (typeof q.correct_answer_index === 'number') {
+    correctIndex = q.correct_answer_index;
+  } else if (typeof q.correct_option === 'number') {
+    correctIndex = q.correct_option;
+  } else if (Array.isArray(q.options) && q.correctAnswer) {
+    const idx = q.options.indexOf(q.correctAnswer);
+    correctIndex = idx !== -1 ? idx : 0;
+  }
+  
+  return {
+    ...q,
+    section,
+    difficulty: q.difficulty || 'medium',
+    question: fixMojibake(bestText),
+    question_text: fixMojibake(bestText),
+    text: fixMojibake(bestText),
+    options: Array.isArray(q.options) ? q.options.map(fixOptionFormatting) : [],
+    explanation: fixMojibake(q.explanation || ''),
+    correct: correctIndex
+  };
+}
+
+export async function getQuestions(section, difficulty = 'all', count = 10, usedIds = [], subTopic = null) {
+  const normalizedSection = section.toLowerCase();
+  const questionsList = QUESTIONS_MAP[normalizedSection];
+  
+  console.log(`[getQuestions Local] requested section: "${section}", normalized: "${normalizedSection}"`);
+  
+  if (!questionsList) {
+    console.log(`[getQuestions Local] WARNING: section "${normalizedSection}" not found, returning empty array.`);
+    return [];
+  }
+
+  try {
+    let pool = questionsList;
+    
+    if (difficulty !== 'all') {
+      pool = pool.filter(q => q.difficulty === difficulty);
+    }
+    
+    if (usedIds && usedIds.length > 0) {
+      const usedSet = new Set(usedIds.map(String));
+      pool = pool.filter(q => !usedSet.has(String(q.id)));
+    }
+
+    // Filter by subTopic locally if provided (optional feature support)
+    if (subTopic) {
+      pool = pool.filter(q => q.topic && q.topic.toLowerCase().includes(subTopic.toLowerCase()));
+    }
+
+    // Explicitly filter out analogy questions (indicated by '::') from analytical section
+    if (normalizedSection === 'analytical') {
+      pool = pool.filter(q => {
+        const text = q.question || q.question_text || q.text || '';
+        return !text.includes('::');
+      });
+    }
+
+    // Shuffle array randomly
+    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+    
+    const finalSelection = shuffled.slice(0, count).map(q => processQuestion(q, normalizedSection));
+    console.log(`[getQuestions Local] returning ${finalSelection.length} questions for ${normalizedSection}`);
+    
+    // Normalize fields for UI compatibility
+    finalSelection.forEach(q => {
+      q.question = q.question_text || q.question;
+      q.text = q.question_text || q.text;
+      q.correct = q.correct_answer_index !== undefined ? q.correct_answer_index : q.correct;
+      q.correct_option = q.correct_answer_index !== undefined ? q.correct_answer_index : q.correct_option;
+    });
+
+    return finalSelection;
+
+  } catch (err) {
+    console.error(`[getQuestions Local] Error processing questions for ${normalizedSection}:`, err.message);
+    return [];
+  }
+}
+
+
+// ===== SUB-TOPIC CLASSIFIERS =====
+// These classify questions by content since the DB doesn't have subtopic columns.
+
+function classifyAnalytical(q) {
+  const text = (q.question || '').toLowerCase();
+  // Analogies (already filtered out but just in case)
+  if (text.includes('::')) return 'analogy';
+  // Statements-based: syllogisms, logical conclusions
+  if (/\b(statement|conclusion|all .* are|some .* are|no .* are|if all|must be true|definitely true|cannot be determined|syllogism)\b/i.test(text)) return 'statements';
+  // Scenario-based: seating, ordering, scheduling, relations, directions, coding, ranking
+  if (/\b(sit|seat|row|circle|facing|direction|walk|north|south|east|west|rank|order|position|schedule|meeting|floor|shelf|stack|arrange|race|finish|older|taller|shorter|younger|brother|sister|father|mother|uncle|aunt|son|daughter|nephew|cousin|husband|wife|grandfather|grandmother|pointing|photograph|family|friend|coded|code|label|box|pet|occupation|task|assign|drink|house|paint|tournament|project|depends|train|depart|arrive)\b/i.test(text)) return 'scenario';
+  // Default: series/pattern/odd-one-out → classify as scenario (logical reasoning)
+  return 'scenario';
+}
+
+function classifyQuantitative(q) {
+  const text = (q.question || '').toLowerCase();
+  // Geometry
+  if (/\b(triangle|circle|rectangle|square|area|perimeter|radius|diameter|circumference|angle|polygon|cone|sphere|cylinder|volume|surface area|parallel|perpendicular|hypotenuse|coordinate|midpoint|distance between|slope of line|equation of line|quadrilateral)\b/i.test(text)) return 'geometry';
+  // Algebra
+  if (/\b(solve|equation|expression|simplify.*x|factor|polynomial|quadratic|inequalit|variable|linear|simultaneous|x\s*[+=\-]|find x|value of x|if x|log|logarithm|exponent|indices|matrix|determinant|binomial|expansion)\b/i.test(text)) return 'algebra';
+  // Default = Arithmetic (percentage, ratio, profit, loss, average, time, work, speed, series, probability etc.)
+  return 'arithmetic';
+}
+
+function classifyEnglish(q) {
+  const text = (q.question || '').toLowerCase();
+  // Comprehension
+  if (/\b(passage|paragraph|read the|according to the passage|the author|main idea|the text)\b/i.test(text)) return 'comprehension';
+  // Antonym
+  if (/\b(antonym|opposite|opposite of|opposite meaning)\b/i.test(text)) return 'antonym';
+  // Synonym
+  if (/\b(synonym|same meaning|similar meaning|means the same|closest in meaning|'' means)\b/i.test(text)) return 'synonym';
+  // Analogy
+  if (text.includes('::') || /\b(analogy|is to .* as)\b/i.test(text)) return 'analogy';
+  // Default = Sentence completion (fill in the blank, choose correct word, preposition, grammar)
+  return 'sentence_completion';
+}
+
+// Fetches from a section pool, classifies, and picks exact subtopic counts.
+async function getClassifiedQuestions(section, classifier, subtopicCounts, usedIds = []) {
+  // Fetch a large pool from the section
+  const pool = await getQuestions(section, 'all', 500, usedIds);
+  
+  // Classify all questions
+  const classified = {};
+  for (const q of pool) {
+    const type = classifier(q);
+    if (!classified[type]) classified[type] = [];
+    classified[type].push(q);
+  }
+  
+  console.log(`[getClassifiedQuestions] ${section} pool breakdown:`, 
+    Object.entries(classified).map(([k,v]) => `${k}:${v.length}`).join(', ')
+  );
+  
+  const result = [];
+  for (const [subtopic, count] of Object.entries(subtopicCounts)) {
+    const available = classified[subtopic] || [];
+    // Shuffle this subtopic pool
+    const shuffled = [...available].sort(() => 0.5 - Math.random());
+    const picked = shuffled.slice(0, count);
+    result.push(...picked);
+    
+    // If not enough questions of this subtopic, fill from the general pool
+    if (picked.length < count) {
+      const deficit = count - picked.length;
+      const pickedIds = new Set(result.map(q => q.id));
+      const remaining = pool.filter(q => !pickedIds.has(q.id)).sort(() => 0.5 - Math.random());
+      result.push(...remaining.slice(0, deficit));
+      console.log(`[getClassifiedQuestions] ${section}/${subtopic}: needed ${count}, got ${picked.length}, filled ${Math.min(deficit, remaining.length)} from general pool`);
+    }
+  }
+  
+  return result;
+}
+
+export async function getMockTestQuestions(natGroup, usedIds = []) {
+  // ===== NAT CURRICULUM (90 Questions, 120 min) =====
+  // English (20): Sentence Completion 5, Analogy 3, Antonym 4, Comprehension 5, Synonym 3
+  // Analytical (20): Scenario Based 12, Statements Based 8
+  // Quantitative (20): Arithmetic 13, Algebra 4, Geometry 3
+  // Subject (30): varies by group
+
+  const isAU = natGroup?.startsWith('AU-');
+  
+  // ===== ENGLISH: same for NAT and AU =====
+  const english = await getClassifiedQuestions('english', classifyEnglish, {
+    sentence_completion: 5,
+    analogy: 3,
+    antonym: 4,
+    comprehension: 5,
+    synonym: 3,
+  }, usedIds);
+  
+  // ===== ANALYTICAL =====
+  let analytical;
+  if (isAU) {
+    // AU: 25 analytical → scale proportionally (15 scenario, 10 statements)
+    analytical = await getClassifiedQuestions('analytical', classifyAnalytical, {
+      scenario: 15,
+      statements: 10,
+    }, usedIds);
+  } else {
+    // NAT: 20 analytical → 12 scenario, 8 statements
+    analytical = await getClassifiedQuestions('analytical', classifyAnalytical, {
+      scenario: 12,
+      statements: 8,
+    }, usedIds);
+  }
+  
+  // ===== QUANTITATIVE =====
+  let quantitative;
+  if (natGroup === 'AU-Pre-Medical') {
+    // AU Pre-Medical: 15 quantitative → ~10 arith, 3 algebra, 2 geometry
+    quantitative = await getClassifiedQuestions('quantitative', classifyQuantitative, {
+      arithmetic: 10,
+      algebra: 3,
+      geometry: 2,
+    }, usedIds);
+  } else if (isAU) {
+    // AU Pre-Engineering / CS: 25 quantitative → ~16 arith, 5 algebra, 4 geometry
+    quantitative = await getClassifiedQuestions('quantitative', classifyQuantitative, {
+      arithmetic: 16,
+      algebra: 5,
+      geometry: 4,
+    }, usedIds);
+  } else {
+    // NAT: 20 quantitative → 13 arith, 4 algebra, 3 geometry
+    quantitative = await getClassifiedQuestions('quantitative', classifyQuantitative, {
+      arithmetic: 13,
+      algebra: 4,
+      geometry: 3,
+    }, usedIds);
+  }
+  
+  // ===== SUBJECT QUESTIONS =====
   let subjectQuestions = [];
   switch (natGroup) {
     case 'NAT-IE':
       subjectQuestions = [
-        ...getQuestions('physics', 'all', 10, usedIds),
-        ...getQuestions('chemistry', 'all', 10, usedIds),
-        ...getQuestions('mathematics', 'all', 10, usedIds),
+        ...(await getQuestions('physics', 'all', 10, usedIds)),
+        ...(await getQuestions('chemistry', 'all', 10, usedIds)),
+        ...(await getQuestions('mathematics', 'all', 10, usedIds)),
       ];
       break;
     case 'NAT-IM':
       subjectQuestions = [
-        ...getQuestions('physics', 'all', 8, usedIds),
-        ...getQuestions('chemistry', 'all', 8, usedIds),
-        ...getQuestions('biology', 'all', 14, usedIds),
+        ...(await getQuestions('physics', 'all', 8, usedIds)),
+        ...(await getQuestions('chemistry', 'all', 8, usedIds)),
+        ...(await getQuestions('biology', 'all', 14, usedIds)),
       ];
       break;
     case 'NAT-ICS':
       subjectQuestions = [
-        ...getQuestions('physics', 'all', 10, usedIds),
-        ...getQuestions('computer_science', 'all', 10, usedIds),
-        ...getQuestions('mathematics', 'all', 10, usedIds),
+        ...(await getQuestions('physics', 'all', 10, usedIds)),
+        ...(await getQuestions('computer_science', 'all', 10, usedIds)),
+        ...(await getQuestions('mathematics', 'all', 10, usedIds)),
       ];
       break;
     case 'NAT-ICOM':
       subjectQuestions = [
-        ...getQuestions('commerce', 'all', 10, usedIds),
-        ...getQuestions('accounting', 'all', 10, usedIds),
-        ...getQuestions('economics', 'all', 10, usedIds),
+        ...(await getQuestions('commerce', 'all', 10, usedIds)),
+        ...(await getQuestions('accounting', 'all', 10, usedIds)),
+        ...(await getQuestions('economics', 'all', 10, usedIds)),
       ];
       break;
+    case 'AU-Pre-Engineering':
+      // AU: 30 subject (10 Phys, 10 Chem, 10 Math)
+      subjectQuestions = [
+        ...(await getQuestions('physics', 'all', 10, usedIds)),
+        ...(await getQuestions('chemistry', 'all', 10, usedIds)),
+        ...(await getQuestions('mathematics', 'all', 10, usedIds)),
+      ];
+      break;
+    case 'AU-Pre-Medical':
+      // AU: 40 subject (10 Phys, 10 Chem, 20 Bio)
+      subjectQuestions = [
+        ...(await getQuestions('physics', 'all', 10, usedIds)),
+        ...(await getQuestions('chemistry', 'all', 10, usedIds)),
+        ...(await getQuestions('biology', 'all', 20, usedIds)),
+      ];
+      break;
+    case 'AU-Computer-Science':
+      // AU: 30 subject (10 Phys, 10 Comp, 10 Math)
+      subjectQuestions = [
+        ...(await getQuestions('physics', 'all', 10, usedIds)),
+        ...(await getQuestions('computer_science', 'all', 10, usedIds)),
+        ...(await getQuestions('mathematics', 'all', 10, usedIds)),
+      ];
+      break;
+    case 'FAST':
+      // FAST Mock Test Pattern (120 Questions)
+      return [
+        ...(await getQuestions('fast_english', 'all', 30, usedIds)),
+        ...(await getQuestions('fast_basic_maths', 'all', 20, usedIds)),
+        ...(await getQuestions('fast_advance_maths', 'all', 50, usedIds)),
+        ...(await getQuestions('fast_iq', 'all', 20, usedIds)),
+      ];
+    default:
+      subjectQuestions = [
+        ...(await getQuestions('physics', 'all', 10, usedIds)),
+        ...(await getQuestions('chemistry', 'all', 10, usedIds)),
+        ...(await getQuestions('biology', 'all', 10, usedIds)),
+      ];
   }
-  
-  return {
-    english: english.map(q => ({...q, section: 'English'})),
-    analytical: analytical.map(q => ({...q, section: 'Analytical'})),
-    quantitative: quantitative.map(q => ({...q, section: 'Quantitative'})),
-    subject: subjectQuestions.map(q => ({...q, section: 'Subject'})),
-  };
+
+  const allQuestions = [...english, ...analytical, ...quantitative, ...subjectQuestions];
+  console.log(`[getMockTestQuestions] Total: ${allQuestions.length} questions for ${natGroup} (E:${english.length}, A:${analytical.length}, Q:${quantitative.length}, S:${subjectQuestions.length})`);
+  return allQuestions;
 }
 
 export function getAllSections(natGroup) {
@@ -1455,6 +408,10 @@ export function getSectionLabel(section) {
     commerce: 'Commerce',
     accounting: 'Accounting',
     economics: 'Economics',
+    fast_english: 'FAST English',
+    fast_basic_maths: 'FAST Basic Mathematics',
+    fast_advance_maths: 'FAST Advance Mathematics',
+    fast_iq: 'FAST Intelligence (IQ)',
   };
   return labels[section] || section;
 }
@@ -1472,6 +429,10 @@ export function getSectionIcon(section) {
     commerce: '🏪',
     accounting: '🧾',
     economics: '📊',
+    fast_english: '📚',
+    fast_basic_maths: '🧮',
+    fast_advance_maths: '📐',
+    fast_iq: '🧠',
   };
   return icons[section] || '📖';
 }

@@ -32,7 +32,7 @@ export default function LoginCallback() {
         // We are on the WEB (Vercel bridge), but this login was started by the app.
         // Redirect back to the native app.
         console.log("LoginCallback: Bridge detected, redirecting to app...");
-        window.location.href = `natprep://login-callback${hash}`;
+        window.location.href = `entryhive://login-callback${hash}`;
       } else {
         console.log("LoginCallback: Web context, staying on page. Waiting for AuthContext...");
       }
@@ -48,7 +48,7 @@ export default function LoginCallback() {
       >
         <div className="w-16 h-16 border-4 border-primary/20 border-t-primary rounded-full animate-spin mx-auto"></div>
         <h1 className="text-2xl font-bold">Authenticating...</h1>
-        <p className="text-muted-foreground">We're redirecting you back to the NAT Prep app.</p>
+        <p className="text-muted-foreground">We're redirecting you back to the Entry Hive app.</p>
         <button 
           onClick={() => window.location.href = '/'}
           className="text-sm text-primary underline"

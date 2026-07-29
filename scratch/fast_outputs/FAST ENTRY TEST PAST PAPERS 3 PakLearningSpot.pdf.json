@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "advance_maths_1",
+    "text": "The integral of 1/(9x^2+4) w.r.t 'x' is f(x) + c is",
+    "options": [
+      "a) (1/2)tan^-1(3x/2)",
+      "b) -(1/2)tan^-1(3x/2)",
+      "c) (1/6)tan^-1(3x/2)",
+      "d) -(1/2)tan^-1(3x+2)/(3x-2)"
+    ],
+    "correctAnswer": "a) (1/2)tan^-1(3x/2)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_2",
+    "text": "If A = {4,5,6,7,8,9,10}, B = {1,2,3,4,5,6} the A - B = ?",
+    "options": [
+      "a) {7, 8, 9, 10}",
+      "b) {7, 8, 9, 10}",
+      "c) {1, 2, 3, 5}",
+      "d) {1, 2, 3}"
+    ],
+    "correctAnswer": "b) {7, 8, 9, 10}",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_3",
+    "text": "Division is a binary operation on",
+    "options": [
+      "a) Set of natural numbers",
+      "b) Set of positive integers",
+      "c) Set of negative integers",
+      "d) None of these"
+    ],
+    "correctAnswer": "d) None of these",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_4",
+    "text": "The slope of line passing through the points (4, 5) and (5, 3) is",
+    "options": [
+      "a) -1",
+      "b) -2",
+      "c) 1/2",
+      "d) -1/2"
+    ],
+    "correctAnswer": "b) -2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_5",
+    "text": "∫ a^x dx",
+    "options": [
+      "a) a^x / lnx + C",
+      "b) a^x / lna + C",
+      "c) a^-x / lnx + C",
+      "d) a^x / lna + C"
+    ],
+    "correctAnswer": "b) a^x / lna + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_6",
+    "text": "The product of (2, -1) and (0, 1) is",
+    "options": [
+      "a) (1, 2)",
+      "b) (-1, 2)",
+      "c) (-1,-2)",
+      "d) (1, 1)"
+    ],
+    "correctAnswer": "a) (1, 2)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_7",
+    "text": "Geometric mean between 50 and 18 is",
+    "options": [
+      "a) 28",
+      "b) 30",
+      "c) 32",
+      "d) 36"
+    ],
+    "correctAnswer": "b) 30",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_8",
+    "text": "The integral of 1/x^3 w.r.t x is",
+    "options": [
+      "a) 3x^3 + C",
+      "b) (1/2)x^2 + C",
+      "c) x^-2/2 + C",
+      "d) x^-4/4 + C"
+    ],
+    "correctAnswer": "a) 3x^3 + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_9",
+    "text": "The sum of the roots of the equation x^2 + x + m = 0 is equal to the product of its roots, then 'm'",
+    "options": [
+      "a) -1",
+      "b) 2"
+    ],
+    "correctAnswer": "a) -1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_10",
+    "text": "A fair coin is tossed twice. What is the probability of both heads?",
+    "options": [
+      "a) 3/8",
+      "b) 1/2",
+      "c) 1/4",
+      "d) 1/2"
+    ],
+    "correctAnswer": "c) 1/4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_11",
+    "text": "The nth term of the following sequence 2, 5, 10, 17 is",
+    "options": [
+      "a) 2n-3",
+      "b) n+1",
+      "c) n^2+1",
+      "d) 5n-3"
+    ],
+    "correctAnswer": "c) n^2+1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_12",
+    "text": "If x + y = 8 and xy = 15 then x - y =?",
+    "options": [
+      "a) 4",
+      "b) 2",
+      "c) 6",
+      "d) 9"
+    ],
+    "correctAnswer": "b) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_13",
+    "text": "The number of ways in which 5 differently colored flags can be arranged in a row are.",
+    "options": [
+      "a) 50",
+      "b) 120",
+      "c) 100",
+      "d) 90"
+    ],
+    "correctAnswer": "b) 120",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_14",
+    "text": "The limit of sinx/x as \"x\" tends to zero is",
+    "options": [
+      "a) 0",
+      "b) 1",
+      "c) 2",
+      "d) ∞"
+    ],
+    "correctAnswer": "b) 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_15",
+    "text": "If y=a^x, then y' =?",
+    "options": [
+      "a) a^x",
+      "b) a^x lna",
+      "c) a^x lnx",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) a^x lna",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_16",
+    "text": "The area of triangle formed from (11, -12), (6, 2) and (-5, 10) is",
+    "options": [
+      "a) 57",
+      "b) 56",
+      "c) 50",
+      "d) 51"
+    ],
+    "correctAnswer": "a) 57",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_17",
+    "text": "If two lines are parallel then their slopes are",
+    "options": [
+      "a) 0",
+      "b) 1",
+      "c) equal",
+      "d) unequal"
+    ],
+    "correctAnswer": "c) equal",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_18",
+    "text": "The angle formed by x^2 - 6xy + 9y^2 = 0",
+    "options": [
+      "a) 60°",
+      "b) 90°",
+      "c) 45°",
+      "d) 0°"
+    ],
+    "correctAnswer": "d) 0°",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_19",
+    "text": "∫ 1/(a^2+x^2) dx",
+    "options": [
+      "a) (1/a) sin^-1(x/a) + C",
+      "b) (1/a) tan^-1(x/a) + C",
+      "c) (1/a) sec^-1(x/a) + C",
+      "d) (1/a) cos^-1(x/a) + C"
+    ],
+    "correctAnswer": "b) (1/a) tan^-1(x/a) + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_20",
+    "text": "Area under the curve x^2 + y^2 = 4 between the ordinates x = 2/3 and x = 3/2",
+    "options": [
+      "a) 32",
+      "c) 25",
+      "b) 16",
+      "d) none of them"
+    ],
+    "correctAnswer": "c) 25",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_21",
+    "text": "The centre of 4x^2 + 4y^2 - 12x+4y-15 = 0 is",
+    "options": [
+      "a) (3/2, -1/2)",
+      "b) (-3/2, 1/2)",
+      "c) (1/2, -3/2)",
+      "d) (3/2, 1/2)"
+    ],
+    "correctAnswer": "a) (3/2, -1/2)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_22",
+    "text": "The parametric equation of a circle with radius 'a' are",
+    "options": [
+      "a) X= a cosθ, Y= a sin θ",
+      "b) X= r cos θ, Y= r sin θ",
+      "c) X= r cos θ, Y= r cos θ",
+      "d) X= r tan θ, Y= r sec θ"
+    ],
+    "correctAnswer": "a) X= a cosθ, Y= a sin θ",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_23",
+    "text": "The radius of the circle 4x^2 + 4y^2 - 12x+4y - 15 = 0 is",
+    "options": [
+      "a) 5/4",
+      "b) 5/2",
+      "c) 5/6",
+      "d) 3/2"
+    ],
+    "correctAnswer": "b) 5/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_24",
+    "text": "The length of the tangent from (-4, 6) to 2x^2 + 2y^2 = 3 is",
+    "options": [
+      "a) 18.3",
+      "b) 5.2",
+      "c) 7.1",
+      "d) 5"
+    ],
+    "correctAnswer": "c) 7.1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_25",
+    "text": "Equation of the parabola whose vertex is (0, 0) and focus is (0, -3) is",
+    "options": [
+      "a) y = x^2",
+      "b) x^2 = -12y",
+      "c) y^2 = 12x",
+      "d) x^2 = 12y"
+    ],
+    "correctAnswer": "b) x^2 = -12y",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_26",
+    "text": "(x+3i)^2 = 2yi then (x, y) is",
+    "options": [
+      "a) (-3, -9)",
+      "b) (3, 7)",
+      "c) (0, 0)",
+      "d) none of these"
+    ],
+    "correctAnswer": "a) (-3, -9)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_27",
+    "text": "A unit matrix of order 3x3 is",
+    "options": [
+      "a) [[0,0,0],[0,0,0],[0,0,0]]",
+      "b) [[1,0,0],[0,0,0],[0,0,1]]",
+      "c) [[0,1,0],[0,0,1],[1,0,0]]",
+      "d) [[1,0,0],[0,1,0],[0,0,1]]"
+    ],
+    "correctAnswer": "d) [[1,0,0],[0,1,0],[0,0,1]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_28",
+    "text": "If [[1,2,y],[8,4,10],[9,3,6]] = 60 then y =?",
+    "options": [
+      "a) 4",
+      "b) 4, 5",
+      "c) 3, 4",
+      "d) 2, 7"
+    ],
+    "correctAnswer": "c) 3, 4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_29",
+    "text": "The equation 2x^2 + 6x - 3 = 0 has α and β find the value of 1/α + 1/β",
+    "options": [
+      "a) -3",
+      "b) 6",
+      "c) 1",
+      "d) 2"
+    ],
+    "correctAnswer": "d) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_30",
+    "text": "x+10 = 14 then x-8 =?",
+    "options": [
+      "a) -4",
+      "b) 4",
+      "c) 1",
+      "d) 2"
+    ],
+    "correctAnswer": "a) -4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_31",
+    "text": "The nth term of the geometric mean sequence 8, 16√2, 64......... is",
+    "options": [
+      "a) n√2",
+      "b) (n√2)^2",
+      "c) (2√2)^2",
+      "d) (2√2)^(n+1)"
+    ],
+    "correctAnswer": "d) (2√2)^(n+1)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_32",
+    "text": "A machine is depredated at rate of 10% on reducing balance the original cost was Rs 10,000 after how many years it will be valued at Rs 8100",
+    "options": [
+      "a) 2",
+      "b) 3",
+      "c) 4",
+      "d) none"
+    ],
+    "correctAnswer": "a) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_33",
+    "text": "The given progression 4, 3, 3/2,... is",
+    "options": [
+      "a) H.P",
+      "b) G.P",
+      "c) A.P",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) G.P",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_34",
+    "text": "In how many different ways may the seven letters in the word KARACHI be arranged if all of the letters are used each time?",
+    "options": [
+      "a) 2500",
+      "b) 2520",
+      "c) 2400",
+      "d) 2420"
+    ],
+    "correctAnswer": "b) 2520",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_35",
+    "text": "How many words can be formed out of the letters of the word \"JEDDAH\"",
+    "options": [
+      "a) 360",
+      "b) 420",
+      "c) 240",
+      "d) None of these"
+    ],
+    "correctAnswer": "a) 360",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_36",
+    "text": "Which of the expansion of (1/x^2 + x^2)^9 contains no power of x",
+    "options": [
+      "a) No term",
+      "b) Fourth",
+      "c) Fifth",
+      "d) sixth"
+    ],
+    "correctAnswer": "b) Fourth",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_37",
+    "text": "π radians are always equal to",
+    "options": [
+      "a) 360°",
+      "b) 180°",
+      "c) 270°",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) 180°",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_38",
+    "text": "sin60° sin30° -cos60° sin600",
+    "options": [
+      "a) zero",
+      "b) √3/2"
+    ],
+    "correctAnswer": "a) zero",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_39",
+    "text": "Composite function of g(x) = x^2 - 1, f(x) = 2x - 1 is",
+    "options": [
+      "a) 2x^2 - 1",
+      "b) 4x^2 - 4x - 2",
+      "c) 4x^2 - 4x",
+      "d) None of these"
+    ],
+    "correctAnswer": "c) 4x^2 - 4x",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_40",
+    "text": "d/dx(√x) =?",
+    "options": [
+      "a) 1/(2√x)",
+      "b) 2/√x",
+      "c) 1/√x",
+      "d) 2√x"
+    ],
+    "correctAnswer": "a) 1/(2√x)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_41",
+    "text": "If A = [[1,1],[2,-1]] and B = [[1,2],[4,2]] then A + B is",
+    "options": [
+      "A. [[2,3],[6,1]]",
+      "B. [[1,0],[2,0]]",
+      "C. [[3,3],[3,3]]",
+      "D. [[2,1],[3,2]]"
+    ],
+    "correctAnswer": "A. [[2,3],[6,1]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_42",
+    "text": "If A = [[1,2],[-3,4]] and B = [[-2,3],[-4,3]] then AB is equal to",
+    "options": [
+      "A. not possible",
+      "B. [[-6,12],[2,-3]]",
+      "C. [[3,3],[3,9]]",
+      "D. [[-10,9],[-10,3]]"
+    ],
+    "correctAnswer": "D. [[-10,9],[-10,3]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_43",
+    "text": "If A = [[x,y,z],[-2,0,-1],[3,1,0]] is skew symmetric, then (x, y, z) is equal to",
+    "options": [
+      "A. (0,2,-3)",
+      "B. (0,-1,3)",
+      "C. (0,-2,3)",
+      "D. (1,2,3)"
+    ],
+    "correctAnswer": "A. (0,2,-3)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_44",
+    "text": "[[1,0,0],[0,1,0],[0,0,1]] * [[4,0,0],[0,4,0],[0,0,4]] =",
+    "options": [
+      "A. [[0,1,0],[0,0,1],[1,0,0]]",
+      "B. [[2,0,0],[0,2,0],[0,0,2]]",
+      "C. [[4,0,0],[0,4,0],[0,0,4]]",
+      "D. [[1,0,0],[0,1,0],[0,0,1]]"
+    ],
+    "correctAnswer": "A. [[0,1,0],[0,0,1],[1,0,0]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_45",
+    "text": "If A = [[1,2],[3,5]], then the value of |A^4| is equal to",
+    "options": [
+      "A. (27)^4",
+      "B. (13)^4",
+      "C. (59)^4",
+      "D. (60)^4 - 1"
+    ],
+    "correctAnswer": "C. (59)^4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_46",
+    "text": "The matrix [[5,10,3],[-2,-4,6],[-1,-2,b]] is a singular matrix if",
+    "options": [
+      "A. b = -3",
+      "B. b = 0",
+      "C. b = 3",
+      "D. b∈R"
+    ],
+    "correctAnswer": "D. b∈R",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_47",
+    "text": "If A is a square matrix of order n then |adj A| is equal to",
+    "options": [
+      "A. |A|^(n-1)",
+      "B. |A|^n",
+      "C. |A|^(2n)",
+      "D. 1/|A|^n"
+    ],
+    "correctAnswer": "A. |A|^(n-1)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_48",
+    "text": "If A is matrix of order 4 and |A|=5, then |Adj A| is equal to",
+    "options": [
+      "A. 1",
+      "B. 20",
+      "C. 5^2",
+      "D. 125"
+    ],
+    "correctAnswer": "D. 125",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_49",
+    "text": "The minor of -4 and 9 and the cofactors of -4 and 9 in the matrix [[-1,-2,3],[-4,-5,-6],[8,9,9]] are respectively",
+    "options": [
+      "A. 42,3; -42,3",
+      "B. -42,3; 42,-3",
+      "C. 42,3; -42,-3",
+      "D. 42,3; 42,3"
+    ],
+    "correctAnswer": "B. -42,3; 42,-3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "advance_maths_50",
+    "text": "If A = [[2,3,4],[5,6,7],[8,0,0]] and B = [[-1,2,-9],[6,7,8],[9,0,0]] then (B^T A^T)^T is equal to",
+    "options": [
+      "A. [[9,0,0],[18,0,0],[6,7,8]]",
+      "B. [[9,18,8],[0,0,0],[0,0,0]]",
+      "C. [[9,18,8],[0,0,0],[0,0,0]]",
+      "D. [[2,3,4],[5,6,7],[8,0,0]]"
+    ],
+    "correctAnswer": "A. [[9,0,0],[18,0,0],[6,7,8]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "basic_maths_1",
+    "text": "6.09-4.693 =",
+    "options": [
+      "(A) 1.397",
+      "(B) 1.403",
+      "(C) 1.407",
+      "(D) 1.497",
+      "(E) 2.603"
+    ],
+    "correctAnswer": "(A) 1.397",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_2",
+    "text": "What is the area of the region enclosed by the figure above?",
+    "options": [
+      "(A) 116",
+      "(B) 144",
+      "(C) 176",
+      "(D) 179",
+      "(E) 284"
+    ],
+    "correctAnswer": "(B) 144",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_3",
+    "text": "If p = 0.2 and n = 100, then √(p(1-p)/n) =",
+    "options": [
+      "(A) -√0.002",
+      "(B) √0.02-0.02",
+      "(C) 0.04",
+      "(D) 0.04",
+      "(E) 0.4"
+    ],
+    "correctAnswer": "(D) 0.04",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_4",
+    "text": "If each of 4 subsidiaries of Corporation R has been granted a line of credit of $700,000 and each of the other 3 subsidiaries of Corporation R has been granted a line of credit of $112,000, what is the average (arithmetic mean) line of credit granted to a subsidiary of Corporation R",
+    "options": [
+      "(A) $1,568,000",
+      "(B) $448,000",
+      "(C) $406,000",
+      "(D) $313,600",
+      "(E) $116,000"
+    ],
+    "correctAnswer": "(B) $448,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_5",
+    "text": "If x is a number such that x^2-3x+2=0 and x^2-x-2=0, what is the value of x?",
+    "options": [
+      "(A) -2",
+      "(B) -1",
+      "(C) 0",
+      "(D) 1",
+      "(E) 2"
+    ],
+    "correctAnswer": "(E) 2",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_6",
+    "text": "In traveling from a dormitory to a certain city, a student went 1/5 of the way by foot, 2/3 of the way by bus, and the remaining 8 kilometers by car. What is the distance, in kilometers, from the dormitory to the city?",
+    "options": [
+      "(A) 30",
+      "(B) 45",
+      "(C) 60",
+      "(D) 90",
+      "(E) 120"
+    ],
+    "correctAnswer": "(C) 60",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_7",
+    "text": "A certain elevator has a safe weight limit of 2,000 pounds. What is the greatest possible number of people who can safely ride on the elevator at one time with the average (arithmetic mean) weight of half the riders being 180 pounds and the average weight of the others being 215 pounds?",
+    "options": [
+      "(A) 7",
+      "(B) 8",
+      "(C) 9",
+      "(D) 10",
+      "(E) 11"
+    ],
+    "correctAnswer": "(D) 10",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_8",
+    "text": "After paying a 10 percent tax on all income over $3,000, a person had a net income of $12,000. What was the income before taxes?",
+    "options": [
+      "(A) $13,300",
+      "(B) $13,000",
+      "(C) $12,900",
+      "(D) $10,000",
+      "(E) $9,000"
+    ],
+    "correctAnswer": "(B) $13,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_9",
+    "text": "1-[2-(3-[4-5]+6)+7] =",
+    "options": [
+      "(A) -2",
+      "(B) 0",
+      "(C) 1",
+      "(D) 2",
+      "(E) 16"
+    ],
+    "correctAnswer": "(D) 2",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_10",
+    "text": "The price of a model M camera is $209 and the price of a special lens is $69. When the camera and lens are purchased together, the price is $239. The amount saved by purchasing the camera and lens together is approximately what percent of the total price of the camera and lens when purchased separately?",
+    "options": [
+      "(A) 14%",
+      "(B) 16%",
+      "(C) 29%",
+      "(D) 33%",
+      "(E) 86%"
+    ],
+    "correctAnswer": "(A) 14%",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_11",
+    "text": "If 0.497 mark has the value of one dollar, what is the value to the nearest dollar of 350 marks?",
+    "options": [
+      "(A) $174",
+      "(B) $176",
+      "(C) $524",
+      "(D) $696",
+      "(E) $704"
+    ],
+    "correctAnswer": "(E) $704",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_12",
+    "text": "A right cylindrical container with radius 2 meters and height 1 meter is filled to capacity with oil. How many empty right cylindrical cans, each with radius 1/2 meter and height 4 meters, can be filled to capacity with the oil in this container?",
+    "options": [
+      "(A) 1",
+      "(B) 2",
+      "(C) 4",
+      "(D) 8",
+      "(E) 16"
+    ],
+    "correctAnswer": "(C) 4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_13",
+    "text": "If a sequence of 8 consecutive odd integers with increasing values has 9 as its 7th term, what is the sum of the terms of the sequence?",
+    "options": [
+      "(A) 22",
+      "(B) 32",
+      "(C) 36",
+      "(D) 40",
+      "(E) 44"
+    ],
+    "correctAnswer": "(B) 32",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_14",
+    "text": "A rectangular floor is covered by a rug except for a strip p meters wide along each of the four edges. If the floor is m meters by n meters, what is the area of the rug, in square meters?",
+    "options": [
+      "(A) mn-p(m+n)",
+      "(B) mn-2p(m+n)",
+      "(C) mn-p^2",
+      "(D) (m-p)(n-p)",
+      "(E) (m-2p)(n-2p)"
+    ],
+    "correctAnswer": "(E) (m-2p)(n-2p)",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_15",
+    "text": "Working alone, R can complete a certain kind of job in 9 hours. R and S, working together at their respective rates, can complete one of these jobs in 6 hours. In how many hours can S, working alone, complete one of these jobs?",
+    "options": [
+      "(A) 18",
+      "(B) 12",
+      "(C) 9",
+      "(D) 6",
+      "(E) 3"
+    ],
+    "correctAnswer": "(A) 18",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_16",
+    "text": "A family made a down payment of $75 and borrowed the balance on a set of encyclopedias that cost $400. The balance with interest was paid in 23 monthly payments of $16 each and a final payment of $9. The amount of interest paid was what percent of the amount borrowed?",
+    "options": [
+      "(A) 6%",
+      "(B) 12%",
+      "(C) 14%",
+      "(D) 16%",
+      "(E) 20%"
+    ],
+    "correctAnswer": "(D) 16%",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_17",
+    "text": "If x=0 and x = √(4xy-4y^2), then, in terms of y, x =",
+    "options": [
+      "(A) 2y",
+      "(B) y",
+      "(C) y/2",
+      "(D) (-4y^2)/(1-2y)",
+      "(E) -2y"
+    ],
+    "correctAnswer": "(A) 2y",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_18",
+    "text": "Solution Y is 30 percent liquid X and 70 percent water. If 2 kilograms of water evaporate from 8 kilograms of solution Y and 2 kilograms of solution Y are added to the remaining 6 kilograms of liquid, what percent of this new solution is liquid X?",
+    "options": [
+      "(A) 30%",
+      "(B) 33 1/3%",
+      "(C) 37 1/2%",
+      "(D) 40%",
+      "(E) 50%"
+    ],
+    "correctAnswer": "(C) 37 1/2%",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_19",
+    "text": "1 / (1/0.03 + 1/0.37) =",
+    "options": [
+      "(A) 0.004",
+      "(B) 0.02775",
+      "(C) 2.775",
+      "(D) 3.6036",
+      "(E) 36.036"
+    ],
+    "correctAnswer": "(B) 0.02775",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "basic_maths_20",
+    "text": "If each side of ACD above has length 3 and if AB has length 1. what is the area of region BCDE?",
+    "options": [
+      "(A) 9√3/4",
+      "(B) (9/4)√3",
+      "(C) 9√3/4",
+      "(D) (9/2)√3",
+      "(E) 6+√3"
+    ],
+    "correctAnswer": "(A) 9√3/4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "iq_1",
+    "text": "Which number is missing?",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "2"
+    ],
+    "correctAnswer": "5",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_2",
+    "text": "Which letter completes the puzzle?",
+    "options": [
+      "J",
+      "H",
+      "M",
+      "B"
+    ],
+    "correctAnswer": "J",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_3",
+    "text": "Which symbol replaces the question mark and completes the puzzle?",
+    "options": [
+      "ALARM CLOCK",
+      "DIE",
+      "BULB"
+    ],
+    "correctAnswer": "ALARM CLOCK",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_4",
+    "text": "Which number replaces the question mark and completes the puzzle?",
+    "options": [
+      "22",
+      "23",
+      "11",
+      "10"
+    ],
+    "correctAnswer": "23",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_5",
+    "text": "What is missing from the last circle?",
+    "options": [
+      "1",
+      "4",
+      "5",
+      "9"
+    ],
+    "correctAnswer": "9",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_6",
+    "text": "Which letter replaces the question mark and completes the puzzle?",
+    "options": [
+      "O",
+      "M",
+      "B",
+      "V"
+    ],
+    "correctAnswer": "M",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_7",
+    "text": "What is missing from the bottom left circle?",
+    "options": [
+      "2",
+      "8",
+      "6",
+      "9"
+    ],
+    "correctAnswer": "8",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_8",
+    "text": "Which letter completes the puzzle?",
+    "options": [
+      "J",
+      "H",
+      "M",
+      "B"
+    ],
+    "correctAnswer": "H",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_9",
+    "text": "Which number replaces the question mark and completes the puzzle?",
+    "options": [
+      "99",
+      "96",
+      "89",
+      "44"
+    ],
+    "correctAnswer": "96",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_10",
+    "text": "Which number replaces the question mark and completes the puzzle?",
+    "options": [
+      "9",
+      "8",
+      "5",
+      "3"
+    ],
+    "correctAnswer": "8",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_11",
+    "text": "What is missing from the last circle?",
+    "options": [
+      "V",
+      "W",
+      "X",
+      "M"
+    ],
+    "correctAnswer": "E",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_12",
+    "text": "Which number replaces the question mark and completes the puzzle?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "correctAnswer": "1",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_13",
+    "text": "Which letter completes the puzzle?",
+    "options": [
+      "B",
+      "C",
+      "A",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_14",
+    "text": "Which number replaces the question mark and completes the puzzle?",
+    "options": [
+      "13",
+      "11"
+    ],
+    "correctAnswer": "11",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_15",
+    "text": "What is missing from the last circle?",
+    "options": [
+      "Q",
+      "N",
+      "T",
+      "B"
+    ],
+    "correctAnswer": "N",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_17",
+    "text": "Which of the bottom letters replace the question mark and completes the puzzle?",
+    "options": [
+      "W",
+      "M",
+      "N",
+      "B"
+    ],
+    "correctAnswer": "W",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_19",
+    "text": "Which number completes the puzzle?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "correctAnswer": "2",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "iq_20",
+    "text": "Which letter replaces the question mark and completes the puzzle?",
+    "options": [
+      "C",
+      "M",
+      "N",
+      "R"
+    ],
+    "correctAnswer": "C",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "english_1",
+    "text": "DOOR: WALL",
+    "options": [
+      "A. toll: road",
+      "B. guard: border",
+      "C. gate: fence",
+      "D. bridge: river",
+      "E. key: lock"
+    ],
+    "correctAnswer": "C. gate: fence",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_2",
+    "text": "CARNIVORE: MEAT",
+    "options": [
+      "A. carnivore: vegetables",
+      "B. herbivore: plants",
+      "C. vegetarian: vitamins",
+      "D. botanist: herbs",
+      "E. pollinator: plants"
+    ],
+    "correctAnswer": "B. herbivore: plants",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_3",
+    "text": "Synonym of ACCESS",
+    "options": [
+      "A. agreement",
+      "B. rapidity",
+      "C. welcome",
+      "D. approach",
+      "E. incompetence"
+    ],
+    "correctAnswer": "D. approach",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_4",
+    "text": "Synonym of PRUDENT",
+    "options": [
+      "A. generous",
+      "B. overcritical",
+      "C. famous",
+      "D. dull",
+      "E. cautious"
+    ],
+    "correctAnswer": "E. cautious",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_5",
+    "text": "Antonym of ANIMATED",
+    "options": [
+      "A. worthy",
+      "B. humorous",
+      "C. dull",
+      "D. lengthy",
+      "E. realistic"
+    ],
+    "correctAnswer": "C. dull",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_6",
+    "text": "Antonym of EXTROVERT",
+    "options": [
+      "A. clown",
+      "B. hero",
+      "C. ectomorph",
+      "D. neurotic",
+      "E. introvert"
+    ],
+    "correctAnswer": "E. introvert",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_7",
+    "text": "The four close friends decided to attend different colleges. At first, they were _____ to leave each other, but eventually they were glad they each made their own _____.",
+    "options": [
+      "A. excited...decision",
+      "B. reluctant...choice",
+      "C. frustrated...plan",
+      "D. happy...friendship",
+      "E. depressed...bond"
+    ],
+    "correctAnswer": "B. reluctant...choice",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_8",
+    "text": "Samuel is loyal to his roots (he always has been), and is resistant to change. Raphael, however, favors a less traditional, more _____ approach.",
+    "options": [
+      "A. patient",
+      "B. contemporary",
+      "C. diverse",
+      "D. liberal",
+      "E. forgiving"
+    ],
+    "correctAnswer": "B. contemporary",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_9",
+    "text": "The play was made _____ a movie.",
+    "options": [
+      "A. by",
+      "B. into",
+      "C. with",
+      "D. for",
+      "E. across"
+    ],
+    "correctAnswer": "B. into",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "english_10",
+    "text": "The whole nation was _____ the president.",
+    "options": [
+      "A. behind",
+      "B. after",
+      "C. before",
+      "D. for",
+      "E. in front of"
+    ],
+    "correctAnswer": "A. behind",
+    "explanation": "",
+    "subject": "english"
+  }
+]

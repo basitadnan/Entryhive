@@ -1,0 +1,802 @@
+[
+    {
+        "id": "fast_test_1",
+        "text": "After a brief and violent ________ that ousted the president, General Monsanto declared himself the dictator of the country.",
+        "options": ["nuance", "coup", "solicitation", "upbraiding", "lament"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_2",
+        "text": "Select the Synonym of the word: DENIAL",
+        "options": ["judge", "trifle", "defiance", "approval", "crafty"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_3",
+        "text": "The ________ instinct of a watchdog is to attack strangers who enter its home.",
+        "options": ["judicious", "intimate", "pragmatic", "Melancholy", "primal"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_4",
+        "text": "DAISY: FLOWERPLANT::",
+        "options": ["tulip: root", "cane: wood", "acrobat: circus", "bungalow: building", "fort: fortress"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_5",
+        "text": "UNCOUTH",
+        "options": ["gracious", "control", "maneuver", "invalidate", "sabotage"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_6",
+        "text": "Even a cursory glance at the results of the ________ would let any reasonable observer know that the company's books were not in order.",
+        "options": ["auditorium", "physical examination", "count up", "audit", "stationery"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_7",
+        "text": "ENGINEERING: ENGINEER ::",
+        "options": ["computer science: JAVA", "chemist: chemistry", "MBBS: doctor", "lawyer: law", "Dancer: Choreographer"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_8",
+        "text": "ACE: 135 ::",
+        "options": ["BET: 255", "WET: 568", "MEN: 968", "TEN: 895", "BED: 254"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_9",
+        "text": "Select the Synonym of the word: KIN",
+        "options": ["rover", "exult", "twist", "friend", "relative"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_10",
+        "text": "Select the Synonym of the word: PENSIVE",
+        "options": ["bashful", "caged", "thoughtful", "happy", "flood"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "english"
+    },
+    {
+        "id": "fast_test_11",
+        "text": "If 1 cm on a map corresponds to an actual distance of 40 km. And the distance on the map between Lahore and Karachi is 37.5 cm., the actual distance between them is.",
+        "options": ["1500", "375", "3750", "1375"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_12",
+        "text": "If a building b feet high casts a shadow f feet long, then, at the same time of day, a tree t feet high will cast a shadow how many feet long?",
+        "options": ["fb/t", "bt/f", "ft/b", "fbt"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_13",
+        "text": "ABC, CEG, EHK, ........",
+        "options": ["GOK", "GKO", "FLN", "XYZ"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_14",
+        "text": "Odd man out",
+        "options": ["General", "Brigadier", "Major,", "Admiral"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_15",
+        "text": "The digit in the 90th place to the right of the decimal point when 5 is divided by 7",
+        "options": ["5", "7", "1", "4"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_16",
+        "text": "For all positive numbers x and y, let x∆y = √xy, if n > 1 what does n^1/n equal?",
+        "options": ["√n", "√n²", "1/√n", "1"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_17",
+        "text": "A man travel 3 miles, turn left and travels 5 miles and then turn right travels yet another mile. How far is he from starting point?",
+        "options": ["6.4 miles", "6 miles", "7 miles", "8 miles"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_18",
+        "text": "What is the missing number?\n2 16 4\n3 54 18\n7 1 49",
+        "options": ["7", "6", "98", "None of these"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_19",
+        "text": "Choose the missing term: A, B, B, D, C, F, D, H, E, ?, ?",
+        "options": ["E,F", "F,G", "F,I", "J,F"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_20",
+        "text": "Anaemia: Blood: Anarchy: ?",
+        "options": ["Lawlessness", "Government", "Monarchy", "Disorder"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_21",
+        "text": "Part is related to Whole in the same way as Arc is related to ________?",
+        "options": ["Trapezium", "Circle", "Triange", "Square"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_22",
+        "text": "Choose a word from the given alternatives, that is similar to the given words. Diamond: Sapphire: Ruby",
+        "options": ["Gold", "Silver", "Emerald", "Bronze"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_23",
+        "text": "If O = 16, FOR = 42 then what is FRONT equal to?",
+        "options": ["61", "65", "73", "78"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_24",
+        "text": "If 'cook' is called 'butler', 'butler' is called 'manager', 'manager' is called 'teacher', 'teacher' is called 'clerk' and 'clerk' is called 'principal', who will teach in class?",
+        "options": ["Cook", "Manager", "Teacher", "Clerk"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_25",
+        "text": "Ali introduces Asad as the son of the only brother of his father's wife. How is Asad related to Ali?",
+        "options": ["Cousin", "Son", "Son-in-Law", "Brother"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_26",
+        "text": "Of the five villages P,Q,R,S and T situated close to each other, P is to the west of Q,R is to the south of P, T is to the north of Q and S is to the east of T. Then, R is in which direction with respect to S?",
+        "options": ["North-west", "South-east", "South-west", "Data inadequate"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_27",
+        "text": "Rizwan is fourteenth from the right end in a row of 40 boys. What is his position from the left hand?",
+        "options": ["24th", "25th", "26th", "27th"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_28",
+        "text": "If 30th January 2003 was Thursday, what was the day on 2nd March, 2003?",
+        "options": ["Tuesday", "Thursday", "Saturday", "Sunday"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_29",
+        "text": "Complete the visual analogy:\nFirst pair: (Triangle on top of a circle) is to (two intersecting circles).\nSecond pair: (Inverted triangle on top of a diamond) is to (?).",
+        "options": ["A single circle", "Two intersecting circles", "A single rectangle", "A parallelogram", "Two intersecting rectangles"],
+        "correctAnswer": "Two intersecting rectangles",
+        "explanation": "Answer: E is explicitly provided in the source document.",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_30",
+        "text": "Insert the missing number: (Image of 3 circles with numbers)\nCircle 1: 25, 17, 6, ? (outside 17)\nCircle 2: 38, 18, 8, 9 (outside 18)\nCircle 3: 16, ?, 8, 9 (outside ?)",
+        "options": ["13", "15", "17", "19"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    },
+    {
+        "id": "fast_test_31",
+        "text": "If 8% of x = 4% of y, then 20% of x is",
+        "options": ["15% of y", "10% of y", "20% of y", "None of these"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_32",
+        "text": "The compound interest on Rs 5000 for 2 years at 4% per annum is",
+        "options": ["408", "405", "410", "415"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_33",
+        "text": "If log₂ y = 100 and log₂ x = 10, then value of y is",
+        "options": ["2¹⁰", "2¹⁰⁰⁰", "2¹⁰⁰", "2¹⁰⁰⁰⁰"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_34",
+        "text": "The average income of Shaikh Farhan for 15 days is Rs 70. The average for first five days is Rs 60 and that for the last nine days is Rs 80. The income for sixth day is",
+        "options": ["Rs 80", "Rs 60", "Rs 40", "Rs 30"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_35",
+        "text": "The ratio of present ages of two brothers is 1:2 and 5 years back the ratio was 1:3. What will be the ratio of their ages after 5 years?",
+        "options": ["1:4", "2:3", "3:5", "5:6"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_36",
+        "text": "In a class of 81 students, if the number of boys is increased by 20%, and the number of girls is reduced by 25%, the total strength remains same, what was the previous number of girls.",
+        "options": ["33", "36", "40", "45"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_37",
+        "text": "A bus covers a distance in 50 minutes if it runs at 48 Km/hr on an average. The speed at which the bus must run to reduce the time of journey to 40 minutes will be:",
+        "options": ["50 Km/hr", "55 Km/hr", "60 Km/hr", "70 Km/hr"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_38",
+        "text": "Two candidates fought an election. One got 65% of the votes and won by 300 votes. The total number of votes polled is:",
+        "options": ["600", "800", "1000", "1200"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_39",
+        "text": "6% more is gained by selling a radio for Rs. 1425 then by selling it for Rs. 1353. The cost price of the radio is?",
+        "options": ["Rs. 1200", "Rs. 1302", "Rs. 1339.50", "Rs. 1444.28"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_40",
+        "text": "One angle of a hexagon is 100° and all the other 5 angles are equal. What is the measure of each one of the equal angles?",
+        "options": ["36°", "144°", "124°", "72°"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_41",
+        "text": "A man has some hens and cows. If the number of heads be 48 and numbers of feet equals 140, the numbers of hens will be:",
+        "options": ["26", "24", "23", "22"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_42",
+        "text": "If the angles of a triangle are in the ratio 2:3:4, then the greatest angle of the triangle is:",
+        "options": ["75°", "80°", "90°", "120°"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_43",
+        "text": "Saud uses 30% of his monthly earnings for rent and 50% of the remaining amount for food and transportation, if he spends Rs. 525 for food and transportation, how much does he pay for rent?",
+        "options": ["Rs. 400", "Rs. 450", "Rs. 500", "Rs. 550"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_44",
+        "text": "Profit after selling an article for Rs. 425 is the same as loss after selling it for Rs. 355. The cost of the article is:",
+        "options": ["Rs. 385", "Rs. 390", "Rs. 395", "Rs. 400"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_45",
+        "text": "Excluding stoppages, the speed of a bus is 54 Km/hr and including stoppages, it is 45 Km/hr. For how many minutes does the bus stop, per hour?",
+        "options": ["9", "10", "12", "20"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_46",
+        "text": "Ahmad borrowed some money from a bank. He paid it back in two equal installments. The compound interest is supposed to be 10%. If he pays both installments annually each being Rs. 2420. Find the total money he borrowed.",
+        "options": ["2000", "4000", "4400", "None of these"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_47",
+        "text": "A student bought 7 books for Rs.87 from one book shop and 8 books for Rs. 93 from another book shop. The average price (in Rs.) he paid per book was:",
+        "options": ["12", "1.1", "13", "15"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_48",
+        "text": "The volume of a wall is 128m³. Wall is 5 times as high as it is broad and 10 times as long as it is high. The breadth of the walls is:",
+        "options": ["0.8m", "1m", "4m", "None of these"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_49",
+        "text": "Saleem is twice as old as Nadeem. If 10 years ago Saleem was 4 times as old as Nadeem, then the present ages of Saleem and Nadeem are:",
+        "options": ["20 years, 10 years", "28 years, 14 years", "30 years, 15 years", "40 years, 20 years"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_50",
+        "text": "Given that AB and AC are tangents to the circle with center at O, what is the value of a?",
+        "options": ["65°", "15°", "60°", "25°"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "basic_maths"
+    },
+    {
+        "id": "fast_test_51",
+        "text": "arg(ω²) = ?",
+        "options": ["-π/3", "π/3", "2π/3", "π/6"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_52",
+        "text": "For the system of linear equations 2x + 3y -5z = 7, x + y + z = 6, 3x – 4y + 2z = 1, x =?.\n(a) | 7 3 -5 | / | 2 3 -5 |\n    | 6 1 1 |   | 1 1 1 |\n    | 1 -4 2 |   | 3 -4 2 |\n(b) | 2 3 -5 | / | 7 3 -5 |\n    | 1 1 1 |   | 6 1 1 |\n    | 3 -4 2 |   | 1 -4 2 |\n(c) | 2 7 -5 | / | 2 3 -5 |\n    | 1 6 1 |   | 1 1 1 |\n    | 3 1 2 |   | 3 -4 2 |\n(d) | 2 3 7 | / | 2 3 -5 |\n    | 1 1 6 |   | 1 1 1 |\n    | 3 -4 1 |   | 3 -4 2 |",
+        "options": ["(a) Determinant expression", "(b) Determinant expression", "(c) Determinant expression", "(d) Determinant expression"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_53",
+        "text": "Sum of the reciprocals of the roots of x² + Px + q = 0 is;",
+        "options": ["-P/q", "P/q", "P/q²", "-P/q²"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_54",
+        "text": "Solution of the equation x² + 8 = 6x' is:",
+        "options": ["32", "64", "16", "2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_55",
+        "text": "If f (x) = (2x−1)(x²+1)(x-5)², then f(x) has how many real roots?",
+        "options": ["0", "1", "2", "3"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_56",
+        "text": "1+1²+2+2²+3+3²+...+n+n² = ?",
+        "options": ["n(n+1)/2", "[n(n+1)]²/2", "n(n+1)(n+2)/3", "n(n+2)(n+3)/3"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_57",
+        "text": "If a₅ = 4 of an A.P, then S₇=?",
+        "options": ["4", "28", "16", "40"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_58",
+        "text": "The probabilities that a student may get A,B,C or D grade is 0.4, 0.3, 0.25 and 0.05 respectively the probability that a student will not get grade A?",
+        "options": ["0.4", "0.7", "0.75", "0.6"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_59",
+        "text": "How many words can be formed from the letters of the word \"AGAIN\" other than \"NAAGI\"?",
+        "options": ["119", "59", "60", "120"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_60",
+        "text": "Co-efficient of \"t⁷\" in the expansion of (t² - 2/t)⁹ is:",
+        "options": ["-56", "14", "-14", "None of these"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_61",
+        "text": "sin 2θ / (1 + cos 2θ) = ?",
+        "options": ["tanθ", "cosθ", "sinθ", "sin²θ"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_62",
+        "text": "sin 2θ / (2 sin²θ) = ?",
+        "options": ["cotθ", "secθ", "tanθ", "cosθ"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_63",
+        "text": "cot (-7π/4) = ?",
+        "options": ["1", "-1", "1/√2", "-1/√2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_64",
+        "text": "cos (-1035°) = ?",
+        "options": ["1", "-1", "1/√2", "-1/√2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_65",
+        "text": "Terminal arm of 13π/3 lies in ________ quadrant?",
+        "options": ["1st", "2nd", "3rd", "4th"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_66",
+        "text": "If y = sinx, and y = cosx are graphed on the same axis in the interval 0≤ x ≤ 2π, then in which quadrants do the graphs intersect?",
+        "options": ["I and II", "II and III", "I and IV", "I and III"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_67",
+        "text": "If sides of a triangle are a = 5, b = 8, c = 16 then sin B / sin C = ?",
+        "options": ["5/8", "1/2", "2", "Cannot be determined"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_68",
+        "text": "Range of y = cot⁻¹(x) is,",
+        "options": ["-π/2 < y < π/2", "-π ≤ y ≤ π", "0 < y < π", "0 < y < π/2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_69",
+        "text": "cos⁻¹(-1/2) = ?",
+        "options": ["π/3", "2π/3", "4π/3", "5π/3"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_70",
+        "text": "If we restrict the domain of f (x) = x² + 3 to (-2,1) then the range of f(x) is:",
+        "options": ["[3,7)", "All positive real numbers", "(3,4)", "(4,7)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_71",
+        "text": "Which of the following graph is NOT a function?",
+        "options": ["y=|x|", "y=|x|", "y=x/|x|", "y=√x, x≥0"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_72",
+        "text": "For what value of x, sinx/x is continuous?",
+        "options": ["All real x", "x > 0", "x < 0", "Both (b) and (c)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_73",
+        "text": "lim (x-1)/(x-1) as x->1 = ?",
+        "options": ["-1", "1", "Does not exist", "1/2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_74",
+        "text": "lim (3x² - √5x + 4) / (2x² + 3x + √11) as x->∞ = ?",
+        "options": ["0.91", "1.1", "1.33", "1.50"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_75",
+        "text": "If y=e²ˣ then which of the following must be true?",
+        "options": ["y'' + 8y = 0", "y'' - 8y = 0", "3y'' + 8y = 0", "2y'' - 8y = 0"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_76",
+        "text": "If y = x⁵ - 2x⁴ + 7x³ + 2x² + 13 then y⁽⁶⁾ = ?",
+        "options": ["0", "6", "720", "360"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_77",
+        "text": "Slope of the line represented by the parametric equations, x = 2t+1 and y=t-1 is;",
+        "options": ["1/2", "-1/2", "2", "-2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_78",
+        "text": "Differentiate tan²x with respect to sinx",
+        "options": ["2 tan x sec x", "2 tan x sec²x", "2 tan x sec x", "2 tan x cos x"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_79",
+        "text": "d/dx (a^x) = ?",
+        "options": ["a^x / (a ln a)", "a^x ln a", "a^x / (2)", "a^x ln a / (2√x)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_80",
+        "text": "Area of the shaded region=?",
+        "options": ["4", "1", "2", "5"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_81",
+        "text": "∫ (cosec x - cot x) dx = ?",
+        "options": ["ln|cosec x|", "ln|cot x|", "cosec x", "cot x"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_82",
+        "text": "∫ tan x dx = ?",
+        "options": ["ln|sec x| + c", "-ln|sin x| + c", "c - ln|cos x|", "Both (a) and (c)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_83",
+        "text": "d/dx ∫ (1 / √(x²+a²)) dx = ?",
+        "options": ["ln(x+√(x²+a²))", "ln(x+√(x²-a²))", "1/√(x²+a²)", "√(x²+a²)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_84",
+        "text": "Which of the following points lies above the line 6x-7y+70=0?",
+        "options": ["(0,0)", "(7,-7)", "(-7,7)", "(1,-7)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_85",
+        "text": "Distance of point P(3,2) from the line x+y+8=0 is:",
+        "options": ["1/√5", "2/√13", "√13", "13/√2"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_86",
+        "text": "Find area of triangle formed by the lines y = 0, x = 0 and 3x-2y+6=0.",
+        "options": ["6", "3", "2", "1/6"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_87",
+        "text": "Equation of a line parallel to x-axis and passing through P(-1,4) is",
+        "options": ["x=-1", "x=4", "y=-1", "y=4"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_88",
+        "text": "Equation of a straight line perpendicular to 3x - y = 8 and passes through P(4,5) is",
+        "options": ["x+y=19", "x+2y=19", "2x+y=19", "x+3y=19"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_89",
+        "text": "If the mid-point of a horizontal line segment with a length of 8 is (3,-2) then the coordinates of its end points are?",
+        "options": ["(1,-2) and (9,-2)", "(3,-6) and (3,2)", "(-1,-2) and (7,-2)", "(8,-2)and(0,-2)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_90",
+        "text": "The equation x²/(4-a) - y²/a = 1 represents, if a < 0?",
+        "options": ["Circle", "Ellipse", "Hyperbola", "Line"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_91",
+        "text": "Radius of a circle whose parametric equations are x = 2cos t and y = 2sin t is",
+        "options": ["0", "2", "4", "16"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_92",
+        "text": "Vertex of parabola y² = 6x-1, is",
+        "options": ["(1,0)", "(0, 1/6)", "(0, -1/6)", "(0,1)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_93",
+        "text": "Length of latus rectum of ellipse 9x² + y² = 18",
+        "options": ["2√2/3", "√2/3", "√3/2", "1/(2√3)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_94",
+        "text": "Distance between foci of the ellipse x² + 4y² = 16 is;",
+        "options": ["2√3", "3√3", "4√3", "8√3"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_95",
+        "text": "Find a vector P from the point P to origin where PQ = 4i−2j and Q is (-2,5)",
+        "options": ["-6i-7j", "6i+7j", "7j-6i", "6i-7j"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_96",
+        "text": "The line segments joining the mid-points of sides of a quadrilateral taken in order forms a ________",
+        "options": ["Parallelogram", "Square", "Rectangle", "Quadrilateral"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_97",
+        "text": "If 2i+3j−6k, 6i−2j+3k and 8i+j−3k are sides of a triangle, then perimeter of the triangle is;",
+        "options": ["16+√37", "14+√37", "14", "14+√74"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_98",
+        "text": "If log₃ x² = 9 then x =?",
+        "options": ["1", "3", "3⁹", "3¹⁸"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_99",
+        "text": "If x and y are any two positive real numbers then;",
+        "options": ["√x + √y > √(x+y)", "√x + √y < √(x+y)", "√x + √y = √(x+y)", "√x + √y ≤ √(x+y)"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "advance_maths"
+    },
+    {
+        "id": "fast_test_100",
+        "text": "Number of total rectangles you can count on the board?",
+        "options": ["8", "18", "20", "25"],
+        "correctAnswer": null,
+        "explanation": "",
+        "subject": "iq"
+    }
+]

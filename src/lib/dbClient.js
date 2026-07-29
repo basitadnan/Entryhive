@@ -140,56 +140,99 @@ export const base44 = {
           full_name: user.user_metadata?.full_name || user.user_metadata?.name || 'User'
         };
 
-        // Merge with profiles table
-        let { data: profile, error: profileError } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('id', user.id)
-          .maybeSingle();
+        // Try to fetch/create profile, but don't let it block the entire login
+        let profile = null;
+        try {
+          // Race the profile query against a 5-second timeout
+          const profilePromise = supabase
+            .from('profiles')
+            .select('*')
+            .eq('id', user.id)
+            .maybeSingle();
+          const profileTimeout = new Promise((resolve) => 
+            setTimeout(() => {
+              console.warn('[Auth] Profile query timed out after 5s');
+              resolve({ data: null, error: { message: 'Profile query timed out' } });
+            }, 5000)
+          );
+          const { data: profileData, error: profileError } = await Promise.race([profilePromise, profileTimeout]);
+          profile = profileData;
 
-        // Auto-create profile if it doesn't exist (Google Sign-in first-time users)
-        if (!profile && !profileError) {
-          const referralCode = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
-          const newProfile = {
-            id: user.id,
-            email: user.email,
-            full_name: baseUser.full_name,
-            referral_code: referralCode,
-          };
-          const { data: created } = await supabase.from('profiles').upsert(newProfile, { onConflict: 'id' }).select().single();
-          profile = created || newProfile;
+          // Auto-create profile if it doesn't exist (Google Sign-in first-time users)
+          if (!profile && !profileError) {
+            const referralCode = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
+            const newProfile = {
+              id: user.id,
+              email: user.email,
+              full_name: baseUser.full_name,
+              referral_code: referralCode,
+            };
+            try {
+              const { data: created } = await supabase.from('profiles').upsert(newProfile, { onConflict: 'id' }).select().single();
+              profile = created || newProfile;
+            } catch (createErr) {
+              console.warn('[Auth] Could not create profile, using defaults:', createErr);
+              profile = newProfile;
+            }
+          }
+        } catch (profileFetchErr) {
+          console.warn('[Auth] Profile fetch failed, using base user:', profileFetchErr);
         }
 
-        const merged = { ...baseUser, ...profile };
+        const merged = { ...baseUser, ...(profile || {}) };
         
-        // ── 3-Day Free Trial Logic ──
-        const signupDate = profile?.created_at ? new Date(profile.created_at) : new Date(user.created_at);
-        const now = new Date();
-        const diffDays = (now - signupDate) / (1000 * 60 * 60 * 24);
+        merged.is_premium = profile?.is_premium || false;
         
-        // User is premium if they paid OR if they are within 3 days of signup
-        const isTrialActive = diffDays <= 3;
-        merged.is_premium = merged.is_premium || isTrialActive;
-        merged.trial_days_left = Math.max(0, Math.ceil(3 - diffDays));
-        merged.is_on_trial = isTrialActive && !profile?.is_premium;
+        // ── Subscription Expiry Logic (non-blocking) ──
+        if (profile?.premium_expiry_date) {
+          const expiryDate = new Date(profile.premium_expiry_date);
+          const now = new Date();
+          
+          if (expiryDate < now) {
+            // Subscription expired — fire and forget the DB update
+            supabase.from('profiles').update({ is_premium: false, premium_expiry_date: null }).eq('id', user.id)
+              .then(() => console.log('[Auth] Expired premium revoked'))
+              .catch(e => console.warn('[Auth] Could not revoke expired premium:', e));
+            merged.is_premium = false;
+            merged.premium_expiry_date = null;
+            merged.subscription_days_left = 0;
+          } else {
+            // Subscription is active
+            const diffTime = Math.abs(expiryDate - now);
+            merged.subscription_days_left = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          }
+        } else {
+          merged.subscription_days_left = 0;
+        }
+
+        merged.is_on_trial = false;
         
-        // Auto-grant admin and premium to the specified email
-        if (merged.email === 'adnanabdulbasit75@gmail.com') {
+        // Auto-grant admin and premium to the specified emails
+        if (merged.email === 'adnanabdulbasit75@gmail.com' || merged.email === 'entryhive.contact@gmail.com') {
           merged.role = 'admin';
           merged.is_premium = true;
+          merged.subscription_days_left = 10000;
         }
 
         if (!merged.referral_code) {
           const code = `REF${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
-          await supabase.from('profiles').update({ referral_code: code }).eq('id', user.id);
+          // Fire and forget — don't block login for a referral code
+          supabase.from('profiles').update({ referral_code: code }).eq('id', user.id)
+            .then(() => console.log('[Auth] Referral code generated'))
+            .catch(e => console.warn('[Auth] Could not save referral code:', e));
           merged.referral_code = code;
         }
         return merged;
       } catch (e) {
         console.error('[Auth] Critical error in me():', e);
         // Fallback to basic session info if database call fails
-        const { data: { session } } = await supabase.auth.getSession();
-        return session?.user ? { ...session.user, ...session.user.user_metadata } : null;
+        try {
+          const { data: { session } } = await supabase.auth.getSession();
+          return session?.user ? { ...session.user, ...session.user.user_metadata } : null;
+        } catch (fallbackErr) {
+          console.error('[Auth] Even fallback getSession failed:', fallbackErr);
+          return null;
+        }
       }
     },
 

@@ -1,0 +1,2160 @@
+[
+  {
+    "id": "820488ed-97af-49ee-9342-26daca7a6f0d",
+    "options": [
+      "break",
+      "broke",
+      "broken",
+      "breaked"
+    ],
+    "explanation": "Past participle of 'break' is 'broken'.",
+    "difficulty": "easy",
+    "question_text": "The kid has _______ a cup.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "aa1a14fe-b22c-47d7-81ab-7a5c80c03169",
+    "options": [
+      "on",
+      "over",
+      "after",
+      "at"
+    ],
+    "explanation": "'Laugh at' is the correct phrase.",
+    "difficulty": "easy",
+    "question_text": "They were laughing _______ a clown.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "bff17332-16dd-4b84-bdc9-293731cdb4af",
+    "options": [
+      "go",
+      "goes",
+      "went",
+      "gone"
+    ],
+    "explanation": "Past tense of 'go' is 'went'.",
+    "difficulty": "easy",
+    "question_text": "She _______ to the market yesterday.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d0a15a86-4116-4427-8f64-9268e7d0eff3",
+    "options": [
+      "are",
+      "were",
+      "is",
+      "be"
+    ],
+    "explanation": "'News' is uncountable and takes singular verb 'is'.",
+    "difficulty": "easy",
+    "question_text": "The news _______ very shocking.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "abcf6eb1-efac-4d8b-bf26-a1e3861eeb87",
+    "options": [
+      "is",
+      "are",
+      "was",
+      "were"
+    ],
+    "explanation": "With 'neither...nor', verb agrees with the nearer subject (friends = are).",
+    "difficulty": "medium",
+    "question_text": "Neither Ali nor his friends _______ present.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ccfa22d4-5f49-4d18-8460-2adcdd40f9a2",
+    "options": [
+      "is",
+      "are",
+      "was",
+      "were"
+    ],
+    "explanation": "'Who' refers to 'students' (plural), so 'are' is correct.",
+    "difficulty": "medium",
+    "question_text": "He is one of those students who _______ always punctual.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a59d3433-afbe-41e4-bfe8-067733d68a09",
+    "options": [
+      "Sad",
+      "Joyful",
+      "Angry",
+      "Tired"
+    ],
+    "explanation": "Joyful is a synonym of Happy.",
+    "difficulty": "easy",
+    "question_text": "Choose the correct synonym of 'Happy':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8044c27e-155f-495f-b7e8-cf9dcf4211a2",
+    "options": [
+      "Small",
+      "Tiny",
+      "Large",
+      "Narrow"
+    ],
+    "explanation": "Large is a synonym of Big.",
+    "difficulty": "easy",
+    "question_text": "Synonym of 'Big':",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "464eead2-afa5-4e32-92e7-5d9f8c25d344",
+    "options": [
+      "Easy",
+      "Difficult",
+      "Simple",
+      "Fast"
+    ],
+    "explanation": "Arduous means very difficult.",
+    "difficulty": "medium",
+    "question_text": "Synonym of 'Arduous':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "567916ac-874c-478d-8a13-af2a28546b23",
+    "options": [
+      "Cruel",
+      "Selfish",
+      "Kind",
+      "Harsh"
+    ],
+    "explanation": "Benevolent means kind and generous.",
+    "difficulty": "easy",
+    "question_text": "Synonym of 'Benevolent':",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "2675ec5d-b415-4ba3-a199-4adfadb71088",
+    "options": [
+      "Old",
+      "Modern",
+      "Historic",
+      "Aged"
+    ],
+    "explanation": "Modern is the antonym of Ancient.",
+    "difficulty": "easy",
+    "question_text": "Antonym of 'Ancient':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0d05cd69-2ad5-4b9e-9d5f-058baa333963",
+    "options": [
+      "Shy",
+      "Bold",
+      "Fearful",
+      "Nervous"
+    ],
+    "explanation": "Bold is the antonym of Timid.",
+    "difficulty": "easy",
+    "question_text": "Antonym of 'Timid':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "564c12e5-9e72-4874-ad45-6502d5f0b52a",
+    "options": [
+      "Stingy",
+      "Generous",
+      "Greedy",
+      "Selfish"
+    ],
+    "explanation": "Generous is the antonym of Miser.",
+    "difficulty": "easy",
+    "question_text": "Antonym of 'Miser':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4fe1e207-79f9-42b3-bf0e-0fbb01fd5474",
+    "options": [
+      "Laziness",
+      "Enthusiasm",
+      "Boredom",
+      "Sadness"
+    ],
+    "explanation": "Zeal means great energy and enthusiasm.",
+    "difficulty": "easy",
+    "question_text": "Choose the word closest in meaning to 'Zeal':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9f51ed5a-a4c7-42d6-969b-c71927e92b77",
+    "options": [
+      "finish",
+      "finished",
+      "finishing",
+      "finishes"
+    ],
+    "explanation": "Past tense 'finished' is correct here.",
+    "difficulty": "easy",
+    "question_text": "The boy _______ his homework before dinner.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "04634d7d-23b9-4abf-913a-8a74437c02e4",
+    "options": [
+      "from",
+      "of",
+      "with",
+      "by"
+    ],
+    "explanation": "'Afraid of' is the correct phrase.",
+    "difficulty": "easy",
+    "question_text": "Choose the correct preposition: 'He is afraid _______ dogs.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a52b0b3c-5921-45c7-842a-a7ff329df818",
+    "options": [
+      "This mosque is built in 1900.",
+      "This mosque was built in 1900.",
+      "This mosque has built in 1900.",
+      "This mosque built in 1900."
+    ],
+    "explanation": "Past simple passive: was + past participle.",
+    "difficulty": "easy",
+    "question_text": "Identify the correct passive voice: 'They built this mosque in 1900.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "09433860-9158-4bbc-84a7-38d561299f3f",
+    "options": [
+      "Present Perfect",
+      "Past Perfect",
+      "Present Perfect Continuous",
+      "Past Continuous"
+    ],
+    "explanation": "'Have been + -ing' is Present Perfect Continuous.",
+    "difficulty": "medium",
+    "question_text": "'I have been studying for three hours.' This tense is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3d105658-e6d6-4ad0-91ba-06708ad4d3b8",
+    "options": [
+      "Reveal",
+      "Hide",
+      "Show",
+      "Display"
+    ],
+    "explanation": "Conceal means to hide something.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Conceal':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d380bb39-4cf9-477d-9edc-66ac175d60c0",
+    "options": [
+      "Silent",
+      "Fluent",
+      "Rude",
+      "Confused"
+    ],
+    "explanation": "Eloquent means fluent and persuasive in speech.",
+    "difficulty": "medium",
+    "question_text": "Synonym of 'Eloquent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0614b51a-794f-4071-9baf-0919921d5fe8",
+    "options": [
+      "Malicious",
+      "Kind",
+      "Hostile",
+      "Greedy"
+    ],
+    "explanation": "Benevolent means well-meaning and kindly.",
+    "difficulty": "easy",
+    "question_text": "Choose the synonym of 'Benevolent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2be43ae2-4d99-42c3-b972-2952fba1f6df",
+    "options": [
+      "Silent",
+      "Articulate",
+      "Dull",
+      "Confused"
+    ],
+    "explanation": "Eloquent means fluent or persuasive in speaking.",
+    "difficulty": "easy",
+    "question_text": "Choose the synonym of 'Eloquent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5102762d-c635-481a-8360-91b2bdc9dd90",
+    "options": [
+      "Lazy",
+      "Hardworking",
+      "Careless",
+      "Indifferent"
+    ],
+    "explanation": "Diligent means showing care and effort in one's work.",
+    "difficulty": "easy",
+    "question_text": "Choose the synonym of 'Diligent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f76523b2-877e-4012-a698-1f760d7a1c3e",
+    "options": [
+      "Dishonest",
+      "Frank",
+      "Secretive",
+      "Deceitful"
+    ],
+    "explanation": "Candid means truthful and straightforward.",
+    "difficulty": "easy",
+    "question_text": "Choose the synonym of 'Candid':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d17b7a38-060d-411c-ac50-27e182aa147b",
+    "options": [
+      "Clear",
+      "Vague",
+      "Definite",
+      "Obvious"
+    ],
+    "explanation": "Ambiguous means open to more than one interpretation.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Ambiguous':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c7266378-e14d-4931-91e4-e29a341974ef",
+    "options": [
+      "Idealistic",
+      "Practical",
+      "Theoretical",
+      "Impractical"
+    ],
+    "explanation": "Pragmatic means dealing with things sensibly and realistically.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Pragmatic':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bd0a28fd-2e6e-46cf-948d-ff286d6b56cb",
+    "options": [
+      "Weak",
+      "Persistent",
+      "Yielding",
+      "Flexible"
+    ],
+    "explanation": "Tenacious means tending to keep a firm hold of something.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Tenacious':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5398d4e5-eb46-40e8-9f65-b28d754e0597",
+    "options": [
+      "Scarce",
+      "Abundant",
+      "Limited",
+      "Meager"
+    ],
+    "explanation": "Copious means abundant in supply or quantity.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Copious':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a158bf47-0d24-43d9-816f-34cf0ec864ab",
+    "options": [
+      "Permanent",
+      "Short-lived",
+      "Eternal",
+      "Lasting"
+    ],
+    "explanation": "Ephemeral means lasting for a very short time.",
+    "difficulty": "hard",
+    "question_text": "Choose the synonym of 'Ephemeral':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "39ec6ad5-d984-4b51-8ede-f52dede39b06",
+    "options": [
+      "Rare",
+      "Omnipresent",
+      "Scarce",
+      "Uncommon"
+    ],
+    "explanation": "Ubiquitous means present, appearing, or found everywhere.",
+    "difficulty": "hard",
+    "question_text": "Choose the synonym of 'Ubiquitous':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "11b9e09a-38fe-4d1c-8601-4c7b5b094d3c",
+    "options": [
+      "Harmless",
+      "Harmful",
+      "Beneficial",
+      "Helpful"
+    ],
+    "explanation": "Pernicious means having a harmful effect.",
+    "difficulty": "hard",
+    "question_text": "Choose the synonym of 'Pernicious':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "36386913-9773-43cb-96e5-09d7dc25beb6",
+    "options": [
+      "Worsen",
+      "Relieve",
+      "Aggravate",
+      "Intensify"
+    ],
+    "explanation": "Alleviate means to make suffering less severe.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Alleviate':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "07640351-3bdd-4bc5-93c3-f6ea886cab3a",
+    "options": [
+      "Wordy",
+      "Concise",
+      "Lengthy",
+      "Detailed"
+    ],
+    "explanation": "Verbose means using too many words. Concise is the opposite.",
+    "difficulty": "easy",
+    "question_text": "Choose the antonym of 'Verbose':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ebbbc368-dd96-4f12-9934-7e9d7fd51119",
+    "options": [
+      "Hidden",
+      "Clear",
+      "Vague",
+      "Dark"
+    ],
+    "explanation": "Obscure means unclear. Clear is the opposite.",
+    "difficulty": "easy",
+    "question_text": "Choose the antonym of 'Obscure':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "057cdf6b-7720-454e-9bed-e64e6be2643b",
+    "options": [
+      "Wealthy",
+      "Poor",
+      "Rich",
+      "Prosperous"
+    ],
+    "explanation": "Affluent means wealthy. Poor is the antonym.",
+    "difficulty": "easy",
+    "question_text": "Choose the antonym of 'Affluent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "28355157-6209-485f-820b-299addeb6634",
+    "options": [
+      "Wise",
+      "Reckless",
+      "Careful",
+      "Cautious"
+    ],
+    "explanation": "Prudent means showing care. Reckless is the opposite.",
+    "difficulty": "medium",
+    "question_text": "Choose the antonym of 'Prudent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b6fd8819-8b0f-44f2-b88b-01a19d65c89e",
+    "options": [
+      "Sluggish",
+      "Energetic",
+      "Drowsy",
+      "Tired"
+    ],
+    "explanation": "Lethargic means lacking energy. Energetic is the opposite.",
+    "difficulty": "medium",
+    "question_text": "Choose the antonym of 'Lethargic':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ca8315b7-496c-4887-8076-45c17d014088",
+    "options": [
+      "Showy",
+      "Modest",
+      "Flashy",
+      "Extravagant"
+    ],
+    "explanation": "Ostentatious means showy. Modest is the opposite.",
+    "difficulty": "hard",
+    "question_text": "Choose the antonym of 'Ostentatious':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "92b5fe2c-b8c9-4a30-9215-781d6da68598",
+    "options": [
+      "Generous",
+      "Petty",
+      "Noble",
+      "Forgiving"
+    ],
+    "explanation": "Magnanimous means generous. Petty is the opposite.",
+    "difficulty": "hard",
+    "question_text": "Choose the antonym of 'Magnanimous':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7de98db8-5636-4cb1-9646-676e85377a25",
+    "options": [
+      "Temporary",
+      "Permanent",
+      "Brief",
+      "Fleeting"
+    ],
+    "explanation": "Transient means temporary. Permanent is the opposite.",
+    "difficulty": "medium",
+    "question_text": "Choose the antonym of 'Transient':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7d369165-c941-4b74-94fe-a5dc02f37ed3",
+    "options": [
+      "Hostile",
+      "Benevolent",
+      "Evil",
+      "Cruel"
+    ],
+    "explanation": "Malevolent means wishing evil. Benevolent is the opposite.",
+    "difficulty": "easy",
+    "question_text": "Choose the antonym of 'Malevolent':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3b9c2024-3246-4c19-bb00-d6b0a1f9d799",
+    "options": [
+      "Excess",
+      "Scarcity",
+      "Abundance",
+      "Surplus"
+    ],
+    "explanation": "Plethora means excess. Scarcity is the opposite.",
+    "difficulty": "hard",
+    "question_text": "Choose the antonym of 'Plethora':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "496a044e-6a4b-416b-bc44-285f860aab50",
+    "options": [
+      "Indifference",
+      "Enthusiasm",
+      "Boredom",
+      "Disinterest"
+    ],
+    "explanation": "Apathy means lack of interest. Enthusiasm is the opposite.",
+    "difficulty": "medium",
+    "question_text": "Choose the antonym of 'Apathy':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2bd078fa-cc64-4309-8384-28290c3eebdf",
+    "options": [
+      "Thrifty",
+      "Extravagant",
+      "Economical",
+      "Careful"
+    ],
+    "explanation": "Frugal means sparing. Extravagant is the opposite.",
+    "difficulty": "medium",
+    "question_text": "Choose the antonym of 'Frugal':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a64ac776-7617-4103-8120-629e495e17f2",
+    "options": [
+      "trivial",
+      "groundbreaking",
+      "insignificant",
+      "ordinary"
+    ],
+    "explanation": "Groundbreaking means innovative and pioneering.",
+    "difficulty": "easy",
+    "question_text": "The scientist's findings were so ___ that they changed the entire field of research.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c1b3efb0-2ad5-4bfa-8348-f547bd0585f8",
+    "options": [
+      "lavish",
+      "humble",
+      "extravagant",
+      "opulent"
+    ],
+    "explanation": "Humble appearance contrasts with being wealthy.",
+    "difficulty": "easy",
+    "question_text": "Despite his ___ appearance, he was actually very wealthy.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "188edef0-a39d-4b11-867d-91efc9452b7a",
+    "options": [
+      "alliance",
+      "rivalry",
+      "friendship",
+      "cooperation"
+    ],
+    "explanation": "Rivalry fits the context of lasting mutual distrust.",
+    "difficulty": "medium",
+    "question_text": "The ___ between the two countries has lasted for decades, resulting in mutual distrust.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "668e23e2-c1aa-4de8-8d59-873696d87a7a",
+    "options": [
+      "selfish",
+      "altruistic",
+      "greedy",
+      "hostile"
+    ],
+    "explanation": "Altruistic means selflessly concerned for others.",
+    "difficulty": "medium",
+    "question_text": "Her ___ nature made her popular among colleagues ON CONFLICT (question) DO NOTHING; she always helped everyone.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "29649293-7e78-4823-9952-17df0c5b2aaf",
+    "options": [
+      "engaging",
+      "monotonous",
+      "interesting",
+      "captivating"
+    ],
+    "explanation": "Monotonous means dull and tedious, causing sleep.",
+    "difficulty": "easy",
+    "question_text": "The professor's lecture was so ___ that most students fell asleep.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aad0f731-11ac-4c8f-bd7b-07dbf30c2941",
+    "options": [
+      "widen",
+      "bridge",
+      "increase",
+      "expand"
+    ],
+    "explanation": "Bridge the gap means to reduce differences.",
+    "difficulty": "medium",
+    "question_text": "The new policy aims to ___ the gap between rich and poor in Pakistan.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c1f9567c-1239-4539-b0f3-bd76d8afc20e",
+    "options": [
+      "polite",
+      "derogatory",
+      "kind",
+      "respectful"
+    ],
+    "explanation": "Derogatory means showing disrespect.",
+    "difficulty": "medium",
+    "question_text": "His ___ remarks offended everyone at the gathering.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "978fc614-6e4b-4192-8545-fbd4079088ff",
+    "options": [
+      "swift",
+      "sluggish",
+      "prompt",
+      "immediate"
+    ],
+    "explanation": "Sluggish means slow, which would be criticized in a crisis.",
+    "difficulty": "easy",
+    "question_text": "The government's ___ response to the flood crisis was widely criticized.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9067d221-bcac-4280-ab48-1c1a1dbdc4a2",
+    "options": [
+      "hesitation",
+      "conviction",
+      "doubt",
+      "uncertainty"
+    ],
+    "explanation": "Conviction means firm belief, making others believe.",
+    "difficulty": "medium",
+    "question_text": "She spoke with such ___ that everyone believed her story.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6ad27a2e-8ad6-4566-85ec-cfffa2347ea4",
+    "options": [
+      "weak",
+      "compelling",
+      "insufficient",
+      "vague"
+    ],
+    "explanation": "Compelling evidence is strong enough for conviction.",
+    "difficulty": "medium",
+    "question_text": "The evidence was ___ enough to convict the accused beyond reasonable doubt.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0a20b86f-c5e4-41c3-9f30-7b784487a832",
+    "options": [
+      "weakness",
+      "resilience",
+      "fragility",
+      "cowardice"
+    ],
+    "explanation": "Resilience means the ability to recover from difficulties.",
+    "difficulty": "easy",
+    "question_text": "Pakistan's cricket team showed great ___ in the final match, winning against all odds.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "915fb536-9043-4635-b840-fe590b4a9e32",
+    "options": [
+      "exemplary",
+      "disruptive",
+      "model",
+      "obedient"
+    ],
+    "explanation": "Disruptive behavior causes disturbances.",
+    "difficulty": "easy",
+    "question_text": "The child's ___ behavior in class resulted in multiple detentions.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3b09fdd4-65fb-4700-8110-465db0e95509",
+    "options": [
+      "Butcher",
+      "Surgeon",
+      "Teacher",
+      "Engineer"
+    ],
+    "explanation": "A pen is a writer's tool, a scalpel is a surgeon's tool.",
+    "difficulty": "easy",
+    "question_text": "Pen : Writer :: Scalpel : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "60b0a2ff-5ffc-44b8-be18-ecc2fa9b722a",
+    "options": [
+      "China",
+      "Japan",
+      "Korea",
+      "Thailand"
+    ],
+    "explanation": "Islamabad is the capital of Pakistan ON CONFLICT (question) DO NOTHING; Tokyo is the capital of Japan.",
+    "difficulty": "easy",
+    "question_text": "Islamabad : Pakistan :: Tokyo : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "87f5e3cc-bcd5-4086-885b-d558ce60fc43",
+    "options": [
+      "Health",
+      "Epidemic",
+      "Medicine",
+      "Hospital"
+    ],
+    "explanation": "Drought causes famine ON CONFLICT (question) DO NOTHING; virus causes epidemic.",
+    "difficulty": "medium",
+    "question_text": "Drought : Famine :: Virus : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2f4ea207-15cf-4271-80bd-c2e5d2fa83d1",
+    "options": [
+      "Shop",
+      "Bank",
+      "ATM",
+      "Wallet"
+    ],
+    "explanation": "Books are kept in a library ON CONFLICT (question) DO NOTHING; money is kept in a bank.",
+    "difficulty": "easy",
+    "question_text": "Book : Library :: Money : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bd1d3edb-2b2e-4e2b-9318-02d3162ce51a",
+    "options": [
+      "Nest",
+      "Bird",
+      "Shell",
+      "Feather"
+    ],
+    "explanation": "A seed grows into a tree ON CONFLICT (question) DO NOTHING; an egg grows into a bird.",
+    "difficulty": "easy",
+    "question_text": "Seed : Tree :: Egg : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4a9e4748-914c-4b53-9e46-de1e78c19343",
+    "options": [
+      "Happy",
+      "Furious",
+      "Peaceful",
+      "Joyful"
+    ],
+    "explanation": "Calm and serene are synonyms ON CONFLICT (question) DO NOTHING; angry and furious are synonyms.",
+    "difficulty": "easy",
+    "question_text": "Calm : Serene :: Angry : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9c202f69-3a91-48cb-a37a-a09372c3fdd1",
+    "options": [
+      "Planets",
+      "Cells",
+      "Mountains",
+      "Rivers"
+    ],
+    "explanation": "Telescope views stars ON CONFLICT (question) DO NOTHING; microscope views cells.",
+    "difficulty": "medium",
+    "question_text": "Telescope : Stars :: Microscope : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "076efcad-36d4-4d36-9296-bdad8be889f9",
+    "options": [
+      "Bangladesh",
+      "India",
+      "Nepal",
+      "Sri Lanka"
+    ],
+    "explanation": "Quaid-e-Azam founded Pakistan ON CONFLICT (question) DO NOTHING; Gandhi is the father of India.",
+    "difficulty": "easy",
+    "question_text": "Quaid-e-Azam : Pakistan :: Gandhi : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6c141764-3813-446a-85de-2bff957a5ced",
+    "options": [
+      "Increase",
+      "Pain",
+      "Worsen",
+      "Aggravate"
+    ],
+    "explanation": "Mitigate reduces severity ON CONFLICT (question) DO NOTHING; alleviate reduces pain.",
+    "difficulty": "hard",
+    "question_text": "Mitigate : Severity :: Alleviate : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9a2c7737-5c85-4918-a57d-2e7b29d0ba05",
+    "options": [
+      "Bolt",
+      "Screw",
+      "Nut",
+      "Washer"
+    ],
+    "explanation": "Hammer drives a nail ON CONFLICT (question) DO NOTHING; screwdriver drives a screw.",
+    "difficulty": "easy",
+    "question_text": "Hammer : Nail :: Screwdriver : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "303c2f64-c834-4ae6-92e0-e5e3b47f6426",
+    "options": [
+      "Story",
+      "Sonnet",
+      "Essay",
+      "Article"
+    ],
+    "explanation": "An author writes novels ON CONFLICT (question) DO NOTHING; a poet writes sonnets.",
+    "difficulty": "medium",
+    "question_text": "Author : Novel :: Poet : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7d7dbe40-7201-4010-b2be-ed77891c788f",
+    "options": [
+      "Happy",
+      "Gloomy",
+      "Cheerful",
+      "Excited"
+    ],
+    "explanation": "An optimist is hopeful ON CONFLICT (question) DO NOTHING; a pessimist is gloomy.",
+    "difficulty": "medium",
+    "question_text": "Optimist : Hopeful :: Pessimist : ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7437fcfa-44ee-4c8d-8c14-04685bbc9ee4",
+    "options": [
+      "Only funding",
+      "Access, quality, and gender disparity",
+      "Teacher shortage only",
+      "Technology gap"
+    ],
+    "explanation": "The passage mentions access, quality, and gender disparity as challenges.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Pakistan's education system faces challenges including access, quality, and gender disparity. Despite government efforts, rural areas lag behind urban centers.' What is the main challenge mentioned?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fc216690-b372-4dd2-b0fa-a3762979f848",
+    "options": [
+      "Industry",
+      "Agriculture",
+      "Tourism",
+      "Mining"
+    ],
+    "explanation": "The passage states the Indus supports agriculture.",
+    "difficulty": "easy",
+    "question_text": "Read: 'The Indus River is the lifeline of Pakistan, supporting agriculture across Punjab and Sindh. Climate change threatens water availability.' The Indus River primarily supports:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fe4abec4-743c-4b0c-8927-3a2e3bf33e7a",
+    "options": [
+      "Analysis",
+      "Objectivity",
+      "Bias",
+      "Fact evaluation"
+    ],
+    "explanation": "Bias is something critical thinking tries to avoid.",
+    "difficulty": "medium",
+    "question_text": "Read: 'Critical thinking involves analyzing facts to form a judgment. It requires objectivity and freedom from bias.' Which is NOT a component of critical thinking?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "dbab76a9-24d0-4b93-a5f7-95da972878d4",
+    "options": [
+      "Military alliance",
+      "Infrastructure development",
+      "Cultural exchange",
+      "Sports"
+    ],
+    "explanation": "The passage states CPEC focuses on infrastructure development.",
+    "difficulty": "easy",
+    "question_text": "Read: 'The CPEC project aims to enhance connectivity between Pakistan and China through infrastructure development.' CPEC primarily focuses on:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "522fa8ec-62f3-4e7b-a81f-46db1fe1887b",
+    "options": [
+      "Quiet",
+      "Reserved",
+      "Forthcoming",
+      "Silent"
+    ],
+    "explanation": "Reticent means not revealing one's thoughts ON CONFLICT (question) DO NOTHING; forthcoming is the opposite.",
+    "difficulty": "hard",
+    "question_text": "The antonym of 'Reticent' is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "46c6f687-bebe-404a-a47d-f3a6c9e4d515",
+    "options": [
+      "Urbanization",
+      "Reforestation",
+      "Industrialization",
+      "Mining"
+    ],
+    "explanation": "The passage states reforestation can reverse deforestation effects.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Deforestation leads to soil erosion, loss of biodiversity, and contributes to climate change. Reforestation efforts can help reverse these effects.' What can help reverse deforestation effects?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "16d45743-e49a-48c3-b9b9-f39d21092fb9",
+    "options": [
+      "Delhi",
+      "Lahore",
+      "Karachi",
+      "Islamabad"
+    ],
+    "explanation": "The passage mentions Lahore as the location.",
+    "difficulty": "easy",
+    "question_text": "Read: 'The Mughal Empire made significant contributions to architecture in the subcontinent. The Badshahi Mosque and Shalimar Gardens in Lahore are prime examples.' These examples are located in:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d30cf75f-8364-4015-97ff-41abb3975115",
+    "options": [
+      "Production capacity",
+      "Purchasing power",
+      "Export volume",
+      "Import duties"
+    ],
+    "explanation": "The passage says inflation erodes purchasing power.",
+    "difficulty": "medium",
+    "question_text": "Read: 'Inflation erodes purchasing power, meaning people can buy fewer goods with the same money. Pakistan has faced rising inflation in recent years.' Inflation affects:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "535cd2ed-e661-403f-bd3d-80157796b213",
+    "options": [
+      "Up to 30%",
+      "Up to 60%",
+      "Up to 90%",
+      "Up to 100%"
+    ],
+    "explanation": "The passage states drip irrigation saves up to 60% water.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Water conservation is essential in Pakistan where agriculture consumes over 90% of water resources. Drip irrigation can save up to 60% water.' Drip irrigation can save:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ecea6448-e4ed-4a28-9c89-e33a92fc2dc5",
+    "options": [
+      "Colonial rule",
+      "Self-reliance",
+      "Western culture",
+      "Material wealth"
+    ],
+    "explanation": "The passage mentions self-reliance and spiritual awakening.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Allama Iqbal's poetry inspired the movement for a separate Muslim state. His vision emphasized self-reliance and spiritual awakening.' Iqbal's poetry emphasized:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "69dd4b0d-0c85-4811-8f40-c6d1f2bb99cc",
+    "options": [
+      "Sindh",
+      "Punjab",
+      "KPK",
+      "Balochistan"
+    ],
+    "explanation": "The passage states it's in Punjab.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Renewable energy sources like solar and wind are gaining importance in Pakistan. The Quaid-e-Azam Solar Park in Punjab is one of the largest in the world.' The solar park is located in:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9acf648b-ff7d-4919-87fd-9cb3ebd96534",
+    "options": [
+      "3rd",
+      "5th",
+      "7th",
+      "10th"
+    ],
+    "explanation": "The passage states Pakistan is the 5th largest by population.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Despite being the 5th largest country by population, Pakistan faces food security challenges due to water scarcity and climate change.' Pakistan ranks ___ by population:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cae9ec64-4a5d-4129-b2be-d24bc4164c2a",
+    "options": [
+      "Vaccine",
+      "Antibiotic",
+      "Vitamin",
+      "Painkiller"
+    ],
+    "explanation": "The passage identifies penicillin as the first true antibiotic.",
+    "difficulty": "easy",
+    "question_text": "Read: 'The discovery of penicillin by Alexander Fleming revolutionized medicine. It was the first true antibiotic and has saved millions of lives.' Penicillin was the first:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a751c887-dbe2-409a-80fd-a2291e912ebe",
+    "options": [
+      "He don't know the answer.",
+      "He doesn't knows the answer.",
+      "He doesn't know the answer.",
+      "He don't knows the answer."
+    ],
+    "explanation": "'Doesn't' is correct with 'he' and the base form 'know'.",
+    "difficulty": "easy",
+    "question_text": "Choose the correct sentence:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e3ade492-bc67-40ca-aeb9-cfaea65b378b",
+    "options": [
+      "was",
+      "were",
+      "are",
+      "have been"
+    ],
+    "explanation": "Committee is a collective noun, takes singular verb 'was'.",
+    "difficulty": "medium",
+    "question_text": "'The committee ___ divided in their opinion.' Choose the correct verb:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "d70fc6b7-6460-453f-98f1-4ab007af1b4c",
+    "options": [
+      "Each",
+      "have",
+      "their",
+      "assignment"
+    ],
+    "explanation": "'Each' is singular, so it should be 'has' not 'have'.",
+    "difficulty": "medium",
+    "question_text": "Identify the error: 'Each of the boys have completed their assignment.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "58ba07e3-8259-440d-b7fe-08ee95bd11a8",
+    "options": [
+      "in",
+      "at",
+      "on",
+      "with"
+    ],
+    "explanation": "The correct phrase is 'good at' a subject.",
+    "difficulty": "easy",
+    "question_text": "Choose the correct preposition: 'She is good ___ mathematics.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0db3b53b-a834-45ee-a35c-8058d53e460f",
+    "options": [
+      "am",
+      "was",
+      "were",
+      "is"
+    ],
+    "explanation": "Subjunctive mood requires 'were' for hypothetical situations.",
+    "difficulty": "medium",
+    "question_text": "'If I ___ a bird, I would fly.' Choose the correct option:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f096b6c5-3a5f-4f22-b219-d4f8f08de3dc",
+    "options": [
+      "The student was praised by the teacher.",
+      "The student is praised by the teacher.",
+      "The student has been praised by the teacher.",
+      "The student were praised by the teacher."
+    ],
+    "explanation": "Past simple active becomes 'was + past participle' in passive.",
+    "difficulty": "easy",
+    "question_text": "Choose the passive voice of: 'The teacher praised the student.'",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "47646d80-f703-4a32-8612-8fb146c6b123",
+    "options": [
+      "were",
+      "are",
+      "was",
+      "have been"
+    ],
+    "explanation": "'News' is an uncountable noun and takes a singular verb.",
+    "difficulty": "medium",
+    "question_text": "'The news ___ shocking.' Choose the correct verb:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "323df6bb-4c68-4c05-aa88-4ab87a46d206",
+    "options": [
+      "He said that he is going to Lahore.",
+      "He said that he was going to Lahore.",
+      "He said that I am going to Lahore.",
+      "He said that I was going to Lahore."
+    ],
+    "explanation": "In indirect speech, 'am going' changes to 'was going' and 'I' to 'he'.",
+    "difficulty": "medium",
+    "question_text": "Choose the indirect speech: 'He said, \"I am going to Lahore.\"'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b6bfc74e-5220-4579-9113-ff93709778d4",
+    "options": [
+      "A",
+      "An",
+      "The",
+      "No article"
+    ],
+    "explanation": "'An' is used before words starting with a vowel sound. 'Honest' starts with a vowel sound.",
+    "difficulty": "easy",
+    "question_text": "Choose the correct article: '___ honest man is respected everywhere.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "42541a42-f4c4-4281-8500-da7eb4882bfc",
+    "options": [
+      "would",
+      "will",
+      "shall",
+      "could"
+    ],
+    "explanation": "First conditional uses 'will' for likely future events.",
+    "difficulty": "easy",
+    "question_text": "Identify the correct conditional: 'If it rains, I ___ stay home.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bd3b74b2-07e2-4265-a3b9-3b7aa15759eb",
+    "options": [
+      "Clear",
+      "Having more than one meaning",
+      "Obvious",
+      "Simple"
+    ],
+    "explanation": "Ambiguous means open to more than one interpretation.",
+    "difficulty": "easy",
+    "question_text": "Choose the correct meaning of 'Ambiguous':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "56516255-b27a-434f-a482-cf2666e9dfd0",
+    "options": [
+      "Evil",
+      "Kind and generous",
+      "Cruel",
+      "Selfish"
+    ],
+    "explanation": "Benevolent means well-meaning and kindly.",
+    "difficulty": "easy",
+    "question_text": "The word 'Benevolent' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b6d05e5e-146f-4133-9bbe-362382b2ae15",
+    "options": [
+      "Modern",
+      "Outdated",
+      "Current",
+      "Trendy"
+    ],
+    "explanation": "Obsolete means outdated or no longer in use.",
+    "difficulty": "easy",
+    "question_text": "The synonym of 'Obsolete' is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "456e333e-fc97-48bd-b66b-6e0a5bd94b92",
+    "options": [
+      "Long-lasting",
+      "Short-lived",
+      "Ancient",
+      "Strong"
+    ],
+    "explanation": "Ephemeral means lasting for a very short time.",
+    "difficulty": "easy",
+    "question_text": "'Ephemeral' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3383d752-6e6a-4254-a81f-e7fdbdd3bc12",
+    "options": [
+      "Clear",
+      "Transparent",
+      "Confused",
+      "Bright"
+    ],
+    "explanation": "Lucid means clear ON CONFLICT (question) DO NOTHING; confused is the antonym.",
+    "difficulty": "easy",
+    "question_text": "The antonym of 'Lucid' is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "512da5c4-585f-48a1-81c8-d8f7c219b323",
+    "options": [
+      "Idealistic",
+      "Practical",
+      "Theoretical",
+      "Abstract"
+    ],
+    "explanation": "Pragmatic means dealing with things sensibly and realistically.",
+    "difficulty": "easy",
+    "question_text": "'Pragmatic' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1bcb6508-62c3-43bd-b2de-fcb1c55cda30",
+    "options": [
+      "Worsen",
+      "Intensify",
+      "Relieve",
+      "Increase"
+    ],
+    "explanation": "Alleviate means to make suffering less severe.",
+    "difficulty": "easy",
+    "question_text": "The synonym of 'Alleviate' is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d4f2c2c3-e80d-402f-a578-7f3d99526b56",
+    "options": [
+      "Silent",
+      "Excessively talkative",
+      "Reserved",
+      "Shy"
+    ],
+    "explanation": "Garrulous means excessively talkative.",
+    "difficulty": "medium",
+    "question_text": "'Garrulous' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "51994039-8138-4566-8c00-fc1b83d684a9",
+    "options": [
+      "Peak",
+      "Summit",
+      "Nadir",
+      "Top"
+    ],
+    "explanation": "Zenith means the highest point ON CONFLICT (question) DO NOTHING; nadir means the lowest.",
+    "difficulty": "medium",
+    "question_text": "The antonym of 'Zenith' is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d3420f84-c47c-4d6d-a4ce-5d6e2beb4e13",
+    "options": [
+      "Quiet",
+      "Very talkative",
+      "Serious",
+      "Thoughtful"
+    ],
+    "explanation": "Loquacious means tending to talk a great deal.",
+    "difficulty": "medium",
+    "question_text": "'Loquacious' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1cad6590-7a47-4a5a-b2f7-324b7c11a3f1",
+    "options": [
+      "Increase",
+      "Diminish",
+      "Grow",
+      "Expand"
+    ],
+    "explanation": "Abate means to become less intense or widespread.",
+    "difficulty": "medium",
+    "question_text": "The synonym of 'Abate' is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d6e794a8-1ae2-4517-bba1-f6d4e7c152e2",
+    "options": [
+      "Honest",
+      "Wicked",
+      "Kind",
+      "Generous"
+    ],
+    "explanation": "Nefarious means wicked or criminal.",
+    "difficulty": "hard",
+    "question_text": "'Nefarious' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4b9104ef-cc40-4758-9c86-203fc5501b23",
+    "options": [
+      "Sweet",
+      "Bitter and sharp in manner",
+      "Pleasant",
+      "Gentle"
+    ],
+    "explanation": "Acrimonious means angry and bitter in manner.",
+    "difficulty": "hard",
+    "question_text": "'Acrimonious' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0a059e57-e1fe-487d-b206-2719d9e1dd7c",
+    "options": [
+      "pass",
+      "passed",
+      "passing",
+      "passes"
+    ],
+    "explanation": "Past tense 'passed' is required here.",
+    "difficulty": "easy",
+    "question_text": "She _____ the exam with flying colors.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d6aea955-432d-48a7-b218-5fe9cc108f98",
+    "options": [
+      "were",
+      "are",
+      "was",
+      "have been"
+    ],
+    "explanation": "'Neither' is singular, so 'was' is correct.",
+    "difficulty": "medium",
+    "question_text": "Neither of the students _____ prepared.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "909e668d-e7f7-4a71-86b6-2e6bbcd65056",
+    "options": [
+      "which",
+      "who",
+      "whom",
+      "whose"
+    ],
+    "explanation": "'Which' is used for things, not people.",
+    "difficulty": "easy",
+    "question_text": "The book _____ I borrowed was very informative.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "8253e2ee-7b9b-4a4b-9aa6-20610f351950",
+    "options": [
+      "to",
+      "for",
+      "at",
+      "in"
+    ],
+    "explanation": "The correct phrase is 'look forward to'.",
+    "difficulty": "easy",
+    "question_text": "He is looking forward _____ meeting you.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "53f61d47-bd84-4bd3-ae8d-ac1f17ffbcd4",
+    "options": [
+      "is typed",
+      "was typed",
+      "has been typed",
+      "had typed"
+    ],
+    "explanation": "Past simple passive: was + past participle.",
+    "difficulty": "easy",
+    "question_text": "The letter _____ by the secretary yesterday.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0fa8707a-e779-4489-b8b7-c3c279d4bc25",
+    "options": [
+      "Sky",
+      "Galaxy",
+      "Moon",
+      "Planet"
+    ],
+    "explanation": "A tree is part of a forest ON CONFLICT (question) DO NOTHING; a star is part of a galaxy.",
+    "difficulty": "easy",
+    "question_text": "Tree : Forest :: Star : ___",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "18457468-70ed-4587-b5fe-b2da46f31d4f",
+    "options": [
+      "Battle",
+      "Soldier",
+      "Armory",
+      "War"
+    ],
+    "explanation": "A knife belongs in a kitchen ON CONFLICT (question) DO NOTHING; a sword belongs in an armory.",
+    "difficulty": "medium",
+    "question_text": "Knife : Kitchen :: Sword : ___",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8d7f8dcc-10a6-4cc1-b052-e532a87f4311",
+    "options": [
+      "Paint",
+      "Statue",
+      "Canvas",
+      "Museum"
+    ],
+    "explanation": "An architect creates buildings ON CONFLICT (question) DO NOTHING; a sculptor creates statues.",
+    "difficulty": "easy",
+    "question_text": "Architect : Building :: Sculptor : ___",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fe95550d-3511-4369-9dbe-ce3138fc727c",
+    "options": [
+      "Sleeping",
+      "Digestion",
+      "Exercise",
+      "Growth"
+    ],
+    "explanation": "Oxygen is needed for breathing ON CONFLICT (question) DO NOTHING; food is needed for digestion.",
+    "difficulty": "easy",
+    "question_text": "Oxygen : Breathing :: Food : ___",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0d2e3a84-f2ce-46e4-9bbc-5e768cf8fd93",
+    "options": [
+      "Wings",
+      "Feathers",
+      "Beak",
+      "Nest"
+    ],
+    "explanation": "Fish are covered with scales ON CONFLICT (question) DO NOTHING; birds are covered with feathers.",
+    "difficulty": "easy",
+    "question_text": "Fish : Scales :: Bird : ___",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f48a59f8-cfc4-46bd-bdbb-91689ff0777a",
+    "options": [
+      "Hormones that cause stress",
+      "Natural mood elevators",
+      "Artificial chemicals",
+      "Energy boosters"
+    ],
+    "explanation": "The passage states endorphins are natural mood elevators.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Exercise improves mental health by releasing endorphins, which are natural mood elevators.' Endorphins are described as:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cf8abcad-7ce9-4b8b-bde6-dd459632e170",
+    "options": [
+      "Business",
+      "Healthcare",
+      "Education",
+      "Agriculture"
+    ],
+    "explanation": "The passage explicitly says technology transformed education.",
+    "difficulty": "easy",
+    "question_text": "Read: 'Technology has transformed education, enabling students in remote areas to access quality learning.' What has technology transformed?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5d854f16-ec39-4e35-9826-2fb767ddda79",
+    "options": [
+      "to",
+      "for",
+      "with",
+      "of"
+    ],
+    "explanation": "'Refuse to' is the correct construction.",
+    "difficulty": "easy",
+    "question_text": "He refused _____ admit his mistake.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c303768e-cfa1-4caf-b923-7f9cea0d4b5c",
+    "options": [
+      "were",
+      "are",
+      "was",
+      "have been"
+    ],
+    "explanation": "The subject is 'manager' (singular), so 'was' is correct.",
+    "difficulty": "medium",
+    "question_text": "The manager, along with his staff, _____ present at the meeting.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0b3a6b01-58f8-4b0f-a931-e4beef62a24e",
+    "options": [
+      "A music lover",
+      "A flatterer who seeks favor",
+      "A scientist",
+      "A wanderer"
+    ],
+    "explanation": "A sycophant is a person who flatters others to gain advantage.",
+    "difficulty": "hard",
+    "question_text": "'Sycophant' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9d89ee76-a8b9-4e5a-ae6c-8affbbfacef1",
+    "options": [
+      "Brief",
+      "Verbose",
+      "Short",
+      "Terse"
+    ],
+    "explanation": "Laconic means brief ON CONFLICT (question) DO NOTHING; verbose (wordy) is the opposite.",
+    "difficulty": "hard",
+    "question_text": "Antonym of 'Laconic':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9247b966-6e20-4114-b5ce-50f6c9093cec",
+    "options": [
+      "Clear and definite",
+      "Ambiguous or uncertain",
+      "Honest",
+      "Straightforward"
+    ],
+    "explanation": "Equivocal means open to more than one interpretation.",
+    "difficulty": "hard",
+    "question_text": "'Equivocal' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "74bb28af-12c6-4a80-b513-427ab0699aee",
+    "options": [
+      "Abundance",
+      "Scarcity",
+      "Plenty",
+      "Excess"
+    ],
+    "explanation": "Paucity means scarcity or lack.",
+    "difficulty": "hard",
+    "question_text": "The synonym of 'Paucity' is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "21437ab2-62de-41ac-8903-c9ff8b0ac49c",
+    "options": [
+      "Friendly",
+      "Hostile",
+      "Pleasant",
+      "Likeable"
+    ],
+    "explanation": "Amiable means friendly ON CONFLICT (question) DO NOTHING; hostile is the antonym.",
+    "difficulty": "medium",
+    "question_text": "Antonym of 'Amiable':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "85b659fd-a155-4925-8109-f0a1213a5b86",
+    "options": [
+      "Thrifty",
+      "Wastefully extravagant",
+      "Saving",
+      "Careful"
+    ],
+    "explanation": "Prodigal means wastefully extravagant.",
+    "difficulty": "medium",
+    "question_text": "'Prodigal' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8ea43802-ae38-416f-b6f7-82f1cdd9cae0",
+    "options": [
+      "Hidden",
+      "Secret",
+      "Overt",
+      "Concealed"
+    ],
+    "explanation": "Covert means secret ON CONFLICT (question) DO NOTHING; overt means done openly.",
+    "difficulty": "medium",
+    "question_text": "Choose the antonym of 'Covert':",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b1492ef0-3f59-4239-bbd1-f9d321153cd5",
+    "options": [
+      "Hate",
+      "Respect deeply",
+      "Ignore",
+      "Fear"
+    ],
+    "explanation": "Venerate means to regard with great respect.",
+    "difficulty": "medium",
+    "question_text": "'Venerate' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a16a7bf9-b285-47ac-93de-d5494e8edf76",
+    "options": [
+      "Quiet",
+      "Reserved",
+      "Communicative",
+      "Silent"
+    ],
+    "explanation": "Taciturn means reserved or uncommunicative ON CONFLICT (question) DO NOTHING; communicative is the opposite.",
+    "difficulty": "hard",
+    "question_text": "The antonym of 'Taciturn' is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b54419b2-c295-4dc5-bcdc-2b724426f2d7",
+    "options": [
+      "Loyal",
+      "Deceitful and untrustworthy",
+      "Honest",
+      "Faithful"
+    ],
+    "explanation": "Perfidious means deceitful and untrustworthy.",
+    "difficulty": "hard",
+    "question_text": "'Perfidious' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "eb0ceb8f-3e57-430e-b016-427aa3b9ad76",
+    "options": [
+      "A new hospital is being built by them.",
+      "A new hospital was built by them.",
+      "A new hospital has been built by them.",
+      "A new hospital will be built by them."
+    ],
+    "explanation": "Present continuous passive: is being + past participle.",
+    "difficulty": "medium",
+    "question_text": "The passive voice of 'They are building a new hospital' is:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9ae832c8-8828-4cec-9735-be1f5b19ff92",
+    "options": [
+      "She said that she will call me tomorrow.",
+      "She said that she would call me the next day.",
+      "She said that I will call her tomorrow.",
+      "She said that she would call you tomorrow."
+    ],
+    "explanation": "'Will' becomes 'would' and 'tomorrow' becomes 'the next day' in indirect speech.",
+    "difficulty": "medium",
+    "question_text": "Identify the correct indirect speech: 'She said, \"I will call you tomorrow.\"'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a28d231e-1f3b-4b34-aea9-7e17c881c757",
+    "options": [
+      "am",
+      "was",
+      "were",
+      "have been"
+    ],
+    "explanation": "Subjunctive mood uses 'were' for wishes contrary to fact.",
+    "difficulty": "medium",
+    "question_text": "Choose the correct form: 'I wish I _____ taller.'",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8b3effc3-880a-47dd-b92c-cde1645b3e41",
+    "options": [
+      "when",
+      "than",
+      "then",
+      "that"
+    ],
+    "explanation": "'No sooner...than' is the correct correlative conjunction.",
+    "difficulty": "hard",
+    "question_text": "'No sooner had she left _____ it started raining.'",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "429afc77-91fe-4eb7-b543-68eea6d0e707",
+    "options": [
+      "Praise",
+      "Rebuke",
+      "Encourage",
+      "Reward"
+    ],
+    "explanation": "Admonish means to warn or reprimand firmly.",
+    "difficulty": "medium",
+    "question_text": "Choose the synonym of 'Admonish':",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "53c78f7a-b5bd-4296-8d85-a775f4ac786c",
+    "options": [
+      "Worsen",
+      "Improve",
+      "Maintain",
+      "Destroy"
+    ],
+    "explanation": "Ameliorate means to make something bad better.",
+    "difficulty": "hard",
+    "question_text": "'Ameliorate' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b0f9411e-49da-4eed-9302-11752501b516",
+    "options": [
+      "Poor",
+      "Needy",
+      "Affluent",
+      "Destitute"
+    ],
+    "explanation": "Indigent means poor ON CONFLICT (question) DO NOTHING; affluent means wealthy.",
+    "difficulty": "medium",
+    "question_text": "Antonym of 'Indigent':",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7df73dfd-00b9-4cb2-8e3f-e169870bdf8e",
+    "options": [
+      "Rude and arrogant",
+      "Excessively compliant",
+      "Independent",
+      "Defiant"
+    ],
+    "explanation": "Obsequious means excessively servile or compliant.",
+    "difficulty": "hard",
+    "question_text": "'Obsequious' means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c3e26062-a38b-41eb-8904-0be0a0dd79e5",
+    "options": [
+      "Simple sentence",
+      "Compound sentence",
+      "Complex sentence",
+      "Inverted sentence"
+    ],
+    "explanation": "Starting with 'Hardly' causes inversion of subject and auxiliary.",
+    "difficulty": "hard",
+    "question_text": "The sentence 'Hardly had he arrived when the phone rang' is an example of:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "13529c3b-93b5-4329-9997-04a01e58d306",
+    "options": [
+      "on",
+      "in",
+      "for",
+      "at"
+    ],
+    "explanation": "'Insist on' is the correct prepositional phrase.",
+    "difficulty": "medium",
+    "question_text": "Choose the correct preposition: 'She insisted _____ going alone.'",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0aefdecc-6a4c-4049-801c-5b6b72314264",
+    "options": [
+      "Formless : Shape",
+      "Auger : Carpenter",
+      "Cold : Frigid",
+      "Proper : Prudish"
+    ],
+    "explanation": "Anonymous means without a name, and formless means without a shape.",
+    "difficulty": "medium",
+    "question_text": "Anonymous : Name",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "3335727e-4ef0-4306-9ca7-92c2f64bd04f",
+    "options": [
+      "Love",
+      "Hatred",
+      "Dislike",
+      "Anger"
+    ],
+    "explanation": "Affection is a feeling of liking and caring for someone or something, which is synonymous with love.",
+    "difficulty": "easy",
+    "question_text": "Affection (Synonym)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "a472f58a-07a4-4e33-9264-2383d32f0319",
+    "options": [
+      "Similar",
+      "Dissimilar",
+      "Identical",
+      "Alike"
+    ],
+    "explanation": "Contrasting means differing strikingly, which is synonymous with dissimilar.",
+    "difficulty": "easy",
+    "question_text": "Contrasting (Synonym)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d7e42b9d-2a24-4b69-bbfa-92de87c8da24",
+    "options": [
+      "Diseased",
+      "Cured",
+      "Morbid",
+      "Unhealthy"
+    ],
+    "explanation": "Pathological relates to physical or mental disease. Cured is the state of being restored to health, representing its opposite.",
+    "difficulty": "medium",
+    "question_text": "Pathological (Antonym)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e37bd236-8bb1-400b-9544-fc9f21218b1d",
+    "options": [
+      "Remove",
+      "Separate",
+      "Fasten",
+      "Disconnect"
+    ],
+    "explanation": "Detach means to disconnect or separate, whereas fasten means to attach or secure.",
+    "difficulty": "easy",
+    "question_text": "Detach (Antonym)",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "eaaadfb8-7981-4d91-aef6-ec69bf1d04c3",
+    "options": [
+      "Frantic",
+      "Restrained",
+      "Agitated",
+      "Tense"
+    ],
+    "explanation": "Overwrought means in a state of nervous excitement or anxiety. Restrained means characterized by reserve or moderation, which is the antonym.",
+    "difficulty": "hard",
+    "question_text": "Overwrought (Antonym)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4e1a8780-f84e-464d-bbb4-3ee0c80b1006",
+    "options": [
+      "study",
+      "had studied",
+      "will study",
+      "have studied"
+    ],
+    "explanation": "Conditional type 3 requires past perfect in the if-clause to express a hypothetical past situation.",
+    "difficulty": "easy",
+    "question_text": "If you _____ you might have the exam passed.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3689574f-bc81-4506-9791-43753fdf9ed6",
+    "options": [
+      "was",
+      "is",
+      "have",
+      "has"
+    ],
+    "explanation": "Chemistry is a singular subject. Present perfect is used with 'long been', so the singular auxiliary verb 'has' is correct.",
+    "difficulty": "medium",
+    "question_text": "Chemistry, being the choice for my major, _____ long been an interest of mine.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "5e29ffe3-629b-4d54-b0a0-fb3246994702",
+    "options": [
+      "Depth : Trench",
+      "Shade : Tree",
+      "Weight : Age",
+      "Speed : Highway"
+    ],
+    "explanation": "A mountain is characterized by its height, while a trench is characterized by its depth.",
+    "difficulty": "medium",
+    "question_text": "HEIGHT : MOUNTAIN",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5bba730a-0a2d-4a69-ae6b-0dc7f010f9e6",
+    "options": [
+      "Comatose : Consciousness",
+      "Serene : Composure",
+      "Erudite : Knowledge",
+      "Adroit : Skill"
+    ],
+    "explanation": "Oblivious means lacking awareness. Comatose means lacking consciousness.",
+    "difficulty": "hard",
+    "question_text": "OBLIVIOUS : AWARENESS",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "3b66f7eb-b23b-49ab-9fe3-fe78c2784a26",
+    "options": [
+      "Therapy : Thermometer",
+      "Oblivion : Obvious",
+      "Liturgy : Literature",
+      "Image : Imagine"
+    ],
+    "explanation": "These represent different parts of speech for related conceptual root forms.",
+    "difficulty": "hard",
+    "question_text": "ACT : ACTION",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "1f965589-2a40-40bf-9d73-e4e844924405",
+    "options": [
+      "Home : Live",
+      "School : Daily",
+      "Water : Cold",
+      "Clothes : Socks"
+    ],
+    "explanation": "Big is an adjective that can describe a house. Cold is an adjective that describes water.",
+    "difficulty": "easy",
+    "question_text": "HOUSE : BIG",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "885959b7-fefb-4a99-96b0-223a9950772c",
+    "options": [
+      "Zebra : Giraffe",
+      "Stationery : Pencil",
+      "Book : Cap",
+      "Tree : Wood"
+    ],
+    "explanation": "Monkey is a specific type of animal. Pencil is a specific type of stationery.",
+    "difficulty": "easy",
+    "question_text": "Animal : Monkey",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9daa2fa0-468c-4cd2-870b-179b1b74cc3c",
+    "options": [
+      "Propel",
+      "Prodigy",
+      "Delight",
+      "Hayloft"
+    ],
+    "explanation": "Irk means to annoy or irritate, the opposite of which is to delight.",
+    "difficulty": "medium",
+    "question_text": "IRK (Antonym)",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f4712114-3540-43be-a5cd-d211b881b62d",
+    "options": [
+      "Fertile",
+      "Rejecting",
+      "Crater",
+      "Lacking freedom"
+    ],
+    "explanation": "Barren means unable to produce or sustain life, fertile is the direct opposite.",
+    "difficulty": "easy",
+    "question_text": "BARREN (Antonym)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "18d641e2-273b-4b56-9f8f-287a3bacbdea",
+    "options": [
+      "Arid",
+      "Prayerful",
+      "Discreet",
+      "Oppressive"
+    ],
+    "explanation": "Indulgent implies leniency and being overly permissive, while oppressive implies strictness and harsh control.",
+    "difficulty": "hard",
+    "question_text": "INDULGENT (Antonym)",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "7effcf59-38ee-4f14-8a7d-f76a66facf43",
+    "options": [
+      "Organized",
+      "Consistent",
+      "Rigid",
+      "Dynamic"
+    ],
+    "explanation": "Listless means lacking energy or enthusiasm. Dynamic means full of energy and new ideas.",
+    "difficulty": "medium",
+    "question_text": "LISTLESS (Antonym)",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "3c982d2b-1a5f-42fa-aa7a-bf2c0c365778",
+    "options": [
+      "Neutral",
+      "Conclusive",
+      "Astonished",
+      "Suitable"
+    ],
+    "explanation": "Indeterminate means not exactly known, established, or defined. Conclusive means serving to prove a case or being decisive.",
+    "difficulty": "medium",
+    "question_text": "INDETERMINATE (Antonym)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8b003830-498a-486b-ae5f-eb0ea6589ab4",
+    "options": [
+      "Connoisseur",
+      "Artist",
+      "Amateur",
+      "Entrepreneur"
+    ],
+    "explanation": "The word 'mere' implies someone without professional standing or formal expertise, making 'amateur' the best fit.",
+    "difficulty": "medium",
+    "question_text": "The selection committee for the exhibit was amazed to see such fine work done by a mere____.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "4b26ed66-0e9e-4d67-bf03-515264779bbe",
+    "options": [
+      "Futile",
+      "Sporadic",
+      "Furtive",
+      "Cold"
+    ],
+    "explanation": "Furtive means attempting to avoid notice or attention, typically because of guilt or a belief that discovery would lead to trouble.",
+    "difficulty": "medium",
+    "question_text": "The teacher suspected cheating as soon as he notice the pupil's____glances at his classmate's paper.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3cb840d5-114c-48ee-a504-260f61411398",
+    "options": [
+      "Recognition...folly",
+      "Blame...hypocrisy",
+      "Reward...modesty",
+      "Credit...altruism"
+    ],
+    "explanation": "A philanthropist does good deeds (altruism) and deserves praise or credit for it.",
+    "difficulty": "medium",
+    "question_text": "Known for his commitment to numerous worthy causes, the philanthropist deserved____for his____.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "7fe9ad73-b25e-4cef-8615-d1001501bc74",
+    "options": [
+      "devious",
+      "intolerant",
+      "Irrevocable",
+      "indefensible"
+    ],
+    "explanation": "The phrase 'nothing could excuse' means the behavior is impossible to excuse or defend, hence it is indefensible.",
+    "difficulty": "medium",
+    "question_text": "Miss Watson termed Hock's behavior______because in her opinion noting could excuse his deliberate disregard of her commands.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "465c7d94-a6ae-4840-a6ff-c15801722ead",
+    "options": [
+      "Consistent",
+      "Thrilling",
+      "Invigorating",
+      "Overrated"
+    ],
+    "explanation": "The 'either...or' structure implies a contrast. If the speaker went on a bad day, the alternative is that the surfing generally does not live up to its reputation (overrated).",
+    "difficulty": "hard",
+    "question_text": "Either the surfing at Maui is______, or I went there on an off day.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "70110e44-7c54-45af-b9e8-4dd0246ac1b2",
+    "options": [
+      "Twentieth _century music of the South",
+      "A change in the role of the blues harp",
+      "Good harp men of the traditional blues harp",
+      "The variety of instruments in jug bands"
+    ],
+    "explanation": "The passage describes how the blues harp transitioned from a melodic/rhythmic support instrument to a solo or lead instrument.",
+    "difficulty": "medium",
+    "question_text": "What does the passage mainly discuss? (Reading Comprehension)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "deb2dbfc-ef92-41a5-9c92-c5f2aac3a0b1",
+    "options": [
+      "Harpsichord",
+      "Guitar",
+      "Harmonica",
+      "Banjo"
+    ],
+    "explanation": "The passage explicitly states \"the blues harp or harmonica\".",
+    "difficulty": "easy",
+    "question_text": "the blues harp is another name for the",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ab31dd0f-471a-4aa4-bd1f-ed4859343211",
+    "options": [
+      "Began to burgeon",
+      "Was profound",
+      "Appeared",
+      "Entertained"
+    ],
+    "explanation": "Flourished means grew or developed in a healthy or vigorous way, which is synonymous with burgeon.",
+    "difficulty": "hard",
+    "question_text": "the word \"flourished\" as used in line 1 could best be replaced by which of the following?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "cdf1800d-1988-423c-aad4-1dc6897883f2",
+    "options": [
+      "Landscape",
+      "Metropolis",
+      "Countryside",
+      "Nation"
+    ],
+    "explanation": "\"Rural\" refers to the countryside or farming areas, as opposed to urban areas (metropolises).",
+    "difficulty": "easy",
+    "question_text": "the author uses the phrase \"rural South\" in line 1 to refer to the Southern",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "298c6695-6865-4cff-b744-a4bc01b470da",
+    "options": [
+      "Was the best blues harp player",
+      "Became friend with later harp men",
+      "Played lead guitar in his band",
+      "influenced some of the later harp men"
+    ],
+    "explanation": "The passage states he revolutionized the harp's role as a lead instrument, implying he influenced the musicians who followed him.",
+    "difficulty": "medium",
+    "question_text": "it can be inferred that George \"Bullet\" Williams",
+    "correct_answer_index": 3
+  }
+]

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, CheckSquare, Square, Lock, RefreshCw, Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ArrowLeft, CheckSquare, Square, Lock, RefreshCw, Sparkles, CheckCircle2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { sounds } from '@/lib/sounds';
 
 const DEFAULT_TASKS = [
@@ -78,120 +76,160 @@ export default function DailyTasks() {
 
   if (!user?.is_premium) {
     return (
-      <div className="p-4 space-y-5">
-        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-          <ArrowLeft className="w-4 h-4" /> Back
+      <div className="p-6 max-w-2xl mx-auto space-y-6">
+        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors">
+          <ArrowLeft className="w-4 h-4" /> Back to Dashboard
         </button>
-        <div className="flex flex-col items-center justify-center py-16 text-center space-y-4">
-          <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-            <Lock className="w-8 h-8 text-primary" />
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="flex flex-col items-center justify-center p-12 text-center bg-card rounded-3xl border border-border shadow-sm"
+        >
+          <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+            <Lock className="w-12 h-12 text-primary" />
           </div>
-          <h2 className="text-xl font-bold">Premium Feature</h2>
-          <p className="text-sm text-muted-foreground max-w-xs">Daily Tasks require a Study Plan, which is a Premium feature. Upgrade to unlock!</p>
-          <Button className="bg-primary mt-2" onClick={() => navigate('/premium')}>Unlock Premium</Button>
-        </div>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-3">Premium Feature</h2>
+          <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">Daily Tasks require a personalized Study Plan, which is an exclusive Premium feature. Upgrade to unlock this and more!</p>
+          <button className="btn-primary w-full max-w-xs py-3.5 rounded-xl text-lg font-bold" onClick={() => navigate('/premium')}>Unlock Premium</button>
+        </motion.div>
       </div>
     );
   }
 
-  return (
-    <div className="p-4 space-y-5 pb-10">
-      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-        <ArrowLeft className="w-4 h-4" /> Back
-      </button>
+  const progressPercent = tasks && tasks.length > 0 ? (doneCount / tasks.length) * 100 : 0;
 
-      <div className="space-y-1">
-        <div className="flex items-center gap-2">
-          <h1 className="text-2xl font-bold">Daily Tasks</h1>
-          <span className="bg-gradient-to-r from-primary to-emerald-400 text-white text-xs font-bold px-2 py-0.5 rounded-full">PREMIUM</span>
+  return (
+    <div className="p-6 max-w-3xl mx-auto space-y-8 pb-24">
+      
+      {/* Header */}
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+          <CheckSquare className="w-6 h-6 text-primary" />
         </div>
-        <p className="text-sm text-muted-foreground">
-          {new Date().toLocaleDateString('en-PK', { weekday: 'long', day: 'numeric', month: 'long' })}
-        </p>
+        <div>
+          <div className="flex items-center gap-3">
+            <h1 className="font-display text-2xl font-bold text-foreground">Daily Tasks</h1>
+            <span className="bg-gradient-to-r from-amber-500 to-amber-400 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-md shadow-sm">Premium</span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            {new Date().toLocaleDateString('en-PK', { weekday: 'long', day: 'numeric', month: 'long' })}
+          </p>
+        </div>
       </div>
 
-      {/* All done — show motivational quote */}
-      {showQuote && quote && (
-        <Card className="p-5 bg-gradient-to-br from-primary/10 to-emerald-500/5 border-primary/30 text-center space-y-2">
-          <div className="text-3xl">🎉</div>
-          <h2 className="font-bold text-lg text-primary">All Tasks Done!</h2>
-          <p className="text-sm italic text-foreground leading-relaxed">"{quote}"</p>
-          <p className="text-xs text-muted-foreground">Amazing work! You're one step closer to acing your NAT!</p>
-        </Card>
-      )}
+      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors mb-4 inline-flex">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+      </button>
 
       {/* Progress */}
       {tasks && (
-        <Card className="p-4 space-y-2">
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-card p-6 rounded-3xl border border-border shadow-sm space-y-4"
+        >
           <div className="flex items-center justify-between">
-            <p className="text-sm font-semibold">Today's Progress</p>
-            <p className="text-sm font-bold text-primary">{doneCount}/{tasks.length}</p>
+            <p className="font-display font-bold text-foreground">Today's Progress</p>
+            <p className="font-display text-xl font-bold text-primary">{doneCount}/{tasks.length}</p>
           </div>
-          <div className="w-full bg-secondary rounded-full h-2.5">
+          <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
             <div
-              className="bg-primary h-2.5 rounded-full transition-all duration-500"
-              style={{ width: `${tasks.length > 0 ? (doneCount / tasks.length) * 100 : 0}%` }}
+              className="bg-primary h-full rounded-full transition-all duration-700 ease-out"
+              style={{ width: `${progressPercent}%` }}
             />
           </div>
-        </Card>
+          {allDone && (
+            <p className="text-xs font-bold text-green-500 flex items-center gap-1">
+              <CheckCircle2 className="w-4 h-4" /> All tasks completed! Great job!
+            </p>
+          )}
+        </motion.div>
       )}
+
+      {/* All done — show motivational quote */}
+      <AnimatePresence>
+        {showQuote && quote && (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="p-8 bg-card rounded-3xl border border-primary/30 text-center space-y-4 shadow-lg shadow-primary/10 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+            <div className="text-5xl animate-bounce-slow">🎉</div>
+            <h2 className="font-display text-2xl font-bold text-primary">All Tasks Done!</h2>
+            <p className="text-lg italic text-foreground leading-relaxed px-4">"{quote}"</p>
+            <p className="text-sm text-muted-foreground">Amazing work! You're one step closer to acing your NAT!</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Tasks */}
       {tasks ? (
-        <div className="space-y-3">
+        <div className="space-y-4">
           {tasks.map((task, i) => (
             <motion.div
               key={task.id}
-              initial={{ opacity: 0, x: -12 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.07 }}
+              transition={{ delay: i * 0.08, type: 'spring', stiffness: 100 }}
             >
-            <Card
-              className={`p-4 cursor-pointer transition-all border-2 ${task.done ? 'border-primary/30 bg-primary/5 opacity-75' : 'border-border hover:border-primary/30'}`}
-              onClick={() => toggleTask(task.id)}
-            >
-              <div className="flex items-start gap-3">
-                {task.done
-                  ? <CheckSquare className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  : <Square className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
-                }
-                <div className="flex-1 min-w-0">
-                  <p className={`text-sm font-medium ${task.done ? 'line-through text-muted-foreground' : ''}`}>{task.title}</p>
-                  <div className="flex gap-2 mt-1">
-                    {task.subject && <span className="text-xs bg-secondary text-muted-foreground px-2 py-0.5 rounded-full">{task.subject}</span>}
-                    {task.duration && <span className="text-xs text-primary">⏱ {task.duration}</span>}
+              <div
+                className={`p-5 rounded-2xl cursor-pointer transition-all border-2 group ${task.done ? 'border-primary/40 bg-primary/5 shadow-sm' : 'border-border bg-card hover:border-primary/30 hover:bg-secondary/50'}`}
+                onClick={() => toggleTask(task.id)}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`mt-0.5 rounded-lg w-6 h-6 flex items-center justify-center shrink-0 transition-colors ${task.done ? 'bg-primary text-primary-foreground' : 'bg-secondary border-2 border-border group-hover:border-primary/50'}`}>
+                    {task.done && <CheckSquare className="w-4 h-4" />}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className={`text-base font-bold transition-all ${task.done ? 'text-muted-foreground line-through opacity-70' : 'text-foreground'}`}>{task.title}</p>
+                    <div className={`flex gap-2 mt-2 transition-opacity ${task.done ? 'opacity-50' : 'opacity-100'}`}>
+                      {task.subject && <span className="text-xs font-bold uppercase tracking-wider bg-secondary text-muted-foreground px-2.5 py-1 rounded-md border border-border">{task.subject}</span>}
+                      {task.duration && <span className="text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20 px-2.5 py-1 rounded-md">⏱ {task.duration}</span>}
+                    </div>
                   </div>
                 </div>
               </div>
-            </Card>
             </motion.div>
           ))}
 
-          <Button variant="outline" className="w-full" onClick={() => { setTasks(null); setQuote(null); setShowQuote(false); localStorage.removeItem(STORAGE_KEY); generateTasks(); }}>
-            <RefreshCw className="w-4 h-4 mr-2" /> Refresh Today's Tasks
-          </Button>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="pt-4">
+            <button 
+              className="w-full flex items-center justify-center gap-2 py-4 rounded-xl border border-border bg-card text-foreground font-bold hover:bg-secondary transition-colors"
+              onClick={() => { setTasks(null); setQuote(null); setShowQuote(false); localStorage.removeItem(STORAGE_KEY); generateTasks(); }}
+            >
+              <RefreshCw className="w-5 h-5" /> Refresh Today's Tasks
+            </button>
+          </motion.div>
         </div>
       ) : (
-        <Card className="p-8 text-center space-y-4">
-          <div className="text-4xl">📋</div>
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="p-10 text-center bg-card rounded-3xl border border-border shadow-sm space-y-6"
+        >
+          <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mx-auto mb-2">
+            <CheckSquare className="w-10 h-10 text-muted-foreground" />
+          </div>
           <div>
-            <h2 className="font-bold">No tasks yet today</h2>
-            <p className="text-sm text-muted-foreground mt-1">
+            <h2 className="font-display text-2xl font-bold text-foreground">No tasks yet today</h2>
+            <p className="text-muted-foreground mt-2 max-w-sm mx-auto leading-relaxed">
               {user?.study_plan_content
                 ? 'Generate your personalized tasks based on your study plan'
-                : 'You need a Study Plan first to get daily tasks'}
+                : 'You need a Study Plan first to get daily personalized tasks'}
             </p>
           </div>
           {user?.study_plan_content ? (
-            <Button className="bg-primary w-full" onClick={generateTasks}>
-              <Sparkles className="w-4 h-4 mr-2" /> Get Today's Tasks
-            </Button>
+            <button className="btn-primary w-full max-w-sm mx-auto py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg" onClick={generateTasks}>
+              <Sparkles className="w-5 h-5" /> Get Today's Tasks
+            </button>
           ) : (
-            <Button className="bg-primary w-full" onClick={() => navigate('/study-plan')}>
+            <button className="w-full max-w-sm mx-auto py-3.5 rounded-xl bg-foreground text-background font-bold hover:bg-foreground/90 transition-colors" onClick={() => navigate('/study-plan')}>
               Create Study Plan First
-            </Button>
+            </button>
           )}
-        </Card>
+        </motion.div>
       )}
     </div>
   );

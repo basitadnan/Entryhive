@@ -6,8 +6,8 @@ let mainWindow;
 let lastDeepLink = null;
 
 // Handle deep links on Windows (register protocol)
-if (!app.isDefaultProtocolClient('natprep')) {
-  app.setAsDefaultProtocolClient('natprep');
+if (!app.isDefaultProtocolClient('entryhive')) {
+  app.setAsDefaultProtocolClient('entryhive');
 }
 
 function createWindow() {
@@ -16,7 +16,7 @@ function createWindow() {
     height: 800,
     minWidth: 800,
     minHeight: 600,
-    title: "NAT Prep",
+    title: "Entry Hive",
     icon: path.join(__dirname, '../public/logo.ico'),
     webPreferences: {
       nodeIntegration: false,
@@ -74,7 +74,7 @@ if (!gotTheLock) {
       mainWindow.focus();
       
       // Find the URL argument on Windows
-      const url = commandLine.find(arg => arg.startsWith('natprep://'));
+      const url = commandLine.find(arg => arg.startsWith('entryhive://'));
       if (url) {
         lastDeepLink = url;
         console.log('[Electron] Forwarding deep link:', url);
@@ -87,7 +87,7 @@ if (!gotTheLock) {
     createWindow();
     
     // Check for cold start URL on Windows
-    const url = process.argv.find(arg => arg.startsWith('natprep://'));
+    const url = process.argv.find(arg => arg.startsWith('entryhive://'));
     if (url && mainWindow) {
       lastDeepLink = url;
       console.log('[Electron] Cold start deep link:', url);

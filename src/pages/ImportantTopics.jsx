@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import { Card } from '@/components/ui/card';
 import { ArrowLeft, Star, BookOpen, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // High-frequency topics based on NAT past paper analysis
 const IMPORTANT_TOPICS = {
   english: {
     label: 'English',
     icon: '📚',
-    color: 'text-blue-400',
+    color: 'text-blue-500',
     bg: 'bg-blue-500/10',
     border: 'border-blue-500/20',
     topics: [
       {
         name: 'Synonyms & Antonyms',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '6–8 questions',
         tips: [
           'Benevolent (Kind), Diligent (Hardworking), Candid (Frank), Eloquent (Articulate)',
@@ -26,7 +26,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Sentence Completion',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'Look for contrast clue words: despite, although, however → opposite meaning needed',
@@ -37,7 +37,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Analogies',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Tool-to-user: Pen:Writer, Scalpel:Surgeon, Hammer:Carpenter',
@@ -48,7 +48,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Reading Comprehension',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'Pakistan-related passages (CPEC, Indus River, education, environment) are most common',
@@ -61,14 +61,14 @@ const IMPORTANT_TOPICS = {
   analytical: {
     label: 'Analytical Reasoning',
     icon: '🧠',
-    color: 'text-pink-400',
+    color: 'text-pink-500',
     bg: 'bg-pink-500/10',
     border: 'border-pink-500/20',
     topics: [
       {
         name: 'Seating & Arrangement',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '5–6 questions',
         tips: [
           'Always draw a diagram — linear or circular based on the question',
@@ -79,7 +79,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Number Series & Patterns',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'Common patterns: +2, +4, +6 (differences). Squares: 1,4,9,16,25. Fibonacci: 1,1,2,3,5,8',
@@ -90,7 +90,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Blood Relations',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Draw a family tree — never try to solve blood relation questions in your head',
@@ -101,7 +101,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Logical Statements',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '3–4 questions',
         tips: [
           '"All A are B" ≠ "All B are A". Never reverse a universal statement',
@@ -114,14 +114,14 @@ const IMPORTANT_TOPICS = {
   quantitative: {
     label: 'Quantitative Reasoning',
     icon: '🔢',
-    color: 'text-green-400',
-    bg: 'bg-green-500/10',
-    border: 'border-green-500/20',
+    color: 'text-emerald-500',
+    bg: 'bg-emerald-500/10',
+    border: 'border-emerald-500/20',
     topics: [
       {
         name: 'Percentages & Profit/Loss',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '5–6 questions',
         tips: [
           'Profit% = (Profit/Cost Price) × 100. Loss% = (Loss/Cost Price) × 100',
@@ -132,7 +132,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Ratio, Proportion & Averages',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'If ratio is a:b with total T → first part = aT/(a+b)',
@@ -143,7 +143,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Speed, Distance & Time',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Speed = Distance/Time. To convert m/s to km/h: multiply by 3.6',
@@ -154,7 +154,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Simple & Compound Interest',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '2–3 questions',
         tips: [
           'SI = P×R×T/100. Always on original principal.',
@@ -167,14 +167,14 @@ const IMPORTANT_TOPICS = {
   physics: {
     label: 'Physics',
     icon: '⚡',
-    color: 'text-yellow-400',
+    color: 'text-yellow-500',
     bg: 'bg-yellow-500/10',
     border: 'border-yellow-500/20',
     topics: [
       {
         name: 'Newton\'s Laws & Kinematics',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'F = ma (2nd Law). Every action has equal & opposite reaction (3rd Law)',
@@ -185,7 +185,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Electricity & Circuits',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'Ohm\'s Law: V = IR. Power: P = VI = I²R = V²/R',
@@ -196,7 +196,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Energy, Work & Power',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'KE = ½mv². If speed doubles → KE quadruples (v² relationship)',
@@ -207,7 +207,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Optics & Waves',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '2–3 questions',
         tips: [
           'Convex lens: converges light, used for reading/farsightedness',
@@ -220,14 +220,14 @@ const IMPORTANT_TOPICS = {
   chemistry: {
     label: 'Chemistry',
     icon: '🧪',
-    color: 'text-orange-400',
+    color: 'text-orange-500',
     bg: 'bg-orange-500/10',
     border: 'border-orange-500/20',
     topics: [
       {
         name: 'Atomic Structure & Periodic Table',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'Atomic number = protons. Mass number = protons + neutrons. Isotopes differ in neutrons',
@@ -238,7 +238,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Chemical Bonding',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Ionic: metal + non-metal, electron TRANSFERRED (NaCl, MgO)',
@@ -249,7 +249,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Acids, Bases & pH',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'pH < 7 = acidic. pH = 7 = neutral. pH > 7 = basic/alkaline',
@@ -260,7 +260,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Chemical Reactions',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '2–3 questions',
         tips: [
           'Exothermic: heat released (combustion, respiration)',
@@ -273,14 +273,14 @@ const IMPORTANT_TOPICS = {
   mathematics: {
     label: 'Mathematics',
     icon: '📐',
-    color: 'text-cyan-400',
+    color: 'text-cyan-500',
     bg: 'bg-cyan-500/10',
     border: 'border-cyan-500/20',
     topics: [
       {
         name: 'Algebra & Quadratics',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '5–6 questions',
         tips: [
           'Quadratic formula: x = (-b ± √(b²-4ac))/2a. Sum of roots = -b/a, Product = c/a',
@@ -291,7 +291,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Trigonometry',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'SOH CAH TOA. Special values: sin30°=½, cos60°=½, tan45°=1, sin90°=1',
@@ -302,7 +302,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Calculus (Differentiation)',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'd/dx(xⁿ) = nxⁿ⁻¹. d/dx(sinx) = cosx. d/dx(cosx) = -sinx. d/dx(eˣ) = eˣ',
@@ -313,7 +313,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Sequences & Series (AP/GP)',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '2–3 questions',
         tips: [
           'AP nth term = a+(n-1)d. Sum = n/2[2a+(n-1)d]',
@@ -326,14 +326,14 @@ const IMPORTANT_TOPICS = {
   biology: {
     label: 'Biology',
     icon: '🧬',
-    color: 'text-emerald-400',
+    color: 'text-emerald-500',
     bg: 'bg-emerald-500/10',
     border: 'border-emerald-500/20',
     topics: [
       {
         name: 'Cell Biology',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'Mitochondria = energy (ATP). Chloroplast = photosynthesis. Ribosome = protein synthesis',
@@ -344,7 +344,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Genetics & Heredity',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'DNA double helix: A-T and C-G pairs. RNA has Uracil instead of Thymine',
@@ -355,7 +355,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Human Body Systems',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'Kidney functional unit = nephron. Liver detoxifies blood. Pancreas makes insulin',
@@ -366,7 +366,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Plant Biology',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '2–3 questions',
         tips: [
           'Photosynthesis: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (in chloroplasts)',
@@ -379,14 +379,14 @@ const IMPORTANT_TOPICS = {
   computer_science: {
     label: 'Computer Science',
     icon: '💻',
-    color: 'text-violet-400',
+    color: 'text-violet-500',
     bg: 'bg-violet-500/10',
     border: 'border-violet-500/20',
     topics: [
       {
         name: 'Computer Fundamentals & Memory',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '5–6 questions',
         tips: [
           'RAM = volatile (lost on power off). ROM = non-volatile. Cache = fastest memory',
@@ -397,7 +397,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Data Structures & Algorithms',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '4–5 questions',
         tips: [
           'Stack = LIFO (Last In First Out). Queue = FIFO (First In First Out)',
@@ -408,7 +408,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Number Systems',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Binary (base 2), Octal (base 8), Decimal (base 10), Hex (base 16)',
@@ -419,7 +419,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Programming & OOP',
         frequency: 'Medium',
-        freqColor: 'text-green-400',
+        freqColor: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20',
         weight: '2–3 questions',
         tips: [
           'OOP pillars: Encapsulation, Inheritance, Polymorphism, Abstraction',
@@ -432,14 +432,14 @@ const IMPORTANT_TOPICS = {
   commerce: {
     label: 'Commerce',
     icon: '🏪',
-    color: 'text-amber-400',
+    color: 'text-amber-500',
     bg: 'bg-amber-500/10',
     border: 'border-amber-500/20',
     topics: [
       {
         name: 'Types of Trade & Trade Documents',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'Entrepôt trade = import goods then RE-EXPORT them without processing — often tested as a tricky term',
@@ -451,7 +451,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Business Organizations',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'KEY TRICK: Unlimited liability = Sole Trader & Partnership (personal assets at risk)',
@@ -464,7 +464,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Banking & Negotiable Instruments',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Cheque parties: Drawer (account holder who writes it), Drawee (bank), Payee (receiver)',
@@ -476,7 +476,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Insurance Principles',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Insurable Interest: must have financial stake in what you insure — must exist at time of loss',
@@ -491,14 +491,14 @@ const IMPORTANT_TOPICS = {
   accounting: {
     label: 'Accounting',
     icon: '📊',
-    color: 'text-teal-400',
+    color: 'text-teal-500',
     bg: 'bg-teal-500/10',
     border: 'border-teal-500/20',
     topics: [
       {
         name: 'Accounting Equation & Double Entry',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'Accounting Equation: Assets = Liabilities + Capital. ALWAYS balanced after every transaction',
@@ -510,7 +510,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Final Accounts (Trading, P&L, Balance Sheet)',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '5–6 questions',
         tips: [
           'Gross Profit = Sales − Cost of Goods Sold. COGS = Opening Stock + Purchases − Closing Stock',
@@ -523,7 +523,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Depreciation',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Straight Line (SLM): fixed amount yearly = (Cost − Residual Value) / Useful Life',
@@ -536,7 +536,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Stock Valuation & Financial Ratios',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'FIFO (First In First Out): rising prices → HIGHER closing stock → HIGHER profit',
@@ -551,14 +551,14 @@ const IMPORTANT_TOPICS = {
   economics: {
     label: 'Economics',
     icon: '📈',
-    color: 'text-indigo-400',
+    color: 'text-indigo-500',
     bg: 'bg-indigo-500/10',
     border: 'border-indigo-500/20',
     topics: [
       {
         name: 'Demand, Supply & Elasticity',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'Law of Demand: price ↑ → demand ↓ (inverse). Demand curve slopes DOWNWARD left to right',
@@ -572,7 +572,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Market Structures',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Perfect Competition: many sellers, identical products, price TAKERS, free entry/exit. Example: wheat farmers',
@@ -585,7 +585,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'GDP, Inflation & Unemployment',
         frequency: 'Very High',
-        freqColor: 'text-red-400',
+        freqColor: 'text-rose-500 bg-rose-500/10 border-rose-500/20',
         weight: '4–5 questions',
         tips: [
           'GDP = total value of goods & services produced IN a country (includes foreigners working there)',
@@ -599,7 +599,7 @@ const IMPORTANT_TOPICS = {
       {
         name: 'Fiscal Policy, Monetary Policy & International Trade',
         frequency: 'High',
-        freqColor: 'text-amber-400',
+        freqColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
         weight: '3–4 questions',
         tips: [
           'Fiscal Policy = government (taxation & spending). Monetary Policy = Central Bank (SBP) — interest rates & money supply',
@@ -629,34 +629,36 @@ export default function ImportantTopics() {
   const sections = GROUP_SECTIONS[user?.nat_group] || Object.keys(IMPORTANT_TOPICS);
 
   return (
-    <div className="p-4 space-y-5">
-      <div className="flex items-center gap-3 mb-2">
-        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-          <ArrowLeft className="w-4 h-4" /> Back
-        </button>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <Star className="w-6 h-6 text-amber-400" />
+    <div className="p-6 max-w-5xl mx-auto space-y-8 pb-24">
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+          <Star className="w-6 h-6 text-amber-500" />
+        </div>
         <div>
-          <h1 className="text-xl font-bold">Important Topics</h1>
+          <h1 className="font-display text-2xl font-bold text-foreground">Important Topics</h1>
           <p className="text-sm text-muted-foreground">High-frequency topics from past NAT papers</p>
         </div>
       </div>
 
+      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors inline-flex mb-2">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+      </button>
+
       {/* Free badge */}
-      <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-lg px-3 py-2">
-        <Zap className="w-4 h-4 text-green-400" />
-        <p className="text-sm text-green-400 font-medium">100% Free — No premium required</p>
+      <div className="flex items-center gap-3 bg-green-500/5 border border-green-500/20 rounded-2xl p-4 shadow-sm">
+        <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center shrink-0">
+          <Zap className="w-4 h-4 text-green-500" />
+        </div>
+        <p className="text-sm text-foreground leading-relaxed font-medium">This resource is 100% free and does not require a premium subscription.</p>
       </div>
 
       {/* Section pills */}
-      <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+      <div className="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
         <button
           onClick={() => setActiveSection(null)}
-          className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${!activeSection ? 'bg-primary text-white' : 'bg-secondary text-muted-foreground'}`}
+          className={`shrink-0 px-5 py-2.5 rounded-xl text-sm font-bold transition-all border-2 ${!activeSection ? 'bg-primary border-primary text-primary-foreground shadow-md shadow-primary/20' : 'bg-secondary border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'}`}
         >
-          All
+          All Topics
         </button>
         {sections.map(sec => {
           const s = IMPORTANT_TOPICS[sec];
@@ -665,48 +667,57 @@ export default function ImportantTopics() {
             <button
               key={sec}
               onClick={() => setActiveSection(activeSection === sec ? null : sec)}
-              className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${activeSection === sec ? 'bg-primary text-white' : 'bg-secondary text-muted-foreground'}`}
+              className={`shrink-0 px-5 py-2.5 rounded-xl text-sm font-bold transition-all border-2 flex items-center gap-2 ${activeSection === sec ? 'bg-primary border-primary text-primary-foreground shadow-md shadow-primary/20' : 'bg-secondary border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'}`}
             >
-              {s.icon} {s.label}
+              <span>{s.icon}</span> {s.label}
             </button>
           );
         })}
       </div>
 
       {/* Content */}
-      <div className="space-y-4">
-        {(activeSection ? [activeSection] : sections).map(sec => {
+      <div className="space-y-8">
+        {(activeSection ? [activeSection] : sections).map((sec, sectionIndex) => {
           const data = IMPORTANT_TOPICS[sec];
           if (!data) return null;
           return (
-            <div key={sec} className="space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">{data.icon}</span>
-                <h2 className={`font-bold ${data.color}`}>{data.label}</h2>
+            <motion.div 
+              key={sec} 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: sectionIndex * 0.1 }}
+              className="space-y-4"
+            >
+              <div className="flex items-center gap-3 bg-secondary/30 p-3 rounded-2xl">
+                <span className="text-2xl w-10 h-10 bg-card rounded-xl flex items-center justify-center shadow-sm border border-border">{data.icon}</span>
+                <h2 className={`font-display font-bold text-xl ${data.color}`}>{data.label}</h2>
               </div>
-              {data.topics.map((topic, i) => (
-                <Card key={i} className={`p-4 border ${data.border}`}>
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h3 className="font-semibold text-sm">{topic.name}</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className={`text-xs font-medium ${topic.freqColor}`}>● {topic.frequency} Frequency</span>
-                        <span className="text-xs text-muted-foreground">· {topic.weight}</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {data.topics.map((topic, i) => (
+                  <div key={i} className={`bg-card rounded-2xl p-6 border-2 transition-all hover:shadow-md ${data.border}`}>
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="font-display font-bold text-foreground text-lg mb-2">{topic.name}</h3>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${topic.freqColor}`}>● {topic.frequency} Frequency</span>
+                          <span className="text-xs font-bold text-muted-foreground bg-secondary px-2.5 py-1 rounded-lg border border-border">· {topic.weight}</span>
+                        </div>
+                      </div>
+                      <div className={`w-8 h-8 rounded-lg ${data.bg} flex items-center justify-center shrink-0 border ${data.border}`}>
+                        <BookOpen className={`w-4 h-4 ${data.color}`} />
                       </div>
                     </div>
-                    <BookOpen className={`w-4 h-4 ${data.color} shrink-0`} />
+                    <div className="space-y-2.5">
+                      {topic.tips.map((tip, j) => (
+                        <div key={j} className="flex items-start gap-3 bg-secondary/50 p-3 rounded-xl border border-border">
+                          <p className="text-sm text-foreground font-medium leading-relaxed">{tip}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="space-y-1.5">
-                    {topic.tips.map((tip, j) => (
-                      <div key={j} className="flex items-start gap-2">
-                        <span className={`text-xs mt-0.5 ${data.color}`}>→</span>
-                        <p className="text-xs text-muted-foreground leading-relaxed">{tip}</p>
-                      </div>
-                    ))}
-                  </div>
-                </Card>
-              ))}
-            </div>
+                ))}
+              </div>
+            </motion.div>
           );
         })}
       </div>

@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "1de742f6-f601-438c-8aab-83899b9ce314",
+    "options": [
+      "Having unlimited resources",
+      "Limited resources versus unlimited wants",
+      "Having no money",
+      "Overproduction of goods"
+    ],
+    "explanation": "Scarcity is the fundamental economic problem: human wants are unlimited, but resources to satisfy them are limited, requiring choices about resource allocation.",
+    "difficulty": "easy",
+    "question_text": "What is scarcity in economics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7102de82-0414-407a-82fe-74c761ef54df",
+    "options": [
+      "Gross Domestic Product",
+      "General Development Plan",
+      "Global Domestic Price",
+      "Gross Development Profit"
+    ],
+    "explanation": "GDP (Gross Domestic Product) is the total monetary value of all final goods and services produced within a country's borders in a specific time period.",
+    "difficulty": "easy",
+    "question_text": "What does GDP stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "79ac52ab-5710-4d98-bba1-8927dcf62e56",
+    "options": [
+      "As price rises, quantity demanded rises",
+      "As price rises, quantity demanded falls, ceteris paribus",
+      "Price has no effect on demand",
+      "Demand always increases"
+    ],
+    "explanation": "The law of demand states that, other things being equal (ceteris paribus), as the price of a good increases, the quantity demanded decreases, and vice versa.",
+    "difficulty": "easy",
+    "question_text": "What is the law of demand?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fd467630-8ae0-4134-9ccc-6455ad3ff221",
+    "options": [
+      "Monopoly",
+      "Oligopoly",
+      "Perfect competition",
+      "Monopolistic competition"
+    ],
+    "explanation": "Perfect competition has many buyers and sellers, homogeneous/identical products, free entry and exit, and no single buyer or seller can influence price.",
+    "difficulty": "easy",
+    "question_text": "What type of market structure has many sellers offering identical products?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "db2d2a95-987f-4bea-9a33-63964e8c869b",
+    "options": [
+      "Decrease in general price level",
+      "Increase in general price level of goods and services",
+      "Increase in unemployment",
+      "Decrease in money supply"
+    ],
+    "explanation": "Inflation is a sustained increase in the general price level of goods and services in an economy over a period of time, reducing purchasing power.",
+    "difficulty": "easy",
+    "question_text": "What is inflation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9b1ad40a-b03c-4cef-89bb-f05b073a2c54",
+    "options": [
+      "Karl Marx",
+      "John Maynard Keynes",
+      "Adam Smith",
+      "Milton Friedman"
+    ],
+    "explanation": "Adam Smith is considered the father of modern economics. His 1776 book 'The Wealth of Nations' laid the foundation for classical economics.",
+    "difficulty": "easy",
+    "question_text": "Who is known as the father of modern economics?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f0314d16-8c38-4856-be1b-350c63f77bb2",
+    "options": [
+      "Total cost of production",
+      "Value of the next best alternative foregone",
+      "Fixed cost only",
+      "Sunk cost"
+    ],
+    "explanation": "Opportunity cost is the value of the next best alternative that must be given up when making a choice. It represents the true economic cost of a decision.",
+    "difficulty": "easy",
+    "question_text": "What is opportunity cost?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "97a76226-dd5c-481f-aa75-a508de8fd490",
+    "options": [
+      "Produce goods",
+      "Manage monetary policy, issue currency, and regulate banks",
+      "Collect taxes",
+      "Manage fiscal policy"
+    ],
+    "explanation": "A central bank (like the State Bank of Pakistan or Federal Reserve) manages monetary policy, issues currency, sets interest rates, and supervises the banking system.",
+    "difficulty": "easy",
+    "question_text": "What does the central bank do?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "10176eeb-35bc-4702-adf9-d26ad77e5fcf",
+    "options": [
+      "When revenue exceeds spending",
+      "When government spending exceeds revenue",
+      "When exports exceed imports",
+      "When savings exceed investment"
+    ],
+    "explanation": "A budget deficit occurs when government expenditures exceed government revenues in a fiscal year.",
+    "difficulty": "easy",
+    "question_text": "What is a budget deficit?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d4814dd7-a6bc-4e67-81ba-99d41639341f",
+    "options": [
+      "Government-set price",
+      "Price where quantity demanded equals quantity supplied",
+      "Maximum price",
+      "Minimum price"
+    ],
+    "explanation": "Equilibrium price is the market-clearing price where the quantity demanded by consumers equals the quantity supplied by producers.",
+    "difficulty": "easy",
+    "question_text": "What is the equilibrium price?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "50de9b08-870b-4382-8065-0e06dcaf3bd2",
+    "options": [
+      "Market with many sellers",
+      "Market with a single seller",
+      "Market with two sellers",
+      "Market with few buyers"
+    ],
+    "explanation": "A monopoly is a market structure with only one seller of a product with no close substitutes, giving the firm significant market power.",
+    "difficulty": "easy",
+    "question_text": "What is a monopoly?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0c14dcf1-3cf9-4b40-82e4-257bd0cd49c3",
+    "options": [
+      "Consumer Price Index",
+      "Corporate Profit Index",
+      "Cost Production Index",
+      "Central Price Index"
+    ],
+    "explanation": "The Consumer Price Index measures the average change in prices over time that consumers pay for a basket of goods and services.",
+    "difficulty": "easy",
+    "question_text": "What does CPI stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "b2c23944-f70b-4c7d-9c11-ee47092d2ee7",
+    "options": [
+      "Control of money supply",
+      "Government use of spending and taxation to influence the economy",
+      "International trade policy",
+      "Bank regulation"
+    ],
+    "explanation": "Fiscal policy involves government decisions about spending and taxation to influence aggregate demand, employment, and economic growth.",
+    "difficulty": "easy",
+    "question_text": "What is fiscal policy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c08eeae7-64e3-45cc-ac50-c2dfcb9a8a28",
+    "options": [
+      "Total population without jobs",
+      "Percentage of labor force that is unemployed and actively seeking work",
+      "Percentage of all adults without jobs",
+      "Number of part-time workers"
+    ],
+    "explanation": "Unemployment rate = (Unemployed / Labor Force) × 100. Only those actively seeking work count as unemployed.",
+    "difficulty": "easy",
+    "question_text": "What is the unemployment rate?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "398e985d-854f-483f-94b0-998fe35eb052",
+    "options": [
+      "Goods used together (price of one up → demand for other down)",
+      "Goods that are identical",
+      "Goods that compete with each other",
+      "Luxury goods"
+    ],
+    "explanation": "Complementary goods are used together. If the price of one rises, demand for its complement falls (e.g., cars and petrol).",
+    "difficulty": "easy",
+    "question_text": "What are complements in economics?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ae89fe22-ae04-4cf3-925c-97af46535df2",
+    "options": [
+      "% change in price / % change in quantity",
+      "% change in quantity demanded / % change in price",
+      "Change in total revenue / change in price",
+      "Price / Quantity"
+    ],
+    "explanation": "Price Elasticity of Demand = (% Change in Quantity Demanded) / (% Change in Price). It measures responsiveness of quantity to price changes.",
+    "difficulty": "easy",
+    "question_text": "What is the price elasticity of demand formula?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6ae2b1c3-1f47-4b5f-99ce-51b8ef2c9071",
+    "options": [
+      "Being able to produce more of everything",
+      "Ability to produce a good at a lower opportunity cost than another producer",
+      "Having more resources",
+      "Government subsidies"
+    ],
+    "explanation": "Comparative advantage is the ability to produce a good at a lower opportunity cost than others, forming the basis for mutually beneficial trade.",
+    "difficulty": "easy",
+    "question_text": "What is comparative advantage?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1e3ceedb-0ea0-46eb-8b99-94b3871258c4",
+    "options": [
+      "Goods sold by the government",
+      "Goods that are non-excludable and non-rivalrous",
+      "Free goods",
+      "Goods for politicians"
+    ],
+    "explanation": "Public goods are non-excludable (cannot prevent others from using) and non-rivalrous (one person's use doesn't reduce availability), like national defense.",
+    "difficulty": "easy",
+    "question_text": "What is a public good?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3b0c7ec6-e616-40b7-b3b4-6787cf6a0516",
+    "options": [
+      "Consumer preferences",
+      "Maximum output combinations of two goods with given resources",
+      "Market demand",
+      "Price levels"
+    ],
+    "explanation": "The PPC shows the maximum possible combinations of two goods an economy can produce given available resources and technology, illustrating scarcity and trade-offs.",
+    "difficulty": "easy",
+    "question_text": "What does the production possibilities curve (PPC) show?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cb2cb59f-97cc-46ae-b291-2e1bd31a57cc",
+    "options": [
+      "Store wealth",
+      "Eliminate barter by facilitating transactions",
+      "Measure value",
+      "Government control"
+    ],
+    "explanation": "As a medium of exchange, money eliminates the need for barter (double coincidence of wants) and facilitates transactions between buyers and sellers.",
+    "difficulty": "easy",
+    "question_text": "What is the function of money as a medium of exchange?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b8c97890-f149-4bf7-b22e-fc158b2c79ca",
+    "options": [
+      "Subsidy for exports",
+      "Tax on imported goods",
+      "Free trade agreement",
+      "Quota on exports"
+    ],
+    "explanation": "A tariff is a tax imposed by a government on imported goods, designed to protect domestic industries or raise revenue.",
+    "difficulty": "easy",
+    "question_text": "What is a tariff?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a940069d-5134-4827-a1a4-e12280c7bd25",
+    "options": [
+      "As price rises, quantity supplied falls",
+      "As price rises, quantity supplied rises, ceteris paribus",
+      "Supply is fixed",
+      "Price has no effect on supply"
+    ],
+    "explanation": "The law of supply states that, ceteris paribus, as the price of a good increases, producers are willing to supply more of it.",
+    "difficulty": "easy",
+    "question_text": "What is the law of supply?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0dcef472-ac7c-45cc-8d35-ee7f8b4d0ebd",
+    "options": [
+      "Money invested in banks",
+      "Skills, knowledge, and experience possessed by workers",
+      "Physical machinery",
+      "Government buildings"
+    ],
+    "explanation": "Human capital refers to the economic value of a worker's experience and skills, including education, training, intelligence, health, and other attributes.",
+    "difficulty": "easy",
+    "question_text": "What is human capital?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "565e606e-548e-448a-be05-290e4cba28f9",
+    "options": [
+      "Everyone pays the same amount",
+      "Tax rate increases as income increases",
+      "Tax rate decreases as income increases",
+      "Only the rich pay taxes"
+    ],
+    "explanation": "In a progressive tax system, higher-income individuals pay a higher percentage of their income in taxes compared to lower-income individuals.",
+    "difficulty": "easy",
+    "question_text": "What is a progressive tax system?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "66943b31-8e99-4e82-b4e6-58df83c27d5f",
+    "options": [
+      "Total international transactions",
+      "Value of exports minus value of imports of goods",
+      "Government budget balance",
+      "Central bank reserves"
+    ],
+    "explanation": "Balance of trade (trade balance) = Total Exports − Total Imports of goods. A positive value is a trade surplus; negative is a trade deficit.",
+    "difficulty": "easy",
+    "question_text": "What is the balance of trade?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "56ccf2a3-c369-4813-9c6f-21d86964b5e4",
+    "options": [
+      "No difference",
+      "Micro: individual units; Macro: economy as a whole",
+      "Micro: large firms; Macro: small firms",
+      "Micro: past; Macro: future"
+    ],
+    "explanation": "Microeconomics studies individual economic units (consumers, firms, markets). Macroeconomics studies the economy as a whole (GDP, inflation, unemployment).",
+    "difficulty": "easy",
+    "question_text": "What is the difference between microeconomics and macroeconomics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "34a3bc30-f297-490f-ab01-dd01f99a5132",
+    "options": [
+      "Internal company cost",
+      "Cost or benefit affecting a third party not involved in the transaction",
+      "Government subsidy",
+      "Import tax"
+    ],
+    "explanation": "An externality is a side effect of production or consumption that affects a third party not directly involved, like pollution (negative) or education (positive).",
+    "difficulty": "easy",
+    "question_text": "What is an externality?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1c82f2a3-b34f-47f7-a194-ec61c5236d43",
+    "options": [
+      "Generate profit only",
+      "Signal information, allocate resources, and coordinate economic activity",
+      "Control inflation",
+      "Set wages"
+    ],
+    "explanation": "Prices in a market economy serve as signals about scarcity and demand, help allocate scarce resources efficiently, and coordinate decisions of buyers and sellers.",
+    "difficulty": "easy",
+    "question_text": "What is the role of prices in a market economy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "62b8f266-2fa8-41e8-ad83-6d5229c06765",
+    "options": [
+      "Increase in population",
+      "Sustained increase in a country's production of goods and services over time",
+      "Increase in unemployment",
+      "Decrease in prices"
+    ],
+    "explanation": "Economic growth is typically measured as the percentage increase in real GDP over time, indicating expanding productive capacity.",
+    "difficulty": "easy",
+    "question_text": "What is economic growth?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d2dff5fa-529f-4e48-908e-b93c8b35688c",
+    "options": [
+      "All other things being equal",
+      "Consumer preferences change",
+      "Government intervention",
+      "Market equilibrium"
+    ],
+    "explanation": "Ceteris paribus is a Latin phrase meaning 'all other things being equal.' It is used in economics to isolate the relationship between two variables while holding other factors constant.",
+    "difficulty": "easy",
+    "question_text": "What does ceteris paribus mean?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5db0c827-9e49-438b-b4c7-02b9771f39b9",
+    "options": [
+      "Nominal uses constant prices; real uses current prices",
+      "Nominal uses current prices; real uses constant base-year prices",
+      "Nominal includes only goods; real includes services",
+      "No difference"
+    ],
+    "explanation": "Nominal GDP values output at current prices. Real GDP values output at constant base-year prices, adjusting for inflation to show actual production changes.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between nominal GDP and real GDP?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "810f8f73-0c84-4204-92c4-8b4cb9b04a3e",
+    "options": [
+      "Shifts left",
+      "Shifts right",
+      "Moves along the curve",
+      "Becomes steeper"
+    ],
+    "explanation": "For normal goods, demand increases when income rises, causing the entire demand curve to shift to the right.",
+    "difficulty": "medium",
+    "question_text": "What happens to the demand curve when consumer income increases (for a normal good)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c73ba113-3932-4a43-b936-019c87fb8c16",
+    "options": [
+      "Total consumption / Total income",
+      "Change in consumption / Change in income",
+      "1 − MPS",
+      "Both B and C"
+    ],
+    "explanation": "MPC = ΔC/ΔI. Since MPC + MPS = 1, MPC = 1 − MPS. It measures the fraction of additional income spent on consumption.",
+    "difficulty": "medium",
+    "question_text": "What is the marginal propensity to consume (MPC)?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "ec359da2-b265-4f60-b66a-4676d2c9040f",
+    "options": [
+      "Government spending reducing private investment due to higher interest rates",
+      "Too many consumers in the market",
+      "Export displacement",
+      "Tax reduction effect"
+    ],
+    "explanation": "Crowding out occurs when increased government spending raises interest rates, reducing or 'crowding out' private investment.",
+    "difficulty": "medium",
+    "question_text": "What is the crowding-out effect?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "e194265b-dcc0-4743-8ec1-e745c6cee5c6",
+    "options": [
+      "Vertical",
+      "Horizontal or upward sloping",
+      "Downward sloping",
+      "U-shaped"
+    ],
+    "explanation": "In the Keynesian short run, AS is horizontal (perfectly elastic) at low output and becomes upward sloping as the economy approaches full capacity.",
+    "difficulty": "medium",
+    "question_text": "In the short run, what shape is the Keynesian aggregate supply curve?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "61aa3e71-f040-4a41-b301-da3036dcc115",
+    "options": [
+      "MV = PY",
+      "r = i − π",
+      "Real interest rate = Nominal rate − Inflation rate",
+      "Both B and C"
+    ],
+    "explanation": "The Fisher equation states: r = i − π (approximate) or (1+i) = (1+r)(1+π) (exact), where r is real rate, i is nominal rate, and π is inflation.",
+    "difficulty": "medium",
+    "question_text": "What is the Fisher equation?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "e1eac423-0a9e-4fc7-b0d6-64a066777257",
+    "options": [
+      "Gain from trade",
+      "Loss of economic efficiency when equilibrium is not achieved",
+      "Government revenue",
+      "Consumer surplus"
+    ],
+    "explanation": "Deadweight loss is the reduction in total surplus (CS + PS) resulting from market distortion like taxes, price controls, or monopoly pricing.",
+    "difficulty": "medium",
+    "question_text": "What is deadweight loss?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dddf2b31-8789-4d1a-ab5f-1474acccdd85",
+    "options": [
+      "Central bank → policy rate → market rates → aggregate demand → output/prices",
+      "Government → taxes → spending",
+      "Banks → loans → deposits",
+      "Imports → exports → exchange rate"
+    ],
+    "explanation": "The transmission mechanism: central bank changes policy rate → affects short-term and long-term interest rates → influences consumption, investment, and net exports → impacts aggregate demand, output, and prices.",
+    "difficulty": "medium",
+    "question_text": "What is the monetary policy transmission mechanism?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9fabacf3-9a60-4200-86e0-77c8f3ea09ef",
+    "options": [
+      "No difference",
+      "Economic profit = Accounting profit − Implicit (opportunity) costs",
+      "Accounting profit is always higher",
+      "Economic profit includes only explicit costs"
+    ],
+    "explanation": "Accounting profit = Total Revenue − Explicit Costs. Economic profit = Total Revenue − (Explicit + Implicit Costs). Economic profit accounts for opportunity costs.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between accounting profit and economic profit?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4c3792fc-3309-4792-a1d2-3de4e8e83b08",
+    "options": [
+      "Relationship between inflation and unemployment",
+      "Relationship between supply and demand",
+      "Relationship between GDP and investment",
+      "Relationship between imports and exports"
+    ],
+    "explanation": "The Phillips Curve shows an inverse relationship between inflation and unemployment in the short run: lower unemployment is associated with higher inflation.",
+    "difficulty": "medium",
+    "question_text": "What is the Phillips Curve?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0a8e7def-72db-4ca8-8335-480c95d98ee5",
+    "options": [
+      "Total output divided by all workers",
+      "Additional output from one more unit of input",
+      "Average output per worker",
+      "Fixed output"
+    ],
+    "explanation": "Marginal product = change in total output from employing one more unit of a factor.",
+    "difficulty": "medium",
+    "question_text": "Marginal product is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "edd7c4da-90e4-4492-86d3-0d7cf3285d2e",
+    "options": [
+      "Risk before transaction",
+      "Risk after transaction where one party takes excessive risks because another bears the cost",
+      "Market competition",
+      "Government regulation"
+    ],
+    "explanation": "Moral hazard occurs when a party insulated from risk behaves differently than if fully exposed, e.g., banks taking excessive risks knowing they'll be bailed out.",
+    "difficulty": "medium",
+    "question_text": "What is moral hazard in economics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "33645e8b-817e-4780-abe7-9445cbbed892",
+    "options": [
+      "Economic growth",
+      "Market power (degree of monopoly)",
+      "Inflation rate",
+      "Unemployment"
+    ],
+    "explanation": "Lerner Index = (P − MC)/P. It measures monopoly power, ranging from 0 (perfect competition) to 1 (pure monopoly).",
+    "difficulty": "medium",
+    "question_text": "What is the Lerner Index used to measure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "502ef97e-a6f3-4a9b-b0d7-d734f3505297",
+    "options": [
+      "No difference",
+      "GDP: production within borders; GNP: production by citizens regardless of location",
+      "GDP includes only goods; GNP includes services",
+      "GDP is always higher"
+    ],
+    "explanation": "GDP measures production within a country's borders. GNP (Gross National Product) measures production by a country's citizens, regardless of where production occurs.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between GDP and GNP?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cd057dbe-c23c-4ea2-8566-e842966bd8f5",
+    "options": [
+      "Reduction in spending",
+      "An initial change in spending leads to a larger change in national income",
+      "Tax increase effect",
+      "Import reduction"
+    ],
+    "explanation": "The multiplier effect occurs when an initial injection of spending (government, investment, exports) leads to a larger final increase in national income through successive rounds of spending.",
+    "difficulty": "medium",
+    "question_text": "What is the multiplier effect in macroeconomics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7a356330-3867-479b-9f53-c1ff8bc0c5ea",
+    "options": [
+      "Bad products in market",
+      "Asymmetric information before transaction where high-risk individuals are more likely to seek insurance",
+      "Government selection of industries",
+      "Consumer choice"
+    ],
+    "explanation": "Adverse selection occurs when one party has better information before a transaction, e.g., people with higher health risks are more likely to buy health insurance.",
+    "difficulty": "medium",
+    "question_text": "What is adverse selection?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a5010598-37af-4876-b96d-530130e5d20c",
+    "options": [
+      "Import tariffs",
+      "Ratio of export prices to import prices",
+      "Total trade volume",
+      "Exchange rate"
+    ],
+    "explanation": "Terms of Trade (TOT) = (Index of Export Prices / Index of Import Prices) × 100. TOT > 100 means favorable terms (more imports per unit of exports).",
+    "difficulty": "medium",
+    "question_text": "What is the terms of trade?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7fbe14e0-a050-48c7-b96f-d00640fa9811",
+    "options": [
+      "Interest rate commercial banks charge customers",
+      "Interest rate central bank charges commercial banks for loans",
+      "Government bond yield",
+      "Inflation rate"
+    ],
+    "explanation": "The discount rate (or bank rate) is the interest rate at which commercial banks can borrow funds directly from the central bank.",
+    "difficulty": "medium",
+    "question_text": "What is the discount rate in central banking?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1488b2fa-85fa-4f94-b728-527817360fad",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Greater than 1"
+    ],
+    "explanation": "For inferior goods, demand decreases as income increases, giving a negative income elasticity. Examples include instant noodles and bus travel.",
+    "difficulty": "medium",
+    "question_text": "What is the income elasticity of demand for an inferior good?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b4ed67c2-b2b1-49c7-ba39-062cb33a361b",
+    "options": [
+      "Demand curve with two kinks",
+      "Oligopoly model where firms match price decreases but not increases, creating a kink at current price",
+      "Perfect competition model",
+      "Monopoly pricing model"
+    ],
+    "explanation": "The kinked demand curve model explains price rigidity in oligopolies: rivals match price decreases (elastic below kink) but ignore price increases (inelastic above kink).",
+    "difficulty": "medium",
+    "question_text": "What is the kinked demand curve model?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "16901260-09c5-40cb-a4aa-827b212cf845",
+    "options": [
+      "MV = PY",
+      "Money supply determines price level in the long run",
+      "Both A and B",
+      "Government spending theory"
+    ],
+    "explanation": "The quantity theory of money: MV = PY, where M = money supply, V = velocity, P = price level, Y = real output. Assuming V and Y are stable, changes in M lead to proportional changes in P.",
+    "difficulty": "medium",
+    "question_text": "What is the quantity theory of money?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "66e843e0-f369-4674-b60c-5b89ae559123",
+    "options": [
+      "No difference",
+      "Regressive: tax rate decreases as income increases; Proportional: constant rate regardless of income",
+      "Regressive: rate increases; Proportional: rate decreases",
+      "Regressive only applies to corporations"
+    ],
+    "explanation": "Regressive taxes take a larger percentage of low incomes (e.g., sales tax). Proportional taxes apply the same rate to all income levels (flat tax).",
+    "difficulty": "medium",
+    "question_text": "What is the difference between a regressive and proportional tax?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "50eba685-da89-404b-a8f1-a543ea44001e",
+    "options": [
+      "Countries export goods that intensively use their abundant factors",
+      "Free trade benefits everyone equally",
+      "Government should protect infant industries",
+      "Trade is always harmful"
+    ],
+    "explanation": "The Heckscher-Ohlin theorem states that countries export goods that make intensive use of factors of production that are locally abundant and import goods requiring scarce factors.",
+    "difficulty": "medium",
+    "question_text": "What is the Heckscher-Ohlin theorem?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0d1f4fca-f100-47a1-b30f-3a3795356883",
+    "options": [
+      "Temporary unemployment during job transitions",
+      "Unemployment due to mismatch between worker skills and job requirements or geographic location",
+      "Seasonal job loss",
+      "Voluntary unemployment"
+    ],
+    "explanation": "Structural unemployment occurs due to fundamental shifts in the economy (technology, industry decline) creating a mismatch between workers' skills and employers' needs.",
+    "difficulty": "medium",
+    "question_text": "What is structural unemployment?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e654c315-9d5e-45d3-9c7c-5e926090a5d6",
+    "options": [
+      "Government must regulate all externalities",
+      "If property rights are clear and transaction costs low, private bargaining can solve externality problems efficiently",
+      "Taxes should always be used",
+      "Externalities cannot be solved"
+    ],
+    "explanation": "The Coase theorem states that with well-defined property rights and zero/low transaction costs, parties can negotiate to an efficient outcome regardless of initial liability assignment.",
+    "difficulty": "medium",
+    "question_text": "What is the Coase theorem?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "48b8ec84-bbb3-4b9e-b0e4-af70b567c71c",
+    "options": [
+      "No difference",
+      "Horizontal: same industry stage; Vertical: different stages of supply chain",
+      "Horizontal: supply chain; Vertical: same stage",
+      "Horizontal is always illegal"
+    ],
+    "explanation": "Horizontal integration merges firms at the same production stage (competitors). Vertical integration merges firms at different supply chain stages (supplier + manufacturer).",
+    "difficulty": "medium",
+    "question_text": "What is the difference between horizontal and vertical integration?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a5fe54ac-7dca-44a2-bc6d-13eaf1555eae",
+    "options": [
+      "Too much cash in circulation",
+      "Situation where monetary policy becomes ineffective because interest rates are near zero and savings rates are high",
+      "Bank failure",
+      "High inflation"
+    ],
+    "explanation": "In a liquidity trap, interest rates are near zero, people hoard cash expecting deflation, and further monetary policy injections don't stimulate the economy.",
+    "difficulty": "medium",
+    "question_text": "What is the liquidity trap?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5418aa96-0828-4e6f-93cc-13adc7242d65",
+    "options": [
+      "Normal demand curve",
+      "Exception where demand increases as price rises due to strong income effect overwhelming substitution effect",
+      "Supply always equals demand",
+      "Government price control"
+    ],
+    "explanation": "Giffen goods are inferior goods where the strong negative income effect (price rise makes consumers poorer, buying more of the inferior good) outweighs the substitution effect.",
+    "difficulty": "medium",
+    "question_text": "What is Giffen's paradox?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9c463137-c5af-43bd-a962-267ddeb2aace",
+    "options": [
+      "Trade balance improves if sum of price elasticities of demand for exports and imports > 1",
+      "Exports must equal imports",
+      "Currency depreciation always improves trade balance",
+      "Tariffs improve welfare"
+    ],
+    "explanation": "The Marshall-Lerner condition states that currency depreciation improves the trade balance if |ηx| + |ηm| > 1, where ηx and ηm are demand elasticities for exports and imports.",
+    "difficulty": "medium",
+    "question_text": "What is the Marshall-Lerner condition?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "e5444f57-3e79-44d3-be77-5f86efdd0dda",
+    "options": [
+      "Economic growth",
+      "Income or wealth distribution inequality",
+      "Inflation rate",
+      "Unemployment trends"
+    ],
+    "explanation": "The Lorenz curve plots cumulative percentage of income/wealth against cumulative percentage of population. The further from the line of equality, the greater the inequality.",
+    "difficulty": "medium",
+    "question_text": "What is the Lorenz curve used to illustrate?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "781783a4-8d40-4175-b148-f50fa27e6067",
+    "options": [
+      "No difference",
+      "Explicit: direct monetary payments; Implicit: opportunity cost of using self-owned resources",
+      "Explicit: hidden costs; Implicit: obvious costs",
+      "Explicit: only for labor"
+    ],
+    "explanation": "Explicit costs involve direct monetary payments (wages, rent). Implicit costs are opportunity costs of using resources the firm already owns (owner's time, capital).",
+    "difficulty": "medium",
+    "question_text": "What is the difference between explicit and implicit costs?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "64210aa5-aa83-4f6f-b616-978d521abcdb",
+    "options": [
+      "Absolute convergence for all countries",
+      "Conditional convergence - countries with same savings/population growth converge to same steady state",
+      "No convergence",
+      "Divergence always"
+    ],
+    "explanation": "The Solow model predicts conditional convergence: economies with similar structural characteristics (savings rate, population growth, technology) converge to the same steady-state income per capita, not absolute convergence.",
+    "difficulty": "hard",
+    "question_text": "What is the Solow growth model's prediction about convergence?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "89343b49-74fc-474f-8d59-bed306d4d400",
+    "options": [
+      "Exogenous savings rate",
+      "Endogenous savings rate determined by optimizing representative consumer",
+      "No technological progress",
+      "Fixed population"
+    ],
+    "explanation": "The RCK model endogenizes the savings rate through dynamic optimization of a representative consumer who maximizes lifetime utility, unlike Solow's exogenous savings rate.",
+    "difficulty": "hard",
+    "question_text": "What is the Ramsey-Cass-Koopmans model's key difference from the Solow model?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "db212d3f-9a87-433a-a8e4-44ca0ccb64eb",
+    "options": [
+      "Infinite expected value game; resolved by expected utility theory with diminishing marginal utility",
+      "Russian economic crisis",
+      "Foreign exchange paradox",
+      "Trade deficit problem"
+    ],
+    "explanation": "The St. Petersburg paradox involves a game with infinite expected monetary value but finite willingness to pay. Bernoulli resolved it using expected utility with diminishing marginal utility of wealth.",
+    "difficulty": "hard",
+    "question_text": "Explain the St. Petersburg paradox and its resolution.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "f0082837-eece-4029-aaf9-748bcaf0374b",
+    "options": [
+      "Fiscal policy is ineffective",
+      "Fiscal policy is highly effective because monetary policy accommodates to maintain the peg",
+      "Only monetary policy works",
+      "Both policies are ineffective"
+    ],
+    "explanation": "Under fixed exchange rates with perfect capital mobility, fiscal policy is highly effective: expansionary fiscal policy attracts capital inflows, forcing the central bank to buy foreign currency and expand money supply, reinforcing the fiscal stimulus.",
+    "difficulty": "hard",
+    "question_text": "What is the Mundell-Fleming model's prediction for fiscal policy under fixed exchange rates?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "837e3fa8-3cfb-4764-9a3c-73013e7a5a70",
+    "options": [
+      "Government spending always stimulates the economy",
+      "Tax cuts with unchanged government spending don't stimulate consumption because rational agents save for future tax liabilities",
+      "Taxes should always be raised",
+      "Budget deficits don't matter"
+    ],
+    "explanation": "Ricardian equivalence (Barro) states that debt-financed tax cuts don't affect aggregate demand because rational, forward-looking consumers save the tax cut to pay future taxes needed to service the debt.",
+    "difficulty": "hard",
+    "question_text": "What is the Ricardian equivalence proposition?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "66a62a00-ac2f-44e9-934f-43c63f7eb895",
+    "options": [
+      "Trade between countries",
+      "Conflict of interest when agent makes decisions on behalf of principal due to asymmetric information and divergent interests",
+      "Bank lending",
+      "Consumer choice"
+    ],
+    "explanation": "The principal-agent problem arises when agents (managers) don't act in principals' (owners') best interests due to divergent goals and asymmetric information, leading to moral hazard and adverse selection.",
+    "difficulty": "hard",
+    "question_text": "What is the principal-agent problem in economics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "23f7cf17-20bc-4a4b-b5d2-014b2a688599",
+    "options": [
+      "All are the same",
+      "First: charge each customer reservation price; Second: quantity/menu pricing; Third: different prices for identifiable groups",
+      "First: group pricing; Second: individual pricing; Third: quantity discounts",
+      "Degree refers to legality"
+    ],
+    "explanation": "First-degree (perfect): charge each consumer their maximum willingness to pay. Second-degree: price varies by quantity or version (menu pricing). Third-degree: different prices for identifiable demographic groups (student/senior discounts).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between first-degree, second-degree, and third-degree price discrimination?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2933607f-7c75-4577-aca1-a6c5a1ee0d67",
+    "options": [
+      "Fiscal policy guideline",
+      "Monetary policy rule: i = r* + π + 0.5(π − π*) + 0.5(y − y*)",
+      "Trade policy formula",
+      "Banking regulation"
+    ],
+    "explanation": "The Taylor Rule prescribes the central bank's target short-term interest rate based on: equilibrium real rate (r*), actual inflation (π), target inflation (π*), actual output gap (y − y*). It formalizes how central banks should respond to inflation and output gaps.",
+    "difficulty": "hard",
+    "question_text": "What is the Taylor Rule?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3d43a35a-12fb-415e-b735-f007693f471e",
+    "options": [
+      "All countries have same price levels",
+      "Productivity differences in traded goods sector cause systematic deviations in purchasing power parity",
+      "Trade always balances",
+      "Exchange rates are fixed"
+    ],
+    "explanation": "The Balassa-Samuelson effect states that countries with higher productivity growth in traded goods experience real exchange rate appreciation because higher wages in traded goods spill over to non-traded goods, raising overall price levels.",
+    "difficulty": "hard",
+    "question_text": "What is the Balassa-Samuelson effect?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cfa6760b-1e82-44bb-9357-f3703d348386",
+    "options": [
+      "Engineering principles",
+      "Economic theory of designing institutions/rules to achieve desired outcomes despite private information and self-interested behavior",
+      "Game theory for perfect information",
+      "Macroeconomic forecasting"
+    ],
+    "explanation": "Mechanism design (reverse game theory) designs rules/incentives (mechanisms) so that rational, self-interested agents with private information voluntarily achieve socially desirable outcomes. Applications include auction design and contract theory.",
+    "difficulty": "hard",
+    "question_text": "What is mechanism design theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "67e686f8-ee1c-4b2e-80d4-55248332f6d6",
+    "options": [
+      "No relationship",
+      "Nominal rate adjusts one-for-one with expected inflation to maintain real rate",
+      "Real rate is always higher",
+      "Nominal rate equals inflation"
+    ],
+    "explanation": "The Fisher effect states: i = r + πe. The nominal interest rate (i) adjusts to equal the real interest rate (r) plus expected inflation (πe), so changes in expected inflation are fully reflected in nominal rates.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between nominal and real interest rates according to the Fisher effect?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "634471fd-4433-4179-9a56-47f94039c7a8",
+    "options": [
+      "Central banks always keep promises",
+      "Optimal policy announced today may not be optimal to implement tomorrow, creating credibility problems",
+      "Policy has no lag",
+      "Rules are always better than discretion"
+    ],
+    "explanation": "Kydland & Prescott (1977) showed policymakers have incentive to deviate from announced low-inflation policies after expectations are set, creating an inflation bias. This explains why credible commitment mechanisms (inflation targeting, central bank independence) matter.",
+    "difficulty": "hard",
+    "question_text": "What is the Time Inconsistency Problem in monetary policy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e86e363d-86fb-4725-a8b4-ee7052a2879a",
+    "options": [
+      "A firm earns profit",
+      "Third parties are affected by a transaction",
+      "Prices rise",
+      "Supply decreases"
+    ],
+    "explanation": "Externalities occur when third parties bear costs or receive benefits from a transaction.",
+    "difficulty": "medium",
+    "question_text": "An externality exists when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bce03d1b-a01a-430f-891b-f5deb2a8911f",
+    "options": [
+      "No difference",
+      "Pareto: no one worse off; Kaldor-Hicks: winners could compensate losers (potential compensation)",
+      "Pareto: total surplus maximized; Kaldor-Hicks: equal distribution",
+      "Both require equal distribution"
+    ],
+    "explanation": "Pareto efficiency: no one can be made better off without making someone worse off (strict). Kaldor-Hicks: total gains exceed total losses, so winners could potentially compensate losers (basis for cost-benefit analysis).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between Pareto efficiency and Kaldor-Hicks efficiency?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "eeaa4dc7-5e9c-45a7-9de3-0c88f620248a",
+    "options": [
+      "Same as Solow model",
+      "Endogenous growth: technological progress is internal to the model driven by R&D, human capital, externalities; no automatic convergence",
+      "Exogenous savings only",
+      "No role for policy"
+    ],
+    "explanation": "Endogenous growth theory (Romer, Lucas) models technological progress as resulting from intentional R&D investment, human capital accumulation, and knowledge spillovers, explaining why growth rates may not converge and policy can affect long-run growth.",
+    "difficulty": "hard",
+    "question_text": "What is endogenous growth theory and how does it differ from neoclassical growth theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2fde0e2a-9021-418c-9713-df58ae7b3d91",
+    "options": [
+      "Trade model",
+      "Model showing how banks providing liquidity transformation are inherently fragile due to multiple equilibria",
+      "Growth model",
+      "Labor market model"
+    ],
+    "explanation": "The Diamond-Dybvig model (1983) shows banks transform illiquid assets into liquid deposits, but this creates two equilibria: a good one (patient depositors wait) and a bad one (bank run panic). Deposit insurance can eliminate the bad equilibrium.",
+    "difficulty": "hard",
+    "question_text": "What is the Diamond-Dybvig model of bank runs?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "90ca4e96-f562-4698-af0f-16c49e30233a",
+    "options": [
+      "No difference",
+      "Horizontal: equals treated equally; Vertical: unequals treated unequally (ability-to-pay)",
+      "Horizontal: rich pay more; Vertical: flat tax",
+      "Horizontal: only income tax; Vertical: all taxes"
+    ],
+    "explanation": "Horizontal equity requires taxpayers in similar situations pay similar taxes. Vertical equity requires taxpayers with greater ability to pay contribute more (progressive taxation implements vertical equity).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between horizontal and vertical equity in taxation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "130f95a4-8ad9-4921-b3c8-9986adfba1b6",
+    "options": [
+      "Testing for multicollinearity",
+      "Testing for unit root (non-stationarity) in time series data",
+      "Testing for heteroscedasticity",
+      "Testing for normality"
+    ],
+    "explanation": "The Augmented Dickey-Fuller (ADF) test checks whether a time series has a unit root (non-stationary). Null hypothesis: series has unit root. Rejecting null indicates stationarity.",
+    "difficulty": "hard",
+    "question_text": "What is the Dickey-Fuller test used for in econometrics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7ea4d276-e866-453e-a618-26f3067f96f5",
+    "options": [
+      "Three economic goals that are mutually achievable",
+      "Countries cannot simultaneously maintain free capital movement, fixed exchange rate, and independent monetary policy",
+      "Three types of unemployment",
+      "Trade, investment, and growth"
+    ],
+    "explanation": "The impossible trinity states a country can achieve at most two of: (1) free capital flows, (2) fixed exchange rate, (3) independent monetary policy. Choosing any two forces abandonment of the third.",
+    "difficulty": "hard",
+    "question_text": "What is the Impossible Trinity (Mundellian Trilemma)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "140c71ee-ad33-47a9-95aa-109b2da29734",
+    "options": [
+      "Efficient market hypothesis",
+      "Expected utility theory, showing people systematically violate independence axiom",
+      "Purchasing power parity",
+      "Quantity theory of money"
+    ],
+    "explanation": "The Allais paradox demonstrates that people's choices violate the independence axiom of expected utility theory, supporting prospect theory's claim that people evaluate choices relative to a reference point and are loss-averse.",
+    "difficulty": "hard",
+    "question_text": "What is the Allais paradox and what does it challenge?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c71fbb7d-3045-4369-a1c7-a672332d9499",
+    "options": [
+      "All people born at same time",
+      "Dynamic economic model where different generations coexist, used to analyze social security, fiscal policy, and intergenerational transfers",
+      "Static model",
+      "Single-period model"
+    ],
+    "explanation": "The OLG model (Samuelson, Diamond) features generations overlapping in time (young work, old retire), enabling analysis of Social Security, government debt burden across generations, and whether competitive equilibrium is Pareto optimal.",
+    "difficulty": "hard",
+    "question_text": "What is the OLG (Overlapping Generations) model?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f35154b3-1b57-4473-bc37-e4d2528f0102",
+    "options": [
+      "Zero tariffs are always optimal",
+      "A large country can improve welfare by imposing a tariff that improves terms of trade more than trade volume reduction",
+      "Tariffs always reduce welfare",
+      "Small countries benefit from tariffs"
+    ],
+    "explanation": "For a large country that can affect world prices, an optimal tariff (where terms-of-trade gain equals trade volume deadweight loss) can potentially improve national welfare at trading partners' expense.",
+    "difficulty": "hard",
+    "question_text": "What is the optimal tariff theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "37adf604-62f9-4edf-954d-db3e81b2e92e",
+    "options": [
+      "No difference",
+      "Structural VAR uses economic theory to impose restrictions for identifying causal relationships; reduced-form VAR estimates correlations without structural interpretation",
+      "Structural VAR has fewer variables",
+      "Reduced-form VAR is always better"
+    ],
+    "explanation": "Reduced-form VARs estimate unrestricted correlations between variables. Structural VARs impose identifying restrictions (Cholesky, short-run/long-run restrictions) based on economic theory to recover structural shocks and causal effects.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between structural VAR and reduced-form VAR?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "850c55fe-473d-49ef-b10a-5d9f57fb4f42",
+    "options": [
+      "Growth rate measure",
+      "Measure of income inequality: ratio of area between Lorenz curve and equality line to total area under equality line (0 = perfect equality, 1 = perfect inequality)",
+      "Inflation measure",
+      "Trade balance ratio"
+    ],
+    "explanation": "Gini coefficient = A/(A+B) where A is area between Lorenz curve and line of equality, and B is area below Lorenz curve. It ranges from 0 (perfect equality) to 1 (one person has all income).",
+    "difficulty": "hard",
+    "question_text": "What is the Gini coefficient and how is it calculated?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d5a31c5b-0817-44d5-9050-66b1f0fbd76e",
+    "options": [
+      "Money demand proportional to income",
+      "Transactions demand for money as an inventory problem, balancing brokerage costs against interest foregone",
+      "Speculative demand only",
+      "Precautionary demand only"
+    ],
+    "explanation": "The Baumol-Tobin model applies inventory theory to cash management: individuals optimize between holding cash (losing interest) and converting bonds to cash (incurring fixed transaction costs). Optimal money demand ∝ √(transaction costs × income / interest rate).",
+    "difficulty": "hard",
+    "question_text": "What is the Baumol-Tobin model of money demand?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "02c6f3b9-975a-4173-a5f0-33d2c51852d2",
+    "options": [
+      "Risk after signing; mitigated by monitoring",
+      "High-risk individuals more likely to buy insurance; mitigated by risk-based pricing, screening, and mandates",
+      "Low-risk individuals buying too much insurance",
+      "Cannot be mitigated"
+    ],
+    "explanation": "Adverse selection occurs when asymmetric information leads high-risk individuals to buy insurance at average rates, causing the risk pool to deteriorate (death spiral). Solutions: risk-based premiums, medical screening, coverage mandates, and risk adjustment.",
+    "difficulty": "hard",
+    "question_text": "What is adverse selection in insurance markets and how can it be mitigated?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9d551fda-4bce-448a-a6c0-e718011dfc07",
+    "options": [
+      "Firms compete on price",
+      "Firms simultaneously choose quantities; each firm's output is optimal given the other firm's output",
+      "Collusion to maximize joint profits",
+      "Perfect competition outcome"
+    ],
+    "explanation": "In Cournot competition, firms choose quantities simultaneously. The Nash equilibrium occurs where each firm's quantity is a best response to the other's quantity, resulting in output between monopoly and perfect competition levels.",
+    "difficulty": "hard",
+    "question_text": "What is the Cournot-Nash equilibrium in oligopoly theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3cd56981-fce5-462a-9f5b-f128f3efc803",
+    "options": [
+      "Business cycles caused only by monetary factors",
+      "Business cycles driven primarily by real shocks (technology) with rational expectations and market clearing",
+      "Keynesian demand management",
+      "Government intervention theory"
+    ],
+    "explanation": "RBC theory (Kydland, Prescott) argues business cycles result from real shocks (technology, productivity) rather than monetary factors. Markets always clear, fluctuations are optimal responses to shocks, and government intervention is welfare-reducing.",
+    "difficulty": "hard",
+    "question_text": "What is real business cycle (RBC) theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b7c01358-1188-435f-a94f-c047c19ceb8a",
+    "options": [
+      "Capital structure is irrelevant",
+      "With corporate taxes, firm value increases with debt due to tax shield: V_L = V_U + T_C × D",
+      "Debt always destroys value",
+      "Only equity financing is optimal"
+    ],
+    "explanation": "The M&M theorem with corporate taxes states that leverage increases firm value because interest is tax-deductible. V_Levered = V_Unlevered + (Tax Rate × Debt). With personal taxes and bankruptcy costs, the trade-off theory applies.",
+    "difficulty": "hard",
+    "question_text": "What is the Modigliani-Miller theorem with taxes?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3b4a52e1-e6ee-4737-a9fa-f9fd892e8197",
+    "options": [
+      "Communication between firms",
+      "Spence's theory: workers use costly signals (education) to convey private information about productivity to employers",
+      "Wage determination by government",
+      "Union negotiation"
+    ],
+    "explanation": "Spence's signaling model (1973) shows how education can serve as a signal of worker ability when employers cannot directly observe productivity, even if education doesn't directly increase productivity.",
+    "difficulty": "hard",
+    "question_text": "What is signaling in labor market economics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b5898f83-0fbc-4016-8a30-33ab4959f6f6",
+    "options": [
+      "Relationship between inflation and unemployment",
+      "Relationship between tax rates and tax revenue: revenue is zero at 0% and 100% rates, maximized at intermediate rate",
+      "Supply and demand curve",
+      "GDP growth curve"
+    ],
+    "explanation": "The Laffer Curve illustrates that tax revenue is zero at 0% rate (no revenue) and 100% rate (no economic activity), with maximum revenue at some intermediate tax rate. It underpins supply-side economics arguments for tax cuts.",
+    "difficulty": "hard",
+    "question_text": "What is the Laffer Curve?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b8c8c401-eaeb-4028-b7a3-5419b40a5520",
+    "options": [
+      "Immediate improvement in trade balance after currency depreciation",
+      "Trade balance worsens initially then improves after currency depreciation due to contract rigidities and adjustment lags",
+      "Exchange rate always appreciates",
+      "No effect of exchange rate on trade"
+    ],
+    "explanation": "The J-curve shows that after currency depreciation, the trade balance initially worsens (short-run inelasticities, pre-existing contracts) before improving in the long run as quantities adjust (Marshall-Lerner condition holds).",
+    "difficulty": "hard",
+    "question_text": "What is the J-curve effect in international economics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "86c21012-35b0-4657-8557-9d89e0992ea9",
+    "options": [
+      "Consumption depends only on current income",
+      "Consumption depends on expected long-run average (permanent) income rather than current income",
+      "Consumption depends on wealth only",
+      "Saving is constant"
+    ],
+    "explanation": "Friedman's PIH states consumption depends on permanent income (expected long-run average), not transitory income. Temporary income changes are mostly saved, explaining why MPC out of temporary tax cuts is low.",
+    "difficulty": "hard",
+    "question_text": "What is the permanent income hypothesis?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2a4d5f99-0317-4dc3-8b19-3ba2a3fb36c1",
+    "options": [
+      "Standard static optimization",
+      "Formulation for optimal control problems with non-constant discounting",
+      "Game theory concept",
+      "Production function"
+    ],
+    "explanation": "The Caputo Lagrangian addresses time-inconsistent preferences (non-constant discounting) in dynamic optimization. Unlike standard exponential discounting, it allows for hyperbolic or non-constant discount rates.",
+    "difficulty": "hard",
+    "question_text": "What is the Caputo Lagrangian in dynamic optimization?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5298deaf-c297-40e0-b04c-b8ea6227944f",
+    "options": [
+      "People are underconfident",
+      "Overconfident individuals enter competitive markets excessively, leading to high failure rates and industry over-entry",
+      "Markets are always efficient",
+      "Entry decisions are optimal"
+    ],
+    "explanation": "Camerer & Lovallo (1999) found overconfident individuals (ranking themselves above average) excessively enter competitive markets, leading to business failures and industry over-entry—explaining high start-up failure rates.",
+    "difficulty": "hard",
+    "question_text": "What is the Camerer-Lovallo experiment on overconfidence and market entry?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1336d1e4-1b75-4142-a51f-a9a440f713c7",
+    "options": [
+      "No difference",
+      "Hicksian: utility held constant; Slutsky: original bundle affordable (purchasing power held constant at different reference point)",
+      "Hicksian: income held constant; Slutsky: price held constant",
+      "Both use same approach"
+    ],
+    "explanation": "Hicksian decomposition holds utility constant (movement along same indifference curve). Slutsky decomposition holds purchasing power constant such that the original bundle remains affordable at new prices. The Slutsky equation is more commonly used in modern theory.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between Hicksian and Slutsky substitution effects?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0fc13101-887d-40dc-9d63-bd14dae61106",
+    "options": [
+      "Trade always occurs efficiently",
+      "No efficient, incentive-compatible, individually rational, budget-balanced mechanism exists for bilateral trade with private information",
+      "Government should always intervene",
+      "Perfect competition is always efficient"
+    ],
+    "explanation": "The Myerson-Satterthwaite impossibility theorem shows that with two-sided private information, no mechanism can achieve ex post efficiency, incentive compatibility, individual rationality, and budget balance simultaneously.",
+    "difficulty": "hard",
+    "question_text": "What is the Myerson-Satterthwaite theorem?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "04285e18-d98f-450b-a1ee-a13f76d5c8dd",
+    "options": [
+      "Price levels are equal across countries",
+      "Price levels are higher in richer countries due to higher productivity in traded goods pushing up non-traded goods prices",
+      "Poorer countries have higher prices",
+      "Exchange rates equalize all prices"
+    ],
+    "explanation": "The Penn effect observes that price levels are higher in richer countries. The Balassa-Samuelson effect explains this: higher productivity in traded goods in rich countries raises wages, which spill over to higher prices in the non-traded sector.",
+    "difficulty": "hard",
+    "question_text": "What is the Penn effect and how does it relate to the Balassa-Samuelson effect?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "53f5567a-5265-4f1f-9e4a-a660a0ca01d3",
+    "options": [
+      "All firms adjust prices every period",
+      "New Keynesian model where firms adjust prices randomly with constant probability, creating nominal rigidities",
+      "Perfectly flexible prices",
+      "Only menu costs matter"
+    ],
+    "explanation": "The Calvo model assumes each firm has probability (1−θ) of adjusting price each period. This creates staggered price setting and nominal rigidities, generating real effects of monetary policy without assuming all firms face menu costs simultaneously.",
+    "difficulty": "hard",
+    "question_text": "What is the Calvo pricing model?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fd47c9c9-3a1f-4b0a-a8b5-decb3af62c9d",
+    "options": [
+      "Non-cooperative equilibrium",
+      "Fair distribution of coalition surplus based on marginal contributions weighted by probability of joining order",
+      "Monopoly pricing",
+      "Zero-sum game solution"
+    ],
+    "explanation": "The Shapley value uniquely distributes the total surplus fairly based on each player's average marginal contribution across all possible coalition entry orders, satisfying efficiency, symmetry, dummy player, and additivity axioms.",
+    "difficulty": "hard",
+    "question_text": "What is the Shapley value in cooperative game theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "87c7d394-bbf2-408e-9898-746dff355f82",
+    "options": [
+      "Goods sold in public markets",
+      "Non-rival and non-excludable goods",
+      "Government-owned factories",
+      "Free goods with no cost"
+    ],
+    "explanation": "Public goods are non-rival (use by one doesn't reduce availability) and non-excludable.",
+    "difficulty": "medium",
+    "question_text": "Public goods are:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "450c4a67-0ddb-4f70-9437-3976612126fe",
+    "options": [
+      "A benefit to third parties",
+      "A cost imposed on third parties",
+      "A government tax",
+      "A subsidy"
+    ],
+    "explanation": "Negative externalities impose costs on uninvolved third parties (e.g., pollution).",
+    "difficulty": "medium",
+    "question_text": "A negative externality is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ce33f0ef-593e-4d0e-84a1-7d9d3691e43b",
+    "options": [
+      "Even distribution of economic activity",
+      "Models how transportation costs and increasing returns lead to agglomeration (core) and empty areas (periphery)",
+      "Perfect competition model",
+      "Constant returns to scale"
+    ],
+    "explanation": "Krugman's NEG core-periphery model explains spatial concentration: with intermediate transport costs and increasing returns, circular causation (forward/backward linkages) leads to manufacturing agglomeration in one region despite identical fundamentals.",
+    "difficulty": "hard",
+    "question_text": "What is the New Economic Geography (Krugman) core-periphery model?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6eaa3926-42c0-4885-bdf7-a3dca404bcbb",
+    "options": [
+      "Only money and banking",
+      "How society allocates scarce resources",
+      "Government policies only",
+      "International trade only"
+    ],
+    "explanation": "Economics studies how individuals, businesses, and governments allocate scarce resources to satisfy unlimited wants.",
+    "difficulty": "easy",
+    "question_text": "Economics is the study of:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c5f3386c-06f2-47f5-ab2e-e4f86d1d9ca0",
+    "options": [
+      "National income",
+      "Individual firms and consumers",
+      "Inflation rates",
+      "Balance of payments"
+    ],
+    "explanation": "Microeconomics focuses on individual economic units like consumers, firms, and specific markets.",
+    "difficulty": "easy",
+    "question_text": "Microeconomics studies:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d7efdbff-44cd-4206-bd14-d81528ca6a12",
+    "options": [
+      "Increases",
+      "Decreases",
+      "Stays the same",
+      "Doubles"
+    ],
+    "explanation": "The law of demand states that as price rises, quantity demanded falls, all else equal.",
+    "difficulty": "easy",
+    "question_text": "When price increases, demand generally:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "74f824d7-fbbb-42fe-9736-0c0d8f46a410",
+    "options": [
+      "Demand exceeds supply",
+      "Supply exceeds demand",
+      "Quantity demanded equals quantity supplied",
+      "Price is at its highest"
+    ],
+    "explanation": "Equilibrium occurs when quantity demanded equals quantity supplied, clearing the market.",
+    "difficulty": "easy",
+    "question_text": "A market is in equilibrium when:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ced5e54b-4855-4067-996e-db94f52c326d",
+    "options": [
+      "Gross Domestic Product",
+      "General Domestic Product",
+      "Gross Development Plan",
+      "General Development Product"
+    ],
+    "explanation": "GDP = Gross Domestic Product, the total value of goods and services produced in a country.",
+    "difficulty": "easy",
+    "question_text": "GDP stands for:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "91e39ba3-de80-49ec-8895-b0341be0f61d",
+    "options": [
+      "Rising unemployment",
+      "Fall in price level",
+      "Rise in general price level",
+      "Economic growth"
+    ],
+    "explanation": "Inflation is a sustained rise in the general price level of goods and services.",
+    "difficulty": "easy",
+    "question_text": "Inflation means:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "1ed0736b-ff5c-4c9f-a911-cc08dd92f751",
+    "options": [
+      "Change in supply due to price change",
+      "Sensitivity of demand to price change",
+      "Rate of inflation",
+      "Consumer income change"
+    ],
+    "explanation": "PED measures how much quantity demanded changes in response to a change in price.",
+    "difficulty": "easy",
+    "question_text": "Price Elasticity of Demand (PED) measures:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7fbd0826-eb3d-4982-849f-93e0bbb7817e",
+    "options": [
+      "High price and limited supply",
+      "Non-excludability and non-rivalry",
+      "Government ownership only",
+      "Being free to all"
+    ],
+    "explanation": "Public goods are non-excludable (can't be denied to anyone) and non-rival (one person's use doesn't reduce availability).",
+    "difficulty": "medium",
+    "question_text": "A public good is characterized by:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2052c96f-add9-4429-b535-62f82f75d333",
+    "options": [
+      "The price paid for a good",
+      "The cost of the next best alternative foregone",
+      "Total cost of production",
+      "Fixed cost only"
+    ],
+    "explanation": "Opportunity cost is the value of the next best alternative you give up when making a choice.",
+    "difficulty": "easy",
+    "question_text": "Opportunity cost is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "71bd82c5-4e95-486a-91bd-df6f1d6db81a",
+    "options": [
+      "Change in price of the good",
+      "Change in consumer income",
+      "Change in quantity supplied",
+      "Change in price alone"
+    ],
+    "explanation": "Changes in income, tastes, prices of related goods shift the entire demand curve.",
+    "difficulty": "easy",
+    "question_text": "Which of the following causes a shift in the demand curve?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6d13005d-a66b-47f7-b58a-f9e8c534562a",
+    "options": [
+      "Few sellers",
+      "Many buyers and sellers, identical products",
+      "One seller",
+      "Differentiated products"
+    ],
+    "explanation": "Perfect competition has many buyers and sellers with homogeneous (identical) products.",
+    "difficulty": "easy",
+    "question_text": "Perfect competition is characterized by:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3821f2cd-3ad7-47e5-86d7-260ec85fe59f",
+    "options": [
+      "Many sellers",
+      "Few sellers",
+      "One seller",
+      "Two sellers"
+    ],
+    "explanation": "A monopoly exists when there is only one seller in a market with no close substitutes.",
+    "difficulty": "easy",
+    "question_text": "A monopoly has:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "41e91cb7-f530-4667-9e42-0d791e724cd9",
+    "options": [
+      "Extra goods bought",
+      "Difference between what consumer is willing to pay and what they actually pay",
+      "Profit made by consumers",
+      "Government subsidy"
+    ],
+    "explanation": "Consumer surplus = the amount consumers are willing to pay minus the amount they actually pay.",
+    "difficulty": "medium",
+    "question_text": "Consumer surplus is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "345d6207-5f7a-41be-8414-b7bb45ec7bcb",
+    "options": [
+      "Central bank interest rates",
+      "Government spending and taxation",
+      "Exchange rate management",
+      "Trade policy"
+    ],
+    "explanation": "Fiscal policy refers to government use of taxation and spending to influence the economy.",
+    "difficulty": "easy",
+    "question_text": "Fiscal policy involves:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "30e44a26-03d7-4776-a385-232a7bcd2f56",
+    "options": [
+      "Cyclical unemployment",
+      "Frictional unemployment",
+      "Structural unemployment",
+      "Seasonal unemployment"
+    ],
+    "explanation": "Structural unemployment occurs due to a mismatch between workers' skills and available jobs.",
+    "difficulty": "medium",
+    "question_text": "Unemployment caused by mismatch of skills is called:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "60612982-e3b8-4aa1-9773-e4284ad7dce5",
+    "options": [
+      "Decreases",
+      "Stays the same",
+      "Increases",
+      "Becomes zero"
+    ],
+    "explanation": "The law of supply states that as price rises, quantity supplied increases, all else equal.",
+    "difficulty": "easy",
+    "question_text": "According to the law of supply, as price increases, quantity supplied:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b3c5d79e-c328-466f-a14c-4ea9c2f0d678",
+    "options": [
+      "Government spending",
+      "Net income from abroad",
+      "Investment",
+      "Consumer spending"
+    ],
+    "explanation": "GNP = GDP + Net income earned abroad by citizens.",
+    "difficulty": "medium",
+    "question_text": "GNP differs from GDP in that GNP includes:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6883e9db-9fc6-40f1-801c-cf114aa44b36",
+    "options": [
+      "Third parties bear costs of others' economic activity",
+      "Third parties benefit from others' activity",
+      "Government taxes production",
+      "Prices fall below equilibrium"
+    ],
+    "explanation": "A negative externality imposes costs on third parties not involved in the transaction (e.g., pollution).",
+    "difficulty": "medium",
+    "question_text": "A negative externality occurs when:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "1b456281-73e3-4565-8b41-f510c2225d85",
+    "options": [
+      "Developed economy",
+      "Developing/emerging economy",
+      "Fully planned economy",
+      "Subsistence economy"
+    ],
+    "explanation": "Pakistan is classified as a developing/emerging economy.",
+    "difficulty": "easy",
+    "question_text": "Pakistan's economy is classified as:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5420b536-32d5-4269-a82d-f5fd122a74c3",
+    "options": [
+      "WTO",
+      "IMF",
+      "NATO",
+      "WHO"
+    ],
+    "explanation": "The IMF (International Monetary Fund) provides financial assistance and loans to countries in economic difficulty.",
+    "difficulty": "easy",
+    "question_text": "Which organization provides financial assistance to developing countries?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "13b012eb-76fa-4da3-96d8-6f14ac83e440",
+    "options": [
+      "Goods are traded",
+      "One currency is exchanged for another",
+      "Taxes are set",
+      "Wages are paid"
+    ],
+    "explanation": "The exchange rate is the price of one currency in terms of another.",
+    "difficulty": "easy",
+    "question_text": "The exchange rate is the rate at which:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "63fadc05-45d7-4af9-ae3b-84cb22ea7c32",
+    "options": [
+      "Its own citizens",
+      "The rest of the world",
+      "The government",
+      "Private sector"
+    ],
+    "explanation": "The balance of payments records all transactions between residents and the rest of the world.",
+    "difficulty": "easy",
+    "question_text": "The balance of payments records a country's economic transactions with:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6ac22a3e-3c5e-4bab-8b47-0bc601828529",
+    "options": [
+      "Zero unemployment",
+      "Only frictional unemployment remains",
+      "All workers have two jobs",
+      "No one is looking for work"
+    ],
+    "explanation": "Full employment is when only frictional/natural unemployment remains.",
+    "difficulty": "medium",
+    "question_text": "Full employment means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bb146203-ad7f-499e-812a-a713516d9d89",
+    "options": [
+      "Growth and inflation",
+      "Inflation and unemployment",
+      "Supply and demand",
+      "GDP and consumption"
+    ],
+    "explanation": "The Phillips curve illustrates the inverse relationship between inflation and unemployment.",
+    "difficulty": "medium",
+    "question_text": "The Phillips Curve shows the trade-off between:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "81aa4156-dc5f-40c5-a731-40034041a876",
+    "options": [
+      "Prices are too high",
+      "Resources are allocated inefficiently",
+      "Government intervenes",
+      "Firms make profits"
+    ],
+    "explanation": "Market failure is when the market fails to allocate resources efficiently.",
+    "difficulty": "easy",
+    "question_text": "Market failure occurs when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5c4b0245-f322-444c-9344-27e63b698142",
+    "options": [
+      "Production possibilities",
+      "Combinations of two goods giving equal satisfaction",
+      "Supply and demand",
+      "Cost and revenue"
+    ],
+    "explanation": "An indifference curve shows all combinations of two goods yielding the same utility.",
+    "difficulty": "hard",
+    "question_text": "The indifference curve shows:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "945ee2ee-d995-4be2-bb19-903d423dba65",
+    "options": [
+      "Profits only",
+      "Wages at source",
+      "Company revenue",
+      "Imports"
+    ],
+    "explanation": "Income tax (PAYE) is deducted from wages at the point of payment.",
+    "difficulty": "easy",
+    "question_text": "Income tax is deducted from:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "55de1205-edc7-4e30-8e0b-ea2066ce9956",
+    "options": [
+      "Tax rates",
+      "Impact of a change in spending on national income",
+      "Money supply changes",
+      "Exchange rate effects"
+    ],
+    "explanation": "The fiscal multiplier shows how much GDP changes for a given change in government spending.",
+    "difficulty": "hard",
+    "question_text": "The fiscal multiplier measures:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a4ec2304-1db4-434e-88eb-62280c93e80f",
+    "options": [
+      "One seller",
+      "Two sellers",
+      "A few large sellers",
+      "Many small sellers"
+    ],
+    "explanation": "An oligopoly is dominated by a small number of large firms.",
+    "difficulty": "easy",
+    "question_text": "An oligopoly is a market structure with:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8258b76a-eee5-47da-b7ee-1a12a49637dc",
+    "options": [
+      "Two firms",
+      "Many firms",
+      "A single seller",
+      "The government"
+    ],
+    "explanation": "A monopoly has one seller with no close substitutes.",
+    "difficulty": "easy",
+    "question_text": "A monopoly is a market dominated by:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "958b5a89-1e66-4eee-9f59-d40192d3c03c",
+    "options": [
+      "One firm dominates",
+      "Few firms compete",
+      "There are many buyers and sellers with identical products",
+      "Firms set their own prices"
+    ],
+    "explanation": "Perfect competition has many buyers and sellers, homogeneous products, and free entry/exit.",
+    "difficulty": "easy",
+    "question_text": "Perfect competition exists when:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "bbf92559-43d2-448e-a222-675274084ce2",
+    "options": [
+      "The cost of goods",
+      "Cost of borrowing money as a percentage",
+      "Rate of inflation",
+      "Tax rate"
+    ],
+    "explanation": "The interest rate is the cost of borrowing money, expressed as a percentage.",
+    "difficulty": "easy",
+    "question_text": "The interest rate is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d8c38553-4710-4654-b64e-7e92e821852c",
+    "options": [
+      "Printing money",
+      "Process by which banks create money through lending",
+      "Government borrowing",
+      "Foreign exchange"
+    ],
+    "explanation": "Banks create money through the process of lending (credit creation/money multiplier).",
+    "difficulty": "medium",
+    "question_text": "Credit creation refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e83b1580-1d81-45d3-9137-adf32c71095e",
+    "options": [
+      "Total demand in an economy",
+      "Total supply of goods and services in an economy",
+      "Government supply of money",
+      "Export supply"
+    ],
+    "explanation": "Aggregate supply is the total output all producers are willing to supply at different price levels.",
+    "difficulty": "easy",
+    "question_text": "Aggregate supply is the:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ad02015a-a854-49aa-8993-9fb96e12ced3",
+    "options": [
+      "Consumer spending only",
+      "Consumer + investment + government + net exports",
+      "Supply side only",
+      "Imports only"
+    ],
+    "explanation": "AD = C + I + G + (XΓêÆM): consumption, investment, government spending, net exports.",
+    "difficulty": "medium",
+    "question_text": "Aggregate demand includes:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1593a118-7bb8-457e-804e-466ffc408dcb",
+    "options": [
+      "A company's annual report",
+      "Periods of expansion and contraction in economic activity",
+      "Product life cycle",
+      "Business planning"
+    ],
+    "explanation": "The business cycle describes the fluctuations in economic activity over time.",
+    "difficulty": "easy",
+    "question_text": "The business cycle refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "69f38ff4-31b9-43b7-a40f-3444f657b4e7",
+    "options": [
+      "Government taking over private companies",
+      "Transfer of publicly owned businesses to private ownership",
+      "Increasing taxes",
+      "Reducing imports"
+    ],
+    "explanation": "Privatization transfers state-owned enterprises to private ownership.",
+    "difficulty": "easy",
+    "question_text": "Privatization is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cf2ec60e-9f9c-4fb1-9e56-bdc1d431b0e4",
+    "options": [
+      "Government budget",
+      "Total amount of money in circulation in an economy",
+      "Foreign reserves",
+      "Interest rate"
+    ],
+    "explanation": "The money supply is the total stock of money available in an economy.",
+    "difficulty": "easy",
+    "question_text": "The money supply refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "03714ccf-9525-43d0-9739-ee1ddc20868e",
+    "options": [
+      "More money causes less inflation",
+      "Price level is determined by the quantity of money",
+      "Interest rates determine prices",
+      "Wages determine inflation"
+    ],
+    "explanation": "The quantity theory (MV = PQ) links money supply to the price level.",
+    "difficulty": "hard",
+    "question_text": "The quantity theory of money states that:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "77ff5c7e-44d5-4667-97d6-2a66749f4b9e",
+    "options": [
+      "Industrial growth at any cost",
+      "Economic growth without harming future generations",
+      "No development",
+      "Government-led growth"
+    ],
+    "explanation": "Sustainable development meets present needs without compromising future generations.",
+    "difficulty": "easy",
+    "question_text": "Sustainable development means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "98b03d11-4501-48f8-8fa7-4103551a9200",
+    "options": [
+      "Total spending on consumption",
+      "Proportion of additional income that is consumed",
+      "Average consumption",
+      "Fixed spending"
+    ],
+    "explanation": "MPC = change in consumption ÷ change in income.",
+    "difficulty": "medium",
+    "question_text": "Marginal propensity to consume (MPC) is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "db4b231b-5184-4be4-8a81-c1093a9b55c4",
+    "options": [
+      "Government revenue exceeds spending",
+      "Government spending exceeds revenue",
+      "Exports exceed imports",
+      "GDP grows fast"
+    ],
+    "explanation": "A budget deficit is when government expenditure exceeds tax revenue.",
+    "difficulty": "easy",
+    "question_text": "A budget deficit occurs when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cff2455a-ddeb-42fa-ab78-7a67306a680e",
+    "options": [
+      "Spending exceeds revenue",
+      "Revenue exceeds spending",
+      "Trade is balanced",
+      "Money supply increases"
+    ],
+    "explanation": "A budget surplus means government revenue exceeds its expenditure.",
+    "difficulty": "easy",
+    "question_text": "A budget surplus exists when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2080912a-7642-476b-bbe5-2cdbf84fe989",
+    "options": [
+      "Increases money supply",
+      "Reduces money supply to control inflation",
+      "Lowers interest rates",
+      "Increases government spending"
+    ],
+    "explanation": "Contractionary monetary policy reduces money supply/raises interest rates to curb inflation.",
+    "difficulty": "medium",
+    "question_text": "Contractionary monetary policy:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c7b2f838-0518-43a0-a8ac-fcd142ec846a",
+    "options": [
+      "Total satisfaction from consumption",
+      "Additional satisfaction from one more unit",
+      "Average utility",
+      "Minimum utility"
+    ],
+    "explanation": "Marginal utility is the extra satisfaction from consuming one more unit.",
+    "difficulty": "easy",
+    "question_text": "Marginal utility is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cd4e79db-b20a-4170-af1c-dce8633af9ce",
+    "options": [
+      "Utility always increases",
+      "Additional satisfaction decreases as consumption increases",
+      "Prices rise with consumption",
+      "Income falls"
+    ],
+    "explanation": "As you consume more of a good, each additional unit gives less extra satisfaction.",
+    "difficulty": "easy",
+    "question_text": "The law of diminishing marginal utility states that:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8516e94f-c555-4ff9-a13c-71cebd29e030",
+    "options": [
+      "Rate is same for everyone",
+      "Rate increases as income increases",
+      "Rate decreases with income",
+      "Only businesses pay"
+    ],
+    "explanation": "Progressive tax: higher earners pay a higher percentage of their income.",
+    "difficulty": "easy",
+    "question_text": "A progressive tax is one where:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7f06f9a7-2e41-4e86-a1ed-d0c1086d2d2c",
+    "options": [
+      "Rate rises with income",
+      "Rate decreases as income increases",
+      "Everyone pays equally",
+      "Only imports are taxed"
+    ],
+    "explanation": "Regressive tax takes a larger proportion from lower-income earners.",
+    "difficulty": "medium",
+    "question_text": "A regressive tax is one where:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dbef74c5-5522-4f66-977b-8cc7d1bfa6df",
+    "options": [
+      "Change in demand due to taste",
+      "When a price fall increases real purchasing power",
+      "Change in supply",
+      "Effect of interest rates"
+    ],
+    "explanation": "The income effect: when a price falls, real income rises, affecting demand.",
+    "difficulty": "medium",
+    "question_text": "The income effect refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1e4aac5c-fc02-45bf-83d6-60b5bc4b8488",
+    "options": [
+      "More income leads to more spending",
+      "When a good becomes cheaper, consumers buy more of it instead of substitutes",
+      "Wages replace capital",
+      "Exports substitute imports"
+    ],
+    "explanation": "Substitution effect: when a good's price falls, consumers substitute it for relatively dearer alternatives.",
+    "difficulty": "medium",
+    "question_text": "The substitution effect states that:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8d1216c8-cb28-4197-b9e1-ea619d28dc8c",
+    "options": [
+      "Positive cross-price elasticity",
+      "Negative cross-price elasticity",
+      "Zero price elasticity",
+      "Infinite elasticity"
+    ],
+    "explanation": "Complementary goods (e.g., cars and petrol) have negative cross-price elasticity.",
+    "difficulty": "medium",
+    "question_text": "A complementary good has:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "51f86fcc-990c-4562-9e55-ddebe5764575",
+    "options": [
+      "Negative cross-price elasticity",
+      "Positive cross-price elasticity",
+      "Zero income elasticity",
+      "Inelastic demand"
+    ],
+    "explanation": "Substitute goods have positive cross-price elasticity — if one's price rises, demand for the other rises.",
+    "difficulty": "medium",
+    "question_text": "A substitute good has:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "163c0efa-5d92-4f9d-835d-6b0b22baab69",
+    "options": [
+      "Cost of production",
+      "All combinations of two goods that can be produced with given resources",
+      "Demand schedule",
+      "Market equilibrium"
+    ],
+    "explanation": "The PPF shows the maximum possible output combinations with given resources and technology.",
+    "difficulty": "easy",
+    "question_text": "The Production Possibility Frontier (PPF) shows:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "37e53b66-918d-48b9-8458-45d5b6dd848e",
+    "options": [
+      "Having the best technology",
+      "Producing goods at the lowest opportunity cost",
+      "Highest absolute output",
+      "Most workers"
+    ],
+    "explanation": "Comparative advantage is producing a good at a lower opportunity cost than another country.",
+    "difficulty": "medium",
+    "question_text": "Comparative advantage means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6b469295-a2ae-4f6f-97b7-13f4de53c18f",
+    "options": [
+      "GDP growth rate",
+      "Inequality in income distribution",
+      "Inflation rate",
+      "Unemployment rate"
+    ],
+    "explanation": "The Gini coefficient ranges from 0 (perfect equality) to 1 (perfect inequality).",
+    "difficulty": "medium",
+    "question_text": "The Gini coefficient measures:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ec6dc274-a340-4b13-92c9-0a2197cc4db0",
+    "options": [
+      "Workers changing jobs",
+      "Skill mismatches",
+      "Lack of aggregate demand (recession)",
+      "Seasonal factors"
+    ],
+    "explanation": "Cyclical (demand-deficient) unemployment rises during recessions.",
+    "difficulty": "easy",
+    "question_text": "Cyclical unemployment is caused by:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0c970921-a053-4fac-a684-b3eecf206b8e",
+    "options": [
+      "Workers lack skills",
+      "Workers are temporarily between jobs",
+      "Economy is in recession",
+      "Structural changes occur"
+    ],
+    "explanation": "Frictional unemployment is temporary unemployment while searching for a new job.",
+    "difficulty": "easy",
+    "question_text": "Frictional unemployment occurs when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9ac31875-e173-4202-a57d-dacd338c133e",
+    "options": [
+      "Economic downturns",
+      "Changing jobs voluntarily",
+      "Skills mismatch due to structural change",
+      "Seasonal demand"
+    ],
+    "explanation": "Structural unemployment results from skills becoming obsolete due to industry changes.",
+    "difficulty": "medium",
+    "question_text": "Structural unemployment is caused by:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "1efffb69-f56f-4ef2-ad24-230ce74b61d4",
+    "options": [
+      "Businesses entering new markets",
+      "Government borrowing reducing funds for private sector",
+      "Firms being pushed out of markets",
+      "Population growth"
+    ],
+    "explanation": "Crowding out: high government borrowing raises interest rates, reducing private investment.",
+    "difficulty": "hard",
+    "question_text": "Crowding out refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "956a7ff3-134e-4b0e-825d-ce20c3875359",
+    "options": [
+      "A foreign currency",
+      "A financial asset issued by government to raise funds",
+      "A type of tax",
+      "A central bank reserve"
+    ],
+    "explanation": "Government bonds are debt instruments issued to borrow money from investors.",
+    "difficulty": "easy",
+    "question_text": "A government bond is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "86bcae23-90b5-4adf-a8c4-dc0918e1a2af",
+    "options": [
+      "Capital flows",
+      "Difference between exports and imports of goods and services",
+      "Government spending",
+      "Bank deposits"
+    ],
+    "explanation": "The current account shows trade in goods/services, income flows, and transfers.",
+    "difficulty": "medium",
+    "question_text": "The current account records:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "32350665-b5fe-4e71-8b98-ea4d7ae43993",
+    "options": [
+      "Money flowing in rivers",
+      "Flow of money between households and firms",
+      "Government tax collection",
+      "Banking system"
+    ],
+    "explanation": "The circular flow shows income flowing between households (as consumers/workers) and firms.",
+    "difficulty": "easy",
+    "question_text": "The circular flow of income shows:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "eaf9c644-b4a5-4c16-be43-75c0cb59f605",
+    "options": [
+      "Lowest tax rate",
+      "Rate at which central bank lends to commercial banks",
+      "Government spending rate",
+      "Minimum wage"
+    ],
+    "explanation": "The base rate (bank rate) is the interest rate at which the central bank lends to commercial banks.",
+    "difficulty": "medium",
+    "question_text": "The base rate is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b3e01330-438c-44c5-bd33-2209f7039029",
+    "options": [
+      "Rise in external value of currency",
+      "Fall in external value of currency",
+      "Rise in domestic prices",
+      "Fall in interest rates"
+    ],
+    "explanation": "Depreciation is a fall in a currency's value relative to other currencies.",
+    "difficulty": "easy",
+    "question_text": "Currency depreciation means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "59055787-5769-414a-a4f2-d21d7f2e2022",
+    "options": [
+      "Reducing the value of currency",
+      "Increasing external value of currency under a fixed exchange rate",
+      "Printing more money",
+      "Increasing tariffs"
+    ],
+    "explanation": "Revaluation is an official increase in a currency's value under a fixed exchange rate system.",
+    "difficulty": "medium",
+    "question_text": "Revaluation is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d19f8b06-a5e8-4134-8324-27b7532a416b",
+    "options": [
+      "Gap between rich and poor",
+      "Difference between actual and potential GDP",
+      "Trade balance gap",
+      "Unemployment gap"
+    ],
+    "explanation": "The output gap measures whether the economy is operating above or below its productive potential.",
+    "difficulty": "medium",
+    "question_text": "The output gap is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7493e66f-d4bd-46d7-8fae-b380486ff124",
+    "options": [
+      "Consumer goods",
+      "Goods used in the production of other goods",
+      "Luxury goods",
+      "Financial assets"
+    ],
+    "explanation": "Capital goods (machinery, equipment) are used to produce other goods.",
+    "difficulty": "easy",
+    "question_text": "Capital goods are:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d3f91bde-762e-4368-b1e2-4195349fd0bb",
+    "options": [
+      "Individual citizens' debts",
+      "Total money government owes to lenders",
+      "Trade deficit",
+      "Foreign investment"
+    ],
+    "explanation": "National debt is the accumulated borrowing of the government.",
+    "difficulty": "easy",
+    "question_text": "National debt is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "20e837db-3134-45a2-8c88-088b7218c2de",
+    "options": [
+      "Government owns all resources",
+      "Private individuals own means of production",
+      "Resources are equally shared",
+      "The state plans all production"
+    ],
+    "explanation": "Capitalism is characterized by private ownership of the means of production.",
+    "difficulty": "easy",
+    "question_text": "Capitalism is an economic system where:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "676813f3-0cce-4aae-867a-998033820fc0",
+    "options": [
+      "Manufacturing",
+      "Banking and finance",
+      "Extraction of natural resources",
+      "Education"
+    ],
+    "explanation": "The primary sector involves extracting natural resources (mining, agriculture, fishing).",
+    "difficulty": "easy",
+    "question_text": "The primary sector includes:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a43b58ec-80fb-4145-8c92-9b673b705eda",
+    "options": [
+      "Services",
+      "Natural resource extraction",
+      "Manufacturing and processing",
+      "Banking"
+    ],
+    "explanation": "The secondary sector transforms raw materials into finished goods.",
+    "difficulty": "easy",
+    "question_text": "The secondary sector involves:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fc4a51ba-a440-41b5-b889-c44deb236c96",
+    "options": [
+      "Farming",
+      "Mining",
+      "Manufacturing",
+      "Services such as banking and education"
+    ],
+    "explanation": "The tertiary sector provides services to businesses and consumers.",
+    "difficulty": "easy",
+    "question_text": "The tertiary sector includes:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "014e0248-5f36-45d7-83f1-8ec6eaffe4a5",
+    "options": [
+      "Total number of workers",
+      "Increase in output per worker over time",
+      "Average wages",
+      "Unemployment rate"
+    ],
+    "explanation": "Labour productivity measures output per worker.",
+    "difficulty": "easy",
+    "question_text": "Labour productivity is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7b3bd26e-53e5-4896-97be-3eaed8ffa558",
+    "options": [
+      "Government's fiscal balance",
+      "Difference between the value of exports and imports",
+      "Money supply minus debt",
+      "Consumer spending minus savings"
+    ],
+    "explanation": "Trade balance = exports ΓêÆ imports of goods.",
+    "difficulty": "easy",
+    "question_text": "The trade balance is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d047597f-8a7c-4a46-ae20-cd6beb1ae89d",
+    "options": [
+      "Average costs rise with output",
+      "A firm can produce at lower cost as it grows larger",
+      "Small firms become less efficient",
+      "Wages increase"
+    ],
+    "explanation": "Economies of scale reduce average costs as output increases.",
+    "difficulty": "easy",
+    "question_text": "Economies of scale occur when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3d52f899-5935-4e0f-8fcc-242b83045adc",
+    "options": [
+      "Average costs fall with output",
+      "Average costs rise as output increases beyond a certain point",
+      "Small firms benefit",
+      "Wages fall"
+    ],
+    "explanation": "Diseconomies of scale cause average costs to rise beyond the optimal scale.",
+    "difficulty": "medium",
+    "question_text": "Diseconomies of scale occur when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f9f5ba6a-4165-4ebe-b199-becf4a0b226b",
+    "options": [
+      "Workers cycling to work",
+      "Movement of workers between jobs and regions",
+      "Wage flexibility",
+      "Number of hours worked"
+    ],
+    "explanation": "Labour mobility describes how easily workers can move between jobs and locations.",
+    "difficulty": "easy",
+    "question_text": "Labour mobility refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ff9b0085-a301-497c-af23-86dff497e2c3",
+    "options": [
+      "Markets have too many sellers",
+      "Consumers or producers lack information for optimal decisions",
+      "Prices are too high",
+      "Government intervenes too much"
+    ],
+    "explanation": "Information failure leads to suboptimal market outcomes due to incomplete information.",
+    "difficulty": "medium",
+    "question_text": "Information failure is a market failure where:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "71b9d890-6411-4f6f-b0b6-5a218d1b886e",
+    "options": [
+      "Above equilibrium to protect producers",
+      "Below equilibrium to help consumers",
+      "Equal to equilibrium",
+      "By firms, not government"
+    ],
+    "explanation": "A price ceiling is set below equilibrium, keeping prices low for consumers.",
+    "difficulty": "medium",
+    "question_text": "A maximum price (price ceiling) is set:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "adaaa711-76c5-4b8e-88cb-5f4e49482885",
+    "options": [
+      "Below equilibrium to help consumers",
+      "Above equilibrium to protect producers",
+      "At equilibrium",
+      "To reduce production"
+    ],
+    "explanation": "A price floor is set above equilibrium to guarantee producers a minimum price.",
+    "difficulty": "medium",
+    "question_text": "A minimum price (price floor) is set:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "261d7923-83af-4f2b-a622-d2fa145e9865",
+    "options": [
+      "Trade with no money involved",
+      "Trade agreement eliminating tariffs between countries",
+      "Government-controlled trade",
+      "Trade within one country"
+    ],
+    "explanation": "Free trade involves removing barriers (tariffs, quotas) to international trade.",
+    "difficulty": "easy",
+    "question_text": "Free trade refers to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "682651d9-f4d1-47d0-ab83-39755fc8e856",
+    "options": [
+      "Rising prices",
+      "Increase in real GDP over time",
+      "Fall in unemployment only",
+      "Rising exports"
+    ],
+    "explanation": "Economic growth is the increase in real GDP (inflation-adjusted output).",
+    "difficulty": "easy",
+    "question_text": "Economic growth is measured by:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "17e0b1ca-d804-48d6-af0a-56e3179800c8",
+    "options": [
+      "Too much output",
+      "Resources not used to produce goods most valued by consumers",
+      "Too little government spending",
+      "Excess supply"
+    ],
+    "explanation": "Allocative inefficiency occurs when resources are not directed to their highest-valued use.",
+    "difficulty": "medium",
+    "question_text": "Allocative inefficiency means:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1d562f2c-d5ff-44c2-961c-2bdace6a84e8",
+    "options": [
+      "The bank's stated rate",
+      "Nominal interest rate adjusted for inflation",
+      "Rate set by firms",
+      "Minimum wage rate"
+    ],
+    "explanation": "Real interest rate = Nominal interest rate ΓêÆ Inflation rate.",
+    "difficulty": "medium",
+    "question_text": "The real interest rate is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "28098735-4f26-489a-b51d-830a24d8a468",
+    "options": [
+      "A firm expands abroad",
+      "Government takes over ownership of a private company",
+      "Private sector grows",
+      "Currency loses value"
+    ],
+    "explanation": "Nationalisation transfers private businesses into government ownership.",
+    "difficulty": "easy",
+    "question_text": "Nationalisation is when:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f7176c94-998e-46b1-9363-b85fe62323cd",
+    "options": [
+      "A place with no shops",
+      "A group of countries that trade freely among themselves",
+      "A government market",
+      "An online marketplace"
+    ],
+    "explanation": "A free trade area is a group of countries that remove trade barriers among themselves.",
+    "difficulty": "easy",
+    "question_text": "A free trade area is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "81b101ad-15c8-4105-a173-d69cbcd6b18d",
+    "options": [
+      "Exchange rates are fixed",
+      "Exchange rates are determined by market forces",
+      "Government sets rates daily",
+      "Rates are pegged to gold"
+    ],
+    "explanation": "Under a floating exchange rate, market supply and demand determine currency values.",
+    "difficulty": "medium",
+    "question_text": "The floating exchange rate system is where:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "19c62c27-91c2-43bf-b44a-ac71e1e030e7",
+    "options": [
+      "Government spending",
+      "Net income earned abroad by citizens",
+      "Imports",
+      "Consumer spending"
+    ],
+    "explanation": "GNP = GDP + net income from abroad (earnings of citizens abroad minus foreigners' earnings locally).",
+    "difficulty": "medium",
+    "question_text": "GNP differs from GDP because GNP includes:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cf300f64-acf8-4104-b255-b4ff7fb33268",
+    "options": [
+      "Total savings",
+      "Proportion of additional income that is saved",
+      "Average savings rate",
+      "Fixed savings"
+    ],
+    "explanation": "MPS = change in savings ÷ change in income. MPC + MPS = 1.",
+    "difficulty": "medium",
+    "question_text": "Marginal propensity to save (MPS) is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6f2ec746-716b-48ce-b79b-980dc4d9f5af",
+    "options": [
+      "Total GDP",
+      "GDP divided by population",
+      "GDP minus imports",
+      "GDP plus remittances"
+    ],
+    "explanation": "GDP per capita = GDP ÷ population. It measures average living standards.",
+    "difficulty": "easy",
+    "question_text": "GDP per capita is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3af412b0-7e04-478e-9885-192237643314",
+    "options": [
+      "One quarter of negative growth",
+      "Two consecutive quarters of negative GDP growth",
+      "Rising inflation",
+      "Falling wages"
+    ],
+    "explanation": "A recession is technically two consecutive quarters of negative GDP growth.",
+    "difficulty": "easy",
+    "question_text": "A recession is defined as:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6784719e-55e0-4056-8f27-7358c7ba01ff",
+    "options": [
+      "Cost and profit",
+      "What consumers are willing to pay and what they actually pay",
+      "Wages and savings",
+      "Supply and demand"
+    ],
+    "explanation": "Consumer surplus = willingness to pay ΓêÆ actual price paid.",
+    "difficulty": "medium",
+    "question_text": "Consumer surplus is the difference between:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1385eaea-0a5c-47c4-a203-bfe45bdfc80b",
+    "options": [
+      "Fiscal policy",
+      "Monetary policy",
+      "Trade policy",
+      "Education policy"
+    ],
+    "explanation": "The State Bank of Pakistan (SBP) is responsible for monetary policy.",
+    "difficulty": "easy",
+    "question_text": "The State Bank of Pakistan primarily controls:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f7c1effc-0651-46c4-8527-b9bb0988b71c",
+    "options": [
+      "Oil",
+      "Cotton and textiles",
+      "Machinery",
+      "Electronics"
+    ],
+    "explanation": "Cotton and textile products have historically been Pakistan's largest export.",
+    "difficulty": "easy",
+    "question_text": "Pakistan's main export commodity historically has been:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8951241f-094c-4c91-a3d9-ad01d468fdaa",
+    "options": [
+      "Income tax",
+      "Customs duty",
+      "Sales Tax (GST)",
+      "Excise duty"
+    ],
+    "explanation": "General Sales Tax (GST) in Pakistan is levied on value added at each stage.",
+    "difficulty": "easy",
+    "question_text": "Which tax is imposed on the value added at each stage of production in Pakistan?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "232541f1-eea6-4586-9fa4-04e03339311c",
+    "options": [
+      "Government transfers",
+      "Money sent home by overseas Pakistanis",
+      "Bank loans",
+      "Export earnings"
+    ],
+    "explanation": "Remittances are funds sent by overseas Pakistanis to their families, a major source of foreign exchange.",
+    "difficulty": "easy",
+    "question_text": "Remittances in Pakistan's economy refer to:",
+    "correct_answer_index": 1
+  }
+]

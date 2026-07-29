@@ -1,5 +1,5 @@
-appId: com.natprep.app
-productName: NAT Prep
+appId: com.entryhive.app
+productName: Entry Hive
 directories:
   output: dist_electron
   buildResources: build
@@ -18,7 +18,7 @@ nsis:
   allowToChangeInstallationDirectory: true
   createDesktopShortcut: true
   createStartMenuShortcut: true
-  shortcutName: "NAT Prep"
+  shortcutName: "Entry Hive"
   artifactName: "NAT-Prep-Setup.exe"
-  uninstallDisplayName: "NAT Prep"
+  uninstallDisplayName: "Entry Hive"
   runAfterFinish: true

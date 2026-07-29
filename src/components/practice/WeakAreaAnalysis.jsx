@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { generateCompletion as callGemini } from '@/lib/aiClient';
+import { generateOpenRouterCompletion } from '@/lib/aiClient';
 import { Card } from '@/components/ui/card';
 import { Loader2, Brain, TrendingUp, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
@@ -33,8 +33,8 @@ export default function WeakAreaAnalysis({ questions, answers }) {
 
     let result;
     try {
-      result = await callGemini(
-      `A Pakistani student just completed a NAT exam practice session. Analyze their performance and give specific feedback.
+      result = await generateOpenRouterCompletion(
+      `A Pakistani student just completed an exam practice session. Analyze their performance and give specific feedback.
 
 Score: ${score}% (${totalCorrect}/${questions.length} correct)
 Topic breakdown: ${topicSummary}
@@ -45,16 +45,9 @@ Return a JSON with:
 - overall_verdict: one encouraging sentence summarizing performance
 - priority_action: one specific thing they should practice next
 
-Be specific to NAT Pakistan exam. Keep tips concise and actionable.`,
-      {
-        type: 'object',
-        properties: {
-          weak_areas: { type: 'array', items: { type: 'object', properties: { topic: { type: 'string' }, reason: { type: 'string' }, tip: { type: 'string' } } } },
-          strong_areas: { type: 'array', items: { type: 'string' } },
-          overall_verdict: { type: 'string' },
-          priority_action: { type: 'string' },
-        }
-      }
+Keep tips concise and actionable.`,
+      "gpt-oss-120b",
+      true // use jsonMode
       );
     } catch (e) {
       console.warn('AI analysis unavailable:', e.message);

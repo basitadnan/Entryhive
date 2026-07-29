@@ -1,0 +1,802 @@
+[
+  {
+    "id": "fast_test_1",
+    "text": "Yesterday, Paul was hired as the ____ financial officer of the company.",
+    "options": ["boss", "chief", "solo", "primary", "fired"],
+    "correctAnswer": "boss",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_2",
+    "text": "Select the Synonym of the word: GRATIFY",
+    "options": ["pacify", "indemnify", "unify", "satisfy", "Crafty"],
+    "correctAnswer": "pacify",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_3",
+    "text": "Man who has committed such a/an ____ crime must get the most severe punishment.",
+    "options": ["injurious", "uncharitable", "unworthy", "abominable", "affable"],
+    "correctAnswer": "injurious",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_4",
+    "text": "The sets of two words below are related in some way. Determine which (a) through (e) answer choice below has a relationship most similar to each other, as that given in the item body. AUSTRALIA: KANGAROO::",
+    "options": ["Toronto: North America. Beaver", "Bangladesh: tiger", "China: chicken", "Western: cow", "Pakistan: biryani"],
+    "correctAnswer": "Toronto: North America. Beaver",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_5",
+    "text": "Enlist below are five words lettered (a) to (e). Choose the word which is opposite in meaning to the word in capitals. MERGE",
+    "options": ["fix", "dissolve", "mix", "cover", "sabotage"],
+    "correctAnswer": "fix",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_6",
+    "text": "He has ____ people visiting him at his house because he fears it will cause discomfort to neighbors.",
+    "options": ["curtailed", "requested", "stopped", "warned", "adored"],
+    "correctAnswer": "curtailed",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_7",
+    "text": "Though Sara is poor, she is ____.",
+    "options": ["untruthful", "dishonest", "honest", "misleading", "Deceitful"],
+    "correctAnswer": "untruthful",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_8",
+    "text": "The sets of two words below are related in some way. Determine which (a) through (e) answer choice below has a relationship most similar to each other, as that given in the item body. Algophobia: Phobia of pain ::",
+    "options": ["bibliophobia: phobia of books", "chronophobia: phobia of germs", "hematophobia: fear of time", "algophobia: fear of water", "pharmacophobia; phobia"],
+    "correctAnswer": "bibliophobia: phobia of books",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_9",
+    "text": "Select the Synonym of the word. MALICIOUS",
+    "options": ["meticulous", "beneficent", "gracious", "vindictive", "benign"],
+    "correctAnswer": "meticulous",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_10",
+    "text": "SPATE",
+    "options": ["share", "premature", "disclaim", "uneasiness", "flood"],
+    "correctAnswer": "share",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_11",
+    "text": "A car traveled m miles in first 102 minutes. If it completed the remaining x miles of the trip in h hours, what was its average speed, in miles per hour, for the entire trip?",
+    "options": ["(m+x)/(2(h+102))", "(m+x)/(10(h+17))", "(10(m+x))/(10h+17)", "None of these"],
+    "correctAnswer": "(m+x)/(2(h+102))",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_12",
+    "text": "If Dog is coded as GRJ, then KIPS is coded as",
+    "options": ["FJSP", "NLSV", "HJFS", "None of these"],
+    "correctAnswer": "FJSP",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_13",
+    "text": "A and B are sisters. C and D are brothers. A is the mother of D. What is the relation between B and C.",
+    "options": ["Mother", "Mother in law", "Aunt", "Sister in law"],
+    "correctAnswer": "Mother",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_14",
+    "text": "Find the missing term in the figure below. (Numbers: 114, 70, ?, 36, 25, 10, 6, 1)",
+    "options": ["-8", "5", "0", "25"],
+    "correctAnswer": "-8",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_15",
+    "text": "Odd man out the following",
+    "options": ["Ant", "Spider", "Bee", "Moth"],
+    "correctAnswer": "Ant",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_16",
+    "text": "If three days ago was the day before Friday, what will day after tomorrow be?",
+    "options": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+    "correctAnswer": "Monday",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_17",
+    "text": "Which one of the five choices makes the best comparison? LIVED is to DEVIL as 6323 is to:",
+    "options": ["2336", "6232", "3326", "3236"],
+    "correctAnswer": "2336",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_18",
+    "text": "What is the next letter in the series M,A,M,J,",
+    "options": ["K", "S", "J", "L"],
+    "correctAnswer": "K",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_19",
+    "text": "There are two examination halls A and B. If 10 students are sent from A to B, then the number of students in each room is the same. If 20 students are sent from B to A, then the number of students in A is double of that in B. The number of students in A and B respectively are",
+    "options": ["100, 80", "80, 60", "70, 50", "60, 40"],
+    "correctAnswer": "100, 80",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_20",
+    "text": "How many triangles are there in figure?",
+    "options": ["14", "13", "16", "17"],
+    "correctAnswer": "14",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_21",
+    "text": "Find out the wrong term in the sequence 196,169,144,121,101,",
+    "options": ["121", "101", "169", "196"],
+    "correctAnswer": "121",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_22",
+    "text": "A heavy tree trunk has been lying in a garden. It can be sawed into two parts in one minute. How long, will it take to saw it into 15 equal pieces.",
+    "options": ["1 min", "10 min", "14 min", "15 min"],
+    "correctAnswer": "1 min",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_23",
+    "text": "Which of the following number is different from others in the sequence 8, 27, 64, 100, 125, 216, 343?",
+    "options": ["8", "64", "100", "343"],
+    "correctAnswer": "8",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_24",
+    "text": "Choose out the odd one:",
+    "options": ["Ink", "Paper", "Pen", "Sharpener"],
+    "correctAnswer": "Ink",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_25",
+    "text": "In a certain code, EAT is writes as 318 and CHAIR is writes as 24156, then what will TEACHER be written as:",
+    "options": ["8312346", "8321436", "8312436", "8313426"],
+    "correctAnswer": "8312346",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_26",
+    "text": "If X is brother of son of Y's son, then how is X related to Y?",
+    "options": ["Brother", "Cousin", "Grandson", "Son"],
+    "correctAnswer": "Brother",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_27",
+    "text": "Going 50m to the South of her house, Ayesha turns left and goes another 20m. Then, turning to the North, she goes 30m and then starts walking to her house. In which direction is she walking now?",
+    "options": ["North-west", "North", "South-east", "East"],
+    "correctAnswer": "North-west",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_28",
+    "text": "Zara went to the movies nine days ago. She goes to the movies only on Thursday. What day of the week is today?",
+    "options": ["Thursday", "Saturday", "Sunday", "Tuesday"],
+    "correctAnswer": "Thursday",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_29",
+    "text": "Which is the missing tile? (A tile with 3 filled circles is option (a), 2 filled for (b), 1 filled for (c), 0 filled for (d))",
+    "options": ["(A tile with 3 filled circles)", "(A tile with 2 filled circles)", "(A tile with 1 filled circle)", "(A tile with 0 filled circles)"],
+    "correctAnswer": "(A tile with 3 filled circles)",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_30",
+    "text": "Insert the missing number: (Grid: 7 ? 18, 6 93 15, 9 5 4, 3 50 1)",
+    "options": ["5", "19", "27", "89"],
+    "correctAnswer": "5",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_31",
+    "text": "If log ((x+y)/5) = 1/2 (log x + log y), then x/y + y/x = ?",
+    "options": ["20", "23", "22", "21"],
+    "correctAnswer": "20",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_32",
+    "text": "The binary equivalent of decimal 117 is:",
+    "options": ["1010101", "1110101", "1111101", "None of these"],
+    "correctAnswer": "1010101",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_33",
+    "text": "A train 600 m long crosses a pole in 9 seconds the speed of the train in km/h?",
+    "options": ["66.6 km/h", "240 km/h", "140 km/h", "None of these"],
+    "correctAnswer": "66.6 km/h",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_34",
+    "text": "The average of first 31 consecutive even numbers is",
+    "options": ["31", "32", "33", "34"],
+    "correctAnswer": "31",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_35",
+    "text": "If 18: x = x:8, then x is equal to",
+    "options": ["12", "16", "18", "20"],
+    "correctAnswer": "12",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_36",
+    "text": "If a man were to sell his cycle for 1440, he would lose 25%. At what price he should sell it for the gain of 20%.",
+    "options": ["1920", "2304", "1728", "1400"],
+    "correctAnswer": "1920",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_37",
+    "text": "A certain amount was divided between A and B in the ratio 5:4. If B's share is 720, the total amount was",
+    "options": ["Rs.1620", "Rs. 1150", "Rs. 1025", "Rs. 1080"],
+    "correctAnswer": "Rs.1620",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_38",
+    "text": "After deducting a commission of 5%, a radio costs Rs. 15200. Its gross value (in rupees) is",
+    "options": ["15860", "16000", "16400", "14440"],
+    "correctAnswer": "15860",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_39",
+    "text": "If x is an even positive integer and y is an odd positive integer, then which of the following statement is true?",
+    "options": ["(x−1) y is even", "x(y-1) is odd", "(x−1)(y−1) is even", "None of these"],
+    "correctAnswer": "(x−1) y is even",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_40",
+    "text": "Two non-parallel lines will meet",
+    "options": ["Never", "At one point", "At two points", "None of these"],
+    "correctAnswer": "Never",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_41",
+    "text": "A boy goes to the school with the speed of 3 kmph and returns with the speed of 2 kmph. If he takes 5 hours in all, then the distance (in kms) between the village and the school is",
+    "options": ["6", "7", "8", "9"],
+    "correctAnswer": "6",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_42",
+    "text": "A class of 30 girls and 40 boys sponsored a horse ride. If 60% of the girls and 25% of the boys went on the ride, what% of the class went on the ride?",
+    "options": ["30%", "35%", "40%", "50%"],
+    "correctAnswer": "30%",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_43",
+    "text": "If 1/3.718 = 0.2689 then the value of 1/0.0003718 is:",
+    "options": ["2689", "2.689", "26890", "0.2689"],
+    "correctAnswer": "2689",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_44",
+    "text": "A fort contains food supply for 21 days. If the food was supposed to last for 28 days. How much will each individuals food be reduced.",
+    "options": ["10%", "20%", "25%", "30%"],
+    "correctAnswer": "10%",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_45",
+    "text": "If the length of diagonal of the cube is 4√3 cm, then the length of its edge is",
+    "options": ["2cm", "3cm", "4cm", "6cm"],
+    "correctAnswer": "2cm",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_46",
+    "text": "Asad buys 300 identical goods at a total cost of Rs.3000, he sold 260 goods for 20% above of cost price of each. He sold the remaining items at 50% of cost price. Find his profit %",
+    "options": ["10", "11", "14", "15"],
+    "correctAnswer": "10",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_47",
+    "text": "In ∆PQR, W = ?",
+    "options": ["50", "55", "60", "65"],
+    "correctAnswer": "50",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_48",
+    "text": "A's salary is half as that of B. If A got 50% rise in his salary and B got a 25% rise in his salary then the % increase in combined salaries of both is",
+    "options": ["30", "33 1/3", "37 1/2", "75"],
+    "correctAnswer": "30",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_49",
+    "text": "If O is the center of given circle. Find the value of x and y.",
+    "options": ["x = 26°, y = 24°", "x = 10°, y = 15°", "x = 16°, y = 25°", "x = 10°, y = 20°"],
+    "correctAnswer": "x = 26°, y = 24°",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_50",
+    "text": "Rashid and Hasan borrowed Rs. 600 at 10% interest per annum. The interest is calculated at the end of 6 months. Rashid borrowed the money at simple interest while Hasan borrowed the money 'at compound interest. At the end of one year.",
+    "options": ["Both paid same amount of interest", "Rashid paid Rs. 6 less interest than Hasan", "Hasan paid Rs. 1.5 more interest than Rashid", "Hasan paid Rs. 8 less interest than Rashid"],
+    "correctAnswer": "Both paid same amount of interest",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_51",
+    "text": "Which of the following is not true?",
+    "options": ["i = i", "i^85 = i", "i^2 = i", "i^4 = i"],
+    "correctAnswer": "i = i",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder. Note: Options (c) and (d) in the provided text appear visually to be i^2 = i and i^4 = i, respectively, which are false statements. If the question asks 'not true', then these would be correct answers. Option (a) `i = i` is a true statement.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_52",
+    "text": "Given that (a,b)(7,6) = (1,0) then (a,b) = ?",
+    "options": ["(7-6 / √85 √85)", "(76 / √85 √85)", "(7 / √85, 6 / √85)", "(7 / √85, -6 / √85)"],
+    "correctAnswer": "(7-6 / √85 √85)",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_53",
+    "text": "(C-D)'D = ?",
+    "options": ["C", "C'", "D", "D'"],
+    "correctAnswer": "C",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_54",
+    "text": "AUB=A∩B iff:",
+    "options": ["A ⊆ B", "B ⊆ A", "A = Φ", "A = B"],
+    "correctAnswer": "A ⊆ B",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_55",
+    "text": "If one root of a quadratic equation is 1/(3+4i) then the other root is;",
+    "options": ["3-4i", "3/25 - 4/25 i", "3/25 + 4/25 i", "4/25 - 3/25 i"],
+    "correctAnswer": "3-4i",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_56",
+    "text": "If α, β are the roots of 3x²+2x+4=0 then (1/α²) + (1/β²) = ?",
+    "options": ["1/4", "1/6", "1/8", "1/32"],
+    "correctAnswer": "1/4",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_57",
+    "text": "If (2x-3)/(x(2x+3)(x-1)) = α/(x) + β/(2x+3) + γ/(x-1) then β = ?",
+    "options": ["-5/8", "-1/5", "1", "1/7"],
+    "correctAnswer": "-5/8",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_58",
+    "text": "If 1.53 = p/q then p+q = ?",
+    "options": ["152", "252", "251", "260"],
+    "correctAnswer": "152",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_59",
+    "text": "If the first term of an infinite geometric series is equal to twice the sum of all the terms that follows it, then r =?",
+    "options": ["2", "1", "1/2", "1/3"],
+    "correctAnswer": "2",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_60",
+    "text": "If 1/t, 1/(2t+1), 1/(4t-1) are in H.P then 4th term of that H.P is;",
+    "options": ["1/15", "3", "1/3", "15"],
+    "correctAnswer": "1/15",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_61",
+    "text": "If 1 + 2 + 3 + ... + n = 55 then 1³ + 2³ + 3³ + ... + n³ = ?",
+    "options": ["1225", "2025", "625", "3025"],
+    "correctAnswer": "1225",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_62",
+    "text": "A.M of the roots of the equation x² - 8x + 7 = 0 is;",
+    "options": ["-8", "4", "4", "8"],
+    "correctAnswer": "-8",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_63",
+    "text": "How many different words can be formed from the letters of the word \"PAKISTAN\" when every word starts with \"K\" and ends of \"N\"?",
+    "options": ["210", "340", "360", "620"],
+    "correctAnswer": "210",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_64",
+    "text": "Number of diagonals in a n-sided polygon is 44 then n =?",
+    "options": ["10", "11", "12", "14"],
+    "correctAnswer": "10",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_65",
+    "text": "A card is drawn from 52 cards. What is probability that it is a spade or seven?",
+    "options": ["4/17", "7/13", "1/13", "1/52"],
+    "correctAnswer": "4/17",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_66",
+    "text": "Two dice are thrown. What is probability that the sum of dots appear is 10?",
+    "options": ["1/10", "1/12", "1/11", "1/8"],
+    "correctAnswer": "1/10",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_67",
+    "text": "15th term in the expansion of (1-x)⁻² has coefficient =?",
+    "options": ["15", "14", "-14", "-15"],
+    "correctAnswer": "15",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_68",
+    "text": "Expansion of (8-5x)⁻² is valid then which of the following is true?",
+    "options": ["|x| < 5", "|x| < 1/5", "|x| < 5/8", "|x| < 8"],
+    "correctAnswer": "|x| < 5",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_69",
+    "text": "Total number of terms in the expansion of (2-3x)⁻⁶ are?",
+    "options": ["-6", "47", "-5", "None of these"],
+    "correctAnswer": "-6",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_70",
+    "text": "The bottom of a pendulum describes an arc of 3 ft long, when the pendulum swings an angle of 1/2 radian then the length of the pendulum in feet is:",
+    "options": ["6", "5", "4", "3"],
+    "correctAnswer": "6",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_71",
+    "text": "If log tan x = k then log cot x = ?",
+    "options": ["1/k", "-k", "1-k", "1+k"],
+    "correctAnswer": "1/k",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_72",
+    "text": "Value of 3sinθ - 5cosθ lies between?",
+    "options": ["-5 and 3", "0 and √34", "-√34 and √34", "2 and √34"],
+    "correctAnswer": "-5 and 3",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_73",
+    "text": "cosec 67° / sec 23° = ?",
+    "options": ["1", "0.707", "0.5", "0.2"],
+    "correctAnswer": "1",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_74",
+    "text": "sec x / (tan x . sin x) = ?",
+    "options": ["tan x", "sec²x", "cosec²x", "tan²x"],
+    "correctAnswer": "tan x",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_75",
+    "text": "Domain of y = tan x/7 is same as that of:",
+    "options": ["y = sec x", "y = sec x/7", "y = sec 7x", "y = 7 sec x"],
+    "correctAnswer": "y = sec x",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_76",
+    "text": "In a ∆ABC, A = 30°, C = 105°, and a=8 then b = ?",
+    "options": ["4√2", "2√2", "8√2", "16√2"],
+    "correctAnswer": "4√2",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_77",
+    "text": "In a ∆ABC, a=8, b=5 and c=9 then cos A = ?",
+    "options": ["6/17", "7/15", "7/17", "15/19"],
+    "correctAnswer": "6/17",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_78",
+    "text": "sin⁻¹(sin⁻¹(x)) = x then which of the following is true?",
+    "options": ["-∞ < x < ∞", "0 < x < ∞", "0 ≤ x ≤ 1", "-1 ≤ x ≤ 1"],
+    "correctAnswer": "-∞ < x < ∞",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_79",
+    "text": "cot⁻¹(4) + cot⁻¹(5) = cot⁻¹(k) then k = ?",
+    "options": ["9/19", "1/20", "19/20", "20/9"],
+    "correctAnswer": "9/19",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_80",
+    "text": "If the number of solutions of cos x (cos x - 2) = 0, 0° ≤ x ≤ 360°, are n, then n =?",
+    "options": ["1", "2", "4", "8"],
+    "correctAnswer": "1",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_81",
+    "text": "If g(x) = lnx+2 then g'(x) = ?",
+    "options": ["e^(x-2)", "e^(x+2)", "e^(-x-2)", "e^(x+2)"],
+    "correctAnswer": "e^(x-2)",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder. Note: The derivative of g(x)=lnx+2 is 1/x, which is not among the options. Options suggest g(x) might have been e^(x+2).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_82",
+    "text": "lim n->infinity (1 + 5/n)^n = ?",
+    "options": ["e", "e^5", "e^(1/5)", "e^1"],
+    "correctAnswer": "e",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_83",
+    "text": "lim x->∞ (2-3x) / (√3+9x²) = ?",
+    "options": ["∞", "-∞", "0", "1"],
+    "correctAnswer": "∞",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_84",
+    "text": "A function g(x) = 7 then g(2+x) = ?",
+    "options": ["7", "5", "9", "0"],
+    "correctAnswer": "7",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_85",
+    "text": "sinh x + cosh x = ?",
+    "options": ["1", "0", "cosh(2x)", "e^x"],
+    "correctAnswer": "1",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_86",
+    "text": "For the pair of parametric equations x=t² +t and y=t then the relation between x and y is",
+    "options": ["y² = x+y", "y² = x-y", "x²+x = y", "y² = x²+y"],
+    "correctAnswer": "y² = x+y",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_87",
+    "text": "If y = x! then d¹⁰y/dx¹⁰ at x = 1 is:",
+    "options": ["10!", "11!", "-(10)!", "-(11)!"],
+    "correctAnswer": "10!",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_88",
+    "text": "d/dx (1 + 2x + 4x²/2! + 8x³/3! + ...) = ?",
+    "options": ["e^(2x)", "2e^(2x)", "e^x / 2", "e^x / 2"],
+    "correctAnswer": "e^(2x)",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder. Note: Options (c) and (d) are identical.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_89",
+    "text": "Graph of derivative of the function f(x) = 2x+3 is",
+    "options": ["Horizontal line", "Vertical line", "Line with positive slope", "Line with negative slope"],
+    "correctAnswer": "Horizontal line",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_90",
+    "text": "20th derivative of cos (cx + d) = ?",
+    "options": ["cos(cx+d)", "-cos(cx+d)", "c²⁰ cos(cx+d)", "c²⁰ sin(cx+d)"],
+    "correctAnswer": "cos(cx+d)",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_91",
+    "text": "The interval in which y = -2sinx decreasing is ∀x∈ [-π,π]",
+    "options": ["[-π/2, π/2]", "[-π/2, 0]", "(-π, 0)", "(-π, π)"],
+    "correctAnswer": "[-π/2, π/2]",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_92",
+    "text": "∫(1-x)/(x²+1) dx = ?",
+    "options": ["1/4", "3/7", "0", "1"],
+    "correctAnswer": "1/4",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_93",
+    "text": "If ∫₀³ f(t) dt = 27 then ∫₀³ 2f(x)dx = ?",
+    "options": ["27", "13.7", "Cannot be determine", "54"],
+    "correctAnswer": "27",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_94",
+    "text": "What is approximate change in the area of a square of side 2m if it has an error of 0.01 in the side?",
+    "options": ["0.4", "0.04", "0.004", "1.04"],
+    "correctAnswer": "0.4",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_95",
+    "text": "∫ 1/√(x²+a²) dx = ?",
+    "options": ["ln(x+√(x²+a²))", "ln(x+√(x²-a²))", "1/√(x²-a²)", "√(x²+a²)"],
+    "correctAnswer": "ln(x+√(x²+a²))",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_96",
+    "text": "∫ a^(5x+λμ) dx = ?",
+    "options": ["a^(5x+λμ)/(5ln a) + c", "a^(5x+λμ)/(λln a) + c", "a^(5x+λμ)/(λμln a) + c", "a^(5x+λμ)/(λμln a) + c"],
+    "correctAnswer": "a^(5x+λμ)/(5ln a) + c",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder. Note: Options (c) and (d) are identical.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_97",
+    "text": "For what value of \"m\" the lines my + 2x−1= 0 and x − 2 y − 7 = 0 are parallel?",
+    "options": ["-4", "1/2", "5", "10"],
+    "correctAnswer": "-4",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_98",
+    "text": "Equations of asymptotes of hyperbola y²−4x² = 4 are:",
+    "options": ["y ± 2x = 0", "x ± 2y = 0", "x + y = 0", "4x + 2y = 1"],
+    "correctAnswer": "y ± 2x = 0",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_99",
+    "text": "Maximum points of intersection of y=1+x² and y=1+4x-x² are",
+    "options": ["2", "3", "4", "0"],
+    "correctAnswer": "2",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_100",
+    "text": "Area of the shaded region=?",
+    "options": ["36π", "18", "9", "4π"],
+    "correctAnswer": "36π",
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "advance_maths"
+  }
+]

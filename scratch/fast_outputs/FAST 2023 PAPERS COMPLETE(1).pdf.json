@@ -1,0 +1,762 @@
+[
+  {
+    "id": "P12_Q1",
+    "text": "For what value of a will the vector [1,2a, -4] be perpendicular to the vector[-3,1,2]?",
+    "options": ["2/11", "-1", "11/2", "-3", "4"],
+    "correctAnswer": "11/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P12_Q2",
+    "text": "Find second derivative of y = tanx",
+    "options": ["2sec x tan x", "4 sec x . tan x", "2sec³x", "2cos(sec²x)", "2sec x tan x"],
+    "correctAnswer": "2sec³x",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P12_Q3",
+    "text": "Lim (x->5) (x-5) / (x²-5x)",
+    "options": ["5", "1/5", "4", "0"],
+    "correctAnswer": "1/5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P13_Q1",
+    "text": "If y = cos(ax), then d³y/dx³ =?",
+    "options": ["a³ sin(ax)", "cos(ax)/a", "a tan(ax)", "-a³cos(ax)", "-a³sin(ax)"],
+    "correctAnswer": "-a³cos(ax)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P13_Q2",
+    "text": "Let tan(β/2) = cotα. If α=0 and β lies between 0 and 2π, then β=",
+    "options": ["0", "45°", "90°", "1", "180°"],
+    "correctAnswer": "180°",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P13_Q3",
+    "text": "If f(x) = 3tan(4x + 2), then period of f(x) = ______",
+    "options": ["π/4", "π/4 + 2", "4π", "3π", "π/3"],
+    "correctAnswer": "π/4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P14_Q1",
+    "text": "If θ is the angle between the vectors b and c such that θ = 0, then b x c =",
+    "options": ["0", "1", "5", "9", "3"],
+    "correctAnswer": "0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P14_Q2",
+    "text": "Area of triangle in terms of two sides a and an inclined angle is",
+    "options": ["Δ=1/2ab sinα = 1/2ac sin β = 1/2bc cotα", "Δ=1/2bc sinα = 1/2ac sin β = 1/2ab sin γ", "Δ=1/2ab cosα = 1/2bc tan γ = 1/2 secα b", "Δ=2ab sinα = 2bc sin β = 2ab cot γ", "Δ=1/2bc cosα = 1/2ab cos γ = 1/2be cosα"],
+    "correctAnswer": "Δ=1/2bc sinα = 1/2ac sin β = 1/2ab sin γ",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P14_Q3",
+    "text": "If 4 pairs of shoes are in a closet and 2 shoes are selected at random, what is the probability that they will be matched pair?",
+    "options": ["2/7", "4/7", "3/7", "1/7"],
+    "correctAnswer": "1/7",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P15_Q1",
+    "text": "lim (1-x)^(1/x) = ___",
+    "options": ["1", "1/e", "e", "∞", "-1/e"],
+    "correctAnswer": "1/e",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P15_Q2",
+    "text": "If cos2x = sin x and x lies in the 1st quadrant, then x =",
+    "options": ["90°", "180°", "60°", "30°", "270°"],
+    "correctAnswer": "30°",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P15_Q3",
+    "text": "The set {1, w, w²} when w³ = 1 is an Abelian group with respect standard multiplication then inverse of w² is",
+    "options": ["1", "w²", "Does not exist", "w"],
+    "correctAnswer": "w",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P16_Q1",
+    "text": "What is equation of a straight line passing through origin and perpendicular to the y-axis?",
+    "options": ["y = x", "y = 0", "y = 1", "y = ∞", "x = 0"],
+    "correctAnswer": "y = 0",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P16_Q2",
+    "text": "The value of ∫ e^(x) * (e^(x)+1)² / e^(x) dx is",
+    "options": ["e^(x)+C", "2e^(x)+C", "e³+C", "x+C", "e^(x+1)/3 + C"],
+    "correctAnswer": "e^(x+1)/3 + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P16_Q3",
+    "text": "Let z = 4 - 2√3i, then (z+z)² = ",
+    "options": ["64", "8", "24", "32", "16"],
+    "correctAnswer": "64",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P17_Q1",
+    "text": "If S={(1,1), (1,3),(1,5), (3,1), (3,3),(3,5), (5,1), (5,3),(5,5)}, then write r={(x, y)/x > y}",
+    "options": ["r = {(3, 3), (5, 5), (1, 1)}", "r = {(1, 5), (1, 3), (5, 5)}", "None of these", "r = {(3, 3), (5, 5), (1, 1)}", "r = {(3, 1), (5, 1), (5, 3)}"],
+    "correctAnswer": "r = {(3, 1), (5, 1), (5, 3)}",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P17_Q2",
+    "text": "Find the equation to the circle whose center is (2,0) and radius is 3 units",
+    "options": ["x² + y² - 4x + 5 = 0", "-x² - y² + 4x - 3", "x² + y² - 4x - 5 = 0", "x² - y² - 4x + 5 = 0", "x² + y² - 4x + 14 = 0"],
+    "correctAnswer": "x² + y² - 4x - 5 = 0",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P17_Q3",
+    "text": "If f(x) = 2x - √3x³, then f'(x) at 7= (-2, √3)",
+    "options": ["-10√3", "2√3", "4√3", "-5√3 - 9", "-18 - 2√3"],
+    "correctAnswer": "2√3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P18_Q1",
+    "text": "Find the equation of the ellipse referred to its center as origin, whose foci are (±2, 0) and eccentricity is 1/2",
+    "options": ["x²/16 + y²/12 = 1", "x²/16 - y²/12 = 1", "None of these", "-x²/16 + y²/12 = 1", "-x²/16 - y²/12 = 1"],
+    "correctAnswer": "x²/16 + y²/12 = 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P18_Q2",
+    "text": "The domain of the function y = tan⁻¹x is",
+    "options": ["{x | -π/2 ≤ x ≤ π/2}", "{x | -π/2 < x < π/2}", "(-∞, ∞)", "{x | x ≠ π/2 ± nπ}", "[-π/2, π/2]"],
+    "correctAnswer": "(-∞, ∞)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P18_Q3",
+    "text": "Two coins are tossed simultaneously. The probability of getting at least one tail is :",
+    "options": ["1/4", "1/8", "1", "1/2", "3/4"],
+    "correctAnswer": "3/4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P19_Q1",
+    "text": "A circle has a circumference of 16 inches. Find the area in sq. inches of a sector with a central angle of 1.5π radians.",
+    "options": ["48/π", "48", "12", "96/π", "24π"],
+    "correctAnswer": "48/π",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P19_Q2",
+    "text": "In an A.P. a₃ = 4, d=5, a₁₄ =?",
+    "options": ["40", "54", "95", "15", "59"],
+    "correctAnswer": "59",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P19_Q3",
+    "text": "If i, j, k are the unit vectors along x, y & z axis respectively, then i • (j x k) = ?",
+    "options": ["1", "-1", "1/2", "0", "1/2"],
+    "correctAnswer": "1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P21_Q1",
+    "text": "If cosθ = √3/2 and θ is in the fourth quadrant, then tanθ =",
+    "options": ["-√3", "1/√3", "-1/√3", "-2/√3", "√3"],
+    "correctAnswer": "-1/√3",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P21_Q2",
+    "text": "The term independent of x in the expansion of (x + 1/x)²⁰ is",
+    "options": ["7th term", "8th term", "10th term", "6th term", "5th term"],
+    "correctAnswer": "6th term",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P21_Q3",
+    "text": "If A = [ 1 5; 6 1 ] then det(A) = ",
+    "options": ["1", "3", "4", "0"],
+    "correctAnswer": "0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P22_Q1",
+    "text": "If y = sin 2x², then dy/dx =",
+    "options": ["cos2x²", "4x cos2x²", "2x. Sin4x", "4x sin 2x"],
+    "correctAnswer": "4x cos2x²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P22_Q2",
+    "text": "The value of k so that the sequence k - 1, k + 3, 3k - 1 forms an arithmetic progression is",
+    "options": ["2", "5", "6", "4", "3"],
+    "correctAnswer": "3",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P23_Q1",
+    "text": "The area bounded by the curve f(x) = 4x³-4x and the x-axis in the 1st quadrant is",
+    "options": ["1", "1/4", "-1/4", "-1/2", "-1"],
+    "correctAnswer": "1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P23_Q2",
+    "text": "∫ √1-sinx dx =",
+    "options": ["2/3 (1-sinx)³/² + c", "sinx - cosx + c", "√x + cosx + c", "√1 + cosx + c", "-2(sin(x/2) - cos(x/2)) + c"],
+    "correctAnswer": "-2(sin(x/2) - cos(x/2)) + c",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P23_Q3",
+    "text": "The mid point of the perpendicular from the focus to the directrix is called ___ of the parabola.",
+    "options": ["Vertex", "axis", "Latus rectum", "None of these"],
+    "correctAnswer": "Vertex",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P23_Q4",
+    "text": "The point dividing A(1, 2) and B(7, -4) in the ratio 1:2 has coordinates:",
+    "options": ["(3, 0)", "(8/3, -4/3)", "(3, -2)", "(13, -10)", "(5, -2)"],
+    "correctAnswer": "(3, 0)",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P24_Q1",
+    "text": "Quadratic equation whose sum of the roots is 4 and product of the roots is 3 is given by",
+    "options": ["x²+7x-12=0", "x²+7x+12=0", "x²-7x+12=0", "x²+2x+4=0"],
+    "correctAnswer": "x²-7x+12=0",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P24_Q2",
+    "text": "Find the area of a triangle given above",
+    "options": ["4√2", "√12", "√16", "√4", "√3"],
+    "correctAnswer": "√4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P24_Q3",
+    "text": "Let (x + 3, 5 - y) = (3x + 2, 5 + y) then the value of x and y are",
+    "options": ["x=2, y=3", "x=1/2, y=0", "x=1/6, y=0", "x=1/4, y=0", "x=1/3, y=0"],
+    "correctAnswer": "x=1/2, y=0",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P25_Q1",
+    "text": "In ΔABC, length of sides are a = 3, b = 4, c = 5 then r₁ = ___",
+    "options": ["3", "2", "5/2", "5/4", "1"],
+    "correctAnswer": "1",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P25_Q2",
+    "text": "cos⁻¹(√3/2) = sin⁻¹(?)",
+    "options": ["1/2", "1", "0", "√3/2", "√2/2"],
+    "correctAnswer": "1/2",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P25_Q3",
+    "text": "If f(x) = sin cos(π/6), then f(x) is",
+    "options": ["Neither increasing nor decreasing", "Increasing", "Information is incomplete", "Decreasing", "Increasing as well as decreasing"],
+    "correctAnswer": "Neither increasing nor decreasing",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P26_Q1",
+    "text": "A∩B = A if and only if",
+    "options": ["A=B", "A'⊂B", "B'⊂A", "A⊂B", "B⊂A"],
+    "correctAnswer": "A⊂B",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P26_Q2",
+    "text": "If 90° ≤ θ ≤ 360° and θ = cosec⁻¹(2/√3), then θ =",
+    "options": ["300°", "60°", "120°", "150°", "240°"],
+    "correctAnswer": "300°",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P26_Q3",
+    "text": "lim (n->∞) (x²+n) / (x³+n) where n is a positive number",
+    "options": ["1/(2n)", "-1/n²", "1/(n²+n)", "1/(n²+n)", "1/(n²)"],
+    "correctAnswer": "-1/n²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P27_Q1",
+    "text": "If OP makes angle α, β, γ with the positive directions of the axes, OX, OY and OZ respectively then",
+    "options": ["sin²α+sin²β+sin²γ=1", "cosα+cosβ+cosγ=1", "cos²α+cos²β+cos²γ=1", "cos²α-cos²β-cos²γ=1", "tan²α+tan²β+tan²γ=1"],
+    "correctAnswer": "cos²α+cos²β+cos²γ=1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P27_Q2",
+    "text": "The equation of the tangent to the hyperbola 3x²-4y² = 12 at point (4,-3) is",
+    "options": ["x+y=1", "-x-y=1", "x-y=1", "x+y=-1", "x-y=-1"],
+    "correctAnswer": "x+y=1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P27_Q3",
+    "text": "The angle between hour and minute hand of clock at quarter pass 2",
+    "options": ["5π/2", "π/2", "π/4", "3π/2", "π/3"],
+    "correctAnswer": "π/2",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P27_Q4",
+    "text": "If in ΔABC, a=40, b=20, and c=20, then the area of the triangle = ?",
+    "options": ["0", "250", "100", "200"],
+    "correctAnswer": "0",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P28_Q1",
+    "text": "The term independent of x in the expansion of (x² - 2/x)⁹ is",
+    "options": ["240", "120", "200", "250", "340"],
+    "correctAnswer": "240",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P28_Q2",
+    "text": "Equation of normal to the ellipse 3x² + 5y² = 57 at point (2,3) is",
+    "options": ["5x - 2y - 4 = 0", "5x - 2y + 4 = 0", "5x + 2y + 4 = 0", "5x + 2y - 4 = 0", "-5x + 2y - 4 = 0"],
+    "correctAnswer": "5x - 2y - 4 = 0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P28_Q3",
+    "text": "Let (x + 3, 5 - y) = (3x + 2, 5 + y) then the value of x and y are",
+    "options": ["x+1/3, y=0", "x=1/4, y=0", "x=2, y=3", "x=1/2, y=0", "x=1/6, y=0"],
+    "correctAnswer": "x=1/2, y=0",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P28_Q4",
+    "text": "The length of the arc cut off on a circle of radius 6 cm by a central angle of 2π/3 radians",
+    "options": ["12.566 cm", "9.156 cm", "12.113 cm", "10.033 cm", "16.556 cm"],
+    "correctAnswer": "12.566 cm",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P29_Q1",
+    "text": "d/dx [sin x³] = ?",
+    "options": ["4sin²x.cosx", "cos(5x⁴)", "-5x³(cosx⁴)", "5x⁴(cosx³)", "5x³(cosx³)"],
+    "correctAnswer": "-5x³(cosx⁴)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P29_Q2",
+    "text": "If y = 5^(x⁴), then dy/dx =",
+    "options": ["x⁵ln5", "-14", "1", "4", "5x⁴ln5"],
+    "correctAnswer": "5x⁴ln5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P29_Q3",
+    "text": "∫ (sinx - cosx)² dx =",
+    "options": ["x + sin2x/2 + c", "x - tan2x/2 + c", "x + cos2x/2 + c", "x - cos2x/2 + c", "x - sec2x/2"],
+    "correctAnswer": "x + cos2x/2 + c",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P30_Q1",
+    "text": "State one basic property of the real numbers that justify the statement: 1/(s+2t) * (s+2t) = 1 for s ≠ -2t",
+    "options": ["Associative property for addition", "Commutative property for multiplication", "Closure law for multiplication", "Additive inverse property", "Multiplicative inverse property"],
+    "correctAnswer": "Multiplicative inverse property",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P30_Q2",
+    "text": "Two vectors v₁ = 3i - xj and v₂ = 3i - j are collinear if x =",
+    "options": ["-1", "3", "∞", "0", "0"],
+    "correctAnswer": "3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P30_Q3",
+    "text": "d/dx [cosx]",
+    "options": ["-cos(x)/x", "-sin(x)/2√x", "cos(x)/2", "-sin(x) * (1/2√x)"],
+    "correctAnswer": "-sin(x)/2√x",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P31_Q1",
+    "text": "The two lines ax²+ 2hxy + by² = 0 will be real and distinct if",
+    "options": ["h² = ab", "h² = ab", "h² = 0", "h² > ab", "h² < ab"],
+    "correctAnswer": "h² > ab",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P31_Q2",
+    "text": "A stop watch is fixed to ring. At what time will it ring if it starts at 11:45 pm 7th June 2004 and the second hand has to traverse an angle of 90° before ringing?",
+    "options": ["1:05 am 8th June 2004", "11:55 pm 7th June 2004", "12:05 pm 8th June 2004", "00:05 am 8th June 2004", "12:05 pm 7th June 2004"],
+    "correctAnswer": "00:05 am 8th June 2004",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "P31_Q3",
+    "text": "tan(A/2) = √((s-b)(s-c)/(s(s-a)))",
+    "options": ["√((s-b)(s-c)/(s(s-a)))", "√((s-a)(s-c)/(s(s-b)))", "(s-b)(s-c)/(s(s-a))", "(s-a)(s-c)/(s(s-b))", "√((s-b)(s-c)/(s(s-a)))"],
+    "correctAnswer": "√((s-b)(s-c)/(s(s-a)))",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P32_Q1",
+    "text": "If y = θ sinθ cos2θ, then dy/dθ = ?",
+    "options": ["θ cosθ - 2sin2θ", "sinθ cos2θ + θcosθ cos2θ - 2θsinθ sin2θ", "sin²θ cos2θ + 2θ cosθ - 2θ sinθ sin2θ", "2sinθ cosθ + cosθ cos2θ - 2θ sinθ sin2θ"],
+    "correctAnswer": "sinθ cos2θ + θcosθ cos2θ - 2θsinθ sin2θ",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P32_Q2",
+    "text": "The area of the shaded region in the given figure is equal to",
+    "options": ["-∫₀¹ f(x)dx", "∫₀¹ f(x)dx", "1/2 ∫₀¹ f(x)dx", "2∫₀¹ f(x)dx", "∫₀¹ f(x)dx"],
+    "correctAnswer": "-∫₀¹ f(x)dx",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P32_Q3",
+    "text": "If the shadow of a 4 feet tall girl in 4 feet, then the angle of elevation is ____",
+    "options": ["π/6", "π/4", "π/3", "1", "π/2"],
+    "correctAnswer": "π/4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P34_Q1",
+    "text": "1+2ab-(a²+b²) = ?",
+    "options": ["(1+a-b)(1-a+b)", "(1-a+b)(1-a-b)", "(1-a-b)²", "(1+a+b)²", "(1+a-b)²"],
+    "correctAnswer": "(1-a+b)(1-a-b)",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P34_Q2",
+    "text": "How many words can be made with the letters of word \"LALAMUSA\" when all the letters are to be used?",
+    "options": ["48", "81", "61", "3360", "51"],
+    "correctAnswer": "3360",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P34_Q3",
+    "text": "∫ (sin√x + cos√x)² / √x dx =",
+    "options": ["sin√x + C", "sin√x - cos√x + C", "2(sin√x - cos√x) + C", "∫ (√x+C) dx", "(sin√x cos√x)² + C"],
+    "correctAnswer": "2(sin√x - cos√x) + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P35_Q1",
+    "text": "The equation of tangent to the parabola y² = 12x at the point whose ordinate is 6 is",
+    "options": ["x+y+9=0", "x+y+3=0", "x-y+3=0", "y-√12x", "x+y-9=0"],
+    "correctAnswer": "x+y-9=0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P35_Q2",
+    "text": "cos(α/2) = ___",
+    "options": ["√((s(s+b))/(ac))", "√((s(s-d))/(ad))", "√((s(s-c))/(ab))", "√((s(s-c))/(ab))", "√((s(s-c))/(ab))"],
+    "correctAnswer": "√((s(s-c))/(ab))",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P36_Q1",
+    "text": "If x = a⁴ and y = r⁴, then dy/dx =",
+    "options": ["r^(t-1)/a^(t-1)", "r^(t-1)/a^(t-1) ln(a)", "r^(t-1)/a^(t-1) ln(a)", "r^(t-1)/a^(t-1) ln(a)", "r^(t-1)/a^(t-1) ln(a)"],
+    "correctAnswer": "r^(t-1)/a^(t-1) ln(a)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P36_Q2",
+    "text": "Find the equation of the parabola whose focus is (2,-3) and directrix 3x-5y+4=0",
+    "options": ["(2x-3y)² + 42x + 3 = 0", "(2x-3y)² - 4xy + 6 = 0", "(x-2)² + (y+3)² = (3x-5y+4)²/34", "(-2x-3y)² - 4(x+y) + 6 = 0", "(2x-3y)² - 34 = 0"],
+    "correctAnswer": "(x-2)² + (y+3)² = (3x-5y+4)²/34",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P37_Q1",
+    "text": "Let f(x)=3x-7, where x is a real number, then f(x) is ___ from R to R",
+    "options": ["Onto but not one-to-one function", "Neither one-to-one nor onto function", "One-to-one but not onto function", "Not a function", "One-to-one as well as onto function"],
+    "correctAnswer": "One-to-one as well as onto function",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P37_Q2",
+    "text": "Circum-radius of ΔABC is",
+    "options": ["R=abc/4Δ", "R=ab/4Δ", "R=(a+b+c)/4Δ", "R=abc/4Δ", "R=abc/4Δ"],
+    "correctAnswer": "R=abc/4Δ",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P37_Q3",
+    "text": "The sum of the series (p-q) + (p-2q) + (p-3q) + ........ + (p-12q) is",
+    "options": ["q(2p-13q)", "4(m-p)", "cannot be determined unless p & q are known", "2q-12r", "2p+13q"],
+    "correctAnswer": "q(2p-13q)",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P38_Q1",
+    "text": "The angle between the pair of lines represented by the equation ax² + 2hxy + by² = 0 is",
+    "options": ["tanθ = 2√(h²-ab)/(a-b)", "tanθ = 2√(h²-ab)/(a+b)", "y=mx+c", "tanθ = (m₁+m₂)/(1-m₁m₂)", "y-y₁=m(x-x₁)"],
+    "correctAnswer": "tanθ = 2√(h²-ab)/(a+b)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P38_Q2",
+    "text": "Nina is moving along a branch of the hyperbola x²/81 - y²/83 = 1 in anticlockwise direction with speed of 3 units of distance per hour. How many hours will she take to comeback at the starting point?",
+    "options": ["27", "67", "9", "She will never come back at the starting point", "8.33"],
+    "correctAnswer": "She will never come back at the starting point",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "P38_Q3",
+    "text": "If A is any 3 by 3 matrix such that det(A) = 5, then det(2A) = ",
+    "options": ["45", "30", "15", "10"],
+    "correctAnswer": "45",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P39_Q1",
+    "text": "The value of ∫ x³e^(x⁴) dx is",
+    "options": ["1", "1/9", "1/9(e⁹-1)", "ln 2", "e^(x⁴)"],
+    "correctAnswer": "ln 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P39_Q2",
+    "text": "If the first term of a geometric progression is 50 and its common ratio is 4/9, then its sum to infinity is",
+    "options": ["100", "80", "120", "110"],
+    "correctAnswer": "120",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P39_Q3",
+    "text": "If we have three vectors a, b and c, then according to distributive law of scalar multiplication over addition",
+    "options": ["a • (b+c) = a•b + a•c", "(a x b) • c = (b x c) • c", "(a-b) • c = (a+b) • c", "(a+b) • c = (b+c) • a", "(a•b)c = a(b•c)"],
+    "correctAnswer": "a • (b+c) = a•b + a•c",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P39_Q4",
+    "text": "If a = ai + aj + ak is a unit vector, if a =",
+    "options": ["1/3", "0", "1/√3", "-1", "1"],
+    "correctAnswer": "1/√3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P40_Q1",
+    "text": "If a = ai + aj + ak is a unit vector, if a =",
+    "options": ["1/3", "0", "1/√3", "-1", "1"],
+    "correctAnswer": "1/√3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P40_Q2",
+    "text": "If d = (2/1, 3/4) and 2d + 3e = (2/1, -12/3) then e is",
+    "options": ["(-1, 7/12)", "(0, 15/25)", "(-1/2, 2/1)", "(-1, 2/1)", "Impossible to find"],
+    "correctAnswer": "(-1, 7/12)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P40_Q3",
+    "text": "Name the property of real numbers used in √3+4 = 4+√3",
+    "options": ["Additive identity", "Distributive property", "Absorption property", "Associative property", "Commutative property"],
+    "correctAnswer": "Commutative property",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P41_Q1",
+    "text": "How many times do the graphs of the equations y = x² + 3x - 2 and y = 5x³ intersect in the Cartesian plane?",
+    "options": ["2", "0", "3", "1", "4"],
+    "correctAnswer": "1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P41_Q2",
+    "text": "If magnitude of mi + (m + 1)j + (m - 1)k is 2, then m = ?",
+    "options": ["2/3", "√3/2", "0", "±√3/2", "9/16"],
+    "correctAnswer": "±√3/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P41_Q3",
+    "text": "Sin 75° = ?",
+    "options": ["(2√3+√2)/4", "0.819", "(√3-1)/(2√2)", "(√2+√3)/9", "(√6+√2)/4"],
+    "correctAnswer": "(√6+√2)/4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P42_Q1",
+    "text": "If f(x) = √x is defined on [1,5], then f(x) is",
+    "options": ["None of these", "It is increasing only on [1, 1]", "It is increasing function", "It is zero function", "It is decreasing function"],
+    "correctAnswer": "It is increasing function",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P42_Q2",
+    "text": "State one basic property of the real numbers that justify the statement: 1/(s+2t) * (s+2t) = 1 for s ≠ -2t",
+    "options": ["Associative property for addition", "Closure law for multiplication", "Multiplicative inverse property", "Commutative property for multiplication", "Additive inverse property"],
+    "correctAnswer": "Multiplicative inverse property",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P42_Q3",
+    "text": "The value of ∫ 4x³ dx is",
+    "options": ["x⁴+C", "x²+C", "2x³+C", "2(x⁴-1)", "2(x³+1)"],
+    "correctAnswer": "x⁴+C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P43_Q1",
+    "text": "The range of the function y=sin 4x is",
+    "options": ["{y | -1 ≤ y ≤ 1, y ∈ R}", "{y | -1 ≤ y < 1, y ∈ R}", "{y | 0 < y < 1, y ∈ R}", "{y | -1 < y ≤ 1, y ∈ R}", "{y | -1 < y < 1, y ∈ R}"],
+    "correctAnswer": "{y | -1 ≤ y ≤ 1, y ∈ R}",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P43_Q2",
+    "text": "The value of Lt (x->0) sin²(x/4) / x² is",
+    "options": ["4", "16", "1/16", "9", "4"],
+    "correctAnswer": "1/16",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P43_Q3",
+    "text": "If f(x) = -7sin(2x+5), then period of f(x) = ",
+    "options": ["π/2", "π", "2π+5", "-14π", "-2π/7"],
+    "correctAnswer": "π/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P44_Q1",
+    "text": "If S={(1,1),(1,3),(1,5),(3,1),(3,3),(3,5),(5,1),(5,3),(5,5)}, then write r = {(x, y)/x > y}",
+    "options": ["None of these", "r={(3,3),(5,5),(1,1)}", "r={(3,1),(5,1),(5,3)}", "r={(3,3),(5,5),(1,1)}", "r={(1,5),(1,3),(5,5)}"],
+    "correctAnswer": "r={(3,1),(5,1),(5,3)}",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P44_Q2",
+    "text": "The first 3 terms in the expansion of (1-x)² are",
+    "options": ["1+2x-3x²", "1-2x-3x²", "-2+4x+6x²", "1+4x+6x²", "1+2x+3x²"],
+    "correctAnswer": "1-2x-3x²",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "P44_Q3",
+    "text": "If x² + y² = 6, then dy/dx at (1,3) is",
+    "options": ["None of these", "6", "18", "-8", "-1/3"],
+    "correctAnswer": "-1/3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "P45_Q1",
+    "text": "We can write Cos(3π/2 - γ) = ?",
+    "options": ["-Cosγ", "Sinγ", "-Sinγ", "Cosγ", "-Cos(3π/2)"],
+    "correctAnswer": "-Sinγ",
+    "explanation": "",
+    "subject": "basic_maths"
+  }
+]

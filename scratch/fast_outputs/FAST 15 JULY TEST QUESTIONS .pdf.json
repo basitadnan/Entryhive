@@ -1,0 +1,186 @@
+[
+  {
+    "id": "fast_test_p2_q6",
+    "text": "How many cricket teams can be formed by choosing from 16 players when captain and wicket keeper are already selected?",
+    "options": [],
+    "correctAnswer": "2002",
+    "explanation": "To form a team of 11 players, if 2 (captain and wicket keeper) are already selected from 16, then we need to choose 9 more players from the remaining 14 players. This is a combination problem: C(14, 9) = 14! / (9! * (14-9)!) = 14! / (9! * 5!) = (14 * 13 * 12 * 11 * 10) / (5 * 4 * 3 * 2 * 1) = 14 * 13 * 11 * 3 = 2002.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p2_q7",
+    "text": "If |z| = 2, then find |2z|^2.",
+    "options": [],
+    "correctAnswer": "16",
+    "explanation": "The property of modulus states that |k * z| = |k| * |z|. So, |2z| = |2| * |z| = 2 * |z|. Then, |2z|^2 = (2 * |z|)^2 = 4 * |z|^2. Given |z| = 2, substituting this value gives 4 * (2^2) = 4 * 4 = 16.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p2_q8",
+    "text": "If z = x + iy where x = (1-cosθ) and y = (1+sinθ), then find |z|.",
+    "options": [],
+    "correctAnswer": "√(3 - 2cosθ + 2sinθ)",
+    "explanation": "The modulus of a complex number z = x + iy is |z| = √(x^2 + y^2). Substituting the given expressions for x and y:\n|z| = √((1-cosθ)^2 + (1+sinθ)^2)\n|z| = √( (1 - 2cosθ + cos²θ) + (1 + 2sinθ + sin²θ) )\n|z| = √( 1 - 2cosθ + 1 + 2sinθ + (cos²θ + sin²θ) )\nUsing the identity cos²θ + sin²θ = 1:\n|z| = √( 2 - 2cosθ + 2sinθ + 1 )\n|z| = √( 3 - 2cosθ + 2sinθ ).",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p2_q10",
+    "text": "Find the sum of even positive integers up to 50.",
+    "options": [],
+    "correctAnswer": "650",
+    "explanation": "The even positive integers up to 50 form an arithmetic progression: 2, 4, 6, ..., 50. The first term (a1) is 2, and the common difference (d) is 2. The last term (an) is 50. First, find the number of terms (n):\nan = a1 + (n-1)d\n50 = 2 + (n-1)2\n48 = 2(n-1)\n24 = n-1\nn = 25.\nNow, find the sum (Sn) using the formula Sn = n/2 * (a1 + an):\nSn = 25/2 * (2 + 50)\nSn = 25/2 * 52\nSn = 25 * 26 = 650.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p2_q11",
+    "text": "A triangle in which 2 sides are congruent is called a/an:",
+    "options": [],
+    "correctAnswer": "Isosceles triangle",
+    "explanation": "By definition, an isosceles triangle is a triangle that has at least two sides of equal length (congruent).",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p2_q12",
+    "text": "If a = b = c and α = 60° (in a triangle), then β = ?",
+    "options": [],
+    "correctAnswer": "60°",
+    "explanation": "If all three sides (a, b, c) of a triangle are equal, then it is an equilateral triangle. In an equilateral triangle, all three interior angles are equal, and each measures 60°. Therefore, if one angle α is 60°, any other angle β must also be 60°.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p3_q16",
+    "text": "Let a line L be perpendicular to x-axis. If P(-7,-2) and Q(a,2) lie on it then a =",
+    "options": ["-7", "7", "2", "-2", "0"],
+    "correctAnswer": "-7",
+    "explanation": "A line perpendicular to the x-axis is a vertical line. The equation of a vertical line is x = k, where k is a constant. This means all points on the line have the same x-coordinate. If points P(-7, -2) and Q(a, 2) both lie on this line, then their x-coordinates must be equal. Therefore, a = -7.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_p4_q1_english_1",
+    "text": "Synonym of Agog:",
+    "options": [],
+    "correctAnswer": "excited",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_p4_q1_english_2",
+    "text": "Synonym of Allure:",
+    "options": [],
+    "correctAnswer": "",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_p4_q1_english_3",
+    "text": "Synonym of Quietude:",
+    "options": [],
+    "correctAnswer": "serenity",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_p4_q1_english_4",
+    "text": "Antonym of Tenable:",
+    "options": [],
+    "correctAnswer": "indefensible",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_p4_q1_english_5",
+    "text": "Fill in the blank: The child ran ______ the room crying.",
+    "options": [],
+    "correctAnswer": "into",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_p4_q1_math",
+    "text": "Given a large circle with radius 2r, containing two smaller circles each of radius r, tangent to each other and to the large circle. Find the shaded area, which is the area of the large circle minus the area of the two small circles.",
+    "options": [],
+    "correctAnswer": "2πr^2",
+    "explanation": "Area of the large circle = π * (2r)^2 = 4πr^2. Area of one small circle = π * r^2. Area of two small circles = 2 * (πr^2) = 2πr^2. Shaded area = Area of large circle - Area of two small circles = 4πr^2 - 2πr^2 = 2πr^2.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p4_q2_math",
+    "text": "Given a square with side length 1cm. Four quarter-circles of radius 1cm are drawn from each corner, with their centers at the corners. The shaded area is the area of the square minus the area of these four quarter-circles. Find the shaded area.",
+    "options": [],
+    "correctAnswer": "1 - π cm^2",
+    "explanation": "Area of the square = (side length)^2 = (1 cm)^2 = 1 cm^2. The four quarter-circles, each with a radius of 1 cm, together form one complete circle of radius 1 cm. The area of this complete circle is π * (1 cm)^2 = π cm^2. The shaded area is the area of the square minus the area of the four quarter-circles (which is equivalent to one full circle) = 1 - π cm^2.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p4_q4_math",
+    "text": "Find d/dx (tan⁻¹√x).",
+    "options": [],
+    "correctAnswer": "1 / (2√x(1+x))",
+    "explanation": "To differentiate tan⁻¹(u), we use the chain rule: d/dx (tan⁻¹u) = (1 / (1 + u²)) * du/dx. Here, u = √x = x^(1/2). First, find du/dx:\ndu/dx = d/dx (x^(1/2)) = (1/2)x^(1/2 - 1) = (1/2)x^(-1/2) = 1 / (2√x).\nNow, substitute u and du/dx into the chain rule formula:\nd/dx (tan⁻¹√x) = (1 / (1 + (√x)²)) * (1 / (2√x))\nd/dx (tan⁻¹√x) = (1 / (1 + x)) * (1 / (2√x))\nd/dx (tan⁻¹√x) = 1 / (2√x(1+x)).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_p4_q5_math",
+    "text": "When two dice are rolled, what is the probability that the sum appearing at the top is at least 6?",
+    "options": [],
+    "correctAnswer": "13/18",
+    "explanation": "The total number of possible outcomes when rolling two fair dice is 6 * 6 = 36.\nWe want the probability that the sum is at least 6 (Sum ≥ 6). It's easier to calculate the probability of the complementary event (Sum < 6) and subtract it from 1.\nOutcomes where the sum is less than 6:\n- Sum = 2: (1,1) - 1 outcome\n- Sum = 3: (1,2), (2,1) - 2 outcomes\n- Sum = 4: (1,3), (2,2), (3,1) - 3 outcomes\n- Sum = 5: (1,4), (2,3), (3,2), (4,1) - 4 outcomes\nTotal outcomes for Sum < 6 = 1 + 2 + 3 + 4 = 10.\nProbability (Sum < 6) = (Number of outcomes for Sum < 6) / (Total outcomes) = 10/36 = 5/18.\nProbability (Sum ≥ 6) = 1 - Probability (Sum < 6) = 1 - 5/18 = 13/18.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p5_q1",
+    "text": "If m = √n, n = √p, p = √q, then what is the value of m in terms of q?",
+    "options": [],
+    "correctAnswer": "q^(1/8)",
+    "explanation": "Given the equations:\n1) m = √n\n2) n = √p\n3) p = √q\nSubstitute equation (3) into (2):\nn = √(√q) = q^(1/4)\nSubstitute this new expression for n into equation (1):\nm = √(q^(1/4)) = (q^(1/4))^(1/2)\nUsing the exponent rule (a^b)^c = a^(b*c):\nm = q^(1/4 * 1/2) = q^(1/8).",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p6_q4",
+    "text": "If x + 1/x = 9, then x² + 1/x² is?",
+    "options": ["81", "79", "2", "8"],
+    "correctAnswer": "79",
+    "explanation": "Given x + 1/x = 9. To find x² + 1/x², square both sides of the given equation:\n(x + 1/x)² = 9²\nExpand the left side using (a+b)² = a² + 2ab + b²:\nx² + 2(x)(1/x) + (1/x)² = 81\nx² + 2 + 1/x² = 81\nSubtract 2 from both sides:\nx² + 1/x² = 81 - 2\nx² + 1/x² = 79.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p6_q5",
+    "text": "What is the next term in the series: 14, 12.5, 11, 9.5, 8, ?",
+    "options": ["7.5", "10", "6.5", "11"],
+    "correctAnswer": "6.5",
+    "explanation": "Let's find the difference between consecutive terms:\n12.5 - 14 = -1.5\n11 - 12.5 = -1.5\n9.5 - 11 = -1.5\n8 - 9.5 = -1.5\nThe series is an arithmetic progression with a common difference of -1.5. To find the next term, subtract 1.5 from the last given term:\nNext term = 8 - 1.5 = 6.5.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_p7_q1",
+    "text": "If B = [bij] and C = [cij] are two matrices of order mxn then order of B + C = ?",
+    "options": ["mxn", "nxm", "mxm", "nxn", "None of these"],
+    "correctAnswer": "mxn",
+    "explanation": "For two matrices to be added or subtracted, they must have the exact same dimensions (order). The resulting matrix from the addition will also have the same order as the original matrices. Since both B and C are of order m x n, their sum (B + C) will also be a matrix of order m x n.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_p7_q2",
+    "text": "Simplify i^10 where i = √-1.",
+    "options": ["14", "4", "2", "-1", "None of these"],
+    "correctAnswer": "-1",
+    "explanation": "The powers of the imaginary unit 'i' follow a cycle of 4:\ni^1 = i\ni^2 = -1\ni^3 = -i\ni^4 = 1\nTo simplify i^10, divide the exponent 10 by 4 and find the remainder: 10 ÷ 4 = 2 with a remainder of 2. Therefore, i^10 is equivalent to i^2, which is -1.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_p7_q3",
+    "text": "If A = [[λ, 4], [5, 4]] is a singular matrix, then λ = ?",
+    "options": ["10", "15", "14", "20", "None of these"],
+    "correctAnswer": "None of these",
+    "explanation": "A matrix is singular if its determinant is zero. For a 2x2 matrix [[a, b], [c, d]], the determinant is (ad - bc). For the given matrix A = [[λ, 4], [5, 4]], the determinant is:\nDet(A) = (λ * 4) - (4 * 5)\nDet(A) = 4λ - 20\nFor A to be singular, Det(A) must be 0:\n4λ - 20 = 0\n4λ = 20\nλ = 20 / 4\nλ = 5.\nSince 5 is not listed among options (a), (b), (c), or (d), the correct choice is 'None of these'.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_p8_q1",
+    "text": "Find the 20th term (T20) of the series: (2 x 4) + (4 x 6) + (6 x 8) + ...",
+    "options": [],
+    "correctAnswer": "1680",
+    "explanation": "The series consists of terms which are products of two consecutive even numbers. Let's analyze the pattern:\nFirst number in each product: 2, 4, 6, ... This is an arithmetic progression with first term a = 2 and common difference d = 2. The nth term (Tn1) of this sequence is 2n.\nSecond number in each product: 4, 6, 8, ... This is also an arithmetic progression with first term a = 4 and common difference d = 2. The nth term (Tn2) of this sequence is 4 + (n-1)2 = 4 + 2n - 2 = 2n + 2.\nSo, the general nth term (Tn) of the series is the product of these two:\nTn = (2n)(2n+2).\nTo find the 20th term (T20), substitute n = 20:\nT20 = (2 * 20)(2 * 20 + 2)\nT20 = (40)(40 + 2)\nT20 = (40)(42)\nT20 = 1680.",
+    "subject": "basic_maths"
+  }
+]

@@ -1,0 +1,2296 @@
+[
+  {
+    "id": "fast_paper1_advance_maths_Q1",
+    "text": "Find (A - B) ∩ B when A={a,e,i,o,u} and B={a,b,c,d}",
+    "options": [
+      "a. Ф",
+      "b. A",
+      "c. B",
+      "d. A-B"
+    ],
+    "correctAnswer": "a. Ф",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q2",
+    "text": "Find the value of 'X' if both the vectors if a = 2i-j-2k, b = 3i - 2Xj are perpendicular to each other",
+    "options": [
+      "a. -3",
+      "b. -6",
+      "c. 6",
+      "d. 3"
+    ],
+    "correctAnswer": "a. -3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q3",
+    "text": "When there are 10 balls of different colours. In how many ways you can choose 7 balls of different colours black and white balls are excluded?",
+    "options": [
+      "a. 8",
+      "b. 10",
+      "c. 12",
+      "d. 60"
+    ],
+    "correctAnswer": "a. 8",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q4",
+    "text": "When cosθsinθ = 0.22 then (cosθ – sinθ)² =",
+    "options": [
+      "a. 1/2",
+      "b. 0.56",
+      "c. 1",
+      "d. 0.0484"
+    ],
+    "correctAnswer": "b. 0.56",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q5",
+    "text": "Find the point dividing (1,2) & (7,-4) in the ratios 1:2",
+    "options": [
+      "a. (0,-3)",
+      "b. (0,3)",
+      "c. (-3,0)",
+      "d. (3,0)"
+    ],
+    "correctAnswer": "d. (3,0)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q6",
+    "text": "Find the geometric progression when a = 4 & r = 1/3",
+    "options": [
+      "a. 4, 4/3, 4/9, 4/27, ...",
+      "b. 4, 16/3, 64/9, 256/27, ...",
+      "c. 1, 4/3, 16/9, 64/27, ...",
+      "d. None"
+    ],
+    "correctAnswer": "a. 4, 4/3, 4/9, 4/27, ...",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q7",
+    "text": "Find the derivative of 7x⁶ + 6x⁵ + 5x⁴",
+    "options": [
+      "a. 7x⁶ + 6x⁵ + 5x⁴",
+      "b. 42x⁵ + 30x⁴ + 20x³",
+      "c. 42x⁵ + 30x⁴ + 20x³",
+      "d. 6x⁵ + 5x⁴ + 4x³"
+    ],
+    "correctAnswer": "c. 42x⁵ + 30x⁴ + 20x³",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q8",
+    "text": "Find the nth derivative of f(x) = e^abx",
+    "options": [
+      "a. ae^abx",
+      "b. a^n e^abx",
+      "c. (ab)⁵e^ab",
+      "d. 1"
+    ],
+    "correctAnswer": "b. a^n e^abx",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q9",
+    "text": "What is the value of 'X' if |[4 X] [4]| is singular matrix?",
+    "options": [
+      "a. 0",
+      "b. 2",
+      "c. 6",
+      "d. 8"
+    ],
+    "correctAnswer": "d. 8",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q10",
+    "text": "A = [[2 4] [4]] is a",
+    "options": [
+      "a. Singleton",
+      "b. Singular",
+      "c. Non-singular",
+      "d. Null"
+    ],
+    "correctAnswer": "c. Non-singular",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q11",
+    "text": "2sin45°cos45° =?",
+    "options": [
+      "a. √2",
+      "b. √3/2",
+      "c. 1",
+      "d. √2/2"
+    ],
+    "correctAnswer": "c. 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q12",
+    "text": "r² = g² + f² - c represents:",
+    "options": [
+      "a. Circle",
+      "b. Point circle",
+      "c. None",
+      "d. Ellipse"
+    ],
+    "correctAnswer": "a. Circle",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q13",
+    "text": "If a = x + y and b = x - y then the value of ab =?",
+    "options": [
+      "a. x² - y²",
+      "b. x² + y²",
+      "c. xy",
+      "d. x² + y² - 2xy"
+    ],
+    "correctAnswer": "a. x² - y²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q14",
+    "text": "What is the probability of getting a red card from an ordinary deck of cards?",
+    "options": [
+      "a. 1/4",
+      "b. 1/26",
+      "c. 1/2",
+      "d. 1/9"
+    ],
+    "correctAnswer": "c. 1/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q15",
+    "text": "If a curve is given by x²/3 + y²/5 = 1, find the coordinates of foci.",
+    "options": [
+      "a. (±√3,0)",
+      "b. (±√5,0)",
+      "c. (±2,0)",
+      "d. (±√8,0)"
+    ],
+    "correctAnswer": "d. (±√8,0)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q16",
+    "text": "∫cosx/√sinx dx =?",
+    "options": [
+      "a. √sinx + c",
+      "b. 2√sinx + c",
+      "c. -√sinx + c",
+      "d. -2√sinx + c"
+    ],
+    "correctAnswer": "b. 2√sinx + c",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q17",
+    "text": "d/dx e^(x³) =?",
+    "options": [
+      "a. e^(x³)",
+      "b. 3x²e^(x³)",
+      "c. 3x²e^(x²)",
+      "d. x²e^(x³)"
+    ],
+    "correctAnswer": "b. 3x²e^(x³)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q18",
+    "text": "Find the sum of first 'n' odd integers:",
+    "options": [
+      "a. n²",
+      "b. (2n+1)",
+      "c. (2n+1)/2",
+      "d. n(n+1)/2"
+    ],
+    "correctAnswer": "a. n²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q19",
+    "text": "Evaluate: (x²y²z²(x²-y²)(z²-x²)(y²-z²))/(x⁴+y⁴+z⁴-x²y²-y²z²-z²x²)",
+    "options": [
+      "a. 1",
+      "b. -1",
+      "c. x²y²z²",
+      "d. x²y² + y²z² + z²x² − x⁴ − y⁴ − z⁴"
+    ],
+    "correctAnswer": "d. x²y² + y²z² + z²x² − x⁴ − y⁴ − z⁴",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q20",
+    "text": "How many tangents can be drawn to circle if a point lies outside the circle?",
+    "options": [
+      "a. 1",
+      "b. 2",
+      "c. 0",
+      "d. None"
+    ],
+    "correctAnswer": "b. 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q21",
+    "text": "sin15° =?",
+    "options": [
+      "a. (√6-√2)/4",
+      "b. (√6+√2)/4",
+      "c. (-√6-√2)/4",
+      "d. -√6+√2/4"
+    ],
+    "correctAnswer": "a. (√6-√2)/4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q23",
+    "text": "If the focus of parabola is (0, -3) then it is:",
+    "options": [
+      "a. Cup up parabola",
+      "b. Cup down parabola",
+      "c. Left open parabola",
+      "d. Right open parabola"
+    ],
+    "correctAnswer": "b. Cup down parabola",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q24",
+    "text": "1/(1-sin²θ) + 1/(1+sin²θ) =?",
+    "options": [
+      "a. 2/(1-sin²θ)",
+      "b. 2/(1-sin⁴θ)",
+      "c. 2/(1+sin⁴θ)",
+      "d. 1/(1+tan²θ)"
+    ],
+    "correctAnswer": "c. 2/(1+sin⁴θ)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q25",
+    "text": "d/dx tan²x =?",
+    "options": [
+      "a. 2tanx sec²x",
+      "b. sec²x",
+      "c. tanx sec²x",
+      "d. 2tan²x"
+    ],
+    "correctAnswer": "a. 2tanx sec²x",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q26",
+    "text": "∫x²e^(x³) dx =?",
+    "options": [
+      "a. 1/3(e^(x³)-1)",
+      "b. 9e^(x³)",
+      "c. 1/3 e^(x³)+c",
+      "d. e^(x³)x²"
+    ],
+    "correctAnswer": "a. 1/3(e^(x³)-1)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q27",
+    "text": "Find the distance between (2, -6) and (6, -3)",
+    "options": [
+      "a. 25",
+      "b. 4",
+      "c. 5",
+      "d. 16"
+    ],
+    "correctAnswer": "c. 5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q28",
+    "text": "Slope of line 5x/2 + 7y/2 = 49/10 is:",
+    "options": [
+      "a. 6",
+      "b. -5/7",
+      "c. 7/5",
+      "d. -7/5"
+    ],
+    "correctAnswer": "b. -5/7",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q29",
+    "text": "Standard equation of hyperbola if centre is at (0,0).",
+    "options": [
+      "a. x²/a² + y²/b² = 1",
+      "b. x²/a² - y²/b² = 1",
+      "c. x²/a² + y²/b² = 1",
+      "d. y²/a² - x²/b² = 1"
+    ],
+    "correctAnswer": "b. x²/a² - y²/b² = 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q30",
+    "text": "Find the equation of tangent to the curve 3x² - 4y² = 12 at (4, -3):",
+    "options": [
+      "a. x - y = 1",
+      "b. x + y = -1",
+      "c. x + y = -1",
+      "d. x - y = 1"
+    ],
+    "correctAnswer": "a. x - y = 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q31",
+    "text": "If (f(x)g(x))' is",
+    "options": [
+      "a. [f(x).g(x)]-1",
+      "b. [f(x).g(x) + g(x). f(x)]",
+      "c. [f(x).g(x)]-1",
+      "d. [f(x).g(x) + g(x).f(x)]"
+    ],
+    "correctAnswer": "b. [f(x).g(x) + g(x). f(x)]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q32",
+    "text": "If z = -7 + √3i then find (z-z̄)³",
+    "options": [
+      "a. 343",
+      "b. -343",
+      "c. -12√3i",
+      "d. -24√3i"
+    ],
+    "correctAnswer": "d. -24√3i",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q33",
+    "text": "If f(x) = x³ + cosx then f(x) is?",
+    "options": [
+      "a. An odd function",
+      "b. An even function",
+      "c. Neither odd nor even",
+      "d. A constant function"
+    ],
+    "correctAnswer": "c. Neither odd nor even",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q34",
+    "text": "lim (3x²-7x-6)/(x²-8x+15) as x -> 3",
+    "options": [
+      "a. 0",
+      "b. -11/7",
+      "c. ∞",
+      "d. 8/11"
+    ],
+    "correctAnswer": "d. 8/11",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q35",
+    "text": "Find f'(x), if f(x) = sin³x",
+    "options": [
+      "a. 3sin²x cosx",
+      "b. 3sin²x cos²x",
+      "c. 3sin x cosx",
+      "d. 1/2 sin²x cos²x"
+    ],
+    "correctAnswer": "a. 3sin²x cosx",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q36",
+    "text": "If dy/dx = lnx dx and the slope at (x, y) is same as when it is parallel to x axis find x?",
+    "options": [
+      "a. e",
+      "b. 0",
+      "c. 1",
+      "d. 2"
+    ],
+    "correctAnswer": "b. 0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q37",
+    "text": "The derivative of cos²3x",
+    "options": [
+      "a. -6cos3x sinx",
+      "b. 6cos3x sinx",
+      "c. cos3 sinx",
+      "d. 2cos²3x sinx"
+    ],
+    "correctAnswer": "d. 2cos²3x sinx",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q38",
+    "text": "Curve y = x² - 8 has: I. Maximum value, II. Minimum value, III. No extreme value",
+    "options": [
+      "a. I only",
+      "b. II only",
+      "c. I and II only",
+      "d. III only"
+    ],
+    "correctAnswer": "b. II only",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q39",
+    "text": "The equation of the line which is parallel to x axis and 5 units above it is?",
+    "options": [
+      "a. y = 5",
+      "b. y = -5",
+      "c. x = -5",
+      "d. x = 5"
+    ],
+    "correctAnswer": "a. y = 5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q40",
+    "text": "The derivative of the function y = cos x is equal to?",
+    "options": [
+      "a. sinx",
+      "b. -tanx",
+      "c. -sinx",
+      "d. cosx/x"
+    ],
+    "correctAnswer": "c. -sinx",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q41",
+    "text": "If α, β are the roots of x² - 2x + 1 = 0, then (α + β)² is equal to",
+    "options": [
+      "A. -2",
+      "B. 1",
+      "C. 2",
+      "D. 4"
+    ],
+    "correctAnswer": "D. 4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q42",
+    "text": "The possible number of root(s) of the equation x³ = 9 is/are",
+    "options": [
+      "A. one",
+      "B. two",
+      "C. no roots",
+      "D. infinite many roots."
+    ],
+    "correctAnswer": "B. two",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q43",
+    "text": "The real quadratic equation whose coefficients are rational and whose one root is √2 + √3",
+    "options": [
+      "A. x² - 7x - 11 = 0",
+      "B. x² - 6x + 7 = 0",
+      "C. -x² + 2x - 1 = 0",
+      "D. x² - 13x - 15 = 0"
+    ],
+    "correctAnswer": "B. x² - 6x + 7 = 0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q44",
+    "text": "w being the complex cube roots of unity then consider the following statements I. ω² = 1/ω, II. ω³ⁿ = 1; n ∈ integer, III. ωⁿ + ωⁿ⁺¹ + ωⁿ⁺² = 0; n ∈ integer",
+    "options": [
+      "A. I only",
+      "B. II only",
+      "C. I and II",
+      "D. I and III"
+    ],
+    "correctAnswer": "D. I and III",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q45",
+    "text": "If one root of 5x² + 7abdx - t² + 196 = 0 is zero then t is equal to",
+    "options": [
+      "A. -14",
+      "B. 0",
+      "C. ±14",
+      "D. -14"
+    ],
+    "correctAnswer": "C. ±14",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q46",
+    "text": "(x+1)/(x(x+2)²) = A/x + B/(x+2) + C/(x+2)²",
+    "options": [
+      "A. A/x + B/(x+2)",
+      "B. B/(x+2) + C/(x+2)²",
+      "C. A-X / (x+2)²",
+      "D. Bx+C / (x+2)²"
+    ],
+    "correctAnswer": "B. B/(x+2) + C/(x+2)²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q47",
+    "text": "√x + 2 = -1 then real root(s) of the equation is/are",
+    "options": [
+      "A. one",
+      "B. two",
+      "C. three",
+      "D. no roots"
+    ],
+    "correctAnswer": "D. no roots",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q48",
+    "text": "If α, β are the roots of 3x² - 2x + 5 = 0 then sum of α+1 and β+1 is equal to",
+    "options": [
+      "A. -8/5",
+      "B. 8/5",
+      "C. 4/3",
+      "D. 1"
+    ],
+    "correctAnswer": "B. 8/5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q49",
+    "text": "If the equation 7x² + 15x + k = 0 has roots √α and √β then k is equals to",
+    "options": [
+      "A. -11",
+      "B. 2",
+      "C. -15",
+      "D. 15"
+    ],
+    "correctAnswer": "C. -15",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_advance_maths_Q50",
+    "text": "If the sum of a number and its reciprocal is 41/20 then the number is",
+    "options": [
+      "A. 5/4",
+      "B. -5/4",
+      "C. -4/5",
+      "D. 4/5"
+    ],
+    "correctAnswer": "A. 5/4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q1",
+    "text": "The 180 students in a group are to be seated in rows so that there is equal number of students in each row. Each of the following could be the number of rows EXCEPT",
+    "options": [
+      "(A) 4",
+      "(B) 20",
+      "(C) 30",
+      "(D) 40",
+      "(E) 90"
+    ],
+    "correctAnswer": "(D) 40",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q2",
+    "text": "A parking garage rents parking spaces for $10 per week or $30 per month. How much does a person save in a year by renting by the month rather than by the week?",
+    "options": [
+      "(A) $140",
+      "(B) $160",
+      "(C) $220",
+      "(D) $240",
+      "(E) $260"
+    ],
+    "correctAnswer": "(B) $160",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q3",
+    "text": "If y = 5x² - 2x and x = 3, then y=?",
+    "options": [
+      "(A) 24",
+      "(B) 27",
+      "(C) 39",
+      "(D) 51"
+    ],
+    "correctAnswer": "(C) 39",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q4",
+    "text": "Of the following, which is the best approximation to √0.0026?",
+    "options": [
+      "(A) 0.05",
+      "(B) 0.06",
+      "(C) 0.16",
+      "(D) 0.005"
+    ],
+    "correctAnswer": "(A) 0.05",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q5",
+    "text": "At a certain diner, a hamburger and coleslaw cost $3.59, and a hamburger and french fries cost $4.40. If french fries cost twice as much as coleslaw, how much do french fries cost?",
+    "options": [
+      "(A) $0.30",
+      "(B) $0.45",
+      "(C) $0.60",
+      "(D) $0.75"
+    ],
+    "correctAnswer": "(B) $0.45",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q7",
+    "text": "In the expression above, a, b, and c are different numbers and each is one of the numbers 2, 3, or 5. What is the least possible value of the expression?",
+    "options": [
+      "(A) 1/30",
+      "(B) 1/15",
+      "(C) 1/6",
+      "(D) 3/10"
+    ],
+    "correctAnswer": "(B) 1/15",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q8",
+    "text": "A culture of bacteria quadruples every hour. If a container with these bacteria was half full at 10:00 a.m., at what time was it one-eighth full?",
+    "options": [
+      "(A) 9:00 a.m.",
+      "(B) 7:00 a.m.",
+      "(C) 6:00 a.m.",
+      "(D) 4:00 a.m"
+    ],
+    "correctAnswer": "(A) 9:00 a.m.",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q9",
+    "text": "Al and Karen pooled their funds to buy a gift for a friend. Al contributed $2 less than 1/4 of the cost. Lew contributed $2 more than 1/3 of the cost. If Karen contributed the remaining $15, what was the cost of the gift?",
+    "options": [
+      "(A) $24",
+      "(B) $33",
+      "(C) $36",
+      "(D) $43",
+      "(E) $45"
+    ],
+    "correctAnswer": "(C) $36",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_basic_maths_Q10",
+    "text": "What is the total number of integers between 100 and 200 that are divisible by 3?",
+    "options": [
+      "(A) 33",
+      "(B) 32",
+      "(C) 31",
+      "(D) 30",
+      "(E) 29"
+    ],
+    "correctAnswer": "(A) 33",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper1_english_Q1",
+    "text": "ANALOGIES: BANDAGE: LACERATION",
+    "options": [
+      "A. ambulance: transportation",
+      "B. alcohol: antiseptic",
+      "C. cast: fracture",
+      "D. transfusion: blood",
+      "E. oxygen: shock"
+    ],
+    "correctAnswer": "C. cast: fracture",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q2",
+    "text": "ANALOGIES: PEDAL: FOOT",
+    "options": [
+      "A. thimble: finger",
+      "B. crutch: leg",
+      "C. knob: hand",
+      "D. belt: waist",
+      "E. pillow : head"
+    ],
+    "correctAnswer": "C. knob: hand",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q3",
+    "text": "SYNONYMS: Synonym of ANTIPATHY",
+    "options": [
+      "A. abnormal",
+      "B. indifference",
+      "C. aversion",
+      "D. firm dislike",
+      "E. disparing"
+    ],
+    "correctAnswer": "D. firm dislike",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q4",
+    "text": "SYNONYMS: Synonym of ENGENDER",
+    "options": [
+      "A. to put in danger",
+      "B. to show composure",
+      "C. to improve",
+      "D. to produce",
+      "E. to admire"
+    ],
+    "correctAnswer": "D. to produce",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q5",
+    "text": "ANTONYMS: Antonym of NORM",
+    "options": [
+      "A. linchpin",
+      "B. benchmark",
+      "C. watershed",
+      "D. anomaly",
+      "E. mode"
+    ],
+    "correctAnswer": "D. anomaly",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q6",
+    "text": "ANTONYMS: Antonym of APPREHEND",
+    "options": [
+      "A. purloin",
+      "B. gambol",
+      "C. specula",
+      "D. release",
+      "E. confer"
+    ],
+    "correctAnswer": "D. release",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q7",
+    "text": "SENTENCE COMPLETION: After having _______ their current level of study, students are typically ready to move on to the next one.",
+    "options": [
+      "A. investigated",
+      "B. studied",
+      "C. attempted",
+      "D. mastered",
+      "E. enjoyed"
+    ],
+    "correctAnswer": "D. mastered",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q8",
+    "text": "Samuel's employees were quite _______: they learned quickly and were able to do most of the tasks he _______.",
+    "options": [
+      "A. decisive...wanted",
+      "B. able...listed",
+      "C. humble...assigned",
+      "D. disturbed...ordered",
+      "E. interested...ignored"
+    ],
+    "correctAnswer": "B. able...listed",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q9",
+    "text": "PREPOSITIONS: He will appear _______ social reforms.",
+    "options": [
+      "A. in front of",
+      "B. to",
+      "C. before",
+      "D. for",
+      "E. near"
+    ],
+    "correctAnswer": "C. before",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper1_english_Q10",
+    "text": "I would like to move _______ Marketing.",
+    "options": [
+      "A. into",
+      "B. in",
+      "C. through",
+      "D. at",
+      "E. across"
+    ],
+    "correctAnswer": "A. into",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q1",
+    "text": "If the ratio of AB to BC is 4:9, what is the area of Parallelogram ABCD?",
+    "options": [
+      "a) 36",
+      "b) 26",
+      "c) 18",
+      "d) Cannot be determined"
+    ],
+    "correctAnswer": "d) Cannot be determined",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q2",
+    "text": "When any circle in 2nd Quadrant then what will be the equation of the circle when radius is 5 cm",
+    "options": [
+      "a) x² + y² +10x + 10y + 25 = 0",
+      "b) x² + y² +10x - 10y + 25 = 0",
+      "c) x² + y² - 10x + 10y + 25 = 0",
+      "d) x² + y² - 10x - 10y + 25 = 0"
+    ],
+    "correctAnswer": "b) x² + y² +10x - 10y + 25 = 0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q3",
+    "text": "If a line contains a point P1 (3, -3) and P2 (-3, 3) then the slope of line is?",
+    "options": [
+      "a) 2",
+      "b) 1",
+      "c) -1",
+      "d) -2"
+    ],
+    "correctAnswer": "c) -1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q4",
+    "text": "If z = (1,2) then z⁻¹ = ?",
+    "options": [
+      "a) (0.2, 0.4)",
+      "b) (-0.2, 0.4)",
+      "c) (-0.2, -0.4)",
+      "d) (0.2, -0.4)"
+    ],
+    "correctAnswer": "c) (-0.2, -0.4)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q5",
+    "text": "2 = ?",
+    "options": [
+      "a) Z",
+      "b) -Z",
+      "c) 1",
+      "d) 0"
+    ],
+    "correctAnswer": "c) 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q6",
+    "text": "The multiplicative inverse of 1 - 2i is",
+    "options": [
+      "a) (1/5)+(2/5)i",
+      "b) (1/5)-(2/5)i",
+      "c) (1/2)-(1/5)i",
+      "d) (2/5)+(1/5)i"
+    ],
+    "correctAnswer": "a) (1/5)+(2/5)i",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q7",
+    "text": "Which of the following is not monomial w.r.t addition?",
+    "options": [
+      "a) Z",
+      "b) W",
+      "c) X/Z",
+      "d) R"
+    ],
+    "correctAnswer": "c) X/Z",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q8",
+    "text": "The middle term in the expansion of (a + b)¹² is",
+    "options": [
+      "a) 13th",
+      "b) 12th",
+      "c) 11th",
+      "d) None"
+    ],
+    "correctAnswer": "d) None",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q9",
+    "text": "If A = {3,4} then P(A) is",
+    "options": [
+      "a) {φ}",
+      "b) {φ, {3}}",
+      "c) {φ, {3}, {4}}",
+      "d) {φ, {3,4}}"
+    ],
+    "correctAnswer": "a) {φ}",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q10",
+    "text": "The set Q, + is",
+    "options": [
+      "a) Forms a group",
+      "b) Does not form a group",
+      "c) Contains not additive identity",
+      "d) Contain not additive inverse"
+    ],
+    "correctAnswer": "a) Forms a group",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q11",
+    "text": "The expansion of (1 – 3x)⁻¹ is valid?",
+    "options": [
+      "a) |x| < 1/3",
+      "b) |x| < 1",
+      "c) |x| < 3",
+      "d) x < 1"
+    ],
+    "correctAnswer": "a) |x| < 1/3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q12",
+    "text": "If #n = (n - 5)² + 5 then find #3 × #4 =?",
+    "options": [
+      "a) 54",
+      "b) 12",
+      "c) 6",
+      "d) 9"
+    ],
+    "correctAnswer": "a) 54",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q13",
+    "text": "Power set of X P(X)........ Under the binary operation of union U",
+    "options": [
+      "a) Forms a group",
+      "b) Does not form a group",
+      "c) Has no identity",
+      "d) ∞ Set although X is ∞"
+    ],
+    "correctAnswer": "b) Does not form a group",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q14",
+    "text": "If A is non-singular matrix then (A⁻¹)⁻¹=?",
+    "options": [
+      "a) A",
+      "b) -A",
+      "c) I",
+      "d) 0"
+    ],
+    "correctAnswer": "a) A",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q15",
+    "text": "Out of 800 boys in a school, 334 played cricket, 240 played hockey and 336 played basketball. Of the total 64 played both basketball and hockey, 80 played cricket and basketball and 40 played cricket and hockey. 24 played all the games. The number of boys who did not play any game is?",
+    "options": [
+      "a) 40",
+      "b) 56",
+      "c) 24",
+      "d) 50"
+    ],
+    "correctAnswer": "d) 50",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q16",
+    "text": "Let the equation ax² - bx + c = 0 have distinct real roots both lying in the open interval (0, 1) where a, b, c are given to be positive integers then the value of the ordered triplet (a, b, c) can be?",
+    "options": [
+      "a) (5, 3, 1)",
+      "b) (4, 3, 2)",
+      "c) (3, 2, 1)",
+      "d) (2, 1, 1)"
+    ],
+    "correctAnswer": "c) (3, 2, 1)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q17",
+    "text": "If A and B are disjoint sets, then A∩B is",
+    "options": [
+      "a) A",
+      "b) B",
+      "c) Null set",
+      "d) A U B"
+    ],
+    "correctAnswer": "c) Null set",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q18",
+    "text": "{1, -1, i, -i} is a group closed under",
+    "options": [
+      "a) Multiplication",
+      "b) Addition",
+      "c) Division",
+      "d) Both A & C"
+    ],
+    "correctAnswer": "d) Both A & C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q19",
+    "text": "If ω is complex cube root of unity then ω¹⁴ + ω¹⁶ is",
+    "options": [
+      "a) 1",
+      "b) 0",
+      "c) ω",
+      "d) -1"
+    ],
+    "correctAnswer": "d) -1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q20",
+    "text": "One root of 2x² + kx + 16 = 0 is 4, the other root is",
+    "options": [
+      "a) 2",
+      "b) 3",
+      "c) 4",
+      "d) Cannot be found"
+    ],
+    "correctAnswer": "a) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q21",
+    "text": "If A = Aᵀ then matrix A is",
+    "options": [
+      "a) Symmetric",
+      "b) Screw Symmetric",
+      "c) Square",
+      "d) None of these"
+    ],
+    "correctAnswer": "a) Symmetric",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q22",
+    "text": "The next term of the following sequence is 1.1, -3.3, 9.9, ...",
+    "options": [
+      "a) -29.9/7",
+      "b) -11.11/7",
+      "c) 29.7/7",
+      "d) -29.7/7"
+    ],
+    "correctAnswer": "a) -29.9/7",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q23",
+    "text": "The nth term of the following sequence is 0, 6, 24, 60.",
+    "options": [
+      "a) n² - 2n",
+      "b) n³ - n",
+      "c) n³ - 2n",
+      "d) n⁴ - n"
+    ],
+    "correctAnswer": "b) n³ - n",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q24",
+    "text": "If the sum of n terms is n²-3n then its 6th term is",
+    "options": [
+      "a) 2n-3",
+      "b) 2n-4",
+      "c) 2n-1",
+      "d) 2n"
+    ],
+    "correctAnswer": "c) 2n-1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q25",
+    "text": "Three arithmetic means between 15 and 7 are",
+    "options": [
+      "a) 13,10,4",
+      "b) 13,9,11",
+      "c) 13,11,9",
+      "d) 13,10,8"
+    ],
+    "correctAnswer": "b) 13,9,11",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q26",
+    "text": "If the sum of n natural numbers is 325 then n is",
+    "options": [
+      "a) 20",
+      "b) 30",
+      "c) 15",
+      "d) 25"
+    ],
+    "correctAnswer": "a) 20",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q27",
+    "text": "The product of (2, 3) and (-2,-3) is",
+    "options": [
+      "a) (5, 12)",
+      "b) (5, -12)",
+      "c) (-5, -12)",
+      "d) (-5, 12)"
+    ],
+    "correctAnswer": "d) (-5, 12)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q28",
+    "text": "A coin is tossed twice. The probability of getting at least one head is",
+    "options": [
+      "a) 1/2",
+      "b) 3/4",
+      "c) 1/4",
+      "d) 1"
+    ],
+    "correctAnswer": "c) 1/4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q29",
+    "text": "In the expansion of (x - 1/x)²⁰, the term independent of x is the rth term. Find r?",
+    "options": [
+      "a) 6",
+      "b) 5",
+      "c) 2",
+      "d) 1"
+    ],
+    "correctAnswer": "b) 5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q30",
+    "text": "How many different words can be formed using three letters of the word \"TABLE\"?",
+    "options": [
+      "a) 20",
+      "b) 30",
+      "c) 60",
+      "d) 120"
+    ],
+    "correctAnswer": "a) 20",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q31",
+    "text": "The equation 2x²+3y²-4x = 0 represents",
+    "options": [
+      "a) A point",
+      "b) ellipse",
+      "c) Parabola",
+      "d) circle"
+    ],
+    "correctAnswer": "d) circle",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q32",
+    "text": "The length of latus rectum of the parabola y² + 12x = 0 is",
+    "options": [
+      "a) 12",
+      "b) -12",
+      "c) 3",
+      "d) -3"
+    ],
+    "correctAnswer": "b) -12",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q33",
+    "text": "Distance of point (3, -2) from the line 3x + 4y + 10 = 0 is",
+    "options": [
+      "a) 11",
+      "b) 10",
+      "c) 3",
+      "d) 2"
+    ],
+    "correctAnswer": "b) 10",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q34",
+    "text": "The limit of (e^(3x)-1)/x as x tends to zero is",
+    "options": [
+      "a) 0",
+      "b) 3",
+      "c) 2",
+      "d) 1"
+    ],
+    "correctAnswer": "b) 3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q35",
+    "text": "Second derivative of e^(2x+1) at x = 1 is",
+    "options": [
+      "a) e³",
+      "b) 2e³",
+      "c) 4e³",
+      "d) 5e³"
+    ],
+    "correctAnswer": "b) 2e³",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q36",
+    "text": "The derivative of sec(x²) w.r.t 'x' is",
+    "options": [
+      "a) sec²x",
+      "b) tanx²",
+      "c) 2x sec(x²)tan(x²)",
+      "d) 2secxtanx"
+    ],
+    "correctAnswer": "b) tanx²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q37",
+    "text": "The derivative of (x²+1)/x w.r.t 'x' is",
+    "options": [
+      "a) 2x sec x² tanx²",
+      "b) (x²-1)/x²",
+      "c) 1 - 1/x²",
+      "d) 2secxtanx"
+    ],
+    "correctAnswer": "b) (x²-1)/x²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q38",
+    "text": "For the curve y = 2x - x², x=1 is a point of",
+    "options": [
+      "a) Minima",
+      "b) Maxima",
+      "c) Inflexion",
+      "d) None"
+    ],
+    "correctAnswer": "b) Maxima",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q39",
+    "text": "If A = {4,5,6,7,8,9,10}, B = {1,2,3,4,5,6} then A-B =?",
+    "options": [
+      "a) {7,8,9,10}",
+      "b) {4,5,6,7}",
+      "c) {1,2,3,5}",
+      "d) {1,2,3}"
+    ],
+    "correctAnswer": "a) {7,8,9,10}",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q40",
+    "text": "∫sin x e^(cosx) dx =",
+    "options": [
+      "a) e^(sinx)+C",
+      "b) e^(cosx)+C",
+      "c) -e^(cosx)+C",
+      "d) sinx+C"
+    ],
+    "correctAnswer": "a) e^(sinx)+C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q41",
+    "text": "The nature of roots of the quadratic equation shown in the diagram is /can",
+    "options": [
+      "A. real and equal",
+      "B. real and different",
+      "C. not be determined",
+      "D. complex and imaginary"
+    ],
+    "correctAnswer": "A. real and equal",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q43",
+    "text": "The value of k so that difference between the roots of 5x² - kx + 1 = 0 is unity, is",
+    "options": [
+      "A. 2√2",
+      "B. 4√2",
+      "C. 3√5",
+      "D. 7√7"
+    ],
+    "correctAnswer": "C. 3√5",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q44",
+    "text": "The nature of the roots of the quadratic equation x² - 2cotθ x - 1 = 0 are (Note: θ ≠ nπ, n ∈ Z)",
+    "options": [
+      "A. real and equal",
+      "B. complex and equal",
+      "C. real and irrational",
+      "D. real and rational"
+    ],
+    "correctAnswer": "D. real and rational",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q45",
+    "text": "If a, b, c are odd integers then the quadratic equation ax² + bx + c = 0",
+    "options": [
+      "A. cannot have rational roots",
+      "B. cannot have irrational roots",
+      "C. have equal roots only",
+      "D. have complex roots only"
+    ],
+    "correctAnswer": "A. cannot have rational roots",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q46",
+    "text": "If 2 + i√3 is a root of the equation x² + px + q = 0, where p and q are real numbers then (p, q) is",
+    "options": [
+      "A. (-4, 7)",
+      "B. (4, 7)",
+      "C. (-4, -7)",
+      "D. (4, -7)"
+    ],
+    "correctAnswer": "A. (-4, 7)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q47",
+    "text": "If one root of a quadratic equation x² + bx + c = 0 is (2 + i + a) then other root is",
+    "options": [
+      "A. -b+2+i+a",
+      "B. b-2-i-a",
+      "C. -b-2-i-a",
+      "D. -b-2-i-a"
+    ],
+    "correctAnswer": "C. -b-2-i-a",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_advance_maths_Q48",
+    "text": "sin (-248°) is equal to",
+    "options": [
+      "A. -1",
+      "B. 0",
+      "C. 1",
+      "D. ∞"
+    ],
+    "correctAnswer": "B. 0",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q1",
+    "text": "The market value of a certain machine decreased by 30 percent of its purchase price each year. If the machine was purchased in 1982 for its market value of $8,000, what was its market value two years later?",
+    "options": [
+      "(A) $8,000",
+      "(B) $5,600",
+      "(C) $3,200",
+      "(D) $2,400",
+      "(E) $800"
+    ],
+    "correctAnswer": "(C) $3,200",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q2",
+    "text": "What percent of 50 is 15?",
+    "options": [
+      "(A) 30%",
+      "(B) 35%",
+      "(C) 70%",
+      "(D) 300%",
+      "(E) 333-%"
+    ],
+    "correctAnswer": "(A) 30%",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q3",
+    "text": "In a certain diving competition, 5 judges score each dive on a scale from 1 to 10. The point value of the dive is obtained by dropping the highest score and the lowest score and multiplying the sum of the remaining scores by the degree of difficulty. If a dive with a degree of difficulty of 3.2 received scores of 7.5, 8.0, 9.0, 6.0, and 8.5, what was the point value of the dive?",
+    "options": [
+      "(A) 68.8",
+      "(B) 73.6",
+      "(C) 75.2",
+      "(D) 76.8",
+      "(E) 81.6"
+    ],
+    "correctAnswer": "(D) 76.8",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q4",
+    "text": "If 2x = 3y = 10, then 12xy =",
+    "options": [
+      "(A) 1,200",
+      "(B) 200",
+      "(C) 120",
+      "(D) 40",
+      "(E) 20"
+    ],
+    "correctAnswer": "(B) 200",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q5",
+    "text": "If Jack walked 5 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+    "options": [
+      "(A) 4",
+      "(B) 4.5",
+      "(C) 6",
+      "(D) 6.25",
+      "(E) 15"
+    ],
+    "correctAnswer": "(A) 4",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q6",
+    "text": "Of a certain high school graduating class, 75 percent of the students continued their formal education, and 80 percent of those who continued their formal education went to four-year colleges. If 300 students in the class went to four-year colleges, how many students were in the graduating class?",
+    "options": [
+      "(A) 500",
+      "(B) 375",
+      "(C) 240",
+      "(D) 225",
+      "(E) 180"
+    ],
+    "correctAnswer": "(A) 500",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q7",
+    "text": "What is the least integer greater than -2+0.5?",
+    "options": [
+      "(A) -2",
+      "(B) -1",
+      "(C) 0",
+      "(D) 1",
+      "(E) 2"
+    ],
+    "correctAnswer": "(B) -1",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_basic_maths_Q8",
+    "text": "Which of the following is equivalent to (2x+4)/(2x²+8x+8) for all values of x for which both expressions are defined?",
+    "options": [
+      "(A) 1/(2x²+6)",
+      "(B) 1/(9x+2)",
+      "(C) 2/(x+6)",
+      "(D) 1/(x+4)",
+      "(E) 1/(x+2)"
+    ],
+    "correctAnswer": "(E) 1/(x+2)",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_paper2_english_Q1",
+    "text": "ANALOGIES: CLOCK: MINUTE",
+    "options": [
+      "A. ruler: centimetre",
+      "B. sundial: shadow",
+      "C. arc: ellipse",
+      "D. product: shelf life",
+      "E. quart: capacity"
+    ],
+    "correctAnswer": "A. ruler: centimetre",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q2",
+    "text": "ANALOGIES: LAWYER: CLIENT",
+    "options": [
+      "A. doctor: surgeon",
+      "B. admiral: sailor",
+      "C. judge: defendant",
+      "D. museum: audience",
+      "E. tutor: student"
+    ],
+    "correctAnswer": "E. tutor: student",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q3",
+    "text": "SYNONYMS: Synonym of FIASCO",
+    "options": [
+      "A. disappointment",
+      "B. funfair",
+      "C. complete failure",
+      "D. celebration",
+      "E. disparing"
+    ],
+    "correctAnswer": "C. complete failure",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q4",
+    "text": "SYNONYMS: Synonym of STIPEND",
+    "options": [
+      "A. increment",
+      "B. salary",
+      "C. commission",
+      "D. gift",
+      "E. perquisite"
+    ],
+    "correctAnswer": "B. salary",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q5",
+    "text": "ANTONYMS: Antonym of ILLUMINATE",
+    "options": [
+      "A. precipitate",
+      "B. hallow",
+      "C. obfuscate",
+      "D. defer",
+      "E. refine"
+    ],
+    "correctAnswer": "C. obfuscate",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q6",
+    "text": "ANTONYMS: Antonym of ACUTE",
+    "options": [
+      "A. rotund",
+      "B. pervasive",
+      "C. chronic",
+      "D. jaundiced",
+      "E. resilient"
+    ],
+    "correctAnswer": "C. chronic",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q7",
+    "text": "SENTENCE COMPLETION: There were many cars in the theatre parking lot. When Darren found an available parking spot, he felt _______",
+    "options": [
+      "A. vulnerable",
+      "B. ecstatic",
+      "C. fortunate",
+      "D. uncommon",
+      "E. believed"
+    ],
+    "correctAnswer": "B. ecstatic",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q8",
+    "text": "Samuel's employees were quite _______; they learned quickly and were able to do most of the tasks he _______.",
+    "options": [
+      "A. decisive...wanted",
+      "B. able...listed",
+      "C. humble...assigned",
+      "D. disturbed...ordered"
+    ],
+    "correctAnswer": "D. disturbed...ordered",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q9",
+    "text": "PREPOSITIONS: No government is hostile _______ social reforms.",
+    "options": [
+      "A. to",
+      "B. in",
+      "C. before",
+      "D. for",
+      "E. as"
+    ],
+    "correctAnswer": "A. to",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper2_english_Q10",
+    "text": "I would like to move _______ Marketing.",
+    "options": [
+      "A. into",
+      "B. in",
+      "C. through",
+      "D. at",
+      "E. across"
+    ],
+    "correctAnswer": "A. into",
+    "explanation": "",
+    "subject": "english"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q1",
+    "text": "The integral of 1/(9x²+4) w.r.t 'x' is f(x) + c is",
+    "options": [
+      "a) (1/6)tan⁻¹(3x/2)",
+      "b) (1/6)tan⁻¹(3x/2) + C",
+      "c) (1/6)tan⁻¹(3x/2) + C",
+      "d) (1/2)tan⁻¹(3x/2) + C"
+    ],
+    "correctAnswer": "a) (1/6)tan⁻¹(3x/2)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q2",
+    "text": "If A = {4,5,6,7,8,9,10}, B = {1,2,3,4,5,6} then A-B = ?",
+    "options": [
+      "a) {7,8,9,10}",
+      "b) {7,8,9,10}",
+      "c) {1,2,3,5}",
+      "d) {1,2,3}"
+    ],
+    "correctAnswer": "b) {7,8,9,10}",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q3",
+    "text": "Division is a binary operation on",
+    "options": [
+      "a) Set of natural numbers",
+      "b) Set of positive integers",
+      "c) Set of negative integers",
+      "d) None of these"
+    ],
+    "correctAnswer": "d) None of these",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q4",
+    "text": "The slope of line passing through the points (4, 5) and (3, 7) is",
+    "options": [
+      "a) -1/2",
+      "b) -2",
+      "c) 1/2",
+      "d) 2"
+    ],
+    "correctAnswer": "b) -2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q5",
+    "text": "∫a^x dx =",
+    "options": [
+      "a) a^x / lnx + C",
+      "b) a^x / lna + C",
+      "c) a^x / x + C",
+      "d) a^x / lna + C"
+    ],
+    "correctAnswer": "b) a^x / lna + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q6",
+    "text": "The product of (2, -1) and (0, 1) is",
+    "options": [
+      "a) (1, -2)",
+      "b) (-1, -2)",
+      "c) (-1, -2)",
+      "d) (1, 1)"
+    ],
+    "correctAnswer": "a) (1, -2)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q7",
+    "text": "Geometric mean between 50 and 18 is",
+    "options": [
+      "a) 20",
+      "b) 30",
+      "c) 32",
+      "d) 36"
+    ],
+    "correctAnswer": "b) 30",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q8",
+    "text": "The integral of 1/x³ w.r.t x is",
+    "options": [
+      "a) -1/(2x²) + C",
+      "b) 3x⁴ + C",
+      "c) x⁴/4 + C",
+      "d) -1/(4x⁴) + C"
+    ],
+    "correctAnswer": "a) -1/(2x²) + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q9",
+    "text": "The sum of the roots of the equation x² + x + m = 0 is equal to the product of its roots, then 'm'",
+    "options": [
+      "a) -1",
+      "b) 2",
+      "c) -2",
+      "d) 1"
+    ],
+    "correctAnswer": "a) -1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q10",
+    "text": "A fair coin is tossed twice. What is the probability of both heads?",
+    "options": [
+      "a) 1/2",
+      "b) 1/4",
+      "c) 3/4",
+      "d) -2"
+    ],
+    "correctAnswer": "b) 1/4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q11",
+    "text": "The nth term of the following sequence 2, 5, 10, 17 is",
+    "options": [
+      "a) 2n-3",
+      "b) n+1",
+      "c) n²+1",
+      "d) 5n-3"
+    ],
+    "correctAnswer": "c) n²+1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q12",
+    "text": "If x + y = 8 and xy = 15 then x - y =?",
+    "options": [
+      "a) 4",
+      "b) 2",
+      "c) 6",
+      "d) 9"
+    ],
+    "correctAnswer": "b) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q13",
+    "text": "The number of ways in which 5 differently colored flags can be arranged in a row are.",
+    "options": [
+      "a) 50",
+      "b) 120",
+      "c) 100",
+      "d) ∞"
+    ],
+    "correctAnswer": "b) 120",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q14",
+    "text": "The limit of sinx/x as \"x\" tends to zero is",
+    "options": [
+      "a) 0",
+      "b) 1",
+      "c) 2",
+      "d) ∞"
+    ],
+    "correctAnswer": "b) 1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q15",
+    "text": "If y=a^x, then y' =?",
+    "options": [
+      "a) a^x",
+      "b) a^x lna",
+      "c) a^x lnx",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) a^x lna",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q16",
+    "text": "The area of triangle formed from (11, -12), (6, 2) and (-5, 10) is",
+    "options": [
+      "a) 57",
+      "b) 56",
+      "c) 50",
+      "d) 51"
+    ],
+    "correctAnswer": "a) 57",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q17",
+    "text": "If two lines are parallel then their slopes are",
+    "options": [
+      "a) Equal",
+      "b) Undefined",
+      "c) Equal",
+      "d) Unequal"
+    ],
+    "correctAnswer": "c) Equal",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q18",
+    "text": "The angle formed by x² - 6xy + 9y² = 0",
+    "options": [
+      "a) 60°",
+      "b) 90°",
+      "c) 45°",
+      "d) 0°"
+    ],
+    "correctAnswer": "d) 0°",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q19",
+    "text": "∫dx/√(a²-x²) =",
+    "options": [
+      "a) sin⁻¹(x/a) + C",
+      "b) -tan⁻¹(x/a) + C",
+      "c) sec⁻¹(x/a) + C",
+      "d) cos⁻¹(x/a) + C"
+    ],
+    "correctAnswer": "b) -tan⁻¹(x/a) + C",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q20",
+    "text": "Area under the curve x² + y² = 4 between the ordinates x = √2 and x = 2 is",
+    "options": [
+      "a) 32",
+      "b) 16",
+      "c) 25",
+      "d) none of them"
+    ],
+    "correctAnswer": "d) none of them",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q21",
+    "text": "The centre of 4x² + 4y² - 12x + 4y - 15 = 0 is",
+    "options": [
+      "a) (3/2, -1/2)",
+      "b) (3/2, 1/2)",
+      "c) (-3/2, -1/2)",
+      "d) (-3/2, 1/2)"
+    ],
+    "correctAnswer": "c) (-3/2, -1/2)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q22",
+    "text": "The parametric equation of a circle with radius 'a' are",
+    "options": [
+      "a) X=a cosθ, Y=a sinθ",
+      "b) X=r cosθ, Y=r sinθ",
+      "c) X=r cosθ, Y=r sinθ",
+      "d) X=a tanθ, Y=a sinθ"
+    ],
+    "correctAnswer": "a) X=a cosθ, Y=a sinθ",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q23",
+    "text": "The radius of the circle 4x² + 4y² - 12x + 4y - 15 = 0 is",
+    "options": [
+      "a) 5/4",
+      "b) 5/2",
+      "c) √5/2",
+      "d) √5/4"
+    ],
+    "correctAnswer": "b) 5/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q24",
+    "text": "The length of the tangent from (-4, 6) to 2x² + 2y² = 3 is",
+    "options": [
+      "a) 18.3",
+      "b) 5.2",
+      "c) 7.1",
+      "d) 3.5"
+    ],
+    "correctAnswer": "c) 7.1",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q25",
+    "text": "Equation of the parabola whose vertex is (0,0) and focus is (0, -3) is",
+    "options": [
+      "a) y = x²",
+      "b) x² = -12y",
+      "c) y² = 12x",
+      "d) x² = 12y"
+    ],
+    "correctAnswer": "b) x² = -12y",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q26",
+    "text": "(x + 3i)² = 2yi then (x, y) is",
+    "options": [
+      "a) (-3, -9)",
+      "b) (3, 7)",
+      "c) (0, 0)",
+      "d) none of these"
+    ],
+    "correctAnswer": "a) (-3, -9)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q27",
+    "text": "A unit matrix of order 3x3 is",
+    "options": [
+      "a) [[1 0 0] [0 1 0] [0 0 1]]",
+      "b) [[0 0 0] [0 0 0] [1 0 1]]",
+      "c) [[0 1 0] [0 0 1] [1 0 0]]",
+      "d) [[0 0 1] [0 1 0] [1 0 0]]"
+    ],
+    "correctAnswer": "d) [[0 0 1] [0 1 0] [1 0 0]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q29",
+    "text": "The equation 2x² + 6x - 3 = 0 has α and β find the value of 1/α + 1/β",
+    "options": [
+      "a) 2",
+      "b) 3",
+      "c) 1",
+      "d) 2"
+    ],
+    "correctAnswer": "d) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q30",
+    "text": "x + 10 = 14 then x - 8 =?",
+    "options": [
+      "a) -4",
+      "b) 4",
+      "c) 2",
+      "d) 1"
+    ],
+    "correctAnswer": "a) -4",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q31",
+    "text": "The nth term of the geometric mean sequence 8, 16√2, 64,... is",
+    "options": [
+      "a) n√2",
+      "b) (n√2)²",
+      "c) (2√2)ⁿ",
+      "d) (2√2)²"
+    ],
+    "correctAnswer": "d) (2√2)²",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q32",
+    "text": "A machine is depreciated at rate of 10% on reducing balance the original cost was Rs 10,000 after how many years it will be valued at Rs 8100",
+    "options": [
+      "a) 2",
+      "b) 3",
+      "c) 4",
+      "d) None"
+    ],
+    "correctAnswer": "a) 2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q33",
+    "text": "The given progression 4, 3, 2, ... is",
+    "options": [
+      "a) H.P",
+      "b) G.P",
+      "c) A.P",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) G.P",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q34",
+    "text": "In how many different ways may the seven letters in the word KARACHI be arranged if all of the letters are used each time?",
+    "options": [
+      "a) 2500",
+      "b) 2520",
+      "c) 2400",
+      "d) 2420"
+    ],
+    "correctAnswer": "b) 2520",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q35",
+    "text": "How many words can be formed out of the letters of the word \"JEDDAH\"",
+    "options": [
+      "a) 360",
+      "b) 420",
+      "c) 240",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) 420",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q36",
+    "text": "Which of the expansion of (x + 1/x)⁹ contains no power of x",
+    "options": [
+      "a) No term",
+      "b) Fourth",
+      "c) Fifth",
+      "d) sixth"
+    ],
+    "correctAnswer": "b) Fourth",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q37",
+    "text": "π radians are always equal to",
+    "options": [
+      "a) 360°",
+      "b) 180°",
+      "c) 270°",
+      "d) None of these"
+    ],
+    "correctAnswer": "b) 180°",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q38",
+    "text": "sin60° sin30° - cos60° sin60°",
+    "options": [
+      "a) zero",
+      "b) 1/2",
+      "c) 1",
+      "d) None"
+    ],
+    "correctAnswer": "b) 1/2",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q39",
+    "text": "Composite function of g(x) = x² - 1, f(x) = 2x - 1 is",
+    "options": [
+      "a) 2x² - 1",
+      "b) 4x² - 4x - 2",
+      "c) 2x² - 3",
+      "d) None of these"
+    ],
+    "correctAnswer": "c) 2x² - 3",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q40",
+    "text": "d/dx √x =?",
+    "options": [
+      "a) 1/(2√x)",
+      "b) 2/√x",
+      "c) 1/√x",
+      "d) 2√x"
+    ],
+    "correctAnswer": "a) 1/(2√x)",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q41",
+    "text": "If A = [[1 0] [2 -1]] and B = [[1 1] [4 2]] then A+B is",
+    "options": [
+      "A. [[2 1] [6 1]]",
+      "B. [[2 1] [6 -1]]",
+      "C. [[2 6] [1 1]]",
+      "D. [[2 1] [6 1]]"
+    ],
+    "correctAnswer": "D. [[2 1] [6 1]]",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_paper3_advance_maths_Q42",
+    "text": "If A = [[1 0] [2 3]] and B = [[-1 -3] [4 4]] then AB is equal to",
+    "options": [
+      "A. not possible",
+      "B. [[-6 12] [2 -3]]",
+      "C. [[1 -3] [10 6]]",
+      "D. [[1 6] [-3 10]]"
+    ],
+    "correctAnswer": "A. not possible",
+    "explanation": "",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_

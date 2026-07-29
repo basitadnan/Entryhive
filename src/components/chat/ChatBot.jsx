@@ -165,7 +165,7 @@ export default function ChatBot({ user }) {
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                       <Bot className="w-6 h-6 text-primary" />
                     </div>
-                    <p className="text-sm font-medium">NAT Prep Assistant</p>
+                    <p className="text-sm font-medium">Entry Hive Assistant</p>
                     <p className="text-xs text-muted-foreground px-4">Ask me anything about NAT subjects — Physics, Commerce, Accounting, Economics, English, Reasoning & more!</p>
                     <div className="flex flex-wrap gap-2 justify-center px-2">
                       {["Accounting equation explained", 'Law of demand & supply', 'English grammar tips', 'Solve: 3x + 5 = 14'].map(s => (

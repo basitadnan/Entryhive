@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card } from '@/components/ui/card';
 import { ArrowLeft, ChevronDown, ChevronUp, Calculator, Sigma, Triangle, Pi, BarChart3, Hash, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useStaggerReveal } from '@/hooks/useScrollAnimation';
@@ -10,8 +9,9 @@ const formulaCategories = [
     id: 'arithmetic',
     title: 'Arithmetic',
     icon: Calculator,
-    color: 'text-blue-400',
+    color: 'text-blue-500',
     bg: 'bg-blue-500/10',
+    borderActive: 'border-blue-500/30',
     formulas: [
       { name: 'Percentage', formula: 'Percentage = (Part ÷ Whole) × 100', note: 'Increase: New = Old × (1 + p/100)\nDecrease: New = Old × (1 − p/100)' },
       { name: 'Average (Mean)', formula: 'Average = Sum of all terms ÷ Number of terms' },
@@ -32,8 +32,9 @@ const formulaCategories = [
     id: 'algebra',
     title: 'Algebra',
     icon: Sigma,
-    color: 'text-purple-400',
+    color: 'text-purple-500',
     bg: 'bg-purple-500/10',
+    borderActive: 'border-purple-500/30',
     formulas: [
       { name: 'Algebraic Identities', formula: '(a + b)² = a² + 2ab + b²\n(a − b)² = a² − 2ab + b²\na² − b² = (a − b)(a + b)\n(a + b)³ = a³ + 3a²b + 3ab² + b³\n(a − b)³ = a³ − 3a²b + 3ab² − b³' },
       { name: 'Quadratic Formula', formula: 'For ax² + bx + c = 0:\nx = (−b ± √(b² − 4ac)) ÷ 2a', note: 'Discriminant D = b² − 4ac\nD > 0 → two real roots\nD = 0 → one repeated root\nD < 0 → no real roots' },
@@ -50,8 +51,9 @@ const formulaCategories = [
     id: 'geometry',
     title: 'Geometry',
     icon: Triangle,
-    color: 'text-green-400',
+    color: 'text-green-500',
     bg: 'bg-green-500/10',
+    borderActive: 'border-green-500/30',
     formulas: [
       { name: 'Triangle', formula: 'Area = ½ × base × height\nPerimeter = a + b + c\nHeron\'s: Area = √(s(s−a)(s−b)(s−c))', note: 's = (a+b+c)/2 (semi-perimeter)' },
       { name: 'Rectangle', formula: 'Area = length × width\nPerimeter = 2(l + w)\nDiagonal = √(l² + w²)' },
@@ -70,8 +72,9 @@ const formulaCategories = [
     id: 'trigonometry',
     title: 'Trigonometry',
     icon: Pi,
-    color: 'text-amber-400',
+    color: 'text-amber-500',
     bg: 'bg-amber-500/10',
+    borderActive: 'border-amber-500/30',
     formulas: [
       { name: 'Basic Ratios', formula: 'sin θ = Opposite ÷ Hypotenuse\ncos θ = Adjacent ÷ Hypotenuse\ntan θ = Opposite ÷ Adjacent = sin θ ÷ cos θ' },
       { name: 'Standard Values', formula: '         0°    30°    45°    60°    90°\nsin      0    1/2    1/√2   √3/2    1\ncos      1    √3/2   1/√2   1/2     0\ntan      0    1/√3    1     √3      ∞' },
@@ -84,8 +87,9 @@ const formulaCategories = [
     id: 'probability',
     title: 'Probability & Statistics',
     icon: BarChart3,
-    color: 'text-rose-400',
+    color: 'text-rose-500',
     bg: 'bg-rose-500/10',
+    borderActive: 'border-rose-500/30',
     formulas: [
       { name: 'Basic Probability', formula: 'P(Event) = Favorable outcomes ÷ Total outcomes\n0 ≤ P(A) ≤ 1\nP(not A) = 1 − P(A)' },
       { name: 'Addition Rule', formula: 'P(A or B) = P(A) + P(B) − P(A and B)\nIf mutually exclusive: P(A or B) = P(A) + P(B)' },
@@ -100,8 +104,9 @@ const formulaCategories = [
     id: 'number_properties',
     title: 'Number Properties',
     icon: Hash,
-    color: 'text-cyan-400',
+    color: 'text-cyan-500',
     bg: 'bg-cyan-500/10',
+    borderActive: 'border-cyan-500/30',
     formulas: [
       { name: 'Divisibility Rules', formula: 'By 2: last digit even\nBy 3: sum of digits divisible by 3\nBy 4: last 2 digits divisible by 4\nBy 5: last digit 0 or 5\nBy 6: divisible by both 2 and 3\nBy 8: last 3 digits divisible by 8\nBy 9: sum of digits divisible by 9\nBy 11: alternating sum of digits divisible by 11' },
       { name: 'Number Types', formula: 'Natural: 1, 2, 3, ...\nWhole: 0, 1, 2, 3, ...\nIntegers: ..., −2, −1, 0, 1, 2, ...\nRational: p/q (q ≠ 0)\nIrrational: √2, π, e' },
@@ -113,13 +118,13 @@ const formulaCategories = [
 
 function FormulaCard({ formula }) {
   return (
-    <div className="p-3 rounded-xl bg-secondary/50 border border-border/50 space-y-1.5">
-      <h4 className="font-semibold text-sm text-primary">{formula.name}</h4>
-      <pre className="text-xs text-foreground font-mono whitespace-pre-wrap leading-relaxed bg-background/50 rounded-lg p-2.5 overflow-x-auto">
+    <div className="p-4 rounded-xl bg-secondary/50 border border-border shadow-sm space-y-2">
+      <h4 className="font-bold text-foreground">{formula.name}</h4>
+      <pre className="text-sm text-foreground font-mono whitespace-pre-wrap leading-relaxed bg-background/50 border border-border rounded-lg p-3 overflow-x-auto">
         {formula.formula}
       </pre>
       {formula.note && (
-        <p className="text-xs text-muted-foreground italic pl-1">💡 {formula.note}</p>
+        <p className="text-xs text-muted-foreground italic pl-1 leading-relaxed">💡 {formula.note}</p>
       )}
     </div>
   );
@@ -130,25 +135,26 @@ function CategorySection({ category, isOpen, onToggle }) {
   const { containerProps, itemVariants } = useStaggerReveal({ stagger: 0.04 });
 
   return (
-    <Card className="overflow-hidden">
+    <div className={`bg-card rounded-2xl overflow-hidden border-2 transition-colors ${isOpen ? `border-primary/30 shadow-md ${category.bg}` : 'border-border hover:border-primary/20 shadow-sm'}`}>
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-4 hover:bg-secondary/30 transition-colors"
+        className={`w-full flex items-center justify-between p-5 hover:bg-secondary/30 transition-colors ${isOpen ? 'bg-card' : ''}`}
       >
-        <div className="flex items-center gap-3">
-          <div className={`p-2.5 rounded-xl ${category.bg}`}>
-            <Icon className={`w-5 h-5 ${category.color}`} />
+        <div className="flex items-center gap-4">
+          <div className={`p-3 rounded-xl ${category.bg} shadow-sm border border-border`}>
+            <Icon className={`w-6 h-6 ${category.color}`} />
           </div>
           <div className="text-left">
-            <h3 className="font-semibold">{category.title}</h3>
-            <p className="text-xs text-muted-foreground">{category.formulas.length} formulas</p>
+            <h3 className="font-display font-bold text-foreground text-lg">{category.title}</h3>
+            <p className="text-sm text-muted-foreground font-medium">{category.formulas.length} formulas</p>
           </div>
         </div>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ type: 'spring', damping: 15 }}
+          className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${isOpen ? 'bg-primary/10 text-primary' : 'bg-secondary text-muted-foreground'}`}
         >
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
+          <ChevronDown className="w-5 h-5" />
         </motion.div>
       </button>
 
@@ -159,10 +165,10 @@ function CategorySection({ category, isOpen, onToggle }) {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="overflow-hidden"
+            className="overflow-hidden bg-card"
           >
             <motion.div
-              className="px-4 pb-4 space-y-2"
+              className="px-5 pb-5 space-y-3"
               {...containerProps}
             >
               {category.formulas.map((f, i) => (
@@ -174,7 +180,7 @@ function CategorySection({ category, isOpen, onToggle }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </Card>
+    </div>
   );
 }
 
@@ -203,54 +209,70 @@ export default function Formulas() {
 
   return (
     <motion.div
-      className="p-4 space-y-5 pb-10"
+      className="p-6 max-w-4xl mx-auto space-y-6 pb-24"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-        <ArrowLeft className="w-4 h-4" /> Back
-      </button>
-
-      <div>
-        <h1 className="text-2xl font-bold">📐 Formulas</h1>
-        <p className="text-sm text-muted-foreground mt-1">
-          {totalFormulas} essential NAT quantitative formulas
-        </p>
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-sm">
+          <Calculator className="w-6 h-6 text-cyan-500" />
+        </div>
+        <div>
+          <h1 className="font-display text-2xl font-bold text-foreground">Formulas</h1>
+          <p className="text-sm text-muted-foreground">{totalFormulas} essential NAT quantitative formulas</p>
+        </div>
       </div>
 
+      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors inline-flex mb-2">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+      </button>
+
       {/* Search */}
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+      <div className="relative group">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
         <input
           type="text"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          placeholder="Search formulas..."
-          className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-secondary border border-border text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+          placeholder="Search for a formula..."
+          className="w-full pl-12 pr-4 py-4 rounded-2xl bg-secondary border border-border text-base focus:outline-none focus:ring-2 focus:ring-primary/50 placeholder:text-muted-foreground transition-all shadow-sm"
         />
       </div>
 
       {/* Tip Card */}
-      <Card className="p-3 bg-primary/5 border-primary/20">
-        <p className="text-xs text-muted-foreground">
-          💡 <strong>Pro Tip:</strong> Memorize fraction-to-percentage shortcuts (like 1/4 = 25%, 1/8 = 12.5%) — they save 10+ seconds per question in the NAT.
+      <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex gap-3 items-start shadow-sm">
+        <span className="text-xl">💡</span>
+        <p className="text-sm text-foreground leading-relaxed">
+          <strong>Pro Tip:</strong> Memorize fraction-to-percentage shortcuts (like 1/4 = 25%, 1/8 = 12.5%) — they save 10+ seconds per question in the NAT.
         </p>
-      </Card>
+      </div>
 
       {/* Categories */}
-      <div className="space-y-3">
-        {filtered.map(cat => (
-          <CategorySection
+      <div className="space-y-4">
+        {filtered.map((cat, i) => (
+          <motion.div
             key={cat.id}
-            category={cat}
-            isOpen={openSections.includes(cat.id) || search.trim().length > 0}
-            onToggle={() => toggle(cat.id)}
-          />
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <CategorySection
+              category={cat}
+              isOpen={openSections.includes(cat.id) || search.trim().length > 0}
+              onToggle={() => toggle(cat.id)}
+            />
+          </motion.div>
         ))}
       </div>
 
       {filtered.length === 0 && (
-        <p className="text-center text-muted-foreground py-10">No formulas match "{search}"</p>
+        <div className="text-center bg-card rounded-2xl border border-border p-12 shadow-sm">
+          <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+            <Search className="w-8 h-8 text-muted-foreground" />
+          </div>
+          <p className="text-lg font-bold text-foreground">No formulas found</p>
+          <p className="text-muted-foreground mt-1">Try adjusting your search terms</p>
+        </div>
       )}
     </motion.div>
   );

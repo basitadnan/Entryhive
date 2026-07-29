@@ -120,6 +120,14 @@ export const AuthProvider = ({ children }) => {
       return false;
     };
 
+    // SAFETY: Force loading to end after 12 seconds no matter what
+    const safetyTimer = setTimeout(() => {
+      if (isMounted) {
+        console.warn('[Auth] Safety timer fired — forcing loading to end after 12s');
+        setIsLoadingAuth(false);
+      }
+    }, 12000);
+
     async function bootSequence() {
       try {
         setIsLoadingAuth(true);
@@ -160,32 +168,45 @@ export const AuthProvider = ({ children }) => {
         }
 
         if (!handled) {
-          const { data: { session } } = await supabase.auth.getSession();
-          if (session?.user && isMounted) {
-            setUser(session.user);
+          // Race against a 10-second timeout so the app never stays stuck
+          const mePromise = base44.auth.me();
+          const timeoutPromise = new Promise((resolve) => 
+            setTimeout(() => {
+              console.warn('[Auth] me() timed out after 10s');
+              resolve(null);
+            }, 10000)
+          );
+          const fullUser = await Promise.race([mePromise, timeoutPromise]);
+          if (fullUser && isMounted) {
+            setUser(fullUser);
             setIsAuthenticated(true);
           }
         }
       } catch (e) {
         console.error('[Auth Boot Error]', e);
       } finally {
+        clearTimeout(safetyTimer);
         if (isMounted) setIsLoadingAuth(false);
       }
 
-      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         console.log(`[Auth] State Change: ${event}`, session?.user?.email);
         if (!isMounted) return;
 
         if (session?.user) {
-          setUser(session.user);
-          setIsAuthenticated(true);
-          
-          // If we just signed in on the web and there's a token in the URL, clean it up
-          if (event === 'SIGNED_IN' && typeof window !== 'undefined' && 
-              (window.location.hash.includes('access_token=') || window.location.href.includes('access_token='))) {
-            console.log('[Auth] Cleaning up URL after successful SIGNED_IN');
-            window.history.replaceState(null, '', window.location.origin + '/');
-            window.location.hash = '/';
+          // Fetch the full profile including is_premium status
+          const fullUser = await base44.auth.me();
+          if (fullUser && isMounted) {
+            setUser(fullUser);
+            setIsAuthenticated(true);
+            
+            // If we just signed in on the web and there's a token in the URL, clean it up
+            if (event === 'SIGNED_IN' && typeof window !== 'undefined' && 
+                (window.location.hash.includes('access_token=') || window.location.href.includes('access_token='))) {
+              console.log('[Auth] Cleaning up URL after successful SIGNED_IN');
+              window.history.replaceState(null, '', window.location.origin + '/');
+              window.location.hash = '/';
+            }
           }
         } else if (!isLoadingAuth && !processingLinkRef.current) {
           setIsAuthenticated(false);
@@ -213,13 +234,38 @@ export const AuthProvider = ({ children }) => {
     }
 
     bootSequence();
-    return () => { isMounted = false; };
+    return () => { isMounted = false; clearTimeout(safetyTimer); };
   }, []); // EMPTY dependency array - CRITICAL to stop the crash loop
 
   const logout = async (shouldRedirect = true) => {
+    // Clear React state immediately so UI responds right away
     setIsAuthenticated(false);
     setUser(null);
-    await base44.auth.signOut(shouldRedirect ? '/' : undefined);
+    
+    try {
+      // Race the signOut against a 3-second timeout
+      const signOutPromise = base44.auth.signOut(shouldRedirect ? '/' : undefined);
+      const timeoutPromise = new Promise((resolve) => 
+        setTimeout(() => {
+          console.warn('[Auth] signOut timed out after 3s, forcing redirect');
+          resolve('timeout');
+        }, 3000)
+      );
+      const result = await Promise.race([signOutPromise, timeoutPromise]);
+      
+      // If signOut timed out, force redirect manually
+      if (result === 'timeout' && shouldRedirect) {
+        window.location.hash = '/';
+        window.location.reload();
+      }
+    } catch (e) {
+      console.error('[Auth] Logout error:', e);
+      // Force redirect even on error
+      if (shouldRedirect) {
+        window.location.hash = '/';
+        window.location.reload();
+      }
+    }
   };
 
   const loginWithPassword = async (email, password) => {
@@ -239,7 +285,7 @@ export const AuthProvider = ({ children }) => {
     let targetRedirect;
     
     if (isNative || isElectron) {
-      targetRedirect = 'https://natprep.vercel.app/login-callback?source=app';
+      targetRedirect = 'https://entryhive-pak.vercel.app/login-callback?source=app';
     } else if (isDev) {
       // In dev mode, redirect to localhost origin
       targetRedirect = window.location.origin;

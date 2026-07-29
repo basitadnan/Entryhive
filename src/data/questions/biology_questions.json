@@ -1,0 +1,2238 @@
+[
+  {
+    "id": "91516287-a57b-4b40-bf3b-f0837be6d2d7",
+    "options": [
+      "Tissue",
+      "Organ",
+      "Cell",
+      "Molecule"
+    ],
+    "explanation": "The cell is the basic structural and functional unit of all living organisms, as stated in cell theory.",
+    "difficulty": "easy",
+    "question_text": "What is the basic unit of life?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f7e7171e-8300-4e9c-9f79-3a19e2d0baa6",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Mitochondria",
+      "Golgi apparatus"
+    ],
+    "explanation": "Mitochondria produce ATP through cellular respiration, earning them the nickname 'powerhouse of the cell'.",
+    "difficulty": "easy",
+    "question_text": "Which organelle is known as the 'powerhouse of the cell'?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "19b1f798-6d8a-4827-8ce8-4dc8533cba90",
+    "options": [
+      "Respiration",
+      "Photosynthesis",
+      "Fermentation",
+      "Digestion"
+    ],
+    "explanation": "Photosynthesis is the process where plants use sunlight, CO₂, and water to produce glucose and oxygen.",
+    "difficulty": "easy",
+    "question_text": "What is the process by which plants make their own food?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0e505341-ff16-479e-9f1d-069eccf52c17",
+    "options": [
+      "Red blood cells",
+      "Platelets",
+      "White blood cells",
+      "Plasma cells"
+    ],
+    "explanation": "White blood cells (leukocytes) are part of the immune system and fight infections and foreign invaders.",
+    "difficulty": "easy",
+    "question_text": "Which blood cells are responsible for fighting infections?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "873d01d7-1633-4648-a6e8-a9f898936a6c",
+    "options": [
+      "RNA",
+      "Protein",
+      "DNA",
+      "Lipid"
+    ],
+    "explanation": "DNA (deoxyribonucleic acid) is the genetic material in most organisms, carrying hereditary information.",
+    "difficulty": "easy",
+    "question_text": "What is the genetic material in most living organisms?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d0ced90f-8540-41fd-9c60-95c5c9b9713a",
+    "options": [
+      "Leaves",
+      "Stem",
+      "Roots",
+      "Flowers"
+    ],
+    "explanation": "Roots absorb water and minerals from the soil through root hairs and transport them to the rest of the plant.",
+    "difficulty": "easy",
+    "question_text": "Which part of the plant is responsible for water absorption?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "2eb62dbb-4cc9-472f-b0b3-fb3e398e859c",
+    "options": [
+      "Liver",
+      "Brain",
+      "Skin",
+      "Heart"
+    ],
+    "explanation": "The skin is the largest organ, covering the entire body and providing protection, temperature regulation, and sensation.",
+    "difficulty": "easy",
+    "question_text": "What is the largest organ in the human body?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ced2d5a6-7bf8-481f-8d7b-9470913a8f7b",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Methane"
+    ],
+    "explanation": "During photosynthesis, plants release oxygen as a byproduct while converting CO₂ and water into glucose.",
+    "difficulty": "easy",
+    "question_text": "Which gas is produced during photosynthesis?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a958fb15-0d6e-47d4-b1c2-4391ffd5bef7",
+    "options": [
+      "Fight infection",
+      "Transport oxygen",
+      "Blood clotting",
+      "Produce antibodies"
+    ],
+    "explanation": "Red blood cells contain hemoglobin which binds to oxygen and transports it from lungs to tissues.",
+    "difficulty": "easy",
+    "question_text": "What is the function of red blood cells?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "49362f8b-a657-48b2-a3b2-0f1cd070d944",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin K"
+    ],
+    "explanation": "Vitamin D is synthesized in the skin upon exposure to UVB radiation from sunlight.",
+    "difficulty": "easy",
+    "question_text": "Which vitamin is produced when skin is exposed to sunlight?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "78b3524a-ab91-462c-b1f0-b70de23c7b75",
+    "options": [
+      "Meiosis",
+      "Mitosis",
+      "Binary fission",
+      "Budding"
+    ],
+    "explanation": "Mitosis is the process of cell division in somatic (body) cells that produces two identical daughter cells.",
+    "difficulty": "easy",
+    "question_text": "What is the process of cell division in somatic cells called?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "33005e6c-d0f9-47fe-9692-86f800f73327",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Heart",
+      "Lungs"
+    ],
+    "explanation": "The kidneys filter waste products from blood, regulate electrolytes, and produce urine for excretion.",
+    "difficulty": "easy",
+    "question_text": "Which organ is responsible for filtering blood and producing urine?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e8e8a3a4-b47e-4fa8-b6b8-a4c1192862b9",
+    "options": [
+      "Evolution",
+      "Homeostasis",
+      "Metabolism",
+      "Adaptation"
+    ],
+    "explanation": "Homeostasis is the maintenance of a stable internal environment despite changes in external conditions.",
+    "difficulty": "easy",
+    "question_text": "What is the name of the process by which organisms maintain a stable internal environment?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "09eff2d2-808c-4774-9e79-6e88e0a2f77e",
+    "options": [
+      "Protein",
+      "Carbohydrate",
+      "Lipid",
+      "Nucleic acid"
+    ],
+    "explanation": "Carbohydrates are the primary source of energy. Glucose, a simple sugar, is the main energy currency of cells.",
+    "difficulty": "easy",
+    "question_text": "Which macromolecule is the main source of energy for living organisms?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bbe29356-7b62-4936-98d2-8fd98887ecc8",
+    "options": [
+      "Protein synthesis",
+      "Energy production",
+      "Contains genetic material and controls cell activities",
+      "Waste removal"
+    ],
+    "explanation": "The nucleus houses DNA and controls gene expression, cell growth, and reproduction.",
+    "difficulty": "easy",
+    "question_text": "What is the function of the nucleus in a cell?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "903bd91a-0279-455d-8dc6-1d65bb2bb1ae",
+    "options": [
+      "Nervous system",
+      "Digestive system",
+      "Circulatory system",
+      "Respiratory system"
+    ],
+    "explanation": "The circulatory system (cardiovascular system) transports blood containing nutrients, oxygen, and hormones throughout the body.",
+    "difficulty": "easy",
+    "question_text": "Which system in the human body is responsible for transporting nutrients, oxygen, and hormones?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fea3110e-3512-48d0-a651-416c862797c8",
+    "options": [
+      "Monosaccharides",
+      "Fatty acids",
+      "Amino acids",
+      "Nucleotides"
+    ],
+    "explanation": "Proteins are polymers made of amino acids linked together by peptide bonds.",
+    "difficulty": "easy",
+    "question_text": "What are the building blocks of proteins?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "81b1f42c-b4c1-4ecc-b2c5-8194ce97dab4",
+    "options": [
+      "Heterotroph",
+      "Autotroph",
+      "Decomposer",
+      "Parasite"
+    ],
+    "explanation": "Autotrophs (producers) can synthesize their own food from inorganic substances using light or chemical energy.",
+    "difficulty": "easy",
+    "question_text": "Which type of organism can make its own food using inorganic substances?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2ebe63ce-4852-405d-ab39-c3dc5970d330",
+    "options": [
+      "DNA replication",
+      "Protein synthesis (translation)",
+      "Lipid storage",
+      "Cell division"
+    ],
+    "explanation": "Ribosomes are the sites of protein synthesis (translation), where mRNA is decoded to assemble amino acids into proteins.",
+    "difficulty": "easy",
+    "question_text": "What is the function of the ribosome?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "78104f91-9b17-46bd-bca4-1cae3d9f5cc3",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla oblongata",
+      "Hypothalamus"
+    ],
+    "explanation": "The cerebellum is responsible for motor control, balance, coordination, and precise movement.",
+    "difficulty": "easy",
+    "question_text": "Which part of the brain controls balance and coordination?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c484a7d3-e6e9-4ced-9ebf-548f16f7731c",
+    "options": [
+      "Growth",
+      "Metabolism",
+      "Reproduction",
+      "Respiration"
+    ],
+    "explanation": "Reproduction is the biological process by which organisms create offspring, ensuring species continuation.",
+    "difficulty": "easy",
+    "question_text": "What is the process by which organisms produce offspring?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "88b56305-ceb4-498c-b4d4-c12ef666d6e2",
+    "options": [
+      "Pepsin",
+      "Lipase",
+      "Amylase",
+      "Trypsin"
+    ],
+    "explanation": "Amylase (found in saliva and pancreas) breaks down starch into maltose and smaller carbohydrates.",
+    "difficulty": "easy",
+    "question_text": "Which enzyme breaks down starch into maltose?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e763deaa-c0d5-4e71-9f12-af906da2d8de",
+    "options": [
+      "Digest proteins",
+      "Absorb water and electrolytes",
+      "Produce bile",
+      "Absorb nutrients"
+    ],
+    "explanation": "The large intestine (colon) primarily absorbs water and electrolytes from undigested food, forming feces.",
+    "difficulty": "easy",
+    "question_text": "What is the main function of the large intestine?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "daa8af88-f1d2-4247-98ad-8a1e8312cfe2",
+    "options": [
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "explanation": "During cellular respiration, cells use oxygen and produce CO₂, which is transported to the lungs and exhaled.",
+    "difficulty": "easy",
+    "question_text": "Which gas do humans exhale?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2f003ab2-2701-4a8a-beb6-e6af846fbd4c",
+    "options": [
+      "Carotenoid",
+      "Chlorophyll",
+      "Anthocyanin",
+      "Melanin"
+    ],
+    "explanation": "Chlorophyll is the green pigment in plants that absorbs light energy for photosynthesis.",
+    "difficulty": "easy",
+    "question_text": "What is the name of the pigment that gives plants their green color?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a818ad4c-68b1-4442-ac6c-eea3d661ea3b",
+    "options": [
+      "Aorta",
+      "Vena cava",
+      "Pulmonary vein",
+      "Pulmonary artery"
+    ],
+    "explanation": "The pulmonary vein is the only vein that carries oxygenated blood, transporting it from lungs to the left atrium.",
+    "difficulty": "easy",
+    "question_text": "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d59b1bb4-f741-43f8-be0e-6f7d68d066ee",
+    "options": [
+      "Ecology",
+      "Genetics",
+      "Evolution",
+      "Taxonomy"
+    ],
+    "explanation": "Genetics is the branch of biology that studies how traits are passed from parents to offspring through genes.",
+    "difficulty": "easy",
+    "question_text": "What is the study of heredity and variation called?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a0e4a603-94e4-47fd-842c-f952bb340dfb",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Mitochondria",
+      "Golgi body"
+    ],
+    "explanation": "Mitochondria generate most of the cell's ATP.",
+    "difficulty": "easy",
+    "question_text": "What is the powerhouse of the cell?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e0681fbd-b0e0-4a1d-9db8-5c4b55350a2e",
+    "options": [
+      "Mitochondria",
+      "Endoplasmic reticulum",
+      "Golgi apparatus",
+      "Lysosome"
+    ],
+    "explanation": "The Golgi apparatus modifies, sorts, and packages proteins and lipids for secretion or delivery to organelles.",
+    "difficulty": "easy",
+    "question_text": "Which structure in a cell is responsible for protein modification and packaging?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "66a69f94-0441-4ec1-9a73-a90743e1cd9a",
+    "options": [
+      "Humerus",
+      "Tibia",
+      "Femur",
+      "Fibula"
+    ],
+    "explanation": "The femur (thigh bone) is the longest and strongest bone in the human body.",
+    "difficulty": "easy",
+    "question_text": "What is the longest bone in the human body?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "35b6b495-81cf-4e9c-8043-e16bc0b6744b",
+    "options": [
+      "Thyroxine",
+      "Insulin",
+      "Adrenaline",
+      "Estrogen"
+    ],
+    "explanation": "Insulin, produced by the pancreas, lowers blood glucose by promoting cellular uptake and storage as glycogen.",
+    "difficulty": "easy",
+    "question_text": "Which hormone regulates blood sugar levels?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f474176d-1af0-489d-8930-c78a8227bf94",
+    "options": [
+      "Joins Okazaki fragments",
+      "Unwinds the DNA double helix",
+      "Adds nucleotides",
+      "Proofreads DNA"
+    ],
+    "explanation": "Helicase unwinds the DNA double helix by breaking hydrogen bonds between base pairs, creating replication forks.",
+    "difficulty": "medium",
+    "question_text": "What is the role of helicase in DNA replication?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "db77f67c-9f99-463b-adc1-4d7ae16fd3d4",
+    "options": [
+      "Metaphase I",
+      "Anaphase I",
+      "Prophase I",
+      "Telophase II"
+    ],
+    "explanation": "Crossing over (genetic recombination) occurs during prophase I when homologous chromosomes exchange genetic material.",
+    "difficulty": "medium",
+    "question_text": "In which phase of meiosis does crossing over occur?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d91f5e70-a05f-4864-8b8e-b1b4be056a6a",
+    "options": [
+      "DNA polymerase",
+      "RNA polymerase",
+      "Helicase",
+      "Ligase"
+    ],
+    "explanation": "RNA polymerase reads the DNA template and synthesizes a complementary RNA strand during transcription.",
+    "difficulty": "medium",
+    "question_text": "Which enzyme catalyzes the transcription of DNA into RNA?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "94ef51a5-93a4-41fe-a41a-c91e7a353593",
+    "options": [
+      "Filter blood",
+      "Establish concentration gradient for urine concentration",
+      "Reabsorb glucose",
+      "Secrete hormones"
+    ],
+    "explanation": "The loop of Henle creates a countercurrent multiplier system that establishes a medullary osmotic gradient for water reabsorption.",
+    "difficulty": "medium",
+    "question_text": "What is the function of the loop of Henle in the kidney?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fdb543ca-de15-4a12-8a43-a84f70e06e43",
+    "options": [
+      "Serotonin",
+      "Dopamine",
+      "Acetylcholine",
+      "GABA"
+    ],
+    "explanation": "Parkinson's disease is characterized by the degeneration of dopaminergic neurons in the substantia nigra, leading to dopamine deficiency.",
+    "difficulty": "medium",
+    "question_text": "Which neurotransmitter is deficient in Parkinson's disease?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "40cf0b94-095f-43a9-84bb-634a41b0ac4a",
+    "options": [
+      "Carries genetic code from nucleus",
+      "Brings specific amino acids to the ribosome",
+      "Catalyzes peptide bond formation",
+      "Unwinds DNA"
+    ],
+    "explanation": "tRNA (transfer RNA) has an anticodon that pairs with mRNA codons and carries the corresponding amino acid to the ribosome.",
+    "difficulty": "medium",
+    "question_text": "What is the role of tRNA in protein synthesis?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a5511efe-cc50-417c-be91-4b957f42c297",
+    "options": [
+      "Natural passive immunity",
+      "Artificial active immunity",
+      "Natural active immunity",
+      "Innate immunity"
+    ],
+    "explanation": "Vaccination introduces antigens to stimulate the immune system to produce antibodies and memory cells (artificial active immunity).",
+    "difficulty": "medium",
+    "question_text": "Which type of immunity is acquired through vaccination?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "28e82f3d-ace7-402e-b5ce-01d67f7d8938",
+    "options": [
+      "CO₂ and H₂O",
+      "Lactic acid",
+      "Ethanol and CO₂",
+      "Pyruvate"
+    ],
+    "explanation": "In human muscle cells during anaerobic conditions, pyruvate is converted to lactic acid, regenerating NAD⁺ for glycolysis.",
+    "difficulty": "medium",
+    "question_text": "What is the end product of anaerobic respiration in muscle cells?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b5f55368-efde-41b9-a8cb-c7fdc19e6473",
+    "options": [
+      "FSH",
+      "LH (Luteinizing Hormone)",
+      "Estrogen",
+      "Progesterone"
+    ],
+    "explanation": "The LH surge (peak of luteinizing hormone) triggers ovulation, the release of a mature egg from the ovarian follicle.",
+    "difficulty": "medium",
+    "question_text": "Which hormone triggers ovulation in the menstrual cycle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bb69ed37-e7a9-4ed0-ac54-ef2f5d79f054",
+    "options": [
+      "Store and release calcium ions",
+      "Produce ATP",
+      "Synthesize proteins",
+      "Store glycogen"
+    ],
+    "explanation": "The sarcoplasmic reticulum is a specialized endoplasmic reticulum that stores Ca²⁺ and releases it to trigger muscle contraction.",
+    "difficulty": "medium",
+    "question_text": "What is the function of the sarcoplasmic reticulum in muscle cells?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0cddab62-e066-480c-b6b6-de2294464988",
+    "options": [
+      "Glycolysis",
+      "Krebs cycle",
+      "Electron transport chain",
+      "Fermentation"
+    ],
+    "explanation": "The electron transport chain produces about 28-34 ATP molecules, compared to 2 from glycolysis and 2 from Krebs cycle.",
+    "difficulty": "medium",
+    "question_text": "Which process produces the most ATP molecules per glucose molecule?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7c34eb43-2f81-4bca-a52a-800247a5a9ea",
+    "options": [
+      "Join DNA fragments",
+      "Cut DNA at specific sequences",
+      "Copy DNA",
+      "Translate mRNA"
+    ],
+    "explanation": "Restriction enzymes (endonucleases) recognize and cut DNA at specific palindromic sequences, used in genetic engineering.",
+    "difficulty": "medium",
+    "question_text": "What is the role of restriction enzymes in molecular biology?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "56770a15-69e7-4a40-88a1-b426c01a2e13",
+    "options": [
+      "A+",
+      "AB+",
+      "O−",
+      "AB−"
+    ],
+    "explanation": "O-negative is the universal donor because it lacks A, B, and Rh(D) antigens, minimizing transfusion reactions.",
+    "difficulty": "medium",
+    "question_text": "Which blood group is the universal donor?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "80c765a7-5e4e-4431-8205-42c53f794719",
+    "options": [
+      "Produce neurotransmitters",
+      "Insulate axons and increase conduction speed",
+      "Receive signals from other neurons",
+      "Generate action potentials"
+    ],
+    "explanation": "The myelin sheath, formed by Schwann cells and oligodendrocytes, insulates axons and enables saltatory conduction, speeding up nerve impulses.",
+    "difficulty": "medium",
+    "question_text": "What is the function of the myelin sheath?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1b0f0d03-b393-48d2-bbe2-607645c9414e",
+    "options": [
+      "DNA polymerase I",
+      "DNA polymerase III",
+      "Both have 3'→5' exonuclease activity",
+      "Ligase"
+    ],
+    "explanation": "DNA polymerases I and III both have 3'→5' exonuclease activity for proofreading, removing mismatched nucleotides.",
+    "difficulty": "medium",
+    "question_text": "Which enzyme is responsible for proofreading during DNA replication?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c28c0ac3-04d0-4f0a-8fac-b9c6442646af",
+    "options": [
+      "Rough ER has ribosomes; smooth ER does not",
+      "Smooth ER is larger",
+      "Rough ER produces lipids",
+      "No functional difference"
+    ],
+    "explanation": "Rough ER has ribosomes attached to its surface and synthesizes proteins. Smooth ER lacks ribosomes and synthesizes lipids and steroids.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between rough and smooth endoplasmic reticulum?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7f29024c-996c-47e1-9b7c-b0652486d322",
+    "options": [
+      "Chlorophyll",
+      "Melanin",
+      "Carotene",
+      "Hemoglobin"
+    ],
+    "explanation": "Melanin, produced by melanocytes, determines skin, hair, and eye color. More melanin results in darker skin.",
+    "difficulty": "medium",
+    "question_text": "Which pigment is responsible for skin color in humans?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d0deecb7-dbd8-4164-b1ab-02535a91be87",
+    "options": [
+      "Transport oxygen",
+      "Blood clotting (hemostasis)",
+      "Fight infections",
+      "Carry nutrients"
+    ],
+    "explanation": "Platelets (thrombocytes) aggregate at injury sites and release factors to form blood clots, preventing excessive bleeding.",
+    "difficulty": "medium",
+    "question_text": "What is the function of platelets in blood?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "74519f4f-68ef-4945-8646-532251da4705",
+    "options": [
+      "Pons",
+      "Corpus callosum",
+      "Medulla",
+      "Thalamus"
+    ],
+    "explanation": "The corpus callosum is a thick band of nerve fibers that connects the left and right cerebral hemispheres, enabling communication.",
+    "difficulty": "medium",
+    "question_text": "Which structure connects the two hemispheres of the brain?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2c691c44-e0b5-4cc4-a9c5-1f23f923eebe",
+    "options": [
+      "Promote fruit ripening",
+      "Promote cell elongation and apical dominance",
+      "Induce seed dormancy",
+      "Promote leaf abscission"
+    ],
+    "explanation": "Auxin promotes cell elongation, apical dominance (suppression of lateral bud growth), and root initiation.",
+    "difficulty": "medium",
+    "question_text": "What is the role of auxin in plants?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "29d68bda-2194-493e-a344-b36fe1a8cea3",
+    "options": [
+      "Replication",
+      "Transcription",
+      "Translation",
+      "Reverse transcription"
+    ],
+    "explanation": "Translation is the process where ribosomes read mRNA codons and assemble amino acids into a polypeptide chain.",
+    "difficulty": "medium",
+    "question_text": "Which process converts mRNA into protein?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5e2db57d-938d-42ad-9b7f-7ffa622ae463",
+    "options": [
+      "Deoxyribose Nucleic Acid",
+      "Deoxyribonucleic Acid",
+      "Dinitrogen Acid",
+      "Dinucleotide Acid"
+    ],
+    "explanation": "DNA = Deoxyribonucleic Acid.",
+    "difficulty": "easy",
+    "question_text": "DNA stands for:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0a08c0fe-49bb-4e67-bbd8-ed14b5be3f35",
+    "options": [
+      "Measure genetic diversity",
+      "Predict allele frequencies in a non-evolving population",
+      "Calculate mutation rates",
+      "Study gene expression"
+    ],
+    "explanation": "The Hardy-Weinberg principle states that allele and genotype frequencies remain constant in a population without evolutionary influences.",
+    "difficulty": "medium",
+    "question_text": "What is the Hardy-Weinberg equilibrium used for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dd379942-be5e-4f4c-9087-451e7cd229d2",
+    "options": [
+      "Vitamin A",
+      "Vitamin B12",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "explanation": "Scurvy is caused by vitamin C (ascorbic acid) deficiency, leading to defective collagen synthesis, bleeding gums, and poor wound healing.",
+    "difficulty": "medium",
+    "question_text": "Which vitamin deficiency causes scurvy?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3d43d72d-57b9-4a8a-b406-9923291abfe3",
+    "options": [
+      "Generate ATP",
+      "Maintain electrochemical gradient across cell membrane",
+      "Transport glucose",
+      "Synthesize proteins"
+    ],
+    "explanation": "The Na⁺/K⁺-ATPase pumps 3 Na⁺ out and 2 K⁺ in, maintaining resting membrane potential and ionic gradients.",
+    "difficulty": "medium",
+    "question_text": "What is the function of the sodium-potassium pump?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "17e2acb1-2584-4721-adff-a89835b65d55",
+    "options": [
+      "Apical meristem",
+      "Lateral meristem (vascular cambium and cork cambium)",
+      "Ground tissue",
+      "Dermal tissue"
+    ],
+    "explanation": "Lateral meristems (vascular cambium produces secondary xylem and phloem; cork cambium produces periderm) enable increase in girth.",
+    "difficulty": "medium",
+    "question_text": "Which plant tissue is responsible for secondary growth (increase in girth)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cafd43d7-1396-431f-9528-f7724d3e0cdf",
+    "options": [
+      "Secrete cortisol",
+      "Secrete epinephrine and norepinephrine",
+      "Regulate sodium balance",
+      "Produce insulin"
+    ],
+    "explanation": "The adrenal medulla secretes catecholamines (epinephrine/adrenaline and norepinephrine) during fight-or-flight responses.",
+    "difficulty": "medium",
+    "question_text": "What is the role of the adrenal medulla?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b2340f12-5fa7-4403-be6f-8c3f8e288953",
+    "options": [
+      "Diffusion",
+      "Osmosis",
+      "Active transport",
+      "Endocytosis"
+    ],
+    "explanation": "Osmosis is the passive movement of water molecules from a region of lower solute concentration to higher solute concentration.",
+    "difficulty": "medium",
+    "question_text": "Which process explains the movement of water across a semipermeable membrane?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "28a8d701-f11c-482c-bf65-7d1c9f3d1ef4",
+    "options": [
+      "Produce bile",
+      "Filter blood, recycle old RBCs, and immune response",
+      "Produce insulin",
+      "Digest proteins"
+    ],
+    "explanation": "The spleen filters blood, removes old/damaged red blood cells, stores platelets, and participates in immune responses.",
+    "difficulty": "medium",
+    "question_text": "What is the function of the spleen?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ddb0077c-cf66-47aa-9b1f-2531ba4a56c2",
+    "options": [
+      "mRNA",
+      "rRNA",
+      "tRNA",
+      "snRNA"
+    ],
+    "explanation": "tRNA (transfer RNA) recognizes mRNA codons through its anticodon and delivers the corresponding amino acid to the ribosome.",
+    "difficulty": "medium",
+    "question_text": "Which molecule carries amino acids to the ribosome during translation?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "12fd51ee-6b14-40f0-89f9-7cf996166a83",
+    "options": [
+      "Both haploid and diploid phases are multicellular",
+      "Plants only reproduce sexually",
+      "No meiosis occurs",
+      "Only haploid phase exists"
+    ],
+    "explanation": "Plants have a life cycle with multicellular haploid (gametophyte) and diploid (sporophyte) phases that alternate.",
+    "difficulty": "medium",
+    "question_text": "What is the significance of the alternation of generations in plants?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "89756462-6565-41b8-a824-b8614f629432",
+    "options": [
+      "Represses transcription",
+      "Activates transcription when glucose is low",
+      "Binds the operator",
+      "Degrades lactose"
+    ],
+    "explanation": "CAP, when bound to cAMP (high when glucose is low), binds upstream of the lac promoter and enhances RNA polymerase binding, activating transcription.",
+    "difficulty": "hard",
+    "question_text": "In the lac operon, what is the role of the catabolite activator protein (CAP)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4c8b63e1-0a7d-41d4-8b49-e467df181360",
+    "options": [
+      "Degrades misfolded proteins",
+      "Recognizes signal sequences and targets proteins to ER",
+      "Synthesizes proteins",
+      "Packages proteins into vesicles"
+    ],
+    "explanation": "SRP recognizes N-terminal signal sequences on secretory/membrane proteins, pauses translation, and targets the ribosome-nascent chain complex to the ER membrane.",
+    "difficulty": "hard",
+    "question_text": "What is the function of the signal recognition particle (SRP) in protein targeting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "83be0229-cd98-4d85-89cb-741dd09773fb",
+    "options": [
+      "DNA polymerase α",
+      "Telomerase",
+      "Helicase",
+      "Primase"
+    ],
+    "explanation": "Telomerase is a reverse transcriptase that adds telomeric repeats (TTAGGG) to chromosome ends, compensating for the end replication problem.",
+    "difficulty": "hard",
+    "question_text": "Which enzyme is responsible for telomere maintenance in stem cells and cancer cells?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7a25c005-2615-42c8-adff-a15f7042f725",
+    "options": [
+      "Inhibit protein synthesis",
+      "Inhibit bacterial cell wall synthesis by blocking transpeptidation",
+      "Inhibit DNA replication",
+      "Disrupt bacterial membrane"
+    ],
+    "explanation": "Penicillin inhibits transpeptidases (penicillin-binding proteins) that cross-link peptidoglycan in the bacterial cell wall, causing cell lysis.",
+    "difficulty": "hard",
+    "question_text": "What is the mechanism of action of penicillin antibiotics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0c4327e3-c294-40d4-8778-e881d98cae5a",
+    "options": [
+      "Electron transport chain in light-dependent reactions",
+      "Calvin cycle pathway",
+      "ATP synthesis mechanism",
+      "Carbon fixation process"
+    ],
+    "explanation": "The Z-scheme describes the non-linear flow of electrons through Photosystem II and Photosystem I in the light-dependent reactions, producing NADPH and ATP.",
+    "difficulty": "hard",
+    "question_text": "In photosynthesis, what is the Z-scheme?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "55946776-00b3-410a-8e7c-1664a7bbd0d8",
+    "options": [
+      "Synthesize proteins",
+      "Degrade ubiquitin-tagged proteins",
+      "Package proteins for secretion",
+      "Fold proteins correctly"
+    ],
+    "explanation": "The 26S proteasome is a multi-subunit complex that degrades proteins tagged with ubiquitin, regulating cell cycle, signal transduction, and protein quality control.",
+    "difficulty": "hard",
+    "question_text": "What is the function of the proteasome?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "868bdd5c-8638-4d44-8835-1940c4ecddc4",
+    "options": [
+      "cAMP",
+      "IP₃ and DAG",
+      "Ca²⁺",
+      "cGMP"
+    ],
+    "explanation": "Phospholipase C cleaves PIP₂ into inositol trisphosphate (IP₃), which releases Ca²⁺ from ER, and diacylglycerol (DAG), which activates protein kinase C.",
+    "difficulty": "hard",
+    "question_text": "Which second messenger is produced when phospholipase C cleaves PIP₂?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1dc74693-a3e4-463b-b3b8-d50fb0971763",
+    "options": [
+      "Promotes cell cycle progression",
+      "Inhibits E2F transcription factors at G1/S checkpoint",
+      "Activates cyclin-CDK complexes",
+      "Induces apoptosis"
+    ],
+    "explanation": "Hypophosphorylated Rb binds and inhibits E2F transcription factors, blocking G1/S transition. Phosphorylation by cyclin D-CDK releases E2F.",
+    "difficulty": "hard",
+    "question_text": "What is the role of Rb (retinoblastoma) protein in cell cycle regulation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f89c74f4-7867-43d3-9ad8-3c6aa130b9c1",
+    "options": [
+      "Protein synthesis",
+      "Break down fatty acids and detoxify harmful substances",
+      "DNA replication",
+      "Photosynthesis"
+    ],
+    "explanation": "Peroxisomes carry out β-oxidation of very long chain fatty acids and contain catalase to break down hydrogen peroxide produced during detoxification reactions.",
+    "difficulty": "hard",
+    "question_text": "What is the function of peroxisomes in eukaryotic cells?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bc5bb8cb-df0f-442f-8f40-a480827fab1d",
+    "options": [
+      "IgM",
+      "IgG",
+      "IgA",
+      "IgE"
+    ],
+    "explanation": "IgG constitutes about 75-80% of serum antibodies, crosses the placenta, and is produced in large quantities during secondary immune responses.",
+    "difficulty": "hard",
+    "question_text": "Which immunoglobulin is most abundant in serum and provides secondary immune response?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d16a728c-34d7-47ec-be1e-16d1a2e8cf65",
+    "options": [
+      "Active transport of glucose against gradient using Na⁺ gradient",
+      "Passive diffusion of glucose",
+      "Transport of fructose only",
+      "Secretion of glucose"
+    ],
+    "explanation": "SGLT1 uses the Na⁺ electrochemical gradient (maintained by Na⁺/K⁺-ATPase) to actively transport glucose against its concentration gradient.",
+    "difficulty": "hard",
+    "question_text": "What is the function of the sodium-glucose cotransporter (SGLT1) in the intestine?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5e54f5e4-7ce8-4f2e-a65b-2c09c0f0ef65",
+    "options": [
+      "Cut DNA",
+      "Guide Cas9 to target DNA sequence through complementary base pairing",
+      "Repair DNA breaks",
+      "Synthesize new DNA"
+    ],
+    "explanation": "The guide RNA contains a crRNA sequence complementary to the target DNA and a tracrRNA scaffold that binds Cas9, directing it to the precise genomic location.",
+    "difficulty": "hard",
+    "question_text": "In CRISPR-Cas9 gene editing, what is the function of the guide RNA?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f02199c4-6bd9-4e82-98d9-62d1fe94c159",
+    "options": [
+      "Necrotic cell rupture",
+      "Caspase-mediated orderly cell dismantling",
+      "Autophagy only",
+      "Cell division"
+    ],
+    "explanation": "Apoptosis is executed by caspase proteases that cleave specific substrates, leading to characteristic morphology: cell shrinkage, membrane blebbing, and DNA fragmentation.",
+    "difficulty": "hard",
+    "question_text": "What is the mechanism of apoptosis (programmed cell death)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "53d4f8ca-281a-46ee-8f7e-148dc20ea81f",
+    "options": [
+      "Transcription termination signal",
+      "Binding site for RNA polymerase II and general transcription factors",
+      "Translation start site",
+      "Splice site"
+    ],
+    "explanation": "The TATA box (Goldberg-Hogness box) at about −25 to −35 upstream of the transcription start site binds TBP (TATA-binding protein), recruiting RNA polymerase II.",
+    "difficulty": "hard",
+    "question_text": "What is the role of the TATA box in eukaryotic gene expression?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6f94adaa-f0bf-4808-96d2-9c4fb75baf4b",
+    "options": [
+      "FAD",
+      "NAD⁺",
+      "Adenosylcobalamin",
+      "Biotin"
+    ],
+    "explanation": "Adenosylcobalamin (5'-deoxyadenosylcobalamin), the coenzyme form of vitamin B12, is required for methylmalonyl-CoA mutase in odd-chain fatty acid metabolism.",
+    "difficulty": "hard",
+    "question_text": "Which coenzyme is derived from vitamin B12 and is essential for methylmalonyl-CoA mutase?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a3a3dc55-bb6a-4e51-b915-4f85d981776e",
+    "options": [
+      "No difference",
+      "Congenic has a small chromosome segment; consomic has a whole chromosome substitution",
+      "Consomic has only genes; congenic has full genome",
+      "Both refer to identical twins"
+    ],
+    "explanation": "Congenic strains differ by a small defined chromosome segment from a donor strain. Consomic (chromosome substitution) strains have a whole chromosome from one strain on another's background.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between congenic and consomic strains in genetics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7086e48a-9b93-4ae5-aa78-4da33ca2eec5",
+    "options": [
+      "Produce glucose",
+      "Create proton gradient for ATP synthesis via chemiosmosis",
+      "Break down fatty acids",
+      "Synthesize proteins"
+    ],
+    "explanation": "The ETC pumps protons from the matrix to the intermembrane space, creating an electrochemical gradient that drives ATP synthesis through ATP synthase (chemiosmotic coupling).",
+    "difficulty": "hard",
+    "question_text": "What is the function of the electron transport chain in mitochondria?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9c10af3b-66f2-4258-a972-282b54ae6cac",
+    "options": [
+      "Genetic diversity",
+      "Probability that two alleles at a locus are identical by descent",
+      "Mutation rate",
+      "Migration rate"
+    ],
+    "explanation": "The inbreeding coefficient F measures the probability that an individual receives two alleles at a locus that are identical by descent from a common ancestor.",
+    "difficulty": "hard",
+    "question_text": "In population genetics, what does the inbreeding coefficient (F) measure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "427f03c4-5ed0-485f-9643-b710596dc16c",
+    "options": [
+      "Degrade proteins",
+      "Assist in proper protein folding and prevent aggregation",
+      "Transport proteins across membranes",
+      "Synthesize proteins"
+    ],
+    "explanation": "Molecular chaperones like Hsp70 bind to exposed hydrophobic regions of nascent/unfolded proteins, preventing misfolding and aggregation.",
+    "difficulty": "hard",
+    "question_text": "What is the role of chaperone proteins like Hsp70?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2a0b9aaa-e1f0-4b53-bea7-480b319b844a",
+    "options": [
+      "Myosin heads bind actin and pull thin filaments toward the M-line using ATP",
+      "Actin and myosin filaments shorten",
+      "Titin filaments contract",
+      "Calcium directly shortens sarcomeres"
+    ],
+    "explanation": "Myosin heads bind actin, form cross-bridges, pivot to pull thin filaments toward the center (M-line), then release with ATP binding, cycling to produce contraction.",
+    "difficulty": "hard",
+    "question_text": "What is the mechanism of muscle contraction according to the sliding filament theory?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "1f992fa6-6a8c-4923-8902-d1ca6c306b6a",
+    "options": [
+      "Transformation",
+      "Transduction",
+      "Conjugation",
+      "Transfection"
+    ],
+    "explanation": "Conjugation is the direct transfer of DNA (often plasmids) from donor to recipient bacterial cells through a sex pilus.",
+    "difficulty": "hard",
+    "question_text": "Which process describes the transfer of genetic material between bacterial cells via a pilus?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "bee3f115-e43d-4138-957e-7357082140ec",
+    "options": [
+      "Repair double-strand breaks",
+      "Correct base-pair mismatches and insertion/deletion loops after replication",
+      "Repair thymine dimers",
+      "Join Okazaki fragments"
+    ],
+    "explanation": "MMR recognizes mismatches and IDL loops, excises the incorrect strand (identified by methylation status in E. coli), and resynthesizes correct DNA.",
+    "difficulty": "hard",
+    "question_text": "What is the role of the methyl-directed mismatch repair (MMR) system?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0624bd69-6086-4a1b-9249-bfc82ba46b53",
+    "options": [
+      "Myelin thickness",
+      "Refractory period preventing backward propagation",
+      "Axon diameter only",
+      "Number of synapses"
+    ],
+    "explanation": "The absolute refractory period (inactivation of Na⁺ channels) ensures action potentials propagate in one direction, from axon hillock to terminal.",
+    "difficulty": "hard",
+    "question_text": "In neurophysiology, what determines the directionality of action potential propagation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "32100cc3-ac82-4354-9a37-a13be81beb80",
+    "options": [
+      "Conscious control of breathing",
+      "Generate basic rhythm of breathing and respond to pH/CO₂ changes",
+      "Produce surfactant",
+      "Filter air"
+    ],
+    "explanation": "The dorsal and ventral respiratory groups in the medulla generate the basic breathing rhythm and regulate ventilation in response to blood pH, CO₂, and O₂ levels.",
+    "difficulty": "hard",
+    "question_text": "What is the function of the medullary respiratory center?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "661016a7-7ae9-4191-9521-80bcc65a6456",
+    "options": [
+      "All genes are expressed equally from both parents",
+      "Parent-of-origin specific gene expression due to epigenetic marks",
+      "Gene silencing in all tissues",
+      "DNA mutation during replication"
+    ],
+    "explanation": "Genomic imprinting is epigenetic silencing of genes based on parental origin, involving DNA methylation and histone modifications during gametogenesis.",
+    "difficulty": "hard",
+    "question_text": "What is genomic imprinting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "69305f0c-c31b-41fe-976f-9028dc78ce2f",
+    "options": [
+      "Directly ligates DNA breaks",
+      "Participates in homologous recombination repair of double-strand breaks",
+      "Removes RNA primers",
+      "Synthesizes telomeres"
+    ],
+    "explanation": "BRCA1 participates in homologous recombination (HR) repair of DSBs by promoting RAD51 filament formation on ssDNA. Mutations increase cancer risk.",
+    "difficulty": "hard",
+    "question_text": "What is the role of BRCA1 in DNA repair?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f5ae9cd6-7e71-40b2-9dab-4337431a41d7",
+    "options": [
+      "Glycolysis",
+      "Gluconeogenesis",
+      "Glycogenesis",
+      "Pentose phosphate pathway"
+    ],
+    "explanation": "Gluconeogenesis synthesizes glucose from non-carbohydrate precursors (lactate, glycerol, glucogenic amino acids) in the liver during fasting to maintain blood glucose.",
+    "difficulty": "hard",
+    "question_text": "Which metabolic pathway occurs in the liver during prolonged fasting to provide glucose for the brain?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5d2b3635-b577-4c57-8116-87dd9c5b0d62",
+    "options": [
+      "Degrade proteins",
+      "Mediate receptor-mediated endocytosis by shaping vesicle formation",
+      "Synthesize lipids",
+      "Transport proteins to ER"
+    ],
+    "explanation": "Clathrin triskelia assemble into polyhedral lattices on the cytosolic face of membranes, driving vesicle budding for receptor-mediated endocytosis and Golgi trafficking.",
+    "difficulty": "hard",
+    "question_text": "What is the function of clathrin-coated vesicles in endocytosis?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ffafe17d-4b79-4996-ac71-a022b79df40e",
+    "options": [
+      "Direct osmotic water influx",
+      "Phototropin-mediated H⁺-ATPase activation causing K⁺ uptake",
+      "Abscisic acid signaling",
+      "Phytochrome activation only"
+    ],
+    "explanation": "Blue light activates phototropins, stimulating plasma membrane H⁺-ATPase. The resulting proton gradient drives K⁺ uptake through inward rectifying channels, water follows by osmosis, and guard cells swell to open stomata.",
+    "difficulty": "hard",
+    "question_text": "In plant physiology, what is the mechanism of stomatal opening driven by blue light?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "224f91df-c68a-480a-b3e9-fe92d0590142",
+    "options": [
+      "Produces antibodies",
+      "Presents antigenic peptides to T cells",
+      "Phagocytizes pathogens",
+      "Activates complement system"
+    ],
+    "explanation": "MHC class I presents endogenous antigens to CD8⁺ T cells. MHC class II presents exogenous antigens to CD4⁺ T cells, enabling adaptive immune recognition.",
+    "difficulty": "hard",
+    "question_text": "What is the significance of the MHC (Major Histocompatibility Complex) in immunity?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "16e6804d-663b-4699-868e-9582855f6869",
+    "options": [
+      "Promotes transcription",
+      "Silences gene expression through siRNA/miRNA-guided mRNA degradation or translational repression",
+      "Increases translation efficiency",
+      "Repairs DNA"
+    ],
+    "explanation": "RNAi uses Dicer-generated siRNAs or endogenous miRNAs loaded into RISC. The guide strand directs Argonaute-mediated cleavage or translational repression of complementary target mRNAs.",
+    "difficulty": "hard",
+    "question_text": "What is the mechanism of RNA interference (RNAi)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5e3a6ebd-a45a-4db5-9947-761baee34b2c",
+    "options": [
+      "Produce cerebrospinal fluid",
+      "Protect the brain from toxins and maintain homeostasis through selective permeability",
+      "Transport oxygen to brain",
+      "Generate action potentials"
+    ],
+    "explanation": "The blood-brain barrier consists of tight junctions between capillary endothelial cells, restricting paracellular diffusion and protecting the CNS from harmful substances while allowing selective transport.",
+    "difficulty": "hard",
+    "question_text": "What is the function of the blood-brain barrier?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "78c56f38-f0ef-4bac-b90b-deb3892b7040",
+    "options": [
+      "Gene flow",
+      "Genetic drift",
+      "Natural selection",
+      "Mutation"
+    ],
+    "explanation": "Genetic drift causes random allele frequency changes, especially in small populations. It reduces within-population variation and can cause divergence between populations (founder effect, bottleneck).",
+    "difficulty": "hard",
+    "question_text": "Which evolutionary mechanism leads to a decrease in genetic variation within populations and an increase between populations?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "61728455-4da0-4339-b6a0-2ee44bc810b7",
+    "options": [
+      "Synthesize RNA",
+      "Regulate selective transport between nucleus and cytoplasm",
+      "Replicate DNA",
+      "Degrade proteins"
+    ],
+    "explanation": "Nuclear pore complexes (NPCs) are large protein assemblies that mediate selective transport of macromolecules (proteins, RNA, ribosomal subunits) between nucleus and cytoplasm.",
+    "difficulty": "hard",
+    "question_text": "What is the role of the nuclear pore complex?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d8683665-73ee-4a45-96a9-d6972ca61966",
+    "options": [
+      "2 ATP, 2 NADPH",
+      "3 ATP, 2 NADPH",
+      "1 ATP, 1 NADPH",
+      "4 ATP, 3 NADPH"
+    ],
+    "explanation": "The Calvin cycle uses 3 ATP and 2 NADPH per CO₂ fixed: 1 ATP in the carboxylation/regeneration phase and 2 ATP in the reduction phase, plus 2 NADPH for reduction.",
+    "difficulty": "hard",
+    "question_text": "In the Calvin cycle, how many ATP and NADPH molecules are required to fix one CO₂ molecule?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "88359570-bee8-445b-b90c-adb3905bc7a3",
+    "options": [
+      "Promotes cell division",
+      "Guardian of the genome - induces cell cycle arrest, apoptosis, or DNA repair in response to cellular stress",
+      "Synthesizes telomeres",
+      "Repairs all DNA lesions directly"
+    ],
+    "explanation": "p53 is a tumor suppressor activated by DNA damage, hypoxia, and oncogene activation. It transcribes target genes (p21, Bax, GADD45) to arrest the cell cycle, initiate apoptosis, or promote DNA repair.",
+    "difficulty": "hard",
+    "question_text": "What is the role of p53 in cancer biology?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0c34c2bf-d77b-4223-aa40-c731c83a89d9",
+    "options": [
+      "Deletion of hemoglobin gene",
+      "Single point mutation (Glu→Val) at position 6 of β-globin chain",
+      "Duplication of α-globin gene",
+      "frameshift mutation"
+    ],
+    "explanation": "Sickle cell disease is caused by a single nucleotide substitution (GAG→GTG) in the β-globin gene, replacing glutamic acid with valine at position 6, causing hemoglobin polymerization under low oxygen.",
+    "difficulty": "hard",
+    "question_text": "What is the molecular basis of sickle cell anemia?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aa430167-0120-4354-b04b-fb9443476dd3",
+    "options": [
+      "TRH stimulates TSH; T₃/T₄ inhibit TRH and TSH",
+      "Only TSH regulates thyroid",
+      "No feedback exists",
+      "Thyroid hormones stimulate their own production"
+    ],
+    "explanation": "The HPT axis: hypothalamus secretes TRH → anterior pituitary releases TSH → thyroid produces T₃/T₄. Elevated T₃/T₄ negatively feedback on both hypothalamus (reducing TRH) and pituitary (reducing TSH).",
+    "difficulty": "hard",
+    "question_text": "In endocrinology, what is the hypothalamic-pituitary-thyroid (HPT) axis negative feedback mechanism?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c4162e00-eca9-40b5-b5ad-26a1af16bec4",
+    "options": [
+      "Secrete H⁺",
+      "Reabsorb filtered bicarbonate in conjunction with carbonic anhydrase",
+      "Secrete K⁺",
+      "Produce NH₃"
+    ],
+    "explanation": "NBC in the basolateral membrane transports filtered HCO₃⁻ (as CO₂ after carbonic anhydrase action) from tubular fluid back to blood, crucial for acid-base balance.",
+    "difficulty": "hard",
+    "question_text": "What is the function of the sodium-bicarbonate cotransporter (NBC) in the proximal tubule?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bc1f1134-a3e1-4ed7-bd4d-cecb24d2ac0d",
+    "options": [
+      "They originated from invaginations of plasma membrane",
+      "They evolved from free-living prokaryotes engulfed by ancestral eukaryotic cells",
+      "They were created de novo in eukaryotes",
+      "They have no evolutionary origin"
+    ],
+    "explanation": "The endosymbiotic theory proposes mitochondria evolved from α-proteobacteria and chloroplasts from cyanobacteria, supported by their own DNA, double membranes, and prokaryotic-type ribosomes.",
+    "difficulty": "hard",
+    "question_text": "What is the significance of the endosymbiotic theory for mitochondria and chloroplasts?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8ca5ebf9-9c51-421a-895b-623bc7cca412",
+    "options": [
+      "Organ",
+      "Tissue",
+      "Cell",
+      "Organelle"
+    ],
+    "explanation": "Cell is the basic structural and functional unit of life.",
+    "difficulty": "easy",
+    "question_text": "The basic unit of life is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "65129d45-12c6-4fbf-80a3-5a3cc453928e",
+    "options": [
+      "RNA only",
+      "DNA and RNA",
+      "Protein only",
+      "ATP"
+    ],
+    "explanation": "The nucleus contains both DNA and RNA.",
+    "difficulty": "easy",
+    "question_text": "The nucleus contains:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6078b107-3905-4e07-bf92-90d32af203c9",
+    "options": [
+      "Protein only",
+      "Carbohydrates",
+      "Phospholipid bilayer",
+      "DNA"
+    ],
+    "explanation": "The cell membrane consists of a phospholipid bilayer with proteins.",
+    "difficulty": "medium",
+    "question_text": "The cell membrane is made of:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0dafa6c2-c51e-4e10-b8d7-2a5b1b29292c",
+    "options": [
+      "Photosynthesis",
+      "Cellular respiration",
+      "Protein synthesis",
+      "DNA replication"
+    ],
+    "explanation": "Cellular respiration (aerobic) takes place in mitochondria.",
+    "difficulty": "easy",
+    "question_text": "Which process takes place in the mitochondria?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "359355a3-5063-4e70-88f9-20db79b590f3",
+    "options": [
+      "Homo habilis",
+      "Homo erectus",
+      "Homo sapiens",
+      "Homo neanderthalensis"
+    ],
+    "explanation": "Modern humans are Homo sapiens.",
+    "difficulty": "easy",
+    "question_text": "The scientific name of humans is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0815ed5c-bb31-456b-a8d7-331f7d0e531b",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "explanation": "Vitamin D deficiency causes rickets (soft bones).",
+    "difficulty": "easy",
+    "question_text": "Which vitamin deficiency causes rickets?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "e9bb3b1e-e652-472e-8726-3bd3c4f5ca38",
+    "options": [
+      "Meiosis",
+      "Mitosis",
+      "Fertilization",
+      "Budding"
+    ],
+    "explanation": "Mitosis is cell division for growth and repair.",
+    "difficulty": "easy",
+    "question_text": "The process of cell division for growth and repair is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d9fbc496-cc02-4254-8f83-d887efc59c99",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin K"
+    ],
+    "explanation": "Vitamin K is essential for blood clotting.",
+    "difficulty": "medium",
+    "question_text": "Blood clotting requires which vitamin?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "ebd01458-991d-494e-90ec-61ecb146dd54",
+    "options": [
+      "Root",
+      "Stem",
+      "Leaf",
+      "Flower"
+    ],
+    "explanation": "Leaves contain chlorophyll and are the main site of photosynthesis.",
+    "difficulty": "easy",
+    "question_text": "Which part of the plant conducts photosynthesis mainly?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "cf1400f6-24fb-4b81-8096-31e10a9a4711",
+    "options": [
+      "Reproduction",
+      "Homeostasis",
+      "Mutation",
+      "Adaptation"
+    ],
+    "explanation": "Homeostasis is the maintenance of stable internal conditions.",
+    "difficulty": "easy",
+    "question_text": "The process by which organisms maintain internal balance is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "26738188-f830-4edd-a5dd-01f9f065c964",
+    "options": [
+      "Rough ER",
+      "Smooth ER",
+      "Ribosome",
+      "Golgi body"
+    ],
+    "explanation": "Smooth endoplasmic reticulum synthesizes lipids.",
+    "difficulty": "medium",
+    "question_text": "Which organelle is the site of lipid synthesis?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3ae3ece0-c323-4772-8f31-f0bdd2e5039c",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "explanation": "The human heart has 4 chambers: 2 atria and 2 ventricles.",
+    "difficulty": "easy",
+    "question_text": "The heart has how many chambers?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "746ae66f-daf7-4a95-8f81-8372fb7a2f0b",
+    "options": [
+      "Conservative",
+      "Semi-conservative",
+      "Dispersive",
+      "Random"
+    ],
+    "explanation": "DNA replication is semi-conservative — each new double helix retains one original strand.",
+    "difficulty": "medium",
+    "question_text": "DNA replication is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ef240ce5-9e7b-4d7a-bda4-18fefcfba743",
+    "options": [
+      "Energy production",
+      "Protein synthesis",
+      "Lipid synthesis",
+      "DNA replication"
+    ],
+    "explanation": "Ribosomes are the site of protein synthesis.",
+    "difficulty": "easy",
+    "question_text": "What is the role of ribosomes?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e1f5dbf0-972c-499b-b5f1-dcd5641503e0",
+    "options": [
+      "Mitochondria",
+      "Chloroplasts",
+      "Nucleus",
+      "Ribosomes"
+    ],
+    "explanation": "Photosynthesis occurs in chloroplasts.",
+    "difficulty": "easy",
+    "question_text": "Photosynthesis takes place in:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f042c5e0-69e3-40bb-9658-af038fd2f314",
+    "options": [
+      "23",
+      "44",
+      "46",
+      "48"
+    ],
+    "explanation": "Humans have 46 chromosomes (23 pairs).",
+    "difficulty": "easy",
+    "question_text": "How many chromosomes are in a normal human cell?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "1c029a2c-c286-4e7a-a566-2ef9bddb22a9",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "explanation": "Vitamin D is synthesized when skin is exposed to sunlight.",
+    "difficulty": "easy",
+    "question_text": "Which vitamin is produced by sunlight on skin?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "44c3d5b2-b780-49b3-86f2-598164e55c39",
+    "options": [
+      "Respiration",
+      "Photosynthesis",
+      "Transpiration",
+      "Digestion"
+    ],
+    "explanation": "Photosynthesis is the food-making process in plants.",
+    "difficulty": "easy",
+    "question_text": "The process by which green plants make food is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a58c29ab-65c2-4a15-aace-5b9e06f52e69",
+    "options": [
+      "Heart",
+      "Liver",
+      "Kidney",
+      "Lungs"
+    ],
+    "explanation": "Kidneys filter and purify blood.",
+    "difficulty": "easy",
+    "question_text": "Which organ purifies blood in the human body?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e73ed3c6-0891-4560-86b6-9f3e8e9e4fa1",
+    "options": [
+      "Carbohydrates",
+      "Lipids",
+      "Proteins",
+      "Nucleic acids"
+    ],
+    "explanation": "Enzymes are biological catalysts made of proteins.",
+    "difficulty": "easy",
+    "question_text": "Enzymes are:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "de84e31d-a7ed-46f7-b794-00b76a4e65c5",
+    "options": [
+      "Liver",
+      "Heart",
+      "Brain",
+      "Skin"
+    ],
+    "explanation": "Skin is the largest organ of the human body.",
+    "difficulty": "easy",
+    "question_text": "The largest organ of the human body is:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "21befaee-fa80-43ea-9d73-cc81503a079b",
+    "options": [
+      "Copper",
+      "Zinc",
+      "Iron",
+      "Calcium"
+    ],
+    "explanation": "Hemoglobin contains iron (Fe).",
+    "difficulty": "easy",
+    "question_text": "Hemoglobin contains which metal?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c2f7ab44-ea17-4aa4-b6d5-4bf7f4559967",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla",
+      "Hypothalamus"
+    ],
+    "explanation": "Cerebellum controls balance and coordination.",
+    "difficulty": "medium",
+    "question_text": "Which part of the brain controls balance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "15e84914-77fe-4232-9a79-d3e948d98eb9",
+    "options": [
+      "4 different cells",
+      "2 identical cells",
+      "2 different cells",
+      "4 identical cells"
+    ],
+    "explanation": "Mitosis produces 2 genetically identical daughter cells.",
+    "difficulty": "easy",
+    "question_text": "Mitosis results in:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "67a08f6e-e5fa-4b9c-aac5-10f9c51107f4",
+    "options": [
+      "6.4",
+      "7.0",
+      "7.4",
+      "8.0"
+    ],
+    "explanation": "Blood pH is about 7.35-7.45, approximately 7.4.",
+    "difficulty": "medium",
+    "question_text": "The pH of human blood is approximately:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b3db8a59-9ecc-4839-a25d-b1a7ea5def86",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Hydrogen"
+    ],
+    "explanation": "Plants absorb CO₂ during photosynthesis.",
+    "difficulty": "easy",
+    "question_text": "Which gas do plants absorb during photosynthesis?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "69cb6dce-a2a4-4b6e-9f7f-b879310e4346",
+    "options": [
+      "Neuron",
+      "Nephron",
+      "Alveolus",
+      "Villus"
+    ],
+    "explanation": "Nephron is the functional unit of the kidney.",
+    "difficulty": "medium",
+    "question_text": "The functional unit of kidney is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7d9b7ca6-99ff-48c8-867f-6b37b857089a",
+    "options": [
+      "Deoxyribose sugar",
+      "Thymine",
+      "Uracil",
+      "Double strand"
+    ],
+    "explanation": "RNA has uracil instead of thymine.",
+    "difficulty": "medium",
+    "question_text": "RNA differs from DNA in having:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "4b317d9a-4335-4c44-91e7-bc63c2a532a1",
+    "options": [
+      "Mycology",
+      "Virology",
+      "Botany",
+      "Zoology"
+    ],
+    "explanation": "Mycology is the study of fungi.",
+    "difficulty": "easy",
+    "question_text": "The study of fungi is called:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c76ed23d-5b57-4fd3-95ca-1aa788118800",
+    "options": [
+      "Phloem",
+      "Xylem",
+      "Cambium",
+      "Epidermis"
+    ],
+    "explanation": "Xylem transports water from roots to leaves.",
+    "difficulty": "easy",
+    "question_text": "Which tissue transports water in plants?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "427025bd-d1f1-4a58-a2fa-f59cc3751075",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Pancreas",
+      "Thyroid"
+    ],
+    "explanation": "Insulin is produced by beta cells of the pancreas.",
+    "difficulty": "easy",
+    "question_text": "Insulin is produced by:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "4f13d64d-4bc2-4708-b151-d79ca0438076",
+    "options": [
+      "Mendel",
+      "Darwin",
+      "Watson and Crick",
+      "Lamarck"
+    ],
+    "explanation": "Watson and Crick proposed the DNA double helix model in 1953.",
+    "difficulty": "easy",
+    "question_text": "The double helix model of DNA was proposed by:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b32db181-1ae5-42b1-896f-d133e747ddad",
+    "options": [
+      "Solute through membrane",
+      "Water through semipermeable membrane",
+      "Gases through membrane",
+      "Ions through membrane"
+    ],
+    "explanation": "Osmosis is the movement of water through a semipermeable membrane.",
+    "difficulty": "easy",
+    "question_text": "Osmosis is the movement of:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "94d10a08-1897-46cb-be7f-c3f797c60972",
+    "options": [
+      "Protista",
+      "Fungi",
+      "Monera",
+      "Plantae"
+    ],
+    "explanation": "Bacteria belong to Kingdom Monera.",
+    "difficulty": "medium",
+    "question_text": "Which kingdom includes bacteria?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "19564a9f-df04-42c7-be44-977c61c1a975",
+    "options": [
+      "2 diploid cells",
+      "2 haploid cells",
+      "4 diploid cells",
+      "4 haploid cells"
+    ],
+    "explanation": "Meiosis produces 4 haploid daughter cells.",
+    "difficulty": "medium",
+    "question_text": "Meiosis produces:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "38030b78-b6a5-4b81-a977-3e31d8863f30",
+    "options": [
+      "RNA",
+      "DNA",
+      "Protein",
+      "Lipid"
+    ],
+    "explanation": "DNA carries genetic information.",
+    "difficulty": "easy",
+    "question_text": "The carrier of genetic information is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8ca9e372-936e-41ed-9443-f7adc497224d",
+    "options": [
+      "Louis Pasteur",
+      "Alexander Fleming",
+      "Robert Koch",
+      "Edward Jenner"
+    ],
+    "explanation": "Alexander Fleming discovered penicillin in 1928.",
+    "difficulty": "easy",
+    "question_text": "Penicillin was discovered by:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0776d843-f685-4506-bd06-6cbf076ced22",
+    "options": [
+      "Thyroxine",
+      "Adrenaline",
+      "Insulin",
+      "Estrogen"
+    ],
+    "explanation": "Insulin regulates blood sugar levels.",
+    "difficulty": "easy",
+    "question_text": "Which hormone controls blood sugar level?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "07cf3218-8399-4984-9471-4638947552e4",
+    "options": [
+      "Pinocytosis",
+      "Phagocytosis",
+      "Exocytosis",
+      "Endocytosis"
+    ],
+    "explanation": "Phagocytosis is the process of cell eating.",
+    "difficulty": "medium",
+    "question_text": "The process of cell eating is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1bac7a9f-3b74-4cd2-a33d-22814db73b91",
+    "options": [
+      "Small letter",
+      "Capital letter",
+      "Number",
+      "Symbol"
+    ],
+    "explanation": "Dominant alleles are represented by capital letters.",
+    "difficulty": "easy",
+    "question_text": "Dominant gene is represented by:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8efe2767-1f3d-409d-a4a9-c7d23dfbf3ae",
+    "options": [
+      "Mitochondria",
+      "Ribosome",
+      "Cell wall",
+      "Vacuole"
+    ],
+    "explanation": "Plant cells have cell walls ON CONFLICT (question) DO NOTHING; animal cells do not.",
+    "difficulty": "easy",
+    "question_text": "Which organelle is found in plant cells but NOT animal cells?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6fb9bb82-587c-41fd-a693-05ab2249ea66",
+    "options": [
+      "Phagocytosis",
+      "Pinocytosis",
+      "Exocytosis",
+      "Osmosis"
+    ],
+    "explanation": "Pinocytosis is the process of cells engulfing liquid.",
+    "difficulty": "medium",
+    "question_text": "The process of cell drinking is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "502e9d5f-31bb-469a-98dc-39452356f572",
+    "options": [
+      "Protein",
+      "Carbohydrate",
+      "Lipid",
+      "DNA"
+    ],
+    "explanation": "DNA (deoxyribonucleic acid) stores genetic information.",
+    "difficulty": "easy",
+    "question_text": "Which biomolecule stores genetic information?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "df510090-b78f-485d-8d35-4d6678b90566",
+    "options": [
+      "Fatty acids",
+      "Glucose",
+      "Amino acids",
+      "Nucleotides"
+    ],
+    "explanation": "Proteins are polymers made of amino acid monomers.",
+    "difficulty": "easy",
+    "question_text": "The building blocks of proteins are:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a5d0bd66-7929-4f56-8b67-e855e3328b3d",
+    "options": [
+      "Mitochondria",
+      "Chloroplasts",
+      "Vacuoles",
+      "Cell wall"
+    ],
+    "explanation": "Chlorophyll, the photosynthetic pigment, is located in chloroplasts.",
+    "difficulty": "easy",
+    "question_text": "Chlorophyll is found in:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a6d79e1f-8745-4cb2-a103-262c2480604a",
+    "options": [
+      "CΓéåH₁₂OΓéå + 6O₂",
+      "6O₂ + H₂O",
+      "CΓéåH₁₂ + 6CO₂",
+      "Glucose only"
+    ],
+    "explanation": "Photosynthesis: 6CO₂ + 6H₂O → CΓéåH₁₂OΓéå + 6O₂.",
+    "difficulty": "easy",
+    "question_text": "Photosynthesis equation: 6CO₂ + 6H₂O + light energy →",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "2711880f-fd45-4ff8-b8a9-e367eddc4925",
+    "options": [
+      "Aerobic respiration",
+      "Anaerobic respiration",
+      "Photosynthesis",
+      "Transpiration"
+    ],
+    "explanation": "Anaerobic respiration breaks down glucose without oxygen.",
+    "difficulty": "easy",
+    "question_text": "The process of releasing energy from glucose without oxygen is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "483a376b-b37a-4ca1-a3f3-f1842a87d383",
+    "options": [
+      "O",
+      "A",
+      "B",
+      "AB"
+    ],
+    "explanation": "AB blood type can receive blood from any group — universal recipient.",
+    "difficulty": "easy",
+    "question_text": "Which blood type is the universal recipient?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "6d03bed7-3315-4da1-8697-2d7aa50d64dc",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Hypothalamus",
+      "Medulla"
+    ],
+    "explanation": "The hypothalamus regulates hunger, thirst, and body temperature.",
+    "difficulty": "medium",
+    "question_text": "Which part of the brain controls hunger and thirst?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "2ffd2063-edba-40cf-9460-4da4b7c7ed1d",
+    "options": [
+      "Insulin",
+      "Glucagon",
+      "Adrenaline",
+      "Thyroxine"
+    ],
+    "explanation": "Adrenaline (epinephrine) triggers the fight-or-flight response.",
+    "difficulty": "easy",
+    "question_text": "The hormone responsible for 'fight or flight' response is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "11798a90-6103-40b6-9a63-e4693d7a6c5f",
+    "options": [
+      "Genes link together",
+      "Two alleles separate during gamete formation",
+      "All traits are dominant",
+      "Genes mutate freely"
+    ],
+    "explanation": "Law of segregation: allele pairs separate during meiosis/gamete formation.",
+    "difficulty": "medium",
+    "question_text": "Mendel's law of segregation states that:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f6a185a7-73dc-489a-a87b-d8f19aed432a",
+    "options": [
+      "Heterozygous",
+      "Homozygous",
+      "Dominant",
+      "Recessive"
+    ],
+    "explanation": "Homozygous = two identical alleles (e.g., AA or aa).",
+    "difficulty": "easy",
+    "question_text": "A genotype with two identical alleles is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2dae5e03-0fa5-49b6-ba3d-9f8f447d6071",
+    "options": [
+      "Bile production",
+      "Detoxification",
+      "Filtering blood",
+      "Pumping blood"
+    ],
+    "explanation": "Pumping blood is the function of the heart, not the liver.",
+    "difficulty": "easy",
+    "question_text": "Which is NOT a function of the liver?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "5871747e-a146-4e8f-83c9-d83dd50dea68",
+    "options": [
+      "Arteries",
+      "Veins",
+      "Capillaries",
+      "Venules"
+    ],
+    "explanation": "Capillaries are the smallest blood vessels where gas exchange occurs.",
+    "difficulty": "easy",
+    "question_text": "The smallest blood vessels are:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d8544dbb-2254-4848-8350-5a5f726f7d9c",
+    "options": [
+      "Roots",
+      "Stomata",
+      "Bark",
+      "Flowers"
+    ],
+    "explanation": "Transpiration is the evaporation of water through stomata in leaves.",
+    "difficulty": "easy",
+    "question_text": "Transpiration in plants is the loss of water through:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5b8e7b42-5088-4cfd-becd-92379689518e",
+    "options": [
+      "Natural active",
+      "Passive",
+      "Artificial active",
+      "Natural passive"
+    ],
+    "explanation": "Vaccines provide artificial active immunity by stimulating the immune system.",
+    "difficulty": "medium",
+    "question_text": "Which type of immunity is provided by vaccines?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "79e3d05e-e314-4f34-ba4a-1a1e7be21732",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Mitochondria",
+      "Chloroplast"
+    ],
+    "explanation": "Mitochondria produce most of the cell's ATP energy.",
+    "difficulty": "easy",
+    "question_text": "The powerhouse of the cell is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0588fff0-fc2c-4965-a3a7-e9a6349ec36d",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "explanation": "Scurvy is caused by Vitamin C (ascorbic acid) deficiency.",
+    "difficulty": "easy",
+    "question_text": "Scurvy is caused by deficiency of:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c3060bea-beb1-40f9-9f4a-3e63c4ff7ce9",
+    "options": [
+      "Carry oxygen",
+      "Fight infection",
+      "Aid clotting",
+      "Produce antibodies"
+    ],
+    "explanation": "Platelets (thrombocytes) are involved in blood clotting.",
+    "difficulty": "easy",
+    "question_text": "What is the role of platelets in blood?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5d7a5c42-cbc2-48d8-9c1b-7843911f11cf",
+    "options": [
+      "Pollen",
+      "Seeds",
+      "Ovules",
+      "Nectar"
+    ],
+    "explanation": "Ovules are produced in the ovary and become seeds after fertilization.",
+    "difficulty": "easy",
+    "question_text": "The ovary in flowering plants produces:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a9d671a4-aebe-42c9-ae73-84ee3a92681f",
+    "options": [
+      "Lactic acid only",
+      "CO₂ and H₂O",
+      "Ethanol only",
+      "No energy"
+    ],
+    "explanation": "Aerobic respiration: CΓéåH₁₂OΓéå + O₂ → CO₂ + H₂O + ATP.",
+    "difficulty": "easy",
+    "question_text": "Aerobic respiration produces:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "94b2cb7a-9847-4224-9b45-5f34f6f3dfbd",
+    "options": [
+      "Monera",
+      "Protista",
+      "Fungi",
+      "Plantae"
+    ],
+    "explanation": "Yeasts and mushrooms belong to the Kingdom Fungi.",
+    "difficulty": "easy",
+    "question_text": "Which kingdom includes yeasts and mushrooms?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8d655045-7090-4d86-b558-b44e210cb86a",
+    "options": [
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "explanation": "Each codon consists of 3 nucleotide bases that code for one amino acid.",
+    "difficulty": "medium",
+    "question_text": "The genetic code is read in units of _____ bases called codons.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "54b0bc00-4a17-4d37-8131-93010967038c",
+    "options": [
+      "N₂ to ammonia",
+      "CO₂ to glucose",
+      "O₂ to water",
+      "Ammonia to N₂"
+    ],
+    "explanation": "Nitrogen-fixing bacteria convert atmospheric N₂ into ammonia (NH₃).",
+    "difficulty": "medium",
+    "question_text": "Nitrogen-fixing bacteria convert:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "deb021a1-3b23-4f76-ae8a-d8431cde91be",
+    "options": [
+      "Artificial active",
+      "Natural active",
+      "Passive",
+      "Autoimmune"
+    ],
+    "explanation": "Antibodies in breast milk provide passive immunity to the infant.",
+    "difficulty": "medium",
+    "question_text": "Which type of immunity is provided by mother's milk?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "65b78d66-d46d-452f-9bc6-cdcd17648c48",
+    "options": [
+      "Carry oxygen",
+      "Fight infection",
+      "Aid clotting",
+      "Carry nutrients"
+    ],
+    "explanation": "White blood cells (leukocytes) are part of the immune system.",
+    "difficulty": "easy",
+    "question_text": "The function of white blood cells is to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1333ed5c-a155-4207-a577-8eba7c4c8917",
+    "options": [
+      "Insulin",
+      "Oestrogen",
+      "Adrenaline",
+      "Glucagon"
+    ],
+    "explanation": "Oestrogen and progesterone regulate the menstrual cycle.",
+    "difficulty": "medium",
+    "question_text": "Which hormone regulates the menstrual cycle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4cb377b5-66ef-4347-a74f-213530c4971f",
+    "options": [
+      "Trachea",
+      "Oesophagus",
+      "Pharynx",
+      "Larynx"
+    ],
+    "explanation": "The oesophagus (gullet) carries food from the mouth to the stomach.",
+    "difficulty": "easy",
+    "question_text": "The tube that carries food from mouth to stomach is the:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ab7ab2c9-6e99-496d-a40a-1564f26ff1aa",
+    "options": [
+      "Haemoglobin",
+      "Melanin",
+      "Chlorophyll",
+      "Carotene"
+    ],
+    "explanation": "Chlorophyll is the green photosynthetic pigment in chloroplasts.",
+    "difficulty": "easy",
+    "question_text": "Chloroplasts contain the green pigment:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7ef346cb-d7dd-4e66-a02e-c236e44e0290",
+    "options": [
+      "Dendrite",
+      "Axon",
+      "Synapse",
+      "Myelin sheath"
+    ],
+    "explanation": "Axons carry electrical impulses away from the neuron cell body.",
+    "difficulty": "medium",
+    "question_text": "Which part of the neuron carries impulses away from the cell body?",
+    "correct_answer_index": 1
+  }
+]

@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "mwp_type3_q4",
+    "text": "If the ratio of boys to girls in a class is 4 to 5, which of the following could be the total number of students in the class?",
+    "options": ["20", "40", "45", "50"],
+    "correctAnswer": "45",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q1",
+    "text": "A train travelling at 50 mph arrives at a station 100 miles away 20 minutes later then schedule. At what speed should in travel to arrive exactly on time?",
+    "options": ["55 mph", "56 mph", "60 mph", "65 mph"],
+    "correctAnswer": "60 mph",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q2",
+    "text": "A man does a job alone in 2 hours. His wife can do the same job alone in 4 hours. If they work together, how much would they take to finish the entire job?",
+    "options": ["3 hours", "2.5 hours", "1.5 hours", "1 hours"],
+    "correctAnswer": "1 hours",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q3",
+    "text": "The average weight of 4 people is 150 lbs. If the heaviest man is removed and his wife is substituted, the average weight drops to 140 lbs. What is the difference in the weights of the man and his wife?",
+    "options": ["10 lbs", "60 lbs", "80 lbs", "40 lbs"],
+    "correctAnswer": "80 lbs",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q4",
+    "text": "A man invests 40% of his saving in the stock market. He invests 50% of the remainder in property. If $15,000 is left over, what is the value of his total savings?",
+    "options": ["$20,000", "$50,000", "$60,000", "$90,000"],
+    "correctAnswer": "$50,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q5",
+    "text": "A carpet is fitted into a rectangular room that has dimensions 20 ft by 16 ft, leaving a margin around the carpet 3 ft wide. Find the area of the carpet?",
+    "options": ["120 sq ft", "140 sq ft", "221 sq ft", "240 sq ft"],
+    "correctAnswer": "140 sq ft",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q6",
+    "text": "Refer to question 5 above. What is the area of the margin around the carpet?",
+    "options": ["120 sq ft", "160 sq ft", "180 sq ft", "200 sq ft"],
+    "correctAnswer": "180 sq ft",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q7",
+    "text": "A map is made to a scale of 1 inch = 25 miles. If a region on a map has dimensions 2 inches by 4 inches, what is the actual area of this region?",
+    "options": ["500 sq miles", "2000 sq miles", "400 sq miles", "5000 sq miles"],
+    "correctAnswer": "5000 sq miles",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q8",
+    "text": "A man has a combination of $5 and $ 10 notes. If the total number of notes is 20, and the total value of the money is $120, what is the quantity of $10 notes?",
+    "options": ["4", "6", "8", "10"],
+    "correctAnswer": "8",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q9",
+    "text": "Carol has five more than twice the number of goldfish that Mark has. If Mark has two goldfish, how many does Carol have?",
+    "options": ["7", "9", "12", "13"],
+    "correctAnswer": "9",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q10",
+    "text": "What is the decimal value of 1000+1+1/1000?",
+    "options": ["1000.1001", "1000.101", "1001.001", "1001.01"],
+    "correctAnswer": "1001.001",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q11",
+    "text": "Eric has $3.50. He owes his mother 14% and his sister 76%. How much will he have left after he pays his debts?",
+    "options": ["$0.10", "$0.15", "$0.35", "$0.70"],
+    "correctAnswer": "$0.35",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q12",
+    "text": "The odometer in a car is improperly adjusted and registers only two miles for every three miles actually driven. If the odometer shows 48 miles, how many miles were actually driven?",
+    "options": ["64 miles", "72 miles", "144 miles", "36 miles"],
+    "correctAnswer": "72 miles",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q13",
+    "text": "The sum of the digits of 2-digit integer is 12. If the units digit is half the tens digits, then what is the number?",
+    "options": ["26", "48", "63", "84"],
+    "correctAnswer": "84",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q14",
+    "text": "What is 10% of 20% of 2/7?",
+    "options": ["0.003", "0.03", "0.045", "0.6"],
+    "correctAnswer": "0.03",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse1_q15",
+    "text": "What is the number of square tiles with area 9 required to cover a square that has a side length of 9?",
+    "options": ["3", "9", "81", "12"],
+    "correctAnswer": "9",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q1",
+    "text": "The total cost of a jeans and a T-shirt if Rs.250. If the T-shirt cost Rs.75 less tha the jeans, what is the price of the jeans?",
+    "options": ["Rs.150", "Rs.162.50", "Rs.175", "Rs.180"],
+    "correctAnswer": "Rs.162.50",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q2",
+    "text": "Maleeha spends 2/5 of her time tutoring individuals. Of the remainder, she spends 1/2 on IBA courses, 1/4 on SAT courses and the balance on GMAT courses. If she spends 9 hours on GMAT, how much time does she spend on individual tuition?",
+    "options": ["18 hours", "20 hours", "22 hours", "24 hours"],
+    "correctAnswer": "24 hours",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q3",
+    "text": "Two cars start from the same point and travel in opposite directions. After 1.5 hours, the distance between the two cars is 180 miles. If the speed of the first car is 50 mph, what is the speed of the second car?",
+    "options": ["60 mph", "70 mph", "80 mph", "90 mps"],
+    "correctAnswer": "70 mph",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q4",
+    "text": "A pair of culottes were sold at a discount of 35% and still made a profit of Rs.50. If they had been sold for a discount of 40%, they would have given a profit of Rs40. What is the original selling price of the culottes?",
+    "options": ["Rs 150", "Rs 170", "Rs 200", "Rs 235"],
+    "correctAnswer": "Rs 200",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q5",
+    "text": "What is the cost of 4 1/2 yards of cloth at $ 9 per yard?",
+    "options": ["$40.45", "$41.40", "$43", "$44.20"],
+    "correctAnswer": "$41.40",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q6",
+    "text": "A man has 4 shirts and 6 pairs of pants. What is the total number of different outfits that he can select from these?",
+    "options": ["10", "12", "24", "42"],
+    "correctAnswer": "24",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q7",
+    "text": "The rate of tax on a house is 7.5% of assessed value. The assessed value is 80% of the market value. If the tax on a certain house is $12,000, what is the market value?",
+    "options": ["$120,000", "$175,000", "$180,000", "$200,000"],
+    "correctAnswer": "$200,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q8",
+    "text": "A car's gas tank is 1/8 full. If eight gallons are added, the tank will become 2/3 full. What is the full capacity of the tank?",
+    "options": ["16 gallons", "20 gallons", "21 2/3 gallons", "24 gallons"],
+    "correctAnswer": "24 gallons",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q9",
+    "text": "John started on a 300-mile car trip with 20 gallons of gas that filled his car's tank to its capacity. He ran out of gas with 25% of the distance remaining to be covered. What was his car's petrol consumption in terms of miles per gallon?",
+    "options": ["10.25", "11.25", "12", "12.5"],
+    "correctAnswer": "12",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q10",
+    "text": "The average age of 10 boys increased by 1/4 years when one of them whose age was 13.5 years replaced by a new boy. What is the age of the new boy?",
+    "options": ["13 years", "15 years", "16 years", "18 years"],
+    "correctAnswer": "16 years",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q11",
+    "text": "There are three numbers. The first is 3 times the second, while the second is double the third. If the average of the three numbers is 21, what are the numbers?",
+    "options": ["42, 14, 7", "54, 18, 6", "27, 9, 3", "18, 6, 3"],
+    "correctAnswer": "54, 18, 6",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q12",
+    "text": "Tiles are laid on a rectangular floor with dimensions 18ft x 14ft, leaving a border of 2ft all around the floor. If the tiles cost Rs.25 per sq foot, what is the total cost of the tiles?",
+    "options": ["Rs 2895", "Rs 3000", "Rs 3920", "Rs 4000"],
+    "correctAnswer": "Rs 3920",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q13",
+    "text": "If Rs.450 amounts to Rs.540 in 4 years at simple interest, then what sum of money will amount to Rs.637.5 in 5 years at the same rate of interest?",
+    "options": ["Rs.450", "Rs.500", "Rs.505", "Rs.510"],
+    "correctAnswer": "Rs.510",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q14",
+    "text": "How many students are there in a class if 2 students remain after 4 equal rows of seats are filled and one student remains after 3 equal rows of seats are filled?",
+    "options": ["7", "28", "34", "36"],
+    "correctAnswer": "28",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse2_q15",
+    "text": "A boy walked for 2/5 hours and then hitched a ride for 3/4 of an hour. What fraction of an hour did the entire trip take?",
+    "options": ["2/5 hours", "23/20 hours", "5/6 hours", "1/2 hours"],
+    "correctAnswer": "5/6 hours",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q1",
+    "text": "Egg cost 90 cents per dozen while peppers cost 20 cents each. If an omelet consists of 3 eggs and 1/4 of a pepper, what will be the cost of making eight omelets?",
+    "options": ["$ 1.3", "$ 1.90", "$ 2.10", "$ 2.20"],
+    "correctAnswer": "$ 2.20",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q2",
+    "text": "The distance between City A and City B is 185 km. A bus travels the first 85 km in 2 hours. In how much time should it travel the remaining distance so that its average speed for the entire journey is 50 km/hr?",
+    "options": ["60 minutes", "75 minutes", "94 minutes", "102 minutes"],
+    "correctAnswer": "102 minutes",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q3",
+    "text": "A train traveled for 2 hours at the rate of 30 mph. Then in the next three hours it covered 60 miles. What is the average speed of the train for the entire journey in terms of mph?",
+    "options": ["18 mph", "45 mph", "24 mph", "25 mph"],
+    "correctAnswer": "24 mph",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q4",
+    "text": "The population of certain town was 54,000 in the year 2000. Since then, it has grown by 2/3 rds. What is the population now?",
+    "options": ["26,000", "48,000", "72,000", "90,000"],
+    "correctAnswer": "90,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q5",
+    "text": "A car's gas tank is 1/8 full. When 14 gallons are added, the tank becomes completely full. What is the capacity of the tank?",
+    "options": ["14 gallons", "16 gallons", "18 gallons", "20 gallons"],
+    "correctAnswer": "16 gallons",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q6",
+    "text": "Wooden boards are sold only in lengths of multiples of 2 feet. The shortest board is 6 feet and the longest is 24 feet. A carpenter needs many of such boards exactly 5 1/2 feet in length. To minimize wastage, what length should be order?",
+    "options": ["6 feet", "8 feet", "22 feet", "24 feet"],
+    "correctAnswer": "6 feet",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q7",
+    "text": "A radio was sold at a 20% discount for a price of Rs.118.80. What was the original selling price of this radio?",
+    "options": ["Rs.148.60", "Rs.148.50", "Rs.142.56", "Rs.132.40"],
+    "correctAnswer": "Rs.148.50",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse3_q8",
+    "text": "A man insures 80% of his property and pays 2 1/2% premium. If the amount of premium is 348, what is the total value of his property?",
+    "options": ["$ 19,000", "$ 18,000", "$ 18,400", "$ 17,400"],
+    "correctAnswer": "$ 17,400",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q1",
+    "text": "A man jogged for 6 miles and then walked for 4 miles. His jogging speed was twice his walking speed. If the total time taken for the journey was 2.5 hours, find his jogging speed?",
+    "options": ["4.5 mph", "5 mph", "5.6 mph", "6 mph"],
+    "correctAnswer": "5.6 mph",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q2",
+    "text": "Twenty tons of mixture that contains sand & cement in the ratio of 60:40 is mixed with 30 tons of another mixture that contains sand & cement in the ration of 30:70. What is the amount of cement in the final mixture (in tons)?",
+    "options": ["20", "25", "27", "29"],
+    "correctAnswer": "29",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q3",
+    "text": "The population of a town has been increasing at the rate of 10% per annum. If the population right now is 30,250, what was the population 2 years ago?",
+    "options": ["20,000", "22,500", "25,000", "27,500"],
+    "correctAnswer": "25,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q4",
+    "text": "Mr. X sold a car to Mr.Y at a profit of 25%. Mr.Y sold it to Mr. Z at a profit of 20%. If Mr. Z paid a price of Rs.90,000, what was the original cost of the car to Mr. X?",
+    "options": ["Rs 40,000", "Rs 50,000", "Rs 60,000", "Rs 70,000"],
+    "correctAnswer": "Rs 60,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q5",
+    "text": "A certain number of men can do a job in 20 days. If 5 more men are hired, the job can be done in 16 days. How many men were there originally?",
+    "options": ["15", "18", "20", "25"],
+    "correctAnswer": "20",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q6",
+    "text": "A man rows a certain distance upstream in 3 hours. He rows the same distance downstream in 2 hours. If the speed of the boat in still water is 5 km/hr, what is the speed of the stream (in km/hr)?",
+    "options": ["1/22", "3/4", "1", "1 1/2"],
+    "correctAnswer": "1",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q7",
+    "text": "A 5 kg cake is divided in 3 parts in the ratio of 5:3:2. What is the weight of the smallest piece in grams?",
+    "options": ["500", "2,000", "1,000", "1,500"],
+    "correctAnswer": "1,000",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q8",
+    "text": "Two pipes can fill a tank in 20 minutes and 15 minutes respectively. A third can empty a full tank in 10 minutes. If the tank is empty, and all three pipes are opened together, how much time will it take to fill the tank completely? (in minutes)",
+    "options": ["30", "40", "50", "60"],
+    "correctAnswer": "60",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse4_q9",
+    "text": "Five men earn as much as six women. Three women earn as much as five boys. Four boys earn as much as six girls. If a girl same Rs 500 per month, how much does a man earn?",
+    "options": ["Rs 800", "Rs 1000", "Rs 1,200", "Rs 1,500"],
+    "correctAnswer": "Rs 1,500",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q1",
+    "text": "A cow walks down a path 500 yards long is 20 minutes, and is then chased up the same distance by a bull in 5 minutes. What is the average speed of the cow for the entire distance in terms of yards / minute?",
+    "options": ["20", "30", "40", "50"],
+    "correctAnswer": "40",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q2",
+    "text": "Pipes A and B can alone fill a tank in 10 minutes and 20 minutes respectively, while pipe C can empty the same full tank in 15 minutes. If the tank is empty, and all three pipes are opened together, how much time will it take to fill the tank (in minutes)?",
+    "options": ["10", "12", "15", "18"],
+    "correctAnswer": "12",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q3",
+    "text": "Juice A contains 15% pure juice, while juice B contains 60% pure juice. If 20 gallons of A are mixed with 30 gallons of B, what will be the percentage concentration of juice in the mixture?",
+    "options": ["30%", "40%", "42%", "46%"],
+    "correctAnswer": "42%",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q4",
+    "text": "A man can mow an entire lawn alone in 2 hours. His son takes three times as long for the same job. If the man starts off the job and works for 1 1/2 hour, after which his son takes over, how many hours will the son take to finish the remaining job?",
+    "options": ["1 1/2 hour", "1 hour", "1 1/2 hours", "2 hours"],
+    "correctAnswer": "1 1/2 hours",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q5",
+    "text": "If a 15 lbs weight hangs from a bar 5 feet from the fulcrum (balancing point), how far from the fulcrum should a weight of 40 lbs be hung so as a balance the system?",
+    "options": ["1 foot", "1 foot 6 inches", "1 foot 10.5 inches", "13 feet 4 inches"],
+    "correctAnswer": "1 foot 10.5 inches",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q6",
+    "text": "A watch is priced to yield a 20% profit. It is then re-priced to yield a 40% profit. If the difference in the profit in both cases is Rs.440, what is the cost of the watch?",
+    "options": ["Rs 1200", "Rs 3080", "Rs 2640", "Rs 2200"],
+    "correctAnswer": "Rs 2200",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q7",
+    "text": "Four men have an average weight of 180lbs. Their respective wives have an average weight of 120 lbs. Their eight children have an average weight of 60 lbs. What is the average weight of a family of one man, his wife, and two kids?",
+    "options": ["400 lbs", "420 lbs", "440lbs", "460 lbs"],
+    "correctAnswer": "440lbs",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q8",
+    "text": "A man is three times as old as his son today. Ten years ago, he was twenty years older than his son. What is the man's age today?",
+    "options": ["30 years", "40 years", "50 years", "60 years"],
+    "correctAnswer": "30 years",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "pse5_q9",
+    "text": "A man has a total of 40 notes which are all either $ 20 or $ 100. If the average value of a note is $40, how many $20 notes does he have?",
+    "options": ["10", "20", "30", "35"],
+    "correctAnswer": "30",
+    "explanation": "",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "nst1_q1",
+    "text": "1/4 1/9 1/16 1/81",
+    "options": ["1/1536", "1/256", "1/289", "1/196"],
+    "correctAnswer": "1/256",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q2",
+    "text": "2 4 8 16",
+    "options": ["64", "32", "26", "24"],
+    "correctAnswer": "32",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q3",
+    "text": "1 8 27 64",
+    "options": ["81", "115", "125", "164"],
+    "correctAnswer": "125",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q4",
+    "text": "2 3 6 18 108",
+    "options": ["114", "216", "1944", "1865"],
+    "correctAnswer": "1944",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q5",
+    "text": "9/2 4 3&1/2 3 5/2 2",
+    "options": ["7/2", "3/2", "1", "1/2"],
+    "correctAnswer": "3/2",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q6",
+    "text": "1 3 5 7 9 11",
+    "options": ["12", "15", "13", "17"],
+    "correctAnswer": "13",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q7",
+    "text": "1 7 17 31 49 71",
+    "options": ["85", "97", "107", "87"],
+    "correctAnswer": "97",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q8",
+    "text": "1 3 7 9 13 15 17",
+    "options": ["19", "21", "23"],
+    "correctAnswer": "19",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q9",
+    "text": "126 62 30 14 6 2",
+    "options": ["12", "1", "-1", "0"],
+    "correctAnswer": "-1",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q10",
+    "text": "3 7 11 15 19",
+    "options": ["25", "27", "31", "29"],
+    "correctAnswer": "27",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q11",
+    "text": "1 100 2 50",
+    "options": ["25", "12.5", "12", "8"],
+    "correctAnswer": "25",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q12",
+    "text": "2 6 14 30",
+    "options": ["28", "62", "56", "70"],
+    "correctAnswer": "62",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q13",
+    "text": "32 352 3872",
+    "options": ["56725", "48744", "44576", "42592"],
+    "correctAnswer": "42592",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q14",
+    "text": "5 19 12 26 19",
+    "options": ["35", "23", "33", "39"],
+    "correctAnswer": "33",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst1_q15",
+    "text": "2064 1032 516 258",
+    "options": ["96", "196", "129", "206"],
+    "correctAnswer": "129",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q1",
+    "text": "7 11 16 22 29",
+    "options": ["35", "37", "38", "39"],
+    "correctAnswer": "37",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q2",
+    "text": "4 7 10 13 16 19",
+    "options": ["24", "20", "22", "21"],
+    "correctAnswer": "22",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q3",
+    "text": "3.5 2.8 2.3 2",
+    "options": ["1.6", "1.7", "1.8", "1.9"],
+    "correctAnswer": "1.7",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q4",
+    "text": "2 6 11 18 28 42",
+    "options": ["53", "56", "61", "64"],
+    "correctAnswer": "61",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q5",
+    "text": "7 10 30 33 99 102",
+    "options": ["162", "216", "266", "306"],
+    "correctAnswer": "306",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q6",
+    "text": "5 7 11 19",
+    "options": ["27", "34", "35", "39"],
+    "correctAnswer": "35",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q7",
+    "text": "59 45 31 17 3",
+    "options": ["-17", "14", "0", "-11"],
+    "correctAnswer": "-11",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q8",
+    "text": "3 12 27 48",
+    "options": ["53", "65", "75", "93"],
+    "correctAnswer": "75",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q9",
+    "text": "-31 -26 -20 -13 -5",
+    "options": ["-1", "3", "4", "5"],
+    "correctAnswer": "3",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q10",
+    "text": "7 10 13 16",
+    "options": ["22", "21", "25", "19"],
+    "correctAnswer": "19",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q11",
+    "text": "125 5 64 27",
+    "options": ["3", "8", "4", "1"],
+    "correctAnswer": "4",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q12",
+    "text": "3 24 192",
+    "options": ["488", "756", "1356", "1536"],
+    "correctAnswer": "1536",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q13",
+    "text": "7 22 17 28 28 35",
+    "options": ["42", "43", "40", "39"],
+    "correctAnswer": "40",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q14",
+    "text": "12 13 18 19 24 25",
+    "options": ["30", "28", "26", "24"],
+    "correctAnswer": "24",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst2_q15",
+    "text": "91 78 65 52",
+    "options": ["27", "30", "33", "39"],
+    "correctAnswer": "39",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q1",
+    "text": "18 21 16 19 14",
+    "options": ["12", "17", "13", "10"],
+    "correctAnswer": "17",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q2",
+    "text": "2 6 18 54",
+    "options": ["102", "78", "162", "144"],
+    "correctAnswer": "162",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q3",
+    "text": "5 9 17 33",
+    "options": ["57", "62", "39", "65"],
+    "correctAnswer": "65",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q4",
+    "text": "3 4 8 9 13 14",
+    "options": ["18", "20", "22", "24"],
+    "correctAnswer": "18",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q5",
+    "text": "9 14 20",
+    "options": ["23", "25", "27", "31"],
+    "correctAnswer": "27",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q6",
+    "text": "8 11 16 24 34 47",
+    "options": ["52", "62", "66", "72"],
+    "correctAnswer": "62",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q7",
+    "text": "2 6 14 30",
+    "options": ["60", "74", "64", "62"],
+    "correctAnswer": "62",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q8",
+    "text": "1 6 15 28",
+    "options": ["45", "35", "51", "44"],
+    "correctAnswer": "44",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q9",
+    "text": "8 10 14 20 28",
+    "options": ["50", "48", "54", "60"],
+    "correctAnswer": "48",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q10",
+    "text": "12 19 32 46",
+    "options": ["86", "94", "100", "102"],
+    "correctAnswer": "102",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q11",
+    "text": "1 3 9 27 81",
+    "options": ["243", "729", "486", "576"],
+    "correctAnswer": "486",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q12",
+    "text": "16 15 13 10 6 1",
+    "options": ["5", "4", "0", "-5"],
+    "correctAnswer": "0",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q13",
+    "text": "17 15 13 11 9 7",
+    "options": ["3", "1", "0", "5"],
+    "correctAnswer": "5",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q14",
+    "text": "1/2 1/8 1/32 1/128",
+    "options": ["1/144", "1/176", "1/396", "1/512"],
+    "correctAnswer": "1/512",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst3_q15",
+    "text": "7 16 10 20 13 24",
+    "options": ["26", "28", "16", "12"],
+    "correctAnswer": "12",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q1",
+    "text": "13 15 17",
+    "options": ["19", "21", "23", "25"],
+    "correctAnswer": "19",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q2",
+    "text": "49 56 63 70",
+    "options": ["73", "75", "77", "79"],
+    "correctAnswer": "77",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q3",
+    "text": "13 15 12 14",
+    "options": ["9", "11", "12", "13"],
+    "correctAnswer": "11",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q4",
+    "text": "7 14 56 336",
+    "options": ["672", "1344", "2884", "2688"],
+    "correctAnswer": "2688",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q5",
+    "text": "45 44 47 48 43",
+    "options": ["52", "48", "46", "56"],
+    "correctAnswer": "48",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q6",
+    "text": "1 4 16 64",
+    "options": ["128", "256", "512", "1024"],
+    "correctAnswer": "256",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q7",
+    "text": "1/9 1/25 1/49",
+    "options": ["1/64", "1/99", "1/81", "1/66"],
+    "correctAnswer": "1/81",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q8",
+    "text": "0.1 0.6 1.1",
+    "options": ["1.9", "1.95", "2.2", "2.1"],
+    "correctAnswer": "2.1",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q9",
+    "text": "7 8 6 5 4",
+    "options": ["5", "4", "6", "8"],
+    "correctAnswer": "4",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q10",
+    "text": "7 9 11",
+    "options": ["11", "13", "9", "7"],
+    "correctAnswer": "13",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q11",
+    "text": "285 253 221 189",
+    "options": ["143", "147", "153", "157"],
+    "correctAnswer": "157",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q12",
+    "text": "2 4 9 18 32 52",
+    "options": ["67", "73", "79", "81"],
+    "correctAnswer": "79",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q13",
+    "text": "7 10 15 22",
+    "options": ["23", "27", "29", "31"],
+    "correctAnswer": "31",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q14",
+    "text": "10 50 13 54 16",
+    "options": ["48", "62", "56", "58"],
+    "correctAnswer": "58",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst4_q15",
+    "text": "2 4 10 20 13",
+    "options": ["16", "22", "26", "24"],
+    "correctAnswer": "26",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q1",
+    "text": "6 1 11 6 16 11",
+    "options": ["6", "21", "16", "26"],
+    "correctAnswer": "16",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q2",
+    "text": "17 25 35 47 61 77",
+    "options": ["87", "97", "91", "95"],
+    "correctAnswer": "95",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q3",
+    "text": "80 20 40 10 20 5",
+    "options": ["10", "20", "5", "15"],
+    "correctAnswer": "10",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q4",
+    "text": "0 2 8 18 32 50",
+    "options": ["80", "74", "72", "70"],
+    "correctAnswer": "70",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q5",
+    "text": "8 9 27 16 64 25",
+    "options": ["35", "85", "125", "30"],
+    "correctAnswer": "30",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q6",
+    "text": "3.5 7 17.2 52.5",
+    "options": ["183.75", "150", "125.5", "5"],
+    "correctAnswer": "150",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q7",
+    "text": "25 100 50 50 75",
+    "options": ["23", "25", "100", "50"],
+    "correctAnswer": "50",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q8",
+    "text": "4 14 44 134",
+    "options": ["1764", "1214", "1232", "1204"],
+    "correctAnswer": "1204",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q9",
+    "text": "32 28 36 24 40 20",
+    "options": ["24", "16", "22", "44"],
+    "correctAnswer": "44",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q10",
+    "text": "3 5 8 13 21",
+    "options": ["34", "33", "35", "23"],
+    "correctAnswer": "34",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q11",
+    "text": "85 80 85 90 85 90",
+    "options": ["90", "85", "100", "95"],
+    "correctAnswer": "95",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q12",
+    "text": "-2 -3 -1 -4 0 -5",
+    "options": ["0", "-6", "1", "-1"],
+    "correctAnswer": "-1",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q13",
+    "text": "225 30 100 20 144",
+    "options": ["24", "10", "5", "15"],
+    "correctAnswer": "15",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q14",
+    "text": "54000 9000 1800 450 150",
+    "options": ["100", "50", "75", "25"],
+    "correctAnswer": "25",
+    "explanation": "",
+    "subject": "iq"
+  },
+  {
+    "id": "nst5_q15",
+    "text": "-1 1 4 4 -27 27",
+    "options": ["64", "-64", "256", "-256"],
+    "correctAnswer": "-256",
+    "explanation": "",
+    "subject": "iq"
+  }
+]

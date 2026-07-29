@@ -14,8 +14,8 @@ export const generateCompletion = async (prompt, schema = null) => {
   }
   
   try {
-    // Use gemini-1.5-flash which is fast and supports JSON schema
-    const modelConfig = { model: 'gemini-1.5-flash' };
+    // Use gemini-2.5-flash which is fast and supports JSON schema
+    const modelConfig = { model: 'gemini-2.5-flash' };
     
     if (schema) {
       modelConfig.generationConfig = {
@@ -45,11 +45,53 @@ export const generateCompletion = async (prompt, schema = null) => {
     return schema ? null : "Error generating AI response.";
   }
 };
+
+export const generateOpenRouterCompletion = async (prompt, modelName = "gpt-oss-120b", jsonMode = false) => {
+  const openRouterKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+  if (!openRouterKey) {
+    console.warn("OpenRouter API Key missing. Returning null.");
+    return null;
+  }
+
+  try {
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${openRouterKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: modelName,
+        messages: [{ role: "user", content: prompt }],
+        response_format: jsonMode ? { type: "json_object" } : undefined
+      })
+    });
+
+    const data = await response.json();
+    if (data.choices && data.choices.length > 0) {
+      const text = data.choices[0].message.content;
+      if (jsonMode) {
+        try {
+          const cleanJson = text.replace(/```json\n?|```\n?/g, '').trim();
+          return JSON.parse(cleanJson);
+        } catch (e) {
+          console.error("Failed to parse OpenRouter JSON response:", text);
+          return null;
+        }
+      }
+      return text;
+    }
+    return null;
+  } catch (error) {
+    console.error("Error generating OpenRouter completion:", error);
+    return null;
+  }
+};
 export const verifyPaymentScreenshot = async (base64Image, planPrice) => {
   if (!apiKey) return { status: 'pending', reason: 'No API key' };
   
   try {
-    const model = aiClient.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = aiClient.getGenerativeModel({ model: 'gemini-2.5-flash' });
     const prompt = `You are an advanced payment verification assistant. Analyze this screenshot of a payment receipt. 
     1. Check if the payment amount exactly matches Rs. ${planPrice}.
     2. Check if the payment status is successful.

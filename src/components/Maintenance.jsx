@@ -42,7 +42,7 @@ export default function Maintenance() {
           </motion.h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto leading-relaxed">
             We are performing essential maintenance to improve your experience. 
-            NAT Prep will be back online shortly with new features and better stability.
+            Entry Hive will be back online shortly with new features and better stability.
           </p>
         </div>
 

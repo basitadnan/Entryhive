@@ -1,6 +1,6 @@
 {
-  "appId": "com.natprep.app",
-  "appName": "NAT Preparation",
+  "appId": "com.entryhive.app",
+  "appName": "Entry Hivearation",
   "webDir": "dist",
   "bundledWebRuntime": false
 }

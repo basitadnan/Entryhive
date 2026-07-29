@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import { ArrowLeft, User, Calendar, Crown, Lock, Bell, CheckCircle } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { ArrowLeft, User, Calendar, Crown, Lock, Bell, CheckCircle, Camera, Edit2 } from 'lucide-react';
 import { base44 } from '@/lib/dbClient';
 import { toast } from 'sonner';
 import { format, differenceInDays, isToday, isTomorrow } from 'date-fns';
+import { motion } from 'framer-motion';
 
 function getTestCountdown(testDate) {
   if (!testDate) return null;
@@ -19,12 +18,12 @@ function getTestCountdown(testDate) {
 
 function getCountdownMessage(days) {
   if (days < 0) return { text: `Your test was ${Math.abs(days)} day(s) ago.`, emoji: '📅', color: 'text-muted-foreground' };
-  if (days === 0) return { text: "🎯 Today is your test day! You've got this!", emoji: '🎯', color: 'text-green-400' };
-  if (days === 1) return { text: "🔔 Good luck tomorrow! Quick-revise your flashcards tonight!", emoji: '🔔', color: 'text-amber-400' };
-  if (days <= 3) return { text: `⚡ ${days} days left! Revise your weak areas and flashcards.`, emoji: '⚡', color: 'text-amber-400' };
-  if (days <= 7) return { text: `📚 ${days} days to go! Keep practicing mock tests.`, emoji: '📚', color: 'text-blue-400' };
-  if (days <= 14) return { text: `💪 ${days} days left! You're on the right track.`, emoji: '💪', color: 'text-primary' };
-  return { text: `🗓️ ${days} days until your test. Stay consistent!`, emoji: '🗓️', color: 'text-muted-foreground' };
+  if (days === 0) return { text: "Today is your test day! You've got this!", emoji: '🎯', color: 'text-green-500' };
+  if (days === 1) return { text: "Good luck tomorrow! Quick-revise your flashcards tonight!", emoji: '🔔', color: 'text-amber-500' };
+  if (days <= 3) return { text: `${days} days left! Revise your weak areas and flashcards.`, emoji: '⚡', color: 'text-amber-500' };
+  if (days <= 7) return { text: `${days} days to go! Keep practicing mock tests.`, emoji: '📚', color: 'text-blue-500' };
+  if (days <= 14) return { text: `${days} days left! You're on the right track.`, emoji: '💪', color: 'text-primary' };
+  return { text: `${days} days until your test. Stay consistent!`, emoji: '🗓️', color: 'text-muted-foreground' };
 }
 
 export default function Profile() {
@@ -63,36 +62,42 @@ export default function Profile() {
   }[user?.nat_group] || 'No group selected';
 
   return (
-    <div className="p-4 space-y-5">
-      <div className="flex items-center gap-3">
-        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-          <ArrowLeft className="w-4 h-4" /> Back
-        </button>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <User className="w-6 h-6 text-primary" />
+    <div className="p-6 max-w-2xl mx-auto space-y-8 pb-24">
+      
+      {/* Header */}
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+          <User className="w-6 h-6 text-primary" />
+        </div>
         <div>
-          <h1 className="text-xl font-bold">My Profile</h1>
+          <h1 className="font-display text-2xl font-bold text-foreground">My Profile</h1>
           <p className="text-sm text-muted-foreground">Account info & settings</p>
         </div>
       </div>
 
+      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors mb-4 inline-flex">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+      </button>
+
       {/* User Info */}
-      <Card className="p-5 space-y-3">
-        <div className="flex items-center gap-4">
-          <div className="relative group">
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-card rounded-3xl border border-border p-6 sm:p-8 shadow-sm space-y-6"
+      >
+        <div className="flex flex-col sm:flex-row items-center gap-6">
+          <div className="relative group shrink-0">
             {user?.avatar_url ? (
-              <img src={user.avatar_url} alt="Profile" className="w-16 h-16 rounded-full object-cover border-2 border-primary" />
+              <img src={user.avatar_url} alt="Profile" className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-background shadow-lg ring-2 ring-primary/20" />
             ) : (
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary/50">
-                <span className="text-2xl font-bold text-primary">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-primary/10 flex items-center justify-center border-4 border-background shadow-lg ring-2 ring-primary/20">
+                <span className="font-display text-4xl sm:text-5xl font-bold text-primary">
                   {(user?.full_name || user?.email || 'U')[0].toUpperCase()}
                 </span>
               </div>
             )}
-            <label className="absolute inset-0 bg-black/60 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity">
-              <span className="text-[10px] font-bold uppercase text-white">Edit</span>
+            <label className="absolute bottom-0 right-0 bg-primary text-primary-foreground p-2 rounded-full shadow-lg cursor-pointer hover:bg-primary-dark transition-colors border-2 border-background group-hover:scale-110">
+              <Camera className="w-4 h-4" />
               <input type="file" accept="image/jpeg, image/png, image/webp" className="hidden" onChange={(e) => {
                 const file = e.target.files[0];
                 if (!file) return;
@@ -102,11 +107,10 @@ export default function Profile() {
                   img.onload = async () => {
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
-                    // Resize to 150x150 for super small Base64 size
                     canvas.width = 150;
                     canvas.height = 150;
                     ctx.drawImage(img, 0, 0, 150, 150);
-                    const compressedBase64 = canvas.toDataURL('image/jpeg', 0.6); // 60% quality
+                    const compressedBase64 = canvas.toDataURL('image/jpeg', 0.6);
                     
                     toast.loading("Updating profile picture...", { id: 'avatar' });
                     const newMe = await base44.auth.updateMe({ avatar_url: compressedBase64 });
@@ -120,135 +124,144 @@ export default function Profile() {
               }} />
             </label>
           </div>
-          <div>
-            <p className="font-semibold text-lg">{user?.full_name || 'User'}</p>
-            <p className="text-sm text-muted-foreground">{user?.email}</p>
+          
+          <div className="flex-1 text-center sm:text-left">
+            <h2 className="font-display text-2xl font-bold text-foreground mb-1">{user?.full_name || 'User'}</h2>
+            <p className="text-muted-foreground">{user?.email}</p>
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4">
+              <span className="bg-secondary text-foreground text-xs font-bold px-3 py-1.5 rounded-lg border border-border">
+                {groupLabel}
+              </span>
+              {isPremium ? (
+                <span className="bg-gradient-to-r from-amber-500 to-amber-400 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm flex items-center gap-1.5">
+                  <Crown className="w-3.5 h-3.5" /> Premium Plan
+                </span>
+              ) : (
+                <button onClick={() => navigate('/premium')} className="bg-[hsl(var(--accent))]/10 text-[hsl(var(--accent))] border border-[hsl(var(--accent))]/20 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-[hsl(var(--accent))]/20 transition-colors">
+                  Upgrade Plan
+                </button>
+              )}
+            </div>
           </div>
         </div>
-        <div className="flex items-center justify-between pt-2 border-t border-border">
-          <div>
-            <p className="text-xs text-muted-foreground">NAT Group</p>
-            <p className="text-sm font-medium mt-0.5">{groupLabel}</p>
+        
+        <div className="pt-6 border-t border-border grid grid-cols-2 gap-4">
+          <div className="bg-secondary rounded-2xl p-4 text-center border border-border">
+            <span className="text-2xl mb-1 block">🔥</span>
+            <p className="font-display text-xl font-bold text-foreground">{user?.streak || 1}</p>
+            <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider mt-1">Day Streak</p>
           </div>
-          {isPremium ? (
-            <span className="bg-gradient-to-r from-primary to-emerald-400 text-xs font-semibold px-3 py-1 rounded-full text-white flex items-center gap-1">
-              <Crown className="w-3 h-3" /> Premium
-            </span>
-          ) : (
-            <Button size="sm" variant="outline" onClick={() => navigate('/premium')} className="text-xs border-primary/50 text-primary">
-              Upgrade
-            </Button>
-          )}
+          <div className="bg-secondary rounded-2xl p-4 text-center border border-border">
+            <span className="text-2xl mb-1 block">🎯</span>
+            <p className="font-display text-xl font-bold text-foreground">{user?.mock_count || 0}</p>
+            <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider mt-1">Mocks Taken</p>
+          </div>
         </div>
-        <div className="flex items-center justify-between pt-2 border-t border-border text-sm">
-          <span className="text-muted-foreground">🔥 Streak</span>
-          <span className="font-semibold">{user?.streak || 1} day{(user?.streak || 1) !== 1 ? 's' : ''}</span>
-        </div>
-      </Card>
+      </motion.div>
 
       {/* Test Date Section */}
-      <Card className={`p-5 space-y-4 ${!isPremium ? 'opacity-70' : ''}`}>
-        <div className="flex items-center gap-3">
-          <Calendar className={`w-5 h-5 ${isPremium ? 'text-amber-400' : 'text-muted-foreground'}`} />
-          <div className="flex-1">
-            <h3 className="font-semibold">NAT Test Date</h3>
-            <p className="text-xs text-muted-foreground">Get a reminder 1 day before your test</p>
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="bg-card rounded-3xl border border-border p-6 sm:p-8 shadow-sm space-y-6"
+      >
+        <div className="flex items-start gap-4">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${isPremium ? 'bg-amber-500/10 text-amber-500' : 'bg-secondary text-muted-foreground'}`}>
+            <Calendar className="w-5 h-5" />
           </div>
-          {!isPremium && <Lock className="w-4 h-4 text-muted-foreground" />}
+          <div>
+            <h3 className="font-display font-bold text-foreground text-lg">Test Date Countdown</h3>
+            <p className="text-sm text-muted-foreground">Set your NAT test date to get custom reminders.</p>
+          </div>
         </div>
 
-        {!isPremium ? (
-          <div className="bg-secondary rounded-xl p-4 text-center space-y-2">
-            <p className="text-sm text-muted-foreground">This feature is for premium users only.</p>
-            <Button size="sm" onClick={() => navigate('/premium')} className="text-xs">
-              Unlock Premium
-            </Button>
-          </div>
-        ) : (
-          <>
+        {isPremium ? (
+          <div className="space-y-6">
             {/* Countdown Banner */}
             {message && testDate && (
-              <div className={`rounded-xl p-4 bg-secondary border border-border`}>
-                <p className={`text-sm font-medium ${message.color}`}>{message.text}</p>
-                {countdown === 1 && (
-                  <button
-                    onClick={() => navigate('/flashcards')}
-                    className="text-xs text-primary mt-2 underline"
-                  >
-                    → Open Flashcards now
-                  </button>
-                )}
+              <div className={`rounded-2xl p-4 border flex items-start gap-3 ${message.color.replace('text-', 'bg-').replace('-400', '-500/10').replace('-500', '-500/10')} ${message.color.replace('text-', 'border-').replace('-400', '-500/20').replace('-500', '-500/20')}`}>
+                <span className="text-2xl leading-none mt-0.5">{message.emoji}</span>
+                <div>
+                  <p className={`text-sm font-bold ${message.color}`}>{message.text}</p>
+                  {countdown === 1 && (
+                    <button onClick={() => navigate('/flashcards')} className="text-xs text-primary mt-2 font-bold underline hover:no-underline">
+                      → Open Flashcards now
+                    </button>
+                  )}
+                </div>
               </div>
             )}
 
-            <div className="space-y-3">
-              <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Your test date</label>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex-1">
                 <input
                   type="date"
                   value={testDate}
                   onChange={(e) => setTestDate(e.target.value)}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full bg-secondary border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground"
                 />
               </div>
               <div className="flex gap-2">
-                <Button
+                <button
                   onClick={handleSaveDate}
                   disabled={!testDate || saving}
-                  className="flex-1 h-9 text-sm"
+                  className={`px-6 py-3 rounded-xl font-bold flex items-center justify-center transition-all ${saved ? 'bg-green-500/10 text-green-500 border border-green-500/20' : 'bg-primary text-primary-foreground hover:bg-primary-dark shadow-lg shadow-primary/20'} disabled:opacity-50`}
                 >
-                  {saved ? (
-                    <><CheckCircle className="w-4 h-4 mr-1" /> Saved!</>
-                  ) : saving ? 'Saving...' : (
-                    <><Calendar className="w-4 h-4 mr-1" /> Save Date</>
-                  )}
-                </Button>
+                  {saved ? <><CheckCircle className="w-4 h-4 mr-2" /> Saved</> : saving ? 'Saving...' : 'Save Date'}
+                </button>
                 {(user?.test_date || testDate) && (
-                  <Button
-                    variant="outline"
+                  <button
                     onClick={handleRemoveDate}
-                    className="text-sm text-destructive border-destructive/30 hover:bg-destructive/10"
+                    className="px-4 py-3 rounded-xl bg-secondary text-muted-foreground border border-border hover:bg-secondary/80 transition-colors"
                   >
-                    Remove
-                  </Button>
+                    Clear
+                  </button>
                 )}
               </div>
             </div>
 
-            {/* How it works */}
-            <div className="bg-primary/5 border border-primary/20 rounded-xl p-3 space-y-1.5">
-              <p className="text-xs font-semibold text-primary flex items-center gap-1">
-                <Bell className="w-3 h-3" /> How it works
+            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4">
+              <p className="text-xs font-bold text-primary flex items-center gap-2 mb-3 uppercase tracking-wider">
+                <Bell className="w-3.5 h-3.5" /> How it works
               </p>
-              <ul className="text-xs text-muted-foreground space-y-1">
-                <li>• Set your NAT test date above</li>
-                <li>• The app shows a countdown each time you open it</li>
-                <li>• 1 day before your test: a special "Good Luck" banner appears with a reminder to revise flashcards</li>
-                <li>• On test day: a special motivational message greets you!</li>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-1.5 shrink-0" /> Set your NAT test date above</li>
+                <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-1.5 shrink-0" /> The app shows a countdown each time you open it</li>
+                <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary/50 mt-1.5 shrink-0" /> 1 day before your test: a special reminder to revise flashcards</li>
               </ul>
             </div>
-          </>
-        )}
-      </Card>
-
-      {/* Change Group */}
-      <Card className="p-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="font-medium text-sm">Change NAT Group</p>
-            <p className="text-xs text-muted-foreground">Switch to a different track</p>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            className="text-xs"
-            onClick={() => navigate('/select-group')}
-          >
-            Change
-          </Button>
+        ) : (
+          <div className="bg-card border border-border p-6 rounded-2xl shadow-sm text-center max-w-sm mx-auto mt-4">
+            <Lock className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+            <h3 className="font-display font-bold text-foreground mb-2">Premium Feature</h3>
+            <p className="text-sm text-muted-foreground mb-4">Set your test date and get personalized reminders and countdowns.</p>
+            <button onClick={() => navigate('/premium')} className="btn-primary w-full py-2.5 rounded-xl text-sm">
+              Unlock Premium
+            </button>
+          </div>
+        )}
+      </motion.div>
+
+      {/* Settings */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="bg-card rounded-3xl border border-border p-6 shadow-sm flex items-center justify-between group hover:border-primary/50 transition-colors cursor-pointer"
+        onClick={() => navigate('/select-group')}
+      >
+        <div>
+          <h3 className="font-display font-bold text-foreground text-lg mb-1">Study Track</h3>
+          <p className="text-sm text-muted-foreground">Currently enrolled in {groupLabel}</p>
         </div>
-      </Card>
+        <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors shrink-0">
+          <Edit2 className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+        </div>
+      </motion.div>
+
     </div>
   );
 }

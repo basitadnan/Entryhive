@@ -1,303 +1,312 @@
 import React, { useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Upload, CheckCircle2, AlertCircle, Loader2, Database, FileText } from 'lucide-react';
-import { db } from '@/lib/dbClient';
-import { supabase } from '@/lib/supabaseClient';
-import { useNavigate } from 'react-router-dom';
+import { Upload, Database, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
+import { getAllSections, getSectionLabel } from '@/lib/questionBank';
+
+// Mapping from section ID to Supabase table name
+const TABLE_MAP = {
+  english: 'english_questions',
+  analytical: 'analytical_questions',
+  quantitative: 'quantitative_questions',
+  physics: 'physics_questions',
+  chemistry: 'chemistry_questions',
+  mathematics: 'mathematics_questions',
+  biology: 'biology_questions',
+  computer_science: 'computer_science_questions',
+  commerce: 'commerce_questions',
+  accounting: 'accounting_questions',
+  economics: 'economics_questions',
+};
 
 export default function AdminImporter() {
-  const [files, setFiles] = useState([]);
-  const [parsedData, setParsedData] = useState([]);
-  const [importing, setImporting] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState('idle'); // idle, loaded, importing, success, error
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const [file, setFile] = useState(null);
+  const [selectedSection, setSelectedSection] = useState('english');
+  const [parsedQuestions, setParsedQuestions] = useState([]);
+  const [isUploading, setIsUploading] = useState(false);
+  const [parseStats, setParseStats] = useState(null);
 
-  const getTrack = (filename) => {
-    const fn = filename.toLowerCase();
-    if (fn.includes('ics')) return 'ICS';
-    if (fn.includes('nat-ie')) return 'Engineering';
-    if (fn.includes('nat-im')) return 'Medical';
-    if (fn.includes('nat-ia')) return 'Arts';
-    if (fn.includes('nat-gs')) return 'General Science';
-    return 'General';
-  };
+  // Fetch question bank stats
+  const { data: tableCounts = {}, isLoading: loadingStats, refetch: refetchStats } = useQuery({
+    queryKey: ['admin-question-bank-stats'],
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const counts = {};
+      for (const [key, tableName] of Object.entries(TABLE_MAP)) {
+        const { count, error } = await supabase.from(tableName).select('*', { count: 'exact', head: true });
+        counts[key] = error ? 0 : (count || 0);
+      }
+      return counts;
+    }
+  });
 
-  const parseTextContent = (filename, content) => {
+  const totalQuestions = Object.values(tableCounts).reduce((a, b) => a + b, 0);
+  const englishCount = tableCounts.english || 0;
+  const analyticalCount = tableCounts.analytical || 0;
+  const quantitativeCount = tableCounts.quantitative || 0;
+  const subjectCount = totalQuestions - (englishCount + analyticalCount + quantitativeCount);
+
+
+  // Parse the raw text file into JSON objects
+  const parseFile = (content, targetSection) => {
+    const lines = content.split(/\r?\n/);
     const questions = [];
-    let currentSection = 'General';
-    const track = getTrack(filename);
-    const lines = content.split('\n');
-    let currentQuestion = null;
+    let current = null;
 
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i].trim();
-      if (!line) continue;
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('===') || trimmed.startsWith('END OF FILE') || trimmed.startsWith('NAT ') || trimmed.startsWith('(Easy:')) continue;
 
-      if (line.match(/Quantitative/i)) currentSection = 'Quantitative';
-      else if (line.match(/Verbal/i)) currentSection = 'English';
-      else if (line.match(/Analytical/i)) currentSection = 'Analytical';
-      else if (line.match(/Subject|Computer|Physics|Math|Biology|Chemistry/i)) {
-        if (line.match(/Computer/i)) currentSection = 'Computer Science';
-        else if (line.match(/Physics/i)) currentSection = 'Physics';
-        else if (line.match(/Math/i)) currentSection = 'Mathematics';
-        else if (line.match(/Biology/i)) currentSection = 'Biology';
-        else if (line.match(/Chemistry/i)) currentSection = 'Chemistry';
-        else currentSection = 'Subject';
-      }
-
-      const qMatch = line.match(/^(\d+)[.)]\s+(.*)/);
-      if (qMatch) {
-        if (currentQuestion) questions.push(currentQuestion);
-        currentQuestion = {
-          section: currentSection,
-          question_text: qMatch[2],
-          options: [],
-          correct_answer_index: null,
-          explanation: '',
-          difficulty: 'medium',
-          is_past_paper: true,
-          track: track,
-          source_paper: filename.replace('.txt', ''),
-          topic: currentSection
-        };
-        continue;
-      }
-
-      const oMatch = line.match(/^([A-Ea-e]|[a-e])[\).]\s+(.*)/) || line.match(/^\(([a-e])\)\s+(.*)/) || line.match(/^([A-D]):\s+(.*)/i);
-      if (oMatch && currentQuestion) {
-        currentQuestion.options.push(oMatch[2].trim());
-        continue;
-      }
-
-      const aMatch = line.match(/Answer:\s*([A-Ea-e])/i) || line.match(/correct answer:\s*([A-Ea-e])/i);
-      if (aMatch && currentQuestion) {
-        const letter = aMatch[1].toUpperCase();
-        currentQuestion.correct_answer_index = letter.charCodeAt(0) - 65;
-        continue;
-      }
-
-      if (line.toLowerCase().startsWith('explanation:')) {
-        currentQuestion.explanation = line.substring(line.indexOf(':') + 1).trim();
-        continue;
+      if (/^Question(\s+\d+)?\s*:/i.test(trimmed)) {
+        if (current && current.question && current.options.length === 4 && current.correct_option !== null && current.correct_option !== undefined) {
+          questions.push(current);
+        }
+        let qText = trimmed.replace(/^Question(\s+\d+)?\s*:\s*/i, '').trim();
+        current = { question: qText, options: [], correct_option: null, explanation: '', difficulty: 'medium', is_past_paper: false };
+      } else if (current) {
+        if (/^A:\s/i.test(trimmed)) current.options[0] = trimmed.replace(/^A:\s*/i, '').trim();
+        else if (/^B:\s/i.test(trimmed)) current.options[1] = trimmed.replace(/^B:\s*/i, '').trim();
+        else if (/^C:\s/i.test(trimmed)) current.options[2] = trimmed.replace(/^C:\s*/i, '').trim();
+        else if (/^D:\s/i.test(trimmed)) current.options[3] = trimmed.replace(/^D:\s*/i, '').trim();
+        else if (/^Answer:\s/i.test(trimmed)) {
+          let letter = trimmed.replace(/^Answer:\s*/i, '').trim().toUpperCase();
+          letter = letter.replace('OPTION ', '').replace('OPTION', '').trim();
+          current.correct_option = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 }[letter];
+        } else if (/^[Ee]xplanation:\s/i.test(trimmed)) {
+          current.explanation = trimmed.replace(/^[Ee]xplanation:\s*/i, '').trim();
+        } else if (/^difficulty:\s/i.test(trimmed)) {
+          current.difficulty = trimmed.replace(/^difficulty:\s*/i, '').trim().toLowerCase();
+        }
       }
     }
-    if (currentQuestion) questions.push(currentQuestion);
+    
+    // Push the final question
+    if (current && current.question && current.options.length === 4 && current.correct_option !== null && current.correct_option !== undefined) {
+      questions.push(current);
+    }
+    
     return questions;
   };
 
-  const handleFileChange = async (e) => {
-    const selectedFiles = Array.from(e.target.files);
-    if (selectedFiles.length === 0) return;
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (!selectedFile) return;
     
-    setFiles(selectedFiles);
-    setStatus('parsing');
-    setError(null);
+    setFile(selectedFile);
+    setParsedQuestions([]);
+    setParseStats(null);
 
-    const allParsed = [];
-    for (const file of selectedFiles) {
-      const content = await file.text();
-      if (file.name.endsWith('.json')) {
-        try {
-          const json = JSON.parse(content);
-          if (Array.isArray(json)) allParsed.push(...json);
-          else allParsed.push(json);
-        } catch (e) {
-          console.error('Failed to parse JSON file', e);
-        }
-      } else {
-        const questions = parseTextContent(file.name, content);
-        allParsed.push(...questions);
+    // Auto-detect section based on filename
+    const filename = selectedFile.name.toLowerCase();
+    const availableSections = Object.keys(TABLE_MAP);
+    for (const sec of availableSections) {
+      if (filename.includes(sec)) {
+        setSelectedSection(sec);
+        break;
       }
     }
 
-    setParsedData(allParsed);
-    setStatus('loaded');
+    // Read and parse immediately for preview
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const qs = parseFile(event.target.result, selectedSection);
+      setParsedQuestions(qs);
+      
+      let easy = 0, medium = 0, hard = 0;
+      qs.forEach(q => {
+        if (q.difficulty === 'easy') easy++;
+        else if (q.difficulty === 'hard') hard++;
+        else medium++;
+      });
+      setParseStats({ total: qs.length, easy, medium, hard });
+      
+      if (qs.length === 0) {
+        toast.error('No valid questions found in file.');
+      } else {
+        toast.success(`Parsed ${qs.length} questions successfully!`);
+      }
+    };
+    reader.readAsText(selectedFile);
   };
 
-  const startImport = async () => {
-    if (parsedData.length === 0) return;
-    setImporting(true);
-    setStatus('importing');
-    setProgress(0);
-
-    const batchSize = 100;
-    let successCount = 0;
-
-    // 1. Fetch existing questions to skip duplicates in chunks of 100
-    const parsedTexts = parsedData.map(q => q.question_text);
-    const existingTextsSet = new Set();
+  const handleUploadToSupabase = async () => {
+    if (parsedQuestions.length === 0) return toast.error('No questions to upload');
     
-    for (let j = 0; j < parsedTexts.length; j += 100) {
-      const chunk = parsedTexts.slice(j, j + 100);
-      const { data: existingQs, error } = await supabase
-        .from('questions')
-        .select('question_text')
-        .in('question_text', chunk);
-      if (!error && existingQs) {
-        existingQs.forEach(eq => existingTextsSet.add(eq.question_text));
-      }
-    }
+    const tableName = TABLE_MAP[selectedSection];
+    if (!tableName) return toast.error(`No Supabase table mapping found for ${selectedSection}`);
+
+    setIsUploading(true);
     
-    // 2. Filter data
-    const filteredData = parsedData.filter(q => !existingTextsSet.has(q.question_text));
-    const skippedCount = parsedData.length - filteredData.length;
-
-    if (filteredData.length === 0) {
-      setImporting(false);
-      setStatus('success');
-      toast.info('All questions already exist in the database!');
-      return;
-    }
-
-    for (let i = 0; i < filteredData.length; i += batchSize) {
-      const batch = filteredData.slice(i, i + batchSize).map(q => ({
-        section: q.section.toLowerCase(),
-        question_text: q.question_text,
-        options: q.options,
-        correct_answer_index: q.correct_answer_index,
-        explanation: q.explanation,
-        difficulty: q.difficulty || 'medium',
-        is_past_paper: q.is_past_paper || true,
-        track: q.track
-      }));
-
-      try {
-        const { error } = await supabase.from('questions').insert(batch);
-        if (error) throw error;
+    try {
+      // Dynamic import to avoid breaking if supabase config is missing
+      const { supabase } = await import('@/lib/supabaseClient');
+      
+      // We will upload in batches of 50 to avoid payload limits
+      const BATCH_SIZE = 50;
+      let totalInserted = 0;
+      
+      for (let i = 0; i < parsedQuestions.length; i += BATCH_SIZE) {
+        const batch = parsedQuestions.slice(i, i + BATCH_SIZE);
         
-        successCount += batch.length;
-        setProgress(Math.round(((i + batch.length) / filteredData.length) * 100));
-      } catch (err) {
-        console.error('Import error', err);
-        setError(`Failed to import batch starting at index ${i}: ${err.message}`);
-        setStatus('error');
-        setImporting(false);
-        return;
+        // Supabase has an ON CONFLICT ignore built-in using standard REST if we configure the DB properly,
+        // but for safety we will just try to insert and ignore duplicate key errors
+        const { error } = await supabase.from(tableName).insert(batch);
+        
+        if (error) {
+          // If error is unique constraint violation (code 23505), it means SOME questions were duplicates.
+          // In a bulk insert, Postgres fails the whole batch if one is duplicate. 
+          // To handle this perfectly, we insert them one by one if the batch fails.
+          if (error.code === '23505') {
+            for (const q of batch) {
+              const { error: singleError } = await supabase.from(tableName).insert([q]);
+              if (!singleError) totalInserted++;
+            }
+          } else {
+            throw error; // Throw other unexpected errors
+          }
+        } else {
+          totalInserted += batch.length;
+        }
       }
-    }
+      
+      toast.success(`Successfully uploaded ${totalInserted} questions to ${tableName}!`);
+      
+      if (totalInserted < parsedQuestions.length) {
+        toast.info(`${parsedQuestions.length - totalInserted} duplicate questions were automatically skipped.`);
+      }
 
-    if (skippedCount > 0) {
-      toast.info(`Import complete. Added ${successCount} questions, skipped ${skippedCount} duplicates.`);
-    }
+      refetchStats();
 
-    setImporting(false);
-    setStatus('success');
+      setFile(null);
+      setParsedQuestions([]);
+      setParseStats(null);
+      
+    } catch (err) {
+      console.error('Upload Error:', err);
+      toast.error(`Upload failed: ${err.message}`);
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto space-y-6 pb-20">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold flex items-center gap-2">
-          <Database className="w-8 h-8 text-primary" />
-          NAT Question Importer
-        </h1>
-        <Button variant="outline" onClick={() => navigate('/admin')}>Back to Admin</Button>
+    <div className="p-4 md:p-6 space-y-6 max-w-4xl mx-auto w-full pb-24">
+      <div className="flex items-center gap-3 mb-6 border-b border-border/30 pb-4">
+        <Database className="w-8 h-8 text-primary" />
+        <div>
+          <h1 className="text-2xl font-bold">Smart Importer</h1>
+          <p className="text-xs text-muted-foreground uppercase tracking-widest mt-1">Upload questions to Supabase</p>
+        </div>
       </div>
 
-      <Card className="p-10 border-dashed border-2 flex flex-col items-center justify-center text-center space-y-4 bg-secondary/5">
-        <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-          <FileText className="w-10 h-10 text-primary" />
+      {/* Question Bank Stats */}
+      <div className="mb-6 space-y-3">
+        <h2 className="text-lg font-bold flex items-center gap-2">
+          Question Bank <span className="text-xs font-normal text-muted-foreground ml-auto">{loadingStats ? <Loader2 className="w-3 h-3 animate-spin inline" /> : totalQuestions} Total</span>
+        </h2>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <Card className="p-3 bg-card border-border text-center">
+            <p className="text-xl font-bold text-blue-400">{loadingStats ? '-' : englishCount}</p>
+            <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">English</p>
+          </Card>
+          <Card className="p-3 bg-card border-border text-center">
+            <p className="text-xl font-bold text-pink-400">{loadingStats ? '-' : analyticalCount}</p>
+            <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Analytical</p>
+          </Card>
+          <Card className="p-3 bg-card border-border text-center">
+            <p className="text-xl font-bold text-green-400">{loadingStats ? '-' : quantitativeCount}</p>
+            <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Quantitative</p>
+          </Card>
+          <Card className="p-3 bg-card border-border text-center">
+            <p className="text-xl font-bold text-amber-400">{loadingStats ? '-' : subjectCount}</p>
+            <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Subject</p>
+          </Card>
         </div>
-        <div>
-          <h3 className="text-xl font-bold">Upload NAT .txt or .json Files</h3>
-          <p className="text-sm text-muted-foreground max-w-sm">
-            Drag and drop multiple .txt or .json files (Quantitative, English, Maths, etc.) 
-            and they will be automatically categorized.
-          </p>
-        </div>
-        <Input 
-          type="file" 
-          accept=".txt,.json" 
-          multiple
-          onChange={handleFileChange} 
-          className="max-w-xs cursor-pointer"
-          disabled={importing}
-        />
-      </Card>
+      </div>
 
-      {status !== 'idle' && (
-        <Card className="p-6 space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <h3 className="font-bold text-lg">
-                {status === 'parsing' ? 'Parsing Files...' : `${files.length} Files Selected`}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {parsedData.length} questions parsed and ready to import.
-              </p>
-            </div>
-            {status === 'loaded' && (
-              <Button onClick={startImport} disabled={importing} size="lg">
-                Upload to Supabase
-              </Button>
-            )}
+      <Card className="p-6 bg-card border-border space-y-6">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Step 1: Select Subject */}
+          <div className="space-y-2">
+            <label className="text-sm font-bold flex items-center gap-2">
+              <span className="bg-primary text-black w-5 h-5 rounded-full flex items-center justify-center text-xs">1</span>
+              Target Subject Table
+            </label>
+            <p className="text-[10px] text-muted-foreground mb-2">Select which database table to insert these questions into.</p>
+            <select 
+              value={selectedSection} 
+              onChange={e => setSelectedSection(e.target.value)}
+              className="w-full p-3 rounded-lg bg-black/40 border border-border text-sm focus:border-primary"
+            >
+              {Object.keys(TABLE_MAP).map(sec => (
+                <option key={sec} value={sec}>{getSectionLabel(sec)} ({TABLE_MAP[sec]})</option>
+              ))}
+            </select>
           </div>
 
-          {(status === 'importing' || status === 'success') && (
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm font-medium">
-                <span>{status === 'importing' ? 'Uploading to Database...' : 'Import Successful!'}</span>
-                <span>{progress}%</span>
-              </div>
-              <div className="w-full bg-secondary rounded-full h-4 overflow-hidden shadow-inner">
-                <div 
-                  className="bg-primary h-full transition-all duration-500 ease-out" 
-                  style={{ width: `${progress}%` }}
-                />
+          {/* Step 2: Upload File */}
+          <div className="space-y-2">
+            <label className="text-sm font-bold flex items-center gap-2">
+              <span className="bg-primary text-black w-5 h-5 rounded-full flex items-center justify-center text-xs">2</span>
+              Upload .txt File
+            </label>
+            <p className="text-[10px] text-muted-foreground mb-2">Upload the text file containing the questions.</p>
+            <div className="relative">
+              <input 
+                type="file" 
+                accept=".txt" 
+                onChange={handleFileChange}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" 
+              />
+              <div className={`w-full p-3 rounded-lg border-2 border-dashed flex items-center gap-3 ${file ? 'border-primary bg-primary/5' : 'border-border bg-black/40'}`}>
+                <Upload className={`w-5 h-5 ${file ? 'text-primary' : 'text-muted-foreground'}`} />
+                <span className={`text-sm ${file ? 'text-primary font-medium' : 'text-muted-foreground'}`}>
+                  {file ? file.name : 'Click or drag file here'}
+                </span>
               </div>
             </div>
-          )}
+          </div>
+        </div>
 
-          {status === 'success' && (
-            <div className="flex flex-col items-center justify-center p-6 bg-green-500/10 border border-green-500/20 rounded-2xl">
-              <CheckCircle2 className="w-12 h-12 text-green-400 mb-2" />
-              <p className="text-lg font-bold text-green-400">Mission Accomplished!</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                {parsedData.length} questions are now live in your Past Papers section.
-              </p>
-              <Button className="mt-4" onClick={() => navigate('/past-papers')}>Go to Past Papers</Button>
-            </div>
-          )}
-
-          {status === 'error' && (
-            <div className="flex items-center gap-3 text-red-400 bg-red-400/10 p-4 rounded-xl border border-red-400/20">
-              <AlertCircle className="w-6 h-6 shrink-0" />
+        {/* Step 3: Preview & Upload */}
+        {parseStats && (
+          <div className="pt-6 border-t border-border/50 space-y-4 animate-in fade-in">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
-                <p className="font-bold">Import Failed</p>
-                <p className="text-sm opacity-90">{error}</p>
-                <p className="text-xs mt-1 underline">Make sure you created the 'questions' table in Supabase first!</p>
+                <h3 className="font-bold text-lg flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  Ready to Upload
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Found <strong className="text-white">{parseStats.total}</strong> questions 
+                  (Easy: {parseStats.easy}, Med: {parseStats.medium}, Hard: {parseStats.hard})
+                </p>
+                <p className="text-[10px] text-amber-500 mt-1 flex items-center gap-1">
+                  <AlertCircle className="w-3 h-3" />
+                  Duplicates will be automatically skipped
+                </p>
               </div>
+              
+              <Button 
+                size="lg" 
+                className="bg-primary text-black font-bold w-full md:w-auto"
+                disabled={isUploading}
+                onClick={handleUploadToSupabase}
+              >
+                {isUploading ? (
+                  <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Uploading to DB...</>
+                ) : (
+                  <><Database className="w-5 h-5 mr-2" /> Upload to {TABLE_MAP[selectedSection]}</>
+                )}
+              </Button>
             </div>
-          )}
-        </Card>
-      )}
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Card className="p-5 bg-blue-500/5 border-blue-500/10">
-          <h4 className="font-bold text-blue-400 mb-2 flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4" /> Smart Categorization
-          </h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            The importer detects sections like <strong>Quantitative</strong>, <strong>Analytical</strong>, and <strong>English</strong> automatically. 
-            It also detects tracks (ICS, Medical, Engineering) based on the file name.
-          </p>
-        </Card>
-        <Card className="p-5 bg-amber-500/5 border-amber-500/10">
-          <h4 className="font-bold text-amber-400 mb-2 flex items-center gap-2">
-            <AlertCircle className="w-4 h-4" /> File Format
-          </h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Ensure questions start with a number (e.g., <code>1. What is...</code>) 
-            and options start with letters (e.g., <code>A) Option</code>). 
-            Answers should be marked with <code>Answer: A</code>.
-          </p>
-        </Card>
-      </div>
+          </div>
+        )}
+      </Card>
     </div>
   );
 }

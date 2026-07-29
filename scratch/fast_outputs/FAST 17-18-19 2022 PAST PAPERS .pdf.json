@@ -1,0 +1,60 @@
+[
+  {
+    "id": "fast_test_Q_P2_IX",
+    "text": "the radius of escribed circle opposite to vertex A is",
+    "options": [
+      "r1 = A / (s-a)",
+      "r2 = A / (s-c)"
+    ],
+    "correctAnswer": "r1 = A / (s-a)",
+    "explanation": "No answer key provided in the document. The first option is chosen as a placeholder to meet the JSON schema requirement.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_P2_X",
+    "text": "AUB = A if",
+    "options": [
+      "ACB",
+      "BCA",
+      "None"
+    ],
+    "correctAnswer": "ACB",
+    "explanation": "No answer key provided in the document. The first option is chosen as a placeholder to meet the JSON schema requirement.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_P6_4",
+    "text": "when written in a two variable linear form, is a relation",
+    "options": [
+      "Many relation",
+      "Every relation",
+      "Onto function"
+    ],
+    "correctAnswer": "Many relation",
+    "explanation": "No answer key provided in the document. The first option is chosen as a placeholder to meet the JSON schema requirement.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_P7_25",
+    "text": "Two vectors are parallel, when",
+    "options": [
+      "a=kb",
+      "b=ka"
+    ],
+    "correctAnswer": "a=kb",
+    "explanation": "No answer key provided in the document. The first option is chosen as a placeholder to meet the JSON schema requirement.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q_P7_28",
+    "text": "f(x) = -3x²-9x = ? in interval (-1,2)",
+    "options": [
+      "increasing",
+      "decreasing",
+      "strictly decreasing"
+    ],
+    "correctAnswer": "increasing",
+    "explanation": "No answer key provided in the document. The first option is chosen as a placeholder to meet the JSON schema requirement.",
+    "subject": "advance_maths"
+  }
+]

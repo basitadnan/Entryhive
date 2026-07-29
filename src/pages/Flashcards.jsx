@@ -1,340 +1,310 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import { ArrowLeft, ChevronLeft, ChevronRight, RotateCcw, Shuffle, BookOpen, Lock } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { getAllSections, getSectionLabel, getSectionIcon } from '@/lib/questionBank';
-import { getLearningContentForGroup } from '@/lib/learningContent';
-
-function generateFlashcards(natGroup) {
-  const cards = [];
-
-  // Section-based key facts from learning content
-  const content = getLearningContentForGroup(natGroup);
-  content.forEach(section => {
-    if (section.keyFacts) {
-      section.keyFacts.forEach((fact, i) => {
-        cards.push({
-          id: `${section.key}-kf-${i}`,
-          front: `📌 ${section.title.replace(" Tips & Tricks", "").replace(" Problem-Solving", "").replace(" Key Concepts", "").replace(" Strategies", "").replace(" Study Guide", "").replace(" Essentials", "")}`,
-          back: fact,
-          section: section.key,
-          type: 'fact',
-        });
-      });
-    }
-    if (section.topics) {
-      section.topics.forEach(topic => {
-        if (topic.tips && topic.tips.length > 0) {
-          cards.push({
-            id: `${section.key}-${topic.title}`,
-            front: `💡 ${topic.title}`,
-            back: topic.tips[0],
-            section: section.key,
-            type: 'tip',
-          });
-        }
-      });
-    }
-    if (section.tips) {
-      section.tips.slice(0, 3).forEach((tip, i) => {
-        cards.push({
-          id: `${section.key}-tip-${i}`,
-          front: `⚡ ${section.title.split(' ')[0]} ${section.title.split(' ')[1] || ''}`,
-          back: tip,
-          section: section.key,
-          type: 'tip',
-        });
-      });
-    }
-    if (section.commonMistakes) {
-      section.commonMistakes.forEach((mistake, i) => {
-        cards.push({
-          id: `${section.key}-cm-${i}`,
-          front: `⚠️ Common Mistake: ${section.title.replace(" Tips & Tricks", "").replace(" Problem-Solving", "").replace(" Key Concepts", "").replace(" Strategies", "").replace(" Study Guide", "").replace(" Essentials", "")}`,
-          back: `Avoid: ${mistake}`,
-          section: section.key,
-          type: 'mistake',
-        });
-      });
-    }
-  });
-
-  return cards;
-}
-
-const shuffle = (arr) => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-};
+import { ArrowLeft, BookOpen, Lock, Sparkles, BrainCircuit } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  buildDeck, 
+  initCardState, 
+  reviewCard, 
+  getDueCards, 
+  shuffle,
+  SUBJECTS 
+} from '@/lib/flashcardEngine';
 
 export default function Flashcards() {
   const { user } = useOutletContext();
   const navigate = useNavigate();
   const isPremium = user?.is_premium === true;
 
-  const [allCards, setAllCards] = useState([]);
-  const [filteredCards, setFilteredCards] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [statesMap, setStatesMap] = useState({});
+  const [deck, setDeck] = useState([]);
+  const [queue, setQueue] = useState([]); // cards due today, acting as our active queue
+  
   const [isFlipped, setIsFlipped] = useState(false);
   const [selectedSection, setSelectedSection] = useState('all');
+  
+  const [cardsCompletedToday, setCardsCompletedToday] = useState(0);
   const [sessionComplete, setSessionComplete] = useState(false);
-  const [known, setKnown] = useState(0);
-  const [review, setReview] = useState(0);
 
-  const sections = user?.nat_group ? getAllSections(user.nat_group) : [];
+  // Use a stable key that won't sync to other devices to keep it isolated
+  const STORAGE_KEY = user?.id ? `entryhive_flashcards_state_${user.id}` : null;
 
+  // 1. On Mount: Load states and full deck
   useEffect(() => {
-    if (user?.nat_group) {
-      const cards = generateFlashcards(user.nat_group);
-      setAllCards(cards);
-      setFilteredCards(shuffle(cards));
-    }
-  }, [user?.nat_group]);
+    if (!STORAGE_KEY) return;
+    
+    // Load progress from local storage
+    const savedStates = localStorage.getItem(STORAGE_KEY);
+    const parsedStates = savedStates ? JSON.parse(savedStates) : {};
+    setStatesMap(parsedStates);
 
+    // Build the full deck
+    const fullDeck = buildDeck('all');
+    setDeck(fullDeck);
+  }, [STORAGE_KEY]);
+
+  // 2. Compute Due Cards when section changes
   useEffect(() => {
-    if (selectedSection === 'all') {
-      setFilteredCards(shuffle(allCards));
-    } else {
-      setFilteredCards(shuffle(allCards.filter(c => c.section === selectedSection)));
+    if (deck.length === 0) return;
+
+    let filteredDeck = deck;
+    if (selectedSection !== 'all') {
+      filteredDeck = deck.filter(c => c.section === selectedSection);
     }
-    setCurrentIndex(0);
+
+    // Get cards that are new or whose due date is today or earlier
+    const currentlyDue = getDueCards(filteredDeck, statesMap);
+    
+    setQueue(shuffle(currentlyDue));
     setIsFlipped(false);
-    setSessionComplete(false);
-    setKnown(0);
-    setReview(0);
-  }, [selectedSection, allCards]);
+    
+    // Only mark session complete if there are no cards due from the start
+    if (currentlyDue.length === 0) {
+      setSessionComplete(true);
+    } else {
+      setSessionComplete(false);
+    }
+  }, [selectedSection, deck]); 
+  // Notice we purposefully DO NOT depend on `statesMap` here so the queue doesn't fully recalculate mid-session.
 
-  const currentCard = filteredCards[currentIndex];
+  const currentCard = queue[0];
 
   const handleFlip = () => setIsFlipped(prev => !prev);
 
-  const handleKnow = () => {
-    setKnown(k => k + 1);
-    goNext();
-  };
+  // Quality: 1 (Again), 3 (Hard), 4 (Good), 5 (Easy)
+  const handleGrade = (quality) => {
+    if (!currentCard) return;
 
-  const handleReview = () => {
-    setReview(r => r + 1);
-    goNext();
-  };
+    const currentState = statesMap[currentCard.id] || initCardState();
+    const newState = reviewCard(currentState, quality);
 
-  const goNext = () => {
-    if (currentIndex + 1 >= filteredCards.length) {
-      setSessionComplete(true);
-    } else {
-      setCurrentIndex(i => i + 1);
-      setIsFlipped(false);
+    // Save to local state and localStorage
+    const newStatesMap = { ...statesMap, [currentCard.id]: newState };
+    setStatesMap(newStatesMap);
+    if (STORAGE_KEY) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(newStatesMap));
     }
-  };
 
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(i => i - 1);
-      setIsFlipped(false);
-    }
-  };
+    setCardsCompletedToday(prev => prev + 1);
 
-  const handleRestart = () => {
-    setFilteredCards(shuffle(selectedSection === 'all' ? allCards : allCards.filter(c => c.section === selectedSection)));
-    setCurrentIndex(0);
+    // Update queue
+    setQueue(prevQueue => {
+      const newQueue = [...prevQueue];
+      const gradedCard = newQueue.shift(); // remove from front
+
+      if (quality < 3) {
+        // "Again" -> push back to the end of the queue to review again today
+        newQueue.push(gradedCard);
+      }
+      
+      if (newQueue.length === 0) {
+        setSessionComplete(true);
+      }
+
+      return newQueue;
+    });
+
     setIsFlipped(false);
-    setSessionComplete(false);
-    setKnown(0);
-    setReview(0);
+  };
+
+  const getSectionIcon = (subject) => {
+    switch (subject.toLowerCase()) {
+      case 'english': return '📝';
+      case 'quantitative': return '📐';
+      case 'analytical': return '🧩';
+      case 'physics': return '⚡';
+      case 'chemistry': return '🧪';
+      case 'biology': return '🧬';
+      case 'computer': return '💻';
+      case 'maths': return '🔢';
+      default: return '📚';
+    }
   };
 
   if (!isPremium) {
     return (
-      <div className="p-4 space-y-5">
-        <div className="flex items-center gap-3">
-          <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Back
-          </button>
-        </div>
-        <Card className="p-8 text-center space-y-4">
-          <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto">
-            <Lock className="w-8 h-8 text-amber-400" />
+      <div className="p-6 max-w-2xl mx-auto space-y-6">
+        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors">
+          <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+        </button>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="flex flex-col items-center justify-center p-12 text-center bg-card rounded-3xl border border-border shadow-sm relative overflow-hidden"
+        >
+          <div className="absolute top-0 w-full h-2 bg-gradient-to-r from-amber-500 to-amber-400"></div>
+          <div className="w-24 h-24 rounded-full bg-amber-500/10 flex items-center justify-center mb-6 ring-8 ring-amber-500/5">
+            <Lock className="w-12 h-12 text-amber-500" />
           </div>
-          <h2 className="text-xl font-bold">Flashcards — Premium Only</h2>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            Flashcard mode is exclusively for premium users. Rapidly revise key facts, tips, and tricks for all NAT sections using our smart flashcard system.
+          <h2 className="font-display text-2xl font-bold text-foreground mb-3">Premium Flashcards</h2>
+          <p className="text-muted-foreground max-w-md mb-8 leading-relaxed text-sm">
+            Rapidly revise key facts using our smart SM-2 spaced repetition system. Cards you struggle with appear more often, while cards you know well are spaced out.
           </p>
-          <div className="grid grid-cols-2 gap-3 text-left">
-            {['60+ flashcards per track', 'Section-wise filtering', 'Track known vs review', 'Shuffled every session'].map(f => (
-              <div key={f} className="flex items-center gap-2 text-sm">
-                <span className="text-primary">✓</span> {f}
-              </div>
-            ))}
-          </div>
-          <Button onClick={() => navigate('/premium')} className="w-full bg-gradient-to-r from-primary to-emerald-400">
-            Unlock Premium
-          </Button>
-        </Card>
+          <button onClick={() => navigate('/premium')} className="btn-primary w-full max-w-sm py-4 rounded-xl text-lg font-bold shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+            <Sparkles className="w-5 h-5" /> Unlock Premium Access
+          </button>
+        </motion.div>
       </div>
     );
   }
 
-  if (sessionComplete) {
-    const total = known + review;
-    const pct = total > 0 ? Math.round((known / total) * 100) : 0;
+  if (sessionComplete && deck.length > 0) {
     return (
-      <div className="p-4 space-y-5">
-        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-          <ArrowLeft className="w-4 h-4" /> Back
+      <div className="p-6 max-w-2xl mx-auto space-y-6">
+        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors">
+          <ArrowLeft className="w-4 h-4" /> Back to Dashboard
         </button>
-        <Card className="p-8 text-center space-y-4">
-          <p className="text-5xl">{pct >= 70 ? '🎉' : '💪'}</p>
-          <h2 className="text-xl font-bold">Session Complete!</h2>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-500/10 rounded-xl p-4">
-              <p className="text-2xl font-bold text-green-400">{known}</p>
-              <p className="text-sm text-muted-foreground">I Know This</p>
-            </div>
-            <div className="bg-amber-500/10 rounded-xl p-4">
-              <p className="text-2xl font-bold text-amber-400">{review}</p>
-              <p className="text-sm text-muted-foreground">Need Review</p>
-            </div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="p-10 text-center bg-card rounded-3xl border border-border shadow-sm space-y-8 relative overflow-hidden"
+        >
+          <div className="absolute top-0 w-full h-2 bg-gradient-to-r from-green-500 to-emerald-400"></div>
+          <div className="w-24 h-24 rounded-full bg-green-500/10 flex items-center justify-center mx-auto ring-8 ring-green-500/5 mb-2">
+            <span className="text-5xl animate-bounce-slow">🎉</span>
           </div>
-          <p className="text-muted-foreground text-sm">{pct}% mastered this session</p>
-          <Button onClick={handleRestart} className="w-full">
-            <RotateCcw className="w-4 h-4 mr-2" /> Shuffle & Restart
-          </Button>
-        </Card>
+          <div>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-2">You're all caught up!</h2>
+            <p className="text-muted-foreground text-lg">You have reviewed all due cards for <span className="font-bold text-primary">{selectedSection === 'all' ? 'All Sections' : selectedSection}</span> today.</p>
+          </div>
+          <div className="bg-secondary/50 p-6 rounded-2xl border border-border max-w-sm mx-auto">
+            <p className="text-3xl font-display font-bold text-primary mb-1">{cardsCompletedToday}</p>
+            <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider">Cards Reviewed Today</p>
+          </div>
+          <button onClick={() => navigate('/')} className="btn-primary w-full max-w-sm mx-auto py-4 rounded-xl font-bold flex items-center justify-center gap-2">
+            Return to Dashboard
+          </button>
+        </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="p-4 space-y-4">
-      <div className="flex items-center gap-3">
-        <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1">
-          <ArrowLeft className="w-4 h-4" /> Back
-        </button>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <BookOpen className="w-6 h-6 text-cyan-400" />
+    <div className="p-6 max-w-3xl mx-auto space-y-6 pb-24">
+      <div className="flex items-center gap-4 mb-2">
+        <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+          <BrainCircuit className="w-6 h-6 text-cyan-500" />
+        </div>
         <div>
-          <h1 className="text-xl font-bold">Flashcards</h1>
-          <p className="text-sm text-muted-foreground">Rapid revision mode</p>
+          <h1 className="font-display text-2xl font-bold text-foreground">Smart Flashcards</h1>
+          <p className="text-sm text-muted-foreground">Spaced repetition (SM-2)</p>
         </div>
       </div>
 
+      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors mb-6 inline-flex">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+      </button>
+
       {/* Section Filter */}
-      <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+      <div className="flex gap-2 overflow-x-auto pb-2 no-scrollbar px-1 -mx-1">
         <button
           onClick={() => setSelectedSection('all')}
-          className={`whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${selectedSection === 'all' ? 'bg-primary text-white' : 'bg-secondary text-muted-foreground'}`}
+          className={`whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-colors border ${selectedSection === 'all' ? 'bg-primary text-primary-foreground border-primary' : 'bg-secondary text-muted-foreground border-border hover:border-primary/30 hover:text-foreground'}`}
         >
           All Sections
         </button>
-        {sections.map(s => (
+        {SUBJECTS.map(s => (
           <button
             key={s}
             onClick={() => setSelectedSection(s)}
-            className={`whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${selectedSection === s ? 'bg-primary text-white' : 'bg-secondary text-muted-foreground'}`}
+            className={`whitespace-nowrap px-4 py-2 rounded-xl text-sm font-bold transition-colors border flex items-center gap-2 ${selectedSection === s ? 'bg-primary text-primary-foreground border-primary' : 'bg-secondary text-muted-foreground border-border hover:border-primary/30 hover:text-foreground'}`}
           >
-            {getSectionIcon(s)} {getSectionLabel(s).split(' ')[0]}
+            <span>{getSectionIcon(s)}</span> {s}
           </button>
         ))}
       </div>
 
-      {/* Progress */}
-      <div className="flex items-center justify-between text-sm text-muted-foreground">
-        <span>{currentIndex + 1} / {filteredCards.length}</span>
-        <div className="flex gap-3 text-xs">
-          <span className="text-green-400">✓ {known}</span>
-          <span className="text-amber-400">↺ {review}</span>
+      <div className="bg-card rounded-3xl border border-border p-6 sm:p-8 shadow-sm">
+        {/* Progress header */}
+        <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+          <span className="font-bold text-foreground bg-secondary px-3 py-1 rounded-lg border border-border">
+            <span className="text-primary">{queue.length}</span> cards due
+          </span>
+          <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground/50">
+            {cardsCompletedToday} reviewed today
+          </span>
         </div>
-        <button onClick={handleRestart} className="text-xs flex items-center gap-1 hover:text-foreground">
-          <Shuffle className="w-3 h-3" /> Shuffle
-        </button>
-      </div>
 
-      {/* Progress Bar */}
-      <div className="w-full bg-secondary rounded-full h-1.5">
-        <div
-          className="bg-primary h-1.5 rounded-full transition-all duration-300"
-          style={{ width: `${((currentIndex) / filteredCards.length) * 100}%` }}
-        />
-      </div>
-
-      {/* Card */}
-      {currentCard && (
-        <div
-          className="relative cursor-pointer select-none"
-          onClick={handleFlip}
-          style={{ perspective: '1000px' }}
-        >
-          <div
-            className="relative transition-transform duration-500"
-            style={{
-              transformStyle: 'preserve-3d',
-              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-              minHeight: '260px',
-            }}
-          >
-            {/* Front */}
-            <div
-              className="absolute inset-0 rounded-2xl border border-border bg-card p-6 flex flex-col items-center justify-center gap-4"
-              style={{ backfaceVisibility: 'hidden' }}
+        {/* Card */}
+        <AnimatePresence mode="wait">
+          {currentCard && !sessionComplete && (
+            <motion.div
+              key={currentCard.id + (isFlipped ? '-flipped' : '')}
+              initial={{ opacity: 0, rotateY: isFlipped ? -90 : 90, scale: 0.95 }}
+              animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+              exit={{ opacity: 0, rotateY: isFlipped ? 90 : -90, scale: 0.95 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="relative cursor-pointer select-none w-full"
+              onClick={!isFlipped ? handleFlip : undefined}
+              style={{ perspective: '1000px' }}
             >
-              <span className="text-xs uppercase tracking-widest text-muted-foreground bg-secondary px-3 py-1 rounded-full">
-                {getSectionLabel(currentCard.section)}
-              </span>
-              <p className="text-lg font-semibold text-center leading-relaxed">{currentCard.front}</p>
-              <p className="text-xs text-muted-foreground">Tap to reveal</p>
-            </div>
+              <div className={`relative w-full rounded-3xl border-2 transition-colors min-h-[300px] sm:min-h-[350px] flex flex-col items-center justify-center p-8 sm:p-12 text-center group ${isFlipped ? 'bg-primary/5 border-primary/30' : 'bg-card border-border hover:border-primary/30'}`}>
+                
+                {/* Decorative dots */}
+                {!isFlipped && (
+                  <div className="absolute top-4 right-4 flex gap-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                  </div>
+                )}
 
-            {/* Back */}
-            <div
-              className="absolute inset-0 rounded-2xl border border-primary/30 bg-primary/5 p-6 flex flex-col items-center justify-center gap-4"
-              style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
-            >
-              <span className="text-xs uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
-                Answer
-              </span>
-              <p className="text-base text-center leading-relaxed">{currentCard.back}</p>
-            </div>
-          </div>
-        </div>
-      )}
+                {!isFlipped ? (
+                  <>
+                    <span className="absolute top-6 left-6 text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-lg border text-muted-foreground bg-secondary border-border">
+                      {currentCard.topic}
+                    </span>
+                    <p className="font-display text-xl sm:text-2xl font-bold text-foreground leading-relaxed max-w-lg mt-8">{currentCard.front}</p>
+                    <div className="absolute bottom-6 w-full text-center">
+                      <p className="text-sm font-bold text-primary/60 animate-pulse uppercase tracking-widest">Tap to reveal</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <span className="absolute top-6 text-[10px] uppercase font-bold tracking-widest text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-lg">
+                      Answer
+                    </span>
+                    <p className="text-lg sm:text-xl text-foreground leading-relaxed max-w-lg font-medium">{currentCard.back}</p>
+                  </>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-      {/* Actions */}
-      {isFlipped ? (
-        <div className="grid grid-cols-2 gap-3 pt-2">
-          <Button
-            variant="outline"
-            onClick={handleReview}
-            className="border-amber-500/50 text-amber-400 hover:bg-amber-500/10 h-12"
-          >
-            ↺ Need Review
-          </Button>
-          <Button
-            onClick={handleKnow}
-            className="bg-green-600 hover:bg-green-700 h-12"
-          >
-            ✓ I Know This
-          </Button>
+        {/* Actions */}
+        <div className="mt-8">
+          {isFlipped && !sessionComplete ? (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <button onClick={() => handleGrade(1)} className="py-3 rounded-xl border-2 border-red-500/20 bg-red-500/5 text-red-500 font-bold hover:bg-red-500/10 transition-colors flex flex-col items-center justify-center">
+                <span className="text-sm">Again</span>
+                <span className="text-[10px] opacity-70 mt-0.5">&lt; 1m</span>
+              </button>
+              <button onClick={() => handleGrade(3)} className="py-3 rounded-xl border-2 border-orange-500/20 bg-orange-500/5 text-orange-500 font-bold hover:bg-orange-500/10 transition-colors flex flex-col items-center justify-center">
+                <span className="text-sm">Hard</span>
+                <span className="text-[10px] opacity-70 mt-0.5">soon</span>
+              </button>
+              <button onClick={() => handleGrade(4)} className="py-3 rounded-xl border-2 border-green-500/20 bg-green-500/5 text-green-500 font-bold hover:bg-green-500/10 transition-colors flex flex-col items-center justify-center">
+                <span className="text-sm">Good</span>
+                <span className="text-[10px] opacity-70 mt-0.5">later</span>
+              </button>
+              <button onClick={() => handleGrade(5)} className="py-3 rounded-xl border-2 border-blue-500/20 bg-blue-500/5 text-blue-500 font-bold hover:bg-blue-500/10 transition-colors flex flex-col items-center justify-center">
+                <span className="text-sm">Easy</span>
+                <span className="text-[10px] opacity-70 mt-0.5">days</span>
+              </button>
+            </div>
+          ) : !sessionComplete ? (
+            <div className="flex items-center justify-center">
+              <button 
+                onClick={handleFlip} 
+                className="w-full max-w-sm py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20"
+              >
+                Show Answer
+              </button>
+            </div>
+          ) : null}
         </div>
-      ) : (
-        <div className="flex items-center justify-between pt-2">
-          <Button variant="ghost" size="icon" onClick={handlePrev} disabled={currentIndex === 0}>
-            <ChevronLeft className="w-5 h-5" />
-          </Button>
-          <Button onClick={handleFlip} className="flex-1 mx-2">
-            Flip Card
-          </Button>
-          <Button variant="ghost" size="icon" onClick={() => { setIsFlipped(false); goNext(); }} disabled={currentIndex + 1 >= filteredCards.length}>
-            <ChevronRight className="w-5 h-5" />
-          </Button>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

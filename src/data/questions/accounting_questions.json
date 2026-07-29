@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "9647754f-a51b-4c4f-b6e4-a7fd1b4b6537",
+    "options": [
+      "Assets = Liabilities + Owner's Equity",
+      "Assets = Liabilities − Owner's Equity",
+      "Assets + Liabilities = Owner's Equity",
+      "Assets = Revenue − Expenses"
+    ],
+    "explanation": "The fundamental accounting equation states that Assets equal Liabilities plus Owner's Equity. It must always remain in balance.",
+    "difficulty": "easy",
+    "question_text": "What is the accounting equation?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9497c677-84f1-4e0d-b0b3-8e37a3dac796",
+    "options": [
+      "An increase in liabilities",
+      "An entry on the left side of an account",
+      "A decrease in assets",
+      "An increase in revenue"
+    ],
+    "explanation": "A debit is an entry on the left side of an account. Debits increase assets and expenses, decrease liabilities, equity, and revenue.",
+    "difficulty": "easy",
+    "question_text": "What is a debit?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cb296871-9af3-4bb2-b57b-1b37aa3723c7",
+    "options": [
+      "Liability",
+      "Asset",
+      "Equity",
+      "Expense"
+    ],
+    "explanation": "Cash is an asset account because it represents economic resources owned by the business that have future value.",
+    "difficulty": "easy",
+    "question_text": "What type of account is Cash?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "840cf165-350d-4503-a2c9-55625100fc53",
+    "options": [
+      "General Accounting and Auditing Principles",
+      "Generally Accepted Accounting Principles",
+      "Global Accounting and Auditing Procedures",
+      "General Accepted Auditing Practices"
+    ],
+    "explanation": "GAAP stands for Generally Accepted Accounting Principles, the standard framework of guidelines for financial accounting.",
+    "difficulty": "easy",
+    "question_text": "What does GAAP stand for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ebd7f88d-171c-4cd2-8c6e-e4bd7a06490f",
+    "options": [
+      "Income Statement",
+      "Balance Sheet",
+      "Cash Flow Statement",
+      "Statement of Retained Earnings"
+    ],
+    "explanation": "The Balance Sheet (Statement of Financial Position) shows assets, liabilities, and equity at a specific point in time.",
+    "difficulty": "easy",
+    "question_text": "Which financial statement shows a company's financial position at a specific date?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5a48a00c-ea9e-4944-b553-ac6e7326ea44",
+    "options": [
+      "Credit",
+      "Debit",
+      "Zero",
+      "Either debit or credit"
+    ],
+    "explanation": "Expense accounts normally have a debit balance. Expenses decrease equity, so they increase on the debit side.",
+    "difficulty": "easy",
+    "question_text": "What is the normal balance of an expense account?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a3680333-8a41-49b9-8b5c-25ae015752ca",
+    "options": [
+      "Increase in asset value",
+      "Allocation of cost of a tangible asset over its useful life",
+      "Sale of an asset",
+      "Purchase of an asset"
+    ],
+    "explanation": "Depreciation is the systematic allocation of the cost of a tangible asset over its estimated useful life.",
+    "difficulty": "easy",
+    "question_text": "What is depreciation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "12c28dea-06a9-488e-8a43-912d2353e68a",
+    "options": [
+      "Cash",
+      "Accounts Receivable",
+      "Accounts Payable",
+      "Equipment"
+    ],
+    "explanation": "Accounts Payable is a liability, and liabilities increase with credits. Assets like Cash, AR, and Equipment increase with debits.",
+    "difficulty": "easy",
+    "question_text": "Which account is increased with a credit?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fed2f313-c0bd-4857-8d46-c5bca05effbb",
+    "options": [
+      "A financial statement",
+      "A chronological record of transactions",
+      "A list of all accounts",
+      "A bank statement"
+    ],
+    "explanation": "A journal is the book of original entry where transactions are recorded chronologically before being posted to the ledger.",
+    "difficulty": "easy",
+    "question_text": "What is a journal?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "eb40f4d6-9886-4855-8e5b-de9f3d2c58b3",
+    "options": [
+      "Asset",
+      "Expense",
+      "Revenue",
+      "Liability"
+    ],
+    "explanation": "Sales Revenue is a revenue account. Revenue increases equity and normally has a credit balance.",
+    "difficulty": "easy",
+    "question_text": "What type of account is Sales Revenue?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5d30e6ca-b1e3-47e8-87e0-0f236f3cb0f5",
+    "options": [
+      "Prepare tax returns",
+      "Verify that total debits equal total credits",
+      "Record daily transactions",
+      "Calculate net income"
+    ],
+    "explanation": "A trial balance lists all accounts and their balances to verify that total debits equal total credits in the ledger.",
+    "difficulty": "easy",
+    "question_text": "What is the purpose of a trial balance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "17165811-fb94-43ad-b7d4-9e111a65d386",
+    "options": [
+      "Money owed by the company",
+      "Money owed to the company by customers",
+      "Cash in bank",
+      "Inventory on hand"
+    ],
+    "explanation": "Accounts receivable represents amounts due from customers for goods sold or services rendered on credit.",
+    "difficulty": "easy",
+    "question_text": "What is accounts receivable?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d0aa8d01-4d06-466a-ba33-8363aca6775c",
+    "options": [
+      "Total sales revenue",
+      "Cost of inventory sold during a period",
+      "Operating expenses",
+      "Net income"
+    ],
+    "explanation": "COGS represents the direct costs attributable to the production or purchase of goods sold by a company.",
+    "difficulty": "easy",
+    "question_text": "What is the cost of goods sold (COGS)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "711ad805-a255-421b-b833-0bbc4e4191b3",
+    "options": [
+      "Land",
+      "Building",
+      "Inventory",
+      "Equipment"
+    ],
+    "explanation": "Inventory is a current asset expected to be sold within one year. Land, building, and equipment are non-current (fixed) assets.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a current asset?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5e690280-aa05-40e3-803d-cbed7e2dedec",
+    "options": [
+      "Sales − COGS",
+      "Sales − All expenses",
+      "Total assets − Total liabilities",
+      "Revenue − Depreciation"
+    ],
+    "explanation": "Gross profit = Net Sales − Cost of Goods Sold. It represents profit before operating expenses are deducted.",
+    "difficulty": "easy",
+    "question_text": "What is gross profit?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0803df74-a737-4631-bf20-34641448ddb3",
+    "options": [
+      "First In First Out",
+      "First In Final Out",
+      "Final In First Out",
+      "Fast Inventory Fast Output"
+    ],
+    "explanation": "FIFO (First In First Out) assumes the oldest inventory items are sold first, so ending inventory reflects the most recent costs.",
+    "difficulty": "easy",
+    "question_text": "What does FIFO stand for in inventory valuation?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6a8be434-631e-4514-b9d8-3f40c8bcdbff",
+    "options": [
+      "An account with the opposite normal balance of its related account",
+      "A liability account",
+      "A revenue account",
+      "An expense account"
+    ],
+    "explanation": "A contra account has the opposite normal balance of its related account, like Accumulated Depreciation (credit) contra to Equipment (debit).",
+    "difficulty": "easy",
+    "question_text": "What is a contra account?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "76552322-9557-470c-b478-f71d7e29656c",
+    "options": [
+      "Total revenue",
+      "Total revenue minus total expenses",
+      "Total assets minus total liabilities",
+      "Sales minus cost of goods sold"
+    ],
+    "explanation": "Net Income (Profit/Loss) = Total Revenues − Total Expenses. It represents the bottom line profitability of a business.",
+    "difficulty": "easy",
+    "question_text": "What is net income?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4f285aff-7884-4d5d-860b-fc49d88e40e6",
+    "options": [
+      "Cash",
+      "Inventory",
+      "Building",
+      "Accounts Receivable"
+    ],
+    "explanation": "A building is a fixed (non-current) asset because it has a useful life of more than one year and is used in business operations.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is an example of a fixed asset?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d1f59a08-3eb4-48f0-8b12-26b72de3f894",
+    "options": [
+      "A book of original entry",
+      "A collection of all accounts and their balances",
+      "A financial statement",
+      "A bank document"
+    ],
+    "explanation": "A ledger (general ledger) is the complete collection of all accounts maintained by a company, organized by account type.",
+    "difficulty": "easy",
+    "question_text": "What is a ledger?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "563abc5b-5d0e-46c6-aaed-ec6313d1fef5",
+    "options": [
+      "Match assets with liabilities",
+      "Match revenues with expenses in the same accounting period",
+      "Match debits with credits",
+      "Match beginning with ending inventory"
+    ],
+    "explanation": "The matching principle requires that expenses be recorded in the same period as the revenues they helped generate.",
+    "difficulty": "easy",
+    "question_text": "What is the matching principle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0134ef62-d49a-4c66-9fad-48bce661f4a4",
+    "options": [
+      "Debit",
+      "Credit",
+      "Zero",
+      "Either"
+    ],
+    "explanation": "Liability accounts normally have a credit balance. Liabilities increase with credits and decrease with debits.",
+    "difficulty": "easy",
+    "question_text": "What is the normal balance of a liability account?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f81c150a-7720-4b18-970b-fdfdc5aec2c2",
+    "options": [
+      "Recording each transaction in two journals",
+      "Every transaction affects at least two accounts with equal debits and credits",
+      "Making two copies of each document",
+      "Recording in two different ledgers"
+    ],
+    "explanation": "In double-entry bookkeeping, every transaction has equal debit and credit entries, maintaining the accounting equation balance.",
+    "difficulty": "easy",
+    "question_text": "What does double-entry bookkeeping mean?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "38e95d2f-bf80-44e9-b8e8-bfcdf54884fc",
+    "options": [
+      "Cash available for operations",
+      "Cumulative net income minus dividends over time",
+      "Total shareholder investments",
+      "Current year profit only"
+    ],
+    "explanation": "Retained earnings represent the cumulative net income earned by a company minus any dividends paid to shareholders.",
+    "difficulty": "easy",
+    "question_text": "What is retained earnings?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0e270c97-34f5-4afa-bbf6-494f7df44489",
+    "options": [
+      "Comparing bank statement with company cash records",
+      "Applying for a bank loan",
+      "Opening a new bank account",
+      "Calculating interest expense"
+    ],
+    "explanation": "Bank reconciliation compares the bank statement balance with the company's cash book balance and explains any differences.",
+    "difficulty": "easy",
+    "question_text": "What is a bank reconciliation?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "f6532a2f-94a7-4e27-87bc-f290cc928ef8",
+    "options": [
+      "Inventory",
+      "Patent",
+      "Equipment",
+      "Land"
+    ],
+    "explanation": "A patent is an intangible asset because it lacks physical substance but provides legal rights and future economic benefits.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is an intangible asset?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "755c6a61-fb74-4ee4-b583-a3fc45eed8db",
+    "options": [
+      "An expense paid after it is incurred",
+      "An expense paid before it is incurred",
+      "An unpaid expense",
+      "A past due expense"
+    ],
+    "explanation": "A prepaid expense is a payment made in advance for expenses to be incurred in future periods (e.g., prepaid rent, insurance).",
+    "difficulty": "easy",
+    "question_text": "What is a prepaid expense?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "76f2541c-0c89-456e-9809-aacd6458e07e",
+    "options": [
+      "Total liabilities",
+      "Residual interest in assets after deducting liabilities",
+      "Total revenue",
+      "Total assets"
+    ],
+    "explanation": "Owner's Equity = Assets − Liabilities. It represents the owner's residual claim on the assets of the business.",
+    "difficulty": "easy",
+    "question_text": "What is owner's equity?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b5f30435-2db6-4a7b-a0ac-b2ba502fe47e",
+    "options": [
+      "Balance Sheet",
+      "Income Statement",
+      "Cash Flow Statement",
+      "Statement of Retained Earnings"
+    ],
+    "explanation": "The Income Statement is prepared first because net income is needed to prepare the Statement of Retained Earnings, which in turn is needed for the Balance Sheet.",
+    "difficulty": "easy",
+    "question_text": "Which financial statement is prepared first?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a8614c96-62f8-483a-b1d2-c3b8d84c6886",
+    "options": [
+      "To correct errors in recording",
+      "To update account balances before preparing financial statements",
+      "To close temporary accounts",
+      "To record cash transactions only"
+    ],
+    "explanation": "Adjusting entries are made at the end of an accounting period to record revenues and expenses in the correct period under accrual accounting, before financial statements are prepared.",
+    "difficulty": "easy",
+    "question_text": "What is the purpose of adjusting entries?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f2e4196b-1cdb-4ca2-a64b-21d866a2ae40",
+    "options": [
+      "Debit Accounts Receivable, Credit Cash",
+      "Debit Bad Debt Expense, Credit Allowance for Doubtful Accounts",
+      "Debit Cash, Credit Sales",
+      "Debit Allowance for Doubtful Accounts, Credit Accounts Receivable"
+    ],
+    "explanation": "The adjusting entry debits Bad Debt Expense and credits Allowance for Doubtful Accounts (a contra-asset) to estimate uncollectible receivables.",
+    "difficulty": "medium",
+    "question_text": "Under the allowance method, what entry is made to record estimated uncollectible accounts?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aec44033-f07f-4ae8-8cdd-352ad96fde2b",
+    "options": [
+      "(Cost − Residual Value) / Useful Life",
+      "Cost / Useful Life",
+      "(Cost + Residual Value) / Useful Life",
+      "Cost × Useful Life"
+    ],
+    "explanation": "Straight-line depreciation = (Cost − Salvage/Residual Value) ÷ Useful Life in years. This gives equal depreciation expense each year.",
+    "difficulty": "medium",
+    "question_text": "What is the formula for calculating straight-line depreciation?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6988963a-f488-4080-bbfb-ffd22a98d238",
+    "options": [
+      "Rs. 210,000",
+      "Rs. 250,000",
+      "Rs. 190,000",
+      "Rs. 290,000"
+    ],
+    "explanation": "COGS = Beginning Inventory + Purchases − Ending Inventory = 50,000 + 200,000 − 40,000 = Rs. 210,000.",
+    "difficulty": "medium",
+    "question_text": "If beginning inventory is Rs. 50,000, purchases are Rs. 200,000, and ending inventory is Rs. 40,000, what is COGS?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "27cda4a7-8474-4004-b8cc-aff4aac71fa2",
+    "options": [
+      "Assets increase, Equity increases",
+      "Assets increase, Liabilities increase",
+      "Assets decrease, Liabilities decrease",
+      "No effect"
+    ],
+    "explanation": "Borrowing increases Cash (asset) and increases Loans Payable (liability). The equation remains balanced: Assets↑ = Liabilities↑ + Equity.",
+    "difficulty": "medium",
+    "question_text": "What is the effect on the accounting equation when a company borrows money from a bank?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b0d0acfa-cb7e-4577-aba9-189243c61365",
+    "options": [
+      "Profitability",
+      "Liquidity - ability to pay short-term obligations",
+      "Efficiency",
+      "Solvency"
+    ],
+    "explanation": "Current Ratio = Current Assets / Current Liabilities. It measures a company's ability to pay short-term obligations with short-term assets.",
+    "difficulty": "medium",
+    "question_text": "What does the current ratio measure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3068b001-3239-4746-a8c8-b6e6ebeeab2e",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "Weighted Average",
+      "Specific Identification"
+    ],
+    "explanation": "Under FIFO, ending inventory consists of the most recently purchased (higher-priced) items, resulting in the highest ending inventory value during inflation.",
+    "difficulty": "medium",
+    "question_text": "In a period of rising prices, which inventory method gives the highest ending inventory value?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "2b566cfa-ada2-466d-864d-93ebaf8b930b",
+    "options": [
+      "To correct errors",
+      "To transfer balances from temporary accounts to permanent accounts",
+      "To record depreciation",
+      "To adjust prepaid expenses"
+    ],
+    "explanation": "Closing entries transfer balances from temporary accounts (revenue, expense, dividends) to permanent accounts (retained earnings) at period end.",
+    "difficulty": "medium",
+    "question_text": "What is the purpose of closing entries?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2e5d69e0-6083-4ad4-a875-b137037ea356",
+    "options": [
+      "5 times",
+      "10 times",
+      "15 times",
+      "20 times"
+    ],
+    "explanation": "AR Turnover = Net Credit Sales / Average AR = 500,000 / 50,000 = 10 times. This measures how often AR is collected during the period.",
+    "difficulty": "medium",
+    "question_text": "A company has net sales of Rs. 500,000 and average accounts receivable of Rs. 50,000. What is the accounts receivable turnover?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "97e8731b-5e08-45b8-9729-e7cc2b05a0e8",
+    "options": [
+      "Total Assets / Total Liabilities",
+      "Total Liabilities / Total Equity",
+      "Current Assets / Current Liabilities",
+      "Net Income / Total Equity"
+    ],
+    "explanation": "Debt-to-Equity Ratio = Total Liabilities / Total Equity. It measures financial leverage and indicates what proportion of financing comes from creditors vs. owners.",
+    "difficulty": "medium",
+    "question_text": "What is the debt-to-equity ratio?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d85cd27f-321f-43ad-bcd1-56c72b26b9b0",
+    "options": [
+      "Operating activities - added back to net income",
+      "Investing activities",
+      "Financing activities",
+      "Not shown"
+    ],
+    "explanation": "Depreciation is a non-cash expense deducted to arrive at net income. In the indirect method, it is added back in the operating activities section.",
+    "difficulty": "medium",
+    "question_text": "When using the indirect method for the statement of cash flows, where does depreciation expense appear?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6be4e049-cb35-4a28-b075-a86c69643ec1",
+    "options": [
+      "Physical assets of a company",
+      "Excess of purchase price over fair value of net identifiable assets in a business combination",
+      "Customer satisfaction",
+      "Brand name only"
+    ],
+    "explanation": "Goodwill is an intangible asset representing the excess purchase price paid over the fair market value of net identifiable assets in an acquisition.",
+    "difficulty": "medium",
+    "question_text": "What is goodwill in accounting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bd172c3f-1f0c-46ab-8d97-ea80ab609011",
+    "options": [
+      "Rs. 36,000",
+      "Rs. 40,000",
+      "Rs. 20,000",
+      "Rs. 18,000"
+    ],
+    "explanation": "Straight-line rate = 1/5 = 20%. DDB rate = 2 × 20% = 40%. First year depreciation = 100,000 × 40% = Rs. 40,000. Salvage value is ignored initially.",
+    "difficulty": "medium",
+    "question_text": "A company purchased equipment for Rs. 100,000 with a 5-year life and Rs. 10,000 salvage value. What is annual depreciation using double-declining balance (first year)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8baf2d0e-3f61-45c9-83aa-50bcec411e91",
+    "options": [
+      "A definite obligation",
+      "A potential liability depending on a future event",
+      "A long-term loan",
+      "An account payable"
+    ],
+    "explanation": "A contingent liability is a potential obligation that may occur depending on the outcome of a future event, such as a pending lawsuit.",
+    "difficulty": "medium",
+    "question_text": "What is a contingent liability?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f08e1745-20d7-4229-8d3c-966ad5f8388e",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "Weighted Average",
+      "Specific Identification"
+    ],
+    "explanation": "LIFO results in higher COGS (using recent higher costs), lower reported income, and therefore lower income taxes during inflationary periods.",
+    "difficulty": "medium",
+    "question_text": "Which inventory costing method results in the lowest taxes during periods of inflation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "85bd1f2d-b587-49b0-aba8-812a699d4179",
+    "options": [
+      "Current Assets / Current Liabilities",
+      "(Current Assets − Inventory) / Current Liabilities",
+      "Cash / Current Liabilities",
+      "Total Assets / Total Liabilities"
+    ],
+    "explanation": "Quick Ratio = (Current Assets − Inventory − Prepaids) / Current Liabilities. It's a stricter liquidity test excluding less liquid inventory.",
+    "difficulty": "medium",
+    "question_text": "What is the quick ratio (acid-test ratio)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "06ae57d3-1c96-42ef-84f1-80d6f5244e7c",
+    "options": [
+      "Stock issued to employees",
+      "Company's own stock that has been reacquired but not retired",
+      "Stock held by the government",
+      "Preferred stock"
+    ],
+    "explanation": "Treasury stock is a company's own stock that it has repurchased from shareholders. It is recorded as a contra-equity account (reduces total equity).",
+    "difficulty": "medium",
+    "question_text": "What is treasury stock?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "89b59dad-943a-4bd7-8a3c-290794753830",
+    "options": [
+      "When cash is received",
+      "When the performance obligation is satisfied",
+      "When the order is placed",
+      "At the end of the fiscal year"
+    ],
+    "explanation": "Under accrual accounting and ASC 606/IFRS 15, revenue is recognized when (or as) the entity satisfies a performance obligation by transferring control of goods/services.",
+    "difficulty": "medium",
+    "question_text": "When is revenue recognized under the revenue recognition principle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e39f36ac-81a5-4f4c-8227-94dcbb0e3826",
+    "options": [
+      "Net income only",
+      "Net income plus other comprehensive income items",
+      "Total revenue",
+      "Gross profit"
+    ],
+    "explanation": "Comprehensive Income = Net Income + Other Comprehensive Income (OCI), which includes unrealized gains/losses on available-for-sale securities, foreign currency translation, and pension adjustments.",
+    "difficulty": "medium",
+    "question_text": "What is comprehensive income?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "92328ccb-0665-43f9-926c-476e5ae2f4b5",
+    "options": [
+      "Rs. 5,000",
+      "Rs. 10,000",
+      "Rs. 15,000",
+      "Rs. 25,000"
+    ],
+    "explanation": "Common Stock = 1,000 × 10 = Rs. 10,000. Total cash = 1,000 × 15 = Rs. 15,000. Additional Paid-in Capital = 15,000 − 10,000 = Rs. 5,000.",
+    "difficulty": "medium",
+    "question_text": "A company issues 1,000 shares of Rs. 10 par value common stock for Rs. 15 per share. What is the credit to Additional Paid-in Capital?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "72b00615-a866-4a83-b56a-3d3f844ec676",
+    "options": [
+      "Prepare financial statements",
+      "Provide independent assurance on financial statement fairness",
+      "Calculate taxes",
+      "Manage company operations"
+    ],
+    "explanation": "An audit provides an independent professional opinion on whether financial statements are presented fairly in accordance with the applicable financial reporting framework.",
+    "difficulty": "medium",
+    "question_text": "What is the purpose of an audit?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1b802d57-fe29-4671-ba74-8be66ac74718",
+    "options": [
+      "A minor error in recording",
+      "A deficiency likely to result in material misstatement not being prevented or detected",
+      "A cash shortage",
+      "An unrecorded transaction"
+    ],
+    "explanation": "A material weakness is a significant deficiency in internal control such that there is a reasonable possibility of a material misstatement not being prevented or detected.",
+    "difficulty": "medium",
+    "question_text": "What is a material weakness in internal control?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9a168c6b-13ea-47cf-ad92-6e1fcc45873a",
+    "options": [
+      "Net Income / Interest Expense",
+      "(Net Income + Interest Expense + Tax Expense) / Interest Expense",
+      "EBIT / Interest Expense",
+      "Both B and C"
+    ],
+    "explanation": "Times Interest Earned = EBIT / Interest Expense = (Net Income + Interest + Taxes) / Interest Expense. It measures ability to meet interest obligations.",
+    "difficulty": "medium",
+    "question_text": "What is the times interest earned ratio?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "291c1cae-b3e7-4f35-b2d0-6ad44d4a6c82",
+    "options": [
+      "Cash payment to shareholders",
+      "Distribution of additional shares to existing shareholders",
+      "Repurchase of company stock",
+      "Sale of new stock"
+    ],
+    "explanation": "A stock dividend is a distribution of additional shares of a company's stock to existing shareholders proportionally without receiving payment.",
+    "difficulty": "medium",
+    "question_text": "What is a stock dividend?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "213c9944-86d1-44ff-9257-b3d7663f50ab",
+    "options": [
+      "Only historical cost",
+      "Cost model or fair value model",
+      "Only fair value",
+      "Revaluation model only"
+    ],
+    "explanation": "Under IAS 40, investment property can be measured using either the cost model (less depreciation and impairment) or the fair value model (with changes in P&L).",
+    "difficulty": "medium",
+    "question_text": "Under IFRS, how is investment property measured after initial recognition?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7680e237-fbaa-4e2d-ad09-09f3dc715794",
+    "options": [
+      "Equal amortization each period",
+      "Amortization based on carrying value × market rate at issuance",
+      "Amortization decreases over time",
+      "No amortization"
+    ],
+    "explanation": "The effective interest method calculates interest expense as carrying value × effective (market) interest rate at issuance, with the difference from cash payment amortizing the premium/discount.",
+    "difficulty": "medium",
+    "question_text": "What is the effective interest method of amortization?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "be6ddcd6-76d2-49d3-88a4-801e6d4cb9da",
+    "options": [
+      "Always an operating expense",
+      "A contract that conveys the right to control an identified asset for a period in exchange for consideration",
+      "Only for real estate",
+      "A short-term rental"
+    ],
+    "explanation": "IFRS 16 defines a lease as a contract conveying the right to control the use of an identified asset for a period in exchange for consideration, requiring most leases to be capitalized.",
+    "difficulty": "medium",
+    "question_text": "What is a lease under IFRS 16?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e0818655-6670-420f-8c46-8dbf23c85de9",
+    "options": [
+      "15%",
+      "25%",
+      "40%",
+      "60%"
+    ],
+    "explanation": "Gross Profit = 800,000 − 480,000 = 320,000. Operating Income = 320,000 − 200,000 = 120,000. Operating Margin = 120,000/800,000 = 15%.",
+    "difficulty": "medium",
+    "question_text": "A company has sales of Rs. 800,000, cost of goods sold of Rs. 480,000, and operating expenses of Rs. 200,000. What is the operating margin?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7312cb38-3878-455e-b82c-b1dcd13617ee",
+    "options": [
+      "Current period error",
+      "Correction of an error in previously issued financial statements",
+      "Change in accounting estimate",
+      "Normal adjustment entry"
+    ],
+    "explanation": "Prior period adjustments correct material errors in previously issued financial statements and are adjusted against the opening balance of retained earnings.",
+    "difficulty": "medium",
+    "question_text": "What is a prior period adjustment?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "187d8cf8-768a-40b9-9229-b27fc8a08798",
+    "options": [
+      "Pushing expenses to next period",
+      "Adjusting subsidiary's books to reflect acquisition-date fair values in a business combination",
+      "Inventory valuation method",
+      "Revenue recognition technique"
+    ],
+    "explanation": "Push-down accounting adjusts the subsidiary's separate financial statements to reflect the acquirer's basis (fair values established in the business combination).",
+    "difficulty": "medium",
+    "question_text": "What is push-down accounting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "462ef51d-47dd-40ec-8c51-24ede6c2d791",
+    "options": [
+      "A formal financial statement filed with the government",
+      "A multi-column document used to prepare adjusting entries and financial statements",
+      "A payroll document",
+      "A tax return form"
+    ],
+    "explanation": "An accounting worksheet is an internal multi-column document listing all accounts, unadjusted balances, adjustments, and adjusted balances to facilitate preparation of financial statements.",
+    "difficulty": "medium",
+    "question_text": "What is a worksheet in accounting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "491aa091-0d13-4795-b316-a0337e7d29f8",
+    "options": [
+      "Amortize over 10 years",
+      "Qualitative assessment, then quantitative two-step test at reporting unit level",
+      "Test only when acquired",
+      "Write off immediately"
+    ],
+    "explanation": "Under ASC 350, goodwill is not amortized. Companies first perform a qualitative assessment, then if needed, a quantitative two-step impairment test at the reporting unit level.",
+    "difficulty": "hard",
+    "question_text": "How is goodwill tested for impairment under U.S. GAAP (ASC 350)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c5794153-27c6-412b-a9d4-82139ac77030",
+    "options": [
+      "Always equity",
+      "Financial liability at fair value through profit or loss, or equity depending on terms",
+      "Not recognized",
+      "Expense immediately"
+    ],
+    "explanation": "Contingent consideration is measured at fair value at acquisition date. If cash/other assets: liability at FVTPL. If equity instruments: classified as equity and not remeasured.",
+    "difficulty": "hard",
+    "question_text": "In a business combination, how is contingent consideration classified and measured under IFRS 3?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "49dbebea-8f86-4c22-a21e-46ac1e190282",
+    "options": [
+      "No difference",
+      "IFRS: financing or operating; GAAP: financing only",
+      "IFRS: investing only; GAAP: financing only",
+      "IFRS: operating only; GAAP: financing only"
+    ],
+    "explanation": "Under IFRS, dividends paid can be classified as operating or financing. Under U.S. GAAP, dividends paid are always classified as financing activities.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between IFRS and U.S. GAAP in classifying dividends paid on the statement of cash flows?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f8cc28f1-4ee6-4b67-84c5-6de91eb7f32e",
+    "options": [
+      "At nominal value",
+      "At present value using projected unit credit method",
+      "At fair value of plan assets",
+      "At historical cost"
+    ],
+    "explanation": "The defined benefit obligation is measured at the present value of expected future payments required to settle the obligation resulting from employee service using the projected unit credit method.",
+    "difficulty": "hard",
+    "question_text": "How is a defined benefit obligation measured under IAS 19?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "01922b34-245e-4d80-a39a-ed7af796babc",
+    "options": [
+      "Record entirely as debt",
+      "Bifurcate into debt component and equity component (conversion option)",
+      "Record entirely as equity",
+      "Expense immediately"
+    ],
+    "explanation": "Under U.S. GAAP, the proceeds are allocated between the liability component (fair value of similar non-convertible debt) and equity component (residual/beneficial conversion feature).",
+    "difficulty": "hard",
+    "question_text": "What is the accounting treatment for a convertible bond with a beneficial conversion feature under U.S. GAAP?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2b9db18e-fabc-4424-a04d-ca3903bd4717",
+    "options": [
+      "Fair value, cash flow, and net investment in foreign operation hedges",
+      "Only fair value hedges",
+      "Short-term and long-term hedges",
+      "Domestic and foreign hedges"
+    ],
+    "explanation": "IFRS 9 recognizes three hedge types: (1) Fair value hedges (recognized assets/liabilities), (2) Cash flow hedges (future cash flows), (3) Hedges of net investment in foreign operations.",
+    "difficulty": "hard",
+    "question_text": "In hedge accounting under IFRS 9, what are the three types of hedges?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fbb287f9-29d2-42ab-8df3-3bfd3a958244",
+    "options": [
+      "Amortize over 5 years",
+      "Recognized immediately in Other Comprehensive Income ( corridor method eliminated)",
+      "Expense in P&L immediately",
+      "Not recognized"
+    ],
+    "explanation": "Under the 2011 revised IAS 19, the corridor method was eliminated. All remeasurements including actuarial gains/losses are recognized immediately in OCI and not reclassified to P&L.",
+    "difficulty": "hard",
+    "question_text": "How are actuarial gains and losses recognized under IAS 19 (revised 2011)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d6963f13-128d-4fbe-9510-98ab50158b6f",
+    "options": [
+      "Consolidate based on majority voting interest",
+      "Consolidate when a reporting entity has a controlling financial interest through power and benefits",
+      "Never consolidate",
+      "Equity method only"
+    ],
+    "explanation": "Under ASC 810, a VIE is consolidated by its primary beneficiary—the entity with both (1) power to direct activities significantly affecting economic performance, and (2) obligation to absorb losses/right to receive benefits.",
+    "difficulty": "hard",
+    "question_text": "What is variable interest entity (VIE) consolidation under ASC 810?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0fe0c730-bcc8-4419-8bce-7b0d042f5bd8",
+    "options": [
+      "When payment is received",
+      "When one of five criteria is met (customer simultaneously receives/consumes, asset has no alternative use, etc.)",
+      "At contract signing",
+      "At year-end"
+    ],
+    "explanation": "Revenue is recognized over time if: (1) customer simultaneously receives/consumes benefits, (2) customer controls asset as created, or (3) entity's performance doesn't create asset with alternative use and entity has enforceable right to payment.",
+    "difficulty": "hard",
+    "question_text": "How is revenue recognized over time under ASC 606/IFRS 15?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e9245bf3-e838-4b85-84f8-aabc7e409e53",
+    "options": [
+      "For subsidiaries - 100% consolidation",
+      "For investments with significant influence (typically 20-50% ownership)",
+      "For all investments",
+      "For trading securities"
+    ],
+    "explanation": "The equity method is used when the investor has significant influence (generally 20-50% voting power). The investment is initially recognized at cost and adjusted for investor's share of investee's profit/loss.",
+    "difficulty": "hard",
+    "question_text": "What is the equity method of accounting and when is it used?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a4347410-bed2-4e3d-8676-55af46754310",
+    "options": [
+      "Purchase at market value",
+      "Purchase where fair value of net assets acquired exceeds consideration transferred",
+      "Purchase with cash only",
+      "Purchase of 100% ownership"
+    ],
+    "explanation": "A bargain purchase (negative goodwill) occurs when the fair value of net identifiable assets exceeds the consideration transferred. After reassessing, the gain is recognized in P&L.",
+    "difficulty": "hard",
+    "question_text": "What is a bargain purchase in a business combination?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6d2e03b9-90fe-4a44-bac0-c54edb07cb93",
+    "options": [
+      "Always current",
+      "Always non-current (after ASU 2015-17)",
+      "Split between current and non-current",
+      "Not recognized"
+    ],
+    "explanation": "ASU 2015-17 simplified presentation by requiring all deferred tax assets and liabilities to be classified as non-current on the balance sheet.",
+    "difficulty": "hard",
+    "question_text": "How are deferred tax assets and liabilities classified under U.S. GAAP (ASC 740)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "44152fea-8789-4a34-a10a-d104c412adbc",
+    "options": [
+      "They are always the same",
+      "Functional currency is the primary economic environment currency; presentation currency is what financial statements are shown in",
+      "Functional currency is only for exports",
+      "Presentation currency is always USD"
+    ],
+    "explanation": "Functional currency is the currency of the primary economic environment in which an entity operates. Presentation currency is the currency in which financial statements are presented (can differ from functional currency).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between functional currency and presentation currency?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fbee30e3-3282-4bbb-9ca5-e28b8570b09f",
+    "options": [
+      "All segments are reportable",
+      "A component engaging in business activities with discrete financial information reviewed by the CODM",
+      "Only geographic segments",
+      "Only product lines"
+    ],
+    "explanation": "An operating segment is a component of an enterprise: (1) engaging in business activities earning revenues and incurring expenses, (2) with operating results regularly reviewed by the chief operating decision maker, (3) with discrete financial information available.",
+    "difficulty": "hard",
+    "question_text": "What is the accounting treatment for an operating segment under U.S. GAAP (ASC 280)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2f52b32e-3de6-47f2-aa50-260b701afd7a",
+    "options": [
+      "Always at fair value",
+      "At fair value if commercial substance exists; otherwise at carrying amount",
+      "Always at carrying amount",
+      "At nominal value"
+    ],
+    "explanation": "Under ASC 845, non-monetary exchanges are measured at fair value if the exchange has commercial substance. If lacks commercial substance, it's measured at carrying amount of asset surrendered.",
+    "difficulty": "hard",
+    "question_text": "How is a non-monetary transaction measured under U.S. GAAP?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "12238221-0786-4b2a-bdf9-56c2068452e8",
+    "options": [
+      "Show cash flows",
+      "Reconcile beginning and ending equity for each component",
+      "Show only retained earnings",
+      "Calculate EPS"
+    ],
+    "explanation": "The statement of changes in equity reconciles the beginning and ending balances of each equity component (share capital, reserves, retained earnings) showing total comprehensive income, transactions with owners, and transfers.",
+    "difficulty": "hard",
+    "question_text": "What is the purpose of the statement of changes in equity?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "85dd6947-52e6-475a-957d-f6aa4b6ca4b3",
+    "options": [
+      "No difference",
+      "Joint operation: rights to assets/obligations for liabilities; Joint venture: rights to net assets",
+      "Joint venture is always incorporated",
+      "Joint operation is always short-term"
+    ],
+    "explanation": "In a joint operation, parties have rights to assets and obligations for liabilities (proportionate consolidation). In a joint venture, parties have rights to net assets (equity method).",
+    "difficulty": "hard",
+    "question_text": "In a joint arrangement under IFRS 11, what is the difference between a joint operation and a joint venture?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b5849afe-6a2c-4ab4-a746-a43e513daf04",
+    "options": [
+      "Net profit",
+      "Gross profit",
+      "Operating profit",
+      "Contribution"
+    ],
+    "explanation": "Gross Profit = Sales Revenue ΓêÆ Cost of Goods Sold.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the difference between sales revenue and cost of goods sold.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "09b97c19-8d3a-40e4-ae7a-0a47159452fd",
+    "options": [
+      "Basic EPS only",
+      "Both basic and diluted EPS considering potential common shares",
+      "Diluted EPS only",
+      "EPS is not required"
+    ],
+    "explanation": "Companies with complex capital structures (potential common shares like convertible securities, options, warrants) must report both basic EPS and diluted EPS.",
+    "difficulty": "hard",
+    "question_text": "How is earnings per share (EPS) calculated for a complex capital structure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5d7c9fd0-b2e3-4b59-a854-d6e5d1be08ec",
+    "options": [
+      "A legal contract",
+      "An obligation derived from entity's actions where it has no realistic alternative",
+      "A future planned expenditure",
+      "An tax liability"
+    ],
+    "explanation": "A constructive obligation arises from an entity's actions, through established pattern of past practice or published policies, that create valid expectations of other parties that the entity will discharge those obligations.",
+    "difficulty": "hard",
+    "question_text": "What is a constructive obligation in accounting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1688579c-6663-437d-a498-432ac048c812",
+    "options": [
+      "As cash",
+      "As intangible assets at cost or revaluation model (not financial assets under IAS 32/IFRS 9)",
+      "As inventory",
+      "As equity investments"
+    ],
+    "explanation": "Under current IFRS, cryptocurrencies don't meet the definition of cash or financial assets. They're generally accounted for as intangible assets under IAS 38, measured at cost less impairment or using the revaluation model.",
+    "difficulty": "hard",
+    "question_text": "How are cryptocurrency holdings accounted for under current IFRS guidance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "04f2935d-ed1c-4911-8ce2-9f96ed1b022d",
+    "options": [
+      "Credit directly to equity",
+      "Recognize in profit or loss systematically over periods to match related costs",
+      "Not recognized until cash received",
+      "Record as liability forever"
+    ],
+    "explanation": "Government grants related to income are recognized in profit or loss on a systematic basis over the periods necessary to match them with the related costs they are intended to compensate.",
+    "difficulty": "hard",
+    "question_text": "What is the accounting treatment for a government grant related to income under IAS 20?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c8498600-9135-4c74-851b-2d1a5b5dafd4",
+    "options": [
+      "IFRS 16 eliminates the operating lease classification for lessees",
+      "Operating leases are off-balance sheet",
+      "Finance leases only for equipment",
+      "No difference"
+    ],
+    "explanation": "IFRS 16 eliminated the operating/finance lease distinction for lessees. With limited exceptions (short-term/low-value), lessees recognize a right-of-use asset and lease liability for all leases.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a finance lease and operating lease for the lessee under IFRS 16?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6a9c0f0f-4da7-4a7b-b85d-e5b4151e61f8",
+    "options": [
+      "All reclassified to P&L",
+      "Items that will be reclassified and items that will not be reclassified to P&L",
+      "Only unrealized gains",
+      "Only pension adjustments"
+    ],
+    "explanation": "IAS 1 requires OCI items to be grouped into: (1) those that will be reclassified to P&L when specific conditions are met (e.g., cash flow hedges, foreign currency translation), and (2) those that will not (e.g., revaluation surplus, remeasurements of defined benefit plans).",
+    "difficulty": "hard",
+    "question_text": "How are components of other comprehensive income (OCI) classified?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f5f9734b-48a2-46ab-b5ab-4f1895daa000",
+    "options": [
+      "Currently required method for all mergers",
+      "A historical method for accounting for certain business combinations using book values; eliminated by FASB in 2001",
+      "Method for liquidating companies",
+      "Tax accounting method"
+    ],
+    "explanation": "Pooling of interests treated mergers as uniting of ownership interests using book values. FASB eliminated it in 2001 (FAS 141), requiring the purchase/acquisition method for all business combinations.",
+    "difficulty": "hard",
+    "question_text": "What is the pooling of interests method and when was it used?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8e478c5d-7df9-498d-b78f-b165b6e4f540",
+    "options": [
+      "Stated coupon rate",
+      "The rate that exactly discounts estimated future cash flows through expected life to gross carrying amount",
+      "Central bank rate",
+      "Prime rate"
+    ],
+    "explanation": "The effective interest rate (EIR) is the rate that exactly discounts estimated future cash payments or receipts through the expected life of the financial instrument to the gross carrying amount of the financial asset.",
+    "difficulty": "hard",
+    "question_text": "How is the effective interest rate calculated for an amortized cost instrument?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "897cba4e-a6a2-4511-aca2-568f12a5134d",
+    "options": [
+      "Control through legal ownership >50%",
+      "Control through substantive rights even with <50% voting rights (current exposure to variable returns, ability to affect returns)",
+      "Joint control",
+      "No control"
+    ],
+    "explanation": "De facto control exists when an investor controls an investee even with less than 50% voting rights, based on the size and dispersion of other voting rights, potential voting rights, and other substantive rights indicating ability to direct relevant activities.",
+    "difficulty": "hard",
+    "question_text": "What is de facto control in consolidation accounting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b85fb97f-f23e-4a05-b595-e0335f045713",
+    "options": [
+      "As inventory",
+      "As intangible assets (allowances), provision (obligation to deliver), with government grants (allocated allowances)",
+      "Not recognized",
+      "As revenue"
+    ],
+    "explanation": "While IFRIC 3 was withdrawn, current practice typically treats: (1) purchased allowances as intangible assets, (2) government-allocated allowances as deferred income/government grants, and (3) obligation to deliver allowances as a provision.",
+    "difficulty": "hard",
+    "question_text": "How are emission trading schemes accounted for under IFRIC 3 (withdrawn) and current practice?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "082b8103-72fa-4891-8b44-6b906ecc1df8",
+    "options": [
+      "Recognize full revenue at sale",
+      "Recognize revenue only for products not expected to be returned, with refund liability and asset for expected returned goods",
+      "Don't recognize any revenue",
+      "Recognize as consignment"
+    ],
+    "explanation": "Under ASC 606/IFRS 15, for sales with right of return: (1) recognize revenue only for products not expected to be returned, (2) recognize refund liability for expected refunds, (3) recognize asset for expected returned goods in recoverable condition.",
+    "difficulty": "hard",
+    "question_text": "What is the accounting for a sale with a right of return?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e56f5cdc-0510-4527-b789-bc953df8be64",
+    "options": [
+      "No difference",
+      "Provision: present obligation, probable outflow, reliable estimate; Contingent liability: possible obligation or present obligation not probable/not measurable",
+      "Provisions are always long-term",
+      "Contingent liabilities are always recognized"
+    ],
+    "explanation": "A provision is recognized when: (1) present obligation from past event, (2) probable outflow of resources, (3) reliable estimate can be made. Contingent liabilities are either possible obligations or present obligations not meeting recognition criteria.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a provision and a contingent liability under IAS 37?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "24a3b9b1-d823-47aa-82c8-28eba68948b8",
+    "options": [
+      "Continue equity method",
+      "Remeasure previously held equity interest at fair value through P&L; then consolidate",
+      "No remeasurement",
+      "Amortize previous investment"
+    ],
+    "explanation": "In a step acquisition achieving control, the acquirer remeasures its previously held equity interest at acquisition-date fair value, recognizing any gain/loss in P&L, then applies acquisition accounting to consolidate.",
+    "difficulty": "hard",
+    "question_text": "How is a business combination achieved in stages (step acquisition) accounted for under IFRS 3?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ea5e931e-771c-4b9a-85f3-d7e640369548",
+    "options": [
+      "Replace accounting standards",
+      "Provide concepts for developing consistent standards and resolving accounting issues",
+      "Mandate specific journal entries",
+      "Set tax rates"
+    ],
+    "explanation": "The Conceptual Framework provides the foundation for developing IFRS, defining objectives, qualitative characteristics, elements, recognition, measurement, and presentation concepts to ensure consistency across standards.",
+    "difficulty": "hard",
+    "question_text": "What is the purpose of the conceptual framework for financial reporting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2124ddf4-4d50-4f10-aa24-2cb45af8f111",
+    "options": [
+      "Credit",
+      "Debit",
+      "Journal",
+      "Closing"
+    ],
+    "explanation": "Debit entries increase asset and expense accounts.",
+    "difficulty": "easy",
+    "question_text": "A _____ entry increases an asset or expense account.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d6bf5c9f-9520-4f39-9061-04d42b784193",
+    "options": [
+      "As cash-settled",
+      "As equity-settled share-based payments",
+      "As a liability",
+      "Not recognized"
+    ],
+    "explanation": "SARs settled in shares are treated as equity-settled share-based payments. The fair value is measured at grant date and recognized over the vesting period with a credit to equity.",
+    "difficulty": "hard",
+    "question_text": "How are stock appreciation rights (SARs) settled in shares accounted for under IFRS 2?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "590be705-22c7-452e-84da-35bb785115dd",
+    "options": [
+      "Normal acquisition where legal acquirer is accounting acquiree",
+      "Transaction where legal subsidiary is accounting acquirer; legal parent's financials are a continuation of legal subsidiary",
+      "Hostile takeover",
+      "Liquidation accounting"
+    ],
+    "explanation": "In a reverse acquisition, the legal acquirer is identified as the acquiree for accounting purposes, and the legal subsidiary (accounting acquirer) prepares the consolidated financial statements as a continuation of its own.",
+    "difficulty": "hard",
+    "question_text": "What is reverse acquisition accounting?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c7c04895-5e63-4ab9-b550-9824bd3a7f1f",
+    "options": [
+      "Only to goodwill",
+      "First to goodwill, then pro rata to other assets based on carrying amounts",
+      "Only to tangible assets",
+      "To liabilities first"
+    ],
+    "explanation": "Impairment loss is allocated: (1) first to goodwill, (2) then to other assets of the CGU pro rata based on carrying amount, subject to not reducing any asset below the highest of its fair value less costs to sell, value in use, and zero.",
+    "difficulty": "hard",
+    "question_text": "How is an impairment loss allocated for a cash-generating unit under IAS 36?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "01e261a5-b326-4a01-84f6-82d2b33016d8",
+    "options": [
+      "Individual asset",
+      "Cash-generating unit (CGU) or group of CGUs to which goodwill is allocated",
+      "Entire company",
+      "Geographic segment"
+    ],
+    "explanation": "Goodwill is allocated to each CGU or group of CGUs expected to benefit from the synergies of the business combination. Impairment testing is performed at this level, not lower than the operating segment level before aggregation.",
+    "difficulty": "hard",
+    "question_text": "What is the unit of account for impairment testing of goodwill?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4ccc139b-0418-4fcd-9c30-8b3ab44d4bc1",
+    "options": [
+      "Expense immediately",
+      "Capitalize and amortize if expected to be recovered; practical expedient to expense if amortization period ≤1 year",
+      "Always capitalize",
+      "Record as intangible asset"
+    ],
+    "explanation": "Incremental costs to obtain a contract (e.g., sales commissions) are capitalized as an asset if expected to be recovered. IFRS 15 provides a practical expedient allowing immediate expensing if the amortization period would be one year or less.",
+    "difficulty": "hard",
+    "question_text": "How are contract costs (incremental costs to obtain a contract) accounted for under IFRS 15?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fd5b5976-e99f-4020-aa40-d7fa5e5fc4ce",
+    "options": [
+      "No difference",
+      "Full goodwill: recognize 100% goodwill; Partial goodwill: recognize only parent's share of goodwill",
+      "Full goodwill is only under GAAP",
+      "Partial goodwill is prohibited"
+    ],
+    "explanation": "Full goodwill measures goodwill as the excess of consideration transferred plus NCI fair value over net identifiable assets. Partial goodwill (allowed under IFRS 3) measures goodwill as the excess of consideration over the acquirer's share of net assets, with NCI measured at proportionate share.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between full goodwill and partial goodwill methods in business combinations?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e2ca893f-f453-407a-8973-ef5d9b628ec3",
+    "options": [
+      "Not used at all",
+      "As a pre-tax discount rate to calculate value in use",
+      "As a starting point to determine pre-tax discount rate reflecting current market assessments",
+      "Only for goodwill"
+    ],
+    "explanation": "IAS 36 requires discount rates to reflect current market assessments. While WACC is a starting point, it must be adjusted to a pre-tax rate and reflect risks specific to the asset/CGU, not just the entity's average cost of capital.",
+    "difficulty": "hard",
+    "question_text": "How is the weighted average cost of capital (WACC) used in impairment testing under IAS 36?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5defc371-0f4a-45c1-a9ed-109442cebb1f",
+    "options": [
+      "Ignore the increase",
+      "Recognize incremental fair value over remaining vesting period in addition to original amount",
+      "Reverse previously recognized expense",
+      "Expense immediately"
+    ],
+    "explanation": "Under IFRS 2, if modification increases fair value, the entity recognizes the incremental fair value (modified fair value − original fair value at modification date) over the remaining vesting period, in addition to the original grant date fair value.",
+    "difficulty": "hard",
+    "question_text": "What is the accounting treatment for a modification of a share-based payment that increases fair value?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "45c5935a-b4e6-4751-b6fe-168b8ce5c3e8",
+    "options": [
+      "Not eliminated",
+      "Eliminated in full regardless of NCI percentage",
+      "Eliminated and allocated between parent and NCI based on ownership",
+      "Only eliminated for downstream transactions"
+    ],
+    "explanation": "Unrealized profits on intra-group transactions are eliminated in full. For upstream transactions (subsidiary to parent), the elimination is allocated between the parent and NCI based on ownership percentages. For downstream (parent to subsidiary), all elimination is charged against the parent.",
+    "difficulty": "hard",
+    "question_text": "In consolidation, how are unrealized profits on intra-group transactions eliminated?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6c068b76-8199-4ad5-b05e-f34a16a68a5d",
+    "options": [
+      "Business",
+      "Accounting",
+      "Financial",
+      "Economic"
+    ],
+    "explanation": "The accounting equation: Assets = Liabilities + Capital.",
+    "difficulty": "easy",
+    "question_text": "The _____ equation states that Assets = Liabilities + Capital.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "30c79049-4d73-4c9f-91e8-f2f5ceecec03",
+    "options": [
+      "Journal",
+      "Ledger",
+      "Trial balance",
+      "Cash book"
+    ],
+    "explanation": "A ledger is a book containing individual accounts.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a record of all transactions involving a specific account.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "369b1330-16e0-4d51-bd18-bb699169e782",
+    "options": [
+      "Ledger",
+      "Trial balance",
+      "Journal",
+      "Cash book"
+    ],
+    "explanation": "The journal (day book) is the book of prime entry.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the first book of entry where transactions are first recorded.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "12c0c799-42eb-4cbc-bc57-6930a6168663",
+    "options": [
+      "Auditing",
+      "Bookkeeping",
+      "Accounting",
+      "Budgeting"
+    ],
+    "explanation": "Bookkeeping is the systematic recording of financial transactions.",
+    "difficulty": "easy",
+    "question_text": "_____ is the process of recording financial transactions in a systematic way.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d35ea8b1-9101-4ae5-a0f2-651a7121b145",
+    "options": [
+      "Income",
+      "Cash flow",
+      "Balance",
+      "Trading"
+    ],
+    "explanation": "The balance sheet shows assets, liabilities, and capital at a point in time.",
+    "difficulty": "easy",
+    "question_text": "The _____ sheet shows a company's financial position at a specific date.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0575cf12-d6ef-4eb1-b502-233a94eed70e",
+    "options": [
+      "Balance sheet",
+      "Trial balance",
+      "Journal",
+      "Ledger"
+    ],
+    "explanation": "A trial balance lists all ledger account balances to verify debit = credit.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a list of all ledger balances used to check arithmetic accuracy.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5dd794f3-870c-4052-8e17-7a4d08ab2ef6",
+    "options": [
+      "Profit and Loss",
+      "Trading",
+      "Capital",
+      "Cash"
+    ],
+    "explanation": "The Trading Account reveals gross profit (Sales ΓêÆ COGS).",
+    "difficulty": "easy",
+    "question_text": "The _____ account shows the gross profit or loss of a business.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "67000913-66ec-4f67-93de-84f6d4eab346",
+    "options": [
+      "Amortization",
+      "Depreciation",
+      "Depletion",
+      "Provision"
+    ],
+    "explanation": "Depreciation allocates the cost of a fixed asset over its useful life.",
+    "difficulty": "easy",
+    "question_text": "_____ is the systematic allocation of the cost of an asset over its useful life.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "749dc847-3037-4325-a43d-7e3107fcea8d",
+    "options": [
+      "Asset",
+      "Capital",
+      "Liability",
+      "Revenue"
+    ],
+    "explanation": "A liability is money the business owes to external parties.",
+    "difficulty": "easy",
+    "question_text": "A _____ is an amount owed by the business to outsiders.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "727fbc5d-0753-4188-8a76-5b9936d463b4",
+    "options": [
+      "Reducing balance",
+      "Straight-line",
+      "Unit of production",
+      "Revaluation"
+    ],
+    "explanation": "The straight-line method depreciates an asset by equal amounts annually.",
+    "difficulty": "easy",
+    "question_text": "The _____ method charges an equal amount of depreciation each year.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "afc36418-3391-42f6-a7ae-54d5320f6e08",
+    "options": [
+      "Variable costs",
+      "Fixed costs",
+      "Semi-variable costs",
+      "Marginal costs"
+    ],
+    "explanation": "Fixed costs do not change with the level of production.",
+    "difficulty": "easy",
+    "question_text": "_____ are costs that remain fixed regardless of the level of output.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7af463ab-ebcb-4586-b6c1-6b254d38ce1e",
+    "options": [
+      "Debit",
+      "Contra",
+      "Credit",
+      "Adjusting"
+    ],
+    "explanation": "Credit entries increase liability, capital, and income accounts.",
+    "difficulty": "easy",
+    "question_text": "A _____ entry increases a liability or income account.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8a2ca26c-f011-4f41-9960-904e0f6f878a",
+    "options": [
+      "Trading account",
+      "Balance sheet",
+      "Profit and Loss account",
+      "Cash flow"
+    ],
+    "explanation": "The Profit and Loss Account shows net profit after all expenses.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the final account that shows the net profit or loss.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0ab5557b-6144-4c71-8c58-9365eb365d3b",
+    "options": [
+      "Working",
+      "Owner's",
+      "Loan",
+      "Fixed"
+    ],
+    "explanation": "Owner's capital is the long-term investment made by the proprietor.",
+    "difficulty": "easy",
+    "question_text": "_____ capital is the long-term finance invested by the owner in the business.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0ca0415f-b8e1-47e9-9e77-ec5fc9508cdb",
+    "options": [
+      "Reserve",
+      "Provision",
+      "Accrual",
+      "Prepayment"
+    ],
+    "explanation": "A provision is set aside against a specific anticipated expense or loss.",
+    "difficulty": "medium",
+    "question_text": "A _____ is an amount set aside from profits to meet future liabilities.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a4a2414e-8954-4d6e-bb5a-1b50f9243f05",
+    "options": [
+      "Quick",
+      "Gearing",
+      "Current",
+      "Profitability"
+    ],
+    "explanation": "Current Ratio = Current Assets ÷ Current Liabilities.",
+    "difficulty": "easy",
+    "question_text": "The _____ ratio measures the relationship between current assets and current liabilities.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "14e06ca0-5c27-4a8c-b647-6569d6442992",
+    "options": [
+      "Prepaid expenses",
+      "Accrued expenses",
+      "Deferred income",
+      "Provisions"
+    ],
+    "explanation": "Accrued expenses are incurred but not yet paid — a current liability.",
+    "difficulty": "easy",
+    "question_text": "_____ are expenses that have been incurred but not yet paid.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "db48c249-a912-4581-a810-3d39f65dd1f1",
+    "options": [
+      "Accrued income",
+      "Prepayment (Deferred income)",
+      "Commission",
+      "Discount"
+    ],
+    "explanation": "Prepaid/deferred income is cash received before the service is rendered.",
+    "difficulty": "medium",
+    "question_text": "A _____ is income that has been received but not yet earned.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5985b4be-d022-4dd8-94ec-315bf87fe1ab",
+    "options": [
+      "FIFO",
+      "AVCO",
+      "LIFO",
+      "Specific identification"
+    ],
+    "explanation": "LIFO (Last In First Out) assumes newest stock is sold first.",
+    "difficulty": "medium",
+    "question_text": "The _____ method of stock valuation assumes the most recently purchased items are sold first.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b150fce4-bb68-4aa7-ad44-3f5be37a5c0e",
+    "options": [
+      "LIFO",
+      "AVCO",
+      "FIFO",
+      "Weighted average"
+    ],
+    "explanation": "FIFO (First In First Out) assumes oldest stock is sold first.",
+    "difficulty": "easy",
+    "question_text": "The _____ method of stock valuation assumes the earliest purchased items are sold first.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8a653a57-559e-49de-81fa-da0f303ef3b0",
+    "options": [
+      "Revenue expenditure",
+      "Capital expenditure",
+      "Working capital management",
+      "Stock control"
+    ],
+    "explanation": "Capital expenditure is spending on long-term fixed assets.",
+    "difficulty": "easy",
+    "question_text": "_____ is the buying and selling of fixed assets for long-term use in the business.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "067edf3d-ac53-4215-935b-a79097022b68",
+    "options": [
+      "Profit",
+      "Revenue",
+      "Capital",
+      "Interest"
+    ],
+    "explanation": "Revenue is the income earned from normal business operations.",
+    "difficulty": "easy",
+    "question_text": "The _____ is income received from selling goods and services.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6a968fbb-313e-4090-ac20-7139148944c7",
+    "options": [
+      "Journal",
+      "Bank",
+      "Trial balance",
+      "Ledger"
+    ],
+    "explanation": "A bank reconciliation compares the cash book to the bank statement.",
+    "difficulty": "easy",
+    "question_text": "A _____ reconciliation matches the bank statement with the cash book.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "775d4d23-7f52-494a-97c7-b35c377b1e2e",
+    "options": [
+      "Balance sheet",
+      "Trial balance",
+      "Cash flow statement",
+      "Income statement"
+    ],
+    "explanation": "The cash flow statement reports all cash receipts and payments.",
+    "difficulty": "easy",
+    "question_text": "The _____ shows all cash inflows and outflows of a business.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ce20fff7-2095-4144-a924-89a40acf66fc",
+    "options": [
+      "Fixed assets",
+      "Liquid assets",
+      "Intangible assets",
+      "Capital assets"
+    ],
+    "explanation": "Liquid assets are quickly convertible to cash (e.g., cash, debtors).",
+    "difficulty": "easy",
+    "question_text": "_____ are assets that can be quickly converted into cash.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "574ad796-7865-42a1-b1f6-e481a51e0c2e",
+    "options": [
+      "Working capital",
+      "Fixed capital",
+      "Liquid reserve",
+      "Cash buffer"
+    ],
+    "explanation": "Working capital (current assets ΓêÆ current liabilities) funds day-to-day operations.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the minimum amount of cash a business needs to operate.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "63ba54a1-65f8-4ec1-a9d3-f036ceb86798",
+    "options": [
+      "Debtor",
+      "Director",
+      "Creditor",
+      "Partner"
+    ],
+    "explanation": "A creditor is owed money by the business.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a person or business that is owed money by the business.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "56330b90-5ab2-49ca-b0ba-52d30197469a",
+    "options": [
+      "Accrual",
+      "Consistency",
+      "Going concern",
+      "Prudence"
+    ],
+    "explanation": "The going concern concept assumes the business will continue operating.",
+    "difficulty": "easy",
+    "question_text": "The _____ principle states that accounts should be prepared assuming the business will continue.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f5d3856c-2869-4098-9705-a5fb77f184a9",
+    "options": [
+      "Market value",
+      "Net book value",
+      "Residual value",
+      "Replacement value"
+    ],
+    "explanation": "Net book value = Cost ΓêÆ Accumulated depreciation.",
+    "difficulty": "easy",
+    "question_text": "_____ is the value of an asset after deducting accumulated depreciation.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a9b1e495-ab78-493a-9bbe-49ea2b9fa59a",
+    "options": [
+      "Prudence",
+      "Going concern",
+      "Matching",
+      "Consistency"
+    ],
+    "explanation": "The matching concept matches expenses to the revenue they help generate.",
+    "difficulty": "easy",
+    "question_text": "The _____ convention requires expenses to be matched with the revenue they generate.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3d17371c-42fc-4701-839e-cc434cd5d555",
+    "options": [
+      "Surplus",
+      "Insolvency",
+      "Profit",
+      "Equity"
+    ],
+    "explanation": "Insolvency is when liabilities exceed assets — the business cannot pay its debts.",
+    "difficulty": "easy",
+    "question_text": "_____ is the excess of liabilities over assets.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "31190a31-440b-4f4f-b120-5f0d68836bd9",
+    "options": [
+      "Credit",
+      "Advice",
+      "Debit",
+      "Invoice"
+    ],
+    "explanation": "A debit note is issued by the buyer when returning goods to the supplier.",
+    "difficulty": "medium",
+    "question_text": "A _____ note is issued when goods are returned to the supplier.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "053c2b9d-da02-4f04-92a4-ce83cb55435c",
+    "options": [
+      "Purchases ledger",
+      "Sales ledger",
+      "Cash book",
+      "Petty cash"
+    ],
+    "explanation": "The sales ledger records amounts owed by credit customers (debtors).",
+    "difficulty": "easy",
+    "question_text": "The _____ is a record of all amounts owed by credit customers.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b2812b98-17aa-433b-a177-8850cc58b66a",
+    "options": [
+      "Fixed costs",
+      "Variable costs",
+      "Overheads",
+      "Sunk costs"
+    ],
+    "explanation": "Variable costs rise and fall with the level of production.",
+    "difficulty": "easy",
+    "question_text": "_____ are expenses that change in proportion to the level of output.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "24e9c6d5-1dcc-42bd-808e-041f14a99744",
+    "options": [
+      "Margin of safety",
+      "Break-even point",
+      "Contribution",
+      "Profit point"
+    ],
+    "explanation": "The break-even point is where total revenue = total costs (zero profit).",
+    "difficulty": "easy",
+    "question_text": "The _____ is the point where total revenue equals total costs.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8dadaeeb-20b1-48c9-9c6e-e450651b656c",
+    "options": [
+      "Loan",
+      "Trade credit",
+      "Mortgage",
+      "Overdraft"
+    ],
+    "explanation": "Trade credit allows businesses to buy now and pay at a later date.",
+    "difficulty": "easy",
+    "question_text": "A _____ is an arrangement where a business receives goods now and pays later.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "58804458-b4c8-463b-88c8-e489d01f99b2",
+    "options": [
+      "Management",
+      "Financial",
+      "Cost",
+      "Tax"
+    ],
+    "explanation": "Financial accounting produces statements for external users like investors.",
+    "difficulty": "easy",
+    "question_text": "_____ accounting presents summary financial data to external stakeholders.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2b0d3050-c484-4afd-9ed5-c0a2d00f4594",
+    "options": [
+      "Audit",
+      "Review",
+      "Investigation",
+      "Inspection"
+    ],
+    "explanation": "An audit is an independent examination of financial records.",
+    "difficulty": "easy",
+    "question_text": "A _____ is the process of examining accounts to verify their accuracy and fairness.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "a6f5319b-b351-41c0-a773-cf03fdb560df",
+    "options": [
+      "Fixed assets",
+      "Inventory/Stock",
+      "Raw materials",
+      "Work-in-progress"
+    ],
+    "explanation": "Inventory (stock) consists of goods held for resale.",
+    "difficulty": "easy",
+    "question_text": "_____ are goods purchased for resale by a business.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ae3003b6-dad2-4d79-9dbf-4c354aafeada",
+    "options": [
+      "Trading account",
+      "Appropriation account",
+      "Capital account",
+      "Profit & Loss"
+    ],
+    "explanation": "The appropriation account shows how profit is shared among partners.",
+    "difficulty": "medium",
+    "question_text": "A _____ is prepared to show how profit is divided among partners.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b4924691-e4c1-400c-bdd6-58c1d8a0f338",
+    "options": [
+      "Straight-line",
+      "Reducing balance",
+      "Revaluation",
+      "Units of production"
+    ],
+    "explanation": "The reducing balance method applies a fixed rate to the decreasing book value.",
+    "difficulty": "medium",
+    "question_text": "The _____ method charges depreciation as a fixed percentage of the declining balance.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "70580786-5592-4bed-8cf5-8b652f2b6765",
+    "options": [
+      "Going concern",
+      "Historical cost",
+      "Prudence",
+      "Consistency"
+    ],
+    "explanation": "The historical cost concept records assets at original cost.",
+    "difficulty": "easy",
+    "question_text": "The _____ concept holds that items should be recorded at their original purchase price.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "59cbe924-fed2-41cb-b7de-9104c38cc120",
+    "options": [
+      "Gross",
+      "Net",
+      "Operating",
+      "Trading"
+    ],
+    "explanation": "Net profit = Gross profit ΓêÆ All operating expenses.",
+    "difficulty": "easy",
+    "question_text": "_____ profit is calculated after deducting all expenses from gross profit.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cd298381-a1a1-4aee-8b52-8ab7297239c0",
+    "options": [
+      "Gross margin",
+      "Return on capital employed",
+      "Current ratio",
+      "Quick ratio"
+    ],
+    "explanation": "ROCE = Net Profit ÷ Capital Employed × 100.",
+    "difficulty": "medium",
+    "question_text": "The _____ is calculated by dividing net profit by capital employed.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "87ced9ab-7712-43f3-8491-3c344193b691",
+    "options": [
+      "Net profit",
+      "Gross profit",
+      "Contribution",
+      "Margin of safety"
+    ],
+    "explanation": "Contribution = Sales Revenue ΓêÆ Variable Costs.",
+    "difficulty": "medium",
+    "question_text": "_____ is the amount by which revenue exceeds variable costs.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "334d53bd-6aa2-4223-a181-649c024d6f8e",
+    "options": [
+      "Current ratio",
+      "Quick (acid-test) ratio",
+      "Gearing ratio",
+      "Profit margin"
+    ],
+    "explanation": "The quick ratio (acid-test) = (Current assets ΓêÆ stock) ÷ Current liabilities.",
+    "difficulty": "medium",
+    "question_text": "The _____ ratio compares liquid assets to current liabilities.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ee6ae257-7931-4b26-a346-6f06d3938c36",
+    "options": [
+      "Current assets",
+      "Fixed (non-current) assets",
+      "Liquid assets",
+      "Working capital"
+    ],
+    "explanation": "Fixed assets (non-current assets) are held for long-term use.",
+    "difficulty": "easy",
+    "question_text": "_____ are assets held for long-term use in the business.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2f96af5c-b103-4037-a494-3d6605df3270",
+    "options": [
+      "Balance sheet",
+      "Management account",
+      "Annual report",
+      "Prospectus"
+    ],
+    "explanation": "Management accounts are prepared for internal decision-making.",
+    "difficulty": "easy",
+    "question_text": "A _____ is an internal financial statement prepared for management use.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dfcc7b93-4b42-4483-aa94-f4e34f2c2d7d",
+    "options": [
+      "Working capital",
+      "Cash flow",
+      "Net profit",
+      "Revenue"
+    ],
+    "explanation": "Cash flow tracks the movement of cash into and out of a business.",
+    "difficulty": "easy",
+    "question_text": "_____ is the flow of cash in and out of a business over a period.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b511b7b9-9159-44ad-a383-7b07a745d956",
+    "options": [
+      "Creditor days",
+      "Debtor collection period",
+      "Stock turnover",
+      "Current ratio"
+    ],
+    "explanation": "Debtor collection period = (Debtors ÷ Credit sales) × 365.",
+    "difficulty": "medium",
+    "question_text": "A _____ measures the number of days it takes to collect amounts owed by debtors.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f227e6be-1836-456d-8ddc-07f6d3ca9ee2",
+    "options": [
+      "Balancing",
+      "Posting",
+      "Casting",
+      "Closing"
+    ],
+    "explanation": "Posting is transferring journal entries to the appropriate ledger accounts.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the process of transferring journal entries to the ledger.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "365e6c69-e077-406e-99aa-79c4b4efd521",
+    "options": [
+      "Overdraft",
+      "Debenture",
+      "Mortgage",
+      "Bond"
+    ],
+    "explanation": "A mortgage is a long-term loan secured on property.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a loan secured against property.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8beada37-393e-4248-86ef-946d8d7703e0",
+    "options": [
+      "Trial balance",
+      "Debtors list",
+      "Sales ledger",
+      "Cash book"
+    ],
+    "explanation": "A debtors list shows all outstanding amounts owed by credit customers.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a document showing amounts owed by all debtors.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c4c30c14-f91c-4d66-95c7-c92f6acf4a1f",
+    "options": [
+      "Cash accounting",
+      "Accrual accounting",
+      "Single entry",
+      "Management accounting"
+    ],
+    "explanation": "Accrual accounting records transactions when they occur, regardless of cash movement.",
+    "difficulty": "easy",
+    "question_text": "_____ is when income and expenses are recorded when earned or incurred, not when cash is received.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0024862e-701f-4166-a859-1009ac116928",
+    "options": [
+      "Forecast",
+      "Budget",
+      "Estimate",
+      "Projection"
+    ],
+    "explanation": "A budget is a forward-looking financial plan.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a financial plan showing expected income and expenditure.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fcbc5903-bdb2-48ac-b4fd-8f694c93673f",
+    "options": [
+      "Dividend",
+      "Earnings per share (EPS)",
+      "Return on equity",
+      "Net margin"
+    ],
+    "explanation": "EPS = Net profit ÷ Number of shares issued.",
+    "difficulty": "medium",
+    "question_text": "_____ is the amount a company earns per share of its stock.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3b76320b-9717-4e72-8b81-019d341c84ab",
+    "options": [
+      "Internal review",
+      "Statutory audit",
+      "Management review",
+      "Tax inspection"
+    ],
+    "explanation": "A statutory audit is a legally required independent examination of accounts.",
+    "difficulty": "medium",
+    "question_text": "A _____ is an official examination of a company's financial records.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "33e8df31-34e5-48e7-93cf-0e05efae9ab5",
+    "options": [
+      "Profit margin",
+      "Asset turnover",
+      "Current ratio",
+      "Return on capital"
+    ],
+    "explanation": "Asset turnover = Sales ÷ Total assets.",
+    "difficulty": "medium",
+    "question_text": "The _____ ratio measures how efficiently a company uses its assets.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "46c2f1e5-0442-44a3-a3cd-507b9293bb8a",
+    "options": [
+      "Depreciation",
+      "Depletion",
+      "Amortization",
+      "Write-off"
+    ],
+    "explanation": "Amortization is the gradual writing-off of intangible assets.",
+    "difficulty": "medium",
+    "question_text": "_____ is a reduction in the value of an intangible asset over time.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "53e99e97-8b73-4c23-accb-e9926a08f74b",
+    "options": [
+      "Balance sheet",
+      "Trial balance",
+      "Income statement",
+      "Journal"
+    ],
+    "explanation": "A trial balance lists all ledger account balances.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a list showing the balance of all accounts at the end of the period.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ee110c5c-d7e3-4e28-86fd-478364155463",
+    "options": [
+      "Overhead",
+      "Prime cost",
+      "Fixed cost",
+      "Indirect cost"
+    ],
+    "explanation": "Prime cost = Direct materials + Direct labour + Direct expenses.",
+    "difficulty": "medium",
+    "question_text": "_____ includes all costs directly related to producing a product.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2af4b276-86d7-481e-9c72-370a44336bbb",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "AVCO (average cost)",
+      "Specific cost"
+    ],
+    "explanation": "AVCO calculates a weighted average cost for all inventory units.",
+    "difficulty": "medium",
+    "question_text": "The _____ cost method values inventory at the weighted average cost per unit.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d3bef686-72fb-496d-99ec-4db0779b51a7",
+    "options": [
+      "Direct costs",
+      "Overheads",
+      "Variable costs",
+      "Prime costs"
+    ],
+    "explanation": "Overheads (indirect costs) cannot be directly attributed to a single product.",
+    "difficulty": "easy",
+    "question_text": "_____ are costs that cannot be directly traced to a product.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "03021120-ca27-4527-8f21-c2913aabb615",
+    "options": [
+      "Closing",
+      "Opening",
+      "Adjusting",
+      "Reversing"
+    ],
+    "explanation": "Adjusting entries update accounts for accruals and prepayments at period end.",
+    "difficulty": "medium",
+    "question_text": "A _____ entry is made at the end of a period to update account balances.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "dda167c2-5a7f-424c-a4d7-ef94f492bbd4",
+    "options": [
+      "Calendar year",
+      "Accounting period",
+      "Fiscal year",
+      "Tax year"
+    ],
+    "explanation": "The accounting period defines the time span covered by financial statements.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the financial year used for tax and reporting purposes.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a6dc36cd-4491-418e-b3af-183e9ac0b556",
+    "options": [
+      "Premium",
+      "Discount",
+      "Interest",
+      "Dividend"
+    ],
+    "explanation": "A bond discount is when the issue price is below face value.",
+    "difficulty": "medium",
+    "question_text": "_____ is the difference between the face value and the price of a bond.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d62215f9-2d9d-4c1c-9176-9b71993bd977",
+    "options": [
+      "Management account",
+      "Annual report",
+      "Prospectus",
+      "Budget"
+    ],
+    "explanation": "An annual report provides shareholders with financial and operational information.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a report on a company's activities given to shareholders.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "69d1753e-7993-48d7-a727-ed42ced49f26",
+    "options": [
+      "Income statement",
+      "Cash flow statement",
+      "Statement of changes in equity",
+      "Balance sheet"
+    ],
+    "explanation": "The statement of changes in equity details movements in shareholders' funds.",
+    "difficulty": "medium",
+    "question_text": "The _____ is a financial statement that shows changes in equity.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c206c191-29f7-455f-920a-bf76641db090",
+    "options": [
+      "Liabilities",
+      "Capital",
+      "Assets",
+      "Expenses"
+    ],
+    "explanation": "Assets are resources owned by the business with economic value.",
+    "difficulty": "easy",
+    "question_text": "_____ are items owned by a business that have monetary value.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "db946f52-2c1c-47fd-9cd9-b9218578c8f3",
+    "options": [
+      "External audit",
+      "Statutory audit",
+      "Internal audit",
+      "Tax audit"
+    ],
+    "explanation": "Internal audit reviews internal controls and accounting accuracy.",
+    "difficulty": "easy",
+    "question_text": "A _____ is an internal check to verify the accuracy of accounting records.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "72e9cae8-f431-465b-b354-f47933198570",
+    "options": [
+      "Prudence",
+      "Going concern",
+      "Consistency",
+      "Accrual"
+    ],
+    "explanation": "The consistency concept ensures methods are applied the same way each period.",
+    "difficulty": "easy",
+    "question_text": "The _____ standard requires businesses to use the same accounting methods consistently.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d1c1c8bd-86ad-4047-a029-3dce53ee0ad2",
+    "options": [
+      "Gross profit",
+      "Net profit",
+      "Cost of goods sold",
+      "Revenue"
+    ],
+    "explanation": "COGS = Opening stock + Purchases ΓêÆ Closing stock.",
+    "difficulty": "easy",
+    "question_text": "_____ is the cost of goods available for sale minus ending inventory.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8d5cbc37-d6f7-47ba-9e48-37a353c64226",
+    "options": [
+      "Credit card",
+      "Debit card",
+      "Charge card",
+      "Smart card"
+    ],
+    "explanation": "A debit card draws funds directly from the holder's bank account.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a card issued by a bank allowing immediate payment from a bank account.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c480a75a-e852-430b-ae5b-d7c42e6540dd",
+    "options": [
+      "Net profit",
+      "Gross profit",
+      "Contribution margin",
+      "Mark-up"
+    ],
+    "explanation": "Contribution margin = Selling price ΓêÆ Variable cost per unit.",
+    "difficulty": "medium",
+    "question_text": "The _____ is the difference between selling price and variable cost per unit.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d54263ca-e56a-435d-aacc-2d25245fefb4",
+    "options": [
+      "Creditors",
+      "Debtors",
+      "Cash",
+      "Revenue"
+    ],
+    "explanation": "Debtors (accounts receivable) owe money to the business.",
+    "difficulty": "easy",
+    "question_text": "_____ is the total amount of money owed to a business by its customers.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f81414cc-808a-4306-8930-b0b8e8ffade6",
+    "options": [
+      "Cash",
+      "Capital account",
+      "Revenue",
+      "Reserve"
+    ],
+    "explanation": "The capital account records the owner's investment and withdrawals.",
+    "difficulty": "easy",
+    "question_text": "The _____ account is used to record all transactions relating to the owner's investment.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b00042f5-67d6-44c2-907c-0660b0637101",
+    "options": [
+      "Current asset",
+      "Tangible fixed asset",
+      "Intangible fixed asset",
+      "Current liability"
+    ],
+    "explanation": "Goodwill is an intangible non-current asset.",
+    "difficulty": "medium",
+    "question_text": "Goodwill is an example of:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7b073364-4de7-4fcb-b566-a36fa114ced3",
+    "options": [
+      "Accrual",
+      "Consistency",
+      "Prudence",
+      "Going concern"
+    ],
+    "explanation": "The prudence concept requires caution — anticipate losses but not gains.",
+    "difficulty": "medium",
+    "question_text": "Which concept requires that potential losses be recorded immediately?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "242ff829-9929-4e72-9787-06f90e0840aa",
+    "options": [
+      "Gross profit",
+      "Net profit",
+      "Cost of goods sold",
+      "Net sales"
+    ],
+    "explanation": "COGS = Opening stock + Purchases ΓêÆ Closing stock.",
+    "difficulty": "easy",
+    "question_text": "Opening stock + Purchases – Closing stock = ?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "242916ac-ba8f-4329-bec2-6bac29a8b76a",
+    "options": [
+      "Mortgage",
+      "Bank overdraft",
+      "Machinery",
+      "Goodwill"
+    ],
+    "explanation": "A bank overdraft is a short-term current liability.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a current liability?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "00885e7a-5208-4f06-9972-ccf5059f4209",
+    "options": [
+      "Sales ledger",
+      "Cash book",
+      "Journal",
+      "Petty cash book"
+    ],
+    "explanation": "The cash book records all receipts and payments of cash and bank.",
+    "difficulty": "easy",
+    "question_text": "A _____ records daily cash transactions.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7b3e5f91-bd73-46dd-ba62-870cbd1a1e39",
+    "options": [
+      "Gross profit – Expenses",
+      "Revenue + Expenses",
+      "Sales – Purchases only",
+      "Revenue × Rate"
+    ],
+    "explanation": "Net profit = Gross profit ΓêÆ All operating expenses.",
+    "difficulty": "easy",
+    "question_text": "Net profit is calculated as:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "40e10a99-6b48-40af-9d34-f53cea12e5a6",
+    "options": [
+      "Cash book",
+      "Petty cash account",
+      "Sundry account",
+      "Expenses account"
+    ],
+    "explanation": "Petty cash covers minor routine expenses.",
+    "difficulty": "easy",
+    "question_text": "The _____ account records small day-to-day cash expenses.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7a29fd65-ca2a-4584-b639-a1c58d4734cd",
+    "options": [
+      "Current ratio",
+      "Asset turnover",
+      "Net profit margin",
+      "Gearing ratio"
+    ],
+    "explanation": "Net profit margin = Net profit ÷ Sales × 100.",
+    "difficulty": "medium",
+    "question_text": "Which financial ratio measures the percentage of profit relative to sales?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "2ad59c07-01da-48f9-885b-7113ebbcd35d",
+    "options": [
+      "Accrued expense",
+      "Prepaid expense",
+      "Deferred income",
+      "Provision"
+    ],
+    "explanation": "A prepaid expense is paid before it is due — a current asset.",
+    "difficulty": "easy",
+    "question_text": "A _____ is an expense paid for in advance (e.g., insurance paid 6 months ahead).",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "04ae3953-0ed7-4a50-a77b-d2ba1ef602b2",
+    "options": [
+      "Balance sheet",
+      "Income statement (P&L)",
+      "Cash flow statement",
+      "Trial balance"
+    ],
+    "explanation": "The income statement (profit and loss account) shows revenues and expenses.",
+    "difficulty": "easy",
+    "question_text": "The _____ shows a business's revenues and expenses over a period.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "47fc31b7-f0f3-4fd9-a595-7a3811760bae",
+    "options": [
+      "Income statement",
+      "Trial balance only",
+      "Balance sheet as deduction from fixed assets",
+      "Cash flow statement"
+    ],
+    "explanation": "Accumulated depreciation reduces the book value of fixed assets on the balance sheet.",
+    "difficulty": "medium",
+    "question_text": "Accumulated depreciation is shown on the:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "13522ab0-a362-4c72-aca1-eefa5e198807",
+    "options": [
+      "Dividend",
+      "Drawings",
+      "Salary",
+      "Bonus"
+    ],
+    "explanation": "Drawings are amounts withdrawn by the owner, reducing capital.",
+    "difficulty": "easy",
+    "question_text": "A _____ is money withdrawn from the business by the owner for personal use.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "efb977fa-745c-4032-9e9d-6566fe76f8d4",
+    "options": [
+      "Paying wages",
+      "Buying raw materials",
+      "Purchasing a delivery van",
+      "Paying rent"
+    ],
+    "explanation": "Purchasing a fixed asset (delivery van) is capital expenditure.",
+    "difficulty": "easy",
+    "question_text": "Which of the following best describes capital expenditure?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "004589b8-cd01-4e8a-816f-1ab69181261d",
+    "options": [
+      "Cash flow statement",
+      "Funds flow statement",
+      "Balance sheet",
+      "Income statement"
+    ],
+    "explanation": "The funds flow statement shows sources and applications of funds.",
+    "difficulty": "medium",
+    "question_text": "The _____ shows all sources and uses of funds in a period.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "25a78aee-7234-488c-87c0-a344b9284c45",
+    "options": [
+      "Opening stock",
+      "Closing stock",
+      "Dead stock",
+      "Work-in-progress"
+    ],
+    "explanation": "Closing stock is unsold inventory at the period end.",
+    "difficulty": "easy",
+    "question_text": "Stock that is unsold at the end of an accounting period is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "87211807-fc29-4fdb-b8c7-e7d7a4e4ea9b",
+    "options": [
+      "Increase bank balance",
+      "Identify discrepancies between cash book and bank statement",
+      "Calculate profit",
+      "Audit expenses"
+    ],
+    "explanation": "Bank reconciliation identifies and explains differences between internal records and the bank statement.",
+    "difficulty": "easy",
+    "question_text": "The purpose of a bank reconciliation is to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "733b5827-2433-42bb-9a99-aecbab760f36",
+    "options": [
+      "Prepaid income",
+      "Accrued income",
+      "Deferred income",
+      "Sundry income"
+    ],
+    "explanation": "Accrued income is earned but not yet received.",
+    "difficulty": "medium",
+    "question_text": "A _____ is created when the business earns income before receiving cash.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4d32c55e-184f-44bc-9381-e7e938519ba6",
+    "options": [
+      "One entry only",
+      "Two equal and opposite entries",
+      "Three entries",
+      "No fixed number of entries"
+    ],
+    "explanation": "Double-entry bookkeeping: every debit has an equal and opposite credit.",
+    "difficulty": "easy",
+    "question_text": "The double-entry principle states that every transaction has:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "12b645ae-8dbb-43c4-b5c2-dadd1d2383bb",
+    "options": [
+      "Cash account",
+      "Fixed asset account",
+      "Capital account",
+      "Revenue account"
+    ],
+    "explanation": "When a fixed asset is bought, debit Fixed Asset account, credit Cash account.",
+    "difficulty": "medium",
+    "question_text": "Which account is debited when fixed assets are purchased for cash?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3960eec8-479c-4f1f-9374-c9593cc071d6",
+    "options": [
+      "Trading",
+      "Appropriation",
+      "Capital",
+      "Cash"
+    ],
+    "explanation": "The appropriation account divides net profit among partners.",
+    "difficulty": "medium",
+    "question_text": "A _____ account shows the profit available to partners after all charges.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ba736bac-bc33-4f76-96e3-4e2a23eb9811",
+    "options": [
+      "Current ratio",
+      "Interest cover ratio",
+      "Gearing ratio",
+      "Profit margin"
+    ],
+    "explanation": "Interest cover = Operating profit ÷ Interest charges.",
+    "difficulty": "hard",
+    "question_text": "The _____ ratio shows how many times a business can cover its interest payments.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "120b1ab4-cbb1-4874-a721-7d513916c7c5",
+    "options": [
+      "Consolidation",
+      "Amalgamation",
+      "Merger",
+      "Acquisition"
+    ],
+    "explanation": "Consolidation produces group financial statements combining parent and subsidiary accounts.",
+    "difficulty": "hard",
+    "question_text": "_____ is the process of combining financial statements of a parent and its subsidiary.",
+    "correct_answer_index": 0
+  }
+]

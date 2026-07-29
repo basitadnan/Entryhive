@@ -1,0 +1,3776 @@
+[
+  {
+    "id": "fast_iq_1_zangs",
+    "options": [
+      "100",
+      "103",
+      "185",
+      "98",
+      "7"
+    ],
+    "explanation": "The pattern in the first row is (Left + Right) / 2 = Middle. (185 + 97) / 2 = 282 / 2 = 141. Applying this pattern to the second row: (89 + Missing) / 2 = 96. So, 89 + Missing = 192. Missing = 192 - 89 = 103.",
+    "subject": "iq",
+    "question_text": "The number in the middle of each row is related to the numbers on its left and right. Find the missing number:\nRow 1: 185  141  97\nRow 2: 89   96   [Missing Number]",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_2_rydm2",
+    "options": [
+      "20",
+      "30",
+      "50",
+      "40"
+    ],
+    "explanation": "Observe the pattern in the sum of the first two columns minus the third column (C1+C2-C3) for each row. For Row 1: (30 + 15) - 15 = 30. For Row 2: (30 + 15) - 25 = 20. The results form an arithmetic progression: 30, 20. Assuming the next term is 10, for Row 3: (10 + 40) - ? = 10. So, 50 - ? = 10, which means ? = 40.",
+    "subject": "iq",
+    "question_text": "Find the missing number from the given table:\n30 15 15\n30 15 25\n10 40 ?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_3_xpd3o",
+    "options": [
+      "Square with a hollow upward triangle.",
+      "Square with a hollow house shape.",
+      "Square with a hollow downward triangle.",
+      "Square with a filled house shape."
+    ],
+    "explanation": "The transformation from Shape 1 to Shape 2 involves reflecting the inner shape vertically (up triangle to down triangle) while keeping the outer container (circle) and fill status (filled) the same. Applying this to Shape 3: the outer container (square) and fill status (filled) should remain the same. The inner house shape, when reflected vertically, would still appear as a house shape (unless a very specific orientation is implied). Among the given options, only option (d) maintains the 'filled' status and the outer 'square' shape. Assuming the house shape is meant to be symmetric to this type of reflection or the reflection isn't explicitly shown.",
+    "subject": "iq",
+    "question_text": "Visual analogy: (Shape 1) is to (Shape 2) as (Shape 3) is to (Shape 4 = ?)\nShape 1: Circle with a filled upward triangle.\nShape 2: Circle with a filled downward triangle.\nShape 3: Square with a filled house shape (pentagon with roof up).",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_4_emr58",
+    "options": [
+      "12",
+      "16",
+      "14",
+      "17"
+    ],
+    "explanation": "Sum of numbers in each row: Row 1 = 13 + 17 + 14 = 44. Row 2 = 18 + 13 + 18 = 49. The sums form an arithmetic progression: 44, 49 (difference = +5). Assuming this pattern continues, the sum for Row 3 should be 49 + 5 = 54. So, 13 + 24 + ? = 54. This gives 37 + ? = 54, and ? = 17.",
+    "subject": "iq",
+    "question_text": "Find the missing number from the given table:\n13 17 14\n18 13 18\n13 24 ?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_5_qeeu3",
+    "options": [
+      "49",
+      "58",
+      "44",
+      "56"
+    ],
+    "explanation": "Calculate the differences between consecutive terms: 2-1=1, 6-2=4, 15-6=9, 31-15=16. The differences are 1², 2², 3², 4². The next difference should be 5² = 25. So, the next term in the sequence is 31 + 25 = 56.",
+    "subject": "iq",
+    "question_text": "1, 2, 6, 15, 31, ?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_6_6dw0i",
+    "options": [
+      "7",
+      "9",
+      "8",
+      "6"
+    ],
+    "explanation": "Observe the differences in consecutive terms for each column. Column 2 shows differences: 13-10 = 3, 16-13 = 3 (a constant difference of 3). Column 3 shows the first difference: 8-6 = 2. If we assume the differences in Column 3 are a decreasing sequence (e.g., the difference decreases by 1 each time), then the next difference would be 2-1 = 1. So, the missing number would be 8 + 1 = 9.",
+    "subject": "iq",
+    "question_text": "Find the missing number from the given table:\n17 10 6\n5 13 8\n17 16 ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_7_51x9j",
+    "options": [
+      "7.5",
+      "10",
+      "6.5",
+      "11"
+    ],
+    "explanation": "Observe the pattern: 14 - 1.5 = 12.5, 12.5 - 1.5 = 11, 11 - 1.5 = 9.5, 9.5 - 1.5 = 8. The series decreases by 1.5 each step. So, 8 - 1.5 = 6.5.",
+    "subject": "iq",
+    "question_text": "14, 12.5, 11, 9.5, 8? What is next to series.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_11_vuh9x",
+    "options": [
+      "Womens are lazy",
+      "Men are smart",
+      "Men should help with household",
+      "Women are not equally treated as men."
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "\"Womens get less salary as compared to men despite of having more responsibilities\". By this statement what does author mean?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_12_q4yk0",
+    "options": [
+      "1:05 am 8th June 2004",
+      "11:55 pm 7th June 2004",
+      "12:05 pm 8th June 2004",
+      "00:05 am 8th June 2004",
+      "12:05 pm 7th June 2004"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "A stop watch is fixed to ring. At what time will it ring if it starts at 11:45 pm 7th June 2004 and the second hand has to traverse an angle of 90° before ringing?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_13_m0ofc",
+    "options": [
+      "27",
+      "67",
+      "9",
+      "She will never come back at the starting point",
+      "8.33"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Nina is moving along a branch of the hyperbola x²/81 - y²/83 = 1 in anticlockwise direction with speed of 3 units of distance per hour. How many hours will she take to comeback at the starting point?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_14_3w5ea",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "2"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number is missing?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_15_alo32",
+    "options": [
+      "J",
+      "H",
+      "M",
+      "B"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_16_vo7f7",
+    "options": [
+      "ALARM CLOCK",
+      "DIE",
+      "BULB"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which symbol replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_17_m3r2e",
+    "options": [
+      "22",
+      "23",
+      "11",
+      "10"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_18_gqrtw",
+    "options": [
+      "1",
+      "4",
+      "5",
+      "9"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is missing from the last circle?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_19_zsrk8",
+    "options": [
+      "O",
+      "M",
+      "B",
+      "V"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_20_6ltwd",
+    "options": [
+      "2",
+      "8",
+      "6",
+      "9"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is missing from the bottom left circle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_21_et30y",
+    "options": [
+      "W",
+      "M",
+      "N",
+      "B"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which of the bottom letters replace the question mark and completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_22_ru7zh",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_23_g6kjx",
+    "options": [
+      "1/1536",
+      "1/256",
+      "1/289",
+      "1/196"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1/4 1/9 1/16 1/81",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_24_chz0o",
+    "options": [
+      "64",
+      "32",
+      "26",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 4 8 16",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_25_pch0b",
+    "options": [
+      "81",
+      "115",
+      "125",
+      "164"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 8 27 64",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_26_uxs1v",
+    "options": [
+      "114",
+      "216",
+      "1944",
+      "1865"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 3 6 18 108",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_27_m7gfs",
+    "options": [
+      "7/2",
+      "3/2",
+      "1",
+      "1/2"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "9/2 4 3&1/2 3 5/2 2",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_28_yg810",
+    "options": [
+      "12",
+      "15",
+      "13",
+      "17"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 3 5 7 9 11",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_29_8nbhx",
+    "options": [
+      "85",
+      "97",
+      "107",
+      "87"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 7 17 31 49 71",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_30_q6nms",
+    "options": [
+      "19",
+      "21",
+      "23"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 3 7 9 13 15 17",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_31_v6ku6",
+    "options": [
+      "12",
+      "1",
+      "-1",
+      "0"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "126 62 30 14 6 2",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_32_nxjch",
+    "options": [
+      "25",
+      "27",
+      "31",
+      "29"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 7 11 15 19",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_33_a9v8s",
+    "options": [
+      "25",
+      "12.5",
+      "12",
+      "8"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 100 2 50",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_34_bs1te",
+    "options": [
+      "28",
+      "62",
+      "56",
+      "70"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 14 30",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_35_shmrr",
+    "options": [
+      "56725",
+      "48744",
+      "44576",
+      "42592"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "32 352 3872",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_36_kdepg",
+    "options": [
+      "35",
+      "23",
+      "33",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "5 19 12 26 19",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_37_6kaa9",
+    "options": [
+      "96",
+      "196",
+      "129",
+      "206"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2064 1032 516 258",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_38_tfwfz",
+    "options": [
+      "35",
+      "37",
+      "38",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 11 16 22 29",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_39_hrysc",
+    "options": [
+      "24",
+      "20",
+      "22",
+      "21"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "4 7 10 13 16 19",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_40_f6rkk",
+    "options": [
+      "1.6",
+      "1.7",
+      "1.8",
+      "1.9"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3.5 2.8 2.3 2",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_41_u9sa4",
+    "options": [
+      "53",
+      "56",
+      "61",
+      "64"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 11 18 28 42",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_42_9yi00",
+    "options": [
+      "162",
+      "216",
+      "266",
+      "306"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 10 30 33 99 102",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_43_stqz6",
+    "options": [
+      "27",
+      "34",
+      "35",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "5 7 11 19",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_44_y4uwj",
+    "options": [
+      "-17",
+      "14",
+      "0",
+      "-11"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "59 45 31 17 3",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_45_kkqv3",
+    "options": [
+      "53",
+      "65",
+      "75",
+      "93"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 12 27 48",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_46_11rjv",
+    "options": [
+      "-1",
+      "3",
+      "4",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "-31 -26 -20 -13 -5",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_47_hxu5m",
+    "options": [
+      "22",
+      "21",
+      "25",
+      "19"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 10 13 16",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_48_jcrq2",
+    "options": [
+      "3",
+      "8",
+      "4",
+      "1"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "125 5 64 27",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_49_tq8uf",
+    "options": [
+      "488",
+      "756",
+      "1356",
+      "1536"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 24 192",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_50_pv9c1",
+    "options": [
+      "42",
+      "43",
+      "40",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 22 17 28 28 35",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_51_jnc5b",
+    "options": [
+      "30",
+      "28",
+      "26",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "12 13 18 19 24 25",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_52_s5jip",
+    "options": [
+      "27",
+      "30",
+      "33",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "91 78 65 52",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_53_5oix8",
+    "options": [
+      "12",
+      "17",
+      "13",
+      "10"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "18 21 16 19 14",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_54_fvmov",
+    "options": [
+      "102",
+      "78",
+      "162",
+      "144"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 18 54",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_55_v4tmu",
+    "options": [
+      "57",
+      "62",
+      "39",
+      "65"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "5 9 17 33",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_56_4g253",
+    "options": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 4 8 9 13 14",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_57_ox991",
+    "options": [
+      "23",
+      "25",
+      "27",
+      "31"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "9 14 20",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_58_hb1uw",
+    "options": [
+      "52",
+      "62",
+      "66",
+      "72"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "8 11 16 24 34 47",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_59_ib0wk",
+    "options": [
+      "45",
+      "35",
+      "51",
+      "44"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 6 15 28",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_60_7q87n",
+    "options": [
+      "50",
+      "48",
+      "54",
+      "60"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "8 10 14 20 28",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_61_7adqm",
+    "options": [
+      "86",
+      "94",
+      "100",
+      "102"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "12 19 32 46",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_62_ymi08",
+    "options": [
+      "243",
+      "729",
+      "486",
+      "576"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 3 9 27 81",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_63_72czl",
+    "options": [
+      "5",
+      "4",
+      "0",
+      "-5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "16 15 13 10 6 1",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_64_rxic6",
+    "options": [
+      "3",
+      "1",
+      "0",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "17 15 13 11 9 7",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_65_q06n3",
+    "options": [
+      "1/144",
+      "1/176",
+      "1/396",
+      "1/512"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1/2 1/8 1/32 1/128",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_66_av5ne",
+    "options": [
+      "26",
+      "28",
+      "16",
+      "12"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 16 10 20 13 24",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_67_2lef3",
+    "options": [
+      "19",
+      "21",
+      "23",
+      "25"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "13 15 17",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_68_xwvli",
+    "options": [
+      "73",
+      "75",
+      "77",
+      "79"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "49 56 63 70",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_69_w2kcg",
+    "options": [
+      "9",
+      "11",
+      "12",
+      "13"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "13 15 12 14",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_70_rlr5k",
+    "options": [
+      "672",
+      "1344",
+      "2884",
+      "2688"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 14 56 336",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_71_v6ee8",
+    "options": [
+      "52",
+      "48",
+      "46",
+      "56"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "45 44 47 48 43",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_72_hiiab",
+    "options": [
+      "128",
+      "256",
+      "512",
+      "1024"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 4 16 64",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_73_8eog5",
+    "options": [
+      "1/64",
+      "1/99",
+      "1/81",
+      "1/66"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1/9 1/25 1/49",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_74_itm2f",
+    "options": [
+      "1.9",
+      "1.95",
+      "2.2",
+      "2.1"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "0.1 0.6 1.1",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_75_lhozy",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "8"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 8 6 5 4",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_76_1gv8p",
+    "options": [
+      "11",
+      "13",
+      "9",
+      "7"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 9 11",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_77_k1ywc",
+    "options": [
+      "143",
+      "147",
+      "153",
+      "157"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "285 253 221 189",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_78_bddvz",
+    "options": [
+      "67",
+      "73",
+      "79",
+      "81"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 4 9 18 32 52",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_79_4ewtm",
+    "options": [
+      "23",
+      "27",
+      "29",
+      "31"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 10 15 22",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_80_twy1i",
+    "options": [
+      "48",
+      "62",
+      "56",
+      "58"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "10 50 13 54 16",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_81_5cwdr",
+    "options": [
+      "16",
+      "22",
+      "26",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 4 10 20 13",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_82_srdya",
+    "options": [
+      "6",
+      "21",
+      "16",
+      "26"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "6 1 11 6 16 11",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_83_cu2br",
+    "options": [
+      "87",
+      "97",
+      "91",
+      "95"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "17 25 35 47 61 77",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_84_r1l5l",
+    "options": [
+      "10",
+      "20",
+      "5",
+      "15"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "80 20 40 10 20 5",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_85_4hvqb",
+    "options": [
+      "80",
+      "74",
+      "72",
+      "70"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "0 2 8 18 32 50",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_86_x589f",
+    "options": [
+      "35",
+      "85",
+      "125",
+      "30"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "8 9 27 16 64 25",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_87_shf2q",
+    "options": [
+      "183.75",
+      "150",
+      "125.5",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3.5 7 17.2 52.5",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_88_kldq1",
+    "options": [
+      "23",
+      "25",
+      "100",
+      "50"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "25 100 50 50 75",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_89_wfg2u",
+    "options": [
+      "1764",
+      "1214",
+      "1232",
+      "1204"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "4 14 44 134",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_90_ftsp3",
+    "options": [
+      "24",
+      "16",
+      "22",
+      "44"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "32 28 36 24 40 20",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_91_tvbxa",
+    "options": [
+      "34",
+      "33",
+      "35",
+      "23"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 5 8 13 21",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_92_2gjnd",
+    "options": [
+      "90",
+      "85",
+      "100",
+      "95"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "85 80 85 90 85 90",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_93_v85a0",
+    "options": [
+      "0",
+      "-6",
+      "1",
+      "-1"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "-2 -3 -1 -4 0 -5",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_94_agxrh",
+    "options": [
+      "24",
+      "10",
+      "5",
+      "15"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "225 30 100 20 144",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_95_b1xwu",
+    "options": [
+      "100",
+      "50",
+      "75",
+      "25"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "54000 9000 1800 450 150",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_96_vb6ne",
+    "options": [
+      "64",
+      "-64",
+      "256",
+      "-256"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "-1 1 4 4 -27 27",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_97_wg350",
+    "options": [
+      "(m+x) / 2(h+102)",
+      "(h+17) / 10(m+x)",
+      "10(m+x) / (10h+17)",
+      "None of these"
+    ],
+    "explanation": "Total distance = m + x miles. Total time = 102 minutes + h hours = (102/60) hours + h hours = (17/10) hours + h hours = (17 + 10h)/10 hours. Average speed = (m+x) / ((17+10h)/10) = 10(m+x) / (10h+17).",
+    "subject": "iq",
+    "question_text": "A car traveled m miles in first 102 minutes. If it completed the remaining x miles of the trip in h hours, what was its average speed, in miles per hour, for the entire trip?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_98_wioi0",
+    "options": [
+      "FJSP",
+      "NLSV",
+      "HJFS",
+      "None of these"
+    ],
+    "explanation": "The pattern is to shift each letter forward by 3 positions in the alphabet. D(+3)=G, O(+3)=R, G(+3)=J. Applying this to KIPS: K(+3)=N, I(+3)=L, P(+3)=S, S(+3)=V. So, KIPS becomes NLSV.",
+    "subject": "iq",
+    "question_text": "If Dog is coded as GRJ, then KIPS is coded as",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_99_dottu",
+    "options": [
+      "Mother",
+      "Mother in law",
+      "Aunt",
+      "Sister in law"
+    ],
+    "explanation": "A and B are sisters. C and D are brothers. A is the mother of D. Since C and D are brothers, A is also the mother of C. As B is the sister of A, B is the aunt of C.",
+    "subject": "iq",
+    "question_text": "A and B are sisters. C and D are brothers. A is the mother of D. What is the relation between B and C.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_101_ujs15",
+    "options": [
+      "Ant",
+      "Spider",
+      "Bee",
+      "Moth"
+    ],
+    "explanation": "Ant, Bee, and Moth are insects (have six legs and three body parts). Spider is an arachnid (eight legs and two body parts).",
+    "subject": "iq",
+    "question_text": "Odd man out the following",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_102_ifzrm",
+    "options": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "explanation": "The day before Friday is Thursday. If three days ago was Thursday, then today is Thursday + 3 days = Sunday. Day after tomorrow will be Sunday + 2 days = Tuesday.",
+    "subject": "iq",
+    "question_text": "If three days ago was the day before Friday, what will day after tomorrow be?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_103_izt0p",
+    "options": [
+      "2336",
+      "6232",
+      "3326",
+      "3236"
+    ],
+    "explanation": "LIVED is DEVIL reversed. So, 6323 reversed is 3236.",
+    "subject": "iq",
+    "question_text": "Which one of the five choices makes the best comparison? LIVED is to DEVIL as 6323 is to:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_104_eguqf",
+    "options": [
+      "K",
+      "S",
+      "J",
+      "L"
+    ],
+    "explanation": "The series represents the first letters of months: M (March), A (April), M (May), J (June). The next month is July, so the next letter is J.",
+    "subject": "iq",
+    "question_text": "What is the next letter in the series M,A,M,J,",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_105_hkodx",
+    "options": [
+      "100, 80",
+      "80, 60",
+      "70, 50",
+      "60, 40"
+    ],
+    "explanation": "Let A be the number of students in Hall A and B in Hall B. \n1) A - 10 = B + 10 => A - B = 20\n2) A + 20 = 2(B - 20) => A + 20 = 2B - 40 => A - 2B = -60\nSubtracting (2) from (1): (A - B) - (A - 2B) = 20 - (-60) => B = 80.\nSubstitute B=80 into (1): A - 80 = 20 => A = 100.\nSo, A = 100, B = 80.",
+    "subject": "iq",
+    "question_text": "There are two examination halls A and B. If 10 students are sent from A to B, then the number of students in each room is the same. If 20 students are sent from B to A, then the number of students in A is double of that in B. The number of students in A and B respectively are",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_107_umxhz",
+    "options": [
+      "121",
+      "101",
+      "169",
+      "196"
+    ],
+    "explanation": "The sequence consists of perfect squares in descending order: 196 = 14^2, 169 = 13^2, 144 = 12^2, 121 = 11^2. The next term should be 10^2 = 100. However, 101 is given, making it the wrong term.",
+    "subject": "iq",
+    "question_text": "Find out the wrong term in the sequence 196,169,144,121,101.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_108_fmoxb",
+    "options": [
+      "1 min",
+      "10 min",
+      "14 min",
+      "15 min"
+    ],
+    "explanation": "To cut something into N pieces, N-1 cuts are required. If 1 cut takes 1 minute, then to get 15 pieces, 14 cuts are needed. So, 14 minutes.",
+    "subject": "iq",
+    "question_text": "A heavy tree trunk has been lying in a garden. It can be sawed into two parts in one minute. How long, will it take to saw it into 15 equal pieces.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_109_64gar",
+    "options": [
+      "8",
+      "64",
+      "100",
+      "343"
+    ],
+    "explanation": "The sequence consists of perfect cubes: 8=2^3, 27=3^3, 64=4^3, 125=5^3, 216=6^3, 343=7^3. The number 100 is 10^2, which is a perfect square, not a cube in this series.",
+    "subject": "iq",
+    "question_text": "Which of the following number is different from others in the sequence 8, 27, 64, 100, 125, 216, 343?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_110_5uyy2",
+    "options": [
+      "Ink",
+      "Paper",
+      "Pen",
+      "Sharpener"
+    ],
+    "explanation": "Ink, Paper, and Pen are directly used for writing. A Sharpener is used to sharpen pencils, which are writing instruments.",
+    "subject": "iq",
+    "question_text": "Choose out the odd one:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_111_8advl",
+    "options": [
+      "8312346",
+      "8321436",
+      "8312436",
+      "8313426"
+    ],
+    "explanation": "From EAT=318: E=3, A=1, T=8. From CHAIR=24156: C=2, H=4, A=1, I=5, R=6.\nCombining these for TEACHER: T=8, E=3, A=1, C=2, H=4, E=3, R=6. So, TEACHER = 8312436.",
+    "subject": "iq",
+    "question_text": "In a certain code, EAT is writes as 318 and CHAIR is writes as 24156, then what will TEACHER be written as:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_112_ro0h2",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Grandson",
+      "Son"
+    ],
+    "explanation": "Y's son is Z. Son of Y's son (Z's son) is W. X is the brother of W. Therefore, X is also Z's son. This makes X the grandson of Y.",
+    "subject": "iq",
+    "question_text": "If X is brother of son of Y's son, then how is X related to Y?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_113_7q00b",
+    "options": [
+      "North-west",
+      "North",
+      "South-east",
+      "East"
+    ],
+    "explanation": "1. 50m South: (0, -50)\n2. Turns left (now facing South, left is East) and goes 20m: (20, -50)\n3. Turns North and goes 30m: (20, -50 + 30) = (20, -20)\n4. From (20, -20) towards home (0,0), she must move in the North-west direction.",
+    "subject": "iq",
+    "question_text": "Going 50m to the South of her house, Ayesha turns left and goes another 20m. Then, turning to the North, she goes 30m and then starts walking to her house. In which direction is she walking now?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_114_mwybb",
+    "options": [
+      "Thursday",
+      "Saturday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "explanation": "If Zara went to the movies nine days ago and she only goes on Thursday, then nine days ago was Thursday. Adding 9 days to Thursday: Thursday + 7 days (1 week) + 2 days = Thursday + 2 days = Saturday. So, today is Saturday.",
+    "subject": "iq",
+    "question_text": "Zara went to the movies nine days ago. She goes to the movies only on Thursday. What day of the week is today?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_115_skm9m",
+    "options": [
+      "(a) (tile with 2 dots)",
+      "(b) (tile with 5 dots in cross shape)",
+      "(c) (tile with 4 dots in square)",
+      "(d) (tile with 1 dot)"
+    ],
+    "explanation": "The handwritten mark points to option (b). The pattern in the dot matrix is not immediately obvious without further information or context for the specific puzzle type. Assuming the handwritten mark is the intended answer.",
+    "subject": "iq",
+    "question_text": "Which is the missing tile?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_116_a21p9",
+    "options": [
+      "5",
+      "19",
+      "27",
+      "89"
+    ],
+    "explanation": "The handwritten mark points to '19'. The problem consists of multiple number grids/sequences which are not clearly delimited, making the pattern identification difficult. Assuming the handwritten mark is the intended answer.",
+    "subject": "iq",
+    "question_text": "Insert the missing number:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_117_buzw2",
+    "options": [
+      "(x-1)y is even",
+      "x(y-1) is odd",
+      "(x-1)(y-1) is even",
+      "None of these"
+    ],
+    "explanation": "Let x = even, y = odd. \n(a) (x-1) is odd, (x-1)y = odd * odd = odd. (False)\n(b) (y-1) is even, x(y-1) = even * even = even. (False)\n(c) (x-1) is odd, (y-1) is even. (x-1)(y-1) = odd * even = even. (True)",
+    "subject": "iq",
+    "question_text": "If x is an even positive integer and y is an odd positive integer, then which of the following statement is true?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_118_bxttg",
+    "options": [
+      "Never",
+      "At one point",
+      "At two points",
+      "None of these"
+    ],
+    "explanation": "In a two-dimensional plane, two distinct lines that are not parallel must intersect at exactly one point.",
+    "subject": "iq",
+    "question_text": "Two non-parallel lines will meet",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670929_9h0tz",
+    "options": [
+      "100",
+      "103",
+      "185",
+      "98",
+      "7"
+    ],
+    "explanation": "Looking for a pattern in the given numbers. Let's analyze column wise or row wise operations.\nRow 1: 185, 141, 97\nRow 2: 89, 96, ?\nObserve the pattern: (First number - Third number) / 2 = Middle number?\nRow 1: (185 - 97) / 2 = 88 / 2 = 44. This is not 141.\nLet's try: (First number + Third number) / 2 - X = Middle number.\nRow 1: (185 + 97) / 2 = 282 / 2 = 141. So, for the first row, (First number + Third number) / 2 = Middle number.\nLet's apply this pattern to the second row: (89 + ?) / 2 = 96.\n89 + ? = 96 * 2\n89 + ? = 192\n? = 192 - 89\n? = 103.\nThis matches option (b).",
+    "subject": "iq",
+    "question_text": "The number in the middle of each row is related to the numbers on its left and \n185 141 97\n89 96 ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670929_qh543",
+    "options": [
+      "20",
+      "30",
+      "50",
+      "40"
+    ],
+    "explanation": "Let's analyze the sum of the numbers in each row:\nRow 1: 30 + 15 + 15 = 60\nRow 2: 30 + 15 + 25 = 70\nThe sum of the numbers in each row increases by 10 (70 - 60 = 10).\nFollowing this pattern, the sum of the numbers in Row 3 should be 70 + 10 = 80.\nRow 3: 10 + 40 + ? = 80\n50 + ? = 80\n? = 80 - 50\n? = 30.\nThis matches option (b).",
+    "subject": "iq",
+    "question_text": "Find the missing number from the given table:\n30 15 15\n30 15 25\n10 40 ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670929_387lk",
+    "options": [
+      "a square inside",
+      "an inverted triangle inside",
+      "a house-like shape inside",
+      "a black circle inside"
+    ],
+    "explanation": "The pattern involves the transformation of the inner shape while the outer container remains the same within each pair. In the first pair, an inverted triangle inside a square transforms into a house-like shape inside a square. Applying the same transformation to the second pair, the black circle inside a circle should transform into a house-like shape inside a circle.",
+    "subject": "iq",
+    "question_text": "Image sequence of shapes: A square with an inverted triangle inside is to a square with a house-like shape inside, as a circle with a black circle inside is to a circle with ?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670929_zfbmb",
+    "options": [
+      "12",
+      "16",
+      "14",
+      "17"
+    ],
+    "explanation": "Let's analyze the sum of the numbers in each row:\nRow 1: 13 + 17 + 14 = 44\nRow 2: 18 + 13 + 18 = 49\nThe sum of the numbers in each row increases by 5 (49 - 44 = 5).\nFollowing this pattern, the sum of the numbers in Row 3 should be 49 + 5 = 54.\nRow 3: 13 + 24 + ? = 54\n37 + ? = 54\n? = 54 - 37\n? = 17.\nThis matches option (d).",
+    "subject": "iq",
+    "question_text": "Find the missing number from the given table:\n13 17 14\n18 13 18\n13 24 ?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670929_86xnv",
+    "options": [
+      "49",
+      "58",
+      "44",
+      "56"
+    ],
+    "explanation": "Let's find the differences between consecutive terms:\n2 - 1 = 1\n6 - 2 = 4\n15 - 6 = 9\n31 - 15 = 16\nThe differences are 1², 2², 3², 4².\nThe next difference should be 5² = 25.\nSo, the next term in the sequence is 31 + 25 = 56.",
+    "subject": "iq",
+    "question_text": "1, 2, 6, 15, 31, ?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670929_ht1u9",
+    "options": [
+      "7",
+      "9",
+      "8",
+      "6"
+    ],
+    "explanation": "Let's analyze the patterns in the columns:\nColumn 1: 17, 5, 17. The pattern is (A, B, A), where 17 is repeated.\nColumn 2: 10, 13, 16. This is an arithmetic progression with a common difference of +3 (13-10=3, 16-13=3).\nColumn 3: 6, 8, ?. If this column also follows a simple pattern like the first two, we can infer the missing number. If it is an arithmetic progression with a common difference of +2 (8-6=2), then the next term would be 8+2=10. However, 10 is not an option.\nLet's consider another simple pattern for Column 3: A, A+2, A. If the first term is 6, the second is 6+2=8, then the third term should be 6. This pattern (6, 8, 6) matches option (d) for the missing number.",
+    "subject": "iq",
+    "question_text": "Find the missing number from the given table:\n17 10 6\n5 13 8\n17 16 ?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670931_0k64i",
+    "options": [
+      "7.5",
+      "10",
+      "6.5",
+      "11"
+    ],
+    "explanation": "Let's find the difference between consecutive terms:\n12.5 - 14 = -1.5\n11 - 12.5 = -1.5\n9.5 - 11 = -1.5\n8 - 9.5 = -1.5\nThe series is an arithmetic progression with a common difference of -1.5. To find the next term, subtract 1.5 from the last given term:\nNext term = 8 - 1.5 = 6.5.",
+    "subject": "iq",
+    "question_text": "What is the next term in the series: 14, 12.5, 11, 9.5, 8, ?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670932_76por",
+    "options": [
+      "Womens are lazy",
+      "Men are smart",
+      "Men should help with household",
+      "Women are not equally treated as men."
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "\"Womens get less salary as compared to men despite of having more responsibilities\". By this statement what does author mean?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670933_1zwlq",
+    "options": [
+      "1:05 am 8th June 2004",
+      "11:55 pm 7th June 2004",
+      "12:05 pm 8th June 2004",
+      "00:05 am 8th June 2004",
+      "12:05 pm 7th June 2004"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "A stop watch is fixed to ring. At what time will it ring if it starts at 11:45 pm 7th June 2004 and the second hand has to traverse an angle of 90° before ringing?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670933_szci1",
+    "options": [
+      "27",
+      "67",
+      "9",
+      "She will never come back at the starting point",
+      "8.33"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Nina is moving along a branch of the hyperbola x²/81 - y²/83 = 1 in anticlockwise direction with speed of 3 units of distance per hour. How many hours will she take to comeback at the starting point?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_sfmoy",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "2"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number is missing?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_hkw8f",
+    "options": [
+      "J",
+      "H",
+      "M",
+      "B"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_cmldo",
+    "options": [
+      "ALARM CLOCK",
+      "DIE",
+      "BULB"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which symbol replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_56uj4",
+    "options": [
+      "22",
+      "23",
+      "11",
+      "10"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_9dot2",
+    "options": [
+      "1",
+      "4",
+      "5",
+      "9"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is missing from the last circle?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_lo7hu",
+    "options": [
+      "O",
+      "M",
+      "B",
+      "V"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_jmgtq",
+    "options": [
+      "2",
+      "8",
+      "6",
+      "9"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is missing from the bottom left circle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_k8kqp",
+    "options": [
+      "J",
+      "H",
+      "M",
+      "B"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_gtgba",
+    "options": [
+      "99",
+      "96",
+      "89",
+      "44"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_xpblr",
+    "options": [
+      "9",
+      "8",
+      "5",
+      "3"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_w3ale",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_a0k3f",
+    "options": [
+      "B",
+      "C",
+      "A",
+      "D"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_p116a",
+    "options": [
+      "13",
+      "11"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_87un7",
+    "options": [
+      "Q",
+      "N",
+      "T",
+      "B"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is missing from the last circle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_jwaxn",
+    "options": [
+      "W",
+      "M",
+      "N",
+      "B"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which of the bottom letters replace the question mark and completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_kulje",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which number completes the puzzle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_tm2y2",
+    "options": [
+      "C",
+      "M",
+      "N",
+      "R"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Which letter replaces the question mark and completes the puzzle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_nuy5i",
+    "options": [
+      "1/1536",
+      "1/256",
+      "1/289",
+      "1/196"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1/4 1/9 1/16 1/81",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_y87gr",
+    "options": [
+      "64",
+      "32",
+      "26",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 4 8 16",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_0ukty",
+    "options": [
+      "81",
+      "115",
+      "125",
+      "164"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 8 27 64",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_2jgh9",
+    "options": [
+      "114",
+      "216",
+      "1944",
+      "1865"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 3 6 18 108",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_jdnxb",
+    "options": [
+      "7/2",
+      "3/2",
+      "1",
+      "1/2"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "9/2 4 3&1/2 3 5/2 2",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_5t7gc",
+    "options": [
+      "12",
+      "15",
+      "13",
+      "17"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 3 5 7 9 11",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_eykie",
+    "options": [
+      "85",
+      "97",
+      "107",
+      "87"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 7 17 31 49 71",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_6rvq6",
+    "options": [
+      "19",
+      "21",
+      "23"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 3 7 9 13 15 17",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_dvl6b",
+    "options": [
+      "12",
+      "1",
+      "-1",
+      "0"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "126 62 30 14 6 2",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_qzxwa",
+    "options": [
+      "25",
+      "27",
+      "31",
+      "29"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 7 11 15 19",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_bxxp5",
+    "options": [
+      "25",
+      "12.5",
+      "12",
+      "8"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 100 2 50",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_nzqjl",
+    "options": [
+      "28",
+      "62",
+      "56",
+      "70"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 14 30",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_59krh",
+    "options": [
+      "56725",
+      "48744",
+      "44576",
+      "42592"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "32 352 3872",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_43tze",
+    "options": [
+      "35",
+      "23",
+      "33",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "5 19 12 26 19",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_41sjq",
+    "options": [
+      "96",
+      "196",
+      "129",
+      "206"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2064 1032 516 258",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_wyxtr",
+    "options": [
+      "35",
+      "37",
+      "38",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 11 16 22 29",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_f02ir",
+    "options": [
+      "24",
+      "20",
+      "22",
+      "21"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "4 7 10 13 16 19",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_cssii",
+    "options": [
+      "1.6",
+      "1.7",
+      "1.8",
+      "1.9"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3.5 2.8 2.3 2",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_ej7dg",
+    "options": [
+      "53",
+      "56",
+      "61",
+      "64"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 11 18 28 42",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_353pr",
+    "options": [
+      "162",
+      "216",
+      "266",
+      "306"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 10 30 33 99 102",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_ntyuv",
+    "options": [
+      "27",
+      "34",
+      "35",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "5 7 11 19",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_jt9tn",
+    "options": [
+      "-17",
+      "14",
+      "0",
+      "-11"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "59 45 31 17 3",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_hfy6d",
+    "options": [
+      "53",
+      "65",
+      "75",
+      "93"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 12 27 48",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_n69db",
+    "options": [
+      "-1",
+      "3",
+      "4",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "-31 -26 -20 -13 -5",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_tuola",
+    "options": [
+      "22",
+      "21",
+      "25",
+      "19"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 10 13 16",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_45lrd",
+    "options": [
+      "3",
+      "8",
+      "4",
+      "1"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "125 5 64 27",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_rhw8k",
+    "options": [
+      "488",
+      "756",
+      "1356",
+      "1536"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 24 192",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_mk63v",
+    "options": [
+      "42",
+      "43",
+      "40",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 22 17 28 28 35",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_bf283",
+    "options": [
+      "30",
+      "28",
+      "26",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "12 13 18 19 24 25",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_zri8e",
+    "options": [
+      "27",
+      "30",
+      "33",
+      "39"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "91 78 65 52",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_jls8y",
+    "options": [
+      "12",
+      "17",
+      "13",
+      "10"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "18 21 16 19 14",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_945gw",
+    "options": [
+      "102",
+      "78",
+      "162",
+      "144"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 18 54",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_xbj9f",
+    "options": [
+      "57",
+      "62",
+      "39",
+      "65"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "5 9 17 33",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_efoe6",
+    "options": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 4 8 9 13 14",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_lpawg",
+    "options": [
+      "23",
+      "25",
+      "27",
+      "31"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "9 14 20",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_f3h5q",
+    "options": [
+      "52",
+      "62",
+      "66",
+      "72"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "8 11 16 24 34 47",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_xwf34",
+    "options": [
+      "60",
+      "74",
+      "64",
+      "62"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 6 14 30",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_apirh",
+    "options": [
+      "45",
+      "35",
+      "51",
+      "44"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 6 15 28",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_efdu6",
+    "options": [
+      "50",
+      "48",
+      "54",
+      "60"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "8 10 14 20 28",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_ga56n",
+    "options": [
+      "86",
+      "94",
+      "100",
+      "102"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "12 19 32 46",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_gb483",
+    "options": [
+      "243",
+      "729",
+      "486",
+      "576"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 3 9 27 81",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_n9at8",
+    "options": [
+      "5",
+      "4",
+      "0",
+      "-5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "16 15 13 10 6 1",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_us85c",
+    "options": [
+      "3",
+      "1",
+      "0",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "17 15 13 11 9 7",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_gjsd3",
+    "options": [
+      "1/144",
+      "1/176",
+      "1/396",
+      "1/512"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1/2 1/8 1/32 1/128",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_zifzl",
+    "options": [
+      "26",
+      "28",
+      "16",
+      "12"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 16 10 20 13 24",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_hrs9l",
+    "options": [
+      "19",
+      "21",
+      "23",
+      "25"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "13 15 17",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_r4ikg",
+    "options": [
+      "73",
+      "75",
+      "77",
+      "79"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "49 56 63 70",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_ognnw",
+    "options": [
+      "9",
+      "11",
+      "12",
+      "13"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "13 15 12 14",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_z7dwo",
+    "options": [
+      "672",
+      "1344",
+      "2884",
+      "2688"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 14 56 336",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_ql9en",
+    "options": [
+      "52",
+      "48",
+      "46",
+      "56"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "45 44 47 48 43",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_icoc3",
+    "options": [
+      "128",
+      "256",
+      "512",
+      "1024"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1 4 16 64",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_c9tpb",
+    "options": [
+      "1/64",
+      "1/99",
+      "1/81",
+      "1/66"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "1/9 1/25 1/49",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_yo8yt",
+    "options": [
+      "1.9",
+      "1.95",
+      "2.2",
+      "2.1"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "0.1 0.6 1.1",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_itvcw",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "8"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 8 6 5 4",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_ime5i",
+    "options": [
+      "11",
+      "13",
+      "9",
+      "7"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 9 11",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_50xww",
+    "options": [
+      "143",
+      "147",
+      "153",
+      "157"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "285 253 221 189",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_p859a",
+    "options": [
+      "67",
+      "73",
+      "79",
+      "81"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 4 9 18 32 52",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_9l7n6",
+    "options": [
+      "23",
+      "27",
+      "29",
+      "31"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "7 10 15 22",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_j8zdn",
+    "options": [
+      "48",
+      "62",
+      "56",
+      "58"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "10 50 13 54 16",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_qb4qc",
+    "options": [
+      "16",
+      "22",
+      "26",
+      "24"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "2 4 10 20 13",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_x7cz9",
+    "options": [
+      "6",
+      "21",
+      "16",
+      "26"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "6 1 11 6 16 11",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670935_zj8lu",
+    "options": [
+      "87",
+      "97",
+      "91",
+      "95"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "17 25 35 47 61 77",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_dcvd5",
+    "options": [
+      "10",
+      "20",
+      "5",
+      "15"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "80 20 40 10 20 5",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_4jjwd",
+    "options": [
+      "80",
+      "74",
+      "72",
+      "70"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "0 2 8 18 32 50",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_jshwg",
+    "options": [
+      "35",
+      "85",
+      "125",
+      "30"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "8 9 27 16 64 25",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_3pgem",
+    "options": [
+      "183.75",
+      "150",
+      "125.5",
+      "5"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3.5 7 17.2 52.5",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670935_rajoo",
+    "options": [
+      "23",
+      "25",
+      "100",
+      "50"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "25 100 50 50 75",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_5gytp",
+    "options": [
+      "1764",
+      "1214",
+      "1232",
+      "1204"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "4 14 44 134",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_55lzn",
+    "options": [
+      "24",
+      "16",
+      "22",
+      "44"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "32 28 36 24 40 20",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_brs84",
+    "options": [
+      "34",
+      "33",
+      "35",
+      "23"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "3 5 8 13 21",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670935_dfazh",
+    "options": [
+      "90",
+      "85",
+      "100",
+      "95"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "85 80 85 90 85 90",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_v7y7h",
+    "options": [
+      "0",
+      "-6",
+      "1",
+      "-1"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "-2 -3 -1 -4 0 -5",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_3omi6",
+    "options": [
+      "24",
+      "10",
+      "5",
+      "15"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "225 30 100 20 144",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_n8l0c",
+    "options": [
+      "100",
+      "50",
+      "75",
+      "25"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "54000 9000 1800 450 150",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670935_fljiz",
+    "options": [
+      "64",
+      "-64",
+      "256",
+      "-256"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "-1 1 4 4 -27 27",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670938_78w2b",
+    "options": [
+      "(m+x)/(2(h+102))",
+      "(m+x)/(10(h+17))",
+      "(10(m+x))/(10h+17)",
+      "None of these"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "A car traveled m miles in first 102 minutes. If it completed the remaining x miles of the trip in h hours, what was its average speed, in miles per hour, for the entire trip?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_rxm4r",
+    "options": [
+      "FJSP",
+      "NLSV",
+      "HJFS",
+      "None of these"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "If Dog is coded as GRJ, then KIPS is coded as",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_lu699",
+    "options": [
+      "Mother",
+      "Mother in law",
+      "Aunt",
+      "Sister in law"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "A and B are sisters. C and D are brothers. A is the mother of D. What is the relation between B and C.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_9a9em",
+    "options": [
+      "Ant",
+      "Spider",
+      "Bee",
+      "Moth"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Odd man out the following",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_ttfoj",
+    "options": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "If three days ago was the day before Friday, what will day after tomorrow be?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_o8w0d",
+    "options": [
+      "2336",
+      "6232",
+      "3326",
+      "3236"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Which one of the five choices makes the best comparison? LIVED is to DEVIL as 6323 is to:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_a3cuz",
+    "options": [
+      "K",
+      "S",
+      "J",
+      "L"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "What is the next letter in the series M,A,M,J,",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_o8hm7",
+    "options": [
+      "100, 80",
+      "80, 60",
+      "70, 50",
+      "60, 40"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "There are two examination halls A and B. If 10 students are sent from A to B, then the number of students in each room is the same. If 20 students are sent from B to A, then the number of students in A is double of that in B. The number of students in A and B respectively are",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_icsm5",
+    "options": [
+      "121",
+      "101",
+      "169",
+      "196"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Find out the wrong term in the sequence 196,169,144,121,101,",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_fpehy",
+    "options": [
+      "1 min",
+      "10 min",
+      "14 min",
+      "15 min"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "A heavy tree trunk has been lying in a garden. It can be sawed into two parts in one minute. How long, will it take to saw it into 15 equal pieces.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_mpuex",
+    "options": [
+      "8",
+      "64",
+      "100",
+      "343"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Which of the following number is different from others in the sequence 8, 27, 64, 100, 125, 216, 343?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_hzp7i",
+    "options": [
+      "Ink",
+      "Paper",
+      "Pen",
+      "Sharpener"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Choose out the odd one:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_jln5b",
+    "options": [
+      "8312346",
+      "8321436",
+      "8312436",
+      "8313426"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "In a certain code, EAT is writes as 318 and CHAIR is writes as 24156, then what will TEACHER be written as:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_mgr39",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Grandson",
+      "Son"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "If X is brother of son of Y's son, then how is X related to Y?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_g7eeg",
+    "options": [
+      "North-west",
+      "North",
+      "South-east",
+      "East"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Going 50m to the South of her house, Ayesha turns left and goes another 20m. Then, turning to the North, she goes 30m and then starts walking to her house. In which direction is she walking now?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_g7pfj",
+    "options": [
+      "Thursday",
+      "Saturday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Zara went to the movies nine days ago. She goes to the movies only on Thursday. What day of the week is today?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_bg6ir",
+    "options": [
+      "(A tile with 3 filled circles)",
+      "(A tile with 2 filled circles)",
+      "(A tile with 1 filled circle)",
+      "(A tile with 0 filled circles)"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Which is the missing tile? (A tile with 3 filled circles is option (a), 2 filled for (b), 1 filled for (c), 0 filled for (d))",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_0bpt5",
+    "options": [
+      "5",
+      "19",
+      "27",
+      "89"
+    ],
+    "explanation": "The correct answer from the official answer key was not provided in the document. Option (a) is chosen as a placeholder.",
+    "subject": "iq",
+    "question_text": "Insert the missing number: (Grid: 7 ? 18, 6 93 15, 9 5 4, 3 50 1)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670938_2il5t",
+    "options": [
+      "A single circle",
+      "Two intersecting circles",
+      "A single rectangle",
+      "A parallelogram",
+      "Two intersecting rectangles"
+    ],
+    "explanation": "Answer: E is explicitly provided in the source document.",
+    "subject": "iq",
+    "question_text": "Complete the visual analogy:\nFirst pair: (Triangle on top of a circle) is to (two intersecting circles).\nSecond pair: (Inverted triangle on top of a diamond) is to (?).",
+    "correct_answer_index": 4
+  },
+  {
+    "id": "fast_iq_1783162670939_lr4yv",
+    "options": [
+      "(a) Joy : ecstasy",
+      "(c) rhinoceros : pachyderm",
+      "(e) grasshopper : rodent",
+      "(b) zebra : horse",
+      "(d) ladder : rung"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "KANGAROO : MARSUPIAL::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_i3hbm",
+    "options": [
+      "(a) neat : thoughtful",
+      "(e) depressed : sad",
+      "(c) progressive : regressive",
+      "(b) towering : cringing",
+      "(d) happy : crying"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "STARVING : HUNGRY::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_oryb2",
+    "options": [
+      "(a) psychologist : neurosis",
+      "(c) ophthalmologist : fracture",
+      "(e) allergies : orthopedist",
+      "(b) child : pediatrician",
+      "(d) oncologist : measles"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "DERMATOLOGIST : ACNE",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_buy7d",
+    "options": [
+      "(a) 5423",
+      "(b) 3256",
+      "(c) 3456",
+      "(d) 5342"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Insert the missing number 1234, 2345, _______, 4567, 5678.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_ilc9f",
+    "options": [
+      "(a) February",
+      "(c) July",
+      "(b) May",
+      "(d) November"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "If it is now July, what month will it be 100 months from now?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_52mu3",
+    "options": [
+      "(a) 625",
+      "(c) 600",
+      "(b) 300",
+      "(d) 125"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "If in a class there are 25 students and every student shake hands with every other student exactly once, how many handshakes will take place?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_wa220",
+    "options": [
+      "(a)",
+      "(c)",
+      "(b)",
+      "(d)"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "_______ is to _______ as _______ is to?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_3nw9n",
+    "options": [
+      "(a) 269",
+      "(c) 282",
+      "(b) 279",
+      "(d) 290"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is the next element in the series 9, 30, 93...",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_5m0i0",
+    "options": [
+      "(a) Y",
+      "(c) W",
+      "(b) Z",
+      "(d) N"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "What is the next letter? K, L, N, Q, U,...",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_se3b7",
+    "options": [
+      "(a) IR",
+      "(c) JO",
+      "(b) IV",
+      "(d) WP"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Find the missing term AZ, CX, FU,?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_rq3br",
+    "options": [
+      "(a) Hospital",
+      "(c) Medicine",
+      "(b) Disease",
+      "(d) Patient"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Professor: Lecture::Doctor:?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_qyobs",
+    "options": [
+      "(a) Day",
+      "(c) Calendar",
+      "(b) Fortnight",
+      "(d) Month"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Choose the odd one out:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_4ijuo",
+    "options": [
+      "(a) CBFFDS",
+      "(b) CBMHDS",
+      "(c) EBFHDS",
+      "(d) EBFFHS"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "In a certain code. FAVOUR is written as EBUPTS. How is DANGER written in that code?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_kkwrt",
+    "options": [
+      "(a) Mother's sister",
+      "(b) Grandmother",
+      "(c) Mother-in-Law",
+      "(d) Sister of Father-in-Law"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Pointing to the lady, a man said. \"The son of her only brother is the brother of my wife\". How is the lady related to the man?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_szf5h",
+    "options": [
+      "(a) North",
+      "(b) South",
+      "(c) East",
+      "(d) West"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "After walking 6km, I turned right and covered a distance of 2km, then turned left and covered a distance of 10km. In the end, I was moving towards the north. From which direction did I start my journey?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_6g4ll",
+    "options": [
+      "(a) 18",
+      "(b) 19",
+      "(c) 31",
+      "(d) 32"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Tahir ranks eighteenth in a class of 49 students. What is his rank from the last?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_u3jqp",
+    "options": [
+      "(a) 3",
+      "(c) 5",
+      "(b) 4",
+      "(d) 6"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "If the 25th of August in a year is Thursday, the number of Mondays in that month is:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_ddfy9",
+    "options": [
+      "(a) 25",
+      "(c) 41",
+      "(b) 37",
+      "(d) 47"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "Insert the missing number: [Visual pattern with triangles and numbers 5, 3, 4, 19; 7, 6, 5, 29; 6, 4, 5, ?]",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670939_4sb09",
+    "options": [
+      "(a) 20%",
+      "(b) 30%",
+      "(c) 50%",
+      "(d) 72%"
+    ],
+    "explanation": "",
+    "subject": "iq",
+    "question_text": "According to the bar chart above, which of the following most nearly approximates the percent of salespeople who have sold fewer than 21 computers?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670940_tn3pl",
+    "options": [
+      "U",
+      "S",
+      "M",
+      "T"
+    ],
+    "explanation": "The pattern involves differences: M(13) to N(14) is +1. N(14) to J(10) is -4. J(10) to Q(17) is +7. Q(17) to G(7) is -10. The absolute differences are 1, 4, 7, 10, which increase by 3. So the next difference should be +13. G(7) + 13 = 20, which corresponds to the letter T.",
+    "subject": "iq",
+    "question_text": "Insert the missing alphabet, M, N, J, Q, G -----",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670940_ag9up",
+    "options": [
+      "Man",
+      "Bull",
+      "Lion",
+      "Cow"
+    ],
+    "explanation": "Man, Bull, and Lion are all male animals. Cow is a female animal, making it the odd one out.",
+    "subject": "iq",
+    "question_text": "Which one of these four is least like the other four?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670940_j8j9a",
+    "options": [
+      "5",
+      "15",
+      "35",
+      "65"
+    ],
+    "explanation": "Total people = 100. People who graduated from college Y = 65. Therefore, people who did not graduate from college Y = 100 - 65 = 35. People who live in city Z = 30. To maximize the number of people who did not graduate from Y AND do not live in Z, we assume that all 30 people living in Z are also among those who graduated from Y. This way, the 35 people who did not graduate from Y are entirely separate from the group living in Z. In this scenario, all 35 people who did not graduate from Y could also not live in Z. This is N(Y' ∩ Z') = Total - N(Y U Z). N(Y U Z) is minimized when N(Y ∩ Z) is maximized. Max N(Y ∩ Z) = min(65, 30) = 30. So, N(Y U Z) = N(Y) + N(Z) - N(Y ∩ Z) = 65 + 30 - 30 = 65. Thus, N(Y' ∩ Z') = 100 - 65 = 35.",
+    "subject": "iq",
+    "question_text": "Of a certain group of 100 people, 65 graduated from college Y, and 30 live in city Z. What is the greatest possible number of people in this group who, did not graduate from college Y, and do not live in city Z?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_po724",
+    "options": [
+      "81",
+      "6",
+      "79",
+      "15"
+    ],
+    "explanation": "The pattern for each row appears to be (First Number × Second Number) - 1 = Third Number. For the first row: (4 × 2) - 1 = 8 - 1 = 7. For the second row: (6 × 5) - 1 = 30 - 1 = 29. Following this pattern for the third row: (10 × 8) - 1 = 80 - 1 = 79.",
+    "subject": "iq",
+    "question_text": "What is the missing number? (Grid: 4 2 7; 6 5 29; 10 8 ?)",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_bpit1",
+    "options": [
+      "Arterial blood pressure",
+      "Mass",
+      "Area",
+      "Density of liquid"
+    ],
+    "explanation": "A barometer is an instrument used to measure atmospheric pressure. A sphygmomanometer is an instrument used to measure blood pressure, specifically arterial blood pressure.",
+    "subject": "iq",
+    "question_text": "Barometer is to atmospheric pressure as sphygmomanometer is to",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670940_jg0ve",
+    "options": [
+      "L",
+      "M",
+      "N",
+      "R"
+    ],
+    "explanation": "The series uses letter positions in the alphabet: J(10), E(5), N(14), I(9). The differences between consecutive terms are: 10 - 5 = 5 (or -5). 5 - 14 = -9 (or +9). 14 - 9 = 5 (or -5). The pattern of differences is -5, +9, -5. So, the next difference should be +9. 9 + 9 = 18, which corresponds to the letter R.",
+    "subject": "iq",
+    "question_text": "Complete the series. J, E, N, I, .....",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670940_6k75e",
+    "options": [
+      "Red",
+      "Black",
+      "White",
+      "Green"
+    ],
+    "explanation": "1. Red is face down. Since Red is opposite Black, Black is face up. (Pair 1: Red, Black)\n2. Green is adjacent to Red and Black, so Green is a side face.\n3. Blue is adjacent to White.\n4. Brown is adjacent to Blue.\nFrom 3 and 4, Blue is adjacent to both White and Brown. This means White and Brown cannot be opposite Blue. Therefore, the only remaining color to be opposite Blue is Green. (Pair 2: Blue, Green)\nSince Red, Black, Blue, Green are paired, the remaining two colors, White and Brown, must form the last opposite pair. (Pair 3: White, Brown)\nThus, the side opposite to Brown is White.",
+    "subject": "iq",
+    "question_text": "A cube has 6 sides each of different colors. The red side is opposite to black. The green side is between red and black. The blue side is adjacent to white. The brown side is adjacent to blue. The red side is face down. The side opposite to brown is",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_i5ptl",
+    "options": [
+      "Black",
+      "Brown",
+      "Blue",
+      "White"
+    ],
+    "explanation": "From the problem description in Q19, 'The red side is opposite to black' and 'The red side is face down'. If Red is face down, then Black must be face up.",
+    "subject": "iq",
+    "question_text": "The face upside is",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670940_p1lxj",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
+    "explanation": "The pattern is formed by multiplying the digits of the previous number: 66 -> 6 × 6 = 36. 36 -> 3 × 6 = 18. Following this, 18 -> 1 × 8 = 8.",
+    "subject": "iq",
+    "question_text": "Find the missing term 66,36,18,?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_0ku6a",
+    "options": [
+      "Pen: Cap",
+      "Book: Cover",
+      "Handle: Spade",
+      "Frame: Picture"
+    ],
+    "explanation": "A border defines the boundary or outline of a country. Similarly, a frame defines the boundary or outline of a picture.",
+    "subject": "iq",
+    "question_text": "Border: Country (Analogy)",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670940_lqv5d",
+    "options": [
+      "Painter",
+      "Canvas",
+      "Brush",
+      "Color"
+    ],
+    "explanation": "Canvas, Brush, and Color are all tools or materials used in painting. A Painter is the person who uses these items, making it the odd one out.",
+    "subject": "iq",
+    "question_text": "Choose the odd one out:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670940_3xd4x",
+    "options": [
+      "25",
+      "36",
+      "78",
+      "144"
+    ],
+    "explanation": "25 is 5 squared (5^2). 36 is 6 squared (6^2). 144 is 12 squared (12^2). 78 is not a perfect square.",
+    "subject": "iq",
+    "question_text": "Choose the number which is different from others in the group.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_zu1z7",
+    "options": [
+      "381181",
+      "481191",
+      "381191",
+      "361191"
+    ],
+    "explanation": "Assign codes based on the given examples:\nE = 1, N = 2, G = 3, L = 4, A = 5, D = 6\nF = 7, R = 8, C = 9\nUsing these codes for GREECE:\nG = 3\nR = 8\nE = 1\nE = 1\nC = 9\nE = 1\nSo, GREECE = 381191.",
+    "subject": "iq",
+    "question_text": "If ENGLAND is written as 1234526 and FRANCE is written as 785291, how is GREECE is coded?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_qd4at",
+    "options": [
+      "North",
+      "South",
+      "East",
+      "West"
+    ],
+    "explanation": "At 12 noon, both hands point to 12. If 12 is North-East, this means the clock face has been rotated 45 degrees clockwise (North has become North-East). \nStandard direction mapping:\nNorth -> North-East\nEast -> South-East\nSouth -> South-West\nWest -> North-West\nAt 1:30 p.m.:\n- The minute hand points to 6. Standard 6 is South. After rotation, South becomes South-West.\n- The hour hand is halfway between 1 and 2. In a standard clock, this position is 45 degrees clockwise from 12 (North), which is North-East. After the clock face is rotated such that North becomes North-East, the standard North-East position would now point towards East.",
+    "subject": "iq",
+    "question_text": "A clock is so placed that at 12 noon its minute hand points towards north-east. In which direction does its hour hand point at 1.30 p.m?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_yh3ao",
+    "options": [
+      "40",
+      "44",
+      "50",
+      "55"
+    ],
+    "explanation": "Number of students who passed = (Rank from top) + (Rank from bottom) - 1\nPassed = 16 + 29 - 1 = 45 - 1 = 44 students.\nNumber of students who did not participate = 6.\nNumber of students who failed = 5.\nTotal boys in the class = Passed + Did not participate + Failed\nTotal = 44 + 6 + 5 = 55 boys.",
+    "subject": "iq",
+    "question_text": "Khayyam ranked sixteenth from the top and twenty-ninth from the bottom among those who passed an examination. Six boys did not participate in the competition and five failed in it. How many boys were there in the class?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670940_nm9p1",
+    "options": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "explanation": "October has 31 days. To find the day of the week for November 1st, we need to find the number of days between October 1st and November 1st, which is 31 days. \nDivide 31 by 7 (days in a week): 31 ÷ 7 = 4 with a remainder of 3. \nThis means November 1st will be 3 days after Sunday. \nSunday + 1 day = Monday\nSunday + 2 days = Tuesday\nSunday + 3 days = Wednesday",
+    "subject": "iq",
+    "question_text": "If 1st October is Sunday, then 1st November will be:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670940_tt25f",
+    "options": [
+      "Square, inscribed triangle, inscribed circle",
+      "Square, inscribed triangle, inscribed square",
+      "Square, inscribed circle, inscribed square",
+      "Square, inscribed triangle"
+    ],
+    "explanation": "In the first pair, the outer shape (square) remains the same, and the inner shape transforms from a circle to a triangle. In the second pair, the initial figure is a square with an inscribed circle, which itself contains an inscribed square. Applying the transformation, the outer square remains the same, the middle circle transforms into a triangle, and the innermost square remains as it is. So, the result is a square containing an inscribed triangle, which in turn contains an inscribed square.",
+    "subject": "iq",
+    "question_text": "is to as is to",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_95sui",
+    "options": [
+      "(m+x) / 2(h+102)",
+      "(h+17) / 10(m+x)",
+      "10(m+x) / (10h+17)",
+      "None of these"
+    ],
+    "explanation": "Total distance = m + x miles. Total time = 102 minutes + h hours = (102/60) hours + h hours = (17/10) hours + h hours = (17 + 10h)/10 hours. Average speed = (m+x) / ((17+10h)/10) = 10(m+x) / (10h+17).",
+    "subject": "iq",
+    "question_text": "A car traveled m miles in first 102 minutes. If it completed the remaining x miles of the trip in h hours, what was its average speed, in miles per hour, for the entire trip?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_qtsmu",
+    "options": [
+      "FJSP",
+      "NLSV",
+      "HJFS",
+      "None of these"
+    ],
+    "explanation": "The pattern is to shift each letter forward by 3 positions in the alphabet. D(+3)=G, O(+3)=R, G(+3)=J. Applying this to KIPS: K(+3)=N, I(+3)=L, P(+3)=S, S(+3)=V. So, KIPS becomes NLSV.",
+    "subject": "iq",
+    "question_text": "If Dog is coded as GRJ, then KIPS is coded as",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_aagrn",
+    "options": [
+      "Mother",
+      "Mother in law",
+      "Aunt",
+      "Sister in law"
+    ],
+    "explanation": "A and B are sisters. C and D are brothers. A is the mother of D. Since C and D are brothers, A is also the mother of C. As B is the sister of A, B is the aunt of C.",
+    "subject": "iq",
+    "question_text": "A and B are sisters. C and D are brothers. A is the mother of D. What is the relation between B and C.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_x3np6",
+    "options": [
+      "Ant",
+      "Spider",
+      "Bee",
+      "Moth"
+    ],
+    "explanation": "Ant, Bee, and Moth are insects (have six legs and three body parts). Spider is an arachnid (eight legs and two body parts).",
+    "subject": "iq",
+    "question_text": "Odd man out the following",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_11yyc",
+    "options": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "explanation": "The day before Friday is Thursday. If three days ago was Thursday, then today is Thursday + 3 days = Sunday. Day after tomorrow will be Sunday + 2 days = Tuesday.",
+    "subject": "iq",
+    "question_text": "If three days ago was the day before Friday, what will day after tomorrow be?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_x4o55",
+    "options": [
+      "2336",
+      "6232",
+      "3326",
+      "3236"
+    ],
+    "explanation": "LIVED is DEVIL reversed. So, 6323 reversed is 3236.",
+    "subject": "iq",
+    "question_text": "Which one of the five choices makes the best comparison? LIVED is to DEVIL as 6323 is to:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670942_dlidu",
+    "options": [
+      "K",
+      "S",
+      "J",
+      "L"
+    ],
+    "explanation": "The series represents the first letters of months: M (March), A (April), M (May), J (June). The next month is July, so the next letter is J.",
+    "subject": "iq",
+    "question_text": "What is the next letter in the series M,A,M,J,",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_wvncn",
+    "options": [
+      "100, 80",
+      "80, 60",
+      "70, 50",
+      "60, 40"
+    ],
+    "explanation": "Let A be the number of students in Hall A and B in Hall B. \n1) A - 10 = B + 10 => A - B = 20\n2) A + 20 = 2(B - 20) => A + 20 = 2B - 40 => A - 2B = -60\nSubtracting (2) from (1): (A - B) - (A - 2B) = 20 - (-60) => B = 80.\nSubstitute B=80 into (1): A - 80 = 20 => A = 100.\nSo, A = 100, B = 80.",
+    "subject": "iq",
+    "question_text": "There are two examination halls A and B. If 10 students are sent from A to B, then the number of students in each room is the same. If 20 students are sent from B to A, then the number of students in A is double of that in B. The number of students in A and B respectively are",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670942_t9r4n",
+    "options": [
+      "121",
+      "101",
+      "169",
+      "196"
+    ],
+    "explanation": "The sequence consists of perfect squares in descending order: 196 = 14^2, 169 = 13^2, 144 = 12^2, 121 = 11^2. The next term should be 10^2 = 100. However, 101 is given, making it the wrong term.",
+    "subject": "iq",
+    "question_text": "Find out the wrong term in the sequence 196,169,144,121,101.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_byfhs",
+    "options": [
+      "1 min",
+      "10 min",
+      "14 min",
+      "15 min"
+    ],
+    "explanation": "To cut something into N pieces, N-1 cuts are required. If 1 cut takes 1 minute, then to get 15 pieces, 14 cuts are needed. So, 14 minutes.",
+    "subject": "iq",
+    "question_text": "A heavy tree trunk has been lying in a garden. It can be sawed into two parts in one minute. How long, will it take to saw it into 15 equal pieces.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_oifb3",
+    "options": [
+      "8",
+      "64",
+      "100",
+      "343"
+    ],
+    "explanation": "The sequence consists of perfect cubes: 8=2^3, 27=3^3, 64=4^3, 125=5^3, 216=6^3, 343=7^3. The number 100 is 10^2, which is a perfect square, not a cube in this series.",
+    "subject": "iq",
+    "question_text": "Which of the following number is different from others in the sequence 8, 27, 64, 100, 125, 216, 343?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_hdch6",
+    "options": [
+      "Ink",
+      "Paper",
+      "Pen",
+      "Sharpener"
+    ],
+    "explanation": "Ink, Paper, and Pen are directly used for writing. A Sharpener is used to sharpen pencils, which are writing instruments.",
+    "subject": "iq",
+    "question_text": "Choose out the odd one:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_iq_1783162670942_hrigb",
+    "options": [
+      "8312346",
+      "8321436",
+      "8312436",
+      "8313426"
+    ],
+    "explanation": "From EAT=318: E=3, A=1, T=8. From CHAIR=24156: C=2, H=4, A=1, I=5, R=6.\nCombining these for TEACHER: T=8, E=3, A=1, C=2, H=4, E=3, R=6. So, TEACHER = 8312436.",
+    "subject": "iq",
+    "question_text": "In a certain code, EAT is writes as 318 and CHAIR is writes as 24156, then what will TEACHER be written as:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_uw1vo",
+    "options": [
+      "Brother",
+      "Cousin",
+      "Grandson",
+      "Son"
+    ],
+    "explanation": "Y's son is Z. Son of Y's son (Z's son) is W. X is the brother of W. Therefore, X is also Z's son. This makes X the grandson of Y.",
+    "subject": "iq",
+    "question_text": "If X is brother of son of Y's son, then how is X related to Y?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670942_7a5e3",
+    "options": [
+      "North-west",
+      "North",
+      "South-east",
+      "East"
+    ],
+    "explanation": "1. 50m South: (0, -50)\n2. Turns left (now facing South, left is East) and goes 20m: (20, -50)\n3. Turns North and goes 30m: (20, -50 + 30) = (20, -20)\n4. From (20, -20) towards home (0,0), she must move in the North-west direction.",
+    "subject": "iq",
+    "question_text": "Going 50m to the South of her house, Ayesha turns left and goes another 20m. Then, turning to the North, she goes 30m and then starts walking to her house. In which direction is she walking now?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_iq_1783162670942_s5ugz",
+    "options": [
+      "Thursday",
+      "Saturday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "explanation": "If Zara went to the movies nine days ago and she only goes on Thursday, then nine days ago was Thursday. Adding 9 days to Thursday: Thursday + 7 days (1 week) + 2 days = Thursday + 2 days = Saturday. So, today is Saturday.",
+    "subject": "iq",
+    "question_text": "Zara went to the movies nine days ago. She goes to the movies only on Thursday. What day of the week is today?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_5jnm0",
+    "options": [
+      "(a) (tile with 2 dots)",
+      "(b) (tile with 5 dots in cross shape)",
+      "(c) (tile with 4 dots in square)",
+      "(d) (tile with 1 dot)"
+    ],
+    "explanation": "The handwritten mark points to option (b). The pattern in the dot matrix is not immediately obvious without further information or context for the specific puzzle type. Assuming the handwritten mark is the intended answer.",
+    "subject": "iq",
+    "question_text": "Which is the missing tile?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670942_ohyj1",
+    "options": [
+      "5",
+      "19",
+      "27",
+      "89"
+    ],
+    "explanation": "The handwritten mark points to '19'. The problem consists of multiple number grids/sequences which are not clearly delimited, making the pattern identification difficult. Assuming the handwritten mark is the intended answer.",
+    "subject": "iq",
+    "question_text": "Insert the missing number:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_iq_1783162670943_91my6",
+    "options": [
+      "(x-1)y is even",
+      "x(y-1) is odd",
+      "(x-1)(y-1) is even",
+      "None of these"
+    ],
+    "explanation": "Let x = even, y = odd. \n(a) (x-1) is odd, (x-1)y = odd * odd = odd. (False)\n(b) (y-1) is even, x(y-1) = even * even = even. (False)\n(c) (x-1) is odd, (y-1) is even. (x-1)(y-1) = odd * even = even. (True)",
+    "subject": "iq",
+    "question_text": "If x is an even positive integer and y is an odd positive integer, then which of the following statement is true?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_iq_1783162670943_76rik",
+    "options": [
+      "Never",
+      "At one point",
+      "At two points",
+      "None of these"
+    ],
+    "explanation": "In a two-dimensional plane, two distinct lines that are not parallel must intersect at exactly one point.",
+    "subject": "iq",
+    "question_text": "Two non-parallel lines will meet",
+    "correct_answer_index": 1
+  }
+]

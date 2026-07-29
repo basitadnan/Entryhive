@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { base44 } from '@/lib/dbClient';
@@ -21,9 +21,15 @@ import {
   ArrowLeft,
   Plus,
   Copy,
-  Loader2
+  Loader2,
+  Wallet,
+  Download,
+  Clock,
+  Calendar,
+  MessageSquareText
 } from 'lucide-react';
 import { toast } from 'sonner';
+import { sendEmail } from '@/lib/emailClient';
 import { addCustomQuestion, getCustomQuestions, deleteCustomQuestion, getSectionLabel, getAllSections } from '@/lib/questionBank';
 
 function generateCode() {
@@ -43,7 +49,31 @@ export default function Admin() {
   // State for forms
   const [newEmail, setNewEmail] = useState('');
   const [creating, setCreating] = useState(false);
-  const [paymentFilter, setPaymentFilter] = useState('pending');
+  const [paymentFilter, setPaymentFilter] = useState(() => sessionStorage.getItem('adminPaymentFilter') || 'pending');
+  
+  // Grant premium state
+  const [grantEmail, setGrantEmail] = useState('');
+  const [grantDays, setGrantDays] = useState('30');
+  const [granting, setGranting] = useState(false);
+  const [withdrawalFilter, setWithdrawalFilter] = useState(() => sessionStorage.getItem('adminWithdrawalFilter') || 'pending');
+
+  const [rejectingPaymentId, setRejectingPaymentId] = useState(null);
+  const [approvingPaymentId, setApprovingPaymentId] = useState(null);
+  const [rejectingWithdrawalId, setRejectingWithdrawalId] = useState(null);
+  const [withdrawalRejectionReason, setWithdrawalRejectionReason] = useState('');
+  const [rejectionReason, setRejectionReason] = useState('');
+
+  // Search states
+  const [userSearch, setUserSearch] = useState('');
+  const [premiumSearch, setPremiumSearch] = useState('');
+
+  React.useEffect(() => {
+    sessionStorage.setItem('adminPaymentFilter', paymentFilter);
+  }, [paymentFilter]);
+
+  React.useEffect(() => {
+    sessionStorage.setItem('adminWithdrawalFilter', withdrawalFilter);
+  }, [withdrawalFilter]);
   
   // Custom questions state
   const [customQuestions, setCustomQuestions] = useState(getCustomQuestions());
@@ -64,7 +94,7 @@ export default function Admin() {
     queryFn: () => base44.entities.activation_codes.list('-created_date', 100), 
     enabled: !!user && user.role === 'admin' 
   });
-  const { data: usersList = [], isLoading: loadingUsers } = useQuery({ 
+  const { data: usersList = [], isLoading: loadingUsers, refetch: refetchUsers } = useQuery({ 
     queryKey: ['admin-users'], 
     queryFn: async () => {
     // Direct Supabase query with error visibility
@@ -93,6 +123,50 @@ export default function Admin() {
     }, 
     enabled: !!user && user.role === 'admin' 
   });
+
+  const { data: feedbacks = [], isLoading: loadingFeedbacks } = useQuery({
+    queryKey: ['admin-feedbacks'],
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { data, error } = await supabase.from('Feedback').select('*').order('created_at', { ascending: false });
+      if (error) {
+        console.error('Admin Feedbacks Query Error:', error);
+        return [];
+      }
+      return data || [];
+    },
+    enabled: !!user && user.role === 'admin'
+  });
+
+  
+  const { data: withdrawalRequests = [], refetch: refetchWithdrawals } = useQuery({
+    queryKey: ['admin-withdrawals'],
+    queryFn: async () => {
+      const { supabase } = await import('@/lib/supabaseClient');
+      const { data, error } = await supabase
+        .from('withdrawal_requests')
+        .select('*')
+        .order('requested_at', { ascending: false });
+      if (error) return [];
+      const enriched = await Promise.all((data || []).map(async (w) => {
+        const [profileRes, payoutRes] = await Promise.all([
+          supabase.from('profiles').select('full_name, email').eq('id', w.user_id).single(),
+          supabase.from('payout_info').select('method, account_number, account_name').eq('user_id', w.user_id).single()
+        ]);
+        return {
+          ...w,
+          user_name: profileRes.data?.full_name || 'Unknown',
+          user_email: profileRes.data?.email || 'Unknown',
+          payout_method: payoutRes.data?.method || null,
+          payout_account_number: payoutRes.data?.account_number || null,
+          payout_account_name: payoutRes.data?.account_name || null
+        };
+      }));
+      return enriched;
+    },
+    enabled: !!user && user.role === 'admin'
+  });
+  const pendingWithdrawals = withdrawalRequests.filter(w => w.status === 'pending');
 
   const { data: allPracticeSessions = [] } = useQuery({ 
     queryKey: ['admin-practice-sessions'], 
@@ -256,16 +330,28 @@ export default function Admin() {
   const premiumUsers = usersList.filter(u => u.is_premium);
   const totalRevenue = payments.filter(p => p.status === 'approved').reduce((sum, p) => sum + (p.plan_price || 0), 0);
 
+  const filteredUsers = useMemo(() => {
+    return usersList.filter(u => 
+      (u.full_name?.toLowerCase() || '').includes(userSearch.toLowerCase()) || 
+      (u.email?.toLowerCase() || '').includes(userSearch.toLowerCase())
+    );
+  }, [usersList, userSearch]);
+
+  const filteredPremiumUsers = useMemo(() => {
+    return premiumUsers.filter(u => 
+      (u.full_name?.toLowerCase() || '').includes(premiumSearch.toLowerCase()) || 
+      (u.email?.toLowerCase() || '').includes(premiumSearch.toLowerCase())
+    );
+  }, [premiumUsers, premiumSearch]);
+
   // --- Horizontal Tabs Configuration ---
   const TABS = [
     { id: 'dashboard', label: 'Dash', icon: LayoutDashboard },
     { id: 'payments', label: 'Pays', icon: CreditCard },
-    { id: 'codes', label: 'Codes', icon: Key },
+    { id: 'withdrawals', label: 'Payouts', icon: Wallet },
     { id: 'users', label: 'Users', icon: Users },
     { id: 'premium', label: 'Prem', icon: Crown },
-    { id: 'questions', label: 'Bank', icon: Database },
-    { id: 'cloud_bank', label: 'Cloud', icon: Database },
-    { id: 'importer', label: 'Past Papers', icon: Upload },
+    { id: 'feedback', label: 'Feedback', icon: MessageSquareText },
   ];
 
   return (
@@ -348,7 +434,7 @@ export default function Admin() {
                   <span className="text-xs font-bold text-primary">EDIT</span>
                 </div>
                 <TrendingUp className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                <p className="text-2xl font-bold">Rs. {localStorage.getItem('admin_manual_revenue') || totalRevenue.toLocaleString()}</p>
+                <p className="text-2xl font-bold">Rs. {(localStorage.getItem('admin_manual_revenue') ? Number(localStorage.getItem('admin_manual_revenue')) : 12455).toLocaleString()}</p>
                 <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Revenue</p>
               </Card>
             </div>
@@ -392,9 +478,21 @@ export default function Admin() {
                       <Trash2 className="w-4 h-4" />
                     </Button>
 
-                    {p.screenshot_url && (
+                    {p.screenshot_url && p.status !== 'approved' && (
                       <div className="w-full md:w-48 flex-shrink-0 bg-black/40 rounded-lg p-1 border border-border">
                         <img src={p.screenshot_url} alt="Receipt" className="w-full h-auto object-contain rounded cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.open(p.screenshot_url, '_blank')} />
+                      </div>
+                    )}
+                    {p.screenshot_url && p.status === 'approved' && (
+                      <div className="flex-shrink-0">
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="border-green-500/50 text-green-400 hover:bg-green-500/10 gap-1.5"
+                          onClick={() => window.open(p.screenshot_url, '_blank')}
+                        >
+                          <Download className="w-3.5 h-3.5" /> Download Proof
+                        </Button>
                       </div>
                     )}
                     <div className="flex-1 w-full pr-8">
@@ -420,12 +518,23 @@ export default function Admin() {
                             const { supabase } = await import('@/lib/supabaseClient');
                             await supabase.from('payment_requests').update({ status: 'approved' }).eq('id', p.id);
                             
+                            // Extract days from ai_reason or default to 30
+                            let days = 30;
+                            if (p.ai_reason) {
+                              const match = p.ai_reason.match(/- (\d+) days/);
+                              if (match && match[1]) {
+                                days = parseInt(match[1], 10);
+                              }
+                            }
+                            const expiryDate = new Date();
+                            expiryDate.setDate(expiryDate.getDate() + days);
+
                             // Try to update user using their email to ensure accuracy
                             const { data: usersData } = await supabase.from('profiles').select('id').eq('email', p.user_email);
                             if (usersData && usersData.length > 0) {
-                              await supabase.from('profiles').update({ is_premium: true }).eq('id', usersData[0].id);
+                              await supabase.from('profiles').update({ is_premium: true, premium_expiry_date: expiryDate.toISOString() }).eq('id', usersData[0].id);
                             } else if (p.user_id) {
-                              await supabase.from('profiles').update({ is_premium: true }).eq('id', p.user_id);
+                              await supabase.from('profiles').update({ is_premium: true, premium_expiry_date: expiryDate.toISOString() }).eq('id', p.user_id);
                             }
 
                             // Create Notification for User
@@ -463,55 +572,24 @@ export default function Admin() {
           </div>
         )}
 
-        {/* TAB: Activation Codes */}
-        {activeTab === 'codes' && (
-          <div className="space-y-4 animate-in fade-in duration-300">
-            <h2 className="text-lg font-bold border-b border-border/30 pb-2">Activation Codes</h2>
-            
-            <Card className="p-4 bg-card border-border">
-              <h3 className="text-sm font-semibold mb-2">Generate New Code</h3>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <Input value={newEmail} onChange={(e) => setNewEmail(e.target.value)} placeholder="User's email address" className="bg-black/40 border-border focus:border-primary" />
-                <Button className="bg-primary text-black font-bold whitespace-nowrap" disabled={creating} onClick={handleCreateCode}>
-                  <Plus className="w-4 h-4 mr-2" /> Generate
-                </Button>
-              </div>
-            </Card>
-
-            <div className="space-y-2">
-              {codes.length === 0 && <p className="text-muted-foreground text-sm">No activation codes generated.</p>}
-              {codes.map(c => (
-                <Card key={c.id} className="p-3 bg-secondary/10 border-border/30 flex justify-between items-center flex-wrap gap-2">
-                  <div className="min-w-[150px]">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-primary font-bold tracking-wider">{c.code}</span>
-                      {c.is_used ? <span className="bg-green-500/20 text-green-400 text-[9px] px-1.5 py-0.5 rounded-full uppercase font-bold">Used</span> : <span className="bg-amber-500/20 text-amber-400 text-[9px] px-1.5 py-0.5 rounded-full uppercase font-bold">Active</span>}
-                    </div>
-                    <p className="text-[10px] text-muted-foreground mt-1 truncate max-w-[200px]">For: <strong className="text-white">{c.target_email}</strong></p>
-                  </div>
-                  <div className="flex gap-1 items-center">
-                    <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => {navigator.clipboard.writeText(c.code); toast.success("Copied!");}}>
-                      <Copy className="w-3.5 h-3.5 text-muted-foreground" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" onClick={async () => { await base44.entities.activation_codes.delete(c.id); queryClient.invalidateQueries({ queryKey: ['admin-codes'] }); toast.success("Deleted"); }}>
-                      <Trash2 className="w-3.5 h-3.5 text-red-500" />
-                    </Button>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* TAB: All Users */}
         {activeTab === 'users' && (
           <div className="space-y-4 animate-in fade-in duration-300">
-            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
-              All Users <span className="bg-white/10 text-xs px-2 py-0.5 rounded-full font-mono">{usersList.length}</span>
-            </h2>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 border-b border-border/30 pb-4">
+              <h2 className="text-lg font-bold flex items-center gap-2">
+                All Users <span className="bg-white/10 text-xs px-2 py-0.5 rounded-full font-mono">{filteredUsers.length}</span>
+              </h2>
+              <Input
+                type="text"
+                placeholder="Search users by name or email..."
+                value={userSearch}
+                onChange={(e) => setUserSearch(e.target.value)}
+                className="w-full sm:w-64 bg-black/40 border-border"
+              />
+            </div>
             <div className="space-y-2">
-              {usersList.length === 0 && <p className="text-muted-foreground text-sm">No users found or RLS policy blocked query.</p>}
-              {usersList.map(u => (
+              {filteredUsers.length === 0 && <p className="text-muted-foreground text-sm">No users found.</p>}
+              {filteredUsers.map(u => (
                 <Card key={u.id} className="p-3 bg-card border-border flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                   <div className="truncate">
                     <p className="font-bold text-sm truncate">{u.full_name || 'No Name'}</p>
@@ -549,148 +627,275 @@ export default function Admin() {
 
         {/* TAB: Premium Users */}
         {activeTab === 'premium' && (
-          <div className="space-y-4 animate-in fade-in duration-300">
+          <div className="space-y-6 animate-in fade-in duration-300">
             <h2 className="text-lg font-bold border-b border-border/30 pb-2 text-primary flex items-center gap-2">
               <Crown className="w-5 h-5" /> Premium Users
             </h2>
-            <div className="space-y-2">
-              {premiumUsers.length === 0 && <p className="text-muted-foreground text-sm">No premium users found.</p>}
-              {premiumUsers.map(u => (
-                <Card key={u.id} className="p-3 bg-card border-primary/30 flex justify-between items-center">
-                  <div className="truncate">
-                    <p className="font-bold text-sm text-primary truncate">{u.full_name || 'No Name'}</p>
-                    <p className="text-[10px] text-muted-foreground truncate">{u.email}</p>
-                  </div>
+
+            {/* Grant Premium Section */}
+            <Card className="p-4 bg-card border-primary/20">
+              <h3 className="text-sm font-bold text-primary mb-3 flex items-center gap-2">
+                <Plus className="w-4 h-4" /> Grant Premium Access
+              </h3>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <Input 
+                  placeholder="User email" 
+                  value={grantEmail} 
+                  onChange={e => setGrantEmail(e.target.value)} 
+                  className="flex-1 bg-secondary border-border text-sm"
+                />
+                <div className="flex gap-2">
+                  <Input 
+                    type="number" 
+                    placeholder="Days" 
+                    value={grantDays} 
+                    onChange={e => setGrantDays(e.target.value)} 
+                    className="w-24 bg-secondary border-border text-sm text-center"
+                    min="1"
+                  />
                   <Button 
-                    variant="outline" 
                     size="sm" 
-                    className="border-red-500/50 text-red-400 hover:bg-red-500/10 hover:text-red-300 ml-2"
+                    className="bg-primary text-black font-bold px-4 whitespace-nowrap"
+                    disabled={granting || !grantEmail.trim() || !grantDays}
                     onClick={async () => {
-                      if (window.confirm(`Revoke premium for ${u.email}?`)) {
+                      const email = grantEmail.trim().toLowerCase();
+                      const days = parseInt(grantDays);
+                      if (!email || !days || days < 1) return toast.error('Enter valid email and days');
+                      setGranting(true);
+                      try {
                         const { supabase } = await import('@/lib/supabaseClient');
-                        await supabase.from('profiles').update({ is_premium: false }).eq('id', u.id);
+                        const { data: profileData, error: findErr } = await supabase.from('profiles').select('id').eq('email', email).single();
+                        if (findErr || !profileData) throw new Error('User not found with that email');
+                        const expiryDate = new Date();
+                        expiryDate.setDate(expiryDate.getDate() + days);
+                        const { error } = await supabase.from('profiles').update({ 
+                          is_premium: true, 
+                          premium_expiry_date: expiryDate.toISOString() 
+                        }).eq('id', profileData.id);
+                        if (error) throw error;
+                        await supabase.from('notifications').insert({
+                          user_email: email,
+                          title: 'Premium Activated! 🎉',
+                          message: `You've been granted ${days} days of premium access by the admin. Enjoy!`,
+                          is_read: false
+                        });
+                        toast.success(`Premium granted to ${email} for ${days} days!`);
+                        setGrantEmail('');
+                        setGrantDays('30');
+                        // Optimistically update UI
+                        queryClient.setQueryData(['admin-users'], old => 
+                          old ? old.map(user => user.email === email ? { ...user, is_premium: true, premium_expiry_date: expiryDate.toISOString() } : user) : old
+                        );
                         queryClient.invalidateQueries({ queryKey: ['admin-users'] });
-                        toast.success("Premium revoked");
+                      } catch (err) {
+                        toast.error(err.message || 'Failed to grant premium');
+                      } finally {
+                        setGranting(false);
                       }
                     }}
                   >
-                    Revoke
+                    {granting ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Grant'}
                   </Button>
+                </div>
+              </div>
+              <p className="text-[10px] text-muted-foreground mt-2">Enter an email and number of days to grant premium access.</p>
+            </Card>
+
+            {/* Premium Users List */}
+            <div className="space-y-2 mt-6">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-4">
+                <h3 className="text-sm font-bold text-primary flex items-center gap-2">
+                  Premium Roster <span className="bg-primary/20 text-xs px-2 py-0.5 rounded-full font-mono">{filteredPremiumUsers.length}</span>
+                </h3>
+                <Input
+                  type="text"
+                  placeholder="Search premium users..."
+                  value={premiumSearch}
+                  onChange={(e) => setPremiumSearch(e.target.value)}
+                  className="w-full sm:w-64 bg-black/40 border-primary/20 focus:border-primary/50"
+                />
+              </div>
+              {filteredPremiumUsers.length === 0 && <p className="text-muted-foreground text-sm">No premium users found.</p>}
+              {filteredPremiumUsers.map(u => {
+                const expiry = u.premium_expiry_date ? new Date(u.premium_expiry_date) : null;
+                const now = new Date();
+                const daysLeft = expiry ? Math.max(0, Math.ceil((expiry - now) / (1000 * 60 * 60 * 24))) : null;
+                const hoursLeft = expiry ? Math.max(0, Math.ceil((expiry - now) / (1000 * 60 * 60))) : null;
+                const isExpiringSoon = daysLeft !== null && daysLeft <= 3;
+                
+                return (
+                  <Card key={u.id} className="p-3 bg-card border-primary/30">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                      <div className="truncate flex-1">
+                        <p className="font-bold text-sm text-primary truncate">{u.full_name || 'No Name'}</p>
+                        <p className="text-[10px] text-muted-foreground truncate">{u.email}</p>
+                        {expiry ? (
+                          <div className={`flex items-center gap-1.5 mt-1.5 text-[10px] font-bold ${isExpiringSoon ? 'text-amber-400' : 'text-green-400'}`}>
+                            <Clock className="w-3 h-3" />
+                            {daysLeft > 0 ? (
+                              <span>{daysLeft} day{daysLeft !== 1 ? 's' : ''} left ({expiry.toLocaleDateString('en-PK', { dateStyle: 'medium' })})</span>
+                            ) : hoursLeft > 0 ? (
+                              <span className="text-red-400">{hoursLeft} hour{hoursLeft !== 1 ? 's' : ''} left — expiring today!</span>
+                            ) : (
+                              <span className="text-red-400">Expired on {expiry.toLocaleDateString('en-PK', { dateStyle: 'medium' })}</span>
+                            )}
+                          </div>
+                        ) : (
+                          <p className="text-[10px] text-muted-foreground mt-1 flex items-center gap-1"><Calendar className="w-3 h-3" /> No expiry set (lifetime)</p>
+                        )}
+                      </div>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="border-red-500/50 text-red-400 hover:bg-red-500/10 hover:text-red-300 flex-shrink-0"
+                        onClick={async () => {
+                          if (window.confirm(`Revoke premium for ${u.email}?`)) {
+                            const { supabase } = await import('@/lib/supabaseClient');
+                            const { error } = await supabase.from('profiles').update({ is_premium: false, premium_expiry_date: null }).eq('id', u.id);
+                            if (error) {
+                              toast.error('Failed to revoke: ' + error.message);
+                              return;
+                            }
+                            // Optimistically update UI
+                            queryClient.setQueryData(['admin-users'], old => 
+                              old ? old.map(user => user.id === u.id ? { ...user, is_premium: false, premium_expiry_date: null } : user) : old
+                            );
+                            queryClient.invalidateQueries({ queryKey: ['admin-users'] });
+                            toast.success(`Premium revoked for ${u.email}`);
+                          }
+                        }}
+                      >
+                        Revoke
+                      </Button>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        
+        {activeTab === 'withdrawals' && (
+          <div className="space-y-4 animate-in fade-in duration-300">
+            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
+              <Wallet className="w-5 h-5 text-amber-500" /> Payout Requests
+              {pendingWithdrawals.length > 0 && <span className="bg-amber-500/10 text-amber-500 text-xs px-2 py-0.5 rounded-full font-mono">{pendingWithdrawals.length} pending</span>}
+            </h2>
+            <div className="flex gap-2 p-1 bg-secondary/50 rounded-lg mb-4">
+              {['pending', 'sent', 'rejected'].map(filter => (
+                <button key={filter} className={`flex-1 py-1.5 text-xs font-bold uppercase rounded-md transition-colors ${withdrawalFilter === filter ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-muted'}`} onClick={() => setWithdrawalFilter(filter)}>{filter}</button>
+              ))}
+            </div>
+            {withdrawalRequests.filter(w => w.status === withdrawalFilter).length === 0 ? (
+              <Card className="p-8 text-center bg-card border-border">
+                <Wallet className="w-10 h-10 text-muted-foreground mx-auto mb-3 opacity-40" />
+                <p className="text-muted-foreground text-sm">No {withdrawalFilter} withdrawal requests.</p>
+              </Card>
+            ) : (
+              <div className="space-y-3">
+                {withdrawalRequests.filter(w => w.status === withdrawalFilter).map(w => (
+                  <Card key={w.id} className={`p-4 bg-card border-border ${w.status === 'pending' ? 'border-amber-500/30' : ''}`}>
+                    <div className="flex flex-col sm:flex-row justify-between gap-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <p className="font-bold text-sm">{w.user_name}</p>
+                          <span className={`text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider ${w.status === 'pending' ? 'bg-amber-500/10 text-amber-500' : w.status === 'sent' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-red-500/10 text-red-500'}`}>{w.status}</span>
+                        </div>
+                        <p className="text-[10px] text-muted-foreground">{w.user_email}</p>
+                        <p className="text-2xl font-bold text-primary mt-2">Rs. {Number(w.amount).toLocaleString()}</p>
+                        <p className="text-[10px] text-muted-foreground mt-1">Requested {new Date(w.requested_at).toLocaleString('en-PK', { dateStyle: 'medium', timeStyle: 'short' })}</p>
+                        {w.resolved_at && <p className="text-[10px] text-muted-foreground">Resolved {new Date(w.resolved_at).toLocaleString('en-PK', { dateStyle: 'medium', timeStyle: 'short' })}</p>}
+                        {w.rejection_reason && <p className="text-xs text-red-400 mt-1 bg-red-500/5 p-2 rounded-lg border border-red-500/10">Reason: {w.rejection_reason}</p>}
+                        {w.payout_method && (
+                          <div className="mt-3 p-3 bg-secondary/50 rounded-xl border border-border/50 space-y-1">
+                            <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">Payout Details</p>
+                            <p className="text-sm font-bold">{w.payout_method === 'bank' ? '\u{1F3E6} Bank Transfer' : w.payout_method === 'easypaisa' ? '\u{1F4F1} EasyPaisa' : w.payout_method === 'jazzcash' ? '\u{1F4F1} JazzCash' : '\u{1F4F1} NayaPay'}</p>
+                            <p className="text-sm font-mono">{w.payout_account_number}</p>
+                            <p className="text-sm text-muted-foreground">{w.payout_account_name}</p>
+                          </div>
+                        )}
+                      </div>
+                      {w.status === 'pending' && (
+                        <div className="flex flex-col gap-2 sm:w-48">
+                          <Button size="sm" className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold w-full" onClick={async () => {
+                            if (!window.confirm(`Mark Rs.${Number(w.amount).toLocaleString()} as SENT to ${w.user_name}?`)) return;
+                            try {
+                              const { supabase } = await import('@/lib/supabaseClient');
+                              const { error } = await supabase.from('withdrawal_requests').update({ status: 'sent', resolved_at: new Date().toISOString() }).eq('id', w.id);
+                              if (error) throw error;
+                              const { error: rpcErr } = await supabase.rpc('increment_wallet', { p_user_id: w.user_id, p_amount: -Number(w.amount) });
+                              if (rpcErr) throw rpcErr;
+                              await supabase.from('notifications').insert({ user_email: w.user_email, title: 'Withdrawal Sent! \u{1F4B8}', message: `Your withdrawal of Rs.${Number(w.amount).toLocaleString()} has been sent to your ${w.payout_method || 'account'}.`, is_read: false });
+                              toast.success('Marked as sent and wallet deducted.');
+                              refetchWithdrawals();
+                            } catch (err) { toast.error('Failed: ' + err.message); }
+                          }}><Check className="w-4 h-4 mr-1.5" /> Mark as Sent</Button>
+                          {rejectingWithdrawalId === w.id ? (
+                            <div className="space-y-2">
+                              <textarea value={withdrawalRejectionReason} onChange={(e) => setWithdrawalRejectionReason(e.target.value)} placeholder="Reason for rejection..." className="w-full bg-card border border-border rounded-lg p-2 text-sm text-foreground placeholder:text-muted-foreground focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none resize-none min-h-[60px]" />
+                              <div className="flex gap-2">
+                                <Button size="sm" className="bg-red-600 hover:bg-red-500 text-white flex-1" onClick={async () => {
+                                  try {
+                                    const { supabase } = await import('@/lib/supabaseClient');
+                                    const { error } = await supabase.from('withdrawal_requests').update({ status: 'rejected', rejection_reason: withdrawalRejectionReason.trim() || 'No reason provided', resolved_at: new Date().toISOString() }).eq('id', w.id);
+                                    if (error) throw error;
+                                    await supabase.from('notifications').insert({ user_email: w.user_email, title: 'Withdrawal Rejected \u{274C}', message: `Your withdrawal of Rs.${Number(w.amount).toLocaleString()} was rejected. ${withdrawalRejectionReason.trim() ? `Reason: ${withdrawalRejectionReason.trim()}` : ''} Your wallet balance is unchanged.`, is_read: false });
+                                    toast.success('Withdrawal rejected.');
+                                    setRejectingWithdrawalId(null); setWithdrawalRejectionReason(''); refetchWithdrawals();
+                                  } catch (err) { toast.error('Failed: ' + err.message); }
+                                }}>Confirm</Button>
+                                <Button size="sm" variant="outline" onClick={() => { setRejectingWithdrawalId(null); setWithdrawalRejectionReason(''); }}>Cancel</Button>
+                              </div>
+                            </div>
+                          ) : (
+                            <Button size="sm" className="bg-red-600/20 hover:bg-red-600/40 text-red-500 border border-red-600/30 w-full" onClick={() => setRejectingWithdrawalId(w.id)}><X className="w-4 h-4 mr-1.5" /> Reject</Button>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* TAB: Feedback */}
+        {activeTab === 'feedback' && (
+          <div className="space-y-4 animate-in fade-in duration-300">
+            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
+              <MessageSquareText className="w-5 h-5 text-blue-400" /> User Feedback
+              <span className="bg-white/10 text-xs px-2 py-0.5 rounded-full font-mono">{feedbacks.length}</span>
+            </h2>
+            <div className="space-y-3">
+              {feedbacks.length === 0 && <p className="text-muted-foreground text-sm">No feedback received yet.</p>}
+              {feedbacks.map(f => (
+                <Card key={f.id} className="p-4 bg-card border-border">
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <p className="font-bold text-sm">{f.user_name || 'Anonymous'}</p>
+                      <p className="text-[10px] text-muted-foreground">{f.user_email || 'No email provided'}</p>
+                    </div>
+                    <span className={`text-[10px] px-2 py-1 rounded-full font-bold uppercase ${
+                      f.type === 'bug' ? 'bg-red-500/20 text-red-400' : 
+                      f.type === 'suggestion' ? 'bg-green-500/20 text-green-400' : 
+                      'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {f.type || 'Feedback'}
+                    </span>
+                  </div>
+                  <div className="bg-secondary/50 p-3 rounded-lg border border-border mt-2">
+                    <p className="text-sm whitespace-pre-wrap">{f.message}</p>
+                  </div>
+                  <div className="mt-2 text-right">
+                    <span className="text-[10px] text-muted-foreground">
+                      {f.created_at ? new Date(f.created_at).toLocaleString() : ''}
+                    </span>
+                  </div>
                 </Card>
               ))}
             </div>
-          </div>
-        )}
-
-        {/* TAB: Question Bank */}
-        {activeTab === 'questions' && (
-          <div className="space-y-4 animate-in fade-in duration-300">
-            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
-              Question Bank <span className="text-xs font-normal text-muted-foreground ml-auto">{customQuestions.length} Total</span>
-            </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              <Card className="p-3 bg-card border-border text-center">
-                <p className="text-xl font-bold text-blue-400">{customQuestions.filter(q => q.section === 'english').length}</p>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">English</p>
-              </Card>
-              <Card className="p-3 bg-card border-border text-center">
-                <p className="text-xl font-bold text-pink-400">{customQuestions.filter(q => q.section === 'analytical').length}</p>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Analytical</p>
-              </Card>
-              <Card className="p-3 bg-card border-border text-center">
-                <p className="text-xl font-bold text-green-400">{customQuestions.filter(q => q.section === 'quantitative').length}</p>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Quantitative</p>
-              </Card>
-              <Card className="p-3 bg-card border-border text-center">
-                <p className="text-xl font-bold text-amber-400">{customQuestions.filter(q => !['english', 'analytical', 'quantitative'].includes(q.section)).length}</p>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Subject</p>
-              </Card>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-4">
-              {/* Importer */}
-              <Card className="p-4 bg-card border-border text-center flex-1">
-                <Upload className="w-5 h-5 text-primary mx-auto mb-2" />
-                <h3 className="font-bold text-sm mb-1">Bulk Import</h3>
-                <p className="text-[10px] text-muted-foreground mb-3 leading-relaxed">
-                  Upload a .txt file (e.g. english.txt).
-                </p>
-                <input type="file" accept=".txt" onChange={handleFileUpload} className="block w-full text-xs text-muted-foreground file:mr-2 file:py-1.5 file:px-3 file:rounded-full file:border-0 file:text-[10px] file:font-bold file:bg-primary file:text-black cursor-pointer" />
-              </Card>
-              
-              {/* Manual Form */}
-              <Card className="p-4 bg-card border-border flex-[2]">
-                <h3 className="font-bold text-sm mb-3">Add Single Question</h3>
-                <div className="space-y-2">
-                  <select value={qSection} onChange={e => setQSection(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border text-xs focus:border-primary">
-                    {getAllSections('NAT-ICOM').map(s => <option key={s} value={s}>{getSectionLabel(s)}</option>)}
-                  </select>
-                  <Input placeholder="Question Text" value={qText} onChange={e => setQText(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
-                  <div className="grid grid-cols-2 gap-2">
-                    <Input placeholder="Option A" value={qOptA} onChange={e => setQOptA(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
-                    <Input placeholder="Option B" value={qOptB} onChange={e => setQOptB(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
-                    <Input placeholder="Option C" value={qOptC} onChange={e => setQOptC(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
-                    <Input placeholder="Option D" value={qOptD} onChange={e => setQOptD(e.target.value)} className="bg-black/40 border-border text-xs h-8" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <select value={qCorrect} onChange={e => setQCorrect(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border text-xs">
-                      <option value="0">Correct: A</option><option value="1">Correct: B</option><option value="2">Correct: C</option><option value="3">Correct: D</option>
-                    </select>
-                    <select value={qDifficulty} onChange={e => setQDifficulty(e.target.value)} className="w-full p-2 rounded-lg bg-black/40 border border-border text-xs">
-                      <option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option>
-                    </select>
-                  </div>
-                  <Button className="w-full bg-primary text-black font-bold h-8 text-xs" onClick={handleAddQuestion}>Add Question</Button>
-                </div>
-              </Card>
-            </div>
-          </div>
-        )}
-
-        {/* TAB: Cloud Bank Importer Redirect */}
-        {activeTab === 'cloud_bank' && (
-          <div className="space-y-6 animate-in fade-in duration-300">
-            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
-              Cloud Bank Management <span className="text-xs font-normal text-muted-foreground ml-auto">{dbStats.bank} Total</span>
-            </h2>
-            <Card className="p-10 border-dashed border-2 flex flex-col items-center justify-center text-center space-y-6 bg-green-500/5 border-green-500/20">
-              <div className="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center">
-                <Database className="w-10 h-10 text-green-400" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold">General Bank Importer</h3>
-                <p className="text-muted-foreground max-w-sm mx-auto">
-                  Upload multiple <strong>.txt</strong> files for practice and mock tests. Automatic duplicate detection and category mapping.
-                </p>
-              </div>
-              <Button size="lg" className="bg-green-500 hover:bg-green-400 text-black font-bold h-14 px-8 rounded-2xl shadow-xl shadow-green-500/20" onClick={() => navigate('/admin/bank-importer')}>
-                Open Bank Importer
-              </Button>
-            </Card>
-          </div>
-        )}
-
-        {/* TAB: Importer Redirect (Past Papers) */}
-        {activeTab === 'importer' && (
-          <div className="space-y-6 animate-in fade-in duration-300">
-            <h2 className="text-lg font-bold border-b border-border/30 pb-2 flex items-center gap-2">
-              Past Paper Management <span className="text-xs font-normal text-muted-foreground ml-auto">{dbStats.past} Total</span>
-            </h2>
-            <Card className="p-10 border-dashed border-2 flex flex-col items-center justify-center text-center space-y-6 bg-primary/5 border-primary/20">
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                <Upload className="w-10 h-10 text-primary" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold">Smart Past Paper Importer</h3>
-                <p className="text-muted-foreground max-w-sm mx-auto">
-                  Specifically for exam papers. Supports <strong>.json</strong> and <strong>.txt</strong> with track categorization.
-                </p>
-              </div>
-              <Button size="lg" className="bg-primary text-black font-bold h-14 px-8 rounded-2xl shadow-xl shadow-primary/20" onClick={() => navigate('/admin/importer')}>
-                Open Smart Importer
-              </Button>
-            </Card>
           </div>
         )}
 

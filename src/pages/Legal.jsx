@@ -14,7 +14,7 @@ const SECTIONS = [
       {
         heading: 'Information We Collect',
         icon: Database,
-        text: `When you create an account on NATPrep, we collect the following personal information:
+        text: `When you create an account on EntryHive, we collect the following personal information:
 
 • **Full Name** — used to personalize your experience and display on leaderboards.
 • **Email Address** — used for account authentication, password recovery, and important service notifications.
@@ -39,7 +39,7 @@ Your data is stored on servers managed by Supabase's infrastructure providers an
         icon: Eye,
         text: `We use your personal information strictly for the following purposes:
 
-• **Account Management** — to create, maintain, and secure your NATPrep account.
+• **Account Management** — to create, maintain, and secure your EntryHive account.
 • **Personalized Learning** — to provide group-specific practice questions, study plans, and performance analytics.
 • **Leaderboard & Rankings** — to display your name and scores on public leaderboards within the platform.
 • **Referral Program** — to track and credit referrals between users.
@@ -65,14 +65,14 @@ Upon account deletion, we will permanently remove your personal information from
       {
         heading: 'Acceptance of Terms',
         icon: FileText,
-        text: `By creating an account or using NATPrep in any way, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use the platform.
+        text: `By creating an account or using EntryHive in any way, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use the platform.
 
-These terms apply to all users of the platform, including visitors, registered users, and any other persons who access or use NATPrep.`
+These terms apply to all users of the platform, including visitors, registered users, and any other persons who access or use EntryHive.`
       },
       {
         heading: 'Account Responsibilities',
         icon: UserCheck,
-        text: `When you create an account on NATPrep, you agree to:
+        text: `When you create an account on EntryHive, you agree to:
 
 • **Provide accurate information** — including your real name and a valid email address.
 • **Keep your credentials secure** — you are responsible for maintaining the confidentiality of your password.
@@ -88,7 +88,7 @@ We reserve the right to suspend or terminate accounts that violate these terms w
 
 • Attempt to gain unauthorized access to other users' accounts or data.
 • Use automated scripts, bots, or scrapers to interact with the platform.
-• Reproduce, redistribute, or sell any content from NATPrep without written permission.
+• Reproduce, redistribute, or sell any content from EntryHive without written permission.
 • Upload harmful, offensive, or misleading content through any platform feature (e.g., feedback forms).
 • Interfere with or disrupt the platform's servers, security, or functionality.
 
@@ -97,19 +97,19 @@ Violation of these terms may result in immediate account suspension or permanent
       {
         heading: 'Disclaimer & Limitation of Liability',
         icon: AlertTriangle,
-        text: `NATPrep is an educational preparation tool and is **not** affiliated with, endorsed by, or officially connected to the National Testing Service (NTS) of Pakistan.
+        text: `EntryHive is an educational preparation tool and is **not** affiliated with, endorsed by, or officially connected to the National Testing Service (NTS) of Pakistan.
 
 • All practice questions and study materials are created independently for educational purposes.
 • We do **not** guarantee specific exam results or scores.
 • The platform is provided "as is" without warranties of any kind, either express or implied.
-• NATPrep shall not be liable for any indirect, incidental, or consequential damages arising from the use of the platform.`
+• EntryHive shall not be liable for any indirect, incidental, or consequential damages arising from the use of the platform.`
       },
       {
         heading: 'Changes to Terms',
         icon: FileText,
         text: `We reserve the right to modify these Terms of Service and Privacy Policy at any time. When we make significant changes, we will notify users via the platform or email.
 
-Continued use of NATPrep after any modifications constitutes acceptance of the updated terms.`
+Continued use of EntryHive after any modifications constitutes acceptance of the updated terms.`
       },
     ]
   }
@@ -150,7 +150,7 @@ export default function Legal() {
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="w-9 h-9 rounded-lg overflow-hidden border border-primary/40 flex items-center justify-center glow-primary"
           >
-            <img src="./logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
+            <img src="./logo.png" alt="Entry Hive Logo" className="w-full h-full object-cover" />
           </motion.div>
           <span className="font-bold text-lg tracking-wide text-foreground">
             NAT<span className="text-primary">Prep</span>
@@ -267,7 +267,7 @@ export default function Legal() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 py-8 text-center mt-auto bg-black/40 backdrop-blur-lg">
         <div className="w-10 h-10 rounded-xl overflow-hidden border border-primary/20 flex items-center justify-center mx-auto mb-4">
-          <img src="./logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
+          <img src="./logo.png" alt="Entry Hive Logo" className="w-full h-full object-cover" />
         </div>
         <p className="text-sm text-muted-foreground font-medium">NAT<span className="text-primary">Prep</span> © 2026</p>
         <p className="text-xs text-muted-foreground/60 mt-1">Built with ❤️ for Pakistani Students</p>

@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/lib/dbClient';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { ArrowLeft, BookOpen, Filter, Lock, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowLeft, BookOpen, Filter, Lock, ChevronDown, ChevronUp, CheckCircle2, PlayCircle, Zap } from 'lucide-react';
 import { getAllSections, getSectionLabel, getSectionIcon } from '@/lib/questionBank';
 import { motion, AnimatePresence } from 'framer-motion';
 import { sounds } from '@/lib/sounds';
@@ -22,34 +19,34 @@ function getFreeLimitForSection(section) {
 // Sub-topic definitions
 const SUB_TOPICS = {
   english: [
-    { id: 'all', label: '📚 All Topics' },
-    { id: 'synonyms', label: '🔤 Synonyms' },
-    { id: 'antonyms', label: '🔁 Antonyms' },
-    { id: 'comprehension', label: '📖 Comprehension' },
-    { id: 'analogies', label: '🔗 Analogies' },
-    { id: 'sentence_completion', label: '✏️ Sentence Completion' },
-    { id: 'grammar', label: '📝 Grammar' },
+    { id: 'all', label: 'All Topics' },
+    { id: 'synonyms', label: 'Synonyms' },
+    { id: 'antonyms', label: 'Antonyms' },
+    { id: 'comprehension', label: 'Comprehension' },
+    { id: 'analogies', label: 'Analogies' },
+    { id: 'sentence_completion', label: 'Sentence Completion' },
+    { id: 'grammar', label: 'Grammar' },
   ],
   analytical: [
-    { id: 'all', label: '🧠 All Topics' },
-    { id: 'statements_based', label: '🌍 Statements Based (Country/Society)' },
-    { id: 'scenario_based', label: '🎯 Scenario Based' },
+    { id: 'all', label: 'All Topics' },
+    { id: 'statements_based', label: 'Statements Based (Country/Society)' },
+    { id: 'scenario_based', label: 'Scenario Based' },
   ],
   quantitative: [
-    { id: 'all', label: '🔢 All Topics' },
-    { id: 'arithmetic', label: '➕ Arithmetic' },
-    { id: 'algebra', label: '🔣 Algebra' },
-    { id: 'geometry', label: '📐 Geometry' },
-    { id: 'statistics', label: '📊 Statistics' },
-    { id: 'percentage', label: '💯 Percentage' },
-    { id: 'work_problems', label: '🔧 Work Problems' },
-    { id: 'age_problems', label: '🎂 Age Problems' },
-    { id: 'probability', label: '🎲 Probability' },
-    { id: 'arithmetic_progression', label: '📈 Arithmetic Progression' },
-    { id: 'geometric_progression', label: '🔺 Geometric Progression' },
-    { id: 'permutation', label: '🔀 Permutation' },
-    { id: 'combination', label: '🃏 Combination' },
-    { id: 'slope', label: '📉 Slope & Coordinates' },
+    { id: 'all', label: 'All Topics' },
+    { id: 'arithmetic', label: 'Arithmetic' },
+    { id: 'algebra', label: 'Algebra' },
+    { id: 'geometry', label: 'Geometry' },
+    { id: 'statistics', label: 'Statistics' },
+    { id: 'percentage', label: 'Percentage' },
+    { id: 'work_problems', label: 'Work Problems' },
+    { id: 'age_problems', label: 'Age Problems' },
+    { id: 'probability', label: 'Probability' },
+    { id: 'arithmetic_progression', label: 'Arithmetic Progression' },
+    { id: 'geometric_progression', label: 'Geometric Progression' },
+    { id: 'permutation', label: 'Permutation' },
+    { id: 'combination', label: 'Combination' },
+    { id: 'slope', label: 'Slope & Coordinates' },
   ],
 };
 
@@ -74,15 +71,11 @@ export default function Practice() {
 
   const completedSessions = allSessions.filter(s => s.completed && s.user_email === user?.email);
   function getCompletedCount(sec) { return completedSessions.filter(s => s.section === sec).length; }
-  function getInProgressSession(sec) { return allSessions.find(s => !s.completed && s.user_email === user?.email && s.section === sec && s.questions_json) || null; }
   function canAccessSection(sec) { if (isPremium) return true; return getCompletedCount(sec) < getFreeLimitForSection(sec); }
   function getSectionStatus(sec) { if (isPremium) return null; const limit = getFreeLimitForSection(sec); const used = getCompletedCount(sec); if (used >= limit) return `🔒 ${used}/${limit} used`; return `${used}/${limit} free`; }
 
-  const inProgressSession = null;
-  const hasInProgress = false;
-
   const difficulties = [
-    { value: 'all', label: 'All' },
+    { value: 'all', label: 'All Levels' },
     { value: 'easy', label: 'Easy' },
     { value: 'medium', label: 'Medium' },
     { value: 'hard', label: 'Hard' },
@@ -110,75 +103,86 @@ export default function Practice() {
   };
 
   return (
-    <motion.div
-      className="p-4 space-y-5 pb-10"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35 }}
-    >
-      <button onClick={() => { sounds.click(); navigate('/'); }} className="text-sm text-muted-foreground flex items-center gap-1">
-        <ArrowLeft className="w-4 h-4" /> Back
-      </button>
-
-      <div className="flex items-center gap-3">
-        <BookOpen className="w-6 h-6 text-blue-400" />
+    <div className="p-6 max-w-4xl mx-auto space-y-8 pb-24">
+      
+      {/* Header */}
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+          <BookOpen className="w-6 h-6 text-primary" />
+        </div>
         <div>
-          <h1 className="text-xl font-bold">Practice Mode</h1>
+          <h1 className="font-display text-2xl font-bold text-foreground">Practice Mode</h1>
           <p className="text-sm text-muted-foreground">Topic-wise practice with instant feedback</p>
         </div>
       </div>
 
+      <button onClick={() => navigate('/')} className="text-sm text-muted-foreground flex items-center gap-1 hover:text-foreground transition-colors inline-flex mb-2">
+        <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+      </button>
+
       {!isPremium && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
-          <Card className="p-3 bg-blue-500/10 border-blue-500/30">
-            <p className="text-sm text-blue-300">
-              🆓 <strong>Free limits:</strong> Eng/Ana/Quant: 3 each · Subject: 1 each.{' '}
-              <button onClick={() => navigate('/premium')} className="underline font-semibold text-primary">Get Premium</button>
+        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+              <span className="text-primary font-bold text-sm tracking-wider uppercase">Free</span>
+            </div>
+            <p className="text-sm text-foreground leading-relaxed">
+              <strong>Free limits:</strong> Eng/Ana/Quant: 3 each • Subject: 1 each.
             </p>
-          </Card>
-        </motion.div>
+          </div>
+          <button onClick={() => navigate('/premium')} className="btn-primary py-2.5 px-6 rounded-xl font-bold shrink-0">
+            Get Premium
+          </button>
+        </div>
       )}
 
-      {/* Configure */}
-      <Card className="p-5 space-y-5">
-        <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-primary" />
-          <h3 className="font-semibold">Configure Your Session</h3>
+      {/* Main Configuration Card */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-card rounded-3xl border border-border p-8 shadow-sm"
+      >
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+            <Filter className="w-5 h-5 text-indigo-500" />
+          </div>
+          <h2 className="font-display text-xl font-bold text-foreground">Configure Your Session</h2>
         </div>
 
-        {/* Section */}
-        <div>
-          <p className="text-sm font-medium mb-3">Section *</p>
-          <div className="space-y-2">
-            {sections.map((s, i) => {
+        {/* Section Selection */}
+        <div className="mb-10">
+          <p className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-widest">1. Select Section</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {sections.map((s) => {
               const locked = !canAccessSection(s);
               const status = getSectionStatus(s);
-              const inProgress = getInProgressSession(s);
+              const isSelected = section === s;
+              
               return (
-                <motion.button
+                <button
                   key={s}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.04 }}
                   onClick={() => handleSelectSection(s)}
-                  className={`w-full flex items-center justify-between p-3 rounded-lg border transition-colors ${
-                    section === s ? 'border-primary bg-primary/5' : locked ? 'border-border opacity-60' : 'border-border hover:border-primary/50'
+                  className={`w-full flex items-center justify-between p-4 rounded-2xl border-2 transition-all ${
+                    isSelected ? 'border-primary bg-primary/5 shadow-md shadow-primary/10' : locked ? 'border-border bg-secondary/50 opacity-70 cursor-not-allowed' : 'border-border hover:border-primary/50 hover:bg-secondary/30 bg-card'
                   }`}
+                  disabled={locked && !isSelected}
                 >
-                  <div className="flex items-center gap-3">
-                    <span>{getSectionIcon(s)}</span>
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${isSelected ? 'bg-primary/10' : 'bg-secondary border border-border'}`}>
+                      {getSectionIcon(s)}
+                    </div>
                     <div className="text-left">
-                      <span className="font-medium text-sm">{getSectionLabel(s)}</span>
-                      {!inProgress && status && <p className={`text-xs mt-0.5 ${locked ? 'text-red-400' : 'text-muted-foreground'}`}>{status}</p>}
+                      <span className={`font-bold block ${isSelected ? 'text-primary' : 'text-foreground'}`}>{getSectionLabel(s)}</span>
+                      {status && <span className={`text-[10px] font-bold uppercase tracking-wider mt-1 block ${locked ? 'text-rose-500' : 'text-muted-foreground'}`}>{status}</span>}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    {locked && <Lock className="w-3.5 h-3.5 text-amber-400" />}
-                    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${section === s ? 'border-primary' : 'border-muted-foreground/30'}`}>
-                      {section === s && <motion.div layoutId="sectionDot" className="w-2.5 h-2.5 rounded-full bg-primary" />}
+                  <div className="flex items-center gap-3">
+                    {locked && <Lock className="w-5 h-5 text-rose-500" />}
+                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${isSelected ? 'border-primary bg-primary' : 'border-border'}`}>
+                      {isSelected && <div className="w-2 h-2 rounded-full bg-primary-foreground" />}
                     </div>
                   </div>
-                </motion.button>
+                </button>
               );
             })}
           </div>
@@ -191,112 +195,144 @@ export default function Practice() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+              className="overflow-hidden mb-10"
             >
-              <button
-                className="flex items-center gap-1.5 text-sm font-semibold text-primary mb-3"
-                onClick={() => setShowSubTopics(v => !v)}
-              >
-                {showSubTopics ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                Sub-Topic: <span className="text-foreground">{currentSubTopics.find(t => t.id === subTopic)?.label || 'All'}</span>
-              </button>
-              <AnimatePresence>
-                {showSubTopics && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    className="grid grid-cols-2 gap-2"
-                  >
-                    {currentSubTopics.map(t => (
-                      <button
-                        key={t.id}
-                        onClick={() => { sounds.select(); setSubTopic(t.id); }}
-                        className={`text-left p-2.5 rounded-lg border text-xs font-medium transition-all ${
-                          subTopic === t.id ? 'border-primary bg-primary/10 text-primary' : 'border-border hover:border-primary/40 text-muted-foreground'
-                        }`}
-                      >
-                        {t.label}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div className="bg-secondary/50 border border-border rounded-2xl p-6">
+                <button
+                  className="w-full flex items-center justify-between font-bold text-foreground mb-4"
+                  onClick={() => setShowSubTopics(v => !v)}
+                >
+                  <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">2. Specific Topic (Optional)</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg">{currentSubTopics.find(t => t.id === subTopic)?.label || 'All Topics'}</span>
+                    <div className="w-8 h-8 rounded-lg bg-secondary border border-border flex items-center justify-center">
+                      {showSubTopics ? <ChevronUp className="w-4 h-4 text-foreground" /> : <ChevronDown className="w-4 h-4 text-foreground" />}
+                    </div>
+                  </div>
+                </button>
+                <AnimatePresence>
+                  {showSubTopics && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4"
+                    >
+                      {currentSubTopics.map(t => (
+                        <button
+                          key={t.id}
+                          onClick={() => { sounds.select(); setSubTopic(t.id); }}
+                          className={`text-left p-4 rounded-xl border-2 text-sm font-bold transition-all ${
+                            subTopic === t.id ? 'border-primary bg-primary text-primary-foreground shadow-md shadow-primary/20' : 'border-border hover:border-primary/40 text-foreground bg-card'
+                          }`}
+                        >
+                          {t.label}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Difficulty */}
-        <div>
-          <p className="text-sm font-medium mb-3">Difficulty</p>
-          <div className="flex gap-2 flex-wrap">
-            {difficulties.map((d) => (
-              <button
-                key={d.value}
-                onClick={() => { sounds.select(); setDifficulty(d.value); }}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${difficulty === d.value ? 'bg-primary text-primary-foreground scale-105' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}`}
-              >
-                {d.label}
-              </button>
-            ))}
+        {/* Filters Grid */}
+        <div className="grid md:grid-cols-2 gap-10 mb-10">
+          
+          {/* Difficulty */}
+          <div>
+            <p className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-widest">3. Difficulty</p>
+            <div className="grid grid-cols-2 gap-3">
+              {difficulties.map((d) => (
+                <button
+                  key={d.value}
+                  onClick={() => { sounds.select(); setDifficulty(d.value); }}
+                  className={`py-3.5 rounded-xl text-sm font-bold transition-all border-2 ${
+                    difficulty === d.value ? 'bg-primary border-primary text-primary-foreground shadow-md shadow-primary/20' : 'bg-secondary/50 border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'
+                  }`}
+                >
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Question Count */}
+          <div>
+            <div className="flex justify-between items-center mb-6">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">4. Number of Questions</p>
+              <span className="text-primary font-bold text-xl bg-primary/10 px-4 py-1.5 rounded-xl border border-primary/20">
+                {questionCount}
+              </span>
+            </div>
+            
+            <div className="px-2">
+              <input 
+                type="range" 
+                min="5" 
+                max="20" 
+                step="5" 
+                value={questionCount} 
+                onChange={(e) => setQuestionCount(Number(e.target.value))}
+                className="w-full h-3 bg-secondary border border-border rounded-full appearance-none cursor-pointer range-primary"
+              />
+              <div className="flex justify-between text-xs font-bold text-muted-foreground mt-4 px-1">
+                <span>5</span>
+                <span>10</span>
+                <span>15</span>
+                <span>20</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Question Count */}
-        <div>
-          <div className="flex justify-between items-center mb-3">
-            <p className="text-sm font-medium">Number of Questions:</p>
-            <motion.span key={questionCount} initial={{ scale: 1.4 }} animate={{ scale: 1 }} className="text-primary font-bold text-lg">
-              {questionCount}
-            </motion.span>
+        {/* Start Button */}
+        <button
+          className={`w-full py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all text-xl ${
+            !section ? 'bg-secondary border-2 border-border text-muted-foreground cursor-not-allowed' : 'btn-primary shadow-xl shadow-primary/20 hover:scale-[1.02]'
+          }`}
+          disabled={!section}
+          onClick={handleStart}
+        >
+          <PlayCircle className="w-7 h-7" />
+          Start Practice Session
+        </button>
+      </motion.div>
+
+      {/* Quick Start Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+            <Zap className="w-5 h-5 text-amber-500" />
           </div>
-          <Slider value={[questionCount]} onValueChange={(v) => setQuestionCount(v[0])} min={5} max={20} step={5} className="w-full" />
-          <div className="flex justify-between text-xs text-muted-foreground mt-1"><span>5</span><span>20</span></div>
+          <h2 className="font-display text-xl font-bold text-foreground">Quick Start</h2>
         </div>
-
-        <motion.div whileTap={{ scale: 0.97 }}>
-          <Button
-            className="w-full h-12 bg-primary hover:bg-primary/90 text-base font-semibold"
-            disabled={!section}
-            onClick={handleStart}
-          >
-            {hasInProgress && section ? '▶ Resume Session' : 'Start Practice Session →'}
-          </Button>
-        </motion.div>
-      </Card>
-
-      {/* Quick Start */}
-      <div>
-        <p className="text-xs font-semibold text-muted-foreground mb-3 uppercase tracking-wider">Quick Start</p>
-        <div className="grid grid-cols-2 gap-2">
-          {sections.slice(0, 4).map((s, i) => {
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {sections.slice(0, 4).map((s) => {
             const locked = !canAccessSection(s);
             return (
-              <motion.div
+              <button
                 key={s}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.08 }}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                onClick={() => handleQuickStart(s)}
+                className={`bg-card border-2 border-border p-5 rounded-3xl text-left transition-all group ${locked ? 'opacity-60 bg-secondary/50 cursor-not-allowed' : 'hover:border-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5'}`}
+                disabled={locked}
               >
-                <Card
-                  className={`p-3 cursor-pointer hover:bg-secondary/50 transition-colors h-full ${locked ? 'opacity-60' : ''}`}
-                  onClick={() => handleQuickStart(s)}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg">{getSectionIcon(s)}</span>
-                    {locked && <Lock className="w-3 h-3 text-amber-400" />}
-                  </div>
-                  <p className="font-medium text-sm mt-1">{getSectionLabel(s)}</p>
-                  <p className="text-xs text-muted-foreground">10 random questions</p>
-                </Card>
-              </motion.div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`text-3xl w-14 h-14 rounded-2xl flex items-center justify-center border transition-colors ${locked ? 'bg-secondary border-border' : 'bg-primary/5 border-primary/20 group-hover:bg-primary/10'}`}>{getSectionIcon(s)}</span>
+                  {locked && <Lock className="w-5 h-5 text-rose-500" />}
+                </div>
+                <p className="font-display font-bold text-foreground text-lg mb-1 leading-tight group-hover:text-primary transition-colors">{getSectionLabel(s)}</p>
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">10 Qs • Random</p>
+              </button>
             );
           })}
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

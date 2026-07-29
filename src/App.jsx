@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ThemeProvider } from '@/lib/ThemeContext';
 import { Toaster } from "@/components/ui/toaster"
 import { Toaster as SonnerToaster } from "@/components/ui/sonner"
 import { QueryClientProvider } from '@tanstack/react-query'
@@ -42,8 +43,21 @@ import Referral from './pages/Referral';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import LoginCallback from './pages/LoginCallback';
-import BankImporter from './pages/BankImporter';
 import Legal from './pages/Legal';
+import BillingPage from './pages/BillingPage';
+import MeritCalculator from './pages/MeritCalculator';
+import AirUniversityHub from './pages/AirUniversityHub';
+import AirUniversityPractice from './pages/AirUniversityPractice';
+import AirUniversityMockTest from './pages/AirUniversityMockTest';
+import AirUniversityPastPapers from './pages/AirUniversityPastPapers';
+import AirUniversityPracticeSession from './pages/AirUniversityPracticeSession';
+import AirUniversityMockTestSession from './pages/AirUniversityMockTestSession';
+import FastHub from './pages/FastHub';
+import FastPractice from './pages/FastPractice';
+import FastPracticeSession from './pages/FastPracticeSession';
+import FastMockTest from './pages/FastMockTest';
+import FastMockTestSession from './pages/FastMockTestSession';
+import FastPastPapers from './pages/FastPastPapers';
 
 const AuthenticatedApp = () => {
   const { authError, isAuthenticated } = useAuth();
@@ -78,13 +92,29 @@ const AuthenticatedApp = () => {
         <Route path="/practice-session" element={<PracticeSession />} />
         <Route path="/mock-test" element={<MockTest />} />
         <Route path="/mock-test-session" element={<MockTestSession />} />
+        
+        {/* Air University Section */}
+        <Route path="/air-university" element={<AirUniversityHub />} />
+        <Route path="/air-university/practice" element={<AirUniversityPractice />} />
+        <Route path="/air-university/mock-test" element={<AirUniversityMockTest />} />
+        <Route path="/air-university/past-papers" element={<AirUniversityPastPapers />} />
+        <Route path="/au-practice-session" element={<AirUniversityPracticeSession />} />
+        <Route path="/au-mock-test-session" element={<AirUniversityMockTestSession />} />
+        
+        {/* FAST University Section */}
+        <Route path="/fast" element={<FastHub />} />
+        <Route path="/fast/practice" element={<FastPractice />} />
+        <Route path="/fast-practice-session" element={<FastPracticeSession />} />
+        <Route path="/fast/mock" element={<FastMockTest />} />
+        <Route path="/fast-mock-session" element={<FastMockTestSession />} />
+        <Route path="/fast/past-papers" element={<FastPastPapers />} />
+
         <Route path="/learn" element={<Learn />} />
         <Route path="/learn/:section" element={<LearnDetail />} />
         <Route path="/performance" element={<Performance />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/importer" element={<AdminImporter />} />
-        <Route path="/admin/bank-importer" element={<BankImporter />} />
         <Route path="/flashcards" element={<Flashcards />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/important-topics" element={<ImportantTopics />} />
@@ -97,6 +127,8 @@ const AuthenticatedApp = () => {
         <Route path="/formulas" element={<Formulas />} />
         <Route path="/landing-preview" element={<Landing preview={true} />} />
         <Route path="/referral" element={<Referral />} />
+        <Route path="/billing" element={<BillingPage />} />
+        <Route path="/merit-calculator" element={<MeritCalculator />} />
       </Route>
       <Route path="/login-callback" element={<LoginCallback />} />
       <Route path="/login" element={<LoginPage />} />
@@ -147,14 +179,16 @@ function AppContent() {
 // Main Application Component - Handles global state and routing (v1.0.1)
 function App() {
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
-        <AppContent />
-        <Toaster />
-        <SonnerToaster />
-        {!Capacitor.isNativePlatform() && !window.electronAPI && <Analytics />}
-      </QueryClientProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
+          <AppContent />
+          <Toaster />
+          <SonnerToaster />
+          {!Capacitor.isNativePlatform() && !window.electronAPI && <Analytics />}
+        </QueryClientProvider>
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 

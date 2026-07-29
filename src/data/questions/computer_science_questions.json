@@ -1,0 +1,2225 @@
+[
+  {
+    "id": "1e0ca3ea-175f-49fd-a83d-e12c4a783a0b",
+    "options": [
+      "Central Processing Unit",
+      "Computer Personal Unit",
+      "Central Process Utility",
+      "Central Processor Unit"
+    ],
+    "explanation": "CPU stands for Central Processing Unit, which is the primary component that performs most of the processing in a computer.",
+    "difficulty": "easy",
+    "question_text": "What does CPU stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "b2fa0767-b852-422b-99fd-434b4604d608",
+    "options": [
+      "Python",
+      "Java",
+      "HTML",
+      "C++"
+    ],
+    "explanation": "HTML (HyperText Markup Language) is a markup language, not a programming language. It is used for structuring web content.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is NOT a programming language?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "62bdfb67-3eaa-4df6-9432-538a18685662",
+    "options": [
+      "Random Access Memory",
+      "Read And Modify",
+      "Random Allocation Memory",
+      "Read Access Memory"
+    ],
+    "explanation": "RAM stands for Random Access Memory, which is volatile memory used to store data temporarily while the computer is running.",
+    "difficulty": "easy",
+    "question_text": "What does RAM stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7b7c8752-a32b-4e76-9e23-82e846649215",
+    "options": [
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "explanation": "5 in binary is 101 (4 + 1 = 5).",
+    "difficulty": "easy",
+    "question_text": "What is the binary equivalent of decimal 5?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d015327a-b5e1-41a5-b861-4497b271ef48",
+    "options": [
+      "Queue",
+      "Array",
+      "Stack",
+      "Linked List"
+    ],
+    "explanation": "Stack follows LIFO (Last In First Out) principle where the last element added is the first one removed.",
+    "difficulty": "easy",
+    "question_text": "Which data structure follows the LIFO principle?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "060a7474-c1ac-4550-b952-aa367405b9f7",
+    "options": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "Standard Query Language",
+      "System Query Language"
+    ],
+    "explanation": "SQL stands for Structured Query Language, used for managing and manipulating relational databases.",
+    "difficulty": "easy",
+    "question_text": "What does SQL stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "922d06a3-1789-494a-8122-5b7cd1034958",
+    "options": [
+      "192.168.1.1",
+      "256.100.50.25",
+      "192.168.1",
+      "192.168.1.256"
+    ],
+    "explanation": "192.168.1.1 is a valid IPv4 address. Each octet must be between 0 and 255.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a valid IP address?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9eee335e-3d04-4b41-9360-2609aeb75405",
+    "options": [
+      "HyperText Transfer Protocol",
+      "HyperText Transmission Protocol",
+      "High Transfer Text Protocol",
+      "Hyper Transfer Text Protocol"
+    ],
+    "explanation": "HTTP stands for HyperText Transfer Protocol, the foundation of data communication on the World Wide Web.",
+    "difficulty": "easy",
+    "question_text": "What is the full form of HTTP?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0d86908a-46b3-4c77-97dd-1b04bb035ebb",
+    "options": [
+      "Bubble Sort",
+      "Insertion Sort",
+      "Quick Sort",
+      "Selection Sort"
+    ],
+    "explanation": "Quick Sort has an average-case time complexity of O(n log n), which is better than Bubble, Insertion, and Selection Sort (all O(n²)).",
+    "difficulty": "easy",
+    "question_text": "Which sorting algorithm has the best average-case time complexity?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "1903acd3-90f0-4c28-817a-e0333e3fd5e7",
+    "options": [
+      "Graphical User Interface",
+      "General User Interface",
+      "Global User Interface",
+      "Graphic Utility Interface"
+    ],
+    "explanation": "GUI stands for Graphical User Interface, which allows users to interact with devices through graphical elements.",
+    "difficulty": "easy",
+    "question_text": "What does GUI stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "bf55dbad-1ae9-4adb-9e4c-5760785c73d7",
+    "options": [
+      "Microsoft Word",
+      "Windows",
+      "Google Chrome",
+      "Adobe Photoshop"
+    ],
+    "explanation": "Windows is an operating system developed by Microsoft. The others are application software.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is an operating system?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e1d65e3a-8baf-4f8f-af64-15fce8072498",
+    "options": [
+      "11",
+      "13",
+      "14",
+      "12"
+    ],
+    "explanation": "1101 in binary = 1×8 + 1×4 + 0×2 + 1×1 = 8 + 4 + 1 = 13.",
+    "difficulty": "easy",
+    "question_text": "What is the decimal equivalent of binary 1101?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8d8d3731-f021-4db0-9015-a3f63c1a663b",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "explanation": "Queue follows FIFO (First In First Out) principle where the first element added is the first one removed.",
+    "difficulty": "easy",
+    "question_text": "Which data structure uses FIFO principle?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1d66579f-4aa1-4619-9db7-a7a043156135",
+    "options": [
+      "Execute code line by line",
+      "Translate high-level language to machine code",
+      "Debug programs",
+      "Manage memory"
+    ],
+    "explanation": "A compiler translates source code written in a high-level programming language into machine code or bytecode.",
+    "difficulty": "easy",
+    "question_text": "What is the primary purpose of a compiler?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ffedf94e-f56c-40b4-864a-fbabe54f6836",
+    "options": [
+      "Ctrl + X",
+      "Ctrl + C",
+      "Ctrl + V",
+      "Ctrl + Z"
+    ],
+    "explanation": "Ctrl + C is the standard keyboard shortcut for copying selected content to the clipboard.",
+    "difficulty": "easy",
+    "question_text": "Which key combination is used to copy selected text?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "152290ca-239e-4dde-afee-cdec5fbaea20",
+    "options": [
+      "Domain Name System",
+      "Data Network Service",
+      "Digital Name Service",
+      "Domain Network Service"
+    ],
+    "explanation": "DNS stands for Domain Name System, which translates human-readable domain names to IP addresses.",
+    "difficulty": "easy",
+    "question_text": "What does DNS stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "467a2e1e-ca42-4eac-84a4-a1d5f517af09",
+    "options": [
+      "Firewall",
+      "Virus",
+      "Antivirus",
+      "Router"
+    ],
+    "explanation": "A virus is a type of malicious software (malware) that replicates by inserting itself into other programs.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a type of malware?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9bdb9472-4b2f-4481-91fa-d8f7ac266107",
+    "options": [
+      "21",
+      "80",
+      "443",
+      "25"
+    ],
+    "explanation": "HTTP uses port 80 by default. HTTPS uses port 443, FTP uses port 21.",
+    "difficulty": "easy",
+    "question_text": "What is the default port number for HTTP?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ff52cf46-d752-4c56-968c-8bc894f2d140",
+    "options": [
+      "for loop",
+      "while loop",
+      "do-while loop",
+      "foreach loop"
+    ],
+    "explanation": "The do-while loop checks the condition after executing the loop body, so it always executes at least once.",
+    "difficulty": "easy",
+    "question_text": "Which loop executes at least once before checking the condition?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "15d2c401-ca78-48bc-9803-aac2a8e4075c",
+    "options": [
+      "Random Operation Memory",
+      "Read Only Memory",
+      "Read Operation Memory",
+      "Random Only Memory"
+    ],
+    "explanation": "ROM stands for Read Only Memory, non-volatile memory that retains data even when power is off.",
+    "difficulty": "easy",
+    "question_text": "What is the full form of ROM?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "284bd8bc-1dce-4dfc-baf8-5883789e9593",
+    "options": [
+      "2.5",
+      "1",
+      "2",
+      "0"
+    ],
+    "explanation": "The modulo operator % gives the remainder. 5 divided by 2 gives remainder 1.",
+    "difficulty": "easy",
+    "question_text": "What is the output of 5 % 2 in most programming languages?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "488bacf5-d9d7-4579-84e5-51f3cd07b95b",
+    "options": [
+      "MongoDB",
+      "MySQL",
+      "Redis",
+      "Cassandra"
+    ],
+    "explanation": "MySQL is a relational database management system (RDBMS). MongoDB, Redis, and Cassandra are NoSQL databases.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a relational database?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "83c5cfee-3f3c-4c6b-bdab-9a13109c504c",
+    "options": [
+      "Local Area Network",
+      "Large Area Network",
+      "Long Area Network",
+      "Linear Area Network"
+    ],
+    "explanation": "LAN stands for Local Area Network, a network that connects devices in a limited geographical area.",
+    "difficulty": "easy",
+    "question_text": "What does LAN stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "a579cb20-397a-4698-b2a7-fcfe6042e29a",
+    "options": [
+      "Store data",
+      "Perform arithmetic and logical operations",
+      "Control program execution",
+      "Manage memory"
+    ],
+    "explanation": "The Arithmetic Logic Unit (ALU) performs arithmetic operations (add, subtract) and logical operations (AND, OR, NOT).",
+    "difficulty": "easy",
+    "question_text": "What is the primary function of the ALU?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aa18be96-da8c-45c6-ae4f-5c8a2117f9a6",
+    "options": [
+      "Monitor",
+      "Printer",
+      "Keyboard",
+      "Speaker"
+    ],
+    "explanation": "Keyboard is an input device. Monitor, printer, and speaker are output devices.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is an input device?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "26ab2567-c2f9-42b4-9a87-a8a1b7e21d4b",
+    "options": [
+      "FE",
+      "FF",
+      "EF",
+      "AA"
+    ],
+    "explanation": "255 in decimal = 15×16 + 15 = FF in hexadecimal.",
+    "difficulty": "easy",
+    "question_text": "What is the hexadecimal equivalent of decimal 255?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e5368b15-6439-4280-b91f-5bbeeec6a871",
+    "options": [
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "POP3"
+    ],
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending emails. POP3 and IMAP are for receiving.",
+    "difficulty": "easy",
+    "question_text": "Which protocol is used for sending emails?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "9c721880-bca8-4881-a825-9ab7932670cd",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "explanation": "Linear search checks each element one by one, giving O(n) time complexity in the worst case.",
+    "difficulty": "easy",
+    "question_text": "What is the time complexity of linear search?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "158df920-8c93-48d0-921a-f7b41ed68ba4",
+    "options": [
+      "Encapsulation",
+      "Sequential execution",
+      "Global variables only",
+      "No data types"
+    ],
+    "explanation": "Encapsulation is a key OOP principle that bundles data and methods together, restricting direct access.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a characteristic of object-oriented programming?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7e012c27-48a1-490d-befa-5c06c8c3b8dd",
+    "options": [
+      "Portable Document Format",
+      "Personal Document File",
+      "Printed Document Format",
+      "Public Data File"
+    ],
+    "explanation": "PDF stands for Portable Document Format, developed by Adobe for document exchange.",
+    "difficulty": "easy",
+    "question_text": "What does PDF stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "a3892446-bdf9-4884-96d1-e81593334010",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "explanation": "Binary search divides the search interval in half each time, giving O(log n) time complexity.",
+    "difficulty": "medium",
+    "question_text": "What is the time complexity of binary search on a sorted array?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4db760f2-d248-423d-8693-3b5faeaeb241",
+    "options": [
+      "Array",
+      "Linked List",
+      "Heap",
+      "Stack"
+    ],
+    "explanation": "A heap (min-heap or max-heap) provides O(log n) insertion and extraction, making it ideal for priority queues.",
+    "difficulty": "medium",
+    "question_text": "Which data structure is best suited for implementing a priority queue?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6553c52d-71d4-4f9c-8f02-67e9a97f2a4a",
+    "options": [
+      "14",
+      "20",
+      "24",
+      "9"
+    ],
+    "explanation": "Evaluating: 3 * 4 = 12, then 2 + 12 = 14.",
+    "difficulty": "medium",
+    "question_text": "What is the output of the postfix expression: 2 3 4 * +?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fbf42427-f529-4b8e-8574-7ebcd8778463",
+    "options": [
+      "DELETE",
+      "DROP",
+      "TRUNCATE",
+      "REMOVE"
+    ],
+    "explanation": "TRUNCATE removes all rows but keeps the table structure. DROP removes the entire table. DELETE removes specific rows.",
+    "difficulty": "medium",
+    "question_text": "In SQL, which command is used to remove all records from a table but keep the table structure?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6c7d9f76-b719-4b9e-a9c2-a135dc560f6c",
+    "options": [
+      "2^h",
+      "2^(h+1) − 1",
+      "2^h − 1",
+      "h²"
+    ],
+    "explanation": "A perfect binary tree of height h has at most 2^(h+1) − 1 nodes (sum of geometric series: 2^0 + 2^1 + ... + 2^h).",
+    "difficulty": "medium",
+    "question_text": "What is the maximum number of nodes in a binary tree of height h?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e742c871-1f9f-435f-8aef-1b1687e3df87",
+    "options": [
+      "Round Robin",
+      "First Come First Served",
+      "Shortest Job First",
+      "All of the above"
+    ],
+    "explanation": "Shortest Job First (SJF) can cause starvation of long processes if short processes keep arriving.",
+    "difficulty": "medium",
+    "question_text": "Which scheduling algorithm can cause starvation?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6da37146-e155-4f2a-9c63-7afc5a341fdd",
+    "options": [
+      "Variable cannot be changed",
+      "Variable retains its value between function calls",
+      "Variable is accessible globally",
+      "Variable is deleted after function ends"
+    ],
+    "explanation": "A static local variable retains its value between function calls and is initialized only once.",
+    "difficulty": "medium",
+    "question_text": "What does the 'static' keyword mean in C when applied to a local variable?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c925fcd0-6d70-4992-94a4-e22a941f45d0",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "explanation": "Third Normal Form (3NF) eliminates transitive dependencies where non-key attributes depend on other non-key attributes.",
+    "difficulty": "medium",
+    "question_text": "Which normal form eliminates transitive dependencies?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d06cd506-d873-4109-ab0b-ec5fb0248939",
+    "options": [
+      "Encrypt data",
+      "Establish a connection",
+      "Compress data",
+      "Authenticate users"
+    ],
+    "explanation": "The TCP three-way handshake (SYN, SYN-ACK, ACK) is used to establish a reliable connection between client and server.",
+    "difficulty": "medium",
+    "question_text": "What is the purpose of the TCP three-way handshake?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "549640fd-7be1-44f9-9f0a-b179d9843caf",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra's Algorithm",
+      "Floyd-Warshall",
+      "Kruskal's Algorithm"
+    ],
+    "explanation": "Dijkstra's algorithm finds the shortest path from a source to all other vertices in graphs with non-negative edge weights.",
+    "difficulty": "medium",
+    "question_text": "Which algorithm is used for finding the shortest path in a weighted graph with non-negative edges?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f85c749b-2164-4850-b1f0-81f3641e8e7c",
+    "options": [
+      "A process runs forever",
+      "Two or more processes wait indefinitely for each other",
+      "Memory is full",
+      "CPU utilization is zero"
+    ],
+    "explanation": "A deadlock occurs when processes hold resources and wait for resources held by other waiting processes, creating a circular wait.",
+    "difficulty": "medium",
+    "question_text": "What is a deadlock in operating systems?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c2e5ff9a-7a38-437a-8460-fbb47f2ab03c",
+    "options": [
+      "Hiding data",
+      "Ability to take multiple forms",
+      "Inheriting from parent class",
+      "Creating objects"
+    ],
+    "explanation": "Polymorphism allows objects of different classes to be treated as objects of a common base class, enabling method overriding and overloading.",
+    "difficulty": "medium",
+    "question_text": "In OOP, what is polymorphism?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ed787dd8-b67c-436f-a1fa-334d19d30f11",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "explanation": "Merge sort requires O(n) auxiliary space for merging, making its space complexity O(n).",
+    "difficulty": "medium",
+    "question_text": "What is the space complexity of merge sort?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b96c967d-4018-425b-a350-33b975fe4ce5",
+    "options": [
+      "<link>",
+      "<a>",
+      "<href>",
+      "<url>"
+    ],
+    "explanation": "The anchor tag <a> with href attribute creates hyperlinks, e.g., <a href='url'>link text</a>.",
+    "difficulty": "medium",
+    "question_text": "Which HTML tag is used to create a hyperlink?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "66c52ac7-b92b-47ba-ae3d-b72faab4a9a1",
+    "options": [
+      "Store backup data",
+      "Speed up query retrieval",
+      "Enforce data integrity",
+      "Compress data"
+    ],
+    "explanation": "Database indexes speed up SELECT queries by allowing the database to find data without scanning the entire table.",
+    "difficulty": "medium",
+    "question_text": "What is the primary purpose of an index in a database?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "269c22f9-83b7-4f5e-a551-794983847b55",
+    "options": [
+      "Processes share memory, threads do not",
+      "Threads are lightweight, processes are heavy",
+      "There is no difference",
+      "Threads cannot run concurrently"
+    ],
+    "explanation": "Threads are lightweight units of execution within a process. Threads share the same memory space while processes have separate memory.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between process and thread?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b2a0799b-d835-4329-a035-33507d961e41",
+    "options": [
+      "Factory",
+      "Observer",
+      "Singleton",
+      "Strategy"
+    ],
+    "explanation": "The Singleton pattern ensures a class has only one instance and provides a global point of access to it.",
+    "difficulty": "medium",
+    "question_text": "Which design pattern restricts the instantiation of a class to one object?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e5460f8a-df15-4112-8eb5-e6031c2c5645",
+    "options": [
+      "n(n-1)",
+      "n(n-1)/2",
+      "n²",
+      "2n"
+    ],
+    "explanation": "In a simple undirected graph, maximum edges = C(n,2) = n(n-1)/2 since each pair can have at most one edge.",
+    "difficulty": "medium",
+    "question_text": "What is the maximum number of edges in a simple undirected graph with n vertices?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ff3e9a2d-e345-4a4a-be05-c0f5e34ab43e",
+    "options": [
+      "255.0.0.0",
+      "255.255.0.0",
+      "255.255.255.0",
+      "255.255.255.255"
+    ],
+    "explanation": "/24 means 24 bits for network, giving subnet mask 255.255.255.0 (first 24 bits set to 1).",
+    "difficulty": "medium",
+    "question_text": "In networking, what is the subnet mask for a /24 network?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a9262643-4ca6-42e9-9caa-ca7fbd91a2ad",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "explanation": "Inserting at the beginning requires shifting all existing elements, which takes O(n) time.",
+    "difficulty": "medium",
+    "question_text": "What is the time complexity of inserting an element at the beginning of an array?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c1c2703c-91c4-4cea-80d4-947c7c6b32b2",
+    "options": [
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "INNER JOIN",
+      "FULL OUTER JOIN"
+    ],
+    "explanation": "INNER JOIN returns only rows that have matching values in both tables being joined.",
+    "difficulty": "medium",
+    "question_text": "Which type of join returns only matching rows from both tables?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8baf5a8b-2094-4f17-848e-2a577c0cecc2",
+    "options": [
+      "Physical RAM expansion",
+      "Memory management technique using disk space as RAM",
+      "Faster cache memory",
+      "ROM simulation"
+    ],
+    "explanation": "Virtual memory uses a portion of the hard disk as an extension of RAM, allowing programs to use more memory than physically available.",
+    "difficulty": "medium",
+    "question_text": "What is virtual memory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "973e56ce-1bc4-4863-b22f-ddf348aadfeb",
+    "options": [
+      "Quick Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Selection Sort"
+    ],
+    "explanation": "Merge sort is stable (maintains relative order of equal elements) and guarantees O(n log n) in worst, average, and best cases.",
+    "difficulty": "medium",
+    "question_text": "Which sorting algorithm is stable and has O(n log n) worst-case complexity?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b9b7a92a-ebc5-46ed-a528-0547208306b3",
+    "options": [
+      "Open Systems Interconnection",
+      "Operating System Interface",
+      "Open Source Interface",
+      "Operational System Interconnection"
+    ],
+    "explanation": "OSI stands for Open Systems Interconnection, a 7-layer conceptual model for network communication.",
+    "difficulty": "medium",
+    "question_text": "What does the OSI model stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c1700e3b-c9f6-4bbd-80c6-b98ded7f88df",
+    "options": [
+      "A programming language",
+      "A step-by-step procedure to solve a problem",
+      "A type of hardware",
+      "A database"
+    ],
+    "explanation": "An algorithm is a step-by-step procedure to solve a problem.",
+    "difficulty": "easy",
+    "question_text": "What is an algorithm?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "78f649a2-ad95-497b-83c7-2a054d9227db",
+    "options": [
+      "No difference",
+      "'==' compares references, '.equals()' compares content",
+      "'==' compares content, '.equals()' compares references",
+      "Both compare memory addresses"
+    ],
+    "explanation": "'==' checks reference equality (same object), while .equals() checks value equality (same content) for objects.",
+    "difficulty": "medium",
+    "question_text": "In Java, what is the difference between '==' and '.equals()'?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a86cd1e4-cce8-494f-bbdc-356dc85512e4",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(√n)"
+    ],
+    "explanation": "AVL trees are self-balancing BSTs where the height is always O(log n), ensuring O(log n) operations.",
+    "difficulty": "medium",
+    "question_text": "What is the height of an AVL tree with n nodes?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "331bb6f7-b037-43da-85f6-d5f5f32226ca",
+    "options": [
+      "RSA",
+      "AES",
+      "Diffie-Hellman",
+      "ECC"
+    ],
+    "explanation": "AES (Advanced Encryption Standard) is a symmetric key algorithm using the same key for both encryption and decryption.",
+    "difficulty": "medium",
+    "question_text": "Which cryptographic algorithm uses the same key for encryption and decryption?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "be72d12a-af64-4440-af64-d5fc7ba436a1",
+    "options": [
+      "High CPU usage",
+      "Excessive page faults causing low CPU utilization",
+      "Memory leak",
+      "Disk fragmentation"
+    ],
+    "explanation": "Thrashing occurs when a system spends more time handling page faults than executing processes, caused by insufficient physical memory.",
+    "difficulty": "medium",
+    "question_text": "What is thrashing in operating systems?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a868304c-1efb-4f82-9889-cd6d149f2819",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "explanation": "Building a heap using the heapify method takes O(n) time, which is more efficient than n insertions (O(n log n)).",
+    "difficulty": "medium",
+    "question_text": "What is the time complexity of building a heap from an array of n elements?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9baea5e2-9c5a-43b4-8be1-72e261455a98",
+    "options": [
+      "TCP is connectionless, UDP is connection-oriented",
+      "TCP provides reliable delivery, UDP does not guarantee delivery",
+      "UDP is slower than TCP",
+      "There is no difference"
+    ],
+    "explanation": "TCP is connection-oriented with acknowledgments and retransmissions for reliability. UDP is connectionless with no delivery guarantees, making it faster but less reliable.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between TCP and UDP protocols?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d9419e8a-a807-4fb1-8b45-94a794e52bda",
+    "options": [
+      "O(E × f)",
+      "O(V × E²)",
+      "O(V² × E)",
+      "O(E log V)"
+    ],
+    "explanation": "Ford-Fulkerson has complexity O(E × f) where E is edges and f is maximum flow. Edmonds-Karp improves this to O(V × E²) using BFS.",
+    "difficulty": "hard",
+    "question_text": "What is the time complexity of the Ford-Fulkerson algorithm for maximum flow?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "8bcaad56-ee2a-4e2f-b7ac-7b0416ca9ef9",
+    "options": [
+      "Query optimization",
+      "Ensuring serializability",
+      "Index creation",
+      "Backup and recovery"
+    ],
+    "explanation": "Two-Phase Locking (2PL) ensures serializability by acquiring all locks before releasing any (growing phase), then releasing locks (shrinking phase).",
+    "difficulty": "hard",
+    "question_text": "In database systems, what is the two-phase locking protocol used for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "249d399c-01a2-4d99-bc6a-8fd8427ce55f",
+    "options": [
+      "Proving P = NP",
+      "Proving SAT is NP-complete",
+      "Proving halting problem is undecidable",
+      "Proving primality is in P"
+    ],
+    "explanation": "The Cook-Levin theorem (1971) proved that Boolean satisfiability (SAT) is NP-complete, establishing the first NP-complete problem.",
+    "difficulty": "hard",
+    "question_text": "What is the Cook-Levin theorem significant for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7039ef9e-6bbb-4b07-aeb6-faa158f6560a",
+    "options": [
+      "Prim's Algorithm",
+      "Kosaraju's Algorithm",
+      "Kruskal's Algorithm",
+      "Floyd's Algorithm"
+    ],
+    "explanation": "Kosaraju's algorithm uses two DFS passes to find SCCs in O(V+E) time. Tarjan's algorithm is another efficient approach.",
+    "difficulty": "hard",
+    "question_text": "Which algorithm efficiently finds strongly connected components in a directed graph?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0c140e5b-81f2-420d-bf28-7e1b0c095e24",
+    "options": [
+      "Consistency, Availability, Partition tolerance - can only guarantee two",
+      "Concurrency, Atomicity, Persistence",
+      "Compression, Accuracy, Performance",
+      "Cache, API, Protocol"
+    ],
+    "explanation": "CAP theorem states a distributed system can guarantee at most two of: Consistency (all nodes see same data), Availability (every request gets a response), and Partition tolerance (system works despite network failures).",
+    "difficulty": "hard",
+    "question_text": "What is the CAP theorem in distributed systems?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0abfee68-c0cb-467a-9185-909bcd9e00f0",
+    "options": [
+      "Left-to-right scan, Rightmost derivation, 1 lookahead symbol",
+      "Left-to-right scan, Leftmost derivation, 1 lookahead symbol",
+      "Leftmost scan, Rightmost derivation, 1 symbol",
+      "Lookahead Recursive parsing with 1 token"
+    ],
+    "explanation": "LR(1) means Left-to-right scan, Rightmost derivation in reverse, with 1 lookahead symbol. It's a bottom-up parsing technique.",
+    "difficulty": "hard",
+    "question_text": "In compiler design, what is LR(1) parsing?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ff67d2b8-b4d0-4d4a-b4cd-f3cc8730905e",
+    "options": [
+      "O(V log V)",
+      "O(V × E)",
+      "O(V²)",
+      "O(E log V)"
+    ],
+    "explanation": "Bellman-Ford relaxes all E edges V−1 times, giving O(V × E) complexity. It handles negative edge weights unlike Dijkstra's.",
+    "difficulty": "hard",
+    "question_text": "What is the time complexity of the Bellman-Ford algorithm?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "70b4f950-8339-4a5f-916f-cc941a5536a9",
+    "options": [
+      "B+ tree",
+      "B* tree",
+      "2-3 tree",
+      "Red-black tree"
+    ],
+    "explanation": "B+ trees are used in databases because all data pointers are in leaf nodes, enabling efficient range queries and sequential access.",
+    "difficulty": "hard",
+    "question_text": "Which B-tree variant is commonly used in database indexing?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "d537cb6c-fa41-40d1-99c0-1f4fdc107c84",
+    "options": [
+      "No difference",
+      "Logical independence shields applications from schema changes; physical from storage changes",
+      "Logical independence is about hardware; physical about software",
+      "Both refer to backup strategies"
+    ],
+    "explanation": "Logical data independence protects applications from changes in logical schema (tables, columns). Physical data independence protects from storage structure changes.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between logical and physical data independence?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b007a4ea-dbd6-4ceb-b9c2-9e70fbf984f5",
+    "options": [
+      "Easy to compute",
+      "Hard to find two inputs with same hash",
+      "Variable output length",
+      "Reversible computation"
+    ],
+    "explanation": "Collision resistance means it is computationally infeasible to find two distinct inputs x and y such that H(x) = H(y).",
+    "difficulty": "hard",
+    "question_text": "In cryptography, what property must a hash function satisfy to be collision-resistant?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "535cc9ce-83ba-419b-8520-56bcdd2e6018",
+    "options": [
+      "A load balancing issue",
+      "Achieving consensus in presence of faulty/malicious nodes",
+      "Memory allocation problem",
+      "A graph coloring problem"
+    ],
+    "explanation": "The Byzantine Generals Problem addresses how distributed systems can reach consensus when some nodes may fail or act maliciously.",
+    "difficulty": "hard",
+    "question_text": "What is the Byzantine Generals Problem?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c3f39ad7-9c85-4ac1-8463-6d3165a4c2d9",
+    "options": [
+      "It's primitive recursive",
+      "It's total computable but not primitive recursive",
+      "It's undecidable",
+      "It's NP-complete"
+    ],
+    "explanation": "The Ackermann function A(m,n) is a total computable function that grows faster than any primitive recursive function, proving not all computable functions are primitive recursive.",
+    "difficulty": "hard",
+    "question_text": "What is the Ackermann function significant for in computability theory?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f364b1d1-37df-48a7-a57c-e6ebf20c8ea5",
+    "options": [
+      "CPU scheduling",
+      "Page replacement and thrashing prevention",
+      "Disk defragmentation",
+      "Process synchronization"
+    ],
+    "explanation": "The working set model tracks pages a process actively uses, helping the OS decide which pages to keep in memory to prevent thrashing.",
+    "difficulty": "hard",
+    "question_text": "In operating systems, what is the working set model used for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b5279d15-0569-401c-9d2e-599b4f925277",
+    "options": [
+      "They are the same",
+      "Concurrency is about structure; parallelism is about execution",
+      "Concurrency requires multiple CPUs; parallelism does not",
+      "Parallelism is only for databases"
+    ],
+    "explanation": "Concurrency is dealing with multiple tasks at once (interleaving). Parallelism is actually executing multiple tasks simultaneously (requires multiple cores).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between concurrency and parallelism?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "923877cd-12aa-457a-ba9a-c6d06eb28aa1",
+    "options": [
+      "Facebook",
+      "Google",
+      "WhatsApp",
+      "Microsoft Word"
+    ],
+    "explanation": "Google is a search engine.",
+    "difficulty": "easy",
+    "question_text": "Which of these is a search engine?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "06750db9-edac-4120-915d-2e47e2b65a7a",
+    "options": [
+      "Prim's",
+      "Kruskal's",
+      "Dijkstra's",
+      "Borůvka's"
+    ],
+    "explanation": "Kruskal's algorithm sorts all edges by weight and adds the cheapest edge that doesn't form a cycle, using union-find for cycle detection.",
+    "difficulty": "hard",
+    "question_text": "Which algorithm finds the minimum spanning tree by always adding the cheapest edge?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "70b4d7de-b8ca-4ff4-945a-2b190eaacd2e",
+    "options": [
+      "O(n²)",
+      "O(n³)",
+      "O(2^n)",
+      "O(n!)"
+    ],
+    "explanation": "The DP solution fills an n×n table in O(n³) time, significantly better than the exponential brute-force approach.",
+    "difficulty": "hard",
+    "question_text": "What is the time complexity of matrix chain multiplication using dynamic programming?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fcb2ca9d-60d3-4246-980e-5055ab59011d",
+    "options": [
+      "Encrypt packets",
+      "Find shortest paths using neighbor information",
+      "Compress data",
+      "Assign IP addresses"
+    ],
+    "explanation": "Distance Vector routing (e.g., RIP) uses Bellman-Ford where each router shares its entire routing table with neighbors to compute shortest paths.",
+    "difficulty": "hard",
+    "question_text": "In network layer protocols, what is the purpose of the Distance Vector Routing algorithm?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6183b0cd-7af8-4cbd-b115-0a8dc21d9e8a",
+    "options": [
+      "Fast algorithm execution",
+      "Behavior depends on relative timing of events",
+      "Memory leak",
+      "CPU overheating"
+    ],
+    "explanation": "A race condition occurs when the correctness of a program depends on the sequence or timing of uncontrollable events like thread execution order.",
+    "difficulty": "hard",
+    "question_text": "What is a race condition in concurrent programming?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "828b27af-285c-49e9-864d-c450433fc086",
+    "options": [
+      "Real-time processing",
+      "Distributed processing of large datasets using map and reduce functions",
+      "In-memory computation",
+      "Graph processing"
+    ],
+    "explanation": "MapReduce processes large datasets in parallel across clusters by mapping data to key-value pairs and reducing them to aggregated results.",
+    "difficulty": "hard",
+    "question_text": "What is the key innovation of the MapReduce programming model?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3820739c-1d79-4f7a-9525-bcf70ea91945",
+    "options": [
+      "Every determinant is a candidate key",
+      "No multivalued dependencies",
+      "No partial dependencies",
+      "No transitive dependencies"
+    ],
+    "explanation": "BCNF is stricter than 3NF: for every functional dependency X → Y, X must be a superkey (candidate key).",
+    "difficulty": "hard",
+    "question_text": "In database normalization, what is the Boyce-Codd Normal Form (BCNF)?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9116960c-054c-46c1-bf25-e148c0e5675a",
+    "options": [
+      "O(n²)",
+      "O(n log n)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "explanation": "The Cooley-Tukey FFT algorithm computes the DFT in O(n log n) using a divide-and-conquer approach, compared to O(n²) for the naive DFT.",
+    "difficulty": "hard",
+    "question_text": "What is the time complexity of the Fast Fourier Transform (FFT)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f2e9cc5a-46c0-42ba-8637-9662a5902636",
+    "options": [
+      "Changing user permissions",
+      "Saving state of one process and loading another",
+      "Switching between networks",
+      "Changing file systems"
+    ],
+    "explanation": "A context switch involves saving the CPU state (registers, program counter) of the current process and restoring the state of another process.",
+    "difficulty": "hard",
+    "question_text": "What is a context switch in operating systems?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bcce6a60-f48e-4d0c-8eef-3f4d4ed0f2e4",
+    "options": [
+      "Paxos",
+      "Proof of Work",
+      "Raft",
+      "Byzantine Fault Tolerance"
+    ],
+    "explanation": "Bitcoin uses Proof of Work (PoW) where miners solve cryptographic puzzles to validate transactions and create new blocks.",
+    "difficulty": "hard",
+    "question_text": "Which consensus algorithm does Bitcoin use?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b7d01d6a-a504-48e6-a2ad-3a8e7e3eac68",
+    "options": [
+      "Maximum flow equals capacity of minimum s-t cut",
+      "Maximum flow is always less than minimum cut",
+      "Minimum cut has zero capacity",
+      "Flow and cut are unrelated"
+    ],
+    "explanation": "The max-flow min-cut theorem states that the maximum flow through a network equals the total capacity of the minimum s-t cut.",
+    "difficulty": "hard",
+    "question_text": "What is the maximum flow minimum cut theorem?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7971db05-162d-42a5-b204-170413c0d782",
+    "options": [
+      "Running programs without permission",
+      "Executing instructions before knowing they are needed",
+      "Guessing branch outcomes",
+      "Both B and C"
+    ],
+    "explanation": "Speculative execution includes branch prediction (guessing branch direction) and executing instructions ahead to avoid pipeline stalls.",
+    "difficulty": "hard",
+    "question_text": "In computer architecture, what is speculative execution?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "9a49ac8f-09de-489e-87cf-5beda6d6d2e7",
+    "options": [
+      "Classification of programming languages by popularity",
+      "Classification of formal grammars into 4 types",
+      "Ranking of sorting algorithms",
+      "Memory hierarchy in computers"
+    ],
+    "explanation": "The Chomsky hierarchy classifies formal grammars into Type 0 (unrestricted), Type 1 (context-sensitive), Type 2 (context-free), and Type 3 (regular).",
+    "difficulty": "hard",
+    "question_text": "What is the Chomsky hierarchy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "da2c2f78-5c6e-4f1c-8d27-06692e10b128",
+    "options": [
+      "Memory allocation",
+      "Process synchronization and mutual exclusion",
+      "CPU scheduling",
+      "File management"
+    ],
+    "explanation": "Semaphores are synchronization primitives used to control access to shared resources and prevent race conditions in concurrent programming.",
+    "difficulty": "hard",
+    "question_text": "What is a semaphore used for in operating systems?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5013a759-b4e0-4d22-8b37-59ec30141229",
+    "options": [
+      "Naive string matching",
+      "KMP (Knuth-Morris-Pratt) algorithm",
+      "Bubble sort",
+      "Binary search"
+    ],
+    "explanation": "The KMP algorithm preprocesses the pattern in O(m) time and matches in O(n) time, avoiding unnecessary comparisons using the failure function.",
+    "difficulty": "hard",
+    "question_text": "Which algorithm is used for string matching with O(n) preprocessing?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5d32d8d1-afa1-4781-ad02-cf093651c6b1",
+    "options": [
+      "Pessimistic assumes conflicts; optimistic checks at commit",
+      "Optimistic is slower",
+      "Pessimistic is only for reads",
+      "No difference"
+    ],
+    "explanation": "Pessimistic locking locks resources early assuming conflicts. Optimistic allows concurrent access and validates at commit time.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between pessimistic and optimistic locking?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "e19ce20a-9c09-4485-9b18-d52c5f668e08",
+    "options": [
+      "Adding tails to recursive functions",
+      "Reusing stack frame when recursive call is the last operation",
+      "Limiting recursion depth",
+      "Using iteration instead"
+    ],
+    "explanation": "Tail call optimization reuses the current stack frame when the recursive call is the last operation, preventing stack overflow.",
+    "difficulty": "hard",
+    "question_text": "What is tail recursion optimization?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a508922f-17bb-42d7-92bf-8d5f5083ec63",
+    "options": [
+      "Data preprocessing",
+      "Computing gradients for neural network training",
+      "Feature selection",
+      "Model evaluation"
+    ],
+    "explanation": "Backpropagation uses the chain rule to efficiently compute gradients of the loss function with respect to each weight in a neural network.",
+    "difficulty": "hard",
+    "question_text": "In machine learning, what is backpropagation used for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "11aa4341-6a7f-46b0-99eb-2157adc3c634",
+    "options": [
+      "O(n)",
+      "O(2^d) where d is number of items",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "explanation": "Apriori has exponential complexity O(2^d) in the worst case due to potentially exploring all itemset combinations.",
+    "difficulty": "hard",
+    "question_text": "What is the time complexity of the Apriori algorithm for association rule mining?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f307c7bf-99be-48de-bcf1-26183d53a408",
+    "options": [
+      "Time synchronization",
+      "Capturing causality between events across processes",
+      "CPU scheduling",
+      "Memory management"
+    ],
+    "explanation": "Vector clocks track the happens-before relationship between events in distributed systems, enabling causal ordering without synchronized clocks.",
+    "difficulty": "hard",
+    "question_text": "What is vector clock used for in distributed systems?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4040ed96-129b-4766-8fd1-7c76969b9203",
+    "options": [
+      "No difference",
+      "Shallow copies references; deep copies objects recursively",
+      "Deep copy is faster",
+      "Shallow copy creates new objects"
+    ],
+    "explanation": "A shallow copy copies references to objects. A deep copy creates new objects and recursively copies all referenced objects.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between shallow and deep copy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ca88dbdf-6104-44e5-8df4-2376dce9fdf6",
+    "options": [
+      "A backup strategy",
+      "A sequence of operations to execute a query efficiently",
+      "A data model",
+      "A security protocol"
+    ],
+    "explanation": "A query execution plan is a roadmap showing how the DBMS will execute a query, including join order, index usage, and access methods.",
+    "difficulty": "hard",
+    "question_text": "In database query optimization, what is a query execution plan?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "10215d29-68d6-4094-8c13-84792da119b8",
+    "options": [
+      "Uninformed search",
+      "Informed search using heuristic + path cost",
+      "Random search",
+      "Breadth-first search"
+    ],
+    "explanation": "A* uses f(n) = g(n) + h(n) where g(n) is path cost from start and h(n) is heuristic estimate to goal, providing optimal and efficient search.",
+    "difficulty": "hard",
+    "question_text": "What is the A* search algorithm?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8143012a-a1df-41c0-8aa0-87852ebd1b31",
+    "options": [
+      "Wasted memory space; compaction relocates programs to create contiguous free space",
+      "Fast memory access; compaction slows it down",
+      "Memory leak; compaction frees memory",
+      "Disk issue; irrelevant for RAM"
+    ],
+    "explanation": "Fragmentation creates small unusable memory gaps. Compaction relocates allocated blocks to consolidate free space into contiguous regions.",
+    "difficulty": "hard",
+    "question_text": "What is memory fragmentation and how does compaction help?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "4fb8a184-dc57-4eb9-827d-4f17dc03bfc5",
+    "options": [
+      "Strong typing has fewer types",
+      "Strong typing enforces strict type rules; weak allows implicit conversions",
+      "Weak typing is faster",
+      "No difference"
+    ],
+    "explanation": "Strongly typed languages (Java, Python) enforce strict type checking. Weakly typed languages (JavaScript, C) allow more implicit type conversions.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between strong and weak typing?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "27049e04-d392-4dff-aa91-7588e82501db",
+    "options": [
+      "All messages are encrypted",
+      "Compromised long-term keys don't compromise past session keys",
+      "Keys never expire",
+      "Only symmetric encryption is used"
+    ],
+    "explanation": "Perfect Forward Secrecy (PFS) ensures session keys aren't compromised even if long-term private keys are leaked, using ephemeral key exchange.",
+    "difficulty": "hard",
+    "question_text": "In cryptography, what is perfect forward secrecy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bb3198ff-3e76-43fd-bdad-afecf8353caa",
+    "options": [
+      "All data pointers are in leaf nodes, enabling efficient range queries",
+      "It uses less memory",
+      "It has faster insertion",
+      "It doesn't require balancing"
+    ],
+    "explanation": "In a B+ tree, all data pointers reside in leaf nodes linked together, making range queries and sequential access very efficient compared to B-trees where data can be in internal nodes.",
+    "difficulty": "hard",
+    "question_text": "What is a B+ tree's key advantage over a B-tree for database indexing?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5a0c1c7a-f754-45bf-9243-3439519ea1a5",
+    "options": [
+      "Central Programming Unit",
+      "Central Processing Unit",
+      "Computer Processing Unit",
+      "Central Peripheral Unit"
+    ],
+    "explanation": "CPU = Central Processing Unit.",
+    "difficulty": "easy",
+    "question_text": "The full form of CPU is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "16c2bd29-7e3a-4fe5-85d3-8201b2fcc110",
+    "options": [
+      "Keyboard",
+      "Mouse",
+      "Monitor",
+      "Scanner"
+    ],
+    "explanation": "Monitor displays output to the user.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is an output device?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "715b8251-afc1-4583-b9d1-21f5b71b8409",
+    "options": [
+      "Read Access Memory",
+      "Random Access Memory",
+      "Readily Available Memory",
+      "Read Arithmetic Memory"
+    ],
+    "explanation": "RAM = Random Access Memory.",
+    "difficulty": "easy",
+    "question_text": "The full form of RAM is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7f034b0c-4e3c-4e29-8c55-25b58896c071",
+    "options": [
+      "Uniform Resource Locator",
+      "Universal Resource Link",
+      "Uniform Retrieval Location",
+      "Universal Retrieval Locator"
+    ],
+    "explanation": "URL = Uniform Resource Locator.",
+    "difficulty": "easy",
+    "question_text": "What is the full form of URL?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "f8300b4d-4f17-4520-9a96-f23eafdaca6c",
+    "options": [
+      "Python",
+      "Java",
+      "C",
+      "Assembly"
+    ],
+    "explanation": "C is often called the mother of modern programming languages.",
+    "difficulty": "medium",
+    "question_text": "Which programming language is known as 'mother of all languages'?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fdb88077-e349-45f3-ba93-fae89926311c",
+    "options": [
+      "Speed up internet",
+      "Block unauthorized access",
+      "Store data",
+      "Process data"
+    ],
+    "explanation": "A firewall blocks unauthorized network access.",
+    "difficulty": "easy",
+    "question_text": "A firewall is used to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "634d6f91-a76a-4b60-a19e-efd7916f25cc",
+    "options": [
+      "LAN",
+      "WAN",
+      "MAN",
+      "TAN"
+    ],
+    "explanation": "TAN is not a real network type. LAN, WAN, and MAN are standard types.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is NOT a type of computer network?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "c202333b-fedd-439a-8419-e02bf80a47e5",
+    "options": [
+      "Only inheritance",
+      "Only encapsulation",
+      "Inheritance, Encapsulation, Polymorphism",
+      "Structured programming only"
+    ],
+    "explanation": "OOP is based on inheritance, encapsulation, polymorphism, and abstraction.",
+    "difficulty": "easy",
+    "question_text": "Object-Oriented Programming supports:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "9b827be0-27e6-4793-a42a-15ad32604555",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "explanation": "1010 in binary = 8+0+2+0 = 10 in decimal.",
+    "difficulty": "easy",
+    "question_text": "The decimal equivalent of binary 1010 is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8cf5f30b-38e1-45fb-b720-1195503ed8b5",
+    "options": [
+      "RAM",
+      "Cache",
+      "ROM",
+      "Register"
+    ],
+    "explanation": "ROM (Read Only Memory) is non-volatile.",
+    "difficulty": "easy",
+    "question_text": "Which memory is non-volatile?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "22e997dd-eb04-4237-9dff-f60d232c9196",
+    "options": [
+      "Linear data structure",
+      "Non-linear data structure",
+      "Tree structure",
+      "Graph structure"
+    ],
+    "explanation": "A linked list is a linear data structure.",
+    "difficulty": "easy",
+    "question_text": "A linked list is a:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "410db0d5-dbd9-498b-a4e9-5cf572fb40c9",
+    "options": [
+      "Compiling",
+      "Debugging",
+      "Executing",
+      "Linking"
+    ],
+    "explanation": "Debugging is the process of finding and fixing errors.",
+    "difficulty": "easy",
+    "question_text": "The process of finding and fixing errors in a program is called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "429724de-fdb0-4d5d-9683-00287f134a9c",
+    "options": [
+      "FTP",
+      "HTTP",
+      "DHCP",
+      "DNS"
+    ],
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) assigns IP addresses automatically.",
+    "difficulty": "medium",
+    "question_text": "Which protocol assigns IP addresses automatically?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a17fc3d4-3303-463c-9499-c3583fbd2803",
+    "options": [
+      "1000 bytes",
+      "1024 bytes",
+      "512 bytes",
+      "2048 bytes"
+    ],
+    "explanation": "1 Kilobyte = 1024 bytes.",
+    "difficulty": "easy",
+    "question_text": "1 KB equals:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "59fd735c-23fb-4961-b1a4-b82d2baa7ee5",
+    "options": [
+      "C++",
+      "Java",
+      "Machine language",
+      "Python"
+    ],
+    "explanation": "Computers directly understand machine language (binary).",
+    "difficulty": "easy",
+    "question_text": "Which language is directly understood by the computer?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6c37d232-0a4c-409e-993d-ed1bd8f6e20b",
+    "options": [
+      "1010",
+      "1100",
+      "1001",
+      "1110"
+    ],
+    "explanation": "10 in decimal = 1010 in binary.",
+    "difficulty": "easy",
+    "question_text": "What is the binary equivalent of decimal 10?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c6accca9-5c62-44a1-8643-21bdd85846b1",
+    "options": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "Standard Query Language",
+      "System Query Language"
+    ],
+    "explanation": "SQL = Structured Query Language.",
+    "difficulty": "easy",
+    "question_text": "SQL stands for:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6148372a-5b9a-4115-87d9-ce943aef2649",
+    "options": [
+      "Non-volatile memory",
+      "Volatile memory",
+      "Secondary storage",
+      "Permanent memory"
+    ],
+    "explanation": "RAM (Random Access Memory) is volatile - data is lost when power is off.",
+    "difficulty": "easy",
+    "question_text": "RAM is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4193ebce-c7ec-4ad6-8c8f-c54a5718c946",
+    "options": [
+      "Windows",
+      "Linux",
+      "Oracle",
+      "macOS"
+    ],
+    "explanation": "Oracle is a database management system, not an OS.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is NOT an operating system?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "72738c73-5944-41a6-ac0e-2ab1c188b427",
+    "options": [
+      "do-while",
+      "while",
+      "for",
+      "Both while and for"
+    ],
+    "explanation": "Both while and for loops check the condition before executing.",
+    "difficulty": "medium",
+    "question_text": "In C programming, which loop checks condition first?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "952565e2-6be9-4623-94bb-ffb341aa3475",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Text Machine Language",
+      "Hyper Transfer Markup Language",
+      "High Tech Modern Language"
+    ],
+    "explanation": "HTML = Hyper Text Markup Language.",
+    "difficulty": "easy",
+    "question_text": "What does HTML stand for?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "df289f21-e10e-4e5c-b431-ae3429b1ad2a",
+    "options": [
+      "Queue",
+      "Stack",
+      "Array",
+      "Linked List"
+    ],
+    "explanation": "Stack follows Last In First Out (LIFO).",
+    "difficulty": "easy",
+    "question_text": "Which data structure follows LIFO?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "849dd8bf-bf96-4b4c-9008-7b493bd440f9",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "explanation": "Queue follows First In First Out (FIFO).",
+    "difficulty": "easy",
+    "question_text": "Which data structure follows FIFO?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e694dae9-165c-43fe-af01-6b2699d7a101",
+    "options": [
+      "RAM",
+      "ROM",
+      "CPU",
+      "Hard Drive"
+    ],
+    "explanation": "CPU is considered the brain of the computer.",
+    "difficulty": "easy",
+    "question_text": "The brain of the computer is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a535c83f-faf3-4a07-aad8-355161ab8019",
+    "options": [
+      "First column",
+      "Unique identifier for each record",
+      "Password",
+      "Foreign key"
+    ],
+    "explanation": "Primary key uniquely identifies each record in a table.",
+    "difficulty": "easy",
+    "question_text": "What is the primary key in a database?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "06222f63-471e-479d-9949-943295908f38",
+    "options": [
+      "Machine code",
+      "Assembly",
+      "Python",
+      "Binary"
+    ],
+    "explanation": "Python is a high-level programming language.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a high-level language?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "dfca71d9-3e31-4646-a1ad-32a8ced32308",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "explanation": "1 byte = 8 bits.",
+    "difficulty": "easy",
+    "question_text": "How many bits are in a byte?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3767ecd2-f6ac-4c40-b7f3-7fd7eb31661a",
+    "options": [
+      "Byte",
+      "Bit",
+      "Nibble",
+      "Word"
+    ],
+    "explanation": "A bit (binary digit) is the smallest unit of data.",
+    "difficulty": "easy",
+    "question_text": "The smallest unit of data in a computer is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a705b02f-0fd4-4c19-bb97-2d35bff77072",
+    "options": [
+      "Store data",
+      "Display graphics",
+      "Connect to internet",
+      "Print documents"
+    ],
+    "explanation": "Variables store data values in programming.",
+    "difficulty": "easy",
+    "question_text": "In programming, a variable is used to:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "099cc8a4-37ee-4155-b450-a9fdfa687d22",
+    "options": [
+      "O(n)",
+      "O(n²)",
+      "O(log n)",
+      "O(1)"
+    ],
+    "explanation": "Binary search has O(log n) time complexity.",
+    "difficulty": "medium",
+    "question_text": "What is the time complexity of binary search?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6b09f92f-9173-4397-998c-5f5b28fcdf6e",
+    "options": [
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "TCP"
+    ],
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending email.",
+    "difficulty": "medium",
+    "question_text": "Which protocol is used for sending email?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "bffa93bf-77a5-4451-9760-467ff13f1d20",
+    "options": [
+      "Hardware device",
+      "Translates high-level to machine code",
+      "A type of memory",
+      "An input device"
+    ],
+    "explanation": "A compiler translates high-level language code to machine code.",
+    "difficulty": "easy",
+    "question_text": "What is a compiler?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1c868f17-e73e-4601-850d-49dabc50908b",
+    "options": [
+      "Add redundancy",
+      "Reduce redundancy",
+      "Delete data",
+      "Encrypt data"
+    ],
+    "explanation": "Normalization reduces data redundancy in databases.",
+    "difficulty": "medium",
+    "question_text": "Normalization in database is used to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "59920f15-e2fb-4cc6-93ce-5cb0e09bab10",
+    "options": [
+      "Internet Protocol",
+      "Internal Process",
+      "Input Program",
+      "Internet Program"
+    ],
+    "explanation": "IP = Internet Protocol.",
+    "difficulty": "easy",
+    "question_text": "What does IP stand for in networking?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "43b76418-6993-4fbb-81a5-8a1ef739a698",
+    "options": [
+      "Rectangle",
+      "Diamond",
+      "Circle",
+      "Parallelogram"
+    ],
+    "explanation": "Diamond shape represents decisions in flowcharts.",
+    "difficulty": "easy",
+    "question_text": "A flowchart uses which shape for decisions?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7016cbde-2918-495e-bf6d-0949f461abc2",
+    "options": [
+      "RAM",
+      "Cache",
+      "Hard Disk",
+      "Register"
+    ],
+    "explanation": "Hard Disk is a secondary (permanent) storage device.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is secondary storage?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b1c54365-362e-4900-84b2-8da7128c5e9c",
+    "options": [
+      "Inheriting properties",
+      "Bundling data and methods together",
+      "Overloading operators",
+      "Multiple inheritance"
+    ],
+    "explanation": "Encapsulation bundles data and methods that operate on that data within a class.",
+    "difficulty": "medium",
+    "question_text": "In OOP, what is encapsulation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f9a693a6-abe4-4370-951f-e6ae15b9e099",
+    "options": [
+      "E",
+      "F",
+      "D",
+      "A"
+    ],
+    "explanation": "1111 in binary = 15 in decimal = F in hexadecimal.",
+    "difficulty": "medium",
+    "question_text": "What is the hexadecimal equivalent of binary 1111?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a0dd141e-963e-411b-8db8-f8076f958e64",
+    "options": [
+      "Bubble Sort",
+      "Selection Sort",
+      "Merge Sort",
+      "Insertion Sort"
+    ],
+    "explanation": "Merge Sort has O(n log n) average time complexity.",
+    "difficulty": "hard",
+    "question_text": "Which sorting algorithm has the best average time complexity?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3403be7a-932c-4c9d-b2d4-31ef2905569e",
+    "options": [
+      "RAM",
+      "Hard Disk",
+      "CPU",
+      "Monitor"
+    ],
+    "explanation": "CPU (Central Processing Unit) is the brain of a computer.",
+    "difficulty": "easy",
+    "question_text": "The brain of a computer is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "77962a4b-ee76-4cc4-93b0-ad4833a3f7ba",
+    "options": [
+      "Central Processing Unit",
+      "Computer Processing Unit",
+      "Core Processing Unit",
+      "Central Program Unit"
+    ],
+    "explanation": "CPU = Central Processing Unit.",
+    "difficulty": "easy",
+    "question_text": "Full form of CPU:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "25db5524-c102-4cb9-89fe-e74a9e99e876",
+    "options": [
+      "Keyboard",
+      "Mouse",
+      "Scanner",
+      "Printer"
+    ],
+    "explanation": "Printer is an output device.",
+    "difficulty": "easy",
+    "question_text": "Which is NOT an input device?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "5ec202cd-a541-4231-8cbd-4ba8d4dd401a",
+    "options": [
+      "4 bits",
+      "8 bits",
+      "16 bits",
+      "32 bits"
+    ],
+    "explanation": "1 byte = 8 bits.",
+    "difficulty": "easy",
+    "question_text": "1 Byte = ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6f6b4ccd-046c-40f2-9a88-83f023ab71f6",
+    "options": [
+      "Read Only Memory",
+      "Random Only Memory",
+      "Read Output Memory",
+      "Run Only Memory"
+    ],
+    "explanation": "ROM = Read Only Memory.",
+    "difficulty": "easy",
+    "question_text": "The full form of ROM is:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "89d5e1b8-1171-46a1-8ba4-57816467324f",
+    "options": [
+      "ROM",
+      "RAM",
+      "Flash Memory",
+      "Hard Disk"
+    ],
+    "explanation": "RAM is volatile — data is lost when power is off.",
+    "difficulty": "easy",
+    "question_text": "Which memory is volatile?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "262a0153-b953-422d-a019-c6ad13f11d50",
+    "options": [
+      "1024 bytes",
+      "1024 KB",
+      "1024 GB",
+      "512 KB"
+    ],
+    "explanation": "1 MB = 1024 KB.",
+    "difficulty": "easy",
+    "question_text": "1 Megabyte = ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1b6a42df-e4c1-4ea9-8010-5e786db9e366",
+    "options": [
+      "11001",
+      "11010",
+      "10011",
+      "10101"
+    ],
+    "explanation": "25 = 16+8+1 = 11001 in binary.",
+    "difficulty": "medium",
+    "question_text": "The binary equivalent of decimal 25 is:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ed43e5bc-3bf4-432b-9cfd-169bd532af8d",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "explanation": "Hex A = 10 in decimal.",
+    "difficulty": "easy",
+    "question_text": "Convert hexadecimal A to decimal:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "9025bea5-7227-4d29-9f97-30e46d5a04aa",
+    "options": [
+      "15",
+      "16",
+      "17",
+      "8"
+    ],
+    "explanation": "Octal 17 = 1×8 + 7 = 15 in decimal.",
+    "difficulty": "medium",
+    "question_text": "The decimal equivalent of octal 17 is:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "553f3ffd-2d62-460a-8bb5-bca8cde59978",
+    "options": [
+      "First",
+      "Second",
+      "Third",
+      "Fourth"
+    ],
+    "explanation": "Second generation computers (1956-1963) used transistors.",
+    "difficulty": "medium",
+    "question_text": "Which generation of computers used transistors?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1cf619d5-7c81-4c99-88b2-15d660a5f265",
+    "options": [
+      "FTP",
+      "SMTP",
+      "HTTP",
+      "DHCP"
+    ],
+    "explanation": "HTTP (Hypertext Transfer Protocol) is used for web browsing.",
+    "difficulty": "easy",
+    "question_text": "Which protocol is used for web browsing?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "cf7f16ce-d4c3-42ba-b74e-ff1e9d75da71",
+    "options": [
+      "WAN",
+      "MAN",
+      "LAN",
+      "PAN"
+    ],
+    "explanation": "LAN (Local Area Network) covers a small area.",
+    "difficulty": "easy",
+    "question_text": "A _____ network connects computers in a small area like a building.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d7e917a0-6a7c-4518-8f8f-61646da22643",
+    "options": [
+      "Bus",
+      "Ring",
+      "Star",
+      "Mesh"
+    ],
+    "explanation": "Star topology connects all devices to a central hub.",
+    "difficulty": "easy",
+    "question_text": "A _____ topology connects all nodes to a central hub.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "08935751-f6d8-4237-b157-8836ec99eead",
+    "options": [
+      "Hiding data",
+      "One interface, many implementations",
+      "Multiple inheritance",
+      "Memory management"
+    ],
+    "explanation": "Polymorphism allows the same interface to be used for different data types.",
+    "difficulty": "medium",
+    "question_text": "The concept of polymorphism in OOP allows:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7b85dd57-98ca-4454-9b4d-c9a58df9285b",
+    "options": [
+      "Field",
+      "Attribute",
+      "Record/Tuple",
+      "Schema"
+    ],
+    "explanation": "A row in a relational database table is called a record or tuple.",
+    "difficulty": "easy",
+    "question_text": "In database terms, a row in a table is called a:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "eada1514-f4c6-49e9-9329-207069aa7999",
+    "options": [
+      "Deletes data",
+      "Inserts data",
+      "Retrieves data",
+      "Updates data"
+    ],
+    "explanation": "SELECT retrieves data from a database.",
+    "difficulty": "easy",
+    "question_text": "What does SQL SELECT statement do?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f278f187-5e09-4502-94e0-34d2cbab5a5b",
+    "options": [
+      "Array",
+      "Stack",
+      "Linked List",
+      "Queue"
+    ],
+    "explanation": "A linked list uses nodes connected by pointers.",
+    "difficulty": "easy",
+    "question_text": "Which data structure uses nodes and pointers?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b60a7f42-3b06-4bc0-8d0b-5efa4a749faf",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "explanation": "Bubble Sort worst case = O(n²).",
+    "difficulty": "medium",
+    "question_text": "The worst-case time complexity of Bubble Sort is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "cf9c4b18-0540-44c8-a285-fbdd195e4955",
+    "options": [
+      "Children",
+      "Data",
+      "Parent",
+      "Leaves"
+    ],
+    "explanation": "The root node has no parent node.",
+    "difficulty": "easy",
+    "question_text": "In a binary tree, the root has no:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b309aa13-b278-458f-83bf-0314859ccbdc",
+    "options": [
+      "Computer Style Sheet",
+      "Cascading Style Sheets",
+      "Creative Style System",
+      "Color Styling System"
+    ],
+    "explanation": "CSS = Cascading Style Sheets, used for web page styling.",
+    "difficulty": "easy",
+    "question_text": "What does CSS stand for?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5c7035bd-6bca-4f23-a950-a27ce6747377",
+    "options": [
+      "Compiled",
+      "Machine-level",
+      "Scripting",
+      "Assembly"
+    ],
+    "explanation": "JavaScript is a scripting language used mainly for web development.",
+    "difficulty": "easy",
+    "question_text": "JavaScript is primarily a _____ programming language.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "bcb203c7-4002-426a-8f93-c7fc2fe3c867",
+    "options": [
+      "MS Word",
+      "Adobe Photoshop",
+      "Ubuntu",
+      "Google Chrome"
+    ],
+    "explanation": "Ubuntu is an operating system (Linux distribution).",
+    "difficulty": "easy",
+    "question_text": "Which of the following is an example of an operating system?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "37b8d691-6917-4115-8791-ad8b1afa5799",
+    "options": [
+      "Trojan",
+      "Worm",
+      "File infector",
+      "Spyware"
+    ],
+    "explanation": "A file infector virus attaches to executable programs.",
+    "difficulty": "medium",
+    "question_text": "A _____ virus replicates itself by attaching to programs.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e763dbaf-6456-4c5e-9a68-1f2bdfb01b60",
+    "options": [
+      "Compressed text",
+      "Ciphertext",
+      "Binary",
+      "Source code"
+    ],
+    "explanation": "Encryption converts readable plaintext into unreadable ciphertext.",
+    "difficulty": "easy",
+    "question_text": "Encryption converts plaintext to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3bc0d786-254a-4820-84b0-64eca91b4a74",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "explanation": "The OSI (Open Systems Interconnection) model has 7 layers.",
+    "difficulty": "easy",
+    "question_text": "The OSI model has _____ layers:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "f3d6d86b-a306-42d4-9b38-4dc733eccdb7",
+    "options": [
+      "Data Link",
+      "Network",
+      "Transport",
+      "Session"
+    ],
+    "explanation": "The Network layer (Layer 3) handles routing and logical addressing.",
+    "difficulty": "medium",
+    "question_text": "Which layer of OSI handles routing?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "501bd590-c607-4021-a09c-bb82e3b09d5b",
+    "options": [
+      "Iteration",
+      "Loop",
+      "Recursive function",
+      "While loop"
+    ],
+    "explanation": "A recursive function is one that calls itself.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a function that calls itself.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "831ff7f0-5019-4619-8f0a-b075b7589453",
+    "options": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Oracle"
+    ],
+    "explanation": "MongoDB is a NoSQL document-oriented database.",
+    "difficulty": "medium",
+    "question_text": "Which of the following is a NoSQL database?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "41aef8b9-7dbb-4347-a2f4-a4ae6c38b5b5",
+    "options": [
+      "Internet of Things",
+      "Integration of Technology",
+      "Interface of Tools",
+      "Input Output Technology"
+    ],
+    "explanation": "IoT = Internet of Things — interconnected physical devices.",
+    "difficulty": "easy",
+    "question_text": "What does IoT stand for?",
+    "correct_answer_index": 0
+  }
+]

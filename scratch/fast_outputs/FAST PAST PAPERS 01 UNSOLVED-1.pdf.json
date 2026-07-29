@@ -1,0 +1,1418 @@
+[
+  {
+    "id": "fast_test_Q#1",
+    "text": "5, 6, 8, 9, 11, ___",
+    "options": [
+      "20",
+      "17",
+      "15",
+      "12"
+    ],
+    "correctAnswer": "12",
+    "explanation": "The series has two interleaved patterns: 5, 8, 11 (adds 3), and 6, 9 (adds 3). The missing number is part of the 6, 9 series, which would be 9+3 = 12.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#2",
+    "text": "If 124351 stands for NEWTON, then 3512 stands for",
+    "options": [
+      "NOTE",
+      "TONE",
+      "WONT",
+      "NEON",
+      "TOWN"
+    ],
+    "correctAnswer": "TONE",
+    "explanation": "Assign numbers to letters based on NEWTON: N=1, E=2, W=4, T=3, O=5, N=1. So, 3512 corresponds to TONE.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#4",
+    "text": "Studies of fatal automobile accidents reveal that, in the majority of cases in which one occupant of an automobile survives, it is the passenger, not the driver, who is killed. It is ironic that the innocent passenger should suffer for the while the driver often suffers only minor injuries or none at all. Which of the following is an assumption underlying passage above?",
+    "options": [
+      "Auto safety experts should increase their efforts to provide protection for those in the passenger seals of automobiles",
+      "Automobile passengers sometimes play a contributing role in causing auto accidents.",
+      "In most fatal automobile accidents, the driver of a car in which an occupant is killed is at fault.",
+      "Most deaths in fatal automobile accidents are suffered by occupants of cars rather than by pedestrians",
+      "Drivers of automobiles are rarely killed in auto accidents"
+    ],
+    "correctAnswer": "In most fatal automobile accidents, the driver of a car in which an occupant is killed is at fault.",
+    "explanation": "The passage implies irony because the 'innocent passenger' suffers while the driver, who is presumably responsible, often doesn't. This assumes the driver is at fault for the accident causing the passenger's death.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#5",
+    "text": "If MARKET is equal to 368917, than MAT is equal to?",
+    "options": [
+      "367",
+      "891",
+      "368",
+      "689",
+      "397"
+    ],
+    "correctAnswer": "367",
+    "explanation": "Assign numbers to letters based on MARKET: M=3, A=6, R=8, K=9, E=1, T=7. So, MAT corresponds to 367.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#7",
+    "text": "which number comes next in the given series 4 3 4 9 22 ?",
+    "options": [
+      "51",
+      "30",
+      "34",
+      "41"
+    ],
+    "correctAnswer": "51",
+    "explanation": "The pattern is: 4 (starting) \n 3 = 4*1 - 1 \n 4 = 3*2 - 2 \n 9 = 4*3 - 3 \n 22 = 9*4 - 4 \n So, the next term is 22*5 - 5 = 110 - 5 = 105. \n However, given the options and highlighted answer, there might be a different pattern. Let's try differences: \n 3-4 = -1 \n 4-3 = 1 \n 9-4 = 5 \n 22-9 = 13 \n The differences are -1, 1, 5, 13. \n Differences of these differences: 1 - (-1) = 2; 5 - 1 = 4; 13 - 5 = 8. \n The pattern for second differences is 2, 4, 8 (doubling). \n The next second difference should be 16. \n So, the next first difference should be 13 + 16 = 29. \n The next term in the series is 22 + 29 = 51.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#9",
+    "text": "14, 15, 18, 23, 30, ?",
+    "options": [
+      "45",
+      "39",
+      "59",
+      "41"
+    ],
+    "correctAnswer": "39",
+    "explanation": "The differences between consecutive terms are: \n 15 - 14 = 1 \n 18 - 15 = 3 \n 23 - 18 = 5 \n 30 - 23 = 7 \n The differences are consecutive odd numbers (1, 3, 5, 7). The next difference should be 9. So, the next term is 30 + 9 = 39.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#10",
+    "text": "which word describes something different from the others?",
+    "options": [
+      "GAIN",
+      "PROFIT",
+      "HARM",
+      "INTEREST"
+    ],
+    "correctAnswer": "HARM",
+    "explanation": "GAIN, PROFIT, and INTEREST are all terms related to financial benefit or increase. HARM means damage or injury, which is the opposite.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#11",
+    "text": "which number comes next in the given series 17 11 28 39 67?",
+    "options": [
+      "58",
+      "96",
+      "95",
+      "106"
+    ],
+    "correctAnswer": "106",
+    "explanation": "This is an additive series where the next term is the sum of the previous two terms, but with an offset or slightly different pattern. \n17 + 11 = 28 \n11 + 28 = 39 \n28 + 39 = 67 \nSo, the next term should be 39 + 67 = 106.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#12",
+    "text": "12, 13, 16, 21, 28, 37, ___?",
+    "options": [
+      "37",
+      "48",
+      "41",
+      "36"
+    ],
+    "correctAnswer": "48",
+    "explanation": "The differences between consecutive terms are: \n 13 - 12 = 1 \n 16 - 13 = 3 \n 21 - 16 = 5 \n 28 - 21 = 7 \n 37 - 28 = 9 \n The differences are consecutive odd numbers (1, 3, 5, 7, 9). The next difference should be 11. So, the next term is 37 + 11 = 48.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#13",
+    "text": "If 32114657 stands for POSSIBLE, then 2167 stands for?",
+    "options": [
+      "EOSB",
+      "TONE",
+      "SOBE",
+      "OSBE",
+      "EBOS"
+    ],
+    "correctAnswer": "OSBE",
+    "explanation": "Assign numbers to letters based on POSSIBLE: P=3, O=2, S=1, S=1, I=4, B=6, L=5, E=7. So, 2167 corresponds to OSBE (O=2, S=1, B=6, E=7).",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#16",
+    "text": "2, 3, 4, 6, 8, 12, 16, 24, 32, ___?",
+    "options": [
+      "42",
+      "49",
+      "69",
+      "48"
+    ],
+    "correctAnswer": "48",
+    "explanation": "This series consists of powers of 2 (2, 4, 8, 16, 32) and terms from a different pattern (3, 6, 12, 24). The powers of 2 sequence is 2, 4, 8, 16, 32. The other sequence is 3, 6, 12, 24 (each term is doubled). The last term 32 is a power of 2. The next term should be from the doubling sequence, which is 24 * 2 = 48.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#17",
+    "text": "1, 3, 8, 19, 42, ___?",
+    "options": [
+      "91",
+      "89",
+      "83",
+      "64"
+    ],
+    "correctAnswer": "83",
+    "explanation": "The pattern involves multiplication and addition: \n 1 * 2 + 1 = 3 \n 3 * 2 + 2 = 8 \n 8 * 2 + 3 = 19 \n 19 * 2 + 4 = 42 \n So, the next term is 42 * 2 + 5 = 84 + 5 = 89. \n However, the highlighted answer is 83. Let's try another pattern. \n Differences: 2, 5, 11, 23. \n Differences of differences: 3, 6, 12. This is doubling. \n Next difference of difference should be 24. \n Next first difference = 23 + 24 = 47. \n Next term = 42 + 47 = 89. \n Still 89. Let's consider 83. Could it be a slightly different operation? \n The given answer of 83 might indicate a subtle variation or an error in the provided highlight. Sticking to the highlight as per instructions.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#19",
+    "text": "Beautiful beaches attract people, no doubt about it. Just look at this city's beautiful beaches, which are among beaches in the state. Which of the following exhibits a pattern of reasoning most similar to the one exhibited in the argument?",
+    "options": [
+      "Children who are scolded severely tend to misbehave more often than other children. Hence if a child is not scolded severely to misbehave.",
+      "This software program helps increase the work efficiency of its users. As a result, these user have more free time for other",
+      "During warm weather my dog suffers from fleas more so than cooler weather. Therefore, fleas must thrive in a warm",
+      "Pesticides are known to cause anemia in some people however, most anemic people live in regions where pesticides are",
+      "Moose and bear usually appear at the same drinking hole at the same time of day. Therefore, moose and bear must grow thirsty at about the same time"
+    ],
+    "correctAnswer": "Moose and bear usually appear at the same drinking hole at the same time of day. Therefore, moose and bear must grow thirsty at about the same time",
+    "explanation": "The original argument observes a correlation (beautiful beaches attract people) and infers a cause (the beaches' beauty). Option (e) observes a correlation (moose and bear appear at the same time) and infers a cause (they grow thirsty at the same time).",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#20",
+    "text": "if 768123 stands for PRINCE, then 1823 stands for?",
+    "options": [
+      "NICE",
+      "RINE",
+      "PINE",
+      "RICE",
+      "CINE"
+    ],
+    "correctAnswer": "NICE",
+    "explanation": "Assign numbers to letters based on PRINCE: P=7, R=6, I=8, N=1, C=2, E=3. So, 1823 corresponds to NICE (N=1, I=8, C=2, E=3).",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#21",
+    "text": "7, 6, 5, 4, ___?",
+    "options": [
+      "2",
+      "3",
+      "3.5",
+      "1.5"
+    ],
+    "correctAnswer": "3",
+    "explanation": "This is a simple decreasing series by 1. The next term is 4 - 1 = 3.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#22",
+    "text": "which word describe something different from the others?",
+    "options": [
+      "Truck",
+      "Blue",
+      "White",
+      "Red",
+      "Green"
+    ],
+    "correctAnswer": "Truck",
+    "explanation": "Blue, White, Red, and Green are colors. Truck is a vehicle.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#23",
+    "text": "as any economist knows, healthy people pose less of an economic burden to society than unhealthy people. Not dollar our state government spends on prenatal care for undocumented immigrants will save taxpayers of this state the following, if true, would best explain why the statistic cited above are not surprising?",
+    "options": [
+      "Pregnant women who do not receive prenatal care are more likely to experience health problems than other pregnant women",
+      "State benefits for prenatal care serve to promote undocumented immigration",
+      "Babies born in this state to undocumented immigrant parents are entitled to infant care benefits from the state",
+      "Babies whose mothers did not receive prenatal care are just as healthy as other babies",
+      "The state's taxpayers pay for prenatal care of all immigrants"
+    ],
+    "correctAnswer": "Pregnant women who do not receive prenatal care are more likely to experience health problems than other pregnant women",
+    "explanation": "The argument implies that prenatal care saves money by preventing health problems. If not receiving prenatal care leads to more health problems, then providing it reduces these problems, thus saving costs for the state's taxpayers.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#24",
+    "text": "27, 24, 20, 15, 9, ___?",
+    "options": [
+      "8",
+      "7",
+      "4",
+      "2"
+    ],
+    "correctAnswer": "2",
+    "explanation": "The differences between consecutive terms are: \n 24 - 27 = -3 \n 20 - 24 = -4 \n 15 - 20 = -5 \n 9 - 15 = -6 \n The differences are decreasing by 1 each time (-3, -4, -5, -6). The next difference should be -7. So, the next term is 9 - 7 = 2.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#25",
+    "text": "185 141 97 89 96 ___",
+    "options": [
+      "98",
+      "185",
+      "103",
+      "7",
+      "100"
+    ],
+    "correctAnswer": "103",
+    "explanation": "This appears to be a sequence of interleaved numbers or a pattern that's harder to deduce. Let's look at the differences: \n 141 - 185 = -44 \n 97 - 141 = -44 \n 89 - 97 = -8 \n 96 - 89 = 7 \n This pattern of differences (-44, -44, -8, 7) doesn't seem straightforward. \n However, if it's two interleaved series: \n Series 1: 185, 97, 96 \n Series 2: 141, 89, ? \n The second highlighted answer for Q25 points to 103.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#26",
+    "text": "it doesn't surprise me that the critic on our local radio station went off on another tirade today about the city measure first time that he has criticized the choir. But this time his criticisms were simply inaccurate and unjustified. For nothing but the choir's lack of expressiveness. As a professional vocal instructor, I have met with these singers individual complete confidence that each of the members of the choir has quite an expressive voice. Which one of the following in the author's reasoning?",
+    "options": [
+      "He attempts to conclude the truth of a general situation from evidence about one specific situation",
+      "He directs his argument against the critic's character rather than against his claims",
+      "He ignores evidences that the critic's remarks might in the fact be justified.",
+      "He assumes that a group will have a given attribute if each of its parts has that attribute",
+      "He cities his own professional expertise as the sole explanation for his defense of the other"
+    ],
+    "correctAnswer": "He assumes that a group will have a given attribute if each of its parts has that attribute",
+    "explanation": "The author argues that the choir as a whole is expressive because each individual singer has an expressive voice. This is a classic example of the fallacy of composition, where one assumes that what is true for the parts is also true for the whole.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#27",
+    "text": "2, 6, 12, 20, ___?",
+    "options": [
+      "38",
+      "30",
+      "45",
+      "60"
+    ],
+    "correctAnswer": "30",
+    "explanation": "The differences between consecutive terms are: \n 6 - 2 = 4 \n 12 - 6 = 6 \n 20 - 12 = 8 \n The differences are increasing by 2 each time (4, 6, 8). The next difference should be 10. So, the next term is 20 + 10 = 30.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#28",
+    "text": "which word describes something different from the others?",
+    "options": [
+      "Tomato",
+      "Onion",
+      "Chill",
+      "Carrot"
+    ],
+    "correctAnswer": "Chill",
+    "explanation": "Tomato, Onion, and Carrot are vegetables/root vegetables. 'Chill' refers to a spice (chilli) or a sensation of cold, which is different.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#30",
+    "text": "the term independent x in the (x² - 4/x)⁵ is",
+    "options": [
+      "340",
+      "250",
+      "120",
+      "200",
+      "3840"
+    ],
+    "correctAnswer": "120",
+    "explanation": "For the binomial expansion of (a + b)ⁿ, the general term is T(r+1) = nCr * a^(n-r) * b^r. Here a = x², b = -4/x = -4x⁻¹, and n = 5. \n T(r+1) = 5Cr * (x²)^(5-r) * (-4x⁻¹)^r \n = 5Cr * x^(10-2r) * (-4)^r * x^(-r) \n = 5Cr * (-4)^r * x^(10-3r). \n For the term independent of x, the exponent of x must be 0: \n 10 - 3r = 0 \n 3r = 10 \n r = 10/3. \n Since r must be an integer, there is no term independent of x if the exponent is 5. \n Let's recheck the question or options. Assuming a typo in the exponent of the binomial expression (perhaps 6 or 9) or in the question's 'independent x' meaning. \n However, if it were (x² - 4/x)^6: \n 12 - 3r = 0 => r = 4. \n 6C4 * (-4)^4 = 15 * 256 = 3840. (This matches option e). \n Let's assume the exponent is (x² - 4/x)^5 as written. This case does not yield an integer 'r'. \n If the expression was (x + 1/x)^n, the term independent of x exists when n is even. \n If the expression was (x^a + x^b)^n, the exponent of x in the general term is a(n-r) + br. Setting this to 0. \n If (x^2 - 4x^-1)^5: 2(5-r) - r = 10 - 2r - r = 10 - 3r. No integer r. \n Given the highlighted answer '120', let's check what 'r' would make this possible for other powers. \n If the exponent was different, maybe? The question text has 'x' where it might be a 'constant' coefficient in other terms. \n Let's assume the question implicitly refers to a different binomial or there's a specific context leading to 120. For example, in (x^2 + k/x)^n, the term independent of x is found using the formula. \n 120 is 5C3 * (-4)^2 = 10 * 16 = 160. Not 120. \n 5C2 * (-4)^3 = 10 * (-64) = -640. \n 5C4 * (-4)^1 = 5 * -4 = -20. \n This question seems problematic with its current numbers. I will record the highlighted answer as provided.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#32",
+    "text": "4, 54, 13, 45, 22, 36, ___?",
+    "options": [
+      "31",
+      "29",
+      "34",
+      "16"
+    ],
+    "correctAnswer": "31",
+    "explanation": "This is an interleaved series. \n Series 1 (odd positions): 4, 13, 22 \n Differences: 13-4=9, 22-13=9. So, adds 9 each time. The next term in this series would be 22+9 = 31. \n Series 2 (even positions): 54, 45, 36 \n Differences: 45-54=-9, 36-45=-9. So, subtracts 9 each time. \n The missing term is the next term in Series 1, which is 31.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#35",
+    "text": "the senate candidate expressed outrage that few judge have any background in technology, yet they try to resolve cases involving high tech companies. He stated that not one federal judge has a degree or any experience in computer technology. A promising response to this concern, arguing things are not as bad as they might seem, could involve which of the following claims?",
+    "options": [
+      "There is very little opportunity for and indeed little need for, technical expertise in the judicial branch. There is therefore almost no way for a technical specialist to rise through the ranks to a top-level position in government",
+      "Most of the public policy question in this area are really about the morality and the value of scientific and technological developments. They do not require much technical understanding beyond that of a layperson.",
+      "The rewards of a life as a judge, in terms of both money and prestige, are not high enough to attract top-flight technical experts to this area.",
+      "There is a lack of people who are qualified in both technical and legal areas of expertise.",
+      "Computer scientists, by and large, have little interest in politics and public policy. It would be difficult to find scientist with the degree of commitment, required for a serious contribution to the judicial system."
+    ],
+    "correctAnswer": "Most of the public policy question in this area are really about the morality and the value of scientific and technological developments. They do not require much technical understanding beyond that of a layperson.",
+    "explanation": "The candidate's concern is about judges lacking technical background. The most promising response would be to show that such technical expertise is not actually critical for their job. Option (b) directly addresses this by stating that the issues are more about policy/morality than deep technical understanding.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#36",
+    "text": "There has been a sharp increase in the subscription prices of many professional and scholarity journals in the past seven years. Many publisher ascribe the necessity for these increases to the easy availability of photocopying facilities, which enable people simply to copy the articles they want rather than buying the journal, which of the following, if it is true, would make this explanation more plausible?",
+    "options": [
+      "In almost every field, several new professional and scholarly journals have begun publication in the past few years",
+      "The great majority of professional and scholarly journals have a massive backlog of papers awaiting publication.",
+      "In the five years immediately preceding the price surge, there was a substantial decline in the number of individual subscriptions remained fairly stable.",
+      "Over the past five years there has been a substantial decline in the number of individual subscriptions to professional and scholarly journals, while library subscriptions have remained fairly stable"
+    ],
+    "correctAnswer": "In the five years immediately preceding the price surge, there was a substantial decline in the number of individual subscriptions remained fairly stable.",
+    "explanation": "The publishers blame photocopying. If individual subscriptions declined significantly just before the price surge, it supports the idea that fewer people were buying journals (perhaps due to photocopying), thus forcing publishers to raise prices for remaining subscribers.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#37",
+    "text": "which number goes at the bottom point of the star?",
+    "options": [
+      "8",
+      "7",
+      "6",
+      "5",
+      "4"
+    ],
+    "correctAnswer": "5",
+    "explanation": "This question requires an image of the star, which is not provided in the text. Assuming a common type of numerical star puzzle where numbers around the points follow a pattern. Without the image, a definitive explanation cannot be provided, but the highlighted answer is 5.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#38",
+    "text": "of the following four statements: i) {1,2,3}={1,2,3} ii) {}c{4} iii) 8c {a,b,8,10} iv) {a}C{{a}}",
+    "options": [
+      "All are correct",
+      "Only one is correct",
+      "Only two is correct",
+      "Only three is correct"
+    ],
+    "correctAnswer": "Only one is correct",
+    "explanation": "Let's interpret the symbols: '=' for equality, 'c' for element of (∈), 'C' for subset (⊆). \n i) {1,2,3}={1,2,3} is True (Set equality). \n ii) {} ∈ {4} is False (The empty set is a subset of {4}, not an element of {4}). If 'c' meant 'subset', then {} ⊆ {4} is True. \n iii) 8 ∈ {a,b,8,10} is True (8 is an element of the set). \n iv) {a} ⊆ {{a}} is False ({a} is an element of {{a}}, not a subset). For it to be a subset, 'a' would have to be an element of {{a}}, which implies a = {a}, which is generally false. \n \n Based on standard set theory interpretation, if 'c' and 'C' were meant as symbols: \n Case 1: c=element of, C=subset of \n i) True \n ii) False ({} is not an element of {4}) \n iii) True \n iv) False ({a} is not a subset of {{a}}) \n So, 2 statements are true. \n \n Case 2: c=subset of, C=subset of \n i) True \n ii) True ({} is a subset of {4}) \n iii) 8 is an element of, not subset of. So this statement is ambiguous/false if 'c' means subset. If 8 is interpreted as {8}, then {8} is not a subset of {a,b,8,10}. \n iv) False \n \n Given the provided 'correctAnswer' is 'Only one is correct', this implies a specific, perhaps non-standard, interpretation of the symbols or that only one of them is truly correct. Without further clarification on 'c' and 'C', it's ambiguous. But following the highlight, only one is considered correct.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#39",
+    "text": "Sarah bought a mini hi-fi set for Rs:600. He sold it to all at a loss of 20%. All sold it to Taha and made a profit of 5%. How much did Taha pay for it?",
+    "options": [
+      "Rs.684",
+      "Rs.504",
+      "Rs.750",
+      "Rs.456"
+    ],
+    "correctAnswer": "Rs.504",
+    "explanation": "Sarah bought for Rs.600. \n Sarah sold at a loss of 20%: 600 * (1 - 0.20) = 600 * 0.80 = Rs.480. (This is All's purchase price) \n All sold to Taha at a profit of 5%: 480 * (1 + 0.05) = 480 * 1.05 = Rs.504. \n Taha paid Rs.504.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#40",
+    "text": "Sally has never received a violation from the federal aviation administration during her 16-year flying must be a great pilot. Which of the following can be said about the reasoning above?",
+    "options": [
+      "The argument is built upon hidden assumptions.",
+      "The definitions of the terms create ambiguity.",
+      "The argument uses circular reasoning",
+      "The argument works by analogy."
+    ],
+    "correctAnswer": "The argument is built upon hidden assumptions.",
+    "explanation": "The argument assumes that not receiving a violation automatically equates to being a 'great' pilot. There could be other reasons for not receiving violations (e.g., flying less, lucky, violations not detected), and 'great' implies more than just compliance.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#41",
+    "text": "if 5x6 = 15, 4x9 = 18, 7x4 = 14, then 2 x 4 =?",
+    "options": [
+      "8",
+      "20",
+      "16",
+      "12",
+      "4"
+    ],
+    "correctAnswer": "4",
+    "explanation": "The pattern is (first number * second number) / 2. \n 5 * 6 = 30; 30 / 2 = 15 \n 4 * 9 = 36; 36 / 2 = 18 \n 7 * 4 = 28; 28 / 2 = 14 \n So, 2 * 4 = 8; 8 / 2 = 4.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#42",
+    "text": "the financial aids officer sent an email to all of the students in the university that they needed to submit the financial aid Form by Friday along with National identity card, guardian's income certificate and statement of expenses. Which one of the following assumptions was the financial aid officer making?",
+    "options": [
+      "all the students were not interested in financial aid",
+      "all of the students could pay their fees",
+      "all of the students had a GPA above 3.00",
+      "all of the students wanted financial aid",
+      "all of the students had a GPA below 3.00"
+    ],
+    "correctAnswer": "all of the students wanted financial aid",
+    "explanation": "By sending the email to 'all students' about submitting the financial aid form, the officer assumes that all students are interested in or might need financial aid. Otherwise, sending it to everyone would be illogical.",
+    "subject": "iq"
+  },
+  {
+    "id": "fast_test_Q#43",
+    "text": "if a bicycle is travelling at a speed of 10 km/hour, the time required to cover 400 m is:",
+    "options": [
+      "2.4 min",
+      "8.9 min",
+      "7.6 min",
+      "1.3 min",
+      "3.2 min"
+    ],
+    "correctAnswer": "2.4 min",
+    "explanation": "Speed = 10 km/hour = 10 * 1000 meters / (60 * 60 seconds) = 10000 / 3600 m/s = 25/9 m/s. \n Distance = 400 m. \n Time = Distance / Speed = 400 m / (25/9 m/s) = 400 * 9 / 25 seconds = 16 * 9 seconds = 144 seconds. \n Convert to minutes: 144 seconds / 60 seconds/minute = 2.4 minutes.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#44",
+    "text": "the angle between the two bisectors of opposite quadrants is.",
+    "options": [
+      "60 degrees",
+      "90 degrees",
+      "45 degrees",
+      "80 degrees"
+    ],
+    "correctAnswer": "90 degrees",
+    "explanation": "The bisectors of opposite quadrants are lines like y=x (bisects Quadrant I and III) and y=-x (bisects Quadrant II and IV). These two lines are perpendicular to each other, so the angle between them is 90 degrees.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#45",
+    "text": "In a school ratio of the number of between male and female teachers is 5:9. If the number of female teachers is 27, find the number of male teachers.",
+    "options": [
+      "15",
+      "12"
+    ],
+    "correctAnswer": "15",
+    "explanation": "Ratio of Male:Female teachers is 5:9. \n Number of female teachers = 27. \n Since 9 parts correspond to 27 teachers, 1 part = 27 / 9 = 3 teachers. \n Number of male teachers = 5 parts = 5 * 3 = 15 teachers.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#47",
+    "text": "which of the following fractions is the least?",
+    "options": [
+      "7/8",
+      "7/12",
+      "6/17",
+      "1/2"
+    ],
+    "correctAnswer": "6/17",
+    "explanation": "Convert fractions to decimals for comparison: \n 7/8 = 0.875 \n 7/12 ≈ 0.583 \n 6/17 ≈ 0.353 \n 1/2 = 0.5 \n Comparing the values, 0.353 (6/17) is the least.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#48",
+    "text": "an arc AB of length of 5cm is marked on a circle of radius 3cm. area of sector bounded by this arc and radii from A and B is",
+    "options": [
+      "7.5 cm²",
+      "75m²",
+      "7.5m²",
+      "75cm²"
+    ],
+    "correctAnswer": "7.5 cm²",
+    "explanation": "The area of a sector can be calculated by A = (1/2) * r * L, where r is the radius and L is the arc length. \n Given r = 3 cm and L = 5 cm. \n Area = (1/2) * 3 cm * 5 cm = 7.5 cm².",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#49",
+    "text": "which of the following is the definition of singleton",
+    "options": [
+      "A set having no element",
+      "A set having two element",
+      "A set having one element",
+      "A set having n element"
+    ],
+    "correctAnswer": "A set having one element",
+    "explanation": "A singleton set (or unit set) is a set containing exactly one element.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#51",
+    "text": "the measure of each interior angle of a regular hexagon is:",
+    "options": [
+      "135 degree",
+      "100 degree",
+      "108 degree",
+      "120 degree"
+    ],
+    "correctAnswer": "120 degree",
+    "explanation": "For a regular n-sided polygon, the measure of each interior angle is (n-2)*180° / n. \n For a hexagon, n=6. \n Angle = (6-2)*180° / 6 = 4*180° / 6 = 720° / 6 = 120°.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#52",
+    "text": "the product of [[1 3], [2 -3]] and [[-1 0], [3 2]] gives",
+    "options": [
+      "[-1 0; 6 -6]",
+      "[-2 0; 3 2]",
+      "[8 6; -11 -6]",
+      "[9 0; 6 2]"
+    ],
+    "correctAnswer": "[8 6; -11 -6]",
+    "explanation": "Let A = [[1 3], [2 -3]] and B = [[-1 0], [3 2]]. \n A * B = [[(1*-1)+(3*3), (1*0)+(3*2)], [(2*-1)+(-3*3), (2*0)+(-3*2)]] \n = [[-1+9, 0+6], [-2-9, 0-6]] \n = [[8, 6], [-11, -6]].",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#54",
+    "text": "7x – 5y = 13, 2x - 7y = 26, 9x – 12y =?",
+    "options": [
+      "26",
+      "39",
+      "40",
+      "52"
+    ],
+    "correctAnswer": "39",
+    "explanation": "Notice that the expression to be found, 9x - 12y, can be obtained by adding the two given equations: \n (7x - 5y) + (2x - 7y) = 13 + 26 \n 7x + 2x - 5y - 7y = 39 \n 9x - 12y = 39.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#55",
+    "text": "a train travels a distance of 40 km per hour on an average with stoppages its speed is 50 km per hour. How much time on an average per hour it stops",
+    "options": [
+      "20 min",
+      "25 min",
+      "12 min",
+      "15 min"
+    ],
+    "correctAnswer": "12 min",
+    "explanation": "Speed without stoppages = 50 km/hour. \n Speed with stoppages = 40 km/hour. \n The reduction in speed due to stoppages is (50 - 40) = 10 km/hour. \n This means that in one hour, the train effectively loses 10 km of travel distance due to stoppages. \n The time taken to cover 10 km at the actual (no stoppage) speed of 50 km/h is the time the train was stopped. \n Time stopped = Distance / Speed = 10 km / 50 km/hour = 1/5 hour. \n Convert to minutes: (1/5) * 60 minutes = 12 minutes.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#56",
+    "text": "if 2x + 6y = 0 and x - 3y = 10 then x is equal to:",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "correctAnswer": "5",
+    "explanation": "Given equations: \n 1) 2x + 6y = 0 \n 2) x - 3y = 10 \n Divide equation (1) by 2: \n x + 3y = 0 \n Now add this modified equation to equation (2): \n (x + 3y) + (x - 3y) = 0 + 10 \n 2x = 10 \n x = 5.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#57",
+    "text": "the value of x satisfying log₃₂x = 0.8 is",
+    "options": [
+      "10",
+      "16",
+      "12.8",
+      "25.6"
+    ],
+    "correctAnswer": "16",
+    "explanation": "The logarithmic equation log_b(a) = c is equivalent to b^c = a. \n So, log₃₂x = 0.8 means x = 32^0.8. \n 0.8 can be written as 4/5. \n x = 32^(4/5) \n Since 32 = 2⁵, we have: \n x = (2⁵)^(4/5) = 2^(5 * 4/5) = 2⁴ = 16.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#58",
+    "text": "select the antonym of the word: Merge",
+    "options": [
+      "Join",
+      "Merriment",
+      "Remorse",
+      "Separate"
+    ],
+    "correctAnswer": "Separate",
+    "explanation": "Merge means to combine or unite. The antonym is Separate, meaning to divide or detach.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#59",
+    "text": "when you _____, be sure to call me.",
+    "options": [
+      "Are arriving",
+      "Arrived",
+      "Will arrive",
+      "Arrive"
+    ],
+    "correctAnswer": "Arrive",
+    "explanation": "In conditional clauses using 'when' to refer to a future event, the simple present tense is used in the 'when' clause. So, 'when you arrive' is correct.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#60",
+    "text": "water is flowing out of, a water in the shape of a cube, with each side of length 4 m at the rate of 2 m cube per hour. If the tank is full initially, how many hours will it takes to be half empty?",
+    "options": [
+      "19",
+      "17",
+      "18",
+      "20",
+      "16"
+    ],
+    "correctAnswer": "16",
+    "explanation": "Volume of the cube-shaped tank = side³ = 4 m * 4 m * 4 m = 64 m³. \n If the tank is full, to be half empty means half of its volume must flow out. \n Half volume = 64 m³ / 2 = 32 m³. \n Rate of flow = 2 m³ per hour. \n Time = Volume / Rate = 32 m³ / (2 m³/hour) = 16 hours.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#62",
+    "text": "if x<y and a=b, then:",
+    "options": [
+      "x + a = y + b",
+      "x + a = b",
+      "x + a< y + b",
+      "x + a = y"
+    ],
+    "correctAnswer": "x + a< y + b",
+    "explanation": "If x < y and a = b, then adding a to both sides of the inequality x < y gives x + a < y + a. Since a = b, we can replace y + a with y + b, resulting in x + a < y + b.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#63",
+    "text": "a number decreased by 27 ½ % gives 87. The number is",
+    "options": [
+      "135",
+      "110",
+      "120",
+      "58"
+    ],
+    "correctAnswer": "120",
+    "explanation": "Let the number be N. \n 27 ½ % = 27.5% = 0.275. \n A number decreased by 27.5% means N - 0.275N = 0.725N. \n So, 0.725N = 87. \n N = 87 / 0.725 = 120.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#64",
+    "text": "select the pair of words or phrases that best expresses a relationship similar to that expressed in the capitalized pair: INSOLENCE :RESPECT ::",
+    "options": [
+      "Generosity: resource",
+      "Embarrassment: regret",
+      "Deviation: restraint",
+      "Audacity: restraint",
+      "Presumption: recurrence"
+    ],
+    "correctAnswer": "Audacity: restraint",
+    "explanation": "INSOLENCE is a lack of RESPECT (antonym relationship). Similarly, AUDACITY is a lack of RESTRAINT (antonym relationship).",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#66",
+    "text": "my mother is allergic to ............ cigarette smoke.",
+    "options": [
+      "A",
+      "An",
+      "The",
+      "No article"
+    ],
+    "correctAnswer": "No article",
+    "explanation": "'Cigarette smoke' is used as a general, uncountable noun here. No article is needed.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#67",
+    "text": "select the antonym of the word: Foe",
+    "options": [
+      "Tedious",
+      "Promote",
+      "Friend",
+      "Brute",
+      "Operation"
+    ],
+    "correctAnswer": "Friend",
+    "explanation": "A Foe is an enemy. The antonym is Friend.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#68",
+    "text": "select the word or phrase that best completes the sentence: I'm not sure where Adll is. He _______ taken his brother to a movie or to the zoo.",
+    "options": [
+      "Is have",
+      "Ought not to have",
+      "Will have",
+      "May have",
+      "Would have"
+    ],
+    "correctAnswer": "May have",
+    "explanation": "'May have' expresses possibility or conjecture about a past event, which fits the context of 'I'm not sure'.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#70",
+    "text": "insulation was fitted to ____ further heat loss from the building.",
+    "options": [
+      "Save",
+      "Protect",
+      "Prevent",
+      "Guard"
+    ],
+    "correctAnswer": "Prevent",
+    "explanation": "Insulation is installed to prevent (stop) heat loss.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#71",
+    "text": "select the word or phrase that best completes the sentence: the business has lost a lot of orders recently and is going through a _______ time.",
+    "options": [
+      "Thick",
+      "Acute",
+      "Thin",
+      "Slender",
+      "Poor"
+    ],
+    "correctAnswer": "Poor",
+    "explanation": "'Going through a poor time' is an idiom meaning experiencing a difficult or bad period. 'Acute time' is not standard usage.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#72",
+    "text": "enthusiastic : blasé :: upright : _____",
+    "options": [
+      "Prone",
+      "Unlikely",
+      "Deplore",
+      "Passionate"
+    ],
+    "correctAnswer": "Prone",
+    "explanation": "ENTHUSIASTIC and BLASÉ are antonyms (enthusiastic means eager, blasé means indifferent). UPRIGHT (moral, honest) is an antonym of PRONE (to wrongdoing, susceptible to something undesirable).",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#74",
+    "text": "for what value of k, the sum if roots of the equation 5x² + kx - 6 = 0 will be equal to the product of its roots.",
+    "options": [
+      "K=6",
+      "K=3",
+      "K=-4",
+      "K= √2",
+      "K=-6"
+    ],
+    "correctAnswer": "K=-4",
+    "explanation": "For a quadratic equation ax² + bx + c = 0: \n Sum of roots = -b/a \n Product of roots = c/a \n Given equation: 5x² + kx - 6 = 0. So a=5, b=k, c=-6. \n Sum of roots = -k/5 \n Product of roots = -6/5 \n Set them equal: -k/5 = -6/5 \n -k = -6 \n k = 6. \n \n My calculation results in K=6. However, the provided correct answer is K=-4. Sticking to the provided highlighted answer as per instructions.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#75",
+    "text": "select the word or phrase that best completes the sentence: I _______ all my work and now I am completely busy until Monday.",
+    "options": [
+      "Had done",
+      "Was doing",
+      "Have done",
+      "Will do"
+    ],
+    "correctAnswer": "Have done",
+    "explanation": "'Have done' (present perfect) indicates a completed action that has a present relevance. 'I have done all my work' means the work is finished, and as a result, the speaker is now busy until Monday.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#76",
+    "text": "the product of the cube root of unity is",
+    "options": [
+      "-1",
+      "4",
+      "0",
+      "1"
+    ],
+    "correctAnswer": "1",
+    "explanation": "The cube roots of unity are 1, ω, and ω². The product of these roots is 1 * ω * ω² = ω³. By definition, ω³ = 1.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#79",
+    "text": "_____: future :: historian : past",
+    "options": [
+      "Date",
+      "Book",
+      "General",
+      "Seer"
+    ],
+    "correctAnswer": "Seer",
+    "explanation": "A HISTORIAN is someone who studies the PAST. A SEER is someone who predicts or foretells the FUTURE.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#82",
+    "text": "haggle most nearly means",
+    "options": [
+      "Decrease",
+      "Climb",
+      "Tired",
+      "Bargain"
+    ],
+    "correctAnswer": "Bargain",
+    "explanation": "To haggle means to dispute or bargain persistently, especially over the cost of something.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#83",
+    "text": "select the word or phrase that best completes the sentence: the business has lost a lot of orders recently and is going through a _______ time.",
+    "options": [
+      "Thick",
+      "Acute",
+      "Thin",
+      "Slender",
+      "Poor"
+    ],
+    "correctAnswer": "Poor",
+    "explanation": "'Going through a poor time' is an idiom meaning experiencing a difficult or bad period. 'Acute time' is not standard usage.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#84",
+    "text": "select the word or phrase that best completes the sentence: Psychology _______ a fun course.",
+    "options": [
+      "Were",
+      "Are",
+      "Is",
+      "Has",
+      "Have"
+    ],
+    "correctAnswer": "Is",
+    "explanation": "'Psychology' is a singular subject, even though it ends in '-s'. Therefore, it requires a singular verb, 'is'.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#85",
+    "text": "which is a synonym for Aphorism?",
+    "options": [
+      "Prodigal",
+      "Prune",
+      "Activism",
+      "Wither",
+      "Proverb"
+    ],
+    "correctAnswer": "Proverb",
+    "explanation": "An aphorism is a concise, pithy statement of a general truth or principle. A proverb is a short, popular saying that expresses a common truth or belief, making it a close synonym.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#86",
+    "text": "refrain is most similar to",
+    "options": [
+      "Desist",
+      "Persevere",
+      "Glimpse",
+      "Secure"
+    ],
+    "correctAnswer": "Desist",
+    "explanation": "To refrain means to stop oneself from doing something or to hold back. To desist means to cease to do something; stop. They are synonyms.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#88",
+    "text": "endure : continue :: entreat : _____ ",
+    "options": [
+      "Purchase",
+      "Surrender",
+      "Plea",
+      "Segue"
+    ],
+    "correctAnswer": "Plea",
+    "explanation": "ENDURE and CONTINUE are synonyms. ENTREAT means to ask someone earnestly or anxiously to do something, which is synonymous with making a PLEA.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#89",
+    "text": "if something is relentless it is:",
+    "options": [
+      "Endlessly long",
+      "Mercilessly persistent",
+      "Hopelessly vague",
+      "Surprisingly strong",
+      "Adamantly resistant"
+    ],
+    "correctAnswer": "Mercilessly persistent",
+    "explanation": "Relentless means unceasingly intense, persistent, or unremitting. 'Mercilessly persistent' captures this meaning best.",
+    "subject": "english"
+  },
+  {
+    "id": "fast_test_Q#92",
+    "text": "for what value of a will the vector [1,2a,-4] be perpendicular to the vector [-3,1,2]?",
+    "options": [
+      "2/11",
+      "-1",
+      "11/2",
+      "-3",
+      "4"
+    ],
+    "correctAnswer": "11/2",
+    "explanation": "Two vectors are perpendicular if their dot product is zero. \n Let v1 = [1, 2a, -4] and v2 = [-3, 1, 2]. \n v1 . v2 = (1)(-3) + (2a)(1) + (-4)(2) = 0 \n -3 + 2a - 8 = 0 \n 2a - 11 = 0 \n 2a = 11 \n a = 11/2.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#93",
+    "text": "find the second derivative of y = tanx",
+    "options": [
+      "2secxtanx",
+      "4secx.tanx",
+      "2sec²x",
+      "2CotxCosec²x",
+      "2sec²xtanx"
+    ],
+    "correctAnswer": "2sec²xtanx",
+    "explanation": "First derivative: dy/dx (tanx) = sec²x. \n Second derivative: d²/dx² (tanx) = d/dx (sec²x). \n Using the chain rule, d/dx (f(x)²) = 2f(x)f'(x). Here f(x) = secx. \n d/dx (secx) = secx tanx. \n So, d/dx (sec²x) = 2 * secx * (secx tanx) = 2sec²xtanx.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#94",
+    "text": "Lim x-5 / sin(x-5) =? (X⇒3).",
+    "options": [
+      "Infinity",
+      "1",
+      "4",
+      "0"
+    ],
+    "correctAnswer": "1",
+    "explanation": "This limit is of the form lim (u→0) u / sin(u) = 1. If X⇒3 is a typo and it should be X⇒5, then let u = x-5. As x→5, u→0. The limit becomes lim (u→0) u / sin(u) = 1. \n If X⇒3 is not a typo, then (3-5)/sin(3-5) = -2/sin(-2) = -2/(-sin(2)) = 2/sin(2), which is not 1. Given the highlight, the interpretation that X⇒5 was intended is most likely.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#97",
+    "text": "if f(x) = 3tan(4x + 2), then period of f(x) = ",
+    "options": [
+      "π/4",
+      "π/4 + 2",
+      "4π",
+      "3π",
+      "π/3"
+    ],
+    "correctAnswer": "π/4",
+    "explanation": "For a trigonometric function of the form f(x) = A tan(Bx + C), the period is π/|B|. \n In f(x) = 3tan(4x + 2), B = 4. \n So, the period = π/|4| = π/4.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#98",
+    "text": "if θ is the angle between the vector b and c such that θ = 0, then b x c =",
+    "options": [
+      "0",
+      "1",
+      "5",
+      "9",
+      "3"
+    ],
+    "correctAnswer": "0",
+    "explanation": "The magnitude of the cross product of two vectors b and c is given by |b x c| = |b| |c| sin(θ). \n If the angle θ between the vectors is 0 degrees, then sin(0°) = 0. \n Therefore, |b x c| = |b| |c| * 0 = 0. The cross product is the zero vector.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#99",
+    "text": "area of triangle in terms of two sides and an inclined angle is",
+    "options": [
+      "A=1/2an sinx=1/2ac sin ẞ=1/2cot x",
+      "A=1/2bc sinx=1/2ac sin β=1/2ab sin y",
+      "A=1/2ab cosx=1/2bc tan y =1/2sec ab x",
+      "A=2ab sinx=2ac sinβ=2ab cotx",
+      "A=1/2ac cosβ=1/2ab cosy=1/2 bc cos"
+    ],
+    "correctAnswer": "A=1/2bc sinx=1/2ac sin β=1/2ab sin y",
+    "explanation": "The area of a triangle can be calculated using the formula A = (1/2)ab sin(C), where a and b are the lengths of two sides and C is the included angle. Option (b) provides this formula using different variable names for sides and angles (e.g., 'x', 'β', 'y' might denote the angles opposite sides a, b, c respectively).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#101",
+    "text": "lim(1-x)^(1/x) as x→0 =?",
+    "options": [
+      "1",
+      "1./e",
+      "e",
+      "∞",
+      "-1/e"
+    ],
+    "correctAnswer": "1./e",
+    "explanation": "This is a standard limit form (1^∞) which evaluates to e^a for lim (x→0) (1+ax)^(1/x). \n In this case, we have (1 + (-1)x)^(1/x), so a = -1. \n Therefore, the limit is e^(-1), which is 1/e.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#102",
+    "text": "if cos2x= sinx and x lies in the 1st quadrant, then x =",
+    "options": [
+      "90°",
+      "180°",
+      "60°",
+      "30°",
+      "270°"
+    ],
+    "correctAnswer": "30°",
+    "explanation": "Given cos(2x) = sin(x). \n Use the identity cos(2x) = 1 - 2sin²x. \n 1 - 2sin²x = sinx \n 2sin²x + sinx - 1 = 0 \n Let u = sinx. Then 2u² + u - 1 = 0. \n Factoring the quadratic: (2u - 1)(u + 1) = 0. \n So, 2u - 1 = 0 => u = 1/2, or u + 1 = 0 => u = -1. \n This means sinx = 1/2 or sinx = -1. \n Since x lies in the 1st quadrant, sinx must be positive. Thus, sinx = 1/2. \n For sinx = 1/2 in the 1st quadrant, x = 30°.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#103",
+    "text": "the set (1,w,w² )when w³ =1 is an abelian group with respect standard multiplication then inverse of w² is",
+    "options": [
+      "1",
+      "W2",
+      "does not exist",
+      "w"
+    ],
+    "correctAnswer": "w",
+    "explanation": "In a group where w³ = 1 (the cube roots of unity under multiplication), the inverse of an element 'a' is 'a⁻¹' such that a * a⁻¹ = 1. \n For w², we need w² * (w²)⁻¹ = 1. \n We know w³ = 1. If we multiply w² by w, we get w³ = 1. \n Therefore, the inverse of w² is w.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#104",
+    "text": "What is equation of a straight line passing through origin and perpendicular to the y-axis?",
+    "options": [
+      "y = x",
+      "y = 0",
+      "y = 1",
+      "y = ∞",
+      "x = 0"
+    ],
+    "correctAnswer": "y = 0",
+    "explanation": "A line perpendicular to the y-axis is a horizontal line, which has the equation y = constant. \n If this line passes through the origin (0,0), then the constant must be 0. \n So, the equation is y = 0 (which is the x-axis).",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#105",
+    "text": "the value of ∫e⁶ˣ(e²⁻ˣ)² / eˣ⁺³ dx is",
+    "options": [
+      "e⁶ˣ + c",
+      "2eˣ + c",
+      "e³ˣ + c",
+      "x + c",
+      "e³ˣ⁺¹ / 3 + c"
+    ],
+    "correctAnswer": "e³ˣ⁺¹ / 3 + c",
+    "explanation": "First, simplify the integrand using exponent rules: \n e⁶ˣ(e²⁻ˣ)² / eˣ⁺³ = e⁶ˣ * e^(2(2-x)) / e^(x+3) \n = e⁶ˣ * e^(4-2x) / e^(x+3) \n = e^(6x + 4 - 2x - (x+3)) \n = e^(6x + 4 - 2x - x - 3) \n = e^(3x + 1). \n Now, integrate ∫ e^(3x + 1) dx. \n Let u = 3x + 1, then du = 3 dx, so dx = du/3. \n ∫ e^u (du/3) = (1/3) ∫ e^u du = (1/3) e^u + C \n Substitute u back: (1/3) e^(3x + 1) + C.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#106",
+    "text": "let z = 4 – 2√-2 Then (z' + z)² =",
+    "options": [
+      "64",
+      "8",
+      "24",
+      "32",
+      "16"
+    ],
+    "correctAnswer": "64",
+    "explanation": "Given z = 4 - 2√-2 = 4 - 2i√2 (since √-2 = i√2). \n z' (the conjugate of z) = 4 + 2i√2. \n z' + z = (4 + 2i√2) + (4 - 2i√2) = 8. \n (z' + z)² = 8² = 64.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#107",
+    "text": "if S ={(1,1),(1,3),(1,5),(3,1),(3,3),(3,5),(5,1),(5,3),(5,5)} Then write r = {(x, y)/x > y}",
+    "options": [
+      "r= {(3, -3), (5,5), (1,1)}",
+      "r= {(1, 5), (1, 3), (5, 5)}",
+      "none of these",
+      "r = {(3, 3),(5, 5), (1, 1)}",
+      "r = {(3, 1),(5, 1),(5, 3)}"
+    ],
+    "correctAnswer": "r = {(3, 1),(5, 1),(5, 3)}",
+    "explanation": "We need to select pairs (x,y) from set S where the first element x is greater than the second element y (x > y). \n (1,1) -> 1 is not > 1 \n (1,3) -> 1 is not > 3 \n (1,5) -> 1 is not > 5 \n (3,1) -> 3 > 1 (include) \n (3,3) -> 3 is not > 3 \n (3,5) -> 3 is not > 5 \n (5,1) -> 5 > 1 (include) \n (5,3) -> 5 > 3 (include) \n (5,5) -> 5 is not > 5 \n So, r = {(3,1), (5,1), (5,3)}.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#108",
+    "text": "Find the equation to the circle whose center is (2,0) and radius is 3 units ?",
+    "options": [
+      "x²+y²-4x+5=0",
+      "-x2-y2 = 4x -3",
+      "X2+y²-4x-5=0",
+      "X2- y²-4x+5=0",
+      "X2+y²-4x+14=0"
+    ],
+    "correctAnswer": "X2+y²-4x-5=0",
+    "explanation": "The standard equation of a circle with center (h,k) and radius r is (x-h)² + (y-k)² = r². \n Given center (h,k) = (2,0) and radius r = 3. \n (x-2)² + (y-0)² = 3² \n x² - 4x + 4 + y² = 9 \n x² + y² - 4x + 4 - 9 = 0 \n x² + y² - 4x - 5 = 0.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#109",
+    "text": "If f(x)=2x³-√3x²+√3 Then f (-√3 )=",
+    "options": [
+      "-10√3",
+      "-8√3",
+      "4√3",
+      "-5√3 -9",
+      "-18-2√3"
+    ],
+    "correctAnswer": "-18-2√3",
+    "explanation": "Substitute x = -√3 into f(x) = 2x³-√3x²+√3: \n f(-√3) = 2(-√3)³ - √3(-√3)² + √3 \n (-√3)³ = -(√3 * √3 * √3) = -3√3 \n (-√3)² = 3 \n f(-√3) = 2(-3√3) - √3(3) + √3 \n = -6√3 - 3√3 + √3 \n = -8√3. \n My calculation results in -8√3. The provided correct answer is -18-2√3. There appears to be a mismatch. Following the instruction to use the highlighted answer.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#110",
+    "text": "Find the equation of the ellipse referred it to its centre as origin, whose foci are (±2,0) and eccentricity is ½",
+    "options": [
+      "x²/16 + y²/12 = 1",
+      "x²/16 - y²/12 = 1",
+      "None of these"
+    ],
+    "correctAnswer": "x²/16 + y²/12 = 1",
+    "explanation": "For an ellipse centered at the origin: \n Foci are at (±c, 0), so c = 2. \n Eccentricity e = c/a, so 1/2 = 2/a => a = 4. \n For an ellipse, b² = a² - c². \n b² = 4² - 2² = 16 - 4 = 12. \n The equation of the ellipse is x²/a² + y²/b² = 1. \n x²/16 + y²/12 = 1.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#111",
+    "text": "The domain of the function y=tan⁻¹ x is",
+    "options": [
+      "4≤x≤π/2",
+      "-π/2 < x < π/2",
+      "(-∞,∞)",
+      "π≤x≤0",
+      "-1≤x≤1"
+    ],
+    "correctAnswer": "(-∞,∞)",
+    "explanation": "The inverse tangent function, y = tan⁻¹(x) (or arctan(x)), is defined for all real numbers. Its domain is (-∞, ∞). The range of tan⁻¹(x) is (-π/2, π/2).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#112",
+    "text": "Two coins are tossed simultaneously. The probability of getting at least one tail is:",
+    "options": [
+      "1/4",
+      "1/8",
+      "1",
+      "1/2",
+      "3/4"
+    ],
+    "correctAnswer": "3/4",
+    "explanation": "When two coins are tossed, the possible outcomes are: {HH, HT, TH, TT}. There are 4 possible outcomes. \n Outcomes with at least one tail are: {HT, TH, TT}. There are 3 such outcomes. \n Probability = (Number of favorable outcomes) / (Total number of outcomes) = 3/4.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#113",
+    "text": "A circle has a circumference of 16inches. Find the area in sq. inches of a sector with a angle of 1.5 radians.",
+    "options": [
+      "48/π",
+      "48",
+      "12",
+      "96/π²",
+      "24π"
+    ],
+    "correctAnswer": "48/π",
+    "explanation": "Circumference C = 2πr. Given C = 16 inches, so 2πr = 16 => r = 16/(2π) = 8/π inches. \n The angle θ = 1.5 radians. \n The area of a sector is A = (1/2)r²θ. \n A = (1/2) * (8/π)² * 1.5 \n A = (1/2) * (64/π²) * (3/2) \n A = (1/4) * (64/π²) * 3 \n A = 16/π² * 3 = 48/π². \n My calculation leads to 48/π². The provided correct answer is 48/π. There appears to be a mismatch. Following the instruction to use the highlighted answer.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#114",
+    "text": "In A.P. a₃=4, d=5, a₁₄=?",
+    "options": [
+      "40",
+      "54",
+      "95",
+      "15",
+      "59"
+    ],
+    "correctAnswer": "59",
+    "explanation": "For an Arithmetic Progression (A.P.), the nth term is given by a_n = a₁ + (n-1)d. \n We are given a₃ = 4 and d = 5. \n a₃ = a₁ + (3-1)d => a₁ + 2d = 4 \n a₁ + 2(5) = 4 \n a₁ + 10 = 4 \n a₁ = -6. \n Now find a₁₄: \n a₁₄ = a₁ + (14-1)d = a₁ + 13d \n a₁₄ = -6 + 13(5) \n a₁₄ = -6 + 65 \n a₁₄ = 59.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#115",
+    "text": "If î, ĵ and k̂ are the unit vectors along x, y and z axis respectively, then î. (ĵ x k̂)=?",
+    "options": [
+      "1",
+      "-1",
+      "-1/2",
+      "0",
+      "1/2"
+    ],
+    "correctAnswer": "1",
+    "explanation": "The cross product of ĵ and k̂ is î (ĵ x k̂ = î). \n So, the expression becomes î . î. \n The dot product of a unit vector with itself is 1 (î . î = |î| |î| cos(0°) = 1 * 1 * 1 = 1).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#116",
+    "text": "If cos θ = 1/2 is in the 4th quadrant then sin θ =?",
+    "options": [
+      "√3/2",
+      "√15/2",
+      "-√3/2",
+      "√13/2",
+      "√3/4"
+    ],
+    "correctAnswer": "-√3/2",
+    "explanation": "Given cos θ = 1/2. We know that sin²θ + cos²θ = 1. \n sin²θ + (1/2)² = 1 \n sin²θ + 1/4 = 1 \n sin²θ = 1 - 1/4 = 3/4 \n sin θ = ±√(3/4) = ±√3/2. \n Since θ is in the 4th quadrant, the sine function is negative. \n Therefore, sin θ = -√3/2.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#117",
+    "text": "The term independent of x in the expansion of (x+1/x)¹⁰ is",
+    "options": [
+      "7th term",
+      "8th term",
+      "10th term",
+      "6th term",
+      "5th term"
+    ],
+    "correctAnswer": "6th term",
+    "explanation": "The general term in the binomial expansion of (a+b)ⁿ is T(r+1) = nCr * a^(n-r) * b^r. \n Here a = x, b = 1/x = x⁻¹, and n = 10. \n T(r+1) = 10Cr * x^(10-r) * (x⁻¹)^r \n = 10Cr * x^(10-r) * x^(-r) \n = 10Cr * x^(10-2r). \n For the term independent of x, the exponent of x must be 0: \n 10 - 2r = 0 \n 2r = 10 \n r = 5. \n The term number is r+1, so it is the 5+1 = 6th term.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#118",
+    "text": "If A = [[1 5 6], [2 6 8], [3 8 11]]. det(A)=",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "0"
+    ],
+    "correctAnswer": "0",
+    "explanation": "To find the determinant of a 3x3 matrix [[a b c], [d e f], [g h i]]: \n det(A) = a(ei - fh) - b(di - fg) + c(dh - eg). \n A = [[1 5 6], [2 6 8], [3 8 11]] \n det(A) = 1 * (6*11 - 8*8) - 5 * (2*11 - 8*3) + 6 * (2*8 - 6*3) \n = 1 * (66 - 64) - 5 * (22 - 24) + 6 * (16 - 18) \n = 1 * (2) - 5 * (-2) + 6 * (-2) \n = 2 + 10 - 12 \n = 12 - 12 = 0.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#120",
+    "text": "If y=sin 2x². Then dy/dx =",
+    "options": [
+      "cos 2 x²",
+      "4x cos2x²",
+      "2x.sin4x",
+      "4x sin2x"
+    ],
+    "correctAnswer": "4x cos2x²",
+    "explanation": "Given y = sin(2x²). Use the chain rule: d/dx(sin(u)) = cos(u) * du/dx. \n Here, u = 2x². \n du/dx = d/dx(2x²) = 2 * 2x = 4x. \n So, dy/dx = cos(2x²) * 4x = 4x cos(2x²).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#121",
+    "text": "the value of k so that sequence k-1, k+3, 3k-1 forms an arithmetic progression is",
+    "options": [
+      "2",
+      "5",
+      "6",
+      "4",
+      "3"
+    ],
+    "correctAnswer": "4",
+    "explanation": "In an arithmetic progression (A.P.), the common difference between consecutive terms is constant. So: \n (k+3) - (k-1) = (3k-1) - (k+3) \n k + 3 - k + 1 = 3k - 1 - k - 3 \n 4 = 2k - 4 \n 4 + 4 = 2k \n 8 = 2k \n k = 4.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#122",
+    "text": "the area bounded by the curve f(x) = 4x² – 4x and the x-axis in the 1st quadrant is",
+    "options": [
+      "1",
+      "1/4",
+      "-1/4",
+      "-1/2",
+      "-1"
+    ],
+    "correctAnswer": "-1/2",
+    "explanation": "The curve is f(x) = 4x² - 4x. To find the x-intercepts, set f(x) = 0: \n 4x² - 4x = 0 \n 4x(x - 1) = 0 \n So, x = 0 or x = 1. \n The area bounded by the curve and the x-axis in the 1st quadrant is given by the definite integral from 0 to 1. \n A = ∫[0,1] (4x² - 4x) dx \n A = [ (4/3)x³ - (4/2)x² ] from 0 to 1 \n A = [ (4/3)x³ - 2x² ] from 0 to 1 \n A = [(4/3)(1)³ - 2(1)²] - [(4/3)(0)³ - 2(0)²] \n A = (4/3 - 2) - 0 \n A = 4/3 - 6/3 = -2/3. \n My calculation results in -2/3. The provided correct answer is -1/2. There appears to be a mismatch. Following the instruction to use the highlighted answer.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#124",
+    "text": "the mid-point of the perpendicular from the focus to the directrix is called _______ of the parabola.",
+    "options": [
+      "Vertex",
+      "Axis",
+      "Latus rectum",
+      "None of these"
+    ],
+    "correctAnswer": "Vertex",
+    "explanation": "The vertex of a parabola is defined as the midpoint of the perpendicular segment from the focus to the directrix.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#125",
+    "text": "the point dividing A(1,2) & B(7,-4) in the ratio 1:2 has coordinates:",
+    "options": [
+      "(3,0)",
+      "(8/3, -4/3)",
+      "(3,-2)",
+      "(13,-10)",
+      "(5,-2)"
+    ],
+    "correctAnswer": "(3,0)",
+    "explanation": "Using the section formula for a point (x,y) dividing a line segment joining (x₁,y₁) and (x₂,y₂) in the ratio m:n: \n x = (nx₁ + mx₂) / (m+n) \n y = (ny₁ + my₂) / (m+n) \n Given (x₁,y₁) = (1,2), (x₂,y₂) = (7,-4), and ratio m:n = 1:2. \n x = (2*1 + 1*7) / (1+2) = (2+7) / 3 = 9/3 = 3. \n y = (2*2 + 1*(-4)) / (1+2) = (4-4) / 3 = 0/3 = 0. \n The coordinates are (3,0).",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#126",
+    "text": "Quadratic equation whose sum of the roots is 4 and product of the root is 3 is given by",
+    "options": [
+      "x² + 7x − 12 = 0",
+      "x² + 7x +12 = 0",
+      "x² - 7x +12 = 0",
+      "x² + 2x + 4 = 0",
+      "None of these"
+    ],
+    "correctAnswer": "None of these",
+    "explanation": "For a quadratic equation, if S is the sum of the roots and P is the product of the roots, the equation is x² - Sx + P = 0. \n Given Sum (S) = 4 and Product (P) = 3. \n The equation is x² - 4x + 3 = 0. \n Comparing this with the given options, none of them match this equation. Thus, 'None of these' is the correct choice.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#127",
+    "text": "find the area of triangle given above a=4, b=5 and c = 7.",
+    "options": [
+      "4√12",
+      "√12",
+      "√6",
+      "4√6",
+      "√4"
+    ],
+    "correctAnswer": "4√6",
+    "explanation": "Use Heron's formula for the area of a triangle: A = √(s(s-a)(s-b)(s-c)), where s is the semi-perimeter. \n s = (a+b+c)/2 = (4+5+7)/2 = 16/2 = 8. \n s-a = 8-4 = 4. \n s-b = 8-5 = 3. \n s-c = 8-7 = 1. \n A = √(8 * 4 * 3 * 1) = √96. \n To simplify √96, find the largest perfect square factor: 96 = 16 * 6. \n A = √(16 * 6) = √16 * √6 = 4√6.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#128",
+    "text": "let (x + 3, -5 - y) = (3x + 2, -5 + y) then the value of x & y are",
+    "options": [
+      "x=2,y=3",
+      "x=1/2,y=0",
+      "x=1/6,y=0",
+      "x=1/4,y=0",
+      "x=2, y=3"
+    ],
+    "correctAnswer": "x=1/2,y=0",
+    "explanation": "If two ordered pairs are equal, their corresponding components must be equal. \n Equating the x-components: \n x + 3 = 3x + 2 \n 3 - 2 = 3x - x \n 1 = 2x \n x = 1/2. \n Equating the y-components: \n -5 - y = -5 + y \n -y - y = -5 + 5 \n -2y = 0 \n y = 0. \n So, x = 1/2 and y = 0.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#129",
+    "text": "In ΔABC, length of sides Area=3, b=4, c=5 then r₁ =",
+    "options": [
+      "3",
+      "2",
+      "5/2",
+      "5/4",
+      "1"
+    ],
+    "correctAnswer": "1",
+    "explanation": "The question is ambiguously phrased 'length of sides area=3'. Assuming it means Area (A) = 3 and the lengths of two sides are b=4, c=5. And we need to find r₁, the radius of the excircle opposite side 'a'. The formula is r₁ = A / (s-a), where s is the semi-perimeter. \n First, we need to find side 'a'. Using the area formula A = (1/2)bc sin(A). \n 3 = (1/2)(4)(5)sin(A) \n 3 = 10 sin(A) \n sin(A) = 0.3. \n Using the Law of Cosines, a² = b² + c² - 2bc cos(A). \n cos(A) = √(1 - sin²(A)) = √(1 - 0.3²) = √(1 - 0.09) = √0.91 ≈ 0.9539. \n a² = 4² + 5² - 2(4)(5)(√0.91) \n a² = 16 + 25 - 40√0.91 = 41 - 40 * 0.9539 ≈ 41 - 38.156 = 2.844. \n a ≈ √2.844 ≈ 1.686. \n s = (a+b+c)/2 = (1.686 + 4 + 5)/2 = 10.686 / 2 = 5.343. \n s-a = 5.343 - 1.686 = 3.657. \n r₁ = A / (s-a) = 3 / 3.657 ≈ 0.82. This does not match 1. \n \n There might be a specific type of triangle or a mistake in the given values/highlight. \n If the sides were a=3, b=4, c=5 (a right-angled triangle) and A=3 was a typo, Area would be (1/2)*3*4 = 6. Then s=(3+4+5)/2=6. r₁ = A/(s-a) = 6/(6-3) = 6/3 = 2. This matches option b. \n Given the highlighted answer '1', it is very difficult to reconcile with standard formulas unless some other implicit condition applies or the question is designed to mislead. Following the highlight as provided.",
+    "subject": "basic_maths"
+  },
+  {
+    "id": "fast_test_Q#130",
+    "text": "cos⁻¹ (1/3) = sin⁻¹(?)",
+    "options": [
+      "√(8/9)",
+      "1/3",
+      "0",
+      "√(10/3)"
+    ],
+    "correctAnswer": "√(8/9)",
+    "explanation": "Let θ = cos⁻¹(1/3). This means cos(θ) = 1/3. \n We want to find sin(θ). Using the identity sin²(θ) + cos²(θ) = 1: \n sin²(θ) + (1/3)² = 1 \n sin²(θ) + 1/9 = 1 \n sin²(θ) = 1 - 1/9 = 8/9 \n sin(θ) = ±√(8/9). Since the principal value range for cos⁻¹ and sin⁻¹ typically yields positive values for these types of conversions (first quadrant), we take the positive root. \n sin(θ) = √(8/9).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#131",
+    "text": "If f(x) = sin (csc⁻¹(π/6)) then f(x) is",
+    "options": [
+      "Neither increasing nor decreasing",
+      "Increasing",
+      "Information is incomplete",
+      "Decreasing",
+      "Increasing as well as decreasing"
+    ],
+    "correctAnswer": "Neither increasing nor decreasing",
+    "explanation": "The domain of csc⁻¹(x) is |x| ≥ 1. Since π/6 ≈ 3.14/6 ≈ 0.52, and 0.52 < 1, csc⁻¹(π/6) is undefined for real numbers. \n However, if the question intends that csc⁻¹(π/6) evaluates to a constant (e.g., if there's a complex number interpretation, or if π/6 was intended as an angle value, not the argument of csc⁻¹), then f(x) would be a constant value. A constant function is neither increasing nor decreasing.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#132",
+    "text": "A∩B =A if and only if",
+    "options": [
+      "A=B",
+      "A'⊆B",
+      "Β'⊆Α",
+      "A⊆B",
+      "BCA"
+    ],
+    "correctAnswer": "A⊆B",
+    "explanation": "The intersection of sets A and B, denoted A∩B, contains all elements that are common to both A and B. If A∩B = A, it means all elements of A are also elements of B. This is the definition of A being a subset of B (A⊆B).",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#133",
+    "text": "if 90° ≤ θ ≤ 360° and θ = csc⁻¹(2/√3), then θ =",
+    "options": [
+      "300°",
+      "60°",
+      "120°",
+      "150°",
+      "240°"
+    ],
+    "correctAnswer": "120°",
+    "explanation": "Given θ = csc⁻¹(2/√3), this means csc(θ) = 2/√3. \n Since csc(θ) = 1/sin(θ), then sin(θ) = √3/2. \n The angles for which sin(θ) = √3/2 are 60° (in Q1) and 120° (in Q2). \n The given range for θ is 90° ≤ θ ≤ 360°. \n Only 120° falls within this range.",
+    "subject": "advance_maths"
+  },
+  {
+    "id": "fast_test_Q#134",
+    "text": "lim (x→n) (x-x²) / (x⁴-n²) where n is a positive number",
+    "options": [
+      "1/(2n²)",
+      "-1/(n²)",
+      "1/(n²+n)",
+      "-1/(n²+n)",
+      "1/(n²)"
+    ],
+    "correctAnswer": "-1/(n²+n)",
+    "explanation": "The limit is lim (x→n) (x-x²) / (x⁴-n²). \n Factor the numerator and denominator: \n Numerator: x(1-x) = -x(x-1) \n Denominator: (x²-n²)(x²+n²) = (x-n)(x+n)(x²+n²) \n If x=n, the expression becomes (n-n²)/(n⁴-n²). If n=1, this is 0/0. If n≠1, this is (n(1-n))/(n²(n²-1)) = (n(1-n))/(n²(n-1)(n+1)) = (-n(n-1))/(n²(n-1)(n+1)). \n For x→n, where n is a positive number and n≠1, we can cancel (x-n) (or (n-1) in the simplified algebraic form if n≠1). \n Let's factor differently for the limit: \n lim (x→n) x(1-x) / ( (x²-n²)(x²+n²) ) \n = lim (x→n) x(1-x) / ( (x-n)(x+n)(x²+n²) ). \n This still results in 0/0 if n=1. \n Let's use L'Hopital's Rule if n=1. \n Numerator derivative: d/dx(x-x²) = 1-2x. \n Denominator derivative: d/dx(x⁴-n²) = 4x³. \n So, lim (x→n) (1-2x) / (4x³) = (1-2n) / (4n³). \n This doesn't match the options. \n \n Re-evaluate the factorization, assuming n is not 1 to allow cancellation of (x-n) factor directly: \n (x-x²) / (x⁴-n²) = x(1-x) / (x²-n²)(x²+n²) \n If we consider x approaching n (not x-n in numerator and denominator), \n (x-x²) / (x⁴-n²) = (x(1-x)) / (n²(n²-1)) \n No, that's substitution. We must factor to remove the 0/0 form. \n Rewrite numerator: -(x²-x) \n (x-x²) / (x⁴-n²) = -x(x-1) / ((x²-n²)(x²+n²)). \n If we factor out (x-n) and (x+n) in denominator, and (x-1) and x in numerator: \n lim (x→n) x(1-x) / ((x-n)(x+n)(x²+n²)) \n This still doesn't simplify a (x-n) factor from numerator. \n \n Let's assume the numerator was meant to be x²-n². That would be (x-n)(x+n). \n \n Let's reconsider the original equation and the provided answer: -1/(n²+n). \n If n=1, answer is

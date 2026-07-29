@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "f46ee288-77b8-425b-b79c-ba11419b564a",
+    "options": [
+      "Only buying of goods",
+      "Exchange of goods and services on a large scale including trade and aids to trade",
+      "Only manufacturing",
+      "Only banking"
+    ],
+    "explanation": "Commerce encompasses all activities involving the exchange of goods and services, including trade (buying and selling) and aids to trade (banking, insurance, transport, warehousing, advertising).",
+    "difficulty": "easy",
+    "question_text": "What is commerce?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c1ca518c-4459-445e-88f3-d72569603101",
+    "options": [
+      "No difference",
+      "Trade is only buying/selling; commerce includes trade plus aids to trade",
+      "Commerce is only manufacturing",
+      "Trade includes banking"
+    ],
+    "explanation": "Trade refers specifically to buying and selling goods. Commerce is broader, including trade plus all auxiliary services (aids to trade) that facilitate exchange.",
+    "difficulty": "easy",
+    "question_text": "What is the difference between trade and commerce?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4adf48e2-96fa-44e5-9d9d-c956d9136a16",
+    "options": [
+      "Business owned by multiple people",
+      "Business owned and operated by one person",
+      "Government business",
+      "Non-profit organization"
+    ],
+    "explanation": "A sole proprietorship is a business owned and managed by a single individual who has unlimited liability and receives all profits.",
+    "difficulty": "easy",
+    "question_text": "What is a sole proprietorship?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b86942f7-8334-48d0-a25c-b2c6a78a3c5d",
+    "options": [
+      "Single owner business",
+      "Business owned by two or more persons who agree to share profits",
+      "Government organization",
+      "Public limited company"
+    ],
+    "explanation": "A partnership is a business owned by two or more persons (partners) who contribute resources and share profits and losses according to the partnership agreement.",
+    "difficulty": "easy",
+    "question_text": "What is a partnership?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9d1661dd-5c01-46f3-b9dd-8619f94500a5",
+    "options": [
+      "Partnership firm",
+      "Business organization with capital divided into shares owned by shareholders",
+      "Government department",
+      "Sole proprietorship"
+    ],
+    "explanation": "A joint stock company is an incorporated business whose capital is divided into transferable shares. Shareholders have limited liability.",
+    "difficulty": "easy",
+    "question_text": "What is a joint stock company?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e1e37b15-d875-4190-a5d9-8bedd7bde3fc",
+    "options": [
+      "No difference",
+      "Private: restricts share transfer, limited members; Public: can invite public to subscribe shares, listed on stock exchange",
+      "Private is larger",
+      "Public has unlimited liability"
+    ],
+    "explanation": "A private limited company restricts share transfer, limits members (typically 2-50), and cannot invite public investment. A public limited company can offer shares to the public and is often listed on stock exchanges.",
+    "difficulty": "easy",
+    "question_text": "What is the difference between a private limited company and a public limited company?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "31219bd4-5cac-48d4-9570-746d523a02d3",
+    "options": [
+      "Laws governing business",
+      "Moral principles and values guiding business behavior",
+      "Profit maximization only",
+      "Government regulations"
+    ],
+    "explanation": "Business ethics refers to the moral principles and ethical standards that guide behavior in business activities and decision-making.",
+    "difficulty": "easy",
+    "question_text": "What is business ethics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d6f4d105-56a1-448f-b40b-cb808fc4c04d",
+    "options": [
+      "Traditional retail",
+      "Buying and selling goods and services over the internet",
+      "Export only",
+      "Wholesale trade"
+    ],
+    "explanation": "E-commerce (electronic commerce) refers to commercial transactions conducted electronically over the internet, including B2B, B2C, C2C models.",
+    "difficulty": "easy",
+    "question_text": "What is e-commerce?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cf078816-11ff-4de4-a59b-f14f702ecf25",
+    "options": [
+      "Increase profits",
+      "Risk transfer and protection against financial loss",
+      "Create risks",
+      "Replace government"
+    ],
+    "explanation": "Insurance transfers risk from the insured to the insurer. The insured pays premiums in exchange for protection against specified financial losses.",
+    "difficulty": "easy",
+    "question_text": "What is the function of insurance in business?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dda86b5a-e011-411d-b70a-f9592d82384f",
+    "options": [
+      "Manufacturing company",
+      "Financial institution that accepts deposits and makes loans",
+      "Retail store",
+      "Transport company"
+    ],
+    "explanation": "A bank is a financial institution licensed to accept deposits from the public, make loans, and provide other financial services.",
+    "difficulty": "easy",
+    "question_text": "What is a bank?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "117cc113-6cbe-4d47-8dd1-ec36796e3d9b",
+    "options": [
+      "No difference",
+      "Wholesaler sells in bulk to retailers; Retailer sells in small quantities to consumers",
+      "Wholesaler sells to consumers",
+      "Retailer buys from manufacturers only"
+    ],
+    "explanation": "Wholesalers purchase goods in large quantities from manufacturers and sell to retailers. Retailers sell goods in smaller quantities directly to final consumers.",
+    "difficulty": "easy",
+    "question_text": "What is the difference between wholesaler and retailer?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "81bc0548-71d2-4831-80ed-219780af0653",
+    "options": [
+      "Only selling products",
+      "Activities to create, communicate, deliver, and exchange offerings that have value for customers",
+      "Only advertising",
+      "Only production"
+    ],
+    "explanation": "Marketing encompasses product development, pricing, promotion, and distribution (4Ps) to create value for customers and build customer relationships.",
+    "difficulty": "easy",
+    "question_text": "What is marketing?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a758d31a-1a25-48b6-b20d-f4d52d6dc154",
+    "options": [
+      "Price, Product, Place, Promotion",
+      "People, Process, Physical evidence, Profit",
+      "Plan, Produce, Promote, Price",
+      "Purchasing, Pricing, Packaging, Positioning"
+    ],
+    "explanation": "The traditional marketing mix (McCarthy's 4Ps) consists of Product, Price, Place (distribution), and Promotion (the extended 7Ps adds People, Process, Physical Evidence for services).",
+    "difficulty": "easy",
+    "question_text": "What is the 4Ps of marketing mix?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7253e690-4106-4e15-be68-b444a7be0ea7",
+    "options": [
+      "Financial value of brand assets",
+      "Value premium a company generates from a product with a recognizable name",
+      "Cost of creating a brand",
+      "Only logo design"
+    ],
+    "explanation": "Brand equity is the commercial value derived from consumer perception of the brand name rather than from the product itself. Strong brands command premium prices.",
+    "difficulty": "easy",
+    "question_text": "What is brand equity?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "675de125-3b43-4e43-ab52-b1aeaa6fe0ec",
+    "options": [
+      "Selling to everyone",
+      "Dividing a market into distinct groups with similar needs or characteristics",
+      "Only geographic division",
+      "Price fixing"
+    ],
+    "explanation": "Market segmentation divides a broad target market into subsets of consumers with common needs, interests, and priorities to design targeted marketing strategies.",
+    "difficulty": "easy",
+    "question_text": "What is market segmentation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c26893e7-7084-4422-a973-2f54ece51f03",
+    "options": [
+      "Financial audit",
+      "Strategic planning tool analyzing Strengths, Weaknesses, Opportunities, Threats",
+      "Marketing budget",
+      "Production schedule"
+    ],
+    "explanation": "SWOT analysis is a strategic framework used to evaluate internal Strengths/Weaknesses and external Opportunities/Threats to formulate business strategies.",
+    "difficulty": "easy",
+    "question_text": "What is SWOT analysis?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "494f2f72-9462-4d0e-8ddf-df6e1ee57176",
+    "options": [
+      "Only manufacturing",
+      "Planning and management of goods flow from origin to consumption",
+      "Only accounting",
+      "Only customer service"
+    ],
+    "explanation": "Logistics involves the planning, implementation, and control of the efficient forward and reverse flow and storage of goods, services, and information between point of origin and point of consumption.",
+    "difficulty": "easy",
+    "question_text": "What is logistics?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1e5de535-3517-4a1b-810f-36f79dbaaf3c",
+    "options": [
+      "Only purchasing",
+      "Supervising and controlling of order, storage, and use of inventory",
+      "Only selling",
+      "Only production"
+    ],
+    "explanation": "Inventory management oversees the ordering, storage, tracking, and use of inventory to ensure adequate stock while minimizing carrying costs and stockouts.",
+    "difficulty": "easy",
+    "question_text": "What is inventory management?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "eadb352d-86d2-4959-9aae-ce9df5f88604",
+    "options": [
+      "Only complaint handling",
+      "Strategy and practices to analyze and manage customer interactions throughout the lifecycle",
+      "Only sales tracking",
+      "Only marketing"
+    ],
+    "explanation": "CRM encompasses strategies, practices, and technologies companies use to manage customer relationships, improve retention, and drive sales growth.",
+    "difficulty": "easy",
+    "question_text": "What is customer relationship management (CRM)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4fec238e-dbbf-4cc9-87f5-2507605d54a8",
+    "options": [
+      "Employee handbook",
+      "Document describing business objectives, strategies, and financial projections",
+      "Only marketing brochure",
+      "Tax return"
+    ],
+    "explanation": "A business plan is a formal document outlining a company's goals, strategies for achieving them, target market, competitive analysis, and financial projections.",
+    "difficulty": "easy",
+    "question_text": "What is a business plan?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4c37d1c3-a2be-4a35-9d30-041db787e374",
+    "options": [
+      "No difference",
+      "B2B: business to business; B2C: business to consumer",
+      "B2B is illegal",
+      "B2C is wholesale"
+    ],
+    "explanation": "B2B (Business-to-Business) involves transactions between businesses. B2C (Business-to-Consumer) involves transactions where businesses sell directly to end consumers.",
+    "difficulty": "easy",
+    "question_text": "What is the difference between B2B and B2C?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "097b5615-1293-41dd-a4b8-7258a8ce6427",
+    "options": [
+      "Sole proprietorship",
+      "Business arrangement where franchisor licenses trademark and business model to franchisee",
+      "Government business",
+      "Partnership"
+    ],
+    "explanation": "A franchise is a business model where the franchisor grants the franchisee the right to use its trademark, systems, and processes in exchange for fees and royalties.",
+    "difficulty": "easy",
+    "question_text": "What is a franchise?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "37cafd5a-24bc-4f4b-9547-83c90480a80b",
+    "options": [
+      "Only hiring employees",
+      "Strategic approach to managing people, recruitment, training, compensation, and employee relations",
+      "Only payroll",
+      "Only firing employees"
+    ],
+    "explanation": "HRM involves recruiting, selecting, training, compensating, and managing employees to maximize organizational performance while ensuring compliance and positive employee relations.",
+    "difficulty": "easy",
+    "question_text": "What is human resource management (HRM)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e49093e4-4132-477a-881a-2e217cb46b81",
+    "options": [
+      "Only purchasing",
+      "Management of flow of goods, services, and information from raw materials to final delivery",
+      "Only warehousing",
+      "Only transportation"
+    ],
+    "explanation": "Supply Chain Management oversees the entire flow from sourcing raw materials, through production and distribution, to delivery of finished products to consumers.",
+    "difficulty": "easy",
+    "question_text": "What is supply chain management?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1672aea6-c6bf-42fc-b329-ea1fc4d3399a",
+    "options": [
+      "Only entertainment",
+      "Communicate product benefits, build brand awareness, and persuade customers to purchase",
+      "Only information to competitors",
+      "Increase production"
+    ],
+    "explanation": "Advertising is paid, non-personal communication used to inform, persuade, and remind target audiences about products, services, or ideas to drive sales and build brands.",
+    "difficulty": "easy",
+    "question_text": "What is the role of advertising in business?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7b9eb5ce-4fa7-4350-867a-68ae120dec5a",
+    "options": [
+      "Total assets",
+      "Current assets minus current liabilities",
+      "Fixed assets",
+      "Long-term debt"
+    ],
+    "explanation": "Working Capital = Current Assets − Current Liabilities. It measures a company's short-term liquidity and operational efficiency.",
+    "difficulty": "easy",
+    "question_text": "What is working capital?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b1fedf23-c0d9-455e-892b-074305e617b8",
+    "options": [
+      "No difference",
+      "Bill of lading: document of title for shipped goods; Invoice: bill requesting payment for goods/services",
+      "Both are payment methods",
+      "Both are contracts"
+    ],
+    "explanation": "A bill of lading is a transport document serving as receipt of goods, contract of carriage, and document of title. An invoice is a commercial document requesting payment for goods or services sold.",
+    "difficulty": "easy",
+    "question_text": "What is the difference between a bill of lading and an invoice?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aa193da8-12ec-4baa-bafc-94c966625c90",
+    "options": [
+      "Personal loan",
+      "Bank guarantee ensuring seller receives payment if documents comply with terms",
+      "Credit card",
+      "Bank account"
+    ],
+    "explanation": "A letter of credit (L/C) is a bank's written undertaking to pay the seller/exporter a specified amount upon presentation of compliant documents, reducing payment risk in international trade.",
+    "difficulty": "easy",
+    "question_text": "What is a letter of credit?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "852b057f-7ee6-4f86-becd-617e8e056488",
+    "options": [
+      "Working for government",
+      "Process of designing, launching, and running a new business, taking on financial risks",
+      "Only managing existing business",
+      "Only investing in stocks"
+    ],
+    "explanation": "Entrepreneurship involves identifying opportunities, organizing resources, and assuming risks to create and operate a new business venture for profit.",
+    "difficulty": "easy",
+    "question_text": "What is entrepreneurship?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1557771a-35ba-4095-98a2-671b07e333cf",
+    "options": [
+      "No difference",
+      "Shares: ownership capital; Debentures: loan capital with fixed interest",
+      "Shares have guaranteed returns; Debentures are risky",
+      "Only companies issue debentures"
+    ],
+    "explanation": "Shares represent ownership in a company with variable dividends. Debentures are debt instruments with fixed interest payments, and debenture holders are creditors, not owners.",
+    "difficulty": "easy",
+    "question_text": "What is the difference between shares and debentures?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "14a69880-9813-41bb-bd31-049dec3a182b",
+    "options": [
+      "No difference",
+      "Memorandum: defines company's relationship with outside world; Articles: internal management rules",
+      "Memorandum is for internal use only",
+      "Articles define company name only"
+    ],
+    "explanation": "The Memorandum of Association defines the company's scope, objects, and relationship with the external world. The Articles of Association contain internal rules for company management, director powers, and shareholder meetings.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between memorandum of association and articles of association?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f7708c25-13f4-44a9-82e8-b3102b9d9c7c",
+    "options": [
+      "Writing insurance policies",
+      "Agreement where underwriter purchases unsold shares from a new issue for a commission",
+      "Bank lending",
+      "Stock trading"
+    ],
+    "explanation": "Underwriting is an arrangement where an underwriter (investment bank) agrees to purchase any unsold securities from a new issue, guaranteeing the issuer receives the capital needed.",
+    "difficulty": "medium",
+    "question_text": "What is underwriting in the context of securities issuance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "88d3033f-99d1-41db-8ca7-ec15e41dc3df",
+    "options": [
+      "No difference",
+      "Merger: two companies combine into one; Acquisition: one company buys control of another",
+      "Merger is hostile; Acquisition is friendly",
+      "Merger is always small companies"
+    ],
+    "explanation": "In a merger, two roughly equal companies combine to form a new entity. In an acquisition, one company (acquirer) purchases a controlling stake in another (target), which may retain its identity.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between a merger and an acquisition?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f4ce5b98-36ec-4379-a1d8-3195ea7ad5fd",
+    "options": [
+      "Government control of corporations",
+      "System of rules, practices, and processes directing and controlling a company",
+      "Only profit distribution",
+      "Only hiring employees"
+    ],
+    "explanation": "Corporate governance encompasses the mechanisms, processes, and relationships by which corporations are controlled and directed, including board structure, shareholder rights, and accountability frameworks.",
+    "difficulty": "medium",
+    "question_text": "What is corporate governance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "da62d4fc-b569-46d5-9935-15edfec617e9",
+    "options": [
+      "No difference",
+      "Listed: shares traded on stock exchange; Unlisted: shares not traded publicly",
+      "Listed is always larger",
+      "Unlisted has more shareholders"
+    ],
+    "explanation": "A listed company's shares are traded on a recognized stock exchange. An unlisted (private) company's shares are not available for public trading on exchanges.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between a listed company and an unlisted company?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fa740421-e60c-4337-9e5b-e5383b1a95e9",
+    "options": [
+      "Office decoration",
+      "Shared values, beliefs, attitudes, and practices characterizing an organization",
+      "Only dress code",
+      "Only company logo"
+    ],
+    "explanation": "Organizational culture is the set of shared assumptions, values, beliefs, and norms that shape how members of an organization perceive, think, and behave.",
+    "difficulty": "medium",
+    "question_text": "What is organizational culture?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "08024070-61a1-421c-859b-f3de9b32cf6c",
+    "options": [
+      "Foreign",
+      "Home",
+      "International",
+      "External"
+    ],
+    "explanation": "Home (internal/domestic) trade takes place within a country.",
+    "difficulty": "easy",
+    "question_text": "_____ trade refers to trade within the boundaries of a country.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d0e77316-1e81-49fc-9f2f-e6be99cd58f0",
+    "options": [
+      "Quality inspection only",
+      "Management approach where quality is everyone's responsibility, focusing on continuous improvement",
+      "Only product testing",
+      "Hiring quality staff"
+    ],
+    "explanation": "TQM is a comprehensive management philosophy where all employees participate in continuously improving processes, products, and services to meet customer needs. It emphasizes customer focus, process improvement, and employee involvement.",
+    "difficulty": "medium",
+    "question_text": "What is total quality management (TQM)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cfde21c8-a127-42d5-b907-80fa73473e32",
+    "options": [
+      "No difference",
+      "Centralized: decisions made at top; Decentralized: decision authority delegated to lower levels",
+      "Centralized has fewer employees",
+      "Decentralized is smaller"
+    ],
+    "explanation": "In centralized organizations, top management retains decision-making authority. In decentralized organizations, decision-making authority is pushed down to middle and lower-level managers, enabling faster response and local adaptation.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between centralized and decentralized organizations?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0b8e80ee-f289-40e0-b680-de7c1641cc4f",
+    "options": [
+      "Company's annual report",
+      "Legal document inviting public to subscribe for shares/debentures, containing material information",
+      "Internal memo",
+      "Employment contract"
+    ],
+    "explanation": "A prospectus is a formal legal document required by securities regulators that provides details about an investment offering, enabling investors to make informed decisions. It must not contain misleading statements.",
+    "difficulty": "medium",
+    "question_text": "What is a prospectus in company law?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7f423162-096d-443c-828f-1334e170b386",
+    "options": [
+      "They are the same",
+      "Authority: right to give orders; Responsibility: obligation to complete assigned tasks",
+      "Authority is only for top management",
+      "Responsibility can be delegated but authority cannot"
+    ],
+    "explanation": "Authority is the legitimate right to make decisions and command subordinates. Responsibility is the obligation to perform assigned duties. They should be commensurate—equal authority should accompany responsibility.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between authority and responsibility in management?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "daa7622b-d130-48e8-85f2-1925f5bd1a30",
+    "options": [
+      "Minor process improvements",
+      "Fundamental rethinking and radical redesign of business processes to achieve dramatic improvements",
+      "Hiring new staff",
+      "Changing office location"
+    ],
+    "explanation": "BPR (Hammer & Champy) involves starting from scratch to radically redesign business processes rather than making incremental changes, aiming for dramatic improvements in cost, quality, speed, and service.",
+    "difficulty": "medium",
+    "question_text": "What is business process reengineering (BPR)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1e74a13c-2d63-4e43-a7f3-321057bbbc4e",
+    "options": [
+      "No difference",
+      "Line: direct authority chain; Staff: advisory/support functions without direct authority",
+      "Line is modern; Staff is outdated",
+      "Staff has more power"
+    ],
+    "explanation": "Line organization has direct vertical authority from top to bottom for core operations. Staff positions provide specialized advice and support to line managers but lack direct command authority over operational personnel.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between line and staff organization?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f37fdbf9-32e4-4108-bd16-4ffe0a977fd0",
+    "options": [
+      "Merger of two companies",
+      "Agreement between firms to cooperate for mutual benefit while remaining independent",
+      "Hostile takeover",
+      "Government partnership only"
+    ],
+    "explanation": "A strategic alliance is a cooperative arrangement between two or more independent firms to achieve common objectives (market access, technology sharing, risk reduction) while retaining separate identities.",
+    "difficulty": "medium",
+    "question_text": "What is a strategic alliance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ab5400e8-7fa6-47a6-b15a-5f285eb61dbc",
+    "options": [
+      "No difference",
+      "Trademark: protects brand names/logos; Copyright: protects original creative works (books, music, software)",
+      "Copyright is for business names",
+      "Trademark is for inventions"
+    ],
+    "explanation": "A trademark protects brand identifiers (names, logos, slogans) that distinguish goods/services. Copyright protects original works of authorship fixed in tangible medium, giving exclusive reproduction/distribution rights.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between a trademark and a copyright?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bf322ebe-3c39-4dc2-bb83-b6789442e203",
+    "options": [
+      "Stockpiling inventory",
+      "Inventory system where materials arrive exactly when needed in production, minimizing carrying costs",
+      "Buying in bulk",
+      "Long-term storage strategy"
+    ],
+    "explanation": "JIT, pioneered by Toyota, minimizes inventory by having materials arrive precisely when needed in the production process. It reduces carrying costs but requires reliable suppliers and quality control.",
+    "difficulty": "medium",
+    "question_text": "What is just-in-time (JIT) inventory management?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0b3e87b8-c2aa-497c-8000-448e76c2c587",
+    "options": [
+      "No difference",
+      "Cooperative: voluntary association for mutual benefit, one member one vote; Company: capital-based voting",
+      "Cooperatives are always larger",
+      "Companies cannot make profit"
+    ],
+    "explanation": "Cooperatives are formed by persons united voluntarily to meet common economic, social, and cultural needs. They operate on democratic principles (one member, one vote) and distribute surplus equitably. Companies operate for profit with voting based on share ownership.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between a cooperative society and a company?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "de15a0e1-3394-4da1-8a9c-db46dec708da",
+    "options": [
+      "Operate stock exchanges",
+      "Regulate and oversee securities markets to protect investors and ensure fair practices",
+      "Manage company operations",
+      "Set interest rates"
+    ],
+    "explanation": "SEBI (Securities and Exchange Board of India) and SEC (Securities and Exchange Commission in the US) are regulatory bodies overseeing securities markets, protecting investors, and ensuring fair, orderly, and efficient markets.",
+    "difficulty": "medium",
+    "question_text": "What is the role of SEBI/SEC in capital markets?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "50bcd8ee-3140-4306-ad0d-264b581037d1",
+    "options": [
+      "Physical company assets",
+      "Creations of the mind protected by law: patents, trademarks, copyrights, trade secrets",
+      "Employee skills",
+      "Office equipment"
+    ],
+    "explanation": "Intellectual property refers to creations of the mind—inventions, literary and artistic works, designs, symbols, names, and images—protected by patents, copyrights, trademarks, and trade secret laws.",
+    "difficulty": "medium",
+    "question_text": "What is intellectual property?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cec8dd4e-bc2f-48d9-90de-2e3da221a3a5",
+    "options": [
+      "Same process",
+      "Recruitment: attracting applicants; Selection: choosing suitable candidates from applicants",
+      "Recruitment is internal; Selection is external",
+      "Selection comes before recruitment"
+    ],
+    "explanation": "Recruitment is the process of attracting a pool of qualified applicants. Selection involves screening, testing, and interviewing candidates to choose the most suitable person for the position.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between recruitment and selection?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3dac2762-d159-4042-a288-ccc4b963da9c",
+    "options": [
+      "Company's balance sheet",
+      "Record of all economic transactions between residents of a country and the rest of the world",
+      "Government budget",
+      "Bank statement"
+    ],
+    "explanation": "The balance of payments is a systematic record of all economic transactions (trade, services, investment, transfers) between residents of a country and non-residents during a specific period.",
+    "difficulty": "medium",
+    "question_text": "What is a balance of payments?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "96a4054c-18db-4d4c-a777-99576f4ee446",
+    "options": [
+      "Buying foreign stocks",
+      "Investment in business operations in another country with significant control (10%+ ownership)",
+      "Short-term loans",
+      "Foreign aid"
+    ],
+    "explanation": "FDI involves establishing business operations or acquiring business assets in a foreign country, indicating lasting management interest (typically 10% or more of voting stock).",
+    "difficulty": "medium",
+    "question_text": "What is foreign direct investment (FDI)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "59a0158b-b62a-4f2a-96c8-cc3584fd08a7",
+    "options": [
+      "Catalogue",
+      "Invoice",
+      "Receipt",
+      "Manifest"
+    ],
+    "explanation": "A catalogue lists goods and their prices available for sale.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a list of goods with their prices offered for sale.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9aa78d30-e0a9-47ae-930b-aadef9440ff2",
+    "options": [
+      "No difference",
+      "Fixed charge: specific identified asset; Floating charge: class of assets changing over time (e.g., inventory)",
+      "Fixed charge is always larger",
+      "Floating charge cannot be enforced"
+    ],
+    "explanation": "A fixed charge attaches to specific, identifiable assets (land, machinery). A floating charge hovers over a class of assets that change in the ordinary course of business (stock, debtors) and crystallizes on default.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between a fixed charge and a floating charge on company assets?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "49f08006-07ce-4f16-b909-624a3661d9cb",
+    "options": [
+      "Employment contract",
+      "Legal document securing debenture holders' interests, appointing trustees to monitor compliance",
+      "Share certificate",
+      "Bank guarantee"
+    ],
+    "explanation": "A debenture trust deed is a legal agreement between the company and trustees for debenture holders. It specifies the terms, security offered, and trustees' powers to protect debenture holders' interests.",
+    "difficulty": "medium",
+    "question_text": "What is a debenture trust deed?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "be3cf132-864d-4e52-afba-a6f4d327e3df",
+    "options": [
+      "Only buying patterns",
+      "Study of how individuals, groups, and organizations select, buy, use, and dispose of goods/services",
+      "Only advertising response",
+      "Only pricing decisions"
+    ],
+    "explanation": "Consumer behavior examines the decision-making processes and factors (psychological, social, cultural, personal) influencing consumers' acquisition, consumption, and disposition of products and services.",
+    "difficulty": "medium",
+    "question_text": "What is consumer behavior?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b60a402a-fa8c-45b4-872b-c555a82cec07",
+    "options": [
+      "Military zone",
+      "Geographically delimited area with relaxed regulations and tax incentives to promote economic activity",
+      "Residential area",
+      "Government office complex"
+    ],
+    "explanation": "SEZs are designated areas with business-friendly regulations, tax incentives, simplified customs procedures, and improved infrastructure to attract domestic and foreign investment, boost exports, and create employment.",
+    "difficulty": "medium",
+    "question_text": "What is a special economic zone (SEZ)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4350abef-d70f-4a32-beb8-39b042bfd18c",
+    "options": [
+      "No difference",
+      "Excise: tax on manufacture/production; Sales tax/VAT: tax on sale of goods/services",
+      "Excise is always higher",
+      "Sales tax is only on imports"
+    ],
+    "explanation": "Excise duty is levied on the manufacture of goods within a country. Sales tax/VAT/GST is levied on the sale of goods and services, typically at the point of final consumption.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between excise duty and sales tax?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2b1ea0f4-68e5-411f-abd3-7fb5a2c33ef9",
+    "options": [
+      "Only secretarial work",
+      "Senior executive ensuring compliance with statutory/regulatory requirements and governance",
+      "Only meeting minutes",
+      "Only hiring staff"
+    ],
+    "explanation": "A company secretary is a senior officer responsible for ensuring compliance with corporate governance, company law, securities regulations, board procedures, and communication with shareholders and regulators.",
+    "difficulty": "medium",
+    "question_text": "What is the role of a company secretary?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "48c7e9cb-e996-4fa5-8e8f-b160a7e64371",
+    "options": [
+      "Business partnership",
+      "Formal agreement among competing firms to control prices, production, or markets",
+      "Government agency",
+      "Consumer group"
+    ],
+    "explanation": "A cartel is a group of independent market participants who collude to control prices, limit production, or allocate markets to increase collective profits. Cartels are illegal in most jurisdictions under competition law.",
+    "difficulty": "medium",
+    "question_text": "What is a cartel in business?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fd617ab4-97a6-4b3a-90af-1aafaeb632a5",
+    "options": [
+      "Only profit maximization",
+      "Business approach contributing to sustainable development by delivering economic, social, and environmental benefits",
+      "Government regulation only",
+      "Employee welfare only"
+    ],
+    "explanation": "CSR is a business approach that contributes to sustainable development by delivering economic, social, and environmental benefits for all stakeholders, going beyond legal compliance and profit maximization.",
+    "difficulty": "medium",
+    "question_text": "What is corporate social responsibility (CSR)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "50754fa6-39ff-4c21-a390-f1e8d892f2cd",
+    "options": [
+      "No difference",
+      "Preference: fixed dividend, priority in liquidation, no voting; Equity: variable dividend, voting rights, residual claim",
+      "Preference shares are always better",
+      "Equity shares have guaranteed returns"
+    ],
+    "explanation": "Preference shareholders receive a fixed dividend and have priority over equity shareholders in dividend payments and liquidation. However, they typically lack voting rights. Equity shareholders have voting rights but bear greater risk with variable returns.",
+    "difficulty": "medium",
+    "question_text": "What is the difference between preference shares and equity shares?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7ac4edfe-14a5-4dc6-a7aa-999b1795e285",
+    "options": [
+      "Companies can do anything",
+      "Acts beyond the powers specified in the memorandum of association are void",
+      "Only applies to private companies",
+      "Allows unlimited liability"
+    ],
+    "explanation": "Ultra vires means 'beyond powers.' Any company act outside the scope of its objects clause in the memorandum is void. However, modern company laws (like UK Companies Act 2006) have largely abolished this doctrine for third-party protection.",
+    "difficulty": "hard",
+    "question_text": "What is the ultra vires doctrine in company law?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "31dfc5a5-2c10-4cc6-8448-dd95dac7b196",
+    "options": [
+      "Outsiders must inspect internal company documents",
+      "Outsiders dealing with a company are entitled to assume internal procedures were properly followed",
+      "Only applies to directors",
+      "Company need not follow internal rules"
+    ],
+    "explanation": "The indoor management rule (Royal British Bank v Turquand, 1856) protects outsiders who deal in good faith with a company—they need not inquire whether internal procedures (board resolutions) were properly complied with.",
+    "difficulty": "hard",
+    "question_text": "What is the doctrine of indoor management (Turquand's Rule)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4323a697-885e-462d-a179-f3cdf1ba666d",
+    "options": [
+      "No difference",
+      "Scheme: court-approved compromise/arrangement binding all shareholders; Takeover: offer made directly to shareholders individually",
+      "Scheme is always hostile",
+      "Takeover requires court approval"
+    ],
+    "explanation": "A scheme of arrangement under court supervision allows a company to reorganize its capital or facilitate an acquisition with approval of a majority representing 75% in value of each class, binding all shareholders. A takeover is an offer made directly to target shareholders.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a scheme of arrangement and a takeover?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6ee7c6e3-2168-4e80-8ec1-38089df63f5f",
+    "options": [
+      "Normal corporate operation",
+      "Courts ignore separate legal personality to hold shareholders/directors personally liable for corporate debts/actions",
+      "Only applies to public companies",
+      "Automatic in all bankruptcies"
+    ],
+    "explanation": "Piercing the corporate veil is a judicial exception where courts disregard the separate legal entity of a company to hold shareholders or directors personally liable, typically in cases of fraud, sham, agency, or failure to observe corporate formalities.",
+    "difficulty": "hard",
+    "question_text": "What is the piercing of the corporate veil?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cbce3fb7-a87b-4077-a6dd-1177ba36a399",
+    "options": [
+      "Literal poison",
+      "Shareholder rights plan diluting hostile acquirer's stake if trigger threshold is crossed",
+      "Government bailout",
+      "Employee strike"
+    ],
+    "explanation": "A poison pill (shareholder rights plan) allows existing shareholders (except the acquirer) to purchase additional shares at a discount if a hostile bidder acquires beyond a threshold (typically 10-20%), massively diluting the bidder's stake.",
+    "difficulty": "hard",
+    "question_text": "What is a poison pill in corporate defense?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e236d8de-3428-4002-a389-75f7a2c861a6",
+    "options": [
+      "Government intervention",
+      "Target company invites a friendly acquirer to outbid the hostile bidder",
+      "Employee buyout",
+      "Stock buyback"
+    ],
+    "explanation": "A white knight defense occurs when the target company's management seeks a friendly acquirer (the 'white knight') to acquire the company as an alternative to the hostile bidder, often on more favorable terms.",
+    "difficulty": "hard",
+    "question_text": "What is a white knight defense against hostile takeover?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9242cfd8-34fb-40ae-84cb-b29e851660bf",
+    "options": [
+      "Same thing",
+      "Insider trading: trading on material non-public information; Market manipulation: artificially influencing price/supply/demand",
+      "Insider trading is legal",
+      "Market manipulation only involves companies"
+    ],
+    "explanation": "Insider trading involves trading securities based on material non-public information in breach of fiduciary duty. Market manipulation involves artificial conduct (wash trading, spoofing, spreading false rumors) to deceive investors about price or market activity.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between insider trading and market manipulation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4d086a2b-300f-4c18-984f-dacb2e9bae39",
+    "options": [
+      "All-cash acquisition",
+      "Acquisition financed primarily through debt, with target's assets/cash flows as collateral",
+      "Stock swap only",
+      "Government acquisition"
+    ],
+    "explanation": "An LBO uses a significant amount of borrowed money (leverage) to finance an acquisition, with the target company's assets serving as collateral. The acquirer (often a PE firm) uses the target's cash flows to service the acquisition debt.",
+    "difficulty": "hard",
+    "question_text": "What is a leveraged buyout (LBO)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0754a7ec-0ad2-4bed-b14d-0495ca7ebf9c",
+    "options": [
+      "Same thing",
+      "Golden parachute: generous executive severance on takeover; Poison pill: dilutes acquirer",
+      "Golden parachute helps acquirer; Poison pill helps target",
+      "Both are illegal"
+    ],
+    "explanation": "A golden parachute provides substantial compensation to senior executives if they lose their jobs after a change in control. A poison pill is a shareholder rights plan to prevent hostile takeovers by diluting the acquirer.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a golden parachute and a poison pill?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ec529745-ccaf-4447-a328-ef9c7f5996de",
+    "options": [
+      "Right to block merger",
+      "Dissenting shareholder's right to have shares valued by court and receive fair cash value",
+      "Right to vote twice",
+      "Right to sell to anyone"
+    ],
+    "explanation": "Appraisal rights (dissenters' rights) allow shareholders who vote against certain extraordinary transactions (mergers, sales of assets) to petition a court to determine the fair value of their shares and receive cash payment.",
+    "difficulty": "hard",
+    "question_text": "What is the appraisal right in mergers and acquisitions?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "18ca4352-8035-4976-9d4f-c2ad525f564b",
+    "options": [
+      "No difference",
+      "Managing director: entrusted with substantial powers of management; Whole-time director: in whole-time employment but may not have full managerial powers",
+      "Managing director is part-time",
+      "Whole-time director is always CEO"
+    ],
+    "explanation": "A managing director is entrusted with substantial powers of management of the company's affairs. A whole-time director devotes whole-time attention to the company but may not possess the full range of managerial powers of an MD.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a managing director and a whole-time director?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9b55099d-3e3b-4e84-bb1e-e6e109a3f0ce",
+    "options": [
+      "Individual lawsuit",
+      "Lawsuit where a group of similarly affected investors sue collectively for securities fraud",
+      "Company suing government",
+      "Criminal prosecution only"
+    ],
+    "explanation": "A securities class action allows one or more plaintiffs to sue on behalf of a larger group of investors who suffered similar losses due to alleged securities fraud, misrepresentation, or market manipulation.",
+    "difficulty": "hard",
+    "question_text": "What is a Class Action Suit in securities law?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "34383362-9fb8-40ef-a1ff-6bd252b03757",
+    "options": [
+      "Same method",
+      "Book-building: price discovered through demand; Fixed price: price set in advance by company",
+      "Book-building is cheaper",
+      "Fixed price allows price discovery"
+    ],
+    "explanation": "In book-building, the issuer and lead manager solicit bids from institutional investors to discover the price. In the fixed price method, the company sets the issue price in advance based on valuation, and investors apply at that price.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between book-building and fixed price method in IPOs?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f335ec4b-5533-485a-9b8f-3d3081de84ac",
+    "options": [
+      "Normal acquisition",
+      "Private company acquires a public shell company to go public without traditional IPO",
+      "Company splitting into parts",
+      "Government nationalization"
+    ],
+    "explanation": "In a reverse merger, a private company acquires a publicly traded shell company, effectively becoming public without the time, expense, and regulatory scrutiny of a traditional IPO.",
+    "difficulty": "hard",
+    "question_text": "What is a reverse merger (reverse takeover)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d7c95bdb-084f-4fc5-980d-ff9ea217c0f9",
+    "options": [
+      "Same thing",
+      "Stock split: divides par value (no capitalization); Bonus issue: capitalizes reserves to issue free shares",
+      "Both reduce reserves",
+      "Bonus issue changes par value"
+    ],
+    "explanation": "A stock split divides existing shares into more shares with proportionally reduced par value (no accounting entry). A bonus issue converts reserves (capital redemption, securities premium) into paid-up capital by issuing free shares to existing shareholders.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a stock split and a bonus issue?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "46a97eaa-7250-40e7-b14f-62acf6e5468d",
+    "options": [
+      "Automatic liquidation",
+      "Time-bound process to resolve insolvency through Committee of Creditors deciding between resolution plan or liquidation",
+      "Government bailout",
+      "Debt waiver"
+    ],
+    "explanation": "India's IBC 2016 establishes a time-bound (330 days) process: default triggers insolvency → moratorium → interim resolution professional → Committee of Creditors (COC) evaluates resolution plans → approval by 66% COC vote → otherwise liquidation.",
+    "difficulty": "hard",
+    "question_text": "What is corporate insolvency resolution under the IBC (Insolvency and Bankruptcy Code)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2dc16d60-4c3f-4c9c-83fb-c49bfe478d88",
+    "options": [
+      "No such concept",
+      "Framework for cooperation between jurisdictions in insolvency proceedings involving debtors with assets in multiple countries",
+      "Only domestic law",
+      "International trade law"
+    ],
+    "explanation": "Cross-border insolvency deals with insolvent debtors having assets/creditors in multiple jurisdictions. The UNCITRAL Model Law provides a framework for recognizing foreign proceedings, cooperation between courts, and coordinating concurrent proceedings.",
+    "difficulty": "hard",
+    "question_text": "What is cross-border insolvency and what is the UNCITRAL Model Law?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "36ba57fd-377c-469a-a358-9ce561ff5abf",
+    "options": [
+      "No difference",
+      "Composite: unrelated business lines (conglomerate); Product extension: complementary products in same market",
+      "Composite is always vertical",
+      "Product extension is always horizontal"
+    ],
+    "explanation": "A composite (conglomerate) merger combines firms in unrelated business lines. A product extension merger combines firms with related but non-competing products (different products in same market), enabling cross-selling.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a composite merger and a product extension merger?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "81d9eb44-acf5-4147-beb2-08e0a91622ca",
+    "options": [
+      "Payment in full at closing",
+      "Portion of purchase price held by third party pending satisfaction of post-closing conditions/indemnities",
+      "Down payment only",
+      "Loan from seller"
+    ],
+    "explanation": "An escrow arrangement in M&A holds a portion of the purchase price (typically 5-15%) with a third-party escrow agent for a specified period to secure the buyer against breaches of representations, warranties, and indemnities.",
+    "difficulty": "hard",
+    "question_text": "What is escrow in M&A transactions?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c3da27ee-bd3a-4ed1-8c30-bf52ebd88583",
+    "options": [
+      "Environmental tax",
+      "Target company repurchasing shares from hostile acquirer at premium to prevent takeover",
+      "Dividend payment",
+      "Employee stock option"
+    ],
+    "explanation": "Greenmail refers to a target company buying back its own shares from a hostile acquirer (corporate raider) at a premium over market price in exchange for the raider agreeing not to pursue the takeover.",
+    "difficulty": "hard",
+    "question_text": "What is greenmail in corporate finance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "eda56ba0-fc2d-40c8-8942-5687865ad8dc",
+    "options": [
+      "Broker",
+      "Agent",
+      "Retailer",
+      "Wholesaler"
+    ],
+    "explanation": "An agent sells goods on behalf of a principal and earns commission.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a middleman who sells goods on behalf of a principal and earns a commission.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1225ff0b-7c7e-450e-9a1d-9d1a27d7666a",
+    "options": [
+      "No difference",
+      "Buy-side: advises acquirer; Sell-side: advises target on divestiture/sale",
+      "Buy-side is always an investment bank; Sell-side is always a company",
+      "Buy-side works for free"
+    ],
+    "explanation": "Buy-side advisors assist potential acquirers in identifying targets, conducting due diligence, and negotiating acquisitions. Sell-side advisors help companies prepare for sale, find buyers, and maximize value in divestitures.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a buy-side and sell-side M&A advisor?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "78bcd872-d989-42f2-bf67-d95fe1d870ca",
+    "options": [
+      "Same thing",
+      "Representations: statements of past/present fact; Warranties: promise that facts are true and indemnity if not",
+      "Only representations exist",
+      "Only warranties exist"
+    ],
+    "explanation": "Representations are statements of past and present facts about the business. Warranties are promises that representations are true. Breach of either can trigger indemnification, but the legal remedies may differ (rescission vs. damages).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between representations and warranties in an acquisition agreement?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e856d45c-c1ba-4e54-aa6f-463ce4a372b0",
+    "options": [
+      "Listing on exchange",
+      "Offer to buy back shares from public to exit stock exchange, typically requiring majority minority approval and fair price",
+      "Issuing new shares",
+      "Stock split"
+    ],
+    "explanation": "Delisting removes a company's shares from a stock exchange. Regulations typically require: board approval, shareholder approval (often majority of minority), exit opportunity for public shareholders at a fair price determined by a reverse book-building process.",
+    "difficulty": "hard",
+    "question_text": "What is a delisting offer and what are its regulatory requirements?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8628064e-cfa7-4625-a7f8-b83b8b3fe889",
+    "options": [
+      "Same thing",
+      "Sweat equity: shares to employees/directors for know-how/IP; ESOPs: option to purchase shares at predetermined price",
+      "Sweat equity is for cash; ESOPs are free",
+      "Only ESOPs are regulated"
+    ],
+    "explanation": "Sweat equity shares are issued to employees/directors at a discount or for consideration other than cash for their contributions (know-how, IP). ESOPs (Employee Stock Option Plans) grant employees the right to purchase shares at a future date at a predetermined price.",
+    "difficulty": "hard",
+    "question_text": "What is sweat equity and how is it different from ESOPs?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ea8f1507-46c2-45b7-9549-1f5a7b4ad76d",
+    "options": [
+      "No difference",
+      "Asset sale: buyer purchases specific assets/liabilities; Stock sale: buyer purchases entire company (all assets/liabilities)",
+      "Asset sale transfers all liabilities automatically",
+      "Stock sale allows cherry-picking"
+    ],
+    "explanation": "In an asset sale, the buyer can select specific assets and assume only identified liabilities, providing flexibility but requiring individual asset transfers. In a stock sale, the buyer acquires the entire entity with all assets and liabilities (known and unknown).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between an asset sale and a stock sale in M&A?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d5dd8d14-7d32-443c-b7a3-255969497adb",
+    "options": [
+      "All shareholders agree",
+      "Majority shareholder forces minority shareholders to sell their shares and merges subsidiary into parent",
+      "Voluntary buyback",
+      "IPO process"
+    ],
+    "explanation": "A freeze-out (squeeze-out) merger occurs when a controlling shareholder forces minority shareholders to sell their shares by merging the controlled corporation into another entity. Most jurisdictions require fair price and fair dealing protections for minority shareholders.",
+    "difficulty": "hard",
+    "question_text": "What is a squeeze-out merger (minority freeze-out)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8d66ea8b-52ab-4d70-ae9a-ea36870e4ba7",
+    "options": [
+      "Same thing",
+      "Interlocking: common members serve on boards of competing companies; Subsidiary: separate board controlled by parent",
+      "Interlocking is always illegal",
+      "Subsidiary has no board"
+    ],
+    "explanation": "An interlocking directorate occurs when the same individuals serve on the boards of multiple companies (potentially raising antitrust concerns for competitors). A subsidiary board is a separate board of directors for a subsidiary company, typically controlled by the parent through board appointment rights.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between an interlocking directorate and a subsidiary board?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "31ac81fd-64e2-49f5-b8c9-f00a20eced56",
+    "options": [
+      "Cash dividend",
+      "Dividend paid in the form of additional shares rather than cash",
+      "Property dividend",
+      "Liquidating dividend"
+    ],
+    "explanation": "A scrip dividend (stock dividend) gives shareholders the option to receive additional shares instead of cash dividends. It preserves company cash while rewarding shareholders.",
+    "difficulty": "hard",
+    "question_text": "What is a scrip dividend?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "01d97e21-396a-477e-b952-6a6b81b2937f",
+    "options": [
+      "No difference",
+      "Friendly: target board supports; Hostile: target board opposes, bidder approaches shareholders directly or through tender offer",
+      "Hostile is always illegal",
+      "Friendly is always at premium"
+    ],
+    "explanation": "In a friendly takeover, the target company's board of directors supports and recommends the acquisition. In a hostile takeover, the target board opposes the offer, and the bidder may bypass management to make a tender offer directly to shareholders or engage in a proxy fight.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a hostile takeover and a friendly takeover?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cbb88f1b-e10a-4405-a847-0ef1b548935f",
+    "options": [
+      "Paying the purchase price",
+      "Comprehensive investigation and analysis of target company's business, financials, legal, and operations before acquisition",
+      "Announcing the merger",
+      "Signing the contract"
+    ],
+    "explanation": "Due diligence is the systematic investigation of a target company's business (commercial DD), financial statements (financial DD), legal matters (legal DD), operations, technology, and human resources to identify risks, validate valuation, and inform negotiation.",
+    "difficulty": "hard",
+    "question_text": "What is due diligence in M&A?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bdfb5a41-e36e-4323-b162-f4d0e1fa7712",
+    "options": [
+      "Friendly negotiation",
+      "Public offer to purchase shares directly from shareholders at a specified price during a set time period",
+      "Private placement",
+      "Stock dividend"
+    ],
+    "explanation": "A tender offer is a public solicitation to all shareholders of a target company to tender their shares for sale at a specified price during a specified time. It is commonly used in hostile takeovers to bypass target management.",
+    "difficulty": "hard",
+    "question_text": "What is a tender offer in corporate takeovers?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b90b9b9d-b65c-4736-81f6-0bdcbdd58ffd",
+    "options": [
+      "Acquiring 100% immediately",
+      "Gradually acquiring shares in the open market over time to gain control without triggering disclosure requirements immediately",
+      "Selling shares gradually",
+      "Government acquisition"
+    ],
+    "explanation": "Creeping acquisition involves gradually purchasing shares of a target company in the open market over an extended period. It allows an acquirer to build a significant stake (below mandatory disclosure thresholds initially) before making a formal bid, potentially at a lower average cost.",
+    "difficulty": "hard",
+    "question_text": "What is creeping acquisition?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5170a07b-a55d-4ee1-9d08-462c6a992d04",
+    "options": [
+      "No difference",
+      "Statutory: target merges into acquirer and ceases to exist; Subsidiary: target becomes a subsidiary of acquirer and retains separate existence",
+      "Statutory is always hostile",
+      "Subsidiary merger dissolves both companies"
+    ],
+    "explanation": "In a statutory merger, the target company is absorbed into the acquiring company and ceases to exist as a separate legal entity. In a subsidiary merger, the acquiring company creates a new subsidiary or uses an existing one to acquire the target, which continues to exist as a subsidiary.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a statutory merger and a subsidiary merger?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5265ee88-5d3b-4a00-9c8a-ddf92375d9dc",
+    "options": [
+      "Standing",
+      "Stop",
+      "Direct",
+      "Recurring"
+    ],
+    "explanation": "A standing order is a regular bank instruction to make set payments.",
+    "difficulty": "easy",
+    "question_text": "A _____ order is a standing instruction to a bank to make regular payments on behalf of a customer.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6b460913-5b1f-4377-ba15-73d8e6ea57bf",
+    "options": [
+      "Fee paid to complete the deal",
+      "Fee paid by seller to buyer if seller accepts a superior offer or walks away from the transaction",
+      "Government tax",
+      "Brokerage commission"
+    ],
+    "explanation": "A breakup fee (termination fee) is a penalty paid by the seller to the prospective buyer if the seller terminates the agreement to accept a superior competing bid or for other specified reasons. It compensates the original bidder for costs and time invested.",
+    "difficulty": "hard",
+    "question_text": "What is a breakup fee in M&A?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f3e9550e-5a9d-4c7c-a9ac-45b352eb64c2",
+    "options": [
+      "Same thing",
+      "Accretive: increases acquirer's EPS; Dilutive: decreases acquirer's EPS",
+      "Accretive decreases EPS",
+      "Dilutive is always bad"
+    ],
+    "explanation": "An accretive acquisition increases the acquirer's earnings per share (EPS) immediately or in the near term. A dilutive acquisition decreases the acquirer's EPS. Whether an acquisition is accretive or dilutive depends on the purchase price, financing structure, and target's earnings relative to the acquirer's.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between an accretive and dilutive acquisition?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "925720d1-0859-4b90-a40f-71eab9e32c09",
+    "options": [
+      "Legal requirement",
+      "Independent financial advisor's opinion on whether transaction terms are fair to shareholders from a financial point of view",
+      "Guarantee of success",
+      "Government approval"
+    ],
+    "explanation": "A fairness opinion is a professional evaluation by an independent financial advisor stating whether the consideration offered in a transaction is fair to shareholders from a financial perspective. It helps boards fulfill their fiduciary duties but does not guarantee value or success.",
+    "difficulty": "hard",
+    "question_text": "What is the role of fairness opinion in M&A?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6b4e5be8-7f22-4b57-babc-e6dc4cad3598",
+    "options": [
+      "Full year",
+      "Partial period from valuation date to next fiscal year-end, requiring adjustments to annualized financials",
+      "Only used in LBOs",
+      "Government reporting period"
+    ],
+    "explanation": "A stub period is the partial year from the transaction closing date to the company's next fiscal year-end. Financial models must adjust annual projections to reflect only the portion of the year the company will be owned.",
+    "difficulty": "hard",
+    "question_text": "What is a stub period in financial modeling for M&A?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b0c40192-cc06-419a-91d0-db94c9026e02",
+    "options": [
+      "Same thing",
+      "TTM: most recent 12-month period; LFY: most recently completed fiscal year",
+      "TTM is always forward-looking",
+      "LFY is always 12 months"
+    ],
+    "explanation": "TTM uses the most recent 12-month financial data (may span parts of two fiscal years), providing more current performance metrics. LFY uses the most recently completed fiscal year. TTM is preferred when recent quarterly results are available and business conditions have changed.",
+    "difficulty": "hard",
+    "question_text": "What is the difference between trailing twelve months (TTM) and last fiscal year (LFY) in valuation?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "da80eb89-1e5b-4918-9dc8-6de4d0aae3e1",
+    "options": [
+      "No impact on taxes",
+      "Limitation on using net operating losses after >50 percentage point ownership change to prevent trafficking in tax attributes",
+      "Tax exemption",
+      "Only applies to individuals"
+    ],
+    "explanation": "IRC Section 382 limits a corporation's ability to use net operating losses (NOLs) and built-in losses after an ownership change (>50 percentage point shift in shareholders owning 5%+). The annual limitation equals the equity value times the long-term tax-exempt rate.",
+    "difficulty": "hard",
+    "question_text": "What is a Section 382 ownership change and its impact on NOLs under U.S. tax law?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "966fd56c-115d-42a7-aee1-cdbeecdd4731",
+    "options": [
+      "Same structure",
+      "Stapled: two securities trade together as one unit; Dual-listed: separate companies with unified management but separate listings and legal identities",
+      "Both dissolve after merger",
+      "Neither is used in practice"
+    ],
+    "explanation": "Stapled securities are two different securities (e.g., a share in an operating company and a unit in a trust) that trade together as a single unit and cannot be transferred separately. A dual-listed company (DLC) structure involves two separate listed companies with a sharing agreement, unified board and management, but separate legal identities and stock exchange listings (e.g., Unilever, Rio Tinto).",
+    "difficulty": "hard",
+    "question_text": "What is the difference between a stapled security and a dual-listed company structure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6431caae-4141-4416-ba1a-68f84d461e75",
+    "options": [
+      "Invoice",
+      "Receipt",
+      "Voucher",
+      "Cheque"
+    ],
+    "explanation": "An invoice is a commercial document requesting payment for goods supplied.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a document sent by the seller to the buyer requesting payment for goods supplied.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "78d01fe6-f656-469b-bd2c-0c44ab6c0809",
+    "options": [
+      "Home",
+      "Foreign",
+      "Retail",
+      "Wholesale"
+    ],
+    "explanation": "Foreign trade (international trade) is trade between two different countries.",
+    "difficulty": "easy",
+    "question_text": "Trade carried out between two different countries is called _____ trade.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0c369803-545e-4c94-bf21-e5ae1f17762f",
+    "options": [
+      "Retailer",
+      "Wholesaler",
+      "Broker",
+      "Agent"
+    ],
+    "explanation": "A broker brings buyers and sellers together without owning the goods.",
+    "difficulty": "easy",
+    "question_text": "A _____ is an intermediary who brings buyers and sellers together without taking title to goods.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "78230e19-2ca4-4d32-8409-62ef7d1e82df",
+    "options": [
+      "Sale",
+      "Entry",
+      "Lading",
+      "Exchange"
+    ],
+    "explanation": "A Bill of Lading details goods being shipped and serves as a receipt.",
+    "difficulty": "easy",
+    "question_text": "The document that gives details of goods being shipped and acts as a receipt is called a bill of _____.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f493af55-5127-4932-b5ed-96f2b6012e86",
+    "options": [
+      "Banking",
+      "Insurance",
+      "Investment",
+      "Leasing"
+    ],
+    "explanation": "Insurance transfers financial risk to an insurer in exchange for a premium.",
+    "difficulty": "easy",
+    "question_text": "_____ is the process of transferring risk to an insurance company in exchange for a premium.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c6cb3b79-8c66-4536-8c4e-8fa573257720",
+    "options": [
+      "Savings",
+      "Fixed deposit",
+      "Current",
+      "Investment"
+    ],
+    "explanation": "A current account allows withdrawals at any time without notice.",
+    "difficulty": "easy",
+    "question_text": "A _____ bank account allows withdrawals without prior notice.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f6c9ecc9-789d-4b59-a95b-59b9f8857a91",
+    "options": [
+      "Loss",
+      "Margin/Profit",
+      "Discount",
+      "Commission"
+    ],
+    "explanation": "The difference between buying and selling price is the trader's profit/margin.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the difference between the buying price and selling price of a trader.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d857dbe9-004b-4730-80b1-649f0ed1b344",
+    "options": [
+      "Easy",
+      "Electronic",
+      "Efficient",
+      "Extended"
+    ],
+    "explanation": "E-commerce means Electronic commerce — buying/selling via the internet.",
+    "difficulty": "easy",
+    "question_text": "E-commerce stands for _____ commerce.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f9116dd8-51ca-4cd7-8d4c-3393b5122e7c",
+    "options": [
+      "Account",
+      "Credit",
+      "Loan",
+      "Advance"
+    ],
+    "explanation": "Selling on credit means collecting payment later.",
+    "difficulty": "easy",
+    "question_text": "The practice of selling goods on credit and collecting payment later is known as trade on _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "71f2aa0d-26bf-4c4c-a4a9-e18e24f62cf4",
+    "options": [
+      "Voucher",
+      "Draft",
+      "Cheque",
+      "Receipt"
+    ],
+    "explanation": "A cheque is a written order to the bank to pay a specified amount.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a formal written order directing a bank to pay a specified sum to a named person.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "675ac28c-013d-4aab-ac1f-3348bcd2ba37",
+    "options": [
+      "Permit",
+      "Invoice",
+      "Manifest",
+      "Licence"
+    ],
+    "explanation": "An import permit is issued by customs to allow goods to be imported.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a document issued by customs authorities allowing goods to be imported.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ef8c63b8-0e61-45cd-abcf-d3cfd0c2e4d6",
+    "options": [
+      "Exports",
+      "Imports",
+      "Entrepot",
+      "Transit goods"
+    ],
+    "explanation": "Imports are goods brought into a country from abroad.",
+    "difficulty": "easy",
+    "question_text": "Goods that are brought into a country from abroad are known as _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a7461b40-0b57-4713-a4e3-27a0c6912f2d",
+    "options": [
+      "Superstore",
+      "Departmental store",
+      "Franchise",
+      "Market"
+    ],
+    "explanation": "A departmental store sells many types of goods under one roof.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a large retail store selling a wide variety of goods under one roof.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d249d012-02aa-4e3e-9446-2d94a9a8963a",
+    "options": [
+      "Credit",
+      "Guarantee",
+      "Intent",
+      "Exchange"
+    ],
+    "explanation": "A Letter of Credit is a bank guarantee ensuring payment to the seller.",
+    "difficulty": "easy",
+    "question_text": "The letter of _____ is a bank's guarantee that a buyer's payment will be received by the seller.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c7798721-7a97-4470-a1c2-8e673e54d301",
+    "options": [
+      "Discounting",
+      "Dumping",
+      "Undercutting",
+      "Subsidy"
+    ],
+    "explanation": "Dumping is selling below cost price to eliminate competition.",
+    "difficulty": "medium",
+    "question_text": "Selling goods below cost price to drive out competition is called _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "91c658a1-3db1-4e4b-99bb-0d821a50adc4",
+    "options": [
+      "Free zone",
+      "Bonded warehouse",
+      "Cold storage",
+      "Transit shed"
+    ],
+    "explanation": "A bonded warehouse allows storage without immediate payment of customs duty.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a type of warehouse where goods can be stored without paying customs duty.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "106cfd60-cd6e-4241-8ff5-9209b2a74e89",
+    "options": [
+      "Fixing",
+      "Discrimination",
+      "Control",
+      "Comparison"
+    ],
+    "explanation": "Price discrimination is selling the same product at different prices in different markets.",
+    "difficulty": "medium",
+    "question_text": "The practice of selling identical goods in different markets at different prices is called price _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6999f6ec-e3d3-48a7-bf48-694930ea3496",
+    "options": [
+      "Advice",
+      "Delivery",
+      "Credit",
+      "Debit"
+    ],
+    "explanation": "An advice note informs the buyer that goods have been dispatched.",
+    "difficulty": "easy",
+    "question_text": "A _____ note is a document sent by the seller to inform the buyer that goods have been dispatched.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6dc64de2-c379-4df0-b1c4-d99a409806c7",
+    "options": [
+      "Trade deficit",
+      "Balance of trade",
+      "Current account",
+      "Budget surplus"
+    ],
+    "explanation": "Balance of trade = value of exports minus value of imports.",
+    "difficulty": "easy",
+    "question_text": "The _____ is the total value of goods and services exported minus imports.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c7adf6df-08c0-4d04-ba9b-aab0b8bafd29",
+    "options": [
+      "Cartel",
+      "Monopoly",
+      "Conglomerate",
+      "Trust"
+    ],
+    "explanation": "A monopoly is a single firm dominating the market.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a combination of firms under common ownership that reduces competition.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f417d9c7-167f-4292-a016-e932e1620c06",
+    "options": [
+      "E-banking",
+      "M-banking",
+      "Online shopping",
+      "Digital trade"
+    ],
+    "explanation": "E-banking uses electronic systems for banking transactions.",
+    "difficulty": "easy",
+    "question_text": "_____ is the use of electronic systems to carry out banking transactions.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ce19c0e3-8864-4269-9e2c-db6605d606e2",
+    "options": [
+      "Imports",
+      "Exports",
+      "Transit goods",
+      "Entrepot"
+    ],
+    "explanation": "Exports are goods sent out of a country.",
+    "difficulty": "easy",
+    "question_text": "Goods sent out of a country to other countries are known as _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e59caa5b-f854-4950-b00b-0daed936af17",
+    "options": [
+      "Partnership",
+      "Cooperative",
+      "Company",
+      "Franchise"
+    ],
+    "explanation": "A cooperative is owned and run by its members for mutual benefit.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a business owned and controlled by its members who share in the profits.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2668d0bc-7118-4100-8705-55d1fbf426ca",
+    "options": [
+      "Excise duty",
+      "Tariff",
+      "VAT",
+      "Subsidy"
+    ],
+    "explanation": "A tariff is a government tax on imported goods.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a fee charged by a government on imported goods.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5aa4fdd8-b467-4fda-99a2-fd6476e4ae42",
+    "options": [
+      "Cheque",
+      "Draft",
+      "Both a and b",
+      "Voucher"
+    ],
+    "explanation": "Both cheques and drafts allow payments without using cash.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a document used to make payments through a bank without using cash.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "65816c68-a064-41b4-bc77-b8519264b447",
+    "options": [
+      "Fire",
+      "Marine",
+      "Life",
+      "Property"
+    ],
+    "explanation": "Marine insurance covers goods during transportation.",
+    "difficulty": "easy",
+    "question_text": "_____ insurance covers goods while they are being transported.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dc5f4b5b-fcbd-43c7-91ae-bfb1406700aa",
+    "options": [
+      "Insurance company",
+      "Stock exchange",
+      "Bank",
+      "Cooperative"
+    ],
+    "explanation": "A bank accepts deposits from the public and provides loans.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a financial institution that accepts deposits and makes loans.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e520c91b-67da-4ed5-a83f-7f905601c297",
+    "options": [
+      "Creditor",
+      "Debtor",
+      "Shareholder",
+      "Partner"
+    ],
+    "explanation": "A debtor owes money to the business.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a person who owes money to a business.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "026fac89-85a5-47a9-8849-70e8f91ea046",
+    "options": [
+      "Debtor",
+      "Creditor",
+      "Director",
+      "Agent"
+    ],
+    "explanation": "A creditor is owed money by the business.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a person to whom money is owed.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b2c5e847-4e52-4459-af11-5585501e10b9",
+    "options": [
+      "Invoice",
+      "Contract",
+      "Receipt",
+      "Voucher"
+    ],
+    "explanation": "A contract is a legally binding agreement between two parties.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a formal agreement between two parties.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d984b168-d411-4040-9d44-17ace9793116",
+    "options": [
+      "Life insurance",
+      "Key person insurance",
+      "Health insurance",
+      "Property insurance"
+    ],
+    "explanation": "Key person insurance covers the financial loss from the incapacity of key staff.",
+    "difficulty": "medium",
+    "question_text": "_____ insurance compensates a business if key personnel are unable to work.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2890eaa5-c593-4193-a828-ed28f4c479a0",
+    "options": [
+      "Indemnity",
+      "Insurable interest",
+      "Contribution",
+      "Subrogation"
+    ],
+    "explanation": "Insurable interest means you must have a financial stake in what is insured.",
+    "difficulty": "medium",
+    "question_text": "The _____ principle of insurance means the insured must have financial interest in the subject.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c5337efb-bc93-4bc6-a484-12d4e0d2dd40",
+    "options": [
+      "Partnership",
+      "Sole trader",
+      "Company",
+      "Cooperative"
+    ],
+    "explanation": "A sole trader (sole proprietorship) is owned and run by one individual.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a business organization owned by one person.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "376da184-c2b5-443f-87a8-32e5641ac6ee",
+    "options": [
+      "Tariff",
+      "Customs duty",
+      "Excise duty",
+      "Port charge"
+    ],
+    "explanation": "Customs duty is paid to clear imported goods through customs.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a fee paid by an importer to clear goods through customs.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1f12a1cd-2cad-413a-b4f5-d1c0aaeba61b",
+    "options": [
+      "Company",
+      "Cooperative",
+      "Partnership",
+      "Franchise"
+    ],
+    "explanation": "A partnership combines resources of two or more partners.",
+    "difficulty": "easy",
+    "question_text": "A _____ combines the resources of two or more people to form a business.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "bbddaac6-c7cb-48ab-a3bf-6344a5f4a635",
+    "options": [
+      "Production",
+      "Distribution",
+      "Marketing",
+      "Retailing"
+    ],
+    "explanation": "Distribution is the movement of goods from producers to consumers.",
+    "difficulty": "easy",
+    "question_text": "_____ is defined as the movement of goods from producers to consumers.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "826d2d12-1dc1-44c1-9669-58c96b8766ee",
+    "options": [
+      "Director",
+      "Shareholder",
+      "Creditor",
+      "Debtor"
+    ],
+    "explanation": "A shareholder (stockholder) buys and owns shares in a company.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a person who buys shares in a company.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7607fa80-0e67-430c-9d6b-a93d1b1b71d2",
+    "options": [
+      "Money",
+      "Stock",
+      "Bond",
+      "Commodity"
+    ],
+    "explanation": "The stock market (stock exchange) trades company shares.",
+    "difficulty": "easy",
+    "question_text": "The _____ market is where shares of publicly listed companies are traded.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fb440793-56af-44e9-a6f6-baae89766337",
+    "options": [
+      "Import",
+      "Customs",
+      "Excise",
+      "Value added"
+    ],
+    "explanation": "Excise duty is levied on goods manufactured domestically.",
+    "difficulty": "easy",
+    "question_text": "The _____ duty is a tax on goods manufactured within a country.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "51406a46-ab34-4994-a039-91293de7ce9a",
+    "options": [
+      "Central",
+      "Commercial",
+      "Development",
+      "Investment"
+    ],
+    "explanation": "Development banks provide long-term finance for economic development.",
+    "difficulty": "medium",
+    "question_text": "A _____ bank provides long-term loans to businesses and governments.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0711a438-42c7-48ee-ad57-41c546c7b319",
+    "options": [
+      "Advertising",
+      "Public relations",
+      "Sales promotion",
+      "Personal selling"
+    ],
+    "explanation": "Advertising is paid promotion in media channels.",
+    "difficulty": "easy",
+    "question_text": "_____ is a form of promotion where a business pays for space in media to reach customers.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "78bbeed6-aee2-4010-86df-b8eb61689cb2",
+    "options": [
+      "Salary",
+      "Wage",
+      "Commission",
+      "Bonus"
+    ],
+    "explanation": "Commission is earnings based on sales performance.",
+    "difficulty": "easy",
+    "question_text": "A _____ is the money paid to an employee based on sales they generate.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ee4e0ef7-8d0f-4fe5-978d-784a053c3c88",
+    "options": [
+      "Aviation",
+      "Rail freight",
+      "Shipping",
+      "Road transport"
+    ],
+    "explanation": "Shipping (sea freight) refers to transporting goods by sea.",
+    "difficulty": "easy",
+    "question_text": "_____ refers to transporting goods by sea.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c02bda4e-f8d8-4122-a7d7-a6f087c6feed",
+    "options": [
+      "Principle",
+      "Theory",
+      "Law",
+      "Rule"
+    ],
+    "explanation": "The Law of Demand states price and quantity demanded are inversely related.",
+    "difficulty": "easy",
+    "question_text": "The _____ of demand states that as price rises, quantity demanded falls.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d812fd88-649b-44ed-8c3c-e6299c1f9d04",
+    "options": [
+      "Partnership",
+      "Sole trader",
+      "Company",
+      "Cooperative"
+    ],
+    "explanation": "A company has a separate legal identity from its owners.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a business entity separate from its owners in law.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "a5358bff-7ff7-4091-b0e6-13f7998b4d0d",
+    "options": [
+      "Stock market",
+      "Money market",
+      "Foreign exchange market",
+      "Bond market"
+    ],
+    "explanation": "The foreign exchange market (forex) trades currencies.",
+    "difficulty": "easy",
+    "question_text": "The _____ is where foreign currencies are bought and sold.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "337326fb-1b8e-4cc2-ade0-19f648bceed7",
+    "options": [
+      "Invoice",
+      "Receipt",
+      "Voucher",
+      "Note"
+    ],
+    "explanation": "A receipt acknowledges payment has been received.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a written acknowledgment that a sum of money has been received.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4e3864cc-60ee-48a2-873f-2254c57a1baa",
+    "options": [
+      "Multilateral",
+      "Bilateral",
+      "Internal",
+      "Transit"
+    ],
+    "explanation": "Bilateral trade is trade between exactly two countries.",
+    "difficulty": "easy",
+    "question_text": "_____ trade refers to trade between two countries.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1ca90a5f-ab4d-46be-9b20-1110d905178d",
+    "options": [
+      "Cartel",
+      "Conglomerate",
+      "Monopoly",
+      "Merger"
+    ],
+    "explanation": "A conglomerate is a group of diverse companies under one parent.",
+    "difficulty": "medium",
+    "question_text": "A _____ combines several companies under one parent company.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "66084d81-66b8-4358-8034-157ca6859842",
+    "options": [
+      "Franchising",
+      "Dropshipping",
+      "Consignment",
+      "Agency"
+    ],
+    "explanation": "Dropshipping allows selling products without holding inventory.",
+    "difficulty": "medium",
+    "question_text": "The _____ system allows businesses to sell products without stocking them.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "10abbc0a-8acd-4d5d-ae56-0576672c6c3f",
+    "options": [
+      "Commission",
+      "Royalty",
+      "Rent",
+      "Dividend"
+    ],
+    "explanation": "A royalty is paid for using someone else's intellectual property.",
+    "difficulty": "medium",
+    "question_text": "A _____ is the fee paid for the use of intellectual property.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6e0321dd-34c5-4339-a69e-5faed9a9855b",
+    "options": [
+      "Privatization",
+      "Flotation",
+      "Nationalization",
+      "Merger"
+    ],
+    "explanation": "Flotation (going public/IPO) converts a private company to a public one.",
+    "difficulty": "medium",
+    "question_text": "_____ is the process of converting a private company into a public one.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0923ffc9-9afb-48bd-828c-cfaee3781a87",
+    "options": [
+      "Contract",
+      "Warranty",
+      "Bond",
+      "Certificate"
+    ],
+    "explanation": "A warranty guarantees a product will work as described.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a guarantee given by a manufacturer that a product will function properly.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2fee9ec1-6fa8-431d-a493-91747912ab72",
+    "options": [
+      "Invoice",
+      "Delivery note",
+      "Manifest",
+      "Advice note"
+    ],
+    "explanation": "A delivery note accompanies a consignment and lists its contents.",
+    "difficulty": "easy",
+    "question_text": "The _____ is a document sent with a consignment of goods giving details of the goods.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d050222b-e5b5-4688-9b85-f45348eda9f3",
+    "options": [
+      "Discounting",
+      "Dumping",
+      "Subsidizing",
+      "Undercutting"
+    ],
+    "explanation": "Dumping is exporting goods below cost price to gain market share.",
+    "difficulty": "medium",
+    "question_text": "_____ is the practice of selling goods in another country below cost price.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ea7e0f01-000e-4694-92a8-87b777da5496",
+    "options": [
+      "Loan",
+      "Equity",
+      "Debenture",
+      "Overdraft"
+    ],
+    "explanation": "Equity capital is invested in exchange for ownership, not repaid.",
+    "difficulty": "medium",
+    "question_text": "_____ capital is money invested in a business that is not expected to be repaid.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0a2c7546-8fdd-4320-a478-c3ee58400d8f",
+    "options": [
+      "Public",
+      "Private",
+      "Government",
+      "Foreign"
+    ],
+    "explanation": "A private limited company's shares are not traded publicly.",
+    "difficulty": "easy",
+    "question_text": "A _____ company is one whose shares are not available to the general public.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e5040756-9231-490e-b9ff-03e728070242",
+    "options": [
+      "Market",
+      "Issue",
+      "Face",
+      "Reserve"
+    ],
+    "explanation": "The issue price is set at an IPO (Initial Public Offering).",
+    "difficulty": "medium",
+    "question_text": "The _____ price is the price at which a security is first offered to the public.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ddf0a699-04f7-4c85-a295-f783de685dc4",
+    "options": [
+      "Agency",
+      "Franchise",
+      "Partnership",
+      "Joint venture"
+    ],
+    "explanation": "A franchise licenses a brand/business model to franchisees.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a business where one party licenses its brand to another party.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "498681e5-3e0a-4855-bb2d-6851c5616482",
+    "options": [
+      "Companies",
+      "Consumer Protection",
+      "Trade",
+      "Contract"
+    ],
+    "explanation": "Consumer Protection Acts safeguard buyers from unfair practices.",
+    "difficulty": "easy",
+    "question_text": "The _____ Act protects consumers from unfair trading practices.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3ca428ad-d50f-4a31-a8b0-cf38219f725e",
+    "options": [
+      "Export licence",
+      "Bill of lading",
+      "Certificate of origin",
+      "Customs permit"
+    ],
+    "explanation": "An export licence grants official permission to export certain goods.",
+    "difficulty": "easy",
+    "question_text": "An official document permitting the export of specific goods is called an _____.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "b3e2ad9e-1e78-4ca1-ae8c-973a9112802a",
+    "options": [
+      "Trade",
+      "Globalization",
+      "Migration",
+      "Commerce"
+    ],
+    "explanation": "Globalization refers to the flow of goods, capital, and labor across borders.",
+    "difficulty": "easy",
+    "question_text": "_____ is the movement of labor, capital, and goods between countries.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3bd2423e-2328-49a5-b185-baf67b01e4f2",
+    "options": [
+      "Loan",
+      "Overdraft",
+      "Credit card",
+      "Mortgage"
+    ],
+    "explanation": "An overdraft facility lets customers spend beyond their account balance.",
+    "difficulty": "easy",
+    "question_text": "A _____ allows a bank customer to withdraw more than what is in their account.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "41f6523b-3628-4e89-a8ad-76cd4c24bbf7",
+    "options": [
+      "Price ceiling",
+      "Price floor",
+      "Equilibrium price",
+      "Administered price"
+    ],
+    "explanation": "A price floor sets a minimum price, preventing it from falling below that level.",
+    "difficulty": "medium",
+    "question_text": "The _____ is the minimum price set by the government above which prices cannot fall.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a792318a-13f9-4919-974e-b53af2fc4613",
+    "options": [
+      "Subsidiary",
+      "Joint venture",
+      "Holding company",
+      "Franchise"
+    ],
+    "explanation": "A joint venture is formed by two or more parties for a specific project.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a company formed to carry out a specific project.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1586268d-c153-40aa-bc73-d6f4b1baacd6",
+    "options": [
+      "Informative",
+      "Persuasive",
+      "Reminder",
+      "Comparative"
+    ],
+    "explanation": "Persuasive advertising aims to convince customers to purchase.",
+    "difficulty": "easy",
+    "question_text": "_____ advertising aims to persuade customers to buy a particular product.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b8f9c423-6691-466c-b5ce-258405f0f9c4",
+    "options": [
+      "Trade",
+      "Companies Act",
+      "Consumer Protection",
+      "Competition"
+    ],
+    "explanation": "The Companies Act governs company registration and management.",
+    "difficulty": "easy",
+    "question_text": "The _____ Act regulates the formation and running of companies.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a05a51ca-38a4-440d-b3c3-3cf0b713dfff",
+    "options": [
+      "Wholesaler",
+      "Retailer",
+      "Distributor",
+      "Agent"
+    ],
+    "explanation": "A retailer sells goods directly to the end consumer in small quantities.",
+    "difficulty": "easy",
+    "question_text": "A _____ is defined as a business that sells goods in small quantities to the public.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4c1075bc-5cec-4f40-974b-5a4b2ff87029",
+    "options": [
+      "Liquidation",
+      "Insolvency",
+      "Bankruptcy",
+      "Receivership"
+    ],
+    "explanation": "Insolvency is the inability to pay debts when they fall due.",
+    "difficulty": "easy",
+    "question_text": "_____ occurs when a debtor cannot pay their debts.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d8e455fa-67ed-4874-a3bc-7ae25e6b7c6e",
+    "options": [
+      "Debt",
+      "Current ratio",
+      "Profit",
+      "Gearing"
+    ],
+    "explanation": "The current ratio measures short-term liquidity (current assets ÷ current liabilities).",
+    "difficulty": "medium",
+    "question_text": "The _____ ratio measures how quickly a company can pay its short-term liabilities.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0bfddab5-10fb-4113-9e8f-7b807e9d3e28",
+    "options": [
+      "Debit",
+      "Credit",
+      "Advice",
+      "Delivery"
+    ],
+    "explanation": "A credit note reduces the amount owed by the buyer.",
+    "difficulty": "easy",
+    "question_text": "A _____ note is issued when a seller grants a reduction in price to the buyer.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "041008f4-e71d-4808-91d2-7c80d97e877c",
+    "options": [
+      "Tender",
+      "Auction",
+      "Consignment",
+      "Bulk selling"
+    ],
+    "explanation": "An auction sells to the highest bidder.",
+    "difficulty": "easy",
+    "question_text": "_____ is a method of selling where goods are offered to the highest bidder.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f4b1ded6-3a6f-4fe1-a107-e83869b23911",
+    "options": [
+      "Commercial bank",
+      "Merchant bank",
+      "Insurance company",
+      "Building society"
+    ],
+    "explanation": "Merchant banks (investment banks) help companies raise capital.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a financial intermediary that helps companies raise capital.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "75b972ac-2c27-4367-b7d4-2bb4f75a5452",
+    "options": [
+      "Primary market",
+      "Secondary market",
+      "Money market",
+      "Capital market"
+    ],
+    "explanation": "The secondary market trades previously issued shares and bonds.",
+    "difficulty": "medium",
+    "question_text": "The _____ is a market where previously issued securities are bought and sold.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c8ccbf35-8008-4769-887b-c53fad0fa3ee",
+    "options": [
+      "Commission",
+      "Brokerage",
+      "Fee",
+      "Royalty"
+    ],
+    "explanation": "Brokerage is the fee paid to a broker for their services.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a sum of money paid to a broker for executing a transaction.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e666fa09-4e7d-4343-aafa-fae4a4f2e01e",
+    "options": [
+      "Tariff",
+      "Non-tariff",
+      "Invisible",
+      "Formal"
+    ],
+    "explanation": "Non-tariff barriers include quotas, subsidies, and embargoes.",
+    "difficulty": "medium",
+    "question_text": "_____ trade barriers include quotas, tariffs, and embargoes.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "ead1ff89-fa79-428a-a7d5-effa1924d3e3",
+    "options": [
+      "Retail store",
+      "Wholesale store",
+      "Factory outlet",
+      "Superstore"
+    ],
+    "explanation": "A wholesale store sells in bulk at lower prices.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a store that sells goods bought directly from producers at lower prices.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5a0e28b1-0646-41e4-afa4-73151b4972bb",
+    "options": [
+      "Book",
+      "Residual",
+      "Market",
+      "Historical"
+    ],
+    "explanation": "Residual (scrap/salvage) value is the expected disposal value at end of asset life.",
+    "difficulty": "medium",
+    "question_text": "The _____ value is the amount a business expects to sell an asset for at end of its useful life.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8b1f5e98-d63e-444d-bf4c-7a5ff8a3381c",
+    "options": [
+      "Diversification",
+      "Integration",
+      "Expansion",
+      "Consolidation"
+    ],
+    "explanation": "Integration (growth by mergers and acquisitions) makes businesses larger.",
+    "difficulty": "medium",
+    "question_text": "_____ is the process by which a business becomes larger through mergers and acquisitions.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "75740857-6b08-4948-9736-df990cda977a",
+    "options": [
+      "Bill of lading",
+      "Clearance certificate",
+      "Manifest",
+      "Export licence"
+    ],
+    "explanation": "A clearance certificate allows a ship to leave port.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a document that gives permission to a ship to leave port.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0a115fc0-c591-4c7c-a7eb-594532231b84",
+    "options": [
+      "Islamabad",
+      "Lahore",
+      "Karachi",
+      "Peshawar"
+    ],
+    "explanation": "Pakistan Stock Exchange (PSX) is headquartered in Karachi.",
+    "difficulty": "easy",
+    "question_text": "The Pakistan Stock Exchange (PSX) is located in:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e3aafc0b-fb94-4b78-9621-3f0e6c12bec4",
+    "options": [
+      "Boutique",
+      "Superstore",
+      "Specialty store",
+      "Kiosk"
+    ],
+    "explanation": "A superstore sells in large quantities at discounted prices.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a retail outlet that sells goods to the public in large quantities at low prices.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fbaaf175-4426-43aa-902a-9c433d82773c",
+    "options": [
+      "Invoice",
+      "Bill of lading",
+      "Insurance certificate",
+      "Delivery note"
+    ],
+    "explanation": "The bill of lading serves as proof of ownership during sea shipment.",
+    "difficulty": "medium",
+    "question_text": "Which document proves ownership of goods during sea transit?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "50665262-5228-4bac-bf3f-a2c3513675b7",
+    "options": [
+      "GNP",
+      "GDP",
+      "NNP",
+      "NI"
+    ],
+    "explanation": "GDP (Gross Domestic Product) is total output within a country's borders.",
+    "difficulty": "easy",
+    "question_text": "_____ is the total value of all goods and services produced in a country in a year.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6aacccd3-e164-41bc-a0f8-64d3b4145ae1",
+    "options": [
+      "Cooperative",
+      "Franchise",
+      "Agency",
+      "Sole trader"
+    ],
+    "explanation": "A franchise grants the right to use a business model in exchange for fees.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a business where one party licenses its business model to another.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3102d16e-ace9-4f17-a4ab-f59a7ff1e912",
+    "options": [
+      "Current account",
+      "Savings account",
+      "Loan account",
+      "Credit account"
+    ],
+    "explanation": "A savings account earns interest and may restrict frequent withdrawals.",
+    "difficulty": "easy",
+    "question_text": "Which type of account earns interest but has restrictions on withdrawals?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "8094e17e-ab3c-4b0b-b89d-12860dad3fd2",
+    "options": [
+      "Credit note",
+      "Debit note",
+      "Advice note",
+      "Delivery note"
+    ],
+    "explanation": "A debit note is issued by the buyer when returning goods to the seller.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a note issued by the buyer acknowledging goods have been returned to the seller.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6941f192-3c02-4966-b69f-c9381b4392de",
+    "options": [
+      "Theory",
+      "Principle",
+      "Law",
+      "Model"
+    ],
+    "explanation": "The Law of Demand establishes the inverse price-demand relationship.",
+    "difficulty": "easy",
+    "question_text": "The _____ of demand states that as price falls, quantity demanded rises.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0a302a37-f29c-4514-b45f-9fd81515aca3",
+    "options": [
+      "Depression",
+      "Recession",
+      "Boom",
+      "Slump"
+    ],
+    "explanation": "A recession is a temporary decline in economic/business activity.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a temporary fall in business activity.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "61f9cd70-5c31-4e06-a46e-6a403a95e89d",
+    "options": [
+      "Invoice only",
+      "Bill of entry",
+      "Delivery note",
+      "Advice note"
+    ],
+    "explanation": "A bill of entry is the customs declaration required to clear goods.",
+    "difficulty": "medium",
+    "question_text": "Which document is essential for clearing goods through customs?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aafed0b2-0fc9-4854-a974-2d838f875368",
+    "options": [
+      "Cheque",
+      "Promissory note",
+      "Bill of lading",
+      "Draft"
+    ],
+    "explanation": "A promissory note is an unconditional promise to pay at a specified future date.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a written promise to pay a certain sum at a future date.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f2fe15cb-7493-42e4-9f40-679928b09dd9",
+    "options": [
+      "Non-tariff",
+      "Tariff",
+      "Quota",
+      "Subsidy"
+    ],
+    "explanation": "Tariff barriers are direct taxes (duties) imposed on imported goods.",
+    "difficulty": "easy",
+    "question_text": "_____ trade barriers are in the form of direct taxes on imports.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a191b20a-8390-4dd2-8ebd-34a1c4a3f432",
+    "options": [
+      "Ministry of Finance",
+      "State Bank of Pakistan",
+      "SECP",
+      "NFC"
+    ],
+    "explanation": "The State Bank of Pakistan (SBP) is the central bank and banking regulator.",
+    "difficulty": "easy",
+    "question_text": "The _____ is responsible for regulating and supervising banks in Pakistan.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1741fb87-b828-4202-85eb-19816703b10e",
+    "options": [
+      "Wharfage/Port charge",
+      "Tariff",
+      "Customs duty",
+      "Freight charge"
+    ],
+    "explanation": "Port/wharfage charges are fees for using port facilities.",
+    "difficulty": "medium",
+    "question_text": "A _____ is a fee charged by a port for loading or unloading goods.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9a162d0f-55a5-494a-bc53-79c2800bd6ff",
+    "options": [
+      "Sales tax",
+      "Income tax",
+      "Customs duty",
+      "Excise duty"
+    ],
+    "explanation": "Income tax is a direct tax levied on income earned.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a direct tax in Pakistan?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "15af170d-eb51-4faf-b6b3-6909c6c5a01e",
+    "options": [
+      "Tariff",
+      "Quota",
+      "Embargo",
+      "Subsidy"
+    ],
+    "explanation": "An import quota limits the quantity of a good that can be imported.",
+    "difficulty": "easy",
+    "question_text": "A _____ is a limit set by the government on the quantity of goods that can be imported.",
+    "correct_answer_index": 1
+  }
+]

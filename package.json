@@ -2,7 +2,7 @@
   "name": "nts-ace-prep",
   "private": true,
   "version": "0.0.0",
-  "description": "NAT Preparation App for students",
+  "description": "Entry Hivearation App for students",
   "author": "Abdul Basit Adnan",
   "type": "module",
   "main": "electron/main.cjs",
@@ -12,7 +12,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "electron:dev": "electron .",
-    "electron:build": "npm run build && electron-packager . \"NAT Prep\" --platform=win32 --arch=x64 --out=dist_electron --overwrite --icon=public/logo.ico && powershell -Command \"Remove-Item -Recurse -Force 'dist_electron/NAT Prep-win32-x64/resources/app/.env', 'dist_electron/NAT Prep-win32-x64/resources/app/.git', 'dist_electron/NAT Prep-win32-x64/resources/app/src', 'dist_electron/NAT Prep-win32-x64/resources/app/android', 'dist_electron/NAT Prep-win32-x64/resources/app/node_modules' -ErrorAction SilentlyContinue\"",
+    "electron:build": "npm run build && electron-packager . \"Entry Hive\" --platform=win32 --arch=x64 --out=dist_electron --overwrite --icon=public/logo.ico && powershell -Command \"Remove-Item -Recurse -Force 'dist_electron/Entry Hive-win32-x64/resources/app/.env', 'dist_electron/Entry Hive-win32-x64/resources/app/.git', 'dist_electron/Entry Hive-win32-x64/resources/app/src', 'dist_electron/Entry Hive-win32-x64/resources/app/android', 'dist_electron/Entry Hive-win32-x64/resources/app/node_modules' -ErrorAction SilentlyContinue\"",
     "build:win": "npm run build && electron-builder --win --publish never"
   },
   "dependencies": {
@@ -22,7 +22,8 @@
     "@capacitor/cli": "^8.3.1",
     "@capacitor/core": "^8.3.1",
     "@capacitor/push-notifications": "^8.0.3",
-    "@google/generative-ai": "^0.2.0",
+    "@emailjs/browser": "^4.4.1",
+    "@google/generative-ai": "^0.24.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",

@@ -1,65 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Home, BookOpen, FileText, Lightbulb, BarChart3, Crown, Shield, LogOut, Layers, User, Star, Trophy, CheckSquare, MessageSquare, Target, Brain, Calculator, Gift, Zap, Bell } from 'lucide-react';
-import { base44 } from '@/lib/dbClient';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Capacitor } from '@capacitor/core';
-import { sounds } from '@/lib/sounds';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { PushNotifications } from '@capacitor/push-notifications';
+import { Menu, Search, Flame, Bell, Sun, Moon } from 'lucide-react';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useTheme } from '@/lib/ThemeContext';
 
-const NAV_ITEMS = [
-  { label: 'Home', icon: Home, path: '/' },
-  { label: 'Practice Mode', icon: BookOpen, path: '/practice' },
-  { label: 'Mock Test', icon: FileText, path: '/mock-test' },
-  { label: 'Flashcards', icon: Layers, path: '/flashcards' },
-  { label: 'Study Smart', icon: Lightbulb, path: '/learn' },
-  { label: 'Past Papers', icon: FileText, path: '/past-papers' },
-  { label: 'Important Topics', icon: Star, path: '/important-topics' },
-  { label: 'Formula Sheet', icon: Calculator, path: '/formulas' },
-  { label: 'Study Plan', icon: Brain, path: '/study-plan' },
-  { label: 'Daily Tasks', icon: CheckSquare, path: '/daily-tasks' },
-  { label: 'Performance', icon: BarChart3, path: '/performance' },
-  { label: 'Mistake Review', icon: Target, path: '/mistakes' },
-  { label: 'Leaderboard', icon: Trophy, path: '/leaderboard' },
-  { label: 'My Profile', icon: User, path: '/profile' },
-  { label: 'Refer Friends', icon: Gift, path: '/referral' },
-  { label: 'Feedback', icon: MessageSquare, path: '/feedback' },
-  { label: 'Premium', icon: Crown, path: '/premium' },
-];
-
-const NAV_SECTIONS = [
-  { label: 'Study', items: ['/', '/practice', '/mock-test', '/flashcards', '/learn', '/past-papers', '/important-topics', '/formulas'] },
-  { label: 'Tools', items: ['/study-plan', '/daily-tasks', '/performance', '/mistakes', '/leaderboard'] },
-  { label: 'Account', items: ['/profile', '/referral', '/feedback', '/premium'] },
-];
-
-// New palette colors
-const C = {
-  primary: '#d4af37', // Gold
-  primaryDim: 'rgba(212,175,55,0.12)',
-  primaryBorder: 'rgba(212,175,55,0.25)',
-  headerBg: 'rgba(5,5,5,0.92)', // True black
-  headerBorder: 'rgba(212,175,55,0.08)',
-  sidebarBg: '#050505', // True black
-  sidebarBorder: 'rgba(212,175,55,0.10)',
-  textMuted: '#8a857a', // Neutral muted text
-  textLight: '#ecebe0', // Soft off-white
-  sectionLabel: '#54524a', // Darker neutral label
-  activeColor: '#d4af37',
-  activeBg: 'rgba(212,175,55,0.07)',
-};
-
-export default function AppHeader({ user }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-  const isPremium = user?.is_premium === true;
-  const isAdmin = user?.role === 'admin';
-  const isElectron = /electron/i.test(navigator.userAgent) || window.location.protocol === 'file:';
-
+export default function AppHeader({ user, onMenuClick }) {
   const queryClient = useQueryClient();
   const [notifsOpen, setNotifsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   // Fetch Notifications
   const { data: notifications = [] } = useQuery({
@@ -69,13 +17,13 @@ export default function AppHeader({ user }) {
       const { data } = await supabase
         .from('notifications')
         .select('*')
-        .or(`user_email.eq.${user?.email},user_email.eq.admin`)
+        .eq('user_email', user?.email)
         .order('created_at', { ascending: false })
         .limit(20);
       return data || [];
     },
     enabled: !!user?.email,
-    refetchInterval: 30000 // Refresh every 30s
+    refetchInterval: 30000
   });
 
   const unreadCount = notifications.filter(n => !n.is_read).length;
@@ -86,71 +34,84 @@ export default function AppHeader({ user }) {
     queryClient.invalidateQueries({ queryKey: ['notifications'] });
   };
 
-  // Push Notification Registration - DISABLED to prevent Android crashes
-  React.useEffect(() => {
-    // Disabled as requested by user
-    /*
-    if (Capacitor.isNativePlatform()) {
-      // ...
-    }
-    */
-  }, []);
-
-  const allItems = isAdmin ? [...NAV_ITEMS, { label: 'Admin Panel', icon: Shield, path: '/admin' }] : NAV_ITEMS;
-
-  const go = (path) => { sounds.click(); sounds.navigate(); navigate(path); setMenuOpen(false); };
+  const getInitials = (name) => {
+    if (!name) return 'S';
+    return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+  };
 
   return (
-    <>
-      <header
-        className="sticky top-0 z-50 px-4 py-3 flex items-center justify-between"
-        style={{
-          background: C.headerBg,
-          backdropFilter: 'blur(12px)', /* Reduced from 24px for performance */
-          borderBottom: `1px solid ${C.headerBorder}`,
-        }}
-      >
-        <div className="flex items-center gap-2">
-          <button
-            onClick={(e) => { 
-              e.preventDefault();
-              e.stopPropagation();
-              setMenuOpen(p => !p); 
-            }}
-            className="w-12 h-12 flex items-center justify-center active:scale-95 transition-transform"
-            style={{ color: C.textMuted }}
-            aria-label="Toggle Menu"
-          >
-            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    <header className="sticky top-0 z-20 bg-background/80 backdrop-blur-md border-b border-border">
+      <div className="flex items-center justify-between px-6 py-4">
+        
+        {/* Left Side: Mobile Menu & Search */}
+        <div className="flex items-center gap-4">
+          <button onClick={onMenuClick} className="md:hidden text-muted-foreground active:scale-95 transition-transform">
+            <Menu className="w-6 h-6" />
           </button>
-          <Link to="/" className="flex items-center gap-2">
-            <div className="relative w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden"
-              style={{
-                border: `1px solid ${C.primaryBorder}`,
-                boxShadow: `0 0 12px rgba(0,229,255,0.15)`,
-              }}>
-              <img src="./logo.png" alt="L" className="w-full h-full object-cover" />
-            </div>
-            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1rem', letterSpacing: '0.03em', color: C.textLight }}>
-              NAT<span style={{ color: C.primary }}>Prep</span>
-            </span>
-          </Link>
+          
+          <div className="hidden md:flex items-center gap-2 bg-card border border-border rounded-lg px-3 py-2 w-80 shadow-sm transition focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+            <Search className="w-4 h-4 text-muted-foreground" />
+            <input 
+              type="text" 
+              placeholder="Search tests, topics..." 
+              className="bg-transparent outline-none text-sm w-full text-foreground placeholder:text-muted-foreground"
+            />
+          </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* Right Side: Streak, Theme Toggle, Bell, Profile */}
+        <div className="flex items-center gap-3">
+          
+          {/* Streak Badge */}
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/20">
+            <Flame className="w-4 h-4 text-[hsl(var(--accent))]" />
+            <span className="text-sm font-bold text-[hsl(var(--accent))]">{user?.streak || 0}-day streak</span>
+          </div>
+
+          {/* Dark Mode Toggle */}
+          <button
+            id="theme-toggle"
+            onClick={toggleTheme}
+            className="relative w-9 h-9 rounded-lg border border-border bg-card flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 active:scale-90 transition-all shadow-sm"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {theme === 'dark' ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: 90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: 'easeInOut' }}
+                >
+                  <Sun className="w-4 h-4 text-amber-400" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: -90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: 'easeInOut' }}
+                >
+                  <Moon className="w-4 h-4" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
+
           {/* Notification Bell */}
           <div className="relative">
-            <button
+            <button 
               onClick={() => {
                 setNotifsOpen(!notifsOpen);
-                if (!notifsOpen) markAllAsRead();
+                if (!notifsOpen && unreadCount > 0) markAllAsRead();
               }}
-              className="p-2.5 rounded-lg active:scale-95 transition-transform relative"
-              style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}
+              className="relative text-muted-foreground hover:text-foreground active:scale-95 transition-transform p-1"
             >
-              <Bell className={`w-4 h-4 ${unreadCount > 0 ? 'text-primary animate-pulse' : 'text-muted-foreground'}`} />
+              <Bell className="w-5 h-5" />
               {unreadCount > 0 && (
-                <span className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border border-black" />
+                <span className="absolute top-0 right-0 w-2 h-2 bg-[hsl(var(--accent))] rounded-full border border-background"></span>
               )}
             </button>
 
@@ -161,13 +122,13 @@ export default function AppHeader({ user }) {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute right-0 mt-3 w-72 max-h-96 overflow-y-auto rounded-xl border border-border bg-card shadow-2xl z-[60] no-scrollbar"
+                  className="absolute right-0 mt-3 w-80 max-h-[400px] overflow-y-auto rounded-xl border border-border bg-card shadow-2xl z-50 hide-scrollbar"
                 >
-                  <div className="p-3 border-b border-border/50 flex justify-between items-center bg-secondary/30">
-                    <span className="text-xs font-bold uppercase tracking-widest">Notifications</span>
+                  <div className="p-4 border-b border-border flex justify-between items-center bg-secondary sticky top-0">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Notifications</span>
                     {unreadCount > 0 && <span className="text-[10px] text-primary font-bold">{unreadCount} New</span>}
                   </div>
-                  <div className="divide-y divide-border/30">
+                  <div className="divide-y divide-border">
                     {notifications.length === 0 ? (
                       <div className="p-8 text-center text-muted-foreground">
                         <Bell className="w-8 h-8 mx-auto mb-2 opacity-20" />
@@ -175,10 +136,12 @@ export default function AppHeader({ user }) {
                       </div>
                     ) : (
                       notifications.map(n => (
-                        <div key={n.id} className={`p-4 hover:bg-white/5 transition-colors ${!n.is_read ? 'bg-primary/5' : ''}`}>
-                          <p className="text-xs font-semibold">{n.title}</p>
-                          <p className="text-[11px] text-muted-foreground mt-0.5 leading-relaxed">{n.message}</p>
-                          <p className="text-[9px] text-muted-foreground/50 mt-2">{new Date(n.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+                        <div key={n.id} className={`p-4 hover:bg-secondary transition-colors ${!n.is_read ? 'bg-primary/5' : ''}`}>
+                          <p className="text-sm font-bold text-foreground">{n.title}</p>
+                          <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{n.message}</p>
+                          <p className="text-[10px] text-muted-foreground mt-2 font-medium">
+                            {new Date(n.created_at).toLocaleDateString()} at {new Date(n.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                          </p>
                         </div>
                       ))
                     )}
@@ -188,128 +151,15 @@ export default function AppHeader({ user }) {
             </AnimatePresence>
           </div>
 
-          <button
-            onClick={() => go('/profile')}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg active:scale-95 transition-transform"
-            style={{
-              border: isPremium ? '1px solid rgba(168,85,247,0.4)' : `1px solid rgba(255,255,255,0.06)`,
-              background: isPremium ? 'rgba(168,85,247,0.08)' : 'rgba(255,255,255,0.02)',
-              color: isPremium ? '#a855f7' : C.textMuted,
-            }}
-          >
-            {isPremium ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
-            {isPremium && <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', color: '#a855f7' }}>PRO</span>}
-          </button>
+          {/* User Avatar */}
+          <div className="flex items-center gap-2 cursor-pointer">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[hsl(var(--primary))] to-[var(--primary-dark)] flex items-center justify-center text-white font-bold text-sm shadow-md">
+              {getInitials(user?.full_name || user?.email)}
+            </div>
+          </div>
+
         </div>
-      </header>
-
-      {/* Drawer */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className="fixed inset-0 z-40"
-            style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(6px)' }}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            onClick={() => setMenuOpen(false)}
-          >
-            <motion.div
-              className="absolute left-0 top-0 bottom-0 w-72 flex flex-col overflow-hidden"
-              style={{ background: C.sidebarBg, borderRight: `1px solid ${C.sidebarBorder}` }}
-              initial={{ x: -300 }} animate={{ x: 0 }} exit={{ x: -300 }}
-              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              onClick={e => e.stopPropagation()}
-            >
-              {/* User header */}
-              <div className="p-5 pt-6" style={{ borderBottom: `1px solid ${C.sidebarBorder}` }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center text-sm font-medium"
-                    style={{
-                      background: isPremium ? 'rgba(168,85,247,0.12)' : 'rgba(255,255,255,0.04)',
-                      border: isPremium ? '1px solid rgba(168,85,247,0.3)' : `1px solid rgba(255,255,255,0.06)`,
-                      color: isPremium ? '#a855f7' : C.textMuted,
-                    }}>
-                    {isPremium ? <Crown className="w-4 h-4" /> : <User className="w-4 h-4" />}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium truncate" style={{ color: C.textLight }}>{user?.full_name || 'Student'}</p>
-                    <p className="text-xs truncate" style={{ color: C.sectionLabel }}>{user?.email}</p>
-                  </div>
-                  {isPremium && (
-                    <span className="text-[9px] font-bold px-2 py-0.5 tracking-widest rounded" style={{ background: 'rgba(168,85,247,0.12)', color: '#a855f7', border: '1px solid rgba(168,85,247,0.25)' }}>
-                      PRO
-                    </span>
-                  )}
-                </div>
-                <p className="text-[10px] mt-2 tracking-widest uppercase" style={{ color: C.sectionLabel }}>
-                  {user?.nat_group || 'No group selected'}
-                </p>
-              </div>
-
-              {/* Nav items */}
-              <div className="flex-1 overflow-y-auto py-4 px-3 space-y-5">
-                {NAV_SECTIONS.map(section => {
-                  const sectionItems = allItems.filter(item => section.items.includes(item.path));
-                  return (
-                    <div key={section.label}>
-                      <p className="text-[9px] font-bold uppercase tracking-[0.28em] px-3 mb-2" style={{ color: C.sectionLabel }}>{section.label}</p>
-                      {sectionItems.map((item, i) => {
-                        const isActive = location.pathname === item.path;
-                        return (
-                          <motion.button
-                            key={item.path}
-                            initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: i * 0.02 }}
-                            onClick={() => go(item.path)}
-                            className="flex items-center gap-3 w-full px-3 py-2 text-sm transition-all rounded-lg"
-                            style={{
-                              color: isActive ? C.activeColor : C.textMuted,
-                              background: isActive ? C.activeBg : 'transparent',
-                              borderLeft: isActive ? `2px solid ${C.activeColor}` : '2px solid transparent',
-                              fontWeight: isActive ? 600 : 400,
-                            }}
-                          >
-                            <item.icon className="w-3.5 h-3.5 shrink-0" />
-                            {item.label}
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
-                {isAdmin && (
-                  <div>
-                    <p className="text-[9px] font-bold uppercase tracking-[0.28em] px-3 mb-2" style={{ color: C.sectionLabel }}>Admin</p>
-                    <button onClick={() => go('/admin')} className="flex items-center gap-3 w-full px-3 py-2 text-sm transition-all rounded-lg" style={{ color: C.textMuted, borderLeft: '2px solid transparent' }}>
-                      <Shield className="w-3.5 h-3.5" /> Admin Panel
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              {/* Logout */}
-              <div className="p-3" style={{ borderTop: `1px solid ${C.sidebarBorder}` }}>
-                {/* Hide download button if in the app or electron */}
-                {!Capacitor.isNativePlatform() && !isElectron && (
-                  <button
-                    onClick={() => window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank')}
-                    className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg mb-1"
-                    style={{ color: C.primary, background: C.primaryDim }}
-                  >
-                    <Zap className="w-3.5 h-3.5 fill-primary" /> Download Android App
-                  </button>
-                )}
-                <button
-                  onClick={() => base44.auth.logout('/')}
-                  className="flex items-center gap-3 w-full px-3 py-2.5 text-sm transition-all rounded-lg"
-                  style={{ color: C.textMuted }}
-                >
-                  <LogOut className="w-3.5 h-3.5" /> Sign Out
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      </div>
+    </header>
   );
 }

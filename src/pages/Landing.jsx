@@ -1,343 +1,562 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { Capacitor } from '@capacitor/core';
-import { ChevronRight, BookOpen, Target, TrendingUp, Zap, Award, Users, Shield, Sparkles, Crown, Layers, Calendar, CheckSquare, MessageSquare, Trophy, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { sounds } from '@/lib/sounds';
-import { useAuth } from '@/lib/AuthContext';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { 
+  GraduationCap, Menu, X, ArrowRight, PlayCircle, CheckCircle, 
+  TrendingUp, Flame, Target, Check, FileText, Clock, ChevronLeft, 
+  ChevronRight, Timer, ListOrdered, Layers, Repeat, ShieldCheck,
+  Star, Users, Smartphone, Archive, CalendarCheck, CheckSquare,
+  AlertCircle, Lightbulb, MessageSquareText, BarChart3, Trophy, Plus,
+  Facebook, Instagram, Youtube, Twitter
+} from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-const WORDS = ['Score Higher', 'Crack NAT-I', 'Study Smarter', 'Ace Your Exam', 'Beat the Competition'];
+const Reveal = ({ children, delay = 0, className = '' }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay }}
+    className={className}
+  >
+    {children}
+  </motion.div>
+);
 
-const FEATURES = [
-  { icon: BookOpen, label: 'Practice Mode', desc: 'Topic-wise MCQs with instant AI-powered feedback & detailed explanations.', color: 'from-yellow-400 to-amber-600' },
-  { icon: Target, label: 'Mock Tests', desc: 'Full 90-Q timed simulation — exactly like the real NAT environment.', color: 'from-amber-500 to-orange-600' },
-  { icon: TrendingUp, label: 'Performance Analytics', desc: 'Deep analytics tracking your weak areas, strengths, and overall progress.', color: 'from-orange-400 to-red-500' },
-  { icon: Calendar, label: 'Smart Study Plans', desc: 'AI-generated, day-by-day study schedules tailored to your exact test date.', color: 'from-emerald-400 to-green-600' },
-  { icon: CheckSquare, label: 'Daily Tasks', desc: 'Actionable daily tasks automatically assigned based on your study plan.', color: 'from-teal-400 to-emerald-600' },
-  { icon: Layers, label: 'Flashcards', desc: 'Rapid revision cards for formulas, vocabulary, and last-minute prep.', color: 'from-cyan-400 to-blue-600' },
-  { icon: Zap, label: 'Study Smart (Tricks)', desc: 'Exclusive shortcuts, formulas, and time-saving techniques for quantitative.', color: 'from-purple-400 to-indigo-600' },
-  { icon: Shield, label: 'Mistake Review', desc: 'A dedicated bank of questions you previously got wrong to ensure mastery.', color: 'from-rose-400 to-red-600' },
-  { icon: Sparkles, label: 'Important Topics', desc: 'High-frequency past paper topics curated by NTS experts.', color: 'from-yellow-300 to-amber-500' },
-  { icon: Trophy, label: 'Leaderboard', desc: 'Compete with thousands of other Pakistani students in real-time.', color: 'from-amber-300 to-yellow-600' }
-];
-
-const STATS = [
-  { value: 500, label: 'Practice MCQs', suffix: '+' },
-  { value: 10, label: 'Success Tracks', suffix: '' },
-  { value: 60, label: 'Shortcuts & Tricks', suffix: '+' },
-  { value: 100, label: 'Syllabus Coverage', suffix: '%' },
-];
-
-function AnimatedCounter({ target, suffix = '' }) {
+const Counter = ({ target, suffix = '', duration = 2000 }) => {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (!isInView) return;
-    let start = 0;
-    const dur = 2000;
-    const step = target / (dur / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) { setCount(target); clearInterval(timer); }
-      else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
-  }, [isInView, target]);
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "0px" }}
+      onViewportEnter={() => {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            setCount(target);
+            clearInterval(timer);
+          } else {
+            setCount(Math.floor(start));
+          }
+        }, 16);
+      }}
+    >
+      {count.toLocaleString()}{suffix}
+    </motion.div>
+  );
+};
 
-  return <span ref={ref}>{count}{suffix}</span>;
-}
-
-export default function Landing({ preview = false }) {
-  const [wordIndex, setWordIndex] = useState(0);
+export default function Landing() {
   const navigate = useNavigate();
-
-  const isElectron = /electron/i.test(navigator.userAgent) || window.location.protocol === 'file:';
-
-  const { isAuthenticated } = useAuth();
-
-  useEffect(() => {
-    // If we're logged in, get away from here!
-    if (isAuthenticated) navigate('/');
-  }, [isAuthenticated, navigate]);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
-    const id = setInterval(() => setWordIndex(p => (p + 1) % WORDS.length), 2500);
-    return () => clearInterval(id);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const go = (path) => { if (!preview) navigate(path); };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  const toggleFaq = (index) => {
+    if (openFaq === index) setOpenFaq(null);
+    else setOpenFaq(index);
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col overflow-hidden relative selection:bg-primary/30">
+    <div className="bg-background text-foreground overflow-x-hidden">
       
-      {/* Background Constellation */}
-      <div className="bg-animation">
-        <div className="stars" />
-        <div className="stars2" />
-      </div>
-      <div className="bg-orb-3" />
+      {/* Navigation */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-card/90 backdrop-blur-xl border-b border-border shadow-sm' : ''}`}>
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                <GraduationCap className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <span className="font-display text-2xl font-black tracking-tight">EntryHive</span>
+            </Link>
 
-      {/* ── Navbar ── */}
-      <motion.nav 
-        initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
-        className="relative z-50 flex items-center justify-between px-6 py-4 border-b border-border/20 bg-background/50 backdrop-blur-md"
-      >
-        <div className="flex items-center gap-2">
-          <motion.div 
-            animate={{ y: [0, -4, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="w-9 h-9 rounded-lg overflow-hidden border border-primary/40 flex items-center justify-center glow-primary"
-          >
-            <img src="./logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
-          </motion.div>
-          <span className="font-bold text-lg tracking-wide text-foreground">NAT<span className="text-primary">Prep</span></span>
+            <div className="hidden md:flex items-center gap-10 text-sm font-bold">
+              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
+              <a href="#syllabus" className="text-muted-foreground hover:text-foreground transition-colors">Syllabus</a>
+              <a href="#dashboard" className="text-muted-foreground hover:text-foreground transition-colors">Dashboard</a>
+              <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+            </div>
+
+            <div className="hidden md:flex items-center gap-4">
+              <Link to="/login" className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors">Sign In</Link>
+              <Link to="/signup" className="btn-primary px-6 py-3 rounded-xl text-sm font-bold shadow-lg shadow-primary/20">Start Free</Link>
+            </div>
+
+            <button onClick={() => setMobileMenuOpen(true)} className="md:hidden p-2 text-foreground">
+              <Menu className="w-7 h-7" />
+            </button>
+          </div>
         </div>
-        {!preview && (
-          <Button onClick={() => go('/login')} variant="ghost" className="text-muted-foreground hover:text-primary">
-            Sign In
-          </Button>
-        )}
-      </motion.nav>
+      </nav>
 
-      {/* ── Hero Section ── */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center">
-        <motion.div initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }} animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8 }} className="mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-widest mb-6">
-            <Shield className="w-3 h-3" /> Official NAT Preparation Platform
-          </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-4 tracking-tight">
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={wordIndex}
-                initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
-                transition={{ duration: 0.4 }}
-                className="text-gradient block h-[1.2em]"
-              >
-                {WORDS[wordIndex]}
-              </motion.span>
-            </AnimatePresence>
-            <span className="text-foreground">in Your NAT-I Exam</span>
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-lg mx-auto leading-relaxed">
-            Struggling with your NAT-I preparation? We built this platform <strong className="text-foreground">just for you</strong> to master every subject, practice with confidence and ace ur exams.
-          </p>
-        </motion.div>
-
-        {!preview && (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md">
-            <Button 
-              onClick={() => {
-                sounds.vibrate(200);
-                go('/signup');
-              }} 
-              className="w-full h-14 text-base font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all"
-            >
-              Start Practicing for Free <ChevronRight className="w-5 h-5 ml-1" />
-            </Button>
-            {!Capacitor.isNativePlatform() && !isElectron && (
-              <div className="flex flex-col sm:flex-row gap-3 w-full">
-                <Button 
-                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank'); }}
-                  variant="outline"
-                  className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
-                >
-                  Android App <Zap className="w-4 h-4 fill-primary" />
-                </Button>
-                <Button 
-                  onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep-Setup.exe', '_blank'); }}
-                  variant="outline"
-                  className="flex-1 h-14 text-base font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
-                >
-                  Windows App <Download className="w-4 h-4" />
-                </Button>
-              </div>
-            )}
-          </motion.div>
-        )}
+      {/* Mobile menu */}
+      <div className={`fixed inset-y-0 right-0 w-80 bg-card z-[60] p-8 shadow-2xl border-l border-border md:hidden transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex justify-end mb-10">
+          <button onClick={() => setMobileMenuOpen(false)} className="p-2 bg-secondary rounded-xl"><X className="w-6 h-6" /></button>
+        </div>
+        <div className="flex flex-col gap-6 text-xl font-display font-bold">
+          <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-muted-foreground hover:text-primary">Features</a>
+          <a href="#syllabus" onClick={() => setMobileMenuOpen(false)} className="text-muted-foreground hover:text-primary">Syllabus</a>
+          <a href="#dashboard" onClick={() => setMobileMenuOpen(false)} className="text-muted-foreground hover:text-primary">Dashboard</a>
+          <a href="#faq" onClick={() => setMobileMenuOpen(false)} className="text-muted-foreground hover:text-primary">FAQ</a>
+          <div className="h-px bg-border my-2"></div>
+          <Link to="/login" className="text-muted-foreground hover:text-primary">Sign In</Link>
+          <Link to="/signup" className="btn-primary py-4 rounded-xl text-center shadow-lg shadow-primary/20 mt-2">Start Free</Link>
+        </div>
       </div>
 
-      {/* ── Floating Dashboard Mockup ── */}
-      <motion.div 
-        initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 1, type: "spring" }}
-        className="relative z-10 w-full max-w-4xl mx-auto px-6 mb-24 perspective-1000"
-      >
-        <div className="rounded-2xl border border-primary/20 bg-black/40 backdrop-blur-2xl shadow-2xl overflow-hidden transform rotateX-12 scale-105 hover:rotate-0 transition-transform duration-700 ease-out premium-glow">
-          <div className="h-10 bg-white/5 border-b border-primary/10 flex items-center px-4 gap-2">
-            <div className="flex gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-red-500/30" />
-              <div className="w-3 h-3 rounded-full bg-amber-500/30" />
-              <div className="w-3 h-3 rounded-full bg-green-500/30" />
-            </div>
-            <div className="mx-auto text-[10px] text-muted-foreground font-medium tracking-widest uppercase opacity-50">Student Performance Dashboard</div>
-          </div>
-          
-          <div className="p-8 grid grid-cols-1 md:grid-cols-12 gap-6">
-            {/* Left Column: Success Probability */}
-            <div className="md:col-span-4 space-y-6">
-              <div className="glass-card rounded-2xl p-6 border-primary/20 flex flex-col items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-                <div className="relative w-24 h-24 rounded-full border-4 border-primary/10 flex items-center justify-center mb-3">
-                  <div className="absolute inset-0 rounded-full border-t-4 border-primary animate-spin-slow" />
-                  <span className="text-2xl font-black text-primary">84%</span>
-                </div>
-                <p className="text-[10px] font-bold text-primary tracking-widest uppercase">Success Probability</p>
-                <p className="text-[9px] text-muted-foreground mt-1 text-center">Based on 1,200+ practice questions</p>
+      {/* Hero */}
+      <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-rose-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 -z-10"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <Reveal>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 shadow-sm">
+                <span className="relative w-2.5 h-2.5 rounded-full bg-primary">
+                  <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></span>
+                </span>
+                <span className="text-xs font-bold text-primary tracking-widest uppercase">Pakistan's Smartest Entry Hive</span>
               </div>
-
-              <div className="glass-card rounded-2xl p-4 border-white/5 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-orange-500 fill-orange-500/20" />
-                </div>
-                <div>
-                  <p className="text-xl font-bold text-foreground">12 Day</p>
-                  <p className="text-[9px] text-muted-foreground uppercase tracking-wider">Active Study Streak</p>
-                </div>
+              <h1 className="font-display text-5xl md:text-7xl font-black leading-[1.05] mb-8 text-foreground tracking-tight">
+                Master <span className="text-primary relative inline-block">NAT<div className="absolute -bottom-2 left-0 w-full h-3 bg-primary/20 -rotate-2 rounded-sm"></div></span><br/>
+                with structured<br/>
+                <span className="text-primary">smart learning.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl font-medium">
+                Stop wasting time on random prep. EntryHive gives you a clear study plan, real past papers, and AI-driven feedback to guarantee your university admission.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                <Link to="/signup" className="w-full sm:w-auto btn-primary px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-primary/20 text-lg hover:scale-105 transition-transform">
+                  Create Free Account <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a href="#features" className="w-full sm:w-auto bg-card border-2 border-border text-foreground px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-sm hover:border-primary/40 transition-colors text-lg">
+                  <PlayCircle className="w-6 h-6 text-primary" /> See How it Works
+                </a>
               </div>
-            </div>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-foreground font-bold">
+                <span className="flex items-center gap-2"><div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center"><CheckCircle className="w-3 h-3 text-emerald-500" /></div> 100% Free to start</span>
+                <span className="flex items-center gap-2"><div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center"><CheckCircle className="w-3 h-3 text-emerald-500" /></div> 1,200+ MCQs</span>
+                <span className="flex items-center gap-2"><div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center"><CheckCircle className="w-3 h-3 text-emerald-500" /></div> Real past papers</span>
+              </div>
+            </Reveal>
 
-            {/* Right Column: Subject Mastery */}
-            <div className="md:col-span-8 glass-card rounded-2xl p-6 border-white/5 space-y-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-sm font-bold tracking-tight">Subject Mastery Level</h4>
-                <div className="px-2 py-1 rounded bg-primary/10 text-[9px] font-bold text-primary uppercase">Track: NAT-IE</div>
+            {/* Mockup */}
+            <Reveal delay={0.2} className="relative hidden lg:block">
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-emerald-500/20 rounded-[40px] blur-xl -z-10"></div>
+              
+              <div className="absolute -top-8 -right-8 z-20 bg-card rounded-2xl shadow-2xl p-4 border-2 border-border float-anim">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+                    <TrendingUp className="w-6 h-6 text-emerald-500" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-0.5">Score Improved</p>
+                    <p className="font-display text-2xl font-black text-foreground">+24 pts</p>
+                  </div>
+                </div>
               </div>
               
-              <div className="space-y-5">
+              <div className="absolute -bottom-8 -left-8 z-20 bg-card rounded-2xl shadow-2xl p-4 border-2 border-border float-anim" style={{ animationDelay: '1.2s' }}>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center border border-rose-500/20">
+                    <Flame className="w-6 h-6 text-rose-500" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-0.5">Study Streak</p>
+                    <p className="font-display text-2xl font-black text-foreground">12 days</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card rounded-[32px] border-2 border-border shadow-2xl overflow-hidden">
+                <div className="h-10 bg-secondary/80 border-b border-border flex items-center px-4 gap-2">
+                  <div className="w-3 h-3 rounded-full bg-rose-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-amber-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-8">
+                    <div>
+                      <h3 className="font-display font-black text-2xl text-foreground">Student Dashboard</h3>
+                      <p className="text-sm font-medium text-muted-foreground mt-1">Welcome back, Ayesha!</p>
+                    </div>
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/20">
+                      <Target className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-bold text-primary">84% Goal</span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    <div className="bg-secondary rounded-2xl p-5 border border-border">
+                      <div className="flex justify-between items-center mb-3">
+                        <p className="text-sm font-bold text-foreground">Quantitative</p>
+                        <span className="text-sm text-primary font-black">92%</span>
+                      </div>
+                      <div className="h-2 w-full bg-card rounded-full overflow-hidden border border-border">
+                        <div className="h-full bg-primary rounded-full w-[92%]"></div>
+                      </div>
+                    </div>
+                    <div className="bg-secondary rounded-2xl p-5 border border-border">
+                      <div className="flex justify-between items-center mb-3">
+                        <p className="text-sm font-bold text-foreground">Analytical</p>
+                        <span className="text-sm text-primary font-black">91%</span>
+                      </div>
+                      <div className="h-2 w-full bg-card rounded-full overflow-hidden border border-border">
+                        <div className="h-full bg-primary rounded-full w-[91%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-primary/5 border-2 border-primary/20 rounded-2xl p-6">
+                    <div className="flex items-center justify-between mb-5">
+                      <p className="text-base font-bold text-foreground">Today's Tasks</p>
+                      <span className="text-xs font-bold text-muted-foreground bg-card px-2 py-1 rounded-md border border-border">2/3 Done</span>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-6 h-6 rounded-lg bg-emerald-500 flex items-center justify-center shrink-0"><Check className="w-4 h-4 text-white" /></div>
+                        <span className="text-sm font-medium text-muted-foreground line-through">Quant Practice Set 4</span>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-6 h-6 rounded-lg bg-emerald-500 flex items-center justify-center shrink-0"><Check className="w-4 h-4 text-white" /></div>
+                        <span className="text-sm font-medium text-muted-foreground line-through">English Flashcards (20)</span>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-6 h-6 rounded-lg border-2 border-border bg-card shrink-0"></div>
+                        <span className="text-sm font-bold text-foreground">Mock Test #7 (90 Qs)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="py-12 bg-secondary border-y border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold mb-8">Our students secured admission in</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {['Quaid-i-Azam Uni', 'COMSATS', 'FAST-NUCES', 'Air University', 'IST', 'IIU', 'GCU', 'UET'].map((uni, i) => (
+              <span key={i} className="font-display text-xl sm:text-2xl font-bold text-muted-foreground hover:text-foreground transition-colors cursor-default">{uni}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section id="features" className="py-32 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <Reveal className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+              <span className="text-xs font-bold text-primary tracking-widest uppercase">Complete Learning Toolkit</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-6xl font-black leading-[1.1] mb-6 text-foreground">
+              Everything you need to<br/><span className="text-primary">learn smarter.</span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
+              Twelve integrated educational tools designed by top instructors to cover every angle of your NAT preparation.
+            </p>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[
+              { icon: Target, iconColor: 'text-primary', iconBg: 'bg-primary/10 border-primary/20', title: 'Practice Sessions', desc: 'Topic-wise MCQs with instant AI feedback.' },
+              { icon: FileText, iconColor: 'text-emerald-500', iconBg: 'bg-emerald-500/10 border-emerald-500/20', title: 'Mock Tests', desc: 'Full 90-question simulated exams timed exactly like the real NAT.' },
+              { icon: Archive, iconColor: 'text-blue-500', iconBg: 'bg-blue-500/10 border-blue-500/20', title: 'Past Papers', desc: 'Actual previous NAT papers with answer keys and breakdowns.' },
+              { icon: CalendarCheck, iconColor: 'text-indigo-500', iconBg: 'bg-indigo-500/10 border-indigo-500/20', title: 'Study Plan Generator', desc: 'AI builds a personalized daily plan based on your target score.' },
+              { icon: CheckSquare, iconColor: 'text-purple-500', iconBg: 'bg-purple-500/10 border-purple-500/20', title: 'Daily Tasks', desc: 'Bite-sized daily goals that keep you consistent.' },
+              { icon: AlertCircle, iconColor: 'text-rose-500', iconBg: 'bg-rose-500/10 border-rose-500/20', title: 'Mistake Reviewer', desc: 'Automatically logs every mistake so you never repeat them.' },
+              { icon: Star, iconColor: 'text-amber-500', iconBg: 'bg-amber-500/10 border-amber-500/20', title: 'Important Topics', desc: 'High-yield topics identified from past papers to focus your energy.' },
+              { icon: Lightbulb, iconColor: 'text-yellow-500', iconBg: 'bg-yellow-500/10 border-yellow-500/20', title: 'Study Tricks', desc: 'Time-saving shortcuts and memory techniques by top scorers.' },
+              { icon: Layers, iconColor: 'text-cyan-500', iconBg: 'bg-cyan-500/10 border-cyan-500/20', title: 'Flashcards', desc: 'Spaced-repetition flashcards for formulas and concepts.' },
+              { icon: MessageSquareText, iconColor: 'text-green-500', iconBg: 'bg-green-500/10 border-green-500/20', title: 'Smart Feedback', desc: 'Detailed explanations after every question.' },
+              { icon: BarChart3, iconColor: 'text-blue-400', iconBg: 'bg-blue-400/10 border-blue-400/20', title: 'Performance Dashboard', desc: 'Visual analytics that reveal progress patterns.' },
+              { icon: Trophy, iconColor: 'text-orange-500', iconBg: 'bg-orange-500/10 border-orange-500/20', title: 'Leaderboard', desc: 'Compete with peers across Pakistan and turn prep into a fun challenge.' },
+            ].map((feature, i) => (
+              <Reveal key={i} delay={i * 0.05}>
+                <div className="rounded-3xl p-8 bg-card border-2 border-border hover:border-primary/40 transition-colors shadow-sm h-full flex flex-col group">
+                  <div className={`w-14 h-14 rounded-2xl ${feature.iconBg} border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <feature.icon className={`w-7 h-7 ${feature.iconColor}`} />
+                  </div>
+                  <h3 className="font-display text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">{feature.title}</h3>
+                  <p className="text-base font-medium text-muted-foreground leading-relaxed flex-1">{feature.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Syllabus */}
+      <section id="syllabus" className="py-32 bg-secondary/50 border-y border-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <Reveal>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                <span className="text-xs font-bold text-primary tracking-widest uppercase">Complete Syllabus Coverage</span>
+              </div>
+              <h2 className="font-display text-4xl md:text-6xl font-black leading-[1.1] mb-8 text-foreground">
+                Master every<br/><span className="text-primary">subject area.</span>
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 font-medium">
+                The NAT tests three core areas. We break them down into bite-sized lessons, practice questions, and mock tests so you're fully prepared.
+              </p>
+              <div className="space-y-8">
+                <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
+                  <div className="flex justify-between items-center mb-4">
+                    <h4 className="font-display text-lg font-bold text-foreground">Quantitative Reasoning</h4>
+                    <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-lg">35% of Test</span>
+                  </div>
+                  <div className="h-2 w-full bg-secondary rounded-full overflow-hidden border border-border"><div className="h-full bg-primary rounded-full w-[35%]"></div></div>
+                  <p className="text-sm font-medium text-muted-foreground mt-4">Arithmetic, Algebra, Geometry, Mensuration.</p>
+                </div>
+                <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
+                  <div className="flex justify-between items-center mb-4">
+                    <h4 className="font-display text-lg font-bold text-foreground">Analytical Reasoning</h4>
+                    <span className="text-sm font-bold text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-lg">35% of Test</span>
+                  </div>
+                  <div className="h-2 w-full bg-secondary rounded-full overflow-hidden border border-border"><div className="h-full bg-emerald-500 rounded-full w-[35%]"></div></div>
+                  <p className="text-sm font-medium text-muted-foreground mt-4">Logic, Patterns, Scenarios, Deductions.</p>
+                </div>
+                <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
+                  <div className="flex justify-between items-center mb-4">
+                    <h4 className="font-display text-lg font-bold text-foreground">English Comprehension</h4>
+                    <span className="text-sm font-bold text-rose-500 bg-rose-500/10 px-3 py-1 rounded-lg">30% of Test</span>
+                  </div>
+                  <div className="h-2 w-full bg-secondary rounded-full overflow-hidden border border-border"><div className="h-full bg-rose-500 rounded-full w-[30%]"></div></div>
+                  <p className="text-sm font-medium text-muted-foreground mt-4">Grammar, Vocabulary, Reading Comprehension.</p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.2} className="hidden lg:block relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-[40px] blur-2xl -z-10"></div>
+              <div className="bg-card rounded-[32px] border-2 border-border shadow-2xl p-8">
+                <div className="flex items-center justify-between mb-8 pb-6 border-b border-border">
+                  <div>
+                    <h3 className="font-display font-black text-2xl text-foreground">Smart Study Plan</h3>
+                    <p className="text-sm font-medium text-muted-foreground mt-1">Generated for 4-week prep</p>
+                  </div>
+                  <button className="text-sm font-bold text-primary-foreground bg-primary px-4 py-2 rounded-xl shadow-md">Edit Plan</button>
+                </div>
+                <div className="grid grid-cols-7 gap-3 mb-6">
+                  {['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map((d,i) => <div key={i} className="text-center text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">{d}</div>)}
+                  {[1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(d => (
+                    <div key={d} className={`h-12 w-full rounded-xl flex items-center justify-center text-sm font-bold transition-transform hover:scale-105 cursor-default ${
+                      d < 5 ? 'bg-primary text-primary-foreground shadow-sm' : 
+                      d === 5 ? 'border-2 border-primary text-primary bg-primary/5' : 
+                      'bg-secondary border border-border text-muted-foreground'
+                    }`}>{d}</div>
+                  ))}
+                </div>
+                <div className="bg-secondary/50 rounded-2xl p-4 border border-border mt-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <Target className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm text-foreground">Today's Focus</p>
+                      <p className="text-xs font-medium text-muted-foreground mt-0.5">Complete Algebra Module & 1 Mock Test</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Mock Test Dashboard Demo */}
+      <section id="dashboard" className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <Reveal className="order-2 lg:order-1 hidden lg:block relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-[40px] blur-2xl -z-10"></div>
+              <div className="bg-card rounded-[32px] p-8 border-2 border-border shadow-2xl">
+                <div className="flex items-center justify-between mb-8 pb-6 border-b border-border">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20"><FileText className="w-6 h-6 text-primary" /></div>
+                    <div>
+                      <p className="font-display font-black text-xl text-foreground">Mock Test #7</p>
+                      <p className="text-sm font-medium text-muted-foreground">Question 23 of 90</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-rose-500/10 border border-rose-500/20">
+                    <Clock className="w-5 h-5 text-rose-500" />
+                    <span className="text-lg font-mono font-bold text-rose-500">01:42:31</span>
+                  </div>
+                </div>
+                <div className="mb-8">
+                  <div className="flex justify-between text-sm font-bold text-muted-foreground mb-3 uppercase tracking-wider"><span>Progress</span><span>25%</span></div>
+                  <div className="h-2 w-full bg-secondary rounded-full overflow-hidden border border-border"><div className="h-full bg-primary rounded-full w-[25.5%]"></div></div>
+                </div>
+                <div className="mb-6">
+                  <p className="font-display text-xl font-bold leading-relaxed mb-6 text-foreground">A train travels 240 km in 4 hours. If it maintains the same speed, how far will it travel in 7 hours?</p>
+                  <div className="space-y-3">
+                    {['380 km', '420 km', '440 km', '480 km'].map((opt, i) => (
+                      <div key={i} className={`flex items-center gap-4 p-4 rounded-2xl transition-colors cursor-default ${i === 1 ? 'border-2 border-primary bg-primary/5 shadow-sm' : 'border-2 border-border bg-card'}`}>
+                        <div className={`w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold ${i === 1 ? 'bg-primary text-primary-foreground' : 'bg-secondary border border-border text-muted-foreground'}`}>
+                          {['A','B','C','D'][i]}
+                        </div>
+                        <span className={`text-base font-medium ${i === 1 ? 'font-bold text-foreground' : 'text-foreground'}`}>{opt}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.2} className="order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                <span className="text-xs font-bold text-emerald-500 tracking-widest uppercase">Real Test Experience</span>
+              </div>
+              <h2 className="font-display text-4xl md:text-6xl font-black leading-[1.1] mb-8 text-foreground">
+                Practice like it's<br/><span className="text-emerald-500">test day.</span>
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 font-medium">
+                Our mock tests mirror the exact NAT format, timing, and difficulty. By test day, you'll have faced every type of question dozens of times — no surprises, no panic.
+              </p>
+              <div className="grid grid-cols-2 gap-6 mb-8">
                 {[
-                  { label: 'Quantitative Reasoning', val: '92%', color: 'bg-primary' },
-                  { label: 'Analytical Reasoning', val: '91%', color: 'bg-amber-500' },
-                  { label: 'English Comprehension', val: '85%', color: 'bg-emerald-500' },
-                  { label: 'Physics & Chemistry', val: '93%', color: 'bg-blue-500' },
-                ].map((s, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="flex justify-between text-[10px] font-medium uppercase tracking-wide">
-                      <span className="text-muted-foreground">{s.label}</span>
-                      <span className="text-foreground">{s.val}</span>
+                  {i:Timer, l:'Duration', v:'120 min', c:'text-blue-500', bg:'bg-blue-500/10 border-blue-500/20'},
+                  {i:ListOrdered, l:'Questions', v:'90 MCQs', c:'text-pink-500', bg:'bg-pink-500/10 border-pink-500/20'},
+                  {i:Layers, l:'Sections', v:'3 Areas', c:'text-amber-500', bg:'bg-amber-500/10 border-amber-500/20'},
+                  {i:Repeat, l:'Attempts', v:'Unlimited', c:'text-emerald-500', bg:'bg-emerald-500/10 border-emerald-500/20'}
+                ].map((item, i) => (
+                  <div key={i} className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm hover:border-primary/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-8 h-8 rounded-lg ${item.bg} border flex items-center justify-center shrink-0`}>
+                        <item.i className={`w-4 h-4 ${item.c}`} />
+                      </div>
+                      <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">{item.l}</span>
                     </div>
-                    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                      <motion.div 
-                        initial={{ width: 0 }} whileInView={{ width: s.val }} transition={{ duration: 1.5, delay: 1 + (idx * 0.1) }}
-                        className={`h-full ${s.color} shadow-[0_0_10px_rgba(212,175,55,0.3)]`} 
-                      />
-                    </div>
+                    <p className="font-display text-2xl font-black text-foreground">{item.v}</p>
                   </div>
                 ))}
               </div>
-
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-                <div className="flex -space-x-2">
-                  {[1,2,3].map(i => <div key={i} className="w-6 h-6 rounded-full border-2 border-background bg-muted" />)}
-                  <div className="w-6 h-6 rounded-full border-2 border-background bg-primary/20 flex items-center justify-center text-[8px] font-bold">+50</div>
-                </div>
-                <p className="text-[9px] text-muted-foreground italic tracking-wide">Join to ace ur exams now</p>
-              </div>
-            </div>
+            </Reveal>
           </div>
         </div>
-      </motion.div>
-
-      {/* ── Stats Section ── */}
-      <motion.div 
-        variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
-        className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl mx-auto px-6 mb-24"
-      >
-        {STATS.map((s) => (
-          <motion.div key={s.label} variants={itemVariants} className="glass-card rounded-2xl p-6 text-center border-white/5">
-            <p className="text-3xl md:text-4xl font-black text-primary mb-2"><AnimatedCounter target={s.value} suffix={s.suffix} /></p>
-            <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold">{s.label}</p>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      {/* ── Comprehensive Features Grid ── */}
-      <div className="relative z-10 px-6 pb-24 w-full max-w-5xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Everything You Need to Succeed</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">We've built an entire ecosystem of tools to ensure you don't just pass, but rank at the top.</p>
-        </motion.div>
-
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {FEATURES.map((f, i) => (
-            <motion.div
-              key={f.label}
-              variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className="glass-card rounded-2xl p-6 border-white/5 hover:border-primary/30 transition-all duration-300 group relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-full blur-2xl z-0" />
-              <div className={`relative z-10 w-12 h-12 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                <f.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-bold text-lg mb-2 relative z-10 text-foreground group-hover:text-primary transition-colors">{f.label}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed relative z-10">{f.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>      {/* ── Download App Section (Hidden on Electron) ── */}
-      {!isElectron && (
-        <section className="relative z-10 px-6 pb-24 w-full max-w-4xl mx-auto">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }}
-          className="glass-card rounded-3xl p-8 md:p-12 border-primary/20 text-center relative overflow-hidden group"
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-50" />
-          <div className="relative z-10">
-            <div className="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center mx-auto mb-6 glow-primary">
-              <Zap className="w-8 h-8 text-primary fill-primary/20" />
-            </div>
-            <h2 className="text-3xl font-bold mb-4">Study on the Go</h2>
-            <p className="text-muted-foreground max-w-md mx-auto mb-8">
-              Get the best preparation experience with our Android App. Practice offline, get instant notifications, and study anywhere, anytime.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button 
-                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep.apk', '_blank'); }}
-                className="h-14 px-8 text-lg font-bold rounded-xl glow-primary bg-primary text-black hover:bg-primary/90 transition-all gap-2"
-              >
-                Download APK <ChevronRight className="w-5 h-5" />
-              </Button>
-              <Button 
-                onClick={() => { window.open('https://github.com/AbdulBasitAdnan/Nat-Prep/releases/latest/download/NAT-Prep-Setup.exe', '_blank'); }}
-                variant="outline"
-                className="h-14 px-8 text-lg font-bold rounded-xl border-primary/30 text-primary hover:bg-primary/10 transition-all gap-2"
-              >
-                Download for Windows <Download className="w-5 h-5" />
-              </Button>
-            </div>
-            <p className="text-[10px] text-muted-foreground mt-4 uppercase tracking-[0.2em] opacity-60">Latest Version 2026 · Safe & Verified</p>
-          </div>
-        </motion.div>
       </section>
-      )}
 
-
-      {/* ── Footer ── */}
-      <footer className="relative z-10 border-t border-white/5 py-8 text-center mt-auto bg-black/40 backdrop-blur-lg">
-        <div className="w-10 h-10 rounded-xl overflow-hidden border border-primary/20 flex items-center justify-center mx-auto mb-4">
-          <img src="./logo.png" alt="NAT Prep Logo" className="w-full h-full object-cover" />
+      {/* Stats Counter */}
+      <section className="py-24 bg-card border-y border-border relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 text-center">
+          <div><div className="font-display text-5xl md:text-7xl font-black mb-4 text-foreground"><Counter target={12000} suffix="+" /></div><p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Students prepared</p></div>
+          <div><div className="font-display text-5xl md:text-7xl font-black mb-4 text-primary"><Counter target={1200} suffix="+" /></div><p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Practice questions</p></div>
+          <div><div className="font-display text-5xl md:text-7xl font-black mb-4 text-emerald-500"><Counter target={50} suffix="+" /></div><p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Real past papers</p></div>
+          <div><div className="font-display text-5xl md:text-7xl font-black mb-4 text-rose-500"><Counter target={84} suffix="%" /></div><p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Average improvement</p></div>
         </div>
-        <p className="text-sm text-muted-foreground font-medium">NAT<span className="text-primary">Prep</span> © 2026</p>
-        <p className="text-xs text-muted-foreground/60 mt-1">Built with ❤️ for Pakistani Students</p>
-        <button onClick={() => navigate('/legal')} className="text-xs text-primary/60 hover:text-primary mt-2 transition-colors cursor-pointer">
-          Privacy Policy & Terms of Service
-        </button>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-32 bg-background relative overflow-hidden">
+        <div className="max-w-3xl mx-auto px-6 relative z-10">
+          <Reveal className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+              <span className="text-xs font-bold text-primary tracking-widest uppercase">Questions</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-6xl font-black leading-[1.1] text-foreground">Frequently <span className="text-primary">asked.</span></h2>
+          </Reveal>
+          <div className="space-y-4">
+            {[
+              {q: "What is NAT and who conducts it?", a: "The National Aptitude Test (NAT) is conducted by NTS Pakistan. It is required for admission to many undergraduate programs."},
+              {q: "Is EntryHive affiliated with NTS?", a: "No, we are an independent platform. However, our content is carefully aligned with the official NAT syllabus."},
+              {q: "Can I use EntryHive on mobile?", a: "Yes. EntryHive works seamlessly on any device through your browser. We also offer an Android app."},
+            ].map((faq, i) => (
+              <div key={i} className="border-2 border-border rounded-2xl p-6 hover:border-primary/40 transition-colors cursor-pointer bg-card shadow-sm" onClick={() => toggleFaq(i)}>
+                <div className="w-full flex items-center justify-between text-left gap-4">
+                  <span className="font-display text-xl font-bold text-foreground">{faq.q}</span>
+                  <div className={`w-10 h-10 rounded-xl bg-secondary border border-border flex items-center justify-center shrink-0 transition-transform duration-300 ${openFaq === i ? 'rotate-45 bg-primary border-primary text-white' : 'text-muted-foreground'}`}>
+                    <Plus className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === i ? 'max-h-40 mt-6 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-muted-foreground text-base font-medium leading-relaxed">{faq.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-32 bg-card relative overflow-hidden border-t border-border">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <Reveal>
+            <h2 className="font-display text-5xl md:text-7xl font-black leading-[1.05] mb-8 text-foreground tracking-tight">
+              Your university seat<br/>is <span className="text-primary">one click</span> away.
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto font-medium">Join 12,000+ Pakistani students who chose EntryHive to maximize their NAT score. Start free today.</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+              <Link to="/signup" className="w-full sm:w-auto btn-primary px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-2 text-xl shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
+                Start Practicing Free <ArrowRight className="w-6 h-6" />
+              </Link>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-foreground font-bold uppercase tracking-wider">
+              <span className="flex items-center gap-2"><Star className="w-5 h-5 fill-amber-400 text-amber-400" /> 4.9/5 from 2,400+ reviews</span>
+              <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-emerald-500" /> No credit card required</span>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-background pt-20 pb-10 border-t border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-5 gap-12 mb-16">
+            <div className="md:col-span-2">
+              <Link to="/" className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center"><GraduationCap className="w-6 h-6 text-primary-foreground" /></div>
+                <span className="font-display text-2xl font-black tracking-tight text-foreground">EntryHive</span>
+              </Link>
+              <p className="text-base text-muted-foreground font-medium leading-relaxed max-w-sm mb-8">Pakistan's most comprehensive NAT preparation platform. Built by educators, powered by AI.</p>
+              <div className="flex items-center gap-4">
+                <a href="#" className="w-10 h-10 rounded-xl bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"><Facebook className="w-5 h-5" /></a>
+                <a href="#" className="w-10 h-10 rounded-xl bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"><Twitter className="w-5 h-5" /></a>
+                <a href="#" className="w-10 h-10 rounded-xl bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"><Instagram className="w-5 h-5" /></a>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-bold text-foreground text-sm uppercase tracking-widest mb-6">Platform</h4>
+              <ul className="space-y-4 font-medium text-muted-foreground">
+                <li><Link to="/practice" className="hover:text-primary transition-colors">Practice</Link></li>
+                <li><Link to="/mock-test" className="hover:text-primary transition-colors">Mock Tests</Link></li>
+                <li><Link to="/past-papers" className="hover:text-primary transition-colors">Past Papers</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-foreground text-sm uppercase tracking-widest mb-6">Company</h4>
+              <ul className="space-y-4 font-medium text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><Link to="/legal" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium text-muted-foreground">
+            <p>© 2026 EntryHive. All rights reserved. Made in Pakistan 🇵🇰</p>
+            <p>EntryHive is not affiliated with NTS.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );

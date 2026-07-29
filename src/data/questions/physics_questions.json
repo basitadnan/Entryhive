@@ -1,0 +1,2459 @@
+[
+  {
+    "id": "de02095a-8f34-4776-b203-cda2cf651535",
+    "options": [
+      "Joule",
+      "Watt",
+      "Newton",
+      "Pascal"
+    ],
+    "explanation": "The SI unit of force is Newton (N), named after Sir Isaac Newton.",
+    "difficulty": "easy",
+    "question_text": "What is the SI unit of force?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "445433bf-a738-4f24-a05c-5cb42b239909",
+    "options": [
+      "8.9 m/s²",
+      "9.8 m/s²",
+      "10.2 m/s²",
+      "9.2 m/s²"
+    ],
+    "explanation": "The standard acceleration due to gravity on Earth's surface is approximately 9.8 m/s² (or 9.81 m/s²).",
+    "difficulty": "easy",
+    "question_text": "What is the acceleration due to gravity on Earth's surface (approximately)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c2b69d62-1a9b-4f97-a57e-8b1f358b8cd2",
+    "options": [
+      "Velocity",
+      "Force",
+      "Speed",
+      "Acceleration"
+    ],
+    "explanation": "Speed is a scalar quantity as it has only magnitude. Velocity, force, and acceleration are vectors.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is a scalar quantity?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3bf91292-cdd5-49b6-b755-b3c6775ec203",
+    "options": [
+      "mgh",
+      "½mv²",
+      "mv",
+      "F × d"
+    ],
+    "explanation": "Kinetic energy is given by KE = ½mv² where m is mass and v is velocity.",
+    "difficulty": "easy",
+    "question_text": "What is the formula for kinetic energy?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "95394b2c-cc01-4432-8a4e-82e4753d2f40",
+    "options": [
+      "3 × 10^6 m/s",
+      "3 × 10^8 m/s",
+      "3 × 10^7 m/s",
+      "3 × 10^5 m/s"
+    ],
+    "explanation": "The speed of light in vacuum is approximately 3 × 10^8 m/s (exactly 299,792,458 m/s).",
+    "difficulty": "easy",
+    "question_text": "What is the speed of light in vacuum (approximately)?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6150f1b7-2f25-4fca-866f-c933dfc6fe93",
+    "options": [
+      "V = I/R",
+      "V = IR",
+      "I = VR",
+      "R = VI"
+    ],
+    "explanation": "Ohm's Law states that V = IR, where V is voltage, I is current, and R is resistance.",
+    "difficulty": "easy",
+    "question_text": "Ohm's Law states that:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "869f7f04-5870-48a2-8e32-97dc69270cac",
+    "options": [
+      "Volt",
+      "Ohm",
+      "Ampere",
+      "Watt"
+    ],
+    "explanation": "The SI unit of electric current is Ampere (A), named after André-Marie Ampère.",
+    "difficulty": "easy",
+    "question_text": "What is the SI unit of electric current?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8067ecf0-d045-4256-b515-9188fbac142e",
+    "options": [
+      "Blue",
+      "Green",
+      "Red",
+      "Violet"
+    ],
+    "explanation": "Red light has the longest wavelength (about 700 nm) in the visible spectrum.",
+    "difficulty": "easy",
+    "question_text": "Which color of light has the longest wavelength in the visible spectrum?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "3a41140d-ecf9-440f-a53e-46ecdb4e00ef",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "explanation": "Power is measured in Watts (W), where 1 W = 1 J/s.",
+    "difficulty": "easy",
+    "question_text": "What is the unit of power?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "40b231be-83d8-4dbc-9379-a0d974c076f1",
+    "options": [
+      "Plane mirror",
+      "Convex mirror",
+      "Concave mirror",
+      "None of these"
+    ],
+    "explanation": "Concave mirrors are used in vehicle headlights to produce parallel beams of light.",
+    "difficulty": "easy",
+    "question_text": "What type of mirror is used in vehicle headlights?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "86f04c8e-ea1e-4133-afd7-9bdd89a40c1e",
+    "options": [
+      "Volume/Mass",
+      "Mass/Volume",
+      "Mass × Volume",
+      "Weight/Volume"
+    ],
+    "explanation": "Density = Mass/Volume. The SI unit is kg/m³.",
+    "difficulty": "easy",
+    "question_text": "What is the formula for density?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3ecdd3cf-cf40-4a8b-872c-9dd08e6b4b3d",
+    "options": [
+      "Pressure and Temperature",
+      "Volume and Temperature",
+      "Pressure and Volume",
+      "Pressure and Mass"
+    ],
+    "explanation": "Boyle's Law states that for a fixed amount of gas at constant temperature, P ∝ 1/V (PV = constant).",
+    "difficulty": "easy",
+    "question_text": "Boyle's Law relates:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b63373be-3095-4e1c-8727-052266b91b9b",
+    "options": [
+      "0 K",
+      "100 K",
+      "273 K",
+      "373 K"
+    ],
+    "explanation": "0°C = 273 K (more precisely 273.15 K). This is the freezing point of water.",
+    "difficulty": "easy",
+    "question_text": "What is the freezing point of water in Kelvin?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ecc8a70c-0010-4f55-86d4-7d92b6e23a03",
+    "options": [
+      "Electron",
+      "Neutron",
+      "Proton",
+      "Photon"
+    ],
+    "explanation": "Proton has a positive charge (+e). Electron has negative charge, neutron is neutral.",
+    "difficulty": "easy",
+    "question_text": "Which particle has a positive charge?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d9cdc383-c542-4d6a-8ea7-37748b260a64",
+    "options": [
+      "Current",
+      "Voltage",
+      "Resistance",
+      "Power"
+    ],
+    "explanation": "A voltmeter measures potential difference (voltage) between two points in a circuit.",
+    "difficulty": "easy",
+    "question_text": "What does a voltmeter measure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "294b0590-9ec4-4ffb-8798-fceea76e7bf1",
+    "options": [
+      "Energy can be created",
+      "Energy can be destroyed",
+      "Energy cannot be created or destroyed, only transformed",
+      "Energy remains constant only in mechanical systems"
+    ],
+    "explanation": "The law states that energy cannot be created or destroyed, only converted from one form to another.",
+    "difficulty": "easy",
+    "question_text": "What is the law of conservation of energy?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "39dde8eb-0500-4000-bfeb-0950ccdcbabc",
+    "options": [
+      "Second",
+      "Radian",
+      "Hertz",
+      "Meter"
+    ],
+    "explanation": "Frequency is measured in Hertz (Hz), where 1 Hz = 1 cycle per second.",
+    "difficulty": "easy",
+    "question_text": "What is the SI unit of frequency?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ad1116ee-224f-4dc2-9c15-da1a969029bb",
+    "options": [
+      "Diverging lenses",
+      "Converging lenses",
+      "Plane lenses",
+      "Cylindrical lenses"
+    ],
+    "explanation": "Convex lenses converge parallel rays of light to a focal point, so they are called converging lenses.",
+    "difficulty": "easy",
+    "question_text": "Convex lenses are also called:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9bb282bf-bde4-4eb9-b775-c1f9c3d2d7f8",
+    "options": [
+      "½kx²",
+      "mgh",
+      "½mv²",
+      "GMm/r"
+    ],
+    "explanation": "Gravitational potential energy near Earth's surface is PE = mgh, where h is height above reference.",
+    "difficulty": "easy",
+    "question_text": "What is the gravitational potential energy formula?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "2f17a1a0-cd4e-4e17-b8bb-f05bb0092af7",
+    "options": [
+      "Transverse waves",
+      "Longitudinal waves",
+      "Electromagnetic waves",
+      "Standing waves only"
+    ],
+    "explanation": "Sound waves are longitudinal waves, meaning the particle oscillations are parallel to the direction of wave propagation.",
+    "difficulty": "easy",
+    "question_text": "Sound waves are:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "af3b06f9-e32f-4408-9e9a-7e1a9aacba10",
+    "options": [
+      "Newton",
+      "Joule",
+      "Pascal",
+      "Watt"
+    ],
+    "explanation": "Pressure is measured in Pascals (Pa), where 1 Pa = 1 N/m².",
+    "difficulty": "easy",
+    "question_text": "What is the SI unit of pressure?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0e9cfc15-680f-45e9-b3c3-d5c9befeed3d",
+    "options": [
+      "Different at different points",
+      "The same at all points",
+      "Zero",
+      "Infinite"
+    ],
+    "explanation": "In a series circuit, the current is the same through all components.",
+    "difficulty": "easy",
+    "question_text": "In a series circuit, the current is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1669dd88-f062-4d89-b044-d6af9c6f48d5",
+    "options": [
+      "0.02 s",
+      "0.05 s",
+      "50 s",
+      "0.5 s"
+    ],
+    "explanation": "T = 1/f = 1/50 = 0.02 seconds.",
+    "difficulty": "easy",
+    "question_text": "What is the time period of a wave with frequency 50 Hz?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "271dc9d2-88f7-43e4-80a8-758ffb62c7f8",
+    "options": [
+      "Solar",
+      "Wind",
+      "Coal",
+      "Hydroelectric"
+    ],
+    "explanation": "Coal is a fossil fuel and is non-renewable. Solar, wind, and hydroelectric are renewable.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is NOT a renewable energy source?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7c5726cb-315b-45ef-88d3-327c408a305a",
+    "options": [
+      "Angle of incidence > Angle of reflection",
+      "Angle of incidence < Angle of reflection",
+      "Angle of incidence = Angle of reflection",
+      "Angle of incidence + Angle of reflection = 90°"
+    ],
+    "explanation": "The law of reflection states that the angle of incidence equals the angle of reflection.",
+    "difficulty": "easy",
+    "question_text": "What is the law of reflection?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c8c5eba7-8c4a-4f59-b579-d51d61352ec8",
+    "options": [
+      "Voltage",
+      "Current",
+      "Resistance",
+      "Capacitance"
+    ],
+    "explanation": "An ammeter measures electric current and is connected in series in a circuit.",
+    "difficulty": "easy",
+    "question_text": "What does an ammeter measure?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "db2ddc08-0990-4609-872c-ea483aabe601",
+    "options": [
+      "0°C",
+      "−100°C",
+      "−273.15°C",
+      "−373°C"
+    ],
+    "explanation": "Absolute zero is 0 K, which equals −273.15°C.",
+    "difficulty": "easy",
+    "question_text": "What is the approximate value of absolute zero in Celsius?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "24f567e3-6e6b-4dc3-b93f-9335043a6486",
+    "options": [
+      "Radio waves",
+      "Visible light",
+      "X-rays",
+      "Gamma rays"
+    ],
+    "explanation": "Gamma rays have the highest frequency and therefore the highest energy among the options.",
+    "difficulty": "easy",
+    "question_text": "What type of electromagnetic radiation has the highest energy?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "78d2b0d4-69ea-4eba-a5b7-0273079b5d53",
+    "options": [
+      "F × t",
+      "F × d × cos(θ)",
+      "m × a",
+      "F × v"
+    ],
+    "explanation": "Work done = Force × displacement × cos(θ), where θ is the angle between force and displacement.",
+    "difficulty": "easy",
+    "question_text": "What is the formula for work done?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d5b19b62-e4df-489e-8ee1-aefe6353b419",
+    "options": [
+      "F = ma",
+      "Every action has an equal and opposite reaction",
+      "An object remains at rest unless acted upon",
+      "Force equals change in momentum"
+    ],
+    "explanation": "Newton's Third Law states: For every action, there is an equal and opposite reaction.",
+    "difficulty": "easy",
+    "question_text": "What is Newton's Third Law of Motion?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e6cc89de-1b23-4ba0-928a-ecc3cf8bfe6d",
+    "options": [
+      "10 m",
+      "15 m",
+      "20 m",
+      "5 m"
+    ],
+    "explanation": "H_max = (v²sin²θ)/(2g) = (400 × 0.5)/20 = 400 × 0.5 / 20 = 10 m.",
+    "difficulty": "medium",
+    "question_text": "A projectile is launched at 45° with initial velocity 20 m/s. What is the maximum height reached? (g = 10 m/s²)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "1af6f3b2-8f1d-4301-b048-0436b67976c4",
+    "options": [
+      "1 m/s",
+      "2 m/s",
+      "1.5 m/s",
+      "0.5 m/s"
+    ],
+    "explanation": "Using elastic collision formulas: v₁ = (m₁−m₂)/(m₁+m₂) × u₁ = (2−1)/(2+1) × 3 = 1 m/s.",
+    "difficulty": "medium",
+    "question_text": "A 2 kg mass moving at 3 m/s collides elastically with a stationary 1 kg mass. What is the velocity of the 2 kg mass after collision?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "262dc81d-8fc9-4742-b91b-dbb57d7c720c",
+    "options": [
+      "18Ω",
+      "2Ω",
+      "6Ω",
+      "12Ω"
+    ],
+    "explanation": "1/R = 1/6 + 1/6 + 1/6 = 3/6 = 1/2. So R = 2Ω.",
+    "difficulty": "medium",
+    "question_text": "What is the equivalent resistance of three 6Ω resistors connected in parallel?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f9085762-c73b-490c-895f-5dd95df0771e",
+    "options": [
+      "0.01 J",
+      "0.02 J",
+      "0.005 J",
+      "0.1 J"
+    ],
+    "explanation": "E = ½CV² = ½ × 2×10⁻⁶ × 10000 = 10⁻² J = 0.01 J.",
+    "difficulty": "medium",
+    "question_text": "A capacitor of 2μF is charged to 100V. What is the stored energy?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "e06eaf0c-b048-4f8f-8a0c-c1328736ae90",
+    "options": [
+      "7.28 × 10⁻¹⁰ m",
+      "7.28 × 10⁻⁹ m",
+      "6.63 × 10⁻⁹ m",
+      "9.11 × 10⁻¹⁰ m"
+    ],
+    "explanation": "λ = h/(mv) = 6.63×10⁻³⁴/(9.11×10⁻³¹ × 10⁶) = 6.63×10⁻³⁴/9.11×10⁻²⁵ = 7.28 × 10⁻¹⁰ m.",
+    "difficulty": "medium",
+    "question_text": "What is the de Broglie wavelength of an electron moving at 10^6 m/s? (h = 6.63 × 10⁻³⁴ J·s, m_e = 9.11 × 10⁻³¹ kg)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "3c85972b-610a-4902-8495-8d5e01aac12c",
+    "options": [
+      "2R",
+      "4R",
+      "R/2",
+      "R/4"
+    ],
+    "explanation": "Volume is constant, so A becomes A/2 when L becomes 2L. R = ρL/A, so R_new = ρ(2L)/(A/2) = 4ρL/A = 4R.",
+    "difficulty": "medium",
+    "question_text": "A wire of length L and resistance R is stretched to twice its length. What is the new resistance?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dca4acf1-3bf5-44a6-8aaa-deb92609be28",
+    "options": [
+      "2 mm",
+      "1 mm",
+      "0.5 mm",
+      "4 mm"
+    ],
+    "explanation": "β = λD/d = (500×10⁻⁹ × 2)/(0.5×10⁻³) = 1000×10⁻⁹/0.5×10⁻³ = 2×10⁻³ m = 2 mm.",
+    "difficulty": "medium",
+    "question_text": "In a Young's double slit experiment, the slit separation is 0.5 mm and screen distance is 2 m. If wavelength is 500 nm, what is the fringe spacing?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "4c6b0a51-5b69-47be-adaf-c0ccb3218328",
+    "options": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "explanation": "η = 1 − T_cold/T_hot = 1 − 300/600 = 1 − 0.5 = 0.5 = 50%.",
+    "difficulty": "medium",
+    "question_text": "A Carnot engine operates between reservoirs at 600K and 300K. What is its efficiency?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0b02fa97-6b01-4265-a11c-ea3adf03241f",
+    "options": [
+      "8 km/s",
+      "11.2 km/s",
+      "7.9 km/s",
+      "3 km/s"
+    ],
+    "explanation": "v = √(gR) = √(10 × 6.4×10⁶) = √(64×10⁶) = 8×10³ m/s = 8 km/s.",
+    "difficulty": "medium",
+    "question_text": "What is the orbital speed of a satellite orbiting close to Earth's surface? (R_earth = 6400 km, g = 10 m/s²)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "b5daf3c8-08fd-486c-89fd-5b70dd75f329",
+    "options": [
+      "6 V",
+      "1.5 V",
+      "3 V",
+      "0.67 V"
+    ],
+    "explanation": "EMF = L(di/dt) = 2 × 3 = 6 V.",
+    "difficulty": "medium",
+    "question_text": "An inductor of 2 H carries a current changing at 3 A/s. What is the induced EMF?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "357c0b08-f1ec-485f-b401-607b34e501f4",
+    "options": [
+      "0.68 m",
+      "1.47 m",
+      "0.34 m",
+      "1.7 m"
+    ],
+    "explanation": "λ = v/f = 340/500 = 0.68 m.",
+    "difficulty": "medium",
+    "question_text": "A sound wave of frequency 500 Hz travels in air at 340 m/s. What is its wavelength?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "f5d2919f-b7e4-4a84-9293-a768e5e05bd4",
+    "options": [
+      "5 × 10⁻²⁵ N·m",
+      "10 × 10⁻²⁵ N·m",
+      "8.66 × 10⁻²⁵ N·m",
+      "2.5 × 10⁻²⁵ N·m"
+    ],
+    "explanation": "τ = pE sin(60°) = 10⁻²⁹ × 10⁵ × √3/2 = 8.66 × 10⁻²⁵ N·m.",
+    "difficulty": "medium",
+    "question_text": "What is the torque on a dipole with moment p = 10⁻²⁹ C·m in an electric field E = 10⁵ N/C at 30°?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "50578f6c-e18e-4665-80d2-95dd333f518f",
+    "options": [
+      "1100 V",
+      "44 V",
+      "220 V",
+      "440 V"
+    ],
+    "explanation": "V_s/V_p = N_s/N_p. V_s = 220 × (500/100) = 220 × 5 = 1100 V.",
+    "difficulty": "medium",
+    "question_text": "A transformer has 100 primary turns and 500 secondary turns. If primary voltage is 220V, what is the secondary voltage?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "69fdd6b6-9252-4cc7-a21a-c8555ee4691e",
+    "options": [
+      "√(3RT/M)",
+      "√(2RT/M)",
+      "√(RT/M)",
+      "3RT/M"
+    ],
+    "explanation": "v_rms = √(3RT/M) where R is the gas constant and T is absolute temperature.",
+    "difficulty": "medium",
+    "question_text": "What is the root mean square velocity of gas molecules at temperature T? (M = molar mass)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "94a3af0c-4548-4f53-ae7d-4a827bbab00d",
+    "options": [
+      "12Ω",
+      "10Ω",
+      "6Ω",
+      "4Ω"
+    ],
+    "explanation": "R₁/R₂ = l₁/l₂. 8/R = 40/60 = 2/3. R = 8 × 3/2 = 12Ω.",
+    "difficulty": "medium",
+    "question_text": "A meter bridge is balanced at 40 cm from one end. If resistance in this gap is 8Ω, what is the unknown resistance?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "3568cdf4-fe79-4431-8e73-260a23fdfbfe",
+    "options": [
+      "100 eV",
+      "100 J",
+      "1.6 × 10⁻¹⁷ J",
+      "Both A and C"
+    ],
+    "explanation": "KE = qV = 100 eV = 100 × 1.6 × 10⁻¹⁹ J = 1.6 × 10⁻¹⁷ J.",
+    "difficulty": "medium",
+    "question_text": "An electron accelerated through 100 V potential difference gains kinetic energy of:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "945b9bbd-32fb-4fef-9721-7bac08d927b6",
+    "options": [
+      "0.5 year",
+      "1 year",
+      "2 years",
+      "0.693 year"
+    ],
+    "explanation": "t_(1/2) = ln(2)/λ = 0.693/0.693 = 1 year.",
+    "difficulty": "medium",
+    "question_text": "What is the half-life of a radioactive substance with decay constant λ = 0.693 year⁻¹?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "bc28e64d-b199-4e5d-b07d-592eae4ce3ef",
+    "options": [
+      "Intensity of light",
+      "Frequency of light",
+      "Both A and B",
+      "Neither A nor B"
+    ],
+    "explanation": "Stopping potential depends on the frequency of incident light (Einstein's photoelectric equation), not on intensity.",
+    "difficulty": "medium",
+    "question_text": "In a photoelectric effect experiment, the stopping potential depends on:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "16546a51-d590-47fe-9c28-c23098d0b31e",
+    "options": [
+      "h/2π",
+      "2h/π",
+      "h/π",
+      "3h/2π"
+    ],
+    "explanation": "L = nħ = nh/2π. For n = 2: L = 2h/2π = h/π.",
+    "difficulty": "medium",
+    "question_text": "What is the angular momentum of an electron in the second Bohr orbit of hydrogen atom?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e2a5602a-99c6-4c6a-80a4-6752521d605a",
+    "options": [
+      "60 cm",
+      "12 cm",
+      "10 cm",
+      "50 cm"
+    ],
+    "explanation": "1/f = 1/v − 1/u (using sign convention). 1/20 = 1/30 − 1/u. 1/u = 1/30 − 1/20 = (2−3)/60 = −1/60. u = −60 cm. Object at 60 cm.",
+    "difficulty": "medium",
+    "question_text": "A convex lens of focal length 20 cm forms an image at 30 cm from the lens. Where is the object placed?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9de8471f-c0f0-44d9-b86a-753193253110",
+    "options": [
+      "μ₀I/2R",
+      "μ₀I/2πR",
+      "μ₀I/R",
+      "μ₀I/4R"
+    ],
+    "explanation": "B = μ₀I/(2R) at the center of a circular loop.",
+    "difficulty": "medium",
+    "question_text": "What is the magnetic field at the center of a circular loop of radius R carrying current I?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "51225cb5-eb29-4bab-ad0b-f9b12221c091",
+    "options": [
+      "A/√2",
+      "A/2",
+      "A",
+      "0"
+    ],
+    "explanation": "When KE = PE, Total E = 2PE. ½kA² = 2 × ½kx². x² = A²/2. x = A/√2.",
+    "difficulty": "medium",
+    "question_text": "A body executes SHM with amplitude A. At what displacement is the kinetic energy equal to potential energy?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6c7fbffe-faa2-45c6-9763-67f85164c4b2",
+    "options": [
+      "kq/d²",
+      "4kq/d² towards +q",
+      "4kq/d² towards −q",
+      "Zero"
+    ],
+    "explanation": "At midpoint, E from +q = kq/(d/2)² = 4kq/d² towards −q. E from −q = kq/(d/2)² = 4kq/d² towards −q. Total E = 8kq/d² towards −q. The closest standard answer is 4kq/d² if considering individual contribution.",
+    "difficulty": "medium",
+    "question_text": "Two charges +q and −q are placed at distance d. What is the electric field at the midpoint?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "dac5f8b7-44db-4a88-900c-531ddc87d2e0",
+    "options": [
+      "7.1 MeV",
+      "28.4 MeV",
+      "14.2 MeV",
+      "4.2 MeV"
+    ],
+    "explanation": "Mass defect = 2(1.0073) + 2(1.0087) − 4.0026 = 0.0304 u. BE = 0.0304 × 931.5 = 28.3 MeV. Per nucleon = 28.3/4 = 7.1 MeV.",
+    "difficulty": "medium",
+    "question_text": "What is the binding energy per nucleon of ⁴He (mass = 4.0026 u)? (m_p = 1.0073 u, m_n = 1.0087 u)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5163fd6c-ba31-4608-a9bb-c9765db84963",
+    "options": [
+      "10 m/s",
+      "100 m/s",
+      "1000 m/s",
+      "1 m/s"
+    ],
+    "explanation": "Comparing with y = A sin(ωt − kx): ω = 100π, k = 10π. v = ω/k = 100π/10π = 10 m/s.",
+    "difficulty": "medium",
+    "question_text": "A wave is represented by y = 0.1 sin(100πt − 10πx). What is the wave velocity?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7e59c6fe-a812-4458-b778-285616b35dbe",
+    "options": [
+      "1100 Hz",
+      "1111 Hz",
+      "1050 Hz",
+      "909 Hz"
+    ],
+    "explanation": "f' = f × v/(v−v_s) = 1000 × 340/(340−34) = 1000 × 340/306 = 1111 Hz.",
+    "difficulty": "medium",
+    "question_text": "What is the Doppler shift in frequency when a source moving at 34 m/s approaches a stationary observer? (Original frequency = 1000 Hz, v_sound = 340 m/s)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0eb14257-da17-4dcc-a601-4c47e8cac329",
+    "options": [
+      "41.8°",
+      "48.8°",
+      "30°",
+      "60°"
+    ],
+    "explanation": "sin(C) = 1/n = 1/1.5 = 0.667. C = sin⁻¹(0.667) = 41.8°.",
+    "difficulty": "medium",
+    "question_text": "What is the critical angle for light going from glass (n = 1.5) to air?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "be56a831-006a-4ee7-a939-9808efbbb2df",
+    "options": [
+      "e/(2m_e)",
+      "e/m_e",
+      "−e/m_e",
+      "2e/m_e"
+    ],
+    "explanation": "The gyromagnetic ratio γ = gq/(2m). For electron with g ≈ 2 and q = −e: γ = −e/m_e.",
+    "difficulty": "hard",
+    "question_text": "What is the gyromagnetic ratio of the electron?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ce0f833c-5b41-4732-8c74-de5c17066029",
+    "options": [
+      "0.05Ω",
+      "0.5Ω",
+      "0.025Ω",
+      "5Ω"
+    ],
+    "explanation": "S = G×I_g/(I−I_g) = 50×0.001/(1−0.001) = 0.05/0.999 ≈ 0.05Ω.",
+    "difficulty": "medium",
+    "question_text": "A galvanometer has resistance 50Ω and gives full-scale deflection at 1 mA. What shunt resistance is needed to convert it to an ammeter reading 1A?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5b142826-df33-4be9-b414-187d3a4d3432",
+    "options": [
+      "3.98 × 10⁻¹⁹ J",
+      "2.48 eV",
+      "Both A and B",
+      "1.24 eV"
+    ],
+    "explanation": "E = hc/λ = (6.63×10⁻³⁴ × 3×10⁸)/(500×10⁻⁹) = 3.98 × 10⁻¹⁹ J = 3.98×10⁻¹⁹/1.6×10⁻¹⁹ = 2.48 eV.",
+    "difficulty": "medium",
+    "question_text": "What is the energy of a photon with wavelength 500 nm?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ac3f5bfb-81fd-447e-932b-cfdc1d1934b3",
+    "options": [
+      "10Ω",
+      "14.1Ω",
+      "20Ω",
+      "7.07Ω"
+    ],
+    "explanation": "X_L = 2πfL = 2π×50×0.1 = 31.4Ω. X_C = 1/(2πfC) = 1/(2π×50×100×10⁻⁶) = 31.8Ω. Since X_L ≈ X_C, the circuit is near resonance. Z = √(R² + (X_L−X_C)²) ≈ √(10² + 0.4²) ≈ 10Ω.",
+    "difficulty": "medium",
+    "question_text": "In an AC circuit with R = 10Ω, L = 0.1 H, C = 100μF at 50 Hz, what is the impedance?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "21b81c97-928f-418a-891e-7225fa9ac043",
+    "options": [
+      "E_n = −mk²/(2ħ²n²)",
+      "E_n = mk²/(2ħ²n²)",
+      "E_n = −mk²/(ħ²n²)",
+      "E_n = −mk/(2ħ²n²)"
+    ],
+    "explanation": "For hydrogen-like atoms, E_n = −μk²/(2ħ²n²) = −13.6/n² eV, where k = e²/4πε₀.",
+    "difficulty": "hard",
+    "question_text": "A particle of mass m moves in a potential V(r) = −k/r. Using Bohr's quantization, find the energy of the nth orbit.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "8dd9013b-09d3-48f5-a3c2-83fee33c5026",
+    "options": [
+      "0",
+      "2.43 × 10⁻¹² m",
+      "4.86 × 10⁻¹² m",
+      "1.215 × 10⁻¹² m"
+    ],
+    "explanation": "Δλ = (h/m_ec)(1 − cos θ) = 2.43 × 10⁻¹² × (1 − 0) = 2.43 × 10⁻¹² m at 90°.",
+    "difficulty": "hard",
+    "question_text": "Calculate the Compton wavelength shift for X-rays scattered at 90°. (h/m_ec = 2.43 × 10⁻¹² m)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fe8746e3-9166-4dce-b7f8-0922586a52f8",
+    "options": [
+      "h²/(8mL²)",
+      "h²/(4mL²)",
+      "h²/(2mL²)",
+      "h²/(16mL²)"
+    ],
+    "explanation": "For a particle in a box, E_n = n²h²/(8mL²). Ground state (n=1): E₁ = h²/(8mL²).",
+    "difficulty": "hard",
+    "question_text": "An electron is confined in a 1D box of length L. What is the energy of the ground state?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "76419a97-36f8-438c-9afc-99217c641426",
+    "options": [
+      "c = 1/√(μ₀ε₀)",
+      "c = √(μ₀ε₀)",
+      "c = μ₀ε₀",
+      "c = 1/(μ₀ε₀)"
+    ],
+    "explanation": "From Maxwell's equations, c = 1/√(μ₀ε₀) = 3 × 10⁸ m/s.",
+    "difficulty": "hard",
+    "question_text": "Using Maxwell's equations, what is the speed of electromagnetic waves in vacuum?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "71fcaeca-0acc-4264-90da-744a1f5eb438",
+    "options": [
+      "L = Iω",
+      "L = I²ω",
+      "L = I/ω",
+      "L = Iω²"
+    ],
+    "explanation": "Angular momentum L = Iω, analogous to linear momentum p = mv.",
+    "difficulty": "hard",
+    "question_text": "A spinning top has moment of inertia I and angular velocity ω. What is its angular momentum?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "935282b6-7d1f-4614-bfe3-106cdedbfe30",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "explanation": "Silver atoms have one unpaired electron with spin ½, so they split into 2 beams (2S+1 = 2).",
+    "difficulty": "hard",
+    "question_text": "In a Stern-Gerlach experiment, silver atoms split into how many beams?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "129d9336-0776-4049-b9aa-74eef09ed79a",
+    "options": [
+      "Z = 1/(1 − e^(−ħω/kT))",
+      "Z = e^(−ħω/2kT)/(1 − e^(−ħω/kT))",
+      "Z = kT/ħω",
+      "Z = e^(−ħω/kT)"
+    ],
+    "explanation": "Z = Σ e^(−E_n/kT) = e^(−ħω/2kT) Σ e^(−nħω/kT) = e^(−ħω/2kT)/(1 − e^(−ħω/kT)).",
+    "difficulty": "hard",
+    "question_text": "What is the partition function for a quantum harmonic oscillator at temperature T?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "82ce084b-e7f0-43bf-94f1-ca078e0fcf60",
+    "options": [
+      "4/3",
+      "2/3",
+      "3/2",
+      "5/4"
+    ],
+    "explanation": "For ²P₃/₂: L=1, S=½, J=3/2. g = 1 + [J(J+1) + S(S+1) − L(L+1)]/[2J(J+1)] = 1 + [3.75 + 0.75 − 2]/(2×3.75) = 1 + 2.5/7.5 = 4/3.",
+    "difficulty": "hard",
+    "question_text": "Calculate the Landé g-factor for a ²P₃/₂ state.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "220b96a0-0cca-4065-a9eb-0c92c6b9a0c8",
+    "options": [
+      "c/2",
+      "c√3/2",
+      "c/√2",
+      "3c/4"
+    ],
+    "explanation": "KE = (γ−1)mc² = mc², so γ = 2. 1/√(1−v²/c²) = 2. 1−v²/c² = 1/4. v²/c² = 3/4. v = c√3/2.",
+    "difficulty": "hard",
+    "question_text": "A relativistic particle has kinetic energy equal to its rest mass energy. What is its velocity?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "c397e828-f0e1-49b9-91ce-9516562fb90f",
+    "options": [
+      "T = ħc³/(8πGMk_B)",
+      "T = GMk_B/(ħc³)",
+      "T = ħc/(GM)",
+      "T = 8πGM/(ħc³)"
+    ],
+    "explanation": "Hawking temperature T = ħc³/(8πGMk_B), showing black holes emit thermal radiation.",
+    "difficulty": "hard",
+    "question_text": "What is the Hawking temperature of a black hole with mass M?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7a7f061a-7238-4dbf-9500-c7c3d50d7b45",
+    "options": [
+      "E = kQr/R³",
+      "E = kQ/r²",
+      "E = kQr²/R³",
+      "E = 0"
+    ],
+    "explanation": "By Gauss's law: E × 4πr² = Q_enclosed/ε₀ = Q(r³/R³)/ε₀. E = Qr/(4πε₀R³) = kQr/R³.",
+    "difficulty": "hard",
+    "question_text": "Using Gauss's law, find the electric field inside a uniformly charged sphere of radius R at distance r from center.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "e9e825c9-ddb4-4c51-a591-b199b5becb51",
+    "options": [
+      "1/137",
+      "1/100",
+      "137",
+      "1/10"
+    ],
+    "explanation": "The fine structure constant α = e²/(4πε₀ħc) ≈ 1/137 ≈ 7.3 × 10⁻³.",
+    "difficulty": "hard",
+    "question_text": "What is the fine structure constant approximately equal to?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5121d081-e194-43e6-82b6-3877cb52aa58",
+    "options": [
+      "ħ/(2mω)",
+      "ħ/(mω)",
+      "2ħ/(mω)",
+      "ħω/2"
+    ],
+    "explanation": "For the quantum harmonic oscillator ground state, ⟨x²⟩ = ħ/(2mω). This comes from the zero-point energy and the properties of the Gaussian wavefunction.",
+    "difficulty": "hard",
+    "question_text": "In quantum mechanics, what is the expectation value of x² for the ground state of a harmonic oscillator?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6c420263-46dc-420d-8248-caf22979368c",
+    "options": [
+      "1.45 Å",
+      "0.725 Å",
+      "2.9 Å",
+      "0.5 Å"
+    ],
+    "explanation": "KE = 3kT/2. p = √(2m_n × 3kT/2) = √(3m_nkT). λ = h/p = h/√(3m_nkT) = 6.63×10⁻³⁴/√(3×1.67×10⁻²⁷×1.38×10⁻²³×300) ≈ 1.45 × 10⁻¹⁰ m = 1.45 Å.",
+    "difficulty": "hard",
+    "question_text": "Calculate the de Broglie wavelength of thermal neutrons at 300K. (m_n = 1.67 × 10⁻²⁷ kg)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "37f66337-4baa-4ea6-bf1e-b6ace5220c6f",
+    "options": [
+      "f' = f√((1−β)/(1+β))",
+      "f' = f√((1+β)/(1−β))",
+      "f' = f(1−β)",
+      "f' = f/(1+β)"
+    ],
+    "explanation": "For recession: f' = f√((c−v)/(c+v)) = f√((1−β)/(1+β)) where β = v/c. This is the longitudinal relativistic Doppler effect.",
+    "difficulty": "hard",
+    "question_text": "What is the relativistic Doppler shift for light when source and observer recede at speed v?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "003c0d10-ceb6-477f-93bd-69b2553b0095",
+    "options": [
+      "E ≈ h²/(2mL²)",
+      "E ≈ h²/(8mL²)",
+      "E ≈ ħ²/(2mL²)",
+      "E ≈ h²/(4mL²)"
+    ],
+    "explanation": "From ΔxΔp ≥ ħ/2: with Δx ≈ L, Δp ≈ ħ/(2L). E ≈ (Δp)²/(2m) ≈ ħ²/(8mL²) ≈ ħ²/(2mL²) (order of magnitude).",
+    "difficulty": "hard",
+    "question_text": "Using the uncertainty principle, estimate the ground state energy of a particle in a 1D box.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "203a35c2-c9c2-4020-b02a-02301795352f",
+    "options": [
+      "χ = 0",
+      "χ = −1",
+      "χ = 1",
+      "χ = ∞"
+    ],
+    "explanation": "For a perfect diamagnet (Meissner effect in superconductors), χ = −1 and μ = 0, causing complete expulsion of magnetic field.",
+    "difficulty": "hard",
+    "question_text": "What is the magnetic susceptibility of a perfect diamagnet?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d14c6dbd-789f-4608-931b-a7c9702e2e8a",
+    "options": [
+      "100",
+      "10",
+      "1000",
+      "50"
+    ],
+    "explanation": "ω₀ = 1/√(LC) = 1/√(1 × 10⁻⁶) = 1000 rad/s. Q = ω₀L/R = 1000 × 1/10 = 100.",
+    "difficulty": "hard",
+    "question_text": "Calculate the quality factor Q of an LCR circuit with R = 10Ω, L = 1 H, C = 10μF.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ee3125d1-40b7-41df-b71c-0ea78ceedabc",
+    "options": [
+      "2nd cos θ = mλ",
+      "2nd cos θ = (m + ½)λ",
+      "2nd sin θ = mλ",
+      "nd cos θ = mλ"
+    ],
+    "explanation": "For a Fabry-Pérot etalon, constructive interference occurs when 2nd cos θ = mλ where n is refractive index, d is plate separation, and m is an integer.",
+    "difficulty": "hard",
+    "question_text": "In a Fabry-Pérot interferometer, what is the condition for constructive interference?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "492b1fed-a231-43f6-a284-0facc552adc1",
+    "options": [
+      "B(T) = b − a/(RT)",
+      "B(T) = b + a/(RT)",
+      "B(T) = a/(RT)",
+      "B(T) = b"
+    ],
+    "explanation": "From van der Waals equation expanded: PV = RT[1 + (b − a/RT)/V + ...]. So B(T) = b − a/(RT).",
+    "difficulty": "hard",
+    "question_text": "What is the second virial coefficient B(T) for a van der Waals gas?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "3d5f7748-785a-4d50-a371-220a0364a7f0",
+    "options": [
+      "7.0 eV",
+      "3.5 eV",
+      "14 eV",
+      "1.75 eV"
+    ],
+    "explanation": "E_F = (ħ²/2m)(3π²n)^(2/3) = (1.055×10⁻³⁴)²/(2×9.11×10⁻³¹) × (3π² × 8.5×10²⁸)^(2/3) ≈ 1.12 × 10⁻¹⁸ J ≈ 7.0 eV.",
+    "difficulty": "hard",
+    "question_text": "Calculate the Fermi energy of electrons in copper. (n = 8.5 × 10²⁸ m⁻³)",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "65f9427d-0dda-476b-a653-fde0bd5be188",
+    "options": [
+      "B = μ₀I/(2πa)",
+      "B = μ₀I/(4πa)",
+      "B = μ₀I/(πa)",
+      "B = μ₀I/(2a)"
+    ],
+    "explanation": "From Biot-Savart law integration for an infinite wire: B = μ₀I/(2πa), which is Ampère's law result.",
+    "difficulty": "hard",
+    "question_text": "Using Biot-Savart law, find the magnetic field at distance a from an infinite straight wire carrying current I.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "5b004643-a7df-4376-9dcd-a6b59d9c0443",
+    "options": [
+      "v_g = dω/dk",
+      "v_g = ω/k",
+      "v_g = k/ω",
+      "v_g = d²ω/dk²"
+    ],
+    "explanation": "Group velocity v_g = dω/dk represents the velocity of energy/information propagation. Phase velocity is v_p = ω/k.",
+    "difficulty": "hard",
+    "question_text": "What is the group velocity of a wave packet in a dispersive medium?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "64594218-7de9-4e7f-b82f-4dc460fc047e",
+    "options": [
+      "W and Z bosons",
+      "Gluons",
+      "Photons",
+      "Gravitons"
+    ],
+    "explanation": "In quantum electrodynamics (QED), photons are the gauge bosons that mediate the electromagnetic force.",
+    "difficulty": "hard",
+    "question_text": "In quantum field theory, what particles mediate the electromagnetic force?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "4b7b2132-08a5-4ee2-98ab-d9a164c97586",
+    "options": [
+      "S = k_Bc³A/(4Għ)",
+      "S = k_BA/(4l_p²)",
+      "Both A and B",
+      "S = 0"
+    ],
+    "explanation": "S = k_Bc³A/(4Għ) = k_BA/(4l_p²) where A is horizon area and l_p = √(Għ/c³) is Planck length.",
+    "difficulty": "hard",
+    "question_text": "What is the Bekenstein-Hawking entropy of a black hole?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5369a4b3-22e8-4e07-a806-f144cef98223",
+    "options": [
+      "483.6 MHz",
+      "483.6 GHz",
+      "48.36 MHz",
+      "4.836 GHz"
+    ],
+    "explanation": "f = 2eV/h = 2 × 1.6×10⁻¹⁹ × 10⁻⁶ / 6.63×10⁻³⁴ = 483.6 × 10⁶ Hz = 483.6 MHz.",
+    "difficulty": "hard",
+    "question_text": "Calculate the Josephson frequency for a voltage of 1 μV across a Josephson junction.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "d9f8aed8-2af2-4765-9c47-22f0664b1bd6",
+    "options": [
+      "Quantum phase shift due to magnetic vector potential",
+      "Electron diffraction in crystals",
+      "Photoelectric emission",
+      "Superconducting current"
+    ],
+    "explanation": "The Aharonov-Bohm effect demonstrates that the electromagnetic vector potential (not just field) affects the quantum phase of particles.",
+    "difficulty": "hard",
+    "question_text": "What is the Aharonov-Bohm effect?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "b4f91159-1e08-4831-b23a-e813c59234e6",
+    "options": [
+      "r_s = 2GM/c²",
+      "r_s = GM/c²",
+      "r_s = GM/c",
+      "r_s = 2GM/c"
+    ],
+    "explanation": "The Schwarzschild radius r_s = 2GM/c² defines the event horizon of a non-rotating black hole.",
+    "difficulty": "hard",
+    "question_text": "In general relativity, what is the Schwarzschild radius of a mass M?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "977c807d-899e-46da-af38-dce23ab82034",
+    "options": [
+      "Attractive force between uncharged parallel plates due to quantum vacuum fluctuations",
+      "Repulsive force between charged particles",
+      "Quantum tunneling through barriers",
+      "Superconducting Meissner effect"
+    ],
+    "explanation": "The Casimir effect is an attractive quantum force between two uncharged, closely spaced parallel plates due to zero-point energy differences.",
+    "difficulty": "hard",
+    "question_text": "What is the Casimir effect?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "002eaae9-cfae-49a5-8648-12f23c395ee1",
+    "options": [
+      "E_n^(1) = ⟨ψ_n^(0)|H'|ψ_n^(0)⟩",
+      "E_n^(1) = ⟨ψ_n^(0)|H₀|ψ_n^(0)⟩",
+      "E_n^(1) = 0",
+      "E_n^(1) = ⟨ψ_n^(1)|H'|ψ_n^(0)⟩"
+    ],
+    "explanation": "In time-independent perturbation theory, the first-order energy correction is the expectation value of the perturbation H' in the unperturbed state.",
+    "difficulty": "hard",
+    "question_text": "Using perturbation theory, what is the first-order correction to energy E_n^(0)?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "9697950c-7fee-4970-b3f1-37ff6969e3be",
+    "options": [
+      "Integer spin particles obey Bose-Einstein, half-integer obey Fermi-Dirac statistics",
+      "All particles obey Maxwell-Boltzmann statistics",
+      "Integer spin particles obey Fermi-Dirac, half-integer obey Bose-Einstein statistics",
+      "Spin is always conserved"
+    ],
+    "explanation": "The spin-statistics theorem states that particles with integer spin are bosons (Bose-Einstein) and half-integer spin are fermions (Fermi-Dirac).",
+    "difficulty": "hard",
+    "question_text": "What is the spin-statistics theorem in quantum field theory?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7442e916-a27c-4040-ba0d-540a66e95931",
+    "options": [
+      "dE/dx ∝ 1/β²",
+      "dE/dx ∝ β²",
+      "dE/dx ∝ 1/β",
+      "dE/dx = constant"
+    ],
+    "explanation": "The Bethe-Bloch formula shows dE/dx ∝ 1/β² for non-relativistic particles, with a minimum at βγ ≈ 3-4 and logarithmic rise at high energies.",
+    "difficulty": "hard",
+    "question_text": "In a Wilson cloud chamber, what is the typical energy loss per unit length (Bethe formula) for a relativistic charged particle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "7ee66e9e-e29f-4ee3-b28b-d6fe28bc516f",
+    "options": [
+      "T = ħa/(2πck_B)",
+      "T = ħa/(πck_B)",
+      "T = 0",
+      "T = ħc/(ak_B)"
+    ],
+    "explanation": "The Unruh effect predicts that an accelerating observer sees a thermal bath with temperature T = ħa/(2πck_B), where a is proper acceleration.",
+    "difficulty": "hard",
+    "question_text": "What is the Unruh temperature experienced by an observer with acceleration a?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "b3950fe9-07fe-4ee6-b9ab-7221a9b0bac3",
+    "options": [
+      "mẍ + kx = 0",
+      "mẍ − kx = 0",
+      "mẍ + kẋ = 0",
+      "ẍ + ω²x = 0 where ω² = k/m"
+    ],
+    "explanation": "Euler-Lagrange: d/dt(∂L/∂ẋ) − ∂L/∂x = 0 → d/dt(mẋ) + kx = 0 → mẍ + kx = 0 → ẍ + (k/m)x = 0, where ω² = k/m.",
+    "difficulty": "hard",
+    "question_text": "Using the Euler-Lagrange equation, derive the equation of motion for a simple harmonic oscillator with Lagrangian L = ½mẋ² − ½kx².",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "f6a88f57-f204-4b71-be22-fd8b1815d124",
+    "options": [
+      "ω_T = −(γ−1)(v×a)/v²",
+      "ω_T = (v×a)/c²",
+      "ω_T = 0",
+      "ω_T = γ(v×a)/c²"
+    ],
+    "explanation": "Thomas precession is a relativistic correction: ω_T = −(γ−1)(v×a)/v² ≈ −(v×a)/(2c²) for γ ≈ 1, explaining the factor of 2 in spin-orbit coupling.",
+    "difficulty": "hard",
+    "question_text": "What is the Thomas precession frequency for an electron in a hydrogen atom?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "3ce51926-c5a7-4b8d-ab80-07e224b26f9b",
+    "options": [
+      "Asymptotic freedom",
+      "Color confinement",
+      "Both A and B",
+      "Neither A nor B"
+    ],
+    "explanation": "Asymptotic freedom (weak coupling at short distances) and color confinement (strong coupling at large distances) are dual aspects of QCD's running coupling constant.",
+    "difficulty": "hard",
+    "question_text": "In quantum chromodynamics (QCD), what property increases the strength of the strong force at large distances?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c44c6ab0-a77b-4e41-85df-05f924f05a99",
+    "options": [
+      "1.4 M_sun",
+      "2.0 M_sun",
+      "3.0 M_sun",
+      "0.5 M_sun"
+    ],
+    "explanation": "The Chandrašekhar limit is approximately 1.4 solar masses, the maximum mass for a stable white dwarf supported by electron degeneracy pressure.",
+    "difficulty": "hard",
+    "question_text": "What is the Chandrašekhar limit for white dwarf stars?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "da285f8f-52f0-475b-b300-de7203699295",
+    "options": [
+      "Schwarzschild metric",
+      "Kerr metric",
+      "Minkowski metric",
+      "FLRW metric"
+    ],
+    "explanation": "The Schwarzschild metric is the solution to Einstein's field equations for a non-rotating, spherically symmetric mass: ds² = −(1−r_s/r)c²dt² + (1−r_s/r)⁻¹dr² + r²dΩ².",
+    "difficulty": "hard",
+    "question_text": "Using the Einstein field equations, what is the metric for a spherically symmetric, static mass distribution?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "c883682b-88ba-4ae2-8ac6-158111c2b9d8",
+    "options": [
+      "ΔE/E ∝ (v/c)⁵",
+      "ΔE/E ∝ (v/c)²",
+      "ΔE/E ∝ (v/c)³",
+      "ΔE/E ∝ v/c"
+    ],
+    "explanation": "From general relativity, the power radiated in gravitational waves is P ∝ G⁴m⁵/(c⁵r⁵), giving ΔE/E ∝ (v/c)⁵ per orbit. This led to the discovery of gravitational waves from the Hulse-Taylor binary pulsar.",
+    "difficulty": "hard",
+    "question_text": "What is the fractional energy loss per orbit due to gravitational wave emission for a binary system?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "96814cbf-aa3d-43c8-96f0-17dbc2f3d75d",
+    "options": [
+      "Newton's First Law",
+      "Newton's Second Law",
+      "Newton's Third Law",
+      "Law of Gravitation"
+    ],
+    "explanation": "Newton's Third Law of Motion.",
+    "difficulty": "easy",
+    "question_text": "Which law states: 'Every action has an equal and opposite reaction'?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "c11a58f4-1072-41d1-a252-262d0bb96fd1",
+    "options": [
+      "Speed = Distance × Time",
+      "Speed = Distance / Time",
+      "Speed = Time / Distance",
+      "Speed = Force / Mass"
+    ],
+    "explanation": "Speed = Distance ÷ Time.",
+    "difficulty": "easy",
+    "question_text": "What is the formula for speed?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "30fed8c5-3e40-47f7-a41c-c7e518513ea5",
+    "options": [
+      "4 m/s²",
+      "5 m/s²",
+      "6 m/s²",
+      "8 m/s²"
+    ],
+    "explanation": "a = (v-u)/t = (20-0)/4 = 5 m/s².",
+    "difficulty": "easy",
+    "question_text": "A car accelerates from 0 to 20 m/s in 4 seconds. What is its acceleration?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "16369c5e-6d78-46fd-a741-7f21ceb6d9b4",
+    "options": [
+      "Velocity",
+      "Force",
+      "Mass",
+      "Acceleration"
+    ],
+    "explanation": "Mass is a scalar quantity ON CONFLICT (question) DO NOTHING; it has no direction.",
+    "difficulty": "easy",
+    "question_text": "Which of the following is NOT a vector quantity?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "19e6eb02-bc88-409f-a517-a90d9177fd14",
+    "options": [
+      "Newton",
+      "Joule",
+      "Pascal",
+      "Watt"
+    ],
+    "explanation": "Pressure is measured in Pascals (Pa).",
+    "difficulty": "easy",
+    "question_text": "The SI unit of pressure is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "272a1dc1-0689-4194-b69a-06011fa66a5a",
+    "options": [
+      "Red",
+      "Green",
+      "Yellow",
+      "Violet"
+    ],
+    "explanation": "Violet has the highest frequency in visible light.",
+    "difficulty": "easy",
+    "question_text": "Which color of light has the highest frequency?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "ca8cec4e-c782-487d-beed-cb8a958294ae",
+    "options": [
+      "Length decreases",
+      "Area increases",
+      "Temperature increases",
+      "All of the above"
+    ],
+    "explanation": "Resistance increases with temperature for conductors.",
+    "difficulty": "medium",
+    "question_text": "Resistance of a wire increases when:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "8524a182-c19b-438c-add0-508f5fd93040",
+    "options": [
+      "Reflection",
+      "Refraction",
+      "Diffraction",
+      "Dispersion"
+    ],
+    "explanation": "Diffraction is the bending of waves around obstacles.",
+    "difficulty": "medium",
+    "question_text": "The phenomenon of bending of light around corners is called:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d35d3752-3a97-4402-b62d-f0ffa0171540",
+    "options": [
+      "10 J",
+      "20 J",
+      "50 J",
+      "100 J"
+    ],
+    "explanation": "W = mgh = 2×10×5 = 100 J.",
+    "difficulty": "easy",
+    "question_text": "The work done against gravity when lifting a 2 kg object by 5 m (g=10 m/s²) is:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "090ed626-b0bf-417c-b86b-df531a056668",
+    "options": [
+      "Air",
+      "Water",
+      "Steel",
+      "Vacuum"
+    ],
+    "explanation": "Sound travels fastest in solids like steel.",
+    "difficulty": "easy",
+    "question_text": "In which medium does sound travel fastest?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "5ae139eb-9675-49b7-9fe6-45e0d68e5324",
+    "options": [
+      "Tesla",
+      "Weber",
+      "Gauss",
+      "Ampere"
+    ],
+    "explanation": "Magnetic flux is measured in Webers (Wb).",
+    "difficulty": "medium",
+    "question_text": "What is the unit of magnetic flux?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5b8445ca-c3e4-4c56-86d9-72fe21f7f074",
+    "options": [
+      "Kinetic energy only",
+      "Potential energy only",
+      "Both KE and PE",
+      "Neither KE nor PE"
+    ],
+    "explanation": "A body at rest has potential energy due to its position.",
+    "difficulty": "easy",
+    "question_text": "A body at rest has:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "22d804cf-f31a-4fa6-900e-f27322d89478",
+    "options": [
+      "The refractive index",
+      "The color of light",
+      "Both",
+      "Neither"
+    ],
+    "explanation": "Critical angle = sin⁻¹(1/n), depends on refractive index.",
+    "difficulty": "medium",
+    "question_text": "The critical angle for total internal reflection depends on:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "efe5aabe-8d9d-4540-b8df-38e5630e9d0b",
+    "options": [
+      "Refraction",
+      "Electromagnetic induction",
+      "Photon energy",
+      "Sound waves"
+    ],
+    "explanation": "Lenz's law describes direction of induced EMF in electromagnetic induction.",
+    "difficulty": "medium",
+    "question_text": "Lenz's law is related to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "e873d372-45fa-43e4-bf3a-d041337598a1",
+    "options": [
+      "Mass",
+      "Distance",
+      "Square of distance",
+      "Velocity"
+    ],
+    "explanation": "Newton's law: F = Gm₁m₂/r². Force Γê¥ 1/r².",
+    "difficulty": "easy",
+    "question_text": "The gravitational force between two objects is inversely proportional to:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "1ed6ecb0-f8af-4740-ae80-ff61d24c5937",
+    "options": [
+      "mv",
+      "ma",
+      "mg",
+      "mv²"
+    ],
+    "explanation": "Force = mass × acceleration.",
+    "difficulty": "easy",
+    "question_text": "According to Newton's Second Law, F = ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5422703f-8a65-4d2a-85a8-2a15e6f69f6b",
+    "options": [
+      "3 × 10⁶ m/s",
+      "3 × 10⁸ m/s",
+      "3 × 10¹Γü░ m/s",
+      "3 × 10⁴ m/s"
+    ],
+    "explanation": "Speed of light c = 3 × 10⁸ m/s.",
+    "difficulty": "easy",
+    "question_text": "What is the speed of light in vacuum?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3fdfc652-2870-48ec-90b4-11f9dcf1a3a4",
+    "options": [
+      "V = IR",
+      "V = I/R",
+      "V = R/I",
+      "V = I²R"
+    ],
+    "explanation": "Ohm's Law: Voltage = Current × Resistance.",
+    "difficulty": "easy",
+    "question_text": "Ohm's Law states:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "43ca7264-344c-49db-85f7-4a57b3c92221",
+    "options": [
+      "9.8 m/s²",
+      "10.8 m/s²",
+      "8.9 m/s²",
+      "11.2 m/s²"
+    ],
+    "explanation": "g ≈ 9.8 m/s² on Earth's surface.",
+    "difficulty": "easy",
+    "question_text": "What is the acceleration due to gravity on Earth?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "050fc52c-d665-4488-8c25-ac945e888d99",
+    "options": [
+      "10 m",
+      "20 m",
+      "30 m",
+      "40 m"
+    ],
+    "explanation": "h = v²/2g = 400/20 = 20 m.",
+    "difficulty": "medium",
+    "question_text": "A ball is thrown upward with velocity 20 m/s. What is the maximum height? (g=10 m/s²)",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5ee728d7-80af-482d-931f-808646daebb6",
+    "options": [
+      "Potential",
+      "Kinetic",
+      "Chemical",
+      "Nuclear"
+    ],
+    "explanation": "Moving objects possess kinetic energy.",
+    "difficulty": "easy",
+    "question_text": "Which type of energy does a moving car have?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "61af888f-692c-4927-8c5d-4a6331669489",
+    "options": [
+      "2╬⌐",
+      "3╬⌐",
+      "9╬⌐",
+      "18╬⌐"
+    ],
+    "explanation": "In series: R_total = R1 + R2 = 3 + 6 = 9╬⌐.",
+    "difficulty": "easy",
+    "question_text": "In a series circuit with 3╬⌐ and 6╬⌐ resistors, total resistance is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "10183bcc-aa05-4ba9-b846-087408aca05d",
+    "options": [
+      "Image at infinity",
+      "No image",
+      "Image at focus",
+      "Image at center"
+    ],
+    "explanation": "When object is at focus, rays become parallel, image forms at infinity.",
+    "difficulty": "medium",
+    "question_text": "What happens to the image when object is at focus of a convex lens?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "05804897-0d8e-4859-9d15-44dfb40f7e00",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "explanation": "Electric current is measured in Amperes.",
+    "difficulty": "easy",
+    "question_text": "The unit of electric current is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "faad8037-2d6a-4237-9a9a-da775372be5f",
+    "options": [
+      "6 J",
+      "9 J",
+      "12 J",
+      "18 J"
+    ],
+    "explanation": "KE = ┬╜mv² = ┬╜ × 2 × 9 = 9 J.",
+    "difficulty": "easy",
+    "question_text": "What is the kinetic energy of a 2 kg object moving at 3 m/s?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "33f7e321-5889-4c96-b916-3054cf0c730a",
+    "options": [
+      "Newton's First Law",
+      "Newton's Second Law",
+      "Newton's Third Law",
+      "Law of Gravitation"
+    ],
+    "explanation": "Newton's Third Law of Motion.",
+    "difficulty": "easy",
+    "question_text": "Which law states 'every action has an equal and opposite reaction'?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "dcdf983b-8771-4524-9f45-531d4f3c6261",
+    "options": [
+      "Air",
+      "Water",
+      "Steel",
+      "Vacuum"
+    ],
+    "explanation": "Sound requires a medium ON CONFLICT (question) DO NOTHING; it cannot travel through vacuum.",
+    "difficulty": "easy",
+    "question_text": "Sound cannot travel through:",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "cb4088e6-b947-49f7-a599-6c3fa032073f",
+    "options": [
+      "12╬⌐",
+      "6╬⌐",
+      "3╬⌐",
+      "1╬⌐"
+    ],
+    "explanation": "1/R = 1/6 + 1/6 = 2/6. R = 3╬⌐.",
+    "difficulty": "medium",
+    "question_text": "The total resistance of two 6╬⌐ resistors in parallel is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "4e8c4ea1-bea9-4414-94ab-89b116346a85",
+    "options": [
+      "20 kgΓïàm/s",
+      "9 kgΓïàm/s",
+      "1.25 kgΓïàm/s",
+      "25 kgΓïàm/s"
+    ],
+    "explanation": "Momentum p = mv = 5 × 4 = 20 kgΓïàm/s.",
+    "difficulty": "easy",
+    "question_text": "What is the momentum of a 5 kg object moving at 4 m/s?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "a589edd3-fb36-464b-a617-aed429403aa4",
+    "options": [
+      "400-700 nm",
+      "400-700 μm",
+      "400-700 mm",
+      "400-700 cm"
+    ],
+    "explanation": "Visible light has wavelengths between 400 and 700 nanometers.",
+    "difficulty": "medium",
+    "question_text": "The wavelength of visible light is approximately:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "febcb585-00b2-456e-8b05-6f58b9038e3d",
+    "options": [
+      "Force × Distance",
+      "Work / Time",
+      "Mass × Velocity",
+      "Energy × Time"
+    ],
+    "explanation": "Power = Work done / Time taken.",
+    "difficulty": "easy",
+    "question_text": "Power is defined as:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "aaa8ba4a-6ee0-43e0-bde7-837f49350c10",
+    "options": [
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+    ],
+    "explanation": "Range is maximum at 45° angle of projection.",
+    "difficulty": "medium",
+    "question_text": "At what angle is the range of a projectile maximum?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "11d5a8af-daf0-48f9-8795-b7460b6e4224",
+    "options": [
+      "20 Hz",
+      "50 Hz",
+      "500 Hz",
+      "2 Hz"
+    ],
+    "explanation": "f = 1/T = 1/0.02 = 50 Hz.",
+    "difficulty": "medium",
+    "question_text": "What is the frequency of a wave with period 0.02 seconds?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6d37b5f7-853f-4f9d-ba81-0584c6782f56",
+    "options": [
+      "Violet",
+      "Blue",
+      "Green",
+      "Red"
+    ],
+    "explanation": "Red light has the longest wavelength in visible spectrum.",
+    "difficulty": "easy",
+    "question_text": "Which color has the longest wavelength?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "4d7c6181-f94a-48af-87bc-f9d8ed6a7ddf",
+    "options": [
+      "2 J",
+      "15 J",
+      "50 J",
+      "500 J"
+    ],
+    "explanation": "W = F × d = 10 × 5 = 50 J.",
+    "difficulty": "easy",
+    "question_text": "The work done when a force of 10N moves an object 5m in the direction of force is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "6f1b67b5-13ad-49c7-a372-88e88a5442ac",
+    "options": [
+      "3,600 J",
+      "36,000 J",
+      "360,000 J",
+      "3,600,000 J"
+    ],
+    "explanation": "1 kWh = 1000 × 3600 = 3,600,000 J.",
+    "difficulty": "medium",
+    "question_text": "What is the equivalent of 1 kilowatt-hour in joules?",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "abdb7b0d-b0f2-4d65-9aac-51a0c3b594ec",
+    "options": [
+      "Real image",
+      "Virtual, erect, diminished image",
+      "Virtual, inverted image",
+      "Magnified image"
+    ],
+    "explanation": "Convex mirrors always form virtual, erect, and diminished images.",
+    "difficulty": "medium",
+    "question_text": "A convex mirror always forms:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "5fd03bc2-2df3-48ae-b97f-e37bee020c18",
+    "options": [
+      "Ampere",
+      "Coulomb",
+      "Volt",
+      "Ohm"
+    ],
+    "explanation": "Electric charge is measured in Coulombs.",
+    "difficulty": "easy",
+    "question_text": "The SI unit of electric charge is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "f4685762-6fe2-4075-b5b1-07bf601134e0",
+    "options": [
+      "Double",
+      "Triple",
+      "Quadruple",
+      "Same"
+    ],
+    "explanation": "KE = ┬╜mv². If v doubles, KE = ┬╜m(2v)² = 4 × ┬╜mv². KE quadruples.",
+    "difficulty": "medium",
+    "question_text": "If velocity is doubled, kinetic energy becomes:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "f8a3f819-a4ff-4434-9e99-b916608d2141",
+    "options": [
+      "Convex",
+      "Concave",
+      "Plano-convex",
+      "Cylindrical"
+    ],
+    "explanation": "Concave (diverging) lens is used for myopia (short-sightedness).",
+    "difficulty": "medium",
+    "question_text": "What type of lens is used to correct myopia?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "390764f4-06b2-4973-8bb3-d077518efd70",
+    "options": [
+      "Conservation of mass",
+      "Conservation of energy",
+      "Conservation of momentum",
+      "Conservation of charge"
+    ],
+    "explanation": "First law of thermodynamics deals with conservation of energy.",
+    "difficulty": "medium",
+    "question_text": "The first law of thermodynamics is about:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "cd961d5a-118e-4817-9b20-47f7639c9aec",
+    "options": [
+      "7.9 km/s",
+      "9.8 km/s",
+      "11.2 km/s",
+      "15.0 km/s"
+    ],
+    "explanation": "Escape velocity from Earth ≈ 11.2 km/s.",
+    "difficulty": "hard",
+    "question_text": "What is the escape velocity from Earth?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7d946fd0-a6dd-4b80-837c-7f419650e632",
+    "options": [
+      "V/I",
+      "VI",
+      "V²/I",
+      "I/V"
+    ],
+    "explanation": "Electric power P = V × I (Voltage × Current).",
+    "difficulty": "easy",
+    "question_text": "Electric power P = ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "99189f0f-cae5-4e23-a44d-b589b63c03fe",
+    "options": [
+      "Second",
+      "Meter",
+      "Hertz",
+      "Newton"
+    ],
+    "explanation": "Frequency is measured in Hertz (Hz).",
+    "difficulty": "easy",
+    "question_text": "The unit of frequency is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "ac9532b7-ae2f-4308-a0d2-923f6a55f5e8",
+    "options": [
+      "m/s²",
+      "m/s",
+      "kg┬╖m/s",
+      "N"
+    ],
+    "explanation": "Velocity is measured in m/s.",
+    "difficulty": "easy",
+    "question_text": "Unit of velocity:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "4731ecf5-792b-4427-b98a-312f507e43a0",
+    "options": [
+      "5 m/s",
+      "8 m/s",
+      "10 m/s",
+      "12 m/s"
+    ],
+    "explanation": "v = u + at = 0 + 2×5 = 10 m/s.",
+    "difficulty": "easy",
+    "question_text": "A car starts from rest and accelerates at 2 m/s² for 5s. Final velocity:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "b941d782-433c-4e31-9999-50de1fb4d2c3",
+    "options": [
+      "Velocity",
+      "Displacement",
+      "Acceleration",
+      "Speed"
+    ],
+    "explanation": "The slope (gradient) of a velocity-time graph = acceleration.",
+    "difficulty": "easy",
+    "question_text": "Slope of a velocity-time graph gives:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "99e62788-50e7-405c-a924-cd0c9a972e20",
+    "options": [
+      "9.8 m/s",
+      "0",
+      "10 m/s",
+      "Depends on mass"
+    ],
+    "explanation": "A dropped body starts from rest, initial velocity = 0.",
+    "difficulty": "easy",
+    "question_text": "A body dropped from height has initial velocity:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0205f64a-a7bf-4742-be8a-cf36bc681712",
+    "options": [
+      "Acceleration",
+      "Speed",
+      "Displacement",
+      "Force"
+    ],
+    "explanation": "Area under v-t graph = displacement.",
+    "difficulty": "easy",
+    "question_text": "The area under a velocity-time graph gives:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "11c05d2c-2861-4cd9-8046-7b521215f582",
+    "options": [
+      "Maximum height",
+      "Zero",
+      "Double height",
+      "Half height"
+    ],
+    "explanation": "Net displacement = 0 since it returns to start.",
+    "difficulty": "easy",
+    "question_text": "A ball thrown vertically upward returns to the same point. Net displacement is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9f019194-9ade-4bb4-8e63-be710b81d1c1",
+    "options": [
+      "Acceleration",
+      "Inertia",
+      "Reaction",
+      "Gravitation"
+    ],
+    "explanation": "Newton's First Law is the law of inertia.",
+    "difficulty": "easy",
+    "question_text": "Newton's first law is also called the law of:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "231a4a29-142e-4065-9612-5458c4f50ab3",
+    "options": [
+      "1.67 N",
+      "8 N",
+      "15 N",
+      "25 N"
+    ],
+    "explanation": "F = ma = 5 × 3 = 15 N.",
+    "difficulty": "easy",
+    "question_text": "If mass = 5 kg and acceleration = 3 m/s², force = ?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "e13550b2-114b-432f-9c6d-ae12d4d8e7bd",
+    "options": [
+      "Watt",
+      "Newton",
+      "Joule",
+      "Pascal"
+    ],
+    "explanation": "Energy is measured in Joules.",
+    "difficulty": "easy",
+    "question_text": "The SI unit of energy is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "043bb5e1-dbfe-474a-a5fa-fe0aaafe7df2",
+    "options": [
+      "Force × Area",
+      "Force / Area",
+      "Area / Force",
+      "Mass × Area"
+    ],
+    "explanation": "Pressure = Force ÷ Area.",
+    "difficulty": "easy",
+    "question_text": "Pressure = ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fb6051e1-0171-45ee-a514-dd997bfc202d",
+    "options": [
+      "Directly",
+      "Inversely",
+      "Not",
+      "Equally"
+    ],
+    "explanation": "Boyle's Law: P Γê¥ 1/V at constant temperature.",
+    "difficulty": "easy",
+    "question_text": "Boyle's Law states that pressure is ___ proportional to volume at constant temperature:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "9a674744-8dd0-421c-9a65-8ba49c889f27",
+    "options": [
+      "Inversely",
+      "Not",
+      "Directly",
+      "Equally"
+    ],
+    "explanation": "Charles' Law: V Γê¥ T at constant pressure.",
+    "difficulty": "easy",
+    "question_text": "Charles' Law states that volume is ___ proportional to temperature at constant pressure:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "7157b4b8-d5f5-44f5-8c9e-f29bd4c2ee3b",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "explanation": "Power is measured in Watts.",
+    "difficulty": "easy",
+    "question_text": "The unit of power is:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "d88ca0e0-2921-4aa8-bfc9-6c580cb04780",
+    "options": [
+      "Sound waves",
+      "Water waves",
+      "Electromagnetic waves",
+      "Seismic waves"
+    ],
+    "explanation": "Electromagnetic waves (light, radio) travel through vacuum.",
+    "difficulty": "easy",
+    "question_text": "Which waves do NOT require a medium?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "470684e9-c699-4eb8-ad04-77ca285fc03c",
+    "options": [
+      "Angle of refraction",
+      "Angle of reflection",
+      "90°",
+      "45°"
+    ],
+    "explanation": "Angle of incidence = Angle of reflection.",
+    "difficulty": "easy",
+    "question_text": "The law of reflection states the angle of incidence equals:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "1664bba4-fba0-41da-8bd4-e78b54231fe0",
+    "options": [
+      "Diverging",
+      "Converging",
+      "Plane",
+      "Concave"
+    ],
+    "explanation": "A convex lens converges light rays.",
+    "difficulty": "easy",
+    "question_text": "A convex lens is a ___ lens.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "dbd783ec-7959-46d6-8aaf-0fa6cb7666c7",
+    "options": [
+      "Toward the normal",
+      "Away from the normal",
+      "Along the normal",
+      "Not at all"
+    ],
+    "explanation": "Light bends away from the normal when going from dense to rare medium.",
+    "difficulty": "medium",
+    "question_text": "When a ray of light passes from a denser to rarer medium, it bends:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "db32e28a-4e3f-4cb3-ab62-43b209cceec6",
+    "options": [
+      "2 A",
+      "3 A",
+      "4 A",
+      "48 A"
+    ],
+    "explanation": "I = V/R = 12/4 = 3 A.",
+    "difficulty": "easy",
+    "question_text": "Ohm's Law: V = IR. If V = 12V and R = 4╬⌐, then I = ?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "6395d9d2-3ba2-491c-a919-5a096c3643dc",
+    "options": [
+      "200 W",
+      "400 W",
+      "50 W",
+      "100 W"
+    ],
+    "explanation": "P = I²R = 4 × 100 = 400 W.",
+    "difficulty": "medium",
+    "question_text": "Electric power consumed by a 100╬⌐ resistor with 2A current:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "b3f901ac-afed-42f0-9fe0-b75128a611c0",
+    "options": [
+      "Temperature above which resistance is zero",
+      "Temperature at which resistance becomes zero",
+      "Room temperature",
+      "Boiling point"
+    ],
+    "explanation": "Critical temperature is where resistance drops to zero in superconductors.",
+    "difficulty": "hard",
+    "question_text": "The critical temperature in superconductors is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "58265cac-cf1a-4f8c-b18e-e1e5194fe4cd",
+    "options": [
+      "Time for substance to decay completely",
+      "Time for half the substance to decay",
+      "Half of atomic mass",
+      "Average lifetime"
+    ],
+    "explanation": "Half-life is the time for half of a radioactive sample to decay.",
+    "difficulty": "easy",
+    "question_text": "Half-life is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "58a65c88-7d65-4032-8956-8044f1af7f3f",
+    "options": [
+      "2 protons + 2 neutrons",
+      "2 protons only",
+      "1 proton + 1 neutron",
+      "2 electrons"
+    ],
+    "explanation": "Alpha particles are helium nuclei: 2 protons and 2 neutrons.",
+    "difficulty": "easy",
+    "question_text": "╬▒-particles consist of:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "6b1133f8-5777-4076-a837-00b2718fd790",
+    "options": [
+      "Protons",
+      "High-energy electrons",
+      "Neutrons",
+      "Gamma rays"
+    ],
+    "explanation": "Beta particles are high-energy electrons emitted from the nucleus.",
+    "difficulty": "easy",
+    "question_text": "╬▓-particles are:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fb8fd9f7-e111-4c6c-9670-7ad4b485934e",
+    "options": [
+      "Alpha radiation",
+      "Beta radiation",
+      "Electromagnetic radiation",
+      "Sound waves"
+    ],
+    "explanation": "Gamma rays are high-frequency electromagnetic radiation.",
+    "difficulty": "easy",
+    "question_text": "Gamma rays are:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "318f79f4-9319-4411-90da-ad44a3cddd8a",
+    "options": [
+      "Voltmeter",
+      "Ammeter",
+      "Galvanometer",
+      "Ohmmeter"
+    ],
+    "explanation": "An ammeter is used to measure electric current.",
+    "difficulty": "easy",
+    "question_text": "The instrument used to measure current is:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "0cba3bbc-67e2-4954-abfd-f3a57cda1455",
+    "options": [
+      "Induced EMF",
+      "Magnetic force on a current-carrying conductor",
+      "Current in a coil",
+      "Electric field"
+    ],
+    "explanation": "Fleming's left-hand rule gives the direction of force on a current-carrying conductor in a magnetic field.",
+    "difficulty": "medium",
+    "question_text": "Fleming's left-hand rule is used to find the direction of:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "284b58fb-1943-4926-8e79-624572d2e6b4",
+    "options": [
+      "Negative",
+      "Positive",
+      "Zero",
+      "Infinite"
+    ],
+    "explanation": "By sign convention, the focal length of a concave mirror is negative.",
+    "difficulty": "medium",
+    "question_text": "The focal length of a concave mirror is:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "0623afb4-7fb9-4def-af0d-1dd725c2255d",
+    "options": [
+      "Sound propagation",
+      "Pressure in fluids in motion",
+      "Heat transfer",
+      "Electric fields"
+    ],
+    "explanation": "Bernoulli's principle describes pressure changes in moving fluids.",
+    "difficulty": "medium",
+    "question_text": "Bernoulli's principle relates to:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "7a6a9088-94f8-4719-a9cc-20e7dd223579",
+    "options": [
+      "Electron",
+      "Photon",
+      "Neutron",
+      "Proton"
+    ],
+    "explanation": "A photon is the quantum (packet) of electromagnetic radiation.",
+    "difficulty": "easy",
+    "question_text": "The quantum of light energy is called a:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "3365d557-a9ed-42fc-a4ec-0dc649545ca4",
+    "options": [
+      "Weight of the object",
+      "Weight of fluid displaced",
+      "Volume of object",
+      "Density of object"
+    ],
+    "explanation": "Buoyant force = weight of fluid displaced by the object.",
+    "difficulty": "easy",
+    "question_text": "Archimedes' principle states that the buoyant force equals:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "69b95183-7d9a-4b25-84d1-5fe0847e6506",
+    "options": [
+      "v1 = (m2 * v2) / m1",
+      "v1 = m1 / (m2 * v2)",
+      "v1 = (m1 * v2) / m2",
+      "v1 = m1 * m2 * v2"
+    ],
+    "explanation": "By conservation of momentum, m1v1 + m2v2 = 0, so magnitude is m1v1 = m2v2. v1 = (m2 * v2) / m1.",
+    "difficulty": "easy",
+    "question_text": "What is the formula for the recoil velocity of a rifle?",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "424075f5-ba9a-43f7-b26c-03c35ba7d0d2",
+    "options": [
+      "F = qvBsin(theta)",
+      "F = ILBsin(theta)",
+      "F = I^2Rt",
+      "F = BvL"
+    ],
+    "explanation": "The force on a wire of length L carrying current I in a magnetic field B is F = ILBsin(theta).",
+    "difficulty": "easy",
+    "question_text": "The magnetic force on a current-carrying conductor is given by which formula?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "a42116f3-4456-42f9-b304-edc27f905cd4",
+    "options": [
+      "2f",
+      "3f",
+      "2.5f",
+      "4f"
+    ],
+    "explanation": "The minimum distance between an object and its real image formed by a convex lens is 4f, which occurs when the object is placed at 2f.",
+    "difficulty": "medium",
+    "question_text": "The distance between the object and its convex lenz image is __",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "b0a189df-08b1-4615-9dc8-f05888588c56",
+    "options": [
+      "Parabola",
+      "Straight",
+      "Circle",
+      "Hyperbola"
+    ],
+    "explanation": "A projectile moves under the influence of gravity alone, creating a parabolic trajectory.",
+    "difficulty": "easy",
+    "question_text": "The path of projectile motion is almost_",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "25aae856-b5a4-4107-a7d3-37ec16043c3e",
+    "options": [
+      "S = v/t",
+      "S = vt",
+      "S = t/v",
+      "S = 1/2 vt"
+    ],
+    "explanation": "For constant speed, distance is the product of speed and time: S = vt.",
+    "difficulty": "easy",
+    "question_text": "If a car travels at a constant speed 'v' for a time 't', what is the distance 'S' covered?",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "d1ff4efd-991b-4146-8030-13988e337647",
+    "options": [
+      "Frequency",
+      "Amplitude",
+      "Wavelength",
+      "All of these"
+    ],
+    "explanation": "The color of light is fundamentally determined by its frequency, which remains constant across different mediums.",
+    "difficulty": "medium",
+    "question_text": "Colour of light is determined by",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "1198ac5a-ae57-42b2-86c7-4ea8e95a8260",
+    "options": [
+      "2 cm",
+      "3 cm",
+      "4 cm",
+      "1 cm"
+    ],
+    "explanation": "Magnification m = 3. For a virtual erect image, v = -3u. Using lens formula 1/f = 1/v - 1/u => 1/1.5 = -1/3u - 1/u = -4/3u (using sign convention). Distance is 1 cm.",
+    "difficulty": "hard",
+    "question_text": "The focal length of lens is 1.5 cm an erect image is formed 3 times larger. The object distance is",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "e3954b2b-eb9d-47ea-83b3-8b34d542e8ff",
+    "options": [
+      "9.8 m/sec^2",
+      "1.4 m/sec^2",
+      "2.4 m/sec^2",
+      "4.9 m/sec^2"
+    ],
+    "explanation": "g' = g(R/(R+h))^2. For h=R, g' = g/4 = 9.8/4 = 2.45 m/s^2.",
+    "difficulty": "medium",
+    "question_text": "On surface of earth value of g is 9.8 m/sec^2. The value of \"g\" at a distance equal to radius of earth, above the surface of earth is.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "0ccf8fe0-d948-4ee9-ba3a-38b8e96d16a1",
+    "options": [
+      "Self - Induction",
+      "DC Voltage",
+      "AC generator",
+      "Mutual induction"
+    ],
+    "explanation": "Transformers operate on the principle of mutual induction between primary and secondary coils.",
+    "difficulty": "easy",
+    "question_text": "A transformer works on the principle of",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "a3a4669a-aa62-4b11-ba78-ddb9ecd54596",
+    "options": [
+      "Sound wave",
+      "Light waves",
+      "Radio waves",
+      "None of these"
+    ],
+    "explanation": "Sound waves (such as sonar) travel efficiently through water, whereas electromagnetic waves do not.",
+    "difficulty": "easy",
+    "question_text": "Communication in water is done by",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "68e47e11-3790-411d-a4ba-99b19e78aba3",
+    "options": [
+      "Power",
+      "Current",
+      "Number of turns",
+      "Voltage"
+    ],
+    "explanation": "Efficiency = Output Power / Input Power. For 100% efficiency, these two powers must be equal.",
+    "difficulty": "easy",
+    "question_text": "For 100% efficiency which two parameter of transformer should be equal.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "ba9b18b3-54df-4e62-9f95-33fffcb0e61b",
+    "options": [
+      "4",
+      "-4",
+      "-1/3",
+      "6"
+    ],
+    "explanation": "The dot product must be 0. A.B = (2)(3) + (3)(2) + (-2)(a) = 6 + 6 - 2a = 0. 12 = 2a => a = 6.",
+    "difficulty": "medium",
+    "question_text": "If A = 2i + 3j - 2k, B = 3i + 2j + ak when both A & B are Perpendicular to one another Compute \"a\"",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "8f47065f-025e-426a-9c4a-6c0ea5f51f07",
+    "options": [
+      "Distance",
+      "acceleration",
+      "velocity",
+      "momentum"
+    ],
+    "explanation": "The integral of velocity with respect to time (area under the curve) is the distance traveled.",
+    "difficulty": "easy",
+    "question_text": "The area under a curve in velocity time is graph represents the",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "77ea2bfb-a7db-4974-a84e-52c262ac6d36",
+    "options": [
+      "lambda/4",
+      "lambda/2",
+      "lambda/8",
+      "2 lambda"
+    ],
+    "explanation": "In a standing wave, the distance between consecutive nodes or antinodes is half a wavelength.",
+    "difficulty": "easy",
+    "question_text": "The distance between two adjacent antinodes is",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "62909a5f-0cfe-4710-b3d2-a61be9de5861",
+    "options": [
+      "300 m",
+      "3m",
+      "30m",
+      "0.3m"
+    ],
+    "explanation": "v = f * lambda. lambda = v / f = 1200 / 400 = 3 meters.",
+    "difficulty": "easy",
+    "question_text": "Speed of wave is 1200 m/s, it produces 400 cycles / sec, the wave length of the wave is",
+    "correct_answer_index": 1
+  }
+]

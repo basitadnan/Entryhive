@@ -1,0 +1,2470 @@
+[
+  {
+    "id": "fast_english_1_dkrcs",
+    "options": [
+      "A. toll: road",
+      "B. guard: border",
+      "C. gate: fence",
+      "D. bridge: river",
+      "E. key: lock"
+    ],
+    "explanation": "A DOOR is a movable barrier that allows passage through a WALL. Similarly, a GATE is a movable barrier that allows passage through a FENCE.",
+    "subject": "english",
+    "question_text": "DOOR: WALL",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_2_d6way",
+    "options": [
+      "A. carnivore: vegetables",
+      "B. herbivore: plants",
+      "C. vegetarian: vitamins",
+      "D. botanist: herbs",
+      "E. pollinator: plants"
+    ],
+    "explanation": "A CARNIVORE is an animal whose diet consists primarily of MEAT. Likewise, a HERBIVORE is an animal whose diet consists primarily of PLANTS.",
+    "subject": "english",
+    "question_text": "CARNIVORE: MEAT",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_3_3c8me",
+    "options": [
+      "A. agreement",
+      "B. rapidity",
+      "C. welcome",
+      "D. approach",
+      "E. incompetence"
+    ],
+    "explanation": "The word ACCESS means the ability or right to approach or enter a place. Therefore, 'approach' is the closest synonym.",
+    "subject": "english",
+    "question_text": "Synonym of ACCESS",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_4_92gtt",
+    "options": [
+      "A. generous",
+      "B. overcritical",
+      "C. famous",
+      "D. dull",
+      "E. cautious"
+    ],
+    "explanation": "PRUDENT means acting with or showing care and thought for the future. This is best synonymous with 'cautious'.",
+    "subject": "english",
+    "question_text": "Synonym of PRUDENT",
+    "correct_answer_index": 4
+  },
+  {
+    "id": "fast_english_5_3dva0",
+    "options": [
+      "A. worthy",
+      "B. humorous",
+      "C. dull",
+      "D. lengthy",
+      "E. realistic"
+    ],
+    "explanation": "ANIMATED means full of life or spirit; lively. The most direct antonym for something lively is 'dull' or lacking in excitement.",
+    "subject": "english",
+    "question_text": "Antonym of ANIMATED",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_6_xlpsf",
+    "options": [
+      "A. clown",
+      "B. hero",
+      "C. ectomorph",
+      "D. neurotic",
+      "E. introvert"
+    ],
+    "explanation": "An EXTROVERT is an outgoing, overtly expressive person. Its direct opposite, a person who is typically shy and reserved, is an 'introvert'.",
+    "subject": "english",
+    "question_text": "Antonym of EXTROVERT",
+    "correct_answer_index": 4
+  },
+  {
+    "id": "fast_english_7_io0qs",
+    "options": [
+      "A. excited...decision",
+      "B. reluctant...choice",
+      "C. frustrated...plan",
+      "D. happy...friendship",
+      "E. depressed...bond"
+    ],
+    "explanation": "The context implies initial hesitation followed by acceptance of individual paths. 'Reluctant' (hesitant) and 'choice' (individual decision) fit this meaning perfectly.",
+    "subject": "english",
+    "question_text": "The four close friends decided to attend different colleges. At first, they were _____ to leave each other, but eventually they were glad they each made their own _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_8_lcl9g",
+    "options": [
+      "A. patient",
+      "B. contemporary",
+      "C. diverse",
+      "D. liberal",
+      "E. forgiving"
+    ],
+    "explanation": "Samuel is traditional, so Raphael favors the opposite: a more modern or current approach. 'Contemporary' means belonging to or occurring in the present, which contrasts with traditional.",
+    "subject": "english",
+    "question_text": "Samuel is loyal to his roots (he always has been), and is resistant to change. Raphael, however, favors a less traditional, more _____ approach.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_9_h7jbv",
+    "options": [
+      "A. by",
+      "B. into",
+      "C. with",
+      "D. for",
+      "E. across"
+    ],
+    "explanation": "When something is transformed from one form into another, the preposition 'into' is used to indicate the result of the change.",
+    "subject": "english",
+    "question_text": "The play was made _____ a movie.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_10_pvxtb",
+    "options": [
+      "A. behind",
+      "B. after",
+      "C. before",
+      "D. for",
+      "E. in front of"
+    ],
+    "explanation": "To be 'behind' someone or something means to support them. In this context, the nation was in support of the president.",
+    "subject": "english",
+    "question_text": "The whole nation was _____ the president.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_11_c9bt8",
+    "options": [
+      "Indomitable",
+      "Infamous",
+      "Furtive",
+      "Staunch"
+    ],
+    "explanation": "Nefarious means wicked or criminal. Infamous means well known for some bad quality or deed. They both imply a negative reputation due to bad acts, making them similar.",
+    "subject": "english",
+    "question_text": "Nefarious is most similar in meaning to",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_12_m2sx5",
+    "options": [
+      "Simpering",
+      "Comely",
+      "Pastoral",
+      "Credible"
+    ],
+    "explanation": "Plausible means seeming reasonable or probable. Credible means able to be believed or convincing. They are close in meaning.",
+    "subject": "english",
+    "question_text": "Plausible is most similar in meaning to",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_13_w6pnc",
+    "options": [
+      "Exaggerated",
+      "Combined",
+      "Fluctuating",
+      "Continuous"
+    ],
+    "explanation": "Sporadic means occurring at irregular intervals; scattered or isolated. Continuous means forming an unbroken whole; without interruption. Thus, 'continuous' is the most direct opposite.",
+    "subject": "english",
+    "question_text": "Sporadic is most nearly opposite in meaning to",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_14_g1gwi",
+    "options": [
+      "Uninformed",
+      "Treacherous",
+      "Extensive",
+      "Elongated"
+    ],
+    "explanation": "Erudite means having or showing great knowledge or learning. Uninformed means lacking knowledge. They are direct opposites.",
+    "subject": "english",
+    "question_text": "Erudite is most nearly opposite in meaning to",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_15_bn0zg",
+    "options": [
+      "virtual: truth",
+      "marginal: knowledge",
+      "abnormal: value",
+      "cardinal: order"
+    ],
+    "explanation": "CHRONOLOGICAL means relating to the order of time. CARDINAL can refer to fundamental or principal aspects of something, including ordering principles (e.g., cardinal numbers for quantity, though ordinal numbers are for sequence). 'Cardinal order' implies a fundamental way of ordering.",
+    "subject": "english",
+    "question_text": "CHRONOLOGICAL: TIME",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_16_hpad7",
+    "options": [
+      "artist: imaginative",
+      "saint: notorious",
+      "cynic: gullible",
+      "hothead: prudent"
+    ],
+    "explanation": "An AUTHOR is characterized by being LITERATE (able to read and write). Similarly, an ARTIST is characterized by being IMAGINATIVE.",
+    "subject": "english",
+    "question_text": "AUTHOR: LITERATE",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_17_co77b",
+    "options": [
+      "with",
+      "on",
+      "without",
+      "at"
+    ],
+    "explanation": "The correct idiomatic expression is 'finished with it', meaning to have completed using something.",
+    "subject": "english",
+    "question_text": "Put the milk back in the fridge when you've finished ______ it.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_18_2zxde",
+    "options": [
+      "anticipated",
+      "lamented",
+      "hindered",
+      "resolved"
+    ],
+    "explanation": "To 'resolve' means to decide firmly on a course of action. In this context, Anaya made a firm decision about going back to school to achieve her goal.",
+    "subject": "english",
+    "question_text": "To get the promotion she wanted, Anaya _______ that it was best to go back to school to get her master's degree as soon as she could.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_19_v6ed5",
+    "options": [
+      "He asked his servant why he was being so lazy that day.",
+      "He asked his servant why was he so lazy that day.",
+      "He asked his servant why he was so lazy that day.",
+      "He asked his servant why he had been so lazy that day."
+    ],
+    "explanation": "In converting direct to indirect speech, 'today' changes to 'that day', and the question structure 'Why are you...' changes to an assertive clause 'why he was...'. Option (a) uses 'was being', which is a continuous form, implying a temporary state, and is a common conversion for 'are you'. Option (c) 'why he was so lazy that day' is also a grammatically plausible conversion. The handwritten mark points to option (a).",
+    "subject": "english",
+    "question_text": "He said to his servant, \"Why are you so lazy today?\" INDIRECT:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_20_rft7p",
+    "options": [
+      "This issue has been brought up by the employees during the meeting.",
+      "This issue is brought up by the employees during the meeting.",
+      "This issue was brought up by the employees during the meeting.",
+      "This issue was being brought up by the employees during the meeting."
+    ],
+    "explanation": "The active sentence is in the simple past tense ('brought up'). To convert to passive voice in simple past, we use 'was/were' + past participle. 'This issue' is singular, so it becomes 'This issue was brought up by the employees during the meeting.'",
+    "subject": "english",
+    "question_text": "Active: The employees brought up this issue during the meeting. Passive:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_21_o8epr",
+    "options": [
+      "He'd rather died than let me think he needed help.",
+      "He'd rather to die than let me think he needed help.",
+      "He'd rather die than to let me think he needed help.",
+      "He'd rather die than let me think he needed help."
+    ],
+    "explanation": "The correct structure for 'would rather' is 'would rather + base form of verb + than + base form of verb'. Option (d) follows this structure correctly: 'die' and 'let' are both base forms.",
+    "subject": "english",
+    "question_text": "DIRECTIONS: Choose the correct sentence of the following.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_22_xw5ln",
+    "options": [
+      "conjunction",
+      "preposition",
+      "pronoun",
+      "adverb"
+    ],
+    "explanation": "The word 'hungry' is an adjective, describing the state of 'we'. However, 'adjective' is not an option. The handwritten mark points to 'adverb'. While 'very' in 'very hungry' is an adverb, 'hungry' itself is an adjective. Assuming the handwritten mark implies the intended answer, despite grammatical inaccuracy for 'hungry' itself.",
+    "subject": "english",
+    "question_text": "We got back home late at night, but we didn't go to sleep immediately. We were very hungry. (underlined word is \"hungry\")",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_23_reccw",
+    "options": [
+      "(a) devious",
+      "(b) intolerant",
+      "(c) Irrevocable",
+      "(d) indefensible",
+      "(e) Boisterous"
+    ],
+    "explanation": "The phrase 'deliberate disregard of her commands' suggests a wrongdoing that cannot be justified. 'Indefensible' means not able to be defended or justified, which fits the context perfectly.",
+    "subject": "english",
+    "question_text": "Miss Watson termed Hock's behavior __________ because in her opinion noting could excuse his deliberate disregard of her commands.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_25_zg0i9",
+    "options": [
+      "(a) innocuous",
+      "(b) Digressive",
+      "(c) Derogatory",
+      "(d) Persistent",
+      "(e) Enigmatic"
+    ],
+    "explanation": "The instruction 'try not to stray from your subject' indicates that the remarks are off-topic. 'Digressive' means tending to depart from the main subject, which matches the context.",
+    "subject": "english",
+    "question_text": "Your __________ remarks spoil the effect of your speech; try not to stray from your subject.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_26_zdsn0",
+    "options": [
+      "(a) Artist : museum",
+      "(b) Cashier : check",
+      "(c) Waiter : restaurant",
+      "(d) Borrower : loan",
+      "(e) Mourner : funeral"
+    ],
+    "explanation": "A Teller works at a Bank. Similarly, a Waiter works at a Restaurant.",
+    "subject": "english",
+    "question_text": "TELLER : BANK ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_27_kss4m",
+    "options": [
+      "(a) round : boxing",
+      "(b) puck : hockey",
+      "(c) touchdown : football",
+      "(d) serve : tennis",
+      "(e) outing : hiking"
+    ],
+    "explanation": "An Inning is a distinct division or segment of a Baseball game. Similarly, a Round is a distinct division or segment of a Boxing match.",
+    "subject": "english",
+    "question_text": "INNING : BASEBALL ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_28_c4o4q",
+    "options": [
+      "(a) ounce : weight",
+      "(b) fathom : volume",
+      "(c) mass : energy",
+      "(d) time : length",
+      "(e) light : heat"
+    ],
+    "explanation": "A Degree is a unit of measurement for Temperature. Similarly, an Ounce is a unit of measurement for Weight.",
+    "subject": "english",
+    "question_text": "DEGREE : TEMPERATURE ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_29_1a11n",
+    "options": [
+      "(a) peg : ukelele",
+      "(b) string : banjo",
+      "(c) pipe : organ",
+      "(d) bow : violin",
+      "(e) head : tambourine"
+    ],
+    "explanation": "A Pick is an object used to play a Guitar. Similarly, a Bow is an object used to play a Violin.",
+    "subject": "english",
+    "question_text": "PICK : GUITAR ::",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_30_dy70p",
+    "options": [
+      "(a) Courageous",
+      "(b) Puzzle",
+      "(c) Bold",
+      "(d) Trainee"
+    ],
+    "explanation": "Nervous means easily agitated or alarmed; apprehensive. 'Bold' means confident and courageous, which is an antonym to nervous.",
+    "subject": "english",
+    "question_text": "NERVOUS:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_31_da88h",
+    "options": [
+      "(a) Renowned",
+      "(b) Invincible",
+      "(c) Inactive",
+      "(d) Fashionable"
+    ],
+    "explanation": "Notorious means famous or well known, typically for some bad quality or deed. 'Renowned' means famous or celebrated for something good, making it an antonym that contrasts positive and negative fame.",
+    "subject": "english",
+    "question_text": "NOTORIOUS:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_32_y14od",
+    "options": [
+      "(a) Patrolling",
+      "(b) Daily",
+      "(c) Harsh",
+      "(d) Marauding"
+    ],
+    "explanation": "Nocturnal means active at night. While the direct antonym is 'diurnal' (active during the day), 'Daily' is the best available option implying activity that happens during the day, contrasting with activity restricted to night.",
+    "subject": "english",
+    "question_text": "NOCTURNAL:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_33_blch8",
+    "options": [
+      "(a) Narrow",
+      "(b) Straight",
+      "(c) Inconceivable",
+      "(d) unreliable"
+    ],
+    "explanation": "Incorrigible means (of a person or their tendencies) not able to be corrected, improved, or reformed. While not a direct synonym, an incorrigible person might be considered 'unreliable' due to their inability to change undesirable behaviors. This is the closest option among the given choices.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Incorrigible",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_34_myinq",
+    "options": [
+      "(a) Clever",
+      "(b) Stimulating",
+      "(c) Native",
+      "(d) Gullible"
+    ],
+    "explanation": "Ingenuous means (of a person or action) innocent and unsuspecting. 'Gullible' means easily persuaded to believe something; credulous, which aligns with the unsuspecting nature of an ingenuous person.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Ingenuous",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_35_ua5kc",
+    "options": [
+      "(a) who you were taught grammar?",
+      "(b) By whom were taught grammar?",
+      "(c) By whom were you taught grammar?",
+      "(d) By whom are you taught grammar?"
+    ],
+    "explanation": "To change the active voice question 'Who taught you grammar?' to passive voice, 'Who' becomes 'By whom', 'you' becomes the subject, and the past simple tense 'taught' becomes 'were taught'.",
+    "subject": "english",
+    "question_text": "Who taught you grammar?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_36_3ihos",
+    "options": [
+      "(a) Embarrassment",
+      "(b) Deterrent",
+      "(c) Connoisseur",
+      "(d) Gourmat"
+    ],
+    "explanation": "The correct spelling is 'Gourmet'. 'Embarrassment', 'Deterrent', and 'Connoisseur' are spelled correctly.",
+    "subject": "english",
+    "question_text": "Point out the word with incorrect spelling",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_37_44ukc",
+    "options": [
+      "(a) The",
+      "(b) Them",
+      "(c) They are",
+      "(d) Their"
+    ],
+    "explanation": "The phrase 'their decaying' functions as a noun phrase referring to 'the process of their decaying', making it grammatically correct to complete 'One property of radioisotopes is...'. 'They are decaying' would require 'that' (i.e., 'One property is that they are decaying').",
+    "subject": "english",
+    "question_text": "One property of radioisotopes is __________ decaying in half-lives over during long period of time.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_38_j79or",
+    "options": [
+      "(a) When the real power",
+      "(b) Who has the real power",
+      "(c) Whom has the real power",
+      "(d) Who the real power"
+    ],
+    "explanation": "The blank requires a relative pronoun to introduce a clause describing the Prime Minister. 'Who' is the correct subject pronoun to refer to 'Prime Minister' and act as the subject of the verb 'has'.",
+    "subject": "english",
+    "question_text": "In a parliamentary system, it is not the monarch but the Prime Minister __________.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_40_wjvwv",
+    "options": [
+      "(a) Does not sell",
+      "(b) Do not sell",
+      "(c) Did not sold",
+      "(d) Were not sell"
+    ],
+    "explanation": "For a plural subject 'They' in the simple present tense negative, the correct auxiliary verb is 'do not' followed by the base form of the main verb 'sell'.",
+    "subject": "english",
+    "question_text": "They __________ fresh grape juice here.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_41_7qwfq",
+    "options": [
+      "(a) Own",
+      "(b) Owing",
+      "(c) Owns",
+      "(d) Is owning"
+    ],
+    "explanation": "'Who' is treated as singular for subject-verb agreement in questions like this. Therefore, the present simple form 'owns' is correct.",
+    "subject": "english",
+    "question_text": "Who __________ this Umbrella.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_42_npc48",
+    "options": [
+      "(a) Mary had a little lamb",
+      "(b) Mary did not have a little lamb",
+      "(c) Mary had not had a little lamb",
+      "(d) Mary does not have a little lamb"
+    ],
+    "explanation": "The original sentence 'Mary had a little lamb' is in the past simple tense. To form a negative sentence in the past simple, we use 'did not' followed by the base form of the verb, which is 'have' for possession.",
+    "subject": "english",
+    "question_text": "Mary had a little lamb",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_43_3q65f",
+    "options": [
+      "(a) Objective",
+      "(b) Goad",
+      "(c) Stimulation",
+      "(d) Beginning"
+    ],
+    "explanation": "Incentive is a thing that motivates or encourages one to do something. A 'goad' is a thing that stimulates or drives someone to act, which is a close synonym for an incentive in the context of prompting action.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Incentive",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_44_ncpk3",
+    "options": [
+      "(a) Disorderly",
+      "(b) Insignificant",
+      "(c) Subsequent",
+      "(d) Insufficient"
+    ],
+    "explanation": "Inconsequential means not important or significant. 'Insignificant' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Inconsequential",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_45_7lu2z",
+    "options": [
+      "(a) Misogynist",
+      "(b) Philogynist",
+      "(c) Philistines",
+      "(d) Acrophobe"
+    ],
+    "explanation": "A 'Misogynist' is a person who dislikes, despises, or is strongly prejudiced against women.",
+    "subject": "english",
+    "question_text": "The one who hates women is called a __________.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_46_kq3dz",
+    "options": [
+      "(a) Iniquitous",
+      "(b) Conspicuous",
+      "(c) him",
+      "(d) Mischievous"
+    ],
+    "explanation": "The blank requires an object pronoun to refer back to 'Captain Aftab'. 'Him' is the correct pronoun.",
+    "subject": "english",
+    "question_text": "Moby Dick is-a mythical account of evil and revenge as shown by Captain Aftab's pursuit of the whale that had wounded __________ earlier in life.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_47_wgbs8",
+    "options": [
+      "(a) Beneath them",
+      "(b) Beneath their",
+      "(c) Beneath its",
+      "(d) Beneath they"
+    ],
+    "explanation": "Assuming the blank refers to the location of the mantle relative to the singular 'continent', 'Beneath its' is the most appropriate phrase, referring to the continent's crust or surface, though the sentence structure is awkward.",
+    "subject": "english",
+    "question_text": "Since the earth's crust is much thicker under the continent equipment have to be capable of drilling through 100,000 feet of rocks to investigate the mantle",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_50_lgsmw",
+    "options": [
+      "(a) Hurry",
+      "(b) Hurries",
+      "(c) Hurriedly",
+      "(d) Is hurry"
+    ],
+    "explanation": "For a singular third-person subject ('The boy') in the simple present tense, the verb takes an '-es' ending.",
+    "subject": "english",
+    "question_text": "The boy __________ home after school.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_51_k5gam",
+    "options": [
+      "(a) He does not light the fire at 6.00",
+      "(b) He do not light the fire at 6.00",
+      "(c) He do not light the fire at 6:00",
+      "(d) He did not light the fire at 6.00"
+    ],
+    "explanation": "The question asks to identify the correct negative sentence, and option (a) is identical to the provided (and correct) negative sentence. Options (b) and (c) use 'do' instead of 'does' for a singular subject, and (d) changes the tense.",
+    "subject": "english",
+    "question_text": "He does not light the fire at 6.00",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_52_2ychn",
+    "options": [
+      "(a) Sloth",
+      "(b) Latitude",
+      "(c) Poverty",
+      "(d) Aptitude"
+    ],
+    "explanation": "Indolence means avoidance of activity or exertion; laziness. 'Sloth' means reluctance to work or make an effort; laziness, making it a direct synonym.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Indolence",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_53_x8sh2",
+    "options": [
+      "(a) Not capable",
+      "(b) Not dangerous",
+      "(c) Not eager",
+      "(d) Not Frank"
+    ],
+    "explanation": "Innocuous means not harmful or offensive. 'Not dangerous' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Innocuous",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_54_x7pyu",
+    "options": [
+      "(a) It was expected by Romans to conquer Carthage",
+      "(b) It was expected by Romans that they would conquer Carthage",
+      "(c) It was expected by Romans that they could conquer Carthage",
+      "(d) Romans expected that they would conquer Carthage"
+    ],
+    "explanation": "Option (d) is a grammatically correct and direct rephrasing of the original sentence, clearly expressing the Romans' expectation using 'that they would conquer'.",
+    "subject": "english",
+    "question_text": "Romans expected to conquer Carthage.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_55_khxn6",
+    "options": [
+      "(a) It is him",
+      "(b) It is he",
+      "(c) It is his",
+      "(d) It is himself"
+    ],
+    "explanation": "After a form of the verb 'to be' (e.g., 'is'), a pronoun should be in the subjective case (e.g., 'he'), not the objective case ('him').",
+    "subject": "english",
+    "question_text": "According to the Christian Bible, When the disciples saw Jesus after he had risen from the dead, they said. __________",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_56_1h76g",
+    "options": [
+      "(a) A Business",
+      "(b) Business",
+      "(c) Businesses",
+      "(d) One Business"
+    ],
+    "explanation": "When referring to the general field or industry, the uncountable noun 'business' is used. 'A business' or 'businesses' refer to specific companies.",
+    "subject": "english",
+    "question_text": "It is generally believed that an MBA degree is good preparation for a career in __________.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_57_tjnlm",
+    "options": [
+      "(a) Like",
+      "(b) From",
+      "(c) at",
+      "(d) For"
+    ],
+    "explanation": "'Looks like' is an idiom meaning to resemble in appearance. 'John looks like his father' means he resembles his father.",
+    "subject": "english",
+    "question_text": "John Looks __________ his father.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_59_89v07",
+    "options": [
+      "(a) Broadcast",
+      "(b) Broad casting",
+      "(c) Broadcasted",
+      "(d) Not Broad cast"
+    ],
+    "explanation": "The verb 'broadcast' is irregular; its past tense and past participle forms are also 'broadcast', not 'broadcasted'.",
+    "subject": "english",
+    "question_text": "They __________ an appeal for money.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_60_i85ez",
+    "options": [
+      "(a) To live within his income",
+      "(b) To buy luxuries of life",
+      "(c) To make money",
+      "(d) To begin a different mode of life"
+    ],
+    "explanation": "The idiom 'to make both ends meet' means to earn just enough money to live on or to manage one's finances such that income equals expenses.",
+    "subject": "english",
+    "question_text": "The cost of living has increased so much that he finds it difficult to make both ends meet. The underlined idiom means __________",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_61_6wan1",
+    "options": [
+      "A. ambulance : transportation",
+      "B. alcohol : antiseptic",
+      "C. cast : fracture",
+      "D. transfusion : blood"
+    ],
+    "explanation": "A Bandage is used as a treatment or support for a Laceration. Similarly, a Cast is used as a treatment or support for a Fracture.",
+    "subject": "english",
+    "question_text": "BANDAGE : LACERATION ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_62_mka15",
+    "options": [
+      "A. thimble : finger",
+      "B. crutch : leg",
+      "C. knob : hand",
+      "D. belt : waist"
+    ],
+    "explanation": "A Pedal is typically operated by a Foot. Similarly, a Knob is typically operated by a Hand.",
+    "subject": "english",
+    "question_text": "PEDAL : FOOT ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_63_7zqo4",
+    "options": [
+      "A. abnormal",
+      "B. indifference",
+      "C. conjoined",
+      "D. firm dislike"
+    ],
+    "explanation": "Antipathy means a deep-seated feeling of aversion or a strong dislike. 'Firm dislike' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of ANTIPATHY",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_64_eh1cm",
+    "options": [
+      "A. to put in danger",
+      "B. to show composure",
+      "C. to improve",
+      "D. to produce"
+    ],
+    "explanation": "Engender means to cause or give rise to (a feeling, situation, or condition); to produce. 'To produce' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of ENGENDER",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_65_torrd",
+    "options": [
+      "A. linchpin",
+      "B. benchmark",
+      "C. watershed",
+      "D. anomaly"
+    ],
+    "explanation": "Norm refers to something that is usual, typical, or standard. An 'anomaly' is something that deviates from what is standard, normal, or expected, making it a direct antonym.",
+    "subject": "english",
+    "question_text": "Antonym of NORM",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_66_ic41c",
+    "options": [
+      "A. purloin",
+      "B. gambol",
+      "C. speculate",
+      "D. release"
+    ],
+    "explanation": "Apprehend means to arrest (someone) for a crime. 'Release' means to allow to escape from confinement, which is an antonym.",
+    "subject": "english",
+    "question_text": "Antonym of APPREHEND",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_67_8duwi",
+    "options": [
+      "A. investigated",
+      "B. studied",
+      "C. attempted",
+      "D. mastered"
+    ],
+    "explanation": "To be ready to advance to the 'next' level of study, one must have acquired complete knowledge or skill in, or 'mastered', the current level.",
+    "subject": "english",
+    "question_text": "After having __________ their current level of study, students are typically ready to move on to the next one.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_68_ezbiw",
+    "options": [
+      "A. look after... to",
+      "B. look after... reject",
+      "C. monitor... accepted",
+      "D. watch... declined"
+    ],
+    "explanation": "'Look after' means to take care of, which fits caring for children. If a babysitter was already arranged, the offer would be 'rejected'. This pair fits the context perfectly.",
+    "subject": "english",
+    "question_text": "My friend generously offered to __________ my children while I was out, but because we already had a babysitter, I __________ the offer.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_69_vn6np",
+    "options": [
+      "A. in front of",
+      "B. to",
+      "C. before",
+      "D. for"
+    ],
+    "explanation": "'Appear before' is the standard idiom meaning to present oneself to an authority figure, especially in a legal context.",
+    "subject": "english",
+    "question_text": "He will appear __________ the magistrate.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_70_inh2q",
+    "options": [
+      "A. into",
+      "B. in",
+      "C. through",
+      "D. at"
+    ],
+    "explanation": "'Move into' a field or area of work/study means to begin working or specializing in that area. 'Move into Marketing' is an appropriate idiomatic expression.",
+    "subject": "english",
+    "question_text": "I would like to move __________ Marketing.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_71_1ie9l",
+    "options": [
+      "A. ruler : centimetre",
+      "B. sundial : shadow",
+      "C. are : ellipse",
+      "D. product : shelf life"
+    ],
+    "explanation": "A Minute is a unit of measurement of time, typically measured by a Clock. Similarly, a Centimetre is a unit of measurement of length, typically measured by a Ruler.",
+    "subject": "english",
+    "question_text": "CLOCK : MINUTE ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_72_lfhex",
+    "options": [
+      "A. doctor : surgeon",
+      "B. admiral : sailor",
+      "C. judge : defendant",
+      "D. tutor : student"
+    ],
+    "explanation": "A Lawyer provides professional services and advice to a Client. Similarly, a Tutor provides educational services and guidance to a Student.",
+    "subject": "english",
+    "question_text": "LAWYER : CLIENT ::",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_73_52c3v",
+    "options": [
+      "A. disappointment",
+      "B. turning point",
+      "C. complete failure",
+      "D. celebration"
+    ],
+    "explanation": "Assuming the word is 'Fiasco' (with a typo 'Flaseo'), it means a complete failure, especially a humiliating or ludicrous one. 'Complete failure' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of FLASCO",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_74_912ik",
+    "options": [
+      "A. increment",
+      "B. salary",
+      "C. commission",
+      "D. gift"
+    ],
+    "explanation": "A Stipend is a fixed regular sum paid as a salary or allowance. 'Salary' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of STIPEND",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_75_3tdfa",
+    "options": [
+      "A. precipitate",
+      "B. hallow",
+      "C. obfuscate",
+      "D. defer"
+    ],
+    "explanation": "Illuminate means to light up or to make clear/explain. 'Obfuscate' means to make obscure, unclear, or unintelligible, making it an antonym to the 'clarify' sense of illuminate.",
+    "subject": "english",
+    "question_text": "Antonym of ILLUMINATE",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_76_mrroo",
+    "options": [
+      "A. rotund",
+      "B. pervasive",
+      "C. chronic",
+      "D. jaundiced"
+    ],
+    "explanation": "In a medical context, 'acute' refers to a disease or condition of short duration but typically severe. Its direct antonym is 'chronic', which means persisting for a long time or constantly recurring.",
+    "subject": "english",
+    "question_text": "Antonym of ACUTE",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_77_fb4xs",
+    "options": [
+      "A. vulnerable",
+      "B. ecstatic",
+      "C. fortunate",
+      "D. uncommon"
+    ],
+    "explanation": "Finding an available parking spot in a crowded lot is often a source of great relief and joy, described as 'ecstatic' (feeling overwhelming happiness). 'Fortunate' also fits the situation, but 'ecstatic' describes the stronger emotional reaction.",
+    "subject": "english",
+    "question_text": "There are many cars in the theatre parking lot. When Darren found an available parking spot, he felt __________.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_78_5tkoi",
+    "options": [
+      "A. decisive... wanted",
+      "B. able... listed",
+      "C. humble... assigned",
+      "D. capable... requested"
+    ],
+    "explanation": "Employees who 'learned quickly and were able to do most of the tasks' are best described as 'capable'. The tasks given by a manager are often 'requested' or assigned.",
+    "subject": "english",
+    "question_text": "Samuel's employees were quite __________; they learned quickly and were able to do most of the tasks he __________",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_79_w20ll",
+    "options": [
+      "A. at",
+      "B. in",
+      "C. before",
+      "D. to"
+    ],
+    "explanation": "The correct preposition to use with 'hostile' when expressing opposition to something is 'to'.",
+    "subject": "english",
+    "question_text": "No government is hostile __________ social reforms.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_80_yhh55",
+    "options": [
+      "A. at",
+      "B. on",
+      "C. in",
+      "D. to"
+    ],
+    "explanation": "The idiomatic expression for having faith or confidence is 'trust in'.",
+    "subject": "english",
+    "question_text": "We trust __________ God.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_81_modvo",
+    "options": [
+      "A. toll : road",
+      "B. guard : border",
+      "C. gate : fence",
+      "D. bridge : river"
+    ],
+    "explanation": "A Door is an opening or component built into a Wall. Similarly, a Gate is an opening or component built into a Fence.",
+    "subject": "english",
+    "question_text": "DOOR : WALL ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_82_e69op",
+    "options": [
+      "A. carnivore : vegetables",
+      "B. herbivore : plants",
+      "C. vegetarian : vitamins",
+      "D. botanist : herbs"
+    ],
+    "explanation": "A Carnivore is an animal that eats Meat. Similarly, an Herbivore is an animal that eats Plants.",
+    "subject": "english",
+    "question_text": "CARNIVORE : MEAT ::",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_83_nuip0",
+    "options": [
+      "A. excited... decision",
+      "B. reluctant... choice",
+      "C. frustrated... plan",
+      "D. happy... friendship"
+    ],
+    "explanation": "Close friends separating for college would likely be 'reluctant' (unwilling) to leave each other. Later, they would be glad they made their own 'choice' or decision.",
+    "subject": "english",
+    "question_text": "The four close friends decided to attend different colleges. At first, they were __________ to leave each other, but eventually they were glad they each made their own __________",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_84_4xin9",
+    "options": [
+      "A. patient",
+      "B. contemporary",
+      "C. diverse",
+      "D. liberal"
+    ],
+    "explanation": "The sentence sets up a contrast: Samuel is resistant to change and traditional. Raphael is 'less traditional' and thus would likely have a more 'liberal' approach, implying openness to new ideas and a willingness to discard traditional values.",
+    "subject": "english",
+    "question_text": "Samuel is loyal to his roots (he always has been), and is resistant to change. Raphael, however a less traditional, more __________ approach.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_85_dbs19",
+    "options": [
+      "A. by",
+      "B. into",
+      "C. with",
+      "D. for"
+    ],
+    "explanation": "The phrasal verb 'made into' means to transform or convert something into something else. A play can be 'made into' a movie.",
+    "subject": "english",
+    "question_text": "They play was made __________ a movie.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_86_f5kpp",
+    "options": [
+      "A. behind",
+      "B. after",
+      "C. before",
+      "D. for"
+    ],
+    "explanation": "To be 'behind' someone, especially a leader or cause, means to support them. 'The whole nation was behind the president' means the nation supported the president.",
+    "subject": "english",
+    "question_text": "The whole nation was __________ the president.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670935_e7gnu",
+    "options": [
+      "A. toll: road",
+      "B. guard: border",
+      "C. gate: fence",
+      "D. bridge: river",
+      "E. key: lock"
+    ],
+    "explanation": "A DOOR is an opening in a WALL that allows passage. Similarly, a GATE is an opening in a FENCE that serves the same function, establishing the correct analogous relationship.",
+    "subject": "english",
+    "question_text": "DOOR: WALL",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670935_u6l5z",
+    "options": [
+      "A. carnivore: vegetables",
+      "B. herbivore: plants",
+      "C. vegetarian: vitamins",
+      "D. botanist: herbs",
+      "E. pollinator: plants"
+    ],
+    "explanation": "A CARNIVORE is an animal that eats MEAT. Following this 'eats' relationship, a HERBIVORE is an animal that primarily eats PLANTS.",
+    "subject": "english",
+    "question_text": "CARNIVORE: MEAT",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670935_v5isg",
+    "options": [
+      "A. agreement",
+      "B. rapidity",
+      "C. welcome",
+      "D. approach",
+      "E. incompetence"
+    ],
+    "explanation": "\"Access\" means the ability or right to approach or enter. \"Approach\" is the closest synonym among the options, representing the act of coming nearer or gaining entry.",
+    "subject": "english",
+    "question_text": "Synonym of ACCESS",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670935_unqkb",
+    "options": [
+      "A. generous",
+      "B. overcritical",
+      "C. famous",
+      "D. dull",
+      "E. cautious"
+    ],
+    "explanation": "\"Prudent\" means acting with careful thought for the future. \"Cautious\" is an excellent synonym as it implies carefulness to avoid potential problems or dangers.",
+    "subject": "english",
+    "question_text": "Synonym of PRUDENT",
+    "correct_answer_index": 4
+  },
+  {
+    "id": "fast_english_1783162670935_2eg6l",
+    "options": [
+      "A. worthy",
+      "B. humorous",
+      "C. dull",
+      "D. lengthy",
+      "E. realistic"
+    ],
+    "explanation": "\"Animated\" means full of life, lively, or spirited. Its direct antonym, \"dull,\" describes a lack of interest, excitement, or liveliness.",
+    "subject": "english",
+    "question_text": "Antonym of ANIMATED",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670935_ptv63",
+    "options": [
+      "A. clown",
+      "B. hero",
+      "C. ectomorph",
+      "D. neurotic",
+      "E. introvert"
+    ],
+    "explanation": "An extrovert is someone outgoing and sociable, while an introvert is reserved and reflective. Therefore, \"introvert\" is the direct opposite.",
+    "subject": "english",
+    "question_text": "Antonym of EXTROVERT",
+    "correct_answer_index": 4
+  },
+  {
+    "id": "fast_english_1783162670935_ahz3o",
+    "options": [
+      "A. excited...decision",
+      "B. reluctant...choice",
+      "C. frustrated...plan",
+      "D. happy...friendship",
+      "E. depressed...bond"
+    ],
+    "explanation": "The word \"reluctant\" fits the context of friends being unwilling or hesitant to separate. \"Choice\" accurately completes the idea of each friend making their own independent decision about attending college.",
+    "subject": "english",
+    "question_text": "The four close friends decided to attend different colleges. At first, they were _____ to leave each other, but eventually they were glad they each made their own _____.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670935_4q6tq",
+    "options": [
+      "A. patient",
+      "B. contemporary",
+      "C. diverse",
+      "D. liberal",
+      "E. forgiving"
+    ],
+    "explanation": "Since Samuel is resistant to change and loyal to his roots, Raphael's contrasting approach would be one that is modern or current. \"Contemporary\" means belonging to or occurring in the present, directly opposing a traditional mindset.",
+    "subject": "english",
+    "question_text": "Samuel is loyal to his roots (he always has been), and is resistant to change. Raphael, however, favors a less traditional, more _____ approach.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670935_wz3db",
+    "options": [
+      "A. by",
+      "B. into",
+      "C. with",
+      "D. for",
+      "E. across"
+    ],
+    "explanation": "The preposition \"into\" is used to indicate a transformation or change from one state, form, or condition to another. Here, a play is transformed \"into\" a movie.",
+    "subject": "english",
+    "question_text": "The play was made _____ a movie.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670935_bewx5",
+    "options": [
+      "A. behind",
+      "B. after",
+      "C. before",
+      "D. for",
+      "E. in front of"
+    ],
+    "explanation": "To be \"behind\" someone in this context means to support or be in agreement with them. The phrase indicates that the entire nation offered its support to the president.",
+    "subject": "english",
+    "question_text": "The whole nation was _____ the president.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_ju49i",
+    "options": [
+      "boss",
+      "chief",
+      "solo",
+      "primary",
+      "fired"
+    ],
+    "explanation": "While \"chief\" is the standard term for a Chief Financial Officer, \"boss\" can informally refer to someone in a senior leadership or management position. In this context, \"boss\" broadly implies a top financial role within the company.",
+    "subject": "english",
+    "question_text": "Yesterday, Paul was hired as the ____ financial officer of the company.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_fyz46",
+    "options": [
+      "pacify",
+      "indemnify",
+      "unify",
+      "satisfy",
+      "Crafty"
+    ],
+    "explanation": "To gratify means to please or satisfy someone's desires or needs. To \"pacify\" means to calm or soothe, which can involve satisfying demands or bringing contentment, making it a functional synonym in some contexts.",
+    "subject": "english",
+    "question_text": "Select the Synonym of the word: GRATIFY",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_bqhca",
+    "options": [
+      "injurious",
+      "uncharitable",
+      "unworthy",
+      "abominable",
+      "affable"
+    ],
+    "explanation": "An \"injurious\" crime is one that causes harm, damage, or injury. Committing an act that directly causes harm logically warrants severe punishment.",
+    "subject": "english",
+    "question_text": "Man who has committed such a/an ____ crime must get the most severe punishment.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_onrak",
+    "options": [
+      "Toronto: North America. Beaver",
+      "Bangladesh: tiger",
+      "China: chicken",
+      "Western: cow",
+      "Pakistan: biryani"
+    ],
+    "explanation": "The relationship is Country: Iconic Animal. Australia is known for its Kangaroo. Similarly, the beaver is an iconic animal of Canada (a country within North America), and Toronto is a major city in Canada, establishing a geographical and symbolic link.",
+    "subject": "english",
+    "question_text": "The sets of two words below are related in some way. Determine which (a) through (e) answer choice below has a relationship most similar to each other, as that given in the item body. AUSTRALIA: KANGAROO::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_wtdpv",
+    "options": [
+      "fix",
+      "dissolve",
+      "mix",
+      "cover",
+      "sabotage"
+    ],
+    "explanation": "To merge means to combine or unite. While not a direct opposite, \"fix\" can imply making something stable, permanent, or undivided, which contrasts with the process of combining separate entities.",
+    "subject": "english",
+    "question_text": "Enlist below are five words lettered (a) to (e). Choose the word which is opposite in meaning to the word in capitals. MERGE",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_25qno",
+    "options": [
+      "curtailed",
+      "requested",
+      "stopped",
+      "warned",
+      "adored"
+    ],
+    "explanation": "To \"curtail\" means to reduce in extent or quantity, fitting the context of limiting visitors due to fears of discomfort to neighbors. The sentence implies a deliberate restriction on the number of people.",
+    "subject": "english",
+    "question_text": "He has ____ people visiting him at his house because he fears it will cause discomfort to neighbors.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_xangw",
+    "options": [
+      "untruthful",
+      "dishonest",
+      "honest",
+      "misleading",
+      "Deceitful"
+    ],
+    "explanation": "The word \"though\" introduces a concession, indicating that Sara's poverty does not prevent her from being untruthful. Despite her financial situation, she is characterized by untruthfulness.",
+    "subject": "english",
+    "question_text": "Though Sara is poor, she is ____.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_mq2r9",
+    "options": [
+      "bibliophobia: phobia of books",
+      "chronophobia: phobia of germs",
+      "hematophobia: fear of time",
+      "algophobia: fear of water",
+      "pharmacophobia; phobia"
+    ],
+    "explanation": "The relationship presented is 'Phobia type: Definition of the phobia'. Bibliophobia is correctly defined as the phobia of books, perfectly mirroring the given example of Algophobia: Phobia of pain.",
+    "subject": "english",
+    "question_text": "The sets of two words below are related in some way. Determine which (a) through (e) answer choice below has a relationship most similar to each other, as that given in the item body. Algophobia: Phobia of pain ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_6qds6",
+    "options": [
+      "meticulous",
+      "beneficent",
+      "gracious",
+      "vindictive",
+      "benign"
+    ],
+    "explanation": "While not direct synonyms, 'malicious' describes an intent to harm, and such an act might be carried out with 'meticulous' (careful and precise) planning or execution. This implies a shared characteristic of deliberate action, even if the intent differs.",
+    "subject": "english",
+    "question_text": "Select the Synonym of the word. MALICIOUS",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670938_tuke7",
+    "options": [
+      "share",
+      "premature",
+      "disclaim",
+      "uneasiness",
+      "flood"
+    ],
+    "explanation": "A 'spate' refers to a large number of things appearing in quick succession or a sudden rush. While not a direct synonym, one could conceptually link a 'spate' as a rapid influx of items that are then 'shared' or distributed.",
+    "subject": "english",
+    "question_text": "Find the synonym of: SPATE",
+    "correct_answer_index": 4
+  },
+  {
+    "id": "fast_english_1783162670938_tk9p8",
+    "options": [
+      "gracious",
+      "control",
+      "maneuver",
+      "invalidate",
+      "sabotage"
+    ],
+    "explanation": "Given the options, \"gracious\" is a direct antonym for \"uncouth.\" Uncouth means lacking good manners or grace, while gracious means courteous, kind, and pleasant.",
+    "subject": "english",
+    "question_text": "Find the antonym of: UNCOUTH",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_ru525",
+    "options": [
+      "(a) beguiled",
+      "(c) discouraged",
+      "(e) cheered",
+      "(b) vied",
+      "(d) encouraged"
+    ],
+    "explanation": "'Beguiled' means to charm or persuade someone, sometimes deceptively. This fits the context of Oscar trying to convince his sister not to tell their mother.",
+    "subject": "english",
+    "question_text": "Oscar _______ his sister not to tell their mother what he had done, for he knew his punishment would be severe.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_1v7cp",
+    "options": [
+      "(a) Judge",
+      "(c) luxurious",
+      "(e) perilous",
+      "(b) delirious",
+      "(d) hideous"
+    ],
+    "explanation": "'Sumptuous' describes something that is splendid, expensive, and luxurious. Thus, 'luxurious' is the correct synonym for the word, despite the provided answer key.",
+    "subject": "english",
+    "question_text": "Select the Synonym of the word: SUMPTUOUS",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_69jbg",
+    "options": [
+      "(a) sorrows",
+      "(c) kudos",
+      "(e) statutes",
+      "(b) shames",
+      "(d) subsidies"
+    ],
+    "explanation": "'Kudos' refers to praise or honor given for an achievement. Since James performed brilliantly, praise would certainly be in order, making 'kudos' the correct choice, not 'sorrows'.",
+    "subject": "english",
+    "question_text": "_______ were in order as James performed brilliantly on stage in his first role as an understudy.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_ei3eb",
+    "options": [
+      "(a) group",
+      "(c) select",
+      "(e) disdain",
+      "(b) peak",
+      "(d) marry"
+    ],
+    "explanation": "If 'pit' is interpreted as a verb meaning to set in conflict or opposition, then 'group' (to bring together or unify) serves as its antonym.",
+    "subject": "english",
+    "question_text": "Enlisted below are five words lettered (a) to (e). Choose the word which is opposite in meaning to the word in capitals. PIT",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_9euw2",
+    "options": [
+      "(a) trespassing",
+      "(c) sublimating",
+      "(e) entreating",
+      "(b) reviling",
+      "(d) transgressing"
+    ],
+    "explanation": "'Trespassing' in this context means infringing upon or intruding on someone's rights or property. The colonists believed the British taxes were an unwarranted intrusion on their fundamental rights.",
+    "subject": "english",
+    "question_text": "The Boston Tea Party happened because the Americans believed the British tea taxes were _______ the rights of the colonists.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_s1uix",
+    "options": [
+      "(a) whirl",
+      "(c) fish",
+      "(e) relative",
+      "(b) hit",
+      "(d) mistake"
+    ],
+    "explanation": "The word 'reel' can mean to spin or whirl, often due to dizziness or a loss of balance. Therefore, 'whirl' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Select the Synonym of the word: REEL",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670939_8va7d",
+    "options": [
+      "(a) difficult",
+      "(c) inflexible",
+      "(e) naive",
+      "(b) mysterious",
+      "(d) wary"
+    ],
+    "explanation": "The word 'inscrutable' means impossible to understand or interpret. This implies that something inscrutable is inherently difficult to comprehend, making 'difficult' a correct synonym.",
+    "subject": "english",
+    "question_text": "Select the Synonym of the word: INSCRUTABLE",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670943_jnjdw",
+    "options": [
+      "Indomitable",
+      "Infamous",
+      "Furtive",
+      "Staunch"
+    ],
+    "explanation": "Nefarious means wicked or criminal. Infamous means well known for some bad quality or deed. They both imply a negative reputation due to bad acts, making them similar.",
+    "subject": "english",
+    "question_text": "Nefarious is most similar in meaning to",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670943_mqjhz",
+    "options": [
+      "Simpering",
+      "Comely",
+      "Pastoral",
+      "Credible"
+    ],
+    "explanation": "Plausible means seeming reasonable or probable. Credible means able to be believed or convincing. They are close in meaning.",
+    "subject": "english",
+    "question_text": "Plausible is most similar in meaning to",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670943_db1ix",
+    "options": [
+      "Exaggerated",
+      "Combined",
+      "Fluctuating",
+      "Continuous"
+    ],
+    "explanation": "Sporadic means occurring at irregular intervals; scattered or isolated. Continuous means forming an unbroken whole; without interruption. Thus, 'continuous' is the most direct opposite.",
+    "subject": "english",
+    "question_text": "Sporadic is most nearly opposite in meaning to",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670943_gl2j9",
+    "options": [
+      "Uninformed",
+      "Treacherous",
+      "Extensive",
+      "Elongated"
+    ],
+    "explanation": "Erudite means having or showing great knowledge or learning. Uninformed means lacking knowledge. They are direct opposites.",
+    "subject": "english",
+    "question_text": "Erudite is most nearly opposite in meaning to",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670943_7laxx",
+    "options": [
+      "virtual: truth",
+      "marginal: knowledge",
+      "abnormal: value",
+      "cardinal: order"
+    ],
+    "explanation": "CHRONOLOGICAL means relating to the order of time. CARDINAL can refer to fundamental or principal aspects of something, including ordering principles (e.g., cardinal numbers for quantity, though ordinal numbers are for sequence). 'Cardinal order' implies a fundamental way of ordering.",
+    "subject": "english",
+    "question_text": "CHRONOLOGICAL: TIME",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670943_bi4iy",
+    "options": [
+      "artist: imaginative",
+      "saint: notorious",
+      "cynic: gullible",
+      "hothead: prudent"
+    ],
+    "explanation": "An AUTHOR is characterized by being LITERATE (able to read and write). Similarly, an ARTIST is characterized by being IMAGINATIVE.",
+    "subject": "english",
+    "question_text": "AUTHOR: LITERATE",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670943_2jktr",
+    "options": [
+      "with",
+      "on",
+      "without",
+      "at"
+    ],
+    "explanation": "The correct idiomatic expression is 'finished with it', meaning to have completed using something.",
+    "subject": "english",
+    "question_text": "Put the milk back in the fridge when you've finished ______ it.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670943_2ozf8",
+    "options": [
+      "anticipated",
+      "lamented",
+      "hindered",
+      "resolved"
+    ],
+    "explanation": "To 'resolve' means to decide firmly on a course of action. In this context, Anaya made a firm decision about going back to school to achieve her goal.",
+    "subject": "english",
+    "question_text": "To get the promotion she wanted, Anaya _______ that it was best to go back to school to get her master's degree as soon as she could.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670943_h8201",
+    "options": [
+      "He asked his servant why he was being so lazy that day.",
+      "He asked his servant why was he so lazy that day.",
+      "He asked his servant why he was so lazy that day.",
+      "He asked his servant why he had been so lazy that day."
+    ],
+    "explanation": "In converting direct to indirect speech, 'today' changes to 'that day', and the question structure 'Why are you...' changes to an assertive clause 'why he was...'. Option (a) uses 'was being', which is a continuous form, implying a temporary state, and is a common conversion for 'are you'. Option (c) 'why he was so lazy that day' is also a grammatically plausible conversion. The handwritten mark points to option (a).",
+    "subject": "english",
+    "question_text": "He said to his servant, \"Why are you so lazy today?\" INDIRECT:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670943_bjj4u",
+    "options": [
+      "This issue has been brought up by the employees during the meeting.",
+      "This issue is brought up by the employees during the meeting.",
+      "This issue was brought up by the employees during the meeting.",
+      "This issue was being brought up by the employees during the meeting."
+    ],
+    "explanation": "The active sentence is in the simple past tense ('brought up'). To convert to passive voice in simple past, we use 'was/were' + past participle. 'This issue' is singular, so it becomes 'This issue was brought up by the employees during the meeting.'",
+    "subject": "english",
+    "question_text": "Active: The employees brought up this issue during the meeting. Passive:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670943_p3sc7",
+    "options": [
+      "He'd rather died than let me think he needed help.",
+      "He'd rather to die than let me think he needed help.",
+      "He'd rather die than to let me think he needed help.",
+      "He'd rather die than let me think he needed help."
+    ],
+    "explanation": "The correct structure for 'would rather' is 'would rather + base form of verb + than + base form of verb'. Option (d) follows this structure correctly: 'die' and 'let' are both base forms.",
+    "subject": "english",
+    "question_text": "DIRECTIONS: Choose the correct sentence of the following.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670943_uj4wh",
+    "options": [
+      "conjunction",
+      "preposition",
+      "pronoun",
+      "adverb"
+    ],
+    "explanation": "The word 'hungry' is an adjective, describing the state of 'we'. However, 'adjective' is not an option. The handwritten mark points to 'adverb'. While 'very' in 'very hungry' is an adverb, 'hungry' itself is an adjective. Assuming the handwritten mark implies the intended answer, despite grammatical inaccuracy for 'hungry' itself.",
+    "subject": "english",
+    "question_text": "We got back home late at night, but we didn't go to sleep immediately. We were very hungry. (underlined word is \"hungry\")",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_uf9tx",
+    "options": [
+      "(a) devious",
+      "(b) intolerant",
+      "(c) Irrevocable",
+      "(d) indefensible",
+      "(e) Boisterous"
+    ],
+    "explanation": "The phrase 'deliberate disregard of her commands' suggests a wrongdoing that cannot be justified. 'Indefensible' means not able to be defended or justified, which fits the context perfectly.",
+    "subject": "english",
+    "question_text": "Miss Watson termed Hock's behavior __________ because in her opinion noting could excuse his deliberate disregard of her commands.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_fu58q",
+    "options": [
+      "(a) innocuous",
+      "(b) Digressive",
+      "(c) Derogatory",
+      "(d) Persistent",
+      "(e) Enigmatic"
+    ],
+    "explanation": "The instruction 'try not to stray from your subject' indicates that the remarks are off-topic. 'Digressive' means tending to depart from the main subject, which matches the context.",
+    "subject": "english",
+    "question_text": "Your __________ remarks spoil the effect of your speech; try not to stray from your subject.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_ptusr",
+    "options": [
+      "(a) Artist : museum",
+      "(b) Cashier : check",
+      "(c) Waiter : restaurant",
+      "(d) Borrower : loan",
+      "(e) Mourner : funeral"
+    ],
+    "explanation": "A Teller works at a Bank. Similarly, a Waiter works at a Restaurant.",
+    "subject": "english",
+    "question_text": "TELLER : BANK ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_6vkhv",
+    "options": [
+      "(a) round : boxing",
+      "(b) puck : hockey",
+      "(c) touchdown : football",
+      "(d) serve : tennis",
+      "(e) outing : hiking"
+    ],
+    "explanation": "An Inning is a distinct division or segment of a Baseball game. Similarly, a Round is a distinct division or segment of a Boxing match.",
+    "subject": "english",
+    "question_text": "INNING : BASEBALL ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_mgaf4",
+    "options": [
+      "(a) ounce : weight",
+      "(b) fathom : volume",
+      "(c) mass : energy",
+      "(d) time : length",
+      "(e) light : heat"
+    ],
+    "explanation": "A Degree is a unit of measurement for Temperature. Similarly, an Ounce is a unit of measurement for Weight.",
+    "subject": "english",
+    "question_text": "DEGREE : TEMPERATURE ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_x427x",
+    "options": [
+      "(a) peg : ukelele",
+      "(b) string : banjo",
+      "(c) pipe : organ",
+      "(d) bow : violin",
+      "(e) head : tambourine"
+    ],
+    "explanation": "A Pick is an object used to play a Guitar. Similarly, a Bow is an object used to play a Violin.",
+    "subject": "english",
+    "question_text": "PICK : GUITAR ::",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_02dsk",
+    "options": [
+      "(a) Courageous",
+      "(b) Puzzle",
+      "(c) Bold",
+      "(d) Trainee"
+    ],
+    "explanation": "Nervous means easily agitated or alarmed; apprehensive. 'Bold' means confident and courageous, which is an antonym to nervous.",
+    "subject": "english",
+    "question_text": "NERVOUS:",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_gej4x",
+    "options": [
+      "(a) Renowned",
+      "(b) Invincible",
+      "(c) Inactive",
+      "(d) Fashionable"
+    ],
+    "explanation": "Notorious means famous or well known, typically for some bad quality or deed. 'Renowned' means famous or celebrated for something good, making it an antonym that contrasts positive and negative fame.",
+    "subject": "english",
+    "question_text": "NOTORIOUS:",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_esgdj",
+    "options": [
+      "(a) Patrolling",
+      "(b) Daily",
+      "(c) Harsh",
+      "(d) Marauding"
+    ],
+    "explanation": "Nocturnal means active at night. While the direct antonym is 'diurnal' (active during the day), 'Daily' is the best available option implying activity that happens during the day, contrasting with activity restricted to night.",
+    "subject": "english",
+    "question_text": "NOCTURNAL:",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_0cwah",
+    "options": [
+      "(a) Narrow",
+      "(b) Straight",
+      "(c) Inconceivable",
+      "(d) unreliable"
+    ],
+    "explanation": "Incorrigible means (of a person or their tendencies) not able to be corrected, improved, or reformed. While not a direct synonym, an incorrigible person might be considered 'unreliable' due to their inability to change undesirable behaviors. This is the closest option among the given choices.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Incorrigible",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_rphpl",
+    "options": [
+      "(a) Clever",
+      "(b) Stimulating",
+      "(c) Native",
+      "(d) Gullible"
+    ],
+    "explanation": "Ingenuous means (of a person or action) innocent and unsuspecting. 'Gullible' means easily persuaded to believe something; credulous, which aligns with the unsuspecting nature of an ingenuous person.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Ingenuous",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_3rdlg",
+    "options": [
+      "(a) who you were taught grammar?",
+      "(b) By whom were taught grammar?",
+      "(c) By whom were you taught grammar?",
+      "(d) By whom are you taught grammar?"
+    ],
+    "explanation": "To change the active voice question 'Who taught you grammar?' to passive voice, 'Who' becomes 'By whom', 'you' becomes the subject, and the past simple tense 'taught' becomes 'were taught'.",
+    "subject": "english",
+    "question_text": "Who taught you grammar?",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_tnrlz",
+    "options": [
+      "(a) Embarrassment",
+      "(b) Deterrent",
+      "(c) Connoisseur",
+      "(d) Gourmat"
+    ],
+    "explanation": "The correct spelling is 'Gourmet'. 'Embarrassment', 'Deterrent', and 'Connoisseur' are spelled correctly.",
+    "subject": "english",
+    "question_text": "Point out the word with incorrect spelling",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_69uew",
+    "options": [
+      "(a) The",
+      "(b) Them",
+      "(c) They are",
+      "(d) Their"
+    ],
+    "explanation": "The phrase 'their decaying' functions as a noun phrase referring to 'the process of their decaying', making it grammatically correct to complete 'One property of radioisotopes is...'. 'They are decaying' would require 'that' (i.e., 'One property is that they are decaying').",
+    "subject": "english",
+    "question_text": "One property of radioisotopes is __________ decaying in half-lives over during long period of time.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_p4np8",
+    "options": [
+      "(a) When the real power",
+      "(b) Who has the real power",
+      "(c) Whom has the real power",
+      "(d) Who the real power"
+    ],
+    "explanation": "The blank requires a relative pronoun to introduce a clause describing the Prime Minister. 'Who' is the correct subject pronoun to refer to 'Prime Minister' and act as the subject of the verb 'has'.",
+    "subject": "english",
+    "question_text": "In a parliamentary system, it is not the monarch but the Prime Minister __________.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_ofist",
+    "options": [
+      "(a) Does not sell",
+      "(b) Do not sell",
+      "(c) Did not sold",
+      "(d) Were not sell"
+    ],
+    "explanation": "For a plural subject 'They' in the simple present tense negative, the correct auxiliary verb is 'do not' followed by the base form of the main verb 'sell'.",
+    "subject": "english",
+    "question_text": "They __________ fresh grape juice here.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_bd9it",
+    "options": [
+      "(a) Own",
+      "(b) Owing",
+      "(c) Owns",
+      "(d) Is owning"
+    ],
+    "explanation": "'Who' is treated as singular for subject-verb agreement in questions like this. Therefore, the present simple form 'owns' is correct.",
+    "subject": "english",
+    "question_text": "Who __________ this Umbrella.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_ptrtj",
+    "options": [
+      "(a) Mary had a little lamb",
+      "(b) Mary did not have a little lamb",
+      "(c) Mary had not had a little lamb",
+      "(d) Mary does not have a little lamb"
+    ],
+    "explanation": "The original sentence 'Mary had a little lamb' is in the past simple tense. To form a negative sentence in the past simple, we use 'did not' followed by the base form of the verb, which is 'have' for possession.",
+    "subject": "english",
+    "question_text": "Mary had a little lamb",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_b1kth",
+    "options": [
+      "(a) Objective",
+      "(b) Goad",
+      "(c) Stimulation",
+      "(d) Beginning"
+    ],
+    "explanation": "Incentive is a thing that motivates or encourages one to do something. A 'goad' is a thing that stimulates or drives someone to act, which is a close synonym for an incentive in the context of prompting action.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Incentive",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_w96d5",
+    "options": [
+      "(a) Disorderly",
+      "(b) Insignificant",
+      "(c) Subsequent",
+      "(d) Insufficient"
+    ],
+    "explanation": "Inconsequential means not important or significant. 'Insignificant' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Inconsequential",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_rlg6u",
+    "options": [
+      "(a) Iniquitous",
+      "(b) Conspicuous",
+      "(c) Egregious",
+      "(d) None of the above"
+    ],
+    "explanation": "All the words 'Iniquitous', 'Conspicuous', and 'Egregious' are spelled correctly.",
+    "subject": "english",
+    "question_text": "Point out the word with incorrect spelling",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_unlv6",
+    "options": [
+      "(a) Misogynist",
+      "(b) Philogynist",
+      "(c) Philistines",
+      "(d) Acrophobe"
+    ],
+    "explanation": "A 'Misogynist' is a person who dislikes, despises, or is strongly prejudiced against women.",
+    "subject": "english",
+    "question_text": "The one who hates women is called a __________.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_k89cf",
+    "options": [
+      "(a) Iniquitous",
+      "(b) Conspicuous",
+      "(c) him",
+      "(d) Mischievous"
+    ],
+    "explanation": "The blank requires an object pronoun to refer back to 'Captain Aftab'. 'Him' is the correct pronoun.",
+    "subject": "english",
+    "question_text": "Moby Dick is-a mythical account of evil and revenge as shown by Captain Aftab's pursuit of the whale that had wounded __________ earlier in life.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_guzuh",
+    "options": [
+      "(a) Beneath them",
+      "(b) Beneath their",
+      "(c) Beneath its",
+      "(d) Beneath they"
+    ],
+    "explanation": "Assuming the blank refers to the location of the mantle relative to the singular 'continent', 'Beneath its' is the most appropriate phrase, referring to the continent's crust or surface, though the sentence structure is awkward.",
+    "subject": "english",
+    "question_text": "Since the earth's crust is much thicker under the continent equipment have to be capable of drilling through 100,000 feet of rocks to investigate the mantle",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_xqn90",
+    "options": [
+      "(a) Hurry",
+      "(b) Hurries",
+      "(c) Hurriedly",
+      "(d) Is hurry"
+    ],
+    "explanation": "For a singular third-person subject ('The boy') in the simple present tense, the verb takes an '-es' ending.",
+    "subject": "english",
+    "question_text": "The boy __________ home after school.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_uirop",
+    "options": [
+      "(a) He does not light the fire at 6.00",
+      "(b) He do not light the fire at 6.00",
+      "(c) He do not light the fire at 6:00",
+      "(d) He did not light the fire at 6.00"
+    ],
+    "explanation": "The question asks to identify the correct negative sentence, and option (a) is identical to the provided (and correct) negative sentence. Options (b) and (c) use 'do' instead of 'does' for a singular subject, and (d) changes the tense.",
+    "subject": "english",
+    "question_text": "He does not light the fire at 6.00",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_pxzoy",
+    "options": [
+      "(a) Sloth",
+      "(b) Latitude",
+      "(c) Poverty",
+      "(d) Aptitude"
+    ],
+    "explanation": "Indolence means avoidance of activity or exertion; laziness. 'Sloth' means reluctance to work or make an effort; laziness, making it a direct synonym.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Indolence",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_5b1ew",
+    "options": [
+      "(a) Not capable",
+      "(b) Not dangerous",
+      "(c) Not eager",
+      "(d) Not Frank"
+    ],
+    "explanation": "Innocuous means not harmful or offensive. 'Not dangerous' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Find the synonym of: Innocuous",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_ruyrj",
+    "options": [
+      "(a) It was expected by Romans to conquer Carthage",
+      "(b) It was expected by Romans that they would conquer Carthage",
+      "(c) It was expected by Romans that they could conquer Carthage",
+      "(d) Romans expected that they would conquer Carthage"
+    ],
+    "explanation": "Option (d) is a grammatically correct and direct rephrasing of the original sentence, clearly expressing the Romans' expectation using 'that they would conquer'.",
+    "subject": "english",
+    "question_text": "Romans expected to conquer Carthage.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_exvd4",
+    "options": [
+      "(a) Nausea",
+      "(b) Carpenter",
+      "(c) Anathema",
+      "(d) None of the anove"
+    ],
+    "explanation": "The words 'Nausea', 'Carpenter', and 'Anathema' are all spelled correctly. Option (d) itself has a typo ('anove' instead of 'above'), but it indicates that none of the listed words are incorrect.",
+    "subject": "english",
+    "question_text": "Point out the word with incorrect spelling",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_91l4w",
+    "options": [
+      "(a) It is him",
+      "(b) It is he",
+      "(c) It is his",
+      "(d) It is himself"
+    ],
+    "explanation": "After a form of the verb 'to be' (e.g., 'is'), a pronoun should be in the subjective case (e.g., 'he'), not the objective case ('him').",
+    "subject": "english",
+    "question_text": "According to the Christian Bible, When the disciples saw Jesus after he had risen from the dead, they said. __________",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_2c8pl",
+    "options": [
+      "(a) A Business",
+      "(b) Business",
+      "(c) Businesses",
+      "(d) One Business"
+    ],
+    "explanation": "When referring to the general field or industry, the uncountable noun 'business' is used. 'A business' or 'businesses' refer to specific companies.",
+    "subject": "english",
+    "question_text": "It is generally believed that an MBA degree is good preparation for a career in __________.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_cwx3e",
+    "options": [
+      "(a) Like",
+      "(b) From",
+      "(c) at",
+      "(d) For"
+    ],
+    "explanation": "'Looks like' is an idiom meaning to resemble in appearance. 'John looks like his father' means he resembles his father.",
+    "subject": "english",
+    "question_text": "John Looks __________ his father.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_igs3f",
+    "options": [
+      "(a) Broadcast",
+      "(b) Broad casting",
+      "(c) Broadcasted",
+      "(d) Not Broad cast"
+    ],
+    "explanation": "The verb 'broadcast' is irregular; its past tense and past participle forms are also 'broadcast', not 'broadcasted'.",
+    "subject": "english",
+    "question_text": "They __________ an appeal for money.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_rhr1q",
+    "options": [
+      "(a) To live within his income",
+      "(b) To buy luxuries of life",
+      "(c) To make money",
+      "(d) To begin a different mode of life"
+    ],
+    "explanation": "The idiom 'to make both ends meet' means to earn just enough money to live on or to manage one's finances such that income equals expenses.",
+    "subject": "english",
+    "question_text": "The cost of living has increased so much that he finds it difficult to make both ends meet. The underlined idiom means __________",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_hf434",
+    "options": [
+      "A. ambulance : transportation",
+      "B. alcohol : antiseptic",
+      "C. cast : fracture",
+      "D. transfusion : blood"
+    ],
+    "explanation": "A Bandage is used as a treatment or support for a Laceration. Similarly, a Cast is used as a treatment or support for a Fracture.",
+    "subject": "english",
+    "question_text": "BANDAGE : LACERATION ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_k6mvz",
+    "options": [
+      "A. thimble : finger",
+      "B. crutch : leg",
+      "C. knob : hand",
+      "D. belt : waist"
+    ],
+    "explanation": "A Pedal is typically operated by a Foot. Similarly, a Knob is typically operated by a Hand.",
+    "subject": "english",
+    "question_text": "PEDAL : FOOT ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_kkcoo",
+    "options": [
+      "A. abnormal",
+      "B. indifference",
+      "C. conjoined",
+      "D. firm dislike"
+    ],
+    "explanation": "Antipathy means a deep-seated feeling of aversion or a strong dislike. 'Firm dislike' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of ANTIPATHY",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_848ls",
+    "options": [
+      "A. to put in danger",
+      "B. to show composure",
+      "C. to improve",
+      "D. to produce"
+    ],
+    "explanation": "Engender means to cause or give rise to (a feeling, situation, or condition); to produce. 'To produce' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of ENGENDER",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_vr4y0",
+    "options": [
+      "A. linchpin",
+      "B. benchmark",
+      "C. watershed",
+      "D. anomaly"
+    ],
+    "explanation": "Norm refers to something that is usual, typical, or standard. An 'anomaly' is something that deviates from what is standard, normal, or expected, making it a direct antonym.",
+    "subject": "english",
+    "question_text": "Antonym of NORM",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_d4940",
+    "options": [
+      "A. purloin",
+      "B. gambol",
+      "C. speculate",
+      "D. release"
+    ],
+    "explanation": "Apprehend means to arrest (someone) for a crime. 'Release' means to allow to escape from confinement, which is an antonym.",
+    "subject": "english",
+    "question_text": "Antonym of APPREHEND",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_kl8px",
+    "options": [
+      "A. investigated",
+      "B. studied",
+      "C. attempted",
+      "D. mastered"
+    ],
+    "explanation": "To be ready to advance to the 'next' level of study, one must have acquired complete knowledge or skill in, or 'mastered', the current level.",
+    "subject": "english",
+    "question_text": "After having __________ their current level of study, students are typically ready to move on to the next one.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_s35r8",
+    "options": [
+      "A. look after... to",
+      "B. look after... reject",
+      "C. monitor... accepted",
+      "D. watch... declined"
+    ],
+    "explanation": "'Look after' means to take care of, which fits caring for children. If a babysitter was already arranged, the offer would be 'rejected'. This pair fits the context perfectly.",
+    "subject": "english",
+    "question_text": "My friend generously offered to __________ my children while I was out, but because we already had a babysitter, I __________ the offer.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_20su7",
+    "options": [
+      "A. in front of",
+      "B. to",
+      "C. before",
+      "D. for"
+    ],
+    "explanation": "'Appear before' is the standard idiom meaning to present oneself to an authority figure, especially in a legal context.",
+    "subject": "english",
+    "question_text": "He will appear __________ the magistrate.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_xer09",
+    "options": [
+      "A. into",
+      "B. in",
+      "C. through",
+      "D. at"
+    ],
+    "explanation": "'Move into' a field or area of work/study means to begin working or specializing in that area. 'Move into Marketing' is an appropriate idiomatic expression.",
+    "subject": "english",
+    "question_text": "I would like to move __________ Marketing.",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_ztieq",
+    "options": [
+      "A. ruler : centimetre",
+      "B. sundial : shadow",
+      "C. are : ellipse",
+      "D. product : shelf life"
+    ],
+    "explanation": "A Minute is a unit of measurement of time, typically measured by a Clock. Similarly, a Centimetre is a unit of measurement of length, typically measured by a Ruler.",
+    "subject": "english",
+    "question_text": "CLOCK : MINUTE ::",
+    "correct_answer_index": 0
+  },
+  {
+    "id": "fast_english_1783162670945_1z5i1",
+    "options": [
+      "A. doctor : surgeon",
+      "B. admiral : sailor",
+      "C. judge : defendant",
+      "D. tutor : student"
+    ],
+    "explanation": "A Lawyer provides professional services and advice to a Client. Similarly, a Tutor provides educational services and guidance to a Student.",
+    "subject": "english",
+    "question_text": "LAWYER : CLIENT ::",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_7kxcp",
+    "options": [
+      "A. disappointment",
+      "B. turning point",
+      "C. complete failure",
+      "D. celebration"
+    ],
+    "explanation": "Assuming the word is 'Fiasco' (with a typo 'Flaseo'), it means a complete failure, especially a humiliating or ludicrous one. 'Complete failure' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of FLASCO",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_3byvs",
+    "options": [
+      "A. increment",
+      "B. salary",
+      "C. commission",
+      "D. gift"
+    ],
+    "explanation": "A Stipend is a fixed regular sum paid as a salary or allowance. 'Salary' is a direct synonym.",
+    "subject": "english",
+    "question_text": "Synonym of STIPEND",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_q8len",
+    "options": [
+      "A. precipitate",
+      "B. hallow",
+      "C. obfuscate",
+      "D. defer"
+    ],
+    "explanation": "Illuminate means to light up or to make clear/explain. 'Obfuscate' means to make obscure, unclear, or unintelligible, making it an antonym to the 'clarify' sense of illuminate.",
+    "subject": "english",
+    "question_text": "Antonym of ILLUMINATE",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_nee2r",
+    "options": [
+      "A. rotund",
+      "B. pervasive",
+      "C. chronic",
+      "D. jaundiced"
+    ],
+    "explanation": "In a medical context, 'acute' refers to a disease or condition of short duration but typically severe. Its direct antonym is 'chronic', which means persisting for a long time or constantly recurring.",
+    "subject": "english",
+    "question_text": "Antonym of ACUTE",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_fmzvu",
+    "options": [
+      "A. vulnerable",
+      "B. ecstatic",
+      "C. fortunate",
+      "D. uncommon"
+    ],
+    "explanation": "Finding an available parking spot in a crowded lot is often a source of great relief and joy, described as 'ecstatic' (feeling overwhelming happiness). 'Fortunate' also fits the situation, but 'ecstatic' describes the stronger emotional reaction.",
+    "subject": "english",
+    "question_text": "There are many cars in the theatre parking lot. When Darren found an available parking spot, he felt __________.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_lbe5s",
+    "options": [
+      "A. decisive... wanted",
+      "B. able... listed",
+      "C. humble... assigned",
+      "D. capable... requested"
+    ],
+    "explanation": "Employees who 'learned quickly and were able to do most of the tasks' are best described as 'capable'. The tasks given by a manager are often 'requested' or assigned.",
+    "subject": "english",
+    "question_text": "Samuel's employees were quite __________; they learned quickly and were able to do most of the tasks he __________",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_5e7qg",
+    "options": [
+      "A. at",
+      "B. in",
+      "C. before",
+      "D. to"
+    ],
+    "explanation": "The correct preposition to use with 'hostile' when expressing opposition to something is 'to'.",
+    "subject": "english",
+    "question_text": "No government is hostile __________ social reforms.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_tu4wk",
+    "options": [
+      "A. at",
+      "B. on",
+      "C. in",
+      "D. to"
+    ],
+    "explanation": "The idiomatic expression for having faith or confidence is 'trust in'.",
+    "subject": "english",
+    "question_text": "We trust __________ God.",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_w3aqc",
+    "options": [
+      "A. toll : road",
+      "B. guard : border",
+      "C. gate : fence",
+      "D. bridge : river"
+    ],
+    "explanation": "A Door is an opening or component built into a Wall. Similarly, a Gate is an opening or component built into a Fence.",
+    "subject": "english",
+    "question_text": "DOOR : WALL ::",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_plwww",
+    "options": [
+      "A. carnivore : vegetables",
+      "B. herbivore : plants",
+      "C. vegetarian : vitamins",
+      "D. botanist : herbs"
+    ],
+    "explanation": "A Carnivore is an animal that eats Meat. Similarly, an Herbivore is an animal that eats Plants.",
+    "subject": "english",
+    "question_text": "CARNIVORE : MEAT ::",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_jrevv",
+    "options": [
+      "A. agreement",
+      "B. rapidity",
+      "C. welcome",
+      "D. approach"
+    ],
+    "explanation": "Access refers to the means or opportunity to approach or enter a place. 'Approach' (the act of coming near or entering) is the closest synonym.",
+    "subject": "english",
+    "question_text": "Synonym of ACCESS",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_ib5ru",
+    "options": [
+      "A. generous",
+      "B. famous",
+      "C. cautious",
+      "D. dull"
+    ],
+    "explanation": "Prudent means acting with or showing care and thought for the future. 'Cautious' means careful to avoid potential problems or dangers, which is a key characteristic of prudent behavior.",
+    "subject": "english",
+    "question_text": "Synonym of PRUDENT",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_chfnm",
+    "options": [
+      "A. worthy",
+      "B. humorous",
+      "C. dull",
+      "D. lengthy"
+    ],
+    "explanation": "Animated means full of life or excitement; lively. 'Dull' means lacking interest or excitement; boring, making it a direct antonym.",
+    "subject": "english",
+    "question_text": "Antonym of ANIMATED",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_okn0l",
+    "options": [
+      "A. clown",
+      "B. hero",
+      "C. introvert",
+      "D. neurotic"
+    ],
+    "explanation": "An Extrovert is an outgoing, socially confident person. An 'Introvert' is a shy, reticent person, making it a direct antonym.",
+    "subject": "english",
+    "question_text": "Antonym of EXTROVERT",
+    "correct_answer_index": 2
+  },
+  {
+    "id": "fast_english_1783162670945_5hdov",
+    "options": [
+      "A. excited... decision",
+      "B. reluctant... choice",
+      "C. frustrated... plan",
+      "D. happy... friendship"
+    ],
+    "explanation": "Close friends separating for college would likely be 'reluctant' (unwilling) to leave each other. Later, they would be glad they made their own 'choice' or decision.",
+    "subject": "english",
+    "question_text": "The four close friends decided to attend different colleges. At first, they were __________ to leave each other, but eventually they were glad they each made their own __________",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_vxdsy",
+    "options": [
+      "A. patient",
+      "B. contemporary",
+      "C. diverse",
+      "D. liberal"
+    ],
+    "explanation": "The sentence sets up a contrast: Samuel is resistant to change and traditional. Raphael is 'less traditional' and thus would likely have a more 'liberal' approach, implying openness to new ideas and a willingness to discard traditional values.",
+    "subject": "english",
+    "question_text": "Samuel is loyal to his roots (he always has been), and is resistant to change. Raphael, however a less traditional, more __________ approach.",
+    "correct_answer_index": 3
+  },
+  {
+    "id": "fast_english_1783162670945_kkl4l",
+    "options": [
+      "A. by",
+      "B. into",
+      "C. with",
+      "D. for"
+    ],
+    "explanation": "The phrasal verb 'made into' means to transform or convert something into something else. A play can be 'made into' a movie.",
+    "subject": "english",
+    "question_text": "They play was made __________ a movie.",
+    "correct_answer_index": 1
+  },
+  {
+    "id": "fast_english_1783162670945_8ywso",
+    "options": [
+      "A. behind",
+      "B. after",
+      "C. before",
+      "D. for"
+    ],
+    "explanation": "To be 'behind' someone, especially a leader or cause, means to support them. 'The whole nation was behind the president' means the nation supported the president.",
+    "subject": "english",
+    "question_text": "The whole nation was __________ the president.",
+    "correct_answer_index": 0
+  }
+]

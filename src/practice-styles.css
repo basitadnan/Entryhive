@@ -1,0 +1,163 @@
+        /* MCQ Options */
+        .mcq-option {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: 2px solid hsl(var(--border));
+            background: hsl(var(--card));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mcq-option:hover {
+            border-color: hsl(var(--muted-foreground) / 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .mcq-option:hover {
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .mcq-option.selected {
+            border-color: #10b981;
+            background: hsl(160 84% 39% / 0.08);
+            box-shadow: 0 15px 30px -10px rgba(16, 185, 129, 0.25);
+        }
+
+        .mcq-option.selected .option-badge {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+            transform: scale(1.1);
+        }
+
+        .locked {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .correct {
+            border-color: #10b981 !important;
+            background: hsl(160 84% 39% / 0.08) !important;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1) !important;
+        }
+
+        .correct .option-badge {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+        }
+
+        .correct .status-icon {
+            color: #10b981;
+            opacity: 1;
+        }
+
+        .wrong {
+            border-color: #ef4444 !important;
+            background: hsl(0 84% 60% / 0.08) !important;
+            box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.1) !important;
+        }
+
+        .wrong .option-badge {
+            background: #ef4444;
+            color: white;
+            border-color: #ef4444;
+        }
+
+        .wrong .status-icon {
+            color: #ef4444;
+            opacity: 1;
+        }
+
+        .option-badge {
+            transition: all 0.2s ease;
+        }
+
+        .status-icon {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Explanation Panel Slide Down */
+        .explanation-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.4s ease;
+        }
+
+        .explanation-panel.show {
+            max-height: 1000px;
+            margin-top: 1.5rem;
+        }
+
+        /* Question Palette */
+        .palette-btn {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid hsl(var(--border));
+            background: hsl(var(--card));
+            color: hsl(var(--muted-foreground));
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .palette-btn:hover {
+            background: hsl(var(--muted));
+            transform: scale(1.05);
+        }
+
+        .palette-btn.answered {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+        }
+
+        .palette-btn.marked {
+            background: #f59e0b;
+            color: white;
+            border-color: #f59e0b;
+        }
+
+        .palette-btn.current {
+            box-shadow: 0 0 0 2px #10b981;
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* Mobile Responsiveness for Practice Sessions */
+        @media (max-width: 640px) {
+            .mcq-option {
+                flex-wrap: nowrap;
+                min-height: auto;
+            }
+
+            .mcq-option span {
+                word-break: break-word;
+                overflow-wrap: break-word;
+                min-width: 0;
+            }
+
+            .option-badge {
+                flex-shrink: 0;
+            }
+
+            .explanation-panel.show {
+                max-height: 2000px;
+            }
+        }
