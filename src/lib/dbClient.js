@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabaseClient';
+import { Capacitor } from '@capacitor/core';
 
 const isPlaceholder = false; // Forced to false for production stability
 
@@ -293,7 +294,8 @@ export const base44 = {
       return await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: redirectTo || window.location.origin,
+          // Match AuthContext.loginWithGoogle: custom scheme on native, site origin on web
+          redirectTo: redirectTo || (Capacitor.isNativePlatform() ? 'entryhive://callback' : window.location.origin),
         },
       });
     },

@@ -283,8 +283,14 @@ export const AuthProvider = ({ children }) => {
     // will auto-detect the tokens in the URL fragment and establish the session.
     // For native/electron: use the Vercel bridge to relay tokens back to the app.
     let targetRedirect;
-    
-    if (isNative || isElectron) {
+
+    if (isNative) {
+      // Native (Capacitor/Android): redirect straight back into the app via the
+      // custom scheme registered in AndroidManifest.xml. Supabase appends
+      // #access_token=... and the appUrlOpen listener in this file calls setSession().
+      targetRedirect = 'entryhive://callback';
+    } else if (isElectron) {
+      // Electron has no custom scheme handler — relay tokens via the Vercel bridge page.
       targetRedirect = 'https://entryhive-pak.vercel.app/login-callback?source=app';
     } else if (isDev) {
       // In dev mode, redirect to localhost origin

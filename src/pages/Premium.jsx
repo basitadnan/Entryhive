@@ -104,6 +104,7 @@ export default function Premium() {
   const [orderId, setOrderId] = useState('');
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState('');
+  const [isProcessingImage, setIsProcessingImage] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copied, setCopied] = useState('');
 
@@ -115,9 +116,10 @@ export default function Premium() {
   const isPremium = user?.is_premium === true && !user?.is_on_trial;
 
   // Check existing payment requests
-  const { data: myPaymentRequests = [] } = useQuery({
+  const { data: myPaymentRequests = [], refetch: refetchMyPaymentRequests } = useQuery({
     queryKey: ['my-payment-status', user?.email],
     queryFn: async () => {
+      if (!user?.email) return [];
       const { data, error } = await supabase.from('payment_requests').select('*').eq('user_email', user?.email).order('created_at', { ascending: false }).limit(5);
       if (error) return [];
       return data || [];
@@ -129,7 +131,7 @@ export default function Premium() {
 
   // Computed plan details
   const selectedPlan = useMemo(() => {
-    const plan = PLANS.find(p => p.id === selectedPlanId);
+    const plan = PLANS.find(p => p.id === selectedPlanId) || PLANS[1];
     let computedPlan = { ...plan };
     if (plan.id === 'custom') {
       const perDay = getCustomPricePerDay(customDays);
@@ -201,8 +203,6 @@ export default function Premium() {
       }
 
       if (code === 'FASTPREP') {
-        // Count how many users have used FASTPREP
-        // We can check payment_requests for promo_code or ai_reason containing FASTPREP
         const { count, error: countError } = await supabase
           .from('payment_requests')
           .select('id', { count: 'exact', head: true })
@@ -242,106 +242,182 @@ export default function Premium() {
   };
 
   const handleProceedToPayment = () => {
+    if (!orderId) {
+      setOrderId(generateOrderId());
+    }
     setStep('payment');
   };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    if (file.size > 25 * 1024 * 1024) { toast.error("File too large. Max 25MB."); return; }
+    if (file.size > 25 * 1024 * 1024) { 
+      toast.error("File too large. Max 25MB."); 
+      return; 
+    }
     
     setFile(file);
+    setIsProcessingImage(true);
     const reader = new FileReader();
-    reader.onload = (event) => {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const MAX_WIDTH = 800;
-        const MAX_HEIGHT = 800;
-        let width = img.width;
-        let height = img.height;
 
-        if (width > height) {
-          if (width > MAX_WIDTH) {
-            height *= MAX_WIDTH / width;
-            width = MAX_WIDTH;
-          }
-        } else {
-          if (height > MAX_HEIGHT) {
-            width *= MAX_HEIGHT / height;
-            height = MAX_HEIGHT;
-          }
-        }
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, width, height);
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
-        setPreview(dataUrl);
+    reader.onerror = () => {
+      setIsProcessingImage(false);
+      toast.error("Failed to read image file. Please try another.");
+    };
+
+    reader.onload = (event) => {
+      const rawDataUrl = event.target?.result;
+      if (!rawDataUrl) {
+        setIsProcessingImage(false);
+        toast.error("Failed to process image.");
+        return;
+      }
+
+      const img = new Image();
+      img.onerror = () => {
+        // Fallback: If canvas decoding fails, use raw data URL directly
+        setPreview(rawDataUrl);
+        setIsProcessingImage(false);
       };
-      img.src = event.target.result;
+
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          const MAX_WIDTH = 800;
+          const MAX_HEIGHT = 800;
+          let width = img.width;
+          let height = img.height;
+
+          if (width > height) {
+            if (width > MAX_WIDTH) {
+              height *= MAX_WIDTH / width;
+              width = MAX_WIDTH;
+            }
+          } else {
+            if (height > MAX_HEIGHT) {
+              width *= MAX_HEIGHT / height;
+              height = MAX_HEIGHT;
+            }
+          }
+          canvas.width = Math.round(width);
+          canvas.height = Math.round(height);
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.65);
+          setPreview(dataUrl || rawDataUrl);
+        } catch (err) {
+          console.warn("Canvas compression fallback:", err);
+          setPreview(rawDataUrl);
+        } finally {
+          setIsProcessingImage(false);
+        }
+      };
+      img.src = rawDataUrl;
     };
     reader.readAsDataURL(file);
   };
 
   const handleSubmitPayment = async () => {
     if (!preview) return toast.error("Please upload your payment screenshot.");
+    if (isProcessingImage) return toast.error("Please wait while image finishes processing.");
     setIsSubmitting(true);
 
     try {
-      const insertPromise = Promise.resolve(supabase.from('payment_requests').insert({
-        user_email: user.email,
-        user_id: user.id,
-        plan_price: finalPrice,
-        transaction_id: orderId,
-        status: 'pending',
-        ai_reason: `Order ${orderId} - ${selectedPlan.name} - ${selectedPlan.days} days @ Rs.${selectedPlan.perDay}/day = Rs.${selectedPlan.price}${appliedReferral ? ` (${appliedReferral.discountPercent ? `${appliedReferral.discountPercent}%` : (appliedReferral.code === 'CSCONNECT' ? '25%' : '10%')} OFF via ${appliedReferral.code})` : ''}`,
-        screenshot_url: preview,
-        created_at: new Date().toISOString()
-      })).catch(err => ({ error: err }));
+      // 1. Resolve current user identity from context or active Supabase session
+      let currentUserEmail = user?.email;
+      let currentUserId = user?.id;
+      let currentUserName = user?.full_name || '';
 
-      const timeoutPromise = new Promise((resolve) => 
-        setTimeout(() => resolve({ error: new Error("Request timed out. Please check your internet connection and try again.") }), 15000)
-      );
+      if (!currentUserEmail || !currentUserId) {
+        const { data: authData } = await supabase.auth.getUser();
+        if (authData?.user) {
+          currentUserEmail = authData.user.email;
+          currentUserId = authData.user.id;
+          currentUserName = authData.user.user_metadata?.full_name || authData.user.email;
+        }
+      }
 
-      const { error: insertError } = await Promise.race([insertPromise, timeoutPromise]);
-
-      if (insertError) {
-        console.error('Payment insert error:', insertError);
-        toast.error(`Failed to save: ${insertError.message || 'Unknown error'}`);
+      if (!currentUserEmail) {
+        toast.error("Please log in to submit your payment.");
         setIsSubmitting(false);
         return;
       }
 
+      // 2. Ensure Order ID exists
+      const currentOrderId = orderId || generateOrderId();
+      if (!orderId) {
+        setOrderId(currentOrderId);
+      }
+
+      const planPriceNumber = Number(finalPrice) || Number(selectedPlan.price) || 0;
+      const referralNote = appliedReferral
+        ? ` (${appliedReferral.discountPercent ? `${appliedReferral.discountPercent}%` : (appliedReferral.code === 'CSCONNECT' ? '25%' : '10%')} OFF via ${appliedReferral.code})`
+        : '';
+      const orderDescription = `Order ${currentOrderId} - ${selectedPlan.name} - ${selectedPlan.days} days @ Rs.${selectedPlan.perDay}/day = Rs.${selectedPlan.price}${referralNote}`;
+
+      const payload = {
+        user_email: currentUserEmail,
+        user_id: currentUserId,
+        plan_price: planPriceNumber,
+        transaction_id: currentOrderId,
+        status: 'pending',
+        ai_reason: orderDescription,
+        screenshot_url: preview,
+        created_at: new Date().toISOString()
+      };
+
+      // 3. Insert payment request
+      let { error: insertError } = await supabase.from('payment_requests').insert(payload);
+
+      // If RLS failed due to token refresh issue, attempt session refresh and retry once
+      if (insertError && (insertError.code === '42501' || insertError.message?.includes('security policy') || insertError.message?.includes('JWT'))) {
+        console.warn('Refreshing Supabase session and retrying payment insert...');
+        try {
+          await supabase.auth.refreshSession();
+          const retry = await supabase.from('payment_requests').insert(payload);
+          insertError = retry.error;
+        } catch (refreshErr) {
+          console.error('Session refresh failed:', refreshErr);
+        }
+      }
+
+      if (insertError) {
+        console.error('Payment insert error:', insertError);
+        toast.error(`Failed to submit payment: ${insertError.message || 'Database error'}`);
+        setIsSubmitting(false);
+        return;
+      }
+
+      // 4. Track referral if applicable (fire and forget)
       if (appliedReferral && appliedReferral.code !== 'CSCONNECT') {
         const referralInsert = {
           referrer_email: appliedReferral.email,
-          friend_email: user.email,
+          friend_email: currentUserEmail,
           status: 'pending',
-          order_id: orderId,
+          order_id: currentOrderId,
           created_date: new Date().toISOString()
         };
-        // Include IDs if available (personal referral codes)
         if (appliedReferral.referrer_id) referralInsert.referrer_id = appliedReferral.referrer_id;
-        if (user.id) referralInsert.referred_id = user.id;
+        if (currentUserId) referralInsert.referred_id = currentUserId;
         
-        const referralPromise = Promise.resolve(supabase.from('referrals').insert(referralInsert)).catch(() => ({}));
-        await Promise.race([referralPromise, new Promise(r => setTimeout(r, 5000))]);
+        supabase.from('referrals').insert(referralInsert).catch((e) => console.warn('Referral recording failed:', e));
       }
 
-      // Notify admin
-      const notificationPromise = Promise.resolve(supabase.from('notifications').insert({
+      // 5. Notify admin (fire and forget)
+      supabase.from('notifications').insert({
         user_email: 'admin',
-        title: `New Order: ${orderId} 💰`,
-        message: `${user.full_name || user.email} ordered ${selectedPlan.name} (${selectedPlan.days} days) for Rs. ${selectedPlan.price}`,
+        title: `New Order: ${currentOrderId} 💰`,
+        message: `${currentUserName || currentUserEmail} ordered ${selectedPlan.name} (${selectedPlan.days} days) for Rs. ${selectedPlan.price}`,
         is_read: false
-      })).catch(() => ({}));
-      await Promise.race([notificationPromise, new Promise(r => setTimeout(r, 5000))]);
+      }).catch((e) => console.warn('Admin notification failed:', e));
 
-      toast.success("Payment submitted! Admin will review it shortly.");
+      // 6. Refetch user payment status
+      refetchMyPaymentRequests();
+
+      toast.success("Payment submitted successfully! Admin will review it shortly.");
       setStep('submitted');
     } catch (e) {
-      console.error(e);
+      console.error('Payment submit error:', e);
       toast.error(e.message || "Submission failed. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -466,33 +542,49 @@ export default function Premium() {
 
             <input type="file" accept="image/*" className="hidden" ref={fileInputRef} onChange={handleFileChange} />
 
-            {!preview ? (
+            {isProcessingImage ? (
+              <div className="w-full h-40 border-2 border-dashed border-primary/40 rounded-2xl flex flex-col items-center justify-center gap-3 bg-primary/5">
+                <Loader2 className="w-8 h-8 text-primary animate-spin" />
+                <span className="text-sm font-bold text-primary">Processing screenshot...</span>
+                <span className="text-xs text-muted-foreground">Optimizing image format</span>
+              </div>
+            ) : !preview ? (
               <button
+                type="button"
                 onClick={() => fileInputRef.current?.click()}
                 className="w-full h-40 border-2 border-dashed border-border rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-primary/50 hover:bg-primary/5 transition-all"
               >
                 <ImageIcon className="w-10 h-10 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground font-bold">Tap to upload screenshot</span>
-                <span className="text-xs text-muted-foreground">JPG, PNG up to 25MB</span>
+                <span className="text-xs text-muted-foreground">JPG, PNG, WebP up to 25MB</span>
               </button>
             ) : (
               <div className="relative rounded-2xl overflow-hidden border-2 border-border">
                 <img src={preview} alt="Payment Receipt" className="w-full max-h-60 object-cover" />
-                <button onClick={() => { setFile(null); setPreview(''); }} className="absolute top-3 right-3 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-xl text-sm font-bold border border-border hover:bg-card">
+                <button
+                  type="button"
+                  onClick={() => { setFile(null); setPreview(''); }} 
+                  className="absolute top-3 right-3 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-xl text-sm font-bold border border-border hover:bg-card"
+                >
                   Change
                 </button>
               </div>
             )}
 
             <button
-              className={`w-full h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 transition-all ${preview && !isSubmitting
-                ? 'btn-primary shadow-xl'
+              type="button"
+              className={`w-full h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 transition-all ${preview && !isSubmitting && !isProcessingImage
+                ? 'btn-primary shadow-xl cursor-pointer'
                 : 'bg-secondary border-2 border-border text-muted-foreground cursor-not-allowed'
                 }`}
-              disabled={!preview || isSubmitting}
+              disabled={!preview || isSubmitting || isProcessingImage}
               onClick={handleSubmitPayment}
             >
-              {isSubmitting ? <><Loader2 className="w-5 h-5 animate-spin" /> Submitting...</> : <><CheckCircle2 className="w-5 h-5" /> Submit Payment</>}
+              {isSubmitting ? (
+                <><Loader2 className="w-5 h-5 animate-spin" /> Submitting...</>
+              ) : (
+                <><CheckCircle2 className="w-5 h-5" /> Submit Payment</>
+              )}
             </button>
           </div>
         </motion.div>
