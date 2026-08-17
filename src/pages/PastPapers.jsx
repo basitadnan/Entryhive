@@ -420,6 +420,18 @@ export default function PastPapers() {
         </button>
       </div>
 
+      <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500/30 rounded-2xl p-5 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0 border border-amber-500/20">
+          <Zap className="w-5 h-5 text-amber-500" />
+        </div>
+        <div className="flex-1">
+          <p className="text-sm font-bold text-amber-700 dark:text-amber-300 uppercase tracking-widest mb-1">Standard Past Papers Notice</p>
+          <p className="text-sm text-amber-800 dark:text-amber-200 font-medium leading-relaxed">
+            Past papers on this page are from previous years and do not yet reflect NTS&apos;s updated 2025&ndash;26 test format and difficulty. Have papers from 2025 or 2026? Send them to <a href="tel:+923337613822" className="underline hover:text-primary font-bold">03337613822</a> and help other students.
+          </p>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-card rounded-3xl p-6 border-2 border-border shadow-sm flex items-center gap-5 hover:border-primary/40 transition-colors">
           <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0">
