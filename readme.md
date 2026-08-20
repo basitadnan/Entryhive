@@ -1,39 +1,40 @@
-**Welcome to your Base44 project** 
+# EntryHive
 
-**About**
+**University entry test prep, built for Pakistani students.**
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+EntryHive helps students preparing for university admission tests study smarter — structured practice, spaced repetition, and real past papers, all in one place.
 
-This project contains everything you need to run your app locally.
+🔗 **Live:** [entryhive-pak.vercel.app](https://entryhive-pak.vercel.app)
 
-**Edit the code in your local development environment**
+---
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## What it does
 
-**Prerequisites:** 
+EntryHive brings together everything a student needs to prepare for entry tests like NAT, MDCAT, ECAT, and university-specific exams:
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+- **Practice questions** sourced and structured from real past papers (Air University, FAST, and more)
+- **Spaced repetition flashcards** to help concepts actually stick, not just get crammed
+- **Personalized study plans** tailored to a student's timeline and target test
+- **Referral system** so students can share EntryHive and earn rewards
+- **Admin dashboard** for content management and platform analytics
 
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
+Since launch, EntryHive has grown to **600+ users** with strong conversion from free to paid plans.
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
-```
+## Tech Stack
 
-Run the app: `npm run dev`
+- **Frontend:** Next.js, Tailwind CSS
+- **Backend:** Supabase (Postgres, Auth, RPC functions)
+- **Hosting:** Vercel
+- **Mobile:** Android app (Capacitor-based)
 
-**Publish your changes**
+## Why I built this
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+Pakistani students prepping for university entry tests are stuck choosing between expensive academies and scattered, unreliable free resources. EntryHive is built to close that gap — affordable, structured, and actually built around how these tests work.
 
-**Docs & Support**
+## Status
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+Actively developed and maintained. New features and content are added regularly based on user feedback.
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+---
+
+Built by [Abdul Basit](https://github.com/basitadnan)
