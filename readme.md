@@ -1,40 +1,58 @@
+<div align="center">
+
 # EntryHive
 
 **University entry test prep, built for Pakistani students.**
 
-EntryHive helps students preparing for university admission tests study smarter — structured practice, spaced repetition, and real past papers, all in one place.
+[![Live](https://img.shields.io/badge/live-entryhive--pak.vercel.app-2E7D32?style=flat-square)](https://entryhive-pak.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)](https://supabase.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
 
-🔗 **Live:** [entryhive-pak.vercel.app](https://entryhive-pak.vercel.app)
+[Live Demo](https://entryhive-pak.vercel.app) · [Report a Bug](#) · [Request a Feature](#)
 
----
+</div>
 
-## What it does
+<br>
 
-EntryHive brings together everything a student needs to prepare for entry tests like NAT, MDCAT, ECAT, and university-specific exams:
+## About
 
-- **Practice questions** sourced and structured from real past papers (Air University, FAST, and more)
-- **Spaced repetition flashcards** to help concepts actually stick, not just get crammed
-- **Personalized study plans** tailored to a student's timeline and target test
-- **Referral system** so students can share EntryHive and earn rewards
-- **Admin dashboard** for content management and platform analytics
+Pakistani students preparing for university entry tests (NAT, MDCAT, ECAT, and university-specific exams) are stuck choosing between expensive academies and scattered, unreliable free resources. **EntryHive** closes that gap — one platform with structured practice, spaced repetition, and real past papers, built around how these tests actually work.
 
-Since launch, EntryHive has grown to **600+ users** with strong conversion from free to paid plans.
+Since launch, EntryHive has grown to **600+ users**, with strong conversion from free to paid plans.
+
+<br>
+
+## Features
+
+| | |
+|---|---|
+| 📝 **Real Past Papers** | Structured practice questions sourced from real past papers — Air University, FAST, and more |
+| 🧠 **Spaced Repetition** | Flashcards built on an SM-2 algorithm, so concepts stick instead of getting crammed |
+| 📅 **Personalized Study Plans** | Plans generated around a student's timeline and target test |
+| 🎁 **Referral Rewards** | Students share EntryHive and earn rewards for it |
+| 📊 **Admin Dashboard** | Internal tooling for content management and platform analytics |
+
+<br>
 
 ## Tech Stack
 
-- **Frontend:** Next.js, Tailwind CSS
-- **Backend:** Supabase (Postgres, Auth, RPC functions)
-- **Hosting:** Vercel
-- **Mobile:** Android app (Capacitor-based)
+**Frontend** — Next.js, Tailwind CSS
+**Backend** — Supabase (Postgres, Auth, RPC functions)
+**Hosting** — Vercel
+**Mobile** — Android app (Capacitor-based)
 
-## Why I built this
-
-Pakistani students prepping for university entry tests are stuck choosing between expensive academies and scattered, unreliable free resources. EntryHive is built to close that gap — affordable, structured, and actually built around how these tests work.
+<br>
 
 ## Status
 
-Actively developed and maintained. New features and content are added regularly based on user feedback.
+🟢 Actively developed and maintained — new features and content shipped regularly based on user feedback.
 
----
+<br>
+
+<div align="center">
 
 Built by [Abdul Basit](https://github.com/basitadnan)
+
+</div>
